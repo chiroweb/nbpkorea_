@@ -39,16 +39,17 @@ export default function Footer() {
 
   return (
     <footer className="bg-[#F5F7F8] pt-32 pb-12">
-      {/* Gallery Strip */}
-      <div className="overflow-hidden mb-20">
-        <div className="flex gap-4 animate-scroll">
-          {[...galleryImages, ...galleryImages].map((img, i) => (
-            <div
+      {/* Text Marquee Strip */}
+      <div className="overflow-hidden mb-20 py-6 border-y border-[#D4DAE2]">
+        <div className="flex animate-scroll whitespace-nowrap">
+          {[...Array(6)].map((_, i) => (
+            <span
               key={i}
-              className="relative w-32 h-40 md:w-48 md:h-60 flex-shrink-0 overflow-hidden bg-[#DCE2E8]"
+              className="flex-shrink-0 text-[clamp(2rem,5vw,4rem)] font-light tracking-[0.25em] text-[#C8D0DA] uppercase mr-16"
             >
-              <Image src={img.src} alt={img.alt} fill className="object-cover" />
-            </div>
+              NBP KOREA IS ALWAYS NEXT TO YOU FOR BUSINESS
+              <span className="mx-8 text-[#D4DAE2]">✦</span>
+            </span>
           ))}
         </div>
       </div>

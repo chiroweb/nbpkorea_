@@ -12,7 +12,8 @@ const services = [
     title: "환경설비",
     subtitle: "Environment",
     description:
-      "CTO, RTO, RCO, TO, DTO 등 VOCs 및 악취 처리를 위한 산업용 환경설비. 설계부터 시공, 유지보수까지 원스톱 서비스를 제공합니다.",
+      "촉매연소산화장치(CTO)는 촉매를 이용해 배기가스 내 악취물질을 저온 연소·무해화하며 NOx 생성을 최소화합니다. 축열식 연소산화장치(RTO)는 연소열을 축열재로 회수하여 폐열을 생산 공정 열원으로 재활용하는 에너지 절감형 시스템이며, 축열촉매(RCO)·직접연소(TO)·직접탈취(DTO) 설비까지 반도체·도장·화학·식품 등 14개 이상 산업 분야의 VOCs 및 복합악취를 설계·제작·시공부터 유지보수까지 원스톱으로 처리합니다.",
+    tags: ["CTO", "RTO", "RCO", "TO", "DTO"],
     image: `${S3}/images/service-environment.png`,
   },
   {
@@ -20,7 +21,8 @@ const services = [
     title: "연소설비",
     subtitle: "Combustion",
     description:
-      "산업용 직접·간접 가스히터, 하이브리드 제습기, 차량 도장 건조 시스템 등 고효율 연소장비를 설계·제작·공급합니다.",
+      "전 세계에서 NBPKOREA에서만 구현하는 연소식 고효율 환경설비. 직화식 가스히터(NKGH 시리즈, 25,000~1,000,000 kcal/h)·간접식 가스히터(NK-IDGH 시리즈)·복합식 제습기·차량 도장 건조기까지 자동차 도장 부스, 선박 블록 작업장, 물류 창고, 식품·화학 공장 등 광범위한 산업 현장에 컴팩트하게 최적화된 연소 솔루션을 제공합니다.",
+    tags: ["직화식 가스히터", "간접식 가스히터", "복합제습기", "도장건조기"],
     image: `${S3}/images/service-combustion.png`,
   },
   {
@@ -28,7 +30,8 @@ const services = [
     title: "산업용 버너",
     subtitle: "Burner",
     description:
-      "자체 개발 금속화이버 버너(NBP-MB). 적외선 복사열 활용, NOx 대폭 저감, 에너지 효율 30% 이상 향상의 혁신 기술입니다.",
+      "NBPKOREA 독자 개발 금속화이버 버너(NBP-MB·NBP-SMB)는 균등 연소와 적외선 복사열을 통해 에너지 효율을 극대화하고 NOx 배출을 대폭 저감합니다. 소형 메탈 버너는 컴팩트 설계로 설치 공간을 절약하며 간편한 유지보수를 실현합니다. 산업용 보일러·소각로·건조로·열매체 보일러·발전소·석유화학 플랜트 등 고온 연소가 요구되는 모든 설비에 적용 가능합니다.",
+    tags: ["NBP-MB", "NBP-SMB", "저NOx", "균등연소"],
     image: `${S3}/images/service-burner.png`,
   },
 ];
@@ -76,9 +79,10 @@ export default function ServiceSection() {
         </div>
 
         {/* Desktop Layout */}
-        <div className="hidden md:grid grid-cols-2 h-full">
+        <div className="hidden md:grid h-full" style={{ gridTemplateColumns: "42% 58%" }}>
           {/* Left: Image blind stack */}
-          <div className="relative overflow-hidden">
+          <div className="relative overflow-hidden py-16 px-8">
+            <div className="relative h-full overflow-hidden rounded-sm">
             {/* Image 1 — 항상 아래에 깔림 */}
             <div className="absolute inset-0">
               <Image
@@ -122,6 +126,7 @@ export default function ServiceSection() {
 
             {/* 좌측 오버레이 */}
             <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#F5F7F8]/10" />
+            </div>
           </div>
 
           {/* Right: Credits text */}
@@ -150,9 +155,19 @@ export default function ServiceSection() {
                     <h3 className="text-3xl md:text-4xl tracking-[0.1em] font-light text-[#2d2a28] mb-6">
                       {service.title}
                     </h3>
-                    <p className="text-sm text-[#8B95A1] leading-[2] mb-8 max-w-sm">
+                    <p className="text-sm text-[#8B95A1] leading-[2] mb-6 max-w-md">
                       {service.description}
                     </p>
+                    <div className="flex flex-wrap gap-2 mb-8">
+                      {service.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="text-[10px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                     <Link href="/business" className="btn-link group">
                       <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
                         <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
