@@ -10,6 +10,7 @@
   --color-text-muted: #888480;
   --color-text-light: #a3a09b;
   --color-border: #d4d4cc;
+  --color-accent: #C05010;
 }
 
 * {
@@ -42,13 +43,13 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-text-light);
+  background: var(--color-accent);
   border-radius: 3px;
 }
 
 /* Selection */
 ::selection {
-  background-color: var(--color-text);
+  background-color: var(--color-accent);
   color: var(--color-bg);
 }
 
@@ -158,7 +159,7 @@ a:hover {
   font-size: 11px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-text-muted);
+  color: var(--color-accent);
 }
 
 .section-title {

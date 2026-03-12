@@ -104,7 +104,7 @@ function TechRow({
         <div className="space-y-2">
           {tech.features.map((f) => (
             <div key={f} className="flex items-center gap-3">
-              <div className="w-1 h-1 rounded-full bg-[#2d2a28] flex-shrink-0" />
+              <div className="w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
               <span className="text-xs text-[#888480] tracking-[0.03em]">{f}</span>
             </div>
           ))}

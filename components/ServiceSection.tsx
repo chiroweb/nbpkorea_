@@ -12,9 +12,9 @@ export default function ServiceSection() {
   const [activeService, setActiveService] = useState(0);
 
   const services = [
-    { id: 1, title: "환경설비", subtitle: "Environment", description: "CTO, RTO, RCO, TO, DTO 등 VOCs 및 악취 처리를 위한 산업용 환경설비. 설계부터 시공, 유지보수까지 원스톱 서비스를 제공합니다.", image: `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Environment%20Business%20Division/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20CTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg` },
-    { id: 2, title: "연소설비", subtitle: "Combustion", description: "산업용 직접·간접 가스히터, 하이브리드 제습기, 차량 도장 건조 시스템 등 고효율 연소장비를 설계·제작·공급합니다.", image: `${S3}/images/product-heater.png` },
-    { id: 3, title: "산업용 버너", subtitle: "Burner", description: "자체 개발 금속화이버 버너(NBP-MB). 적외선 복사열 활용, NOx 대폭 저감, 에너지 효율 30% 이상 향상의 혁신 기술입니다.", image: `${S3}/images/metal%20burner1.png` },
+    { id: 1, title: "환경설비", subtitle: "Environment", description: "CTO, RTO, RCO, TO, DTO 등 VOCs 및 악취 처리를 위한 산업용 환경설비. 설계부터 시공, 유지보수까지 원스톱 서비스를 제공합니다.", image: `${S3}/assets/industry4.png` },
+    { id: 2, title: "연소설비", subtitle: "Combustion", description: "산업용 직접·간접 가스히터, 하이브리드 제습기, 차량 도장 건조 시스템 등 고효율 연소장비를 설계·제작·공급합니다.", image: `${S3}/images/mainhero1.jpg` },
+    { id: 3, title: "산업용 버너", subtitle: "Burner", description: "자체 개발 금속화이버 버너(NBP-MB). 적외선 복사열 활용, NOx 대폭 저감, 에너지 효율 30% 이상 향상의 혁신 기술입니다.", image: `${S3}/images/thumbnails/1thumb.png` },
   ];
 
   return (

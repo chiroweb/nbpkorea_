@@ -138,7 +138,7 @@ function ProductCard({
         <h3 className="text-lg md:text-xl tracking-[0.08em] font-medium text-[#2d2a28] mb-3">
           {product.title}
           {"isMain" in product && product.isMain && (
-            <span className="ml-2 text-[10px] tracking-[0.1em] border border-[#2d2a28] px-2 py-0.5 align-middle">
+            <span className="ml-2 text-[10px] tracking-[0.1em] border border-[#C05010] text-[#C05010] px-2 py-0.5 align-middle">
               주력
             </span>
           )}

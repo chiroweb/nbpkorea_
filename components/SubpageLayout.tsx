@@ -45,7 +45,7 @@ export default function SubpageLayout({
               <span key={item.label} className="flex items-center gap-2">
                 <span className="text-[#d4d4cc]">/</span>
                 {index === breadcrumb.length - 1 ? (
-                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#2d2a28]">
+                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#C05010]">
                     {item.label}
                   </span>
                 ) : (

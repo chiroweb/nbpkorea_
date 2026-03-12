@@ -26,13 +26,17 @@ export default function Home() {
       >
         <Header />
         <main>
-          <HeroSection />
-          <CompanySection />
-          <NewsSection />
-          <ServiceSection />
-          <HistorySection />
-          <RecruitSection />
-          <IRSection />
+          <div className="sticky top-0 z-0 h-screen">
+            <HeroSection />
+          </div>
+          <div className="relative z-10 bg-[#f3f3ec]">
+            <CompanySection />
+            <NewsSection />
+            <ServiceSection />
+            <HistorySection />
+            <RecruitSection />
+            <IRSection />
+          </div>
         </main>
         <Footer />
       </div>

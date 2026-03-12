@@ -41,7 +41,7 @@ function CeoSection() {
             <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28] mb-2">
               대표이사 인사말
             </h2>
-            <div className="w-12 h-px bg-[#2d2a28] mb-8" />
+            <div className="w-12 h-px bg-[#C05010] mb-8" />
             <p className="text-sm leading-[2.2] text-[#888480] mb-6">
               안녕하십니까. NBP KOREA 대표이사 최혁순입니다.
             </p>
@@ -232,7 +232,7 @@ function HistorySection() {
                 </span>
               </div>
 
-              <div className="absolute left-[-4px] md:left-1/2 md:-translate-x-1/2 top-3 w-[9px] h-[9px] rounded-full bg-[#2d2a28] z-10" />
+              <div className="absolute left-[-4px] md:left-1/2 md:-translate-x-1/2 top-3 w-[9px] h-[9px] rounded-full bg-[#C05010] z-10" />
 
               <div className="md:w-1/2 md:pl-12 pl-6 mt-1">
                 {item.events.map((event) => (

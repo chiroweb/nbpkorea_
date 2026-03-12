@@ -8,9 +8,10 @@ const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    { label: "환경설비 플랜트", src: `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20RTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg` },
-    { label: "금속화이버 버너", src: `${S3}/images/metal%20burner1.png` },
-    { label: "산업 현장", src: `${S3}/assets/industry1.png` },
+    { label: "환경설비 현장", src: `${S3}/assets/industry1.png` },
+    { label: "연소설비 현장", src: `${S3}/assets/industry2.png` },
+    { label: "중공업 현장", src: `${S3}/assets/industry3.png` },
+    { label: "환경처리 현장", src: `${S3}/assets/industry4.png` },
   ];
 
   useEffect(() => {
@@ -63,8 +64,8 @@ export default function HeroSection() {
             onClick={() => setCurrentSlide(index)}
             className={`w-2 h-2 rounded-full transition-all ${
               currentSlide === index
-                ? "bg-[#2d2a28] w-8"
-                : "bg-[#2d2a28]/30"
+                ? "bg-[#C05010] w-8"
+                : "bg-[#C05010]/30"
             }`}
           />
         ))}
