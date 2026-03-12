@@ -80,7 +80,7 @@ function TechRow({
             : `opacity-0 ${isEven ? "-translate-x-10" : "translate-x-10"}`
         }`}
       >
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#e8e8e0]">
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#DCE2E8]">
           <Image src={tech.image} alt={tech.title} fill className="object-cover" />
         </div>
       </div>
@@ -91,7 +91,7 @@ function TechRow({
             : `opacity-0 ${isEven ? "translate-x-10" : "-translate-x-10"}`
         }`}
       >
-        <span className="text-5xl font-light text-[#e0e0e0] block mb-4">
+        <span className="text-5xl font-light text-[#D4DAE2] block mb-4">
           {String(index + 1).padStart(2, "0")}
         </span>
         <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
@@ -135,7 +135,7 @@ function GlobalPartnersSection() {
   ];
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#fafafa]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
       <div className="max-w-7xl mx-auto">
         <div
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -156,7 +156,7 @@ function GlobalPartnersSection() {
           {partners.map((partner, index) => (
             <div
               key={partner.name}
-              className={`border border-[#e0e0e0] bg-white p-10 transition-all duration-1000 hover:border-[#2d2a28] ${
+              className={`border border-[#D4DAE2] bg-white p-10 transition-all duration-1000 hover:border-[#C05010] ${
                 isInView
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"
@@ -174,7 +174,7 @@ function GlobalPartnersSection() {
                 </div>
                 <div className="text-right">
                   <p className="text-[10px] tracking-[0.15em] uppercase text-[#888480] mb-1">Partnership Since</p>
-                  <p className="text-2xl font-light text-[#d4d4cc]">{partner.since}</p>
+                  <p className="text-2xl font-light text-[#C8D0DA]">{partner.since}</p>
                 </div>
               </div>
               <p className="text-sm leading-[2] text-[#888480]">{partner.description}</p>
@@ -223,15 +223,15 @@ function AwardsCertificationsSection() {
             <div className="space-y-3">
               {awards.map((award, index) => (
                 <div
-                  key={award.title}
-                  className={`flex items-center gap-6 py-4 border-b border-[#e0e0e0] transition-all duration-700 ${
+                  key={`${award.year}-${award.title}`}
+                  className={`flex items-center gap-6 py-4 border-b border-[#D4DAE2] transition-all duration-700 ${
                     isInView
                       ? "opacity-100 translate-x-0"
                       : "opacity-0 -translate-x-6"
                   }`}
                   style={{ transitionDelay: `${200 + index * 100}ms` }}
                 >
-                  <span className="text-sm font-light text-[#d4d4cc] w-12 flex-shrink-0">
+                  <span className="text-sm font-light text-[#C8D0DA] w-12 flex-shrink-0">
                     {award.year}
                   </span>
                   <div className="w-1 h-1 rounded-full bg-[#888480] flex-shrink-0" />
@@ -259,7 +259,7 @@ function AwardsCertificationsSection() {
               {certifications.map((cert, index) => (
                 <div
                   key={cert.name}
-                  className={`border border-[#e0e0e0] p-6 text-center transition-all duration-700 ${
+                  className={`border border-[#D4DAE2] p-6 text-center transition-all duration-700 ${
                     isInView
                       ? "opacity-100 translate-y-0"
                       : "opacity-0 translate-y-6"
@@ -272,7 +272,7 @@ function AwardsCertificationsSection() {
               ))}
             </div>
             <div
-              className={`mt-4 border border-[#e0e0e0] overflow-hidden transition-all duration-700 delay-700 ${
+              className={`mt-4 border border-[#D4DAE2] overflow-hidden transition-all duration-700 delay-700 ${
                 isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
             >
@@ -296,7 +296,7 @@ function RDCenterSection() {
   const { ref, isInView } = useInView({ threshold: 0.15 });
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#fafafa]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
       <div className="max-w-7xl mx-auto">
         <div
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -330,7 +330,7 @@ function RDCenterSection() {
           ].map((item, index) => (
             <div
               key={item.label}
-              className={`relative aspect-square overflow-hidden bg-[#e8e8e0] group cursor-pointer ${
+              className={`relative aspect-square overflow-hidden bg-[#DCE2E8] group cursor-pointer ${
                 index < 2 ? "md:col-span-2 md:row-span-2" : ""
               }`}
             >

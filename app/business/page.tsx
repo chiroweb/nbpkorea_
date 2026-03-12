@@ -77,7 +77,7 @@ function BusinessCard({ area, index }: { area: (typeof businessAreas)[0]; index:
             : `opacity-0 ${isEven ? "-translate-x-10" : "translate-x-10"}`
         }`}
       >
-        <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#e8e8e0] group">
+        <div className="relative aspect-[16/10] w-full overflow-hidden bg-[#DCE2E8] group">
           <Image
             src={area.image}
             alt={area.title}
@@ -93,7 +93,7 @@ function BusinessCard({ area, index }: { area: (typeof businessAreas)[0]; index:
             : `opacity-0 ${isEven ? "translate-x-10" : "-translate-x-10"}`
         }`}
       >
-        <span className="text-5xl font-light text-[#e0e0e0] block mb-4">
+        <span className="text-5xl font-light text-[#D4DAE2] block mb-4">
           {String(index + 1).padStart(2, "0")}
         </span>
         <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
@@ -107,14 +107,14 @@ function BusinessCard({ area, index }: { area: (typeof businessAreas)[0]; index:
           {area.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[10px] tracking-[0.1em] border border-[#e0e0e0] px-3 py-1 text-[#888480]"
+              className="text-[10px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#888480]"
             >
               {tag}
             </span>
           ))}
         </div>
         <Link href="/products" className="btn-link group">
-          <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#2d2a28] group-hover:text-white transition-all">
+          <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#C05010] group-hover:text-white transition-all">
             <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
               <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1" />
             </svg>
@@ -216,7 +216,7 @@ function StatsSection() {
   const { ref, isInView } = useInView({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#fafafa]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
       <div className="max-w-7xl mx-auto">
         <div
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -282,7 +282,7 @@ function PartnersSection() {
             {[...clientLogos, ...clientLogos].map((logo, i) => (
               <div
                 key={i}
-                className="flex-shrink-0 border border-[#e0e0e0] px-6 py-4 bg-[#fafafa] flex items-center justify-center w-36 h-20"
+                className="flex-shrink-0 border border-[#D4DAE2] px-6 py-4 bg-[#F2F4F7] flex items-center justify-center w-36 h-20"
               >
                 <Image
                   src={`${LOGO_BASE}/${encodeURIComponent(logo.file)}`}

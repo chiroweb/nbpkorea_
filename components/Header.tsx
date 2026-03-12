@@ -21,8 +21,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 bg-[#f3f3ec]/90 backdrop-blur-sm">
-        <div className="flex items-center justify-between px-6 md:px-12 py-6">
+      <header className="fixed top-0 left-0 right-0 z-40 header-steel">
+        <div className="flex items-center justify-between px-6 md:px-12 py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3">
             <Image
@@ -54,7 +54,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-4 py-2 hover:bg-[#2d2a28] hover:text-[#f3f3ec] transition-all"
+                className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-4 py-2 hover:bg-[#C05010] hover:text-[#F5F7F8] transition-all"
               >
                 {link.label}
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="opacity-60">
@@ -77,7 +77,7 @@ export default function Header() {
 
         {/* Mobile Menu */}
         <div className={`lg:hidden overflow-hidden transition-all duration-300 ${isMenuOpen ? 'max-h-screen' : 'max-h-0'}`}>
-          <nav className="flex flex-col gap-4 px-6 py-6 border-t border-[#d4d4cc]">
+          <nav className="flex flex-col gap-4 px-6 py-6 border-t border-[#C8D0DA]">
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -88,7 +88,7 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
-            <div className="h-px bg-[#d4d4cc] my-2" />
+            <div className="h-px bg-[#C8D0DA] my-2" />
             {externalLinks.map((link) => (
               <Link
                 key={link.label}

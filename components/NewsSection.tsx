@@ -14,7 +14,7 @@ export default function NewsSection() {
   ];
 
   return (
-    <section id="news" className="py-32 px-6 md:px-12 bg-[#f3f3ec]" ref={ref}>
+    <section id="news" className="py-32 px-6 md:px-12 bg-[#F5F7F8]" ref={ref}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div
@@ -28,7 +28,7 @@ export default function NewsSection() {
           </div>
 
           <Link href="#" className="btn-link group mt-6 md:mt-0">
-            <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#2d2a28] group-hover:text-[#f3f3ec] transition-all">
+            <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
               <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                 <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1"/>
               </svg>
@@ -52,7 +52,7 @@ export default function NewsSection() {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               {/* Image */}
-              <div className="relative aspect-[16/10] mb-6 overflow-hidden bg-[#e8e8e0]">
+              <div className="relative aspect-[16/10] mb-6 overflow-hidden bg-[#DCE2E8]">
                 <Image
                   src={item.image}
                   alt={item.title}
@@ -63,7 +63,7 @@ export default function NewsSection() {
 
               {/* Content */}
               <div className="flex items-center gap-4 mb-3">
-                <span className="text-[10px] tracking-[0.15em] uppercase px-3 py-1 border border-[#d4d4cc]">
+                <span className="text-[10px] tracking-[0.15em] uppercase px-3 py-1 border border-[#C8D0DA]">
                   {item.category}
                 </span>
                 <span className="text-xs text-[#888480]">{item.date}</span>

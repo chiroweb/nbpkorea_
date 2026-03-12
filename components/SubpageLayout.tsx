@@ -37,13 +37,13 @@ export default function SubpageLayout({
           >
             <Link
               href="/"
-              className="text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#2d2a28] transition-colors"
+              className="text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors"
             >
               Home
             </Link>
             {breadcrumb.map((item, index) => (
               <span key={item.label} className="flex items-center gap-2">
-                <span className="text-[#d4d4cc]">/</span>
+                <span className="text-[#C8D0DA]">/</span>
                 {index === breadcrumb.length - 1 ? (
                   <span className="text-[10px] tracking-[0.15em] uppercase text-[#C05010]">
                     {item.label}
@@ -51,7 +51,7 @@ export default function SubpageLayout({
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#2d2a28] transition-colors"
+                    className="text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -78,7 +78,7 @@ export default function SubpageLayout({
 
           {/* Decorative Line */}
           <div
-            className={`mt-12 h-px bg-[#e0e0e0] transition-all duration-1000 delay-500 ${
+            className={`mt-12 h-px bg-[#D4DAE2] transition-all duration-1000 delay-500 ${
               isInView ? "opacity-100 scale-x-100" : "opacity-0 scale-x-0"
             } origin-left`}
           />

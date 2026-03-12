@@ -29,7 +29,7 @@ export default function Home() {
           <div className="sticky top-0 z-0 h-screen">
             <HeroSection />
           </div>
-          <div className="relative z-10 bg-[#f3f3ec]">
+          <div className="relative z-10 bg-[#F5F7F8]">
             <CompanySection />
             <NewsSection />
             <ServiceSection />

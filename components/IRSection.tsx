@@ -14,7 +14,7 @@ export default function IRSection() {
   ];
 
   return (
-    <section id="contact" className="py-32 px-6 md:px-12 bg-[#e8e8e0]" ref={ref}>
+    <section id="contact" className="py-32 px-6 md:px-12 bg-[#DCE2E8]" ref={ref}>
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div
@@ -53,7 +53,7 @@ export default function IRSection() {
             </div>
 
             <Link href="/support" className="btn-link group mt-8">
-              <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#2d2a28] group-hover:text-[#f3f3ec] transition-all">
+              <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                   <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1"/>
                 </svg>
@@ -76,16 +76,16 @@ export default function IRSection() {
                 <Link
                   key={type.title}
                   href={type.href}
-                  className={`border border-[#2d2a28]/20 p-6 flex flex-col gap-4 hover:bg-[#2d2a28] hover:text-[#f3f3ec] transition-all group transition-all duration-700 ${
+                  className={`border border-[#2d2a28]/20 p-6 flex flex-col gap-4 hover:bg-[#C05010] hover:text-[#F5F7F8] transition-all group transition-all duration-700 ${
                     isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
                   }`}
                   style={{ transitionDelay: `${400 + index * 80}ms` }}
                 >
-                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#888480] group-hover:text-[#d4d4cc]">
+                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#888480] group-hover:text-[#C8D0DA]">
                     {type.subtitle}
                   </span>
                   <span className="text-sm tracking-[0.08em] font-medium">{type.title}</span>
-                  <span className="text-[11px] text-[#888480] group-hover:text-[#d4d4cc] mt-auto">
+                  <span className="text-[11px] text-[#888480] group-hover:text-[#C8D0DA] mt-auto">
                     {type.desc}
                   </span>
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="opacity-0 group-hover:opacity-100 transition-opacity self-end">

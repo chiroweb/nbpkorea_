@@ -1,50 +1,22 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
-
 const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
 
 export default function HeroSection() {
-  const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    { label: "환경설비 현장", src: `${S3}/assets/industry1.png` },
-    { label: "연소설비 현장", src: `${S3}/assets/industry2.png` },
-    { label: "중공업 현장", src: `${S3}/assets/industry3.png` },
-    { label: "환경처리 현장", src: `${S3}/assets/industry4.png` },
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
-
   return (
     <section className="relative h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Slides */}
-      <div className="absolute inset-0">
-        {slides.map((slide, index) => (
-          <div
-            key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              currentSlide === index ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            <Image
-              src={slide.src}
-              alt={slide.label}
-              fill
-              className="object-cover"
-              priority={index === 0}
-            />
-          </div>
-        ))}
-      </div>
+      {/* Background Video */}
+      <video
+        autoPlay
+        muted
+        loop
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover"
+        src={`${S3}/videos/herovideo2.mp4`}
+      />
 
       {/* Overlay Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#f3f3ec]/30 via-transparent to-[#f3f3ec]/60" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#F5F7F8]/30 via-transparent to-[#F5F7F8]/60" />
 
       {/* Hero Content */}
       <div className="relative z-10 text-center px-6">
@@ -54,21 +26,6 @@ export default function HeroSection() {
         <p className="text-sm md:text-base tracking-[0.15em] text-[#888480] max-w-xl mx-auto">
           산업용 연소장비와 환경설비의 기술 파트너, NBP KOREA
         </p>
-      </div>
-
-      {/* Slide Indicators */}
-      <div className="absolute bottom-32 left-1/2 -translate-x-1/2 flex gap-3">
-        {slides.map((slide, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              currentSlide === index
-                ? "bg-[#C05010] w-8"
-                : "bg-[#C05010]/30"
-            }`}
-          />
-        ))}
       </div>
 
       {/* Scroll Down Indicator */}

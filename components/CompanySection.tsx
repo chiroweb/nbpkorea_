@@ -17,7 +17,7 @@ export default function CompanySection() {
               isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#e8e8e0]">
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#DCE2E8]">
               <Image
                 src="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/building.jpg"
                 alt="NBP KOREA 본사"
@@ -45,7 +45,7 @@ export default function CompanySection() {
               href="/about"
               className="btn-link group"
             >
-              <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#2d2a28] group-hover:text-[#f3f3ec] transition-all">
+              <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                   <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1"/>
                 </svg>

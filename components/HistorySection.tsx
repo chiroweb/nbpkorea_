@@ -7,7 +7,7 @@ export default function HistorySection() {
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   return (
-    <section id="history" className="py-32 px-6 md:px-12 bg-[#2d2a28] text-[#f3f3ec]" ref={ref}>
+    <section id="history" className="py-32 px-6 md:px-12 bg-[#2d2a28] text-[#F5F7F8]" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           {/* Content */}
@@ -30,8 +30,8 @@ export default function HistorySection() {
               끊임없이 기술을 혁신하며 성장해 왔습니다. 신뢰와 도전, 열정의 가치를 지켜온 20년의 역사.
             </p>
 
-            <Link href="/about" className="btn-link group text-[#f3f3ec]">
-              <span className="w-8 h-8 flex items-center justify-center border border-[#f3f3ec]/30 rounded-full group-hover:bg-[#f3f3ec] group-hover:text-[#2d2a28] transition-all">
+            <Link href="/about" className="btn-link group text-[#F5F7F8]">
+              <span className="w-8 h-8 flex items-center justify-center border border-[#F5F7F8]/30 rounded-full group-hover:bg-[#F5F7F8] group-hover:text-[#C05010] transition-all">
                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                   <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1"/>
                 </svg>
@@ -62,7 +62,7 @@ export default function HistorySection() {
               ].map((item, index) => (
                 <div key={item.year} className="flex items-center gap-8 mb-8 last:mb-0">
                   <div className="w-8 h-8 rounded-full border border-[#888480]/30 flex items-center justify-center bg-[#2d2a28] z-10">
-                    <div className="w-2 h-2 rounded-full bg-[#f3f3ec]" />
+                    <div className="w-2 h-2 rounded-full bg-[#F5F7F8]" />
                   </div>
                   <div>
                     <span className="text-sm text-[#888480] block mb-1">{item.year}</span>

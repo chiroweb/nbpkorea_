@@ -38,14 +38,14 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="bg-[#f3f3ec] pt-32 pb-12">
+    <footer className="bg-[#F5F7F8] pt-32 pb-12">
       {/* Gallery Strip */}
       <div className="overflow-hidden mb-20">
         <div className="flex gap-4 animate-scroll">
           {[...galleryImages, ...galleryImages].map((img, i) => (
             <div
               key={i}
-              className="relative w-32 h-40 md:w-48 md:h-60 flex-shrink-0 overflow-hidden bg-[#e8e8e0]"
+              className="relative w-32 h-40 md:w-48 md:h-60 flex-shrink-0 overflow-hidden bg-[#DCE2E8]"
             >
               <Image src={img.src} alt={img.alt} fill className="object-cover" />
             </div>
@@ -66,7 +66,7 @@ export default function Footer() {
                     href={item.href}
                     onMouseEnter={() => setHoveredImage(item.image)}
                     onMouseLeave={() => setHoveredImage(null)}
-                    className="text-sm tracking-[0.15em] uppercase py-3 border-b border-[#d4d4cc] hover:border-[#2d2a28] transition-colors"
+                    className="text-sm tracking-[0.15em] uppercase py-3 border-b border-[#C8D0DA] hover:border-[#C05010] transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -79,7 +79,7 @@ export default function Footer() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-4 py-2 hover:bg-[#2d2a28] hover:text-[#f3f3ec] transition-all"
+                    className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-4 py-2 hover:bg-[#C05010] hover:text-[#F5F7F8] transition-all"
                   >
                     {link.label}
                     <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
@@ -131,8 +131,8 @@ export default function Footer() {
           </div>
 
           {/* Bottom Bar */}
-          <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-[#d4d4cc]">
-            <Link href="/privacy" className="text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#2d2a28] transition-colors mb-4 md:mb-0">
+          <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-[#C8D0DA]">
+            <Link href="/privacy" className="text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors mb-4 md:mb-0">
               Privacy Policy
             </Link>
 
@@ -145,9 +145,9 @@ export default function Footer() {
           <div className="flex justify-center mt-12">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex flex-col items-center gap-2 text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#2d2a28] transition-colors group"
+              className="flex flex-col items-center gap-2 text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors group"
             >
-              <div className="w-10 h-10 border border-[#d4d4cc] rounded-full flex items-center justify-center group-hover:border-[#2d2a28] group-hover:bg-[#2d2a28] group-hover:text-[#f3f3ec] transition-all">
+              <div className="w-10 h-10 border border-[#C8D0DA] rounded-full flex items-center justify-center group-hover:border-[#C05010] group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="rotate-[-90deg]">
                   <path d="M1 6H11M11 6L6 1M11 6L6 11" stroke="currentColor" strokeWidth="1"/>
                 </svg>

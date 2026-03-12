@@ -120,7 +120,7 @@ function ProductCard({
       }`}
       style={{ transitionDelay: `${(index % 3) * 150}ms` }}
     >
-      <div className="relative aspect-[4/3] mb-6 overflow-hidden bg-[#e8e8e0]">
+      <div className="relative aspect-[4/3] mb-6 overflow-hidden bg-[#DCE2E8]">
         {"image" in product && (
           <Image
             src={product.image as string}
@@ -148,7 +148,7 @@ function ProductCard({
           {product.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[10px] tracking-[0.08em] border border-[#e0e0e0] px-2 py-0.5 text-[#888480]"
+              className="text-[10px] tracking-[0.08em] border border-[#D4DAE2] px-2 py-0.5 text-[#888480]"
             >
               {tag}
             </span>
@@ -164,7 +164,7 @@ function IndustryTagsSection() {
   const tags = ["조선/해양", "자동차", "중공업", "화학/석유화학", "환경/악취처리", "반도체", "식품가공", "제약", "섬유", "에너지"];
 
   return (
-    <section ref={ref} className="py-16 px-6 md:px-12 bg-[#fafafa] border-t border-[#e0e0e0]">
+    <section ref={ref} className="py-16 px-6 md:px-12 bg-[#F2F4F7] border-t border-[#D4DAE2]">
       <div className="max-w-7xl mx-auto">
         <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-6">Industry Applications</p>
         <div
@@ -175,7 +175,7 @@ function IndustryTagsSection() {
           {tags.map((tag) => (
             <span
               key={tag}
-              className="text-xs tracking-[0.08em] border border-[#d4d4cc] px-4 py-2 text-[#888480] hover:border-[#2d2a28] hover:text-[#2d2a28] transition-colors cursor-default"
+              className="text-xs tracking-[0.08em] border border-[#C8D0DA] px-4 py-2 text-[#888480] hover:border-[#C05010] hover:text-[#C05010] transition-colors cursor-default"
             >
               {tag}
             </span>
@@ -190,7 +190,7 @@ function FeatureSection() {
   const { ref, isInView } = useInView({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#fafafa]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div
@@ -230,7 +230,7 @@ function FeatureSection() {
               isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
-            <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#e8e8e0]">
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#DCE2E8]">
               <Image
                 src={`${S3}/images/building.jpg`}
                 alt="NBP KOREA 제품 개요"
@@ -257,7 +257,7 @@ export default function ProductsPage() {
       breadcrumb={[{ label: "제품/솔루션", href: "/products" }]}
     >
       {/* Tab Navigation */}
-      <section className="py-16 px-6 md:px-12 border-b border-[#e0e0e0]">
+      <section className="py-16 px-6 md:px-12 border-b border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
           <div className="flex gap-0">
             {tabs.map((tab) => (
@@ -266,8 +266,8 @@ export default function ProductsPage() {
                 onClick={() => setActiveTab(tab.id)}
                 className={`flex-1 md:flex-none px-8 py-4 text-xs tracking-[0.15em] uppercase border transition-all ${
                   activeTab === tab.id
-                    ? "bg-[#2d2a28] text-[#f3f3ec] border-[#2d2a28]"
-                    : "border-[#e0e0e0] text-[#888480] hover:border-[#2d2a28] hover:text-[#2d2a28]"
+                    ? "bg-[#2d2a28] text-[#F5F7F8] border-[#2d2a28]"
+                    : "border-[#D4DAE2] text-[#888480] hover:border-[#C05010] hover:text-[#C05010]"
                 }`}
               >
                 <span className="hidden md:inline">{tab.label}</span>
@@ -314,7 +314,7 @@ export default function ProductsPage() {
           </p>
           <Link
             href="/support"
-            className="inline-flex items-center gap-3 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-8 py-4 hover:bg-[#2d2a28] hover:text-white transition-all"
+            className="inline-flex items-center gap-3 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-8 py-4 hover:bg-[#C05010] hover:text-white transition-all"
           >
             상담 문의하기
             <svg width="12" height="12" viewBox="0 0 12 12" fill="none">

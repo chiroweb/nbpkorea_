@@ -57,12 +57,12 @@ function InquiryTypesSection() {
           {types.map((type, index) => (
             <div
               key={type.title}
-              className={`border border-[#e0e0e0] p-8 transition-all duration-1000 hover:border-[#2d2a28] group ${
+              className={`border border-[#D4DAE2] p-8 transition-all duration-1000 hover:border-[#C05010] group ${
                 isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <span className="text-2xl text-[#d4d4cc] block mb-4">{type.icon}</span>
+              <span className="text-2xl text-[#C8D0DA] block mb-4">{type.icon}</span>
               <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
                 {type.subtitle}
               </span>
@@ -105,7 +105,7 @@ function FAQSection() {
   ];
 
   return (
-    <section ref={ref} className="py-20 px-6 md:px-12 bg-[#fafafa]">
+    <section ref={ref} className="py-20 px-6 md:px-12 bg-[#F2F4F7]">
       <div className="max-w-3xl mx-auto">
         <div
           className={`mb-16 transition-all duration-1000 ${
@@ -117,11 +117,11 @@ function FAQSection() {
             자주 묻는 질문
           </h2>
         </div>
-        <div className="border-t border-[#e0e0e0]">
+        <div className="border-t border-[#D4DAE2]">
           {faqs.map((faq, index) => (
             <div
               key={faq.question}
-              className={`border-b border-[#e0e0e0] transition-all duration-700 ${
+              className={`border-b border-[#D4DAE2] transition-all duration-700 ${
                 isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
               style={{ transitionDelay: `${index * 100}ms` }}
@@ -131,7 +131,7 @@ function FAQSection() {
                 className="w-full flex items-center justify-between py-6 text-left group"
               >
                 <span className="flex items-center gap-4">
-                  <span className="text-xs text-[#d4d4cc] font-light">
+                  <span className="text-xs text-[#C8D0DA] font-light">
                     Q{String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="text-sm tracking-[0.03em] text-[#2d2a28] group-hover:opacity-70 transition-opacity">
@@ -193,16 +193,16 @@ function ASProcedureSection() {
           {steps.map((step, index) => (
             <div
               key={step.num}
-              className={`relative border border-[#e0e0e0] p-8 transition-all duration-1000 ${
+              className={`relative border border-[#D4DAE2] p-8 transition-all duration-1000 ${
                 isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
               }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               {/* 연결선 */}
               {index < steps.length - 1 && (
-                <div className="hidden md:block absolute right-0 top-1/2 w-px h-4 bg-[#e0e0e0] translate-x-px -translate-y-1/2" />
+                <div className="hidden md:block absolute right-0 top-1/2 w-px h-4 bg-[#D4DAE2] translate-x-px -translate-y-1/2" />
               )}
-              <span className="text-3xl font-light text-[#e0e0e0] block mb-4">{step.num}</span>
+              <span className="text-3xl font-light text-[#D4DAE2] block mb-4">{step.num}</span>
               <h3 className="text-base font-medium text-[#2d2a28] mb-2">{step.title}</h3>
               <p className="text-xs leading-[1.8] text-[#888480]">{step.desc}</p>
             </div>
@@ -210,7 +210,7 @@ function ASProcedureSection() {
         </div>
 
         <div
-          className={`border border-[#e0e0e0] p-8 bg-[#fafafa] transition-all duration-1000 delay-500 ${
+          className={`border border-[#D4DAE2] p-8 bg-[#F2F4F7] transition-all duration-1000 delay-500 ${
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
@@ -231,7 +231,7 @@ function ContactFormSection() {
   const { ref, isInView } = useInView({ threshold: 0.15 });
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#fafafa]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20">
           <div
@@ -251,7 +251,7 @@ function ContactFormSection() {
                   </label>
                   <input
                     type="text"
-                    className="w-full border-b border-[#e0e0e0] bg-transparent py-3 text-sm text-[#2d2a28] outline-none focus:border-[#2d2a28] transition-colors"
+                    className="w-full border-b border-[#D4DAE2] bg-transparent py-3 text-sm text-[#2d2a28] outline-none focus:border-[#2d2a28] transition-colors"
                     placeholder="홍길동"
                   />
                 </div>
@@ -261,7 +261,7 @@ function ContactFormSection() {
                   </label>
                   <input
                     type="text"
-                    className="w-full border-b border-[#e0e0e0] bg-transparent py-3 text-sm text-[#2d2a28] outline-none focus:border-[#2d2a28] transition-colors"
+                    className="w-full border-b border-[#D4DAE2] bg-transparent py-3 text-sm text-[#2d2a28] outline-none focus:border-[#2d2a28] transition-colors"
                     placeholder="주식회사 OOO"
                   />
                 </div>
@@ -272,7 +272,7 @@ function ContactFormSection() {
                 </label>
                 <input
                   type="email"
-                  className="w-full border-b border-[#e0e0e0] bg-transparent py-3 text-sm text-[#2d2a28] outline-none focus:border-[#2d2a28] transition-colors"
+                  className="w-full border-b border-[#D4DAE2] bg-transparent py-3 text-sm text-[#2d2a28] outline-none focus:border-[#2d2a28] transition-colors"
                   placeholder="example@company.com"
                 />
               </div>
@@ -280,7 +280,7 @@ function ContactFormSection() {
                 <label className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
                   문의 유형
                 </label>
-                <select className="w-full border-b border-[#e0e0e0] bg-transparent py-3 text-sm text-[#888480] outline-none focus:border-[#2d2a28] transition-colors appearance-none cursor-pointer">
+                <select className="w-full border-b border-[#D4DAE2] bg-transparent py-3 text-sm text-[#888480] outline-none focus:border-[#2d2a28] transition-colors appearance-none cursor-pointer">
                   <option value="">선택해주세요</option>
                   <option value="product">제품 상담</option>
                   <option value="as">유지보수 / A/S</option>
@@ -294,13 +294,13 @@ function ContactFormSection() {
                 </label>
                 <textarea
                   rows={5}
-                  className="w-full border border-[#e0e0e0] bg-transparent p-4 text-sm text-[#2d2a28] outline-none focus:border-[#2d2a28] transition-colors resize-none"
+                  className="w-full border border-[#D4DAE2] bg-transparent p-4 text-sm text-[#2d2a28] outline-none focus:border-[#2d2a28] transition-colors resize-none"
                   placeholder="문의하실 내용을 입력해 주세요."
                 />
               </div>
               <button
                 type="submit"
-                className="inline-flex items-center gap-3 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-8 py-4 hover:bg-[#2d2a28] hover:text-white transition-all"
+                className="inline-flex items-center gap-3 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-8 py-4 hover:bg-[#C05010] hover:text-white transition-all"
               >
                 문의 보내기
                 <svg width="16" height="8" viewBox="0 0 16 8" fill="none">
@@ -325,7 +325,7 @@ function ContactFormSection() {
                 { label: "팩스", value: "031-434-6568", sub: "" },
                 { label: "이메일", value: "nbpkorea@nbpkorea.co.kr", sub: "영업일 기준 24시간 이내 회신" },
               ].map((info) => (
-                <div key={info.label} className="border-b border-[#e0e0e0] pb-4">
+                <div key={info.label} className="border-b border-[#D4DAE2] pb-4">
                   <span className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-1">
                     {info.label}
                   </span>
@@ -337,7 +337,7 @@ function ContactFormSection() {
                   )}
                 </div>
               ))}
-              <div className="border-b border-[#e0e0e0] pb-4">
+              <div className="border-b border-[#D4DAE2] pb-4">
                 <span className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-1">
                   사업자등록번호
                 </span>

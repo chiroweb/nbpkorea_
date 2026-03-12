@@ -28,16 +28,16 @@ export default function RecruitSection() {
               isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
-            <div className="relative aspect-square overflow-hidden bg-[#e8e8e0]">
+            <div className="relative aspect-square overflow-hidden bg-[#DCE2E8]">
               <Image src={`${S3}/images/intro4.JPG`} alt="MIDCO 파트너 현장" fill className="object-cover" />
             </div>
-            <div className="relative aspect-square mt-8 overflow-hidden bg-[#e8e8e0]">
+            <div className="relative aspect-square mt-8 overflow-hidden bg-[#DCE2E8]">
               <Image src={`${S3}/images/into3.jpg`} alt="ECOSTAR 파트너 현장" fill className="object-cover" />
             </div>
-            <div className="relative aspect-square -mt-8 overflow-hidden bg-[#e8e8e0]">
+            <div className="relative aspect-square -mt-8 overflow-hidden bg-[#DCE2E8]">
               <Image src={`${S3}/assets/industry1.png`} alt="조선 현장" fill className="object-cover" />
             </div>
-            <div className="relative aspect-square overflow-hidden bg-[#e8e8e0]">
+            <div className="relative aspect-square overflow-hidden bg-[#DCE2E8]">
               <Image src={`${S3}/assets/industry2.png`} alt="자동차 현장" fill className="object-cover" />
             </div>
           </div>
@@ -56,25 +56,25 @@ export default function RecruitSection() {
               글로벌 파트너십과 현장 검증된 기술로 산업 현장의 요구에 응답합니다.
             </p>
 
-            <div className="border-t border-[#d4d4cc] mb-8">
+            <div className="border-t border-[#C8D0DA] mb-8">
               {partners.map((partner) => (
                 <div
                   key={partner.title}
-                  className="flex items-center justify-between py-4 border-b border-[#d4d4cc]"
+                  className="flex items-center justify-between py-4 border-b border-[#C8D0DA]"
                 >
                   <div>
                     <span className="block text-sm tracking-[0.05em] text-[#2d2a28]">{partner.title}</span>
                     <span className="text-xs text-[#888480]">{partner.type}</span>
                   </div>
                   {partner.since && (
-                    <span className="text-xs text-[#d4d4cc] tracking-[0.1em]">Since {partner.since}</span>
+                    <span className="text-xs text-[#C8D0DA] tracking-[0.1em]">Since {partner.since}</span>
                   )}
                 </div>
               ))}
             </div>
 
             <Link href="/business" className="btn-link group">
-              <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#2d2a28] group-hover:text-[#f3f3ec] transition-all">
+              <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                   <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1"/>
                 </svg>

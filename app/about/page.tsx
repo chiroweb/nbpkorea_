@@ -21,7 +21,7 @@ function CeoSection() {
                 : "opacity-0 -translate-x-10"
             }`}
           >
-            <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#e8e8e0]">
+            <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#DCE2E8]">
               <Image
                 src={`${S3}/images/CEO.jpeg`}
                 alt="NBP KOREA 대표이사 최혁순"
@@ -99,7 +99,7 @@ function ImpactNumbersSection() {
               <p className="text-4xl md:text-5xl font-light text-white tracking-[0.05em] mb-2">
                 {stat.value}
               </p>
-              <p className="text-sm tracking-[0.15em] uppercase text-[#d4d4cc] mb-1">
+              <p className="text-sm tracking-[0.15em] uppercase text-[#C8D0DA] mb-1">
                 {stat.label}
               </p>
               <p className="text-xs text-[#888480]">{stat.sub}</p>
@@ -115,7 +115,7 @@ function VisionSection() {
   const { ref, isInView } = useInView({ threshold: 0.15 });
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#fafafa]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
       <div className="max-w-7xl mx-auto">
         <div
           className={`text-center mb-20 transition-all duration-1000 ${
@@ -131,19 +131,16 @@ function VisionSection() {
         <div className="grid md:grid-cols-3 gap-8">
           {[
             {
-              icon: "◇",
               title: "비전",
               subtitle: "Vision",
               text: "산업용 연소 및 환경설비 분야의 글로벌 리더로서, 청정하고 효율적인 산업 환경을 만들어갑니다",
             },
             {
-              icon: "○",
               title: "미션",
               subtitle: "Mission",
               text: "고객 맞춤형 기술 솔루션으로 산업 현장의 에너지 효율과 환경을 동시에 개선합니다",
             },
             {
-              icon: "△",
               title: "핵심가치",
               subtitle: "Core Value",
               text: "신뢰(Trust), 도전(Challenge), 열정(Passion)을 바탕으로 고객과 함께 성장합니다",
@@ -158,9 +155,16 @@ function VisionSection() {
               }`}
               style={{ transitionDelay: `${index * 200}ms` }}
             >
-              <span className="text-3xl text-[#d4d4cc] block mb-6">
-                {item.icon}
-              </span>
+              <div className="flex justify-center mb-6">
+                <div className="relative w-10 h-10 opacity-20">
+                  <Image
+                    src={`${S3}/images/dragon-logo.png`}
+                    alt="NBP KOREA"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
               <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
                 {item.subtitle}
               </span>
@@ -214,7 +218,7 @@ function HistorySection() {
         </div>
 
         <div className="relative">
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-[#e0e0e0] md:-translate-x-px" />
+          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-[#D4DAE2] md:-translate-x-px" />
 
           {timelineItems.map((item, index) => (
             <div
@@ -227,7 +231,7 @@ function HistorySection() {
               style={{ transitionDelay: `${index * 80}ms` }}
             >
               <div className="md:w-1/2 md:pr-12 md:text-right">
-                <span className="text-3xl md:text-4xl font-light text-[#d4d4cc] tracking-[0.05em]">
+                <span className="text-3xl md:text-4xl font-light text-[#C8D0DA] tracking-[0.05em]">
                   {item.year}
                 </span>
               </div>
@@ -256,7 +260,7 @@ function CompanyInfoSection() {
   const { ref, isInView } = useInView({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#fafafa]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
       <div className="max-w-7xl mx-auto">
         <div
           className={`mb-16 transition-all duration-1000 ${
@@ -270,7 +274,7 @@ function CompanyInfoSection() {
         </div>
 
         <div
-          className={`grid md:grid-cols-2 gap-0 border border-[#e0e0e0] transition-all duration-1000 delay-300 ${
+          className={`grid md:grid-cols-2 gap-0 border border-[#D4DAE2] transition-all duration-1000 delay-300 ${
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
@@ -284,7 +288,7 @@ function CompanyInfoSection() {
           ].map((item) => (
             <div
               key={item.label}
-              className="flex border-b border-r border-[#e0e0e0] last:border-b-0"
+              className="flex border-b border-r border-[#D4DAE2] last:border-b-0"
             >
               <div className="w-36 md:w-44 flex-shrink-0 bg-[#f5f5f5] px-6 py-5 text-xs tracking-[0.1em] text-[#888480] uppercase">
                 {item.label}
@@ -344,7 +348,7 @@ function PatentsSection() {
           {patents.map((patent, index) => (
             <div
               key={patent}
-              className={`border border-[#e0e0e0] p-6 transition-all duration-700 ${
+              className={`border border-[#D4DAE2] p-6 transition-all duration-700 ${
                 isInView
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-6"
@@ -404,7 +408,7 @@ function ClientsMarqueeSection() {
   ];
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#fafafa]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
       <div className="max-w-7xl mx-auto">
         <div
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -423,7 +427,7 @@ function ClientsMarqueeSection() {
             {[...clientLogos, ...clientLogos].map((logo, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 border border-[#e0e0e0] px-6 py-4 bg-white flex items-center justify-center w-36 h-20"
+                className="flex-shrink-0 border border-[#D4DAE2] px-6 py-4 bg-white flex items-center justify-center w-36 h-20"
               >
                 <Image
                   src={`${LOGO_BASE}/${encodeURIComponent(logo.file)}`}
