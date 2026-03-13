@@ -90,19 +90,22 @@ const combustionProducts = [
 // ── 산업용 버너 ───────────────────────────────────────────────
 const burnerProducts = [
   {
+    id: "nbp-mb",
     title: "NBP-MB",
-    subtitle: "금속화이버 표면연소 버너",
+    subtitle: "Metal Fiber Surface Combustion Burner",
+    href: "/products/burner/nbp-mb",
     image: `${S3}/images/metal%20burner1.png`,
-    description: "NBP KOREA가 자체 개발한 고효율 금속화이버 버너입니다. 내열 금속섬유로 제작된 연소면에서 적외선 복사열을 발생시켜 에너지 효율을 30% 이상 향상시키고, NOx를 대폭 저감합니다.",
-    tags: ["환경설비", "연소설비", "범용"],
-    isMain: true,
+    description: "2단 연소 방식 고효율 금속화이버 버너. 30단계 정밀 화염 제어, NOₓ·CO 저배출, Natural/Propane/Butane 복합 연료 대응.",
+    tags: ["주력 제품", "NOₓ 저배출", "범용"],
   },
   {
+    id: "nbp-smb",
     title: "NBP-SMB",
-    subtitle: "소형 금속화이버 버너",
+    subtitle: "Small Metal Fiber Burner",
+    href: "/products/burner/nbp-smb",
     image: `${S3}/images/smallmetalburner.png`,
-    description: "소형 장비 및 협소 공간에 적합한 컴팩트형 금속화이버 버너입니다. 6가지 용량 변형 제품으로 다양한 소형 산업 장비에 맞춤 적용이 가능합니다.",
-    tags: ["소형장비", "특수장비"],
+    description: "소형 장비 및 협소 공간에 최적화된 컴팩트 금속화이버 버너. 6가지 용량(폭 10~50cm) 라인업으로 다양한 소형 산업 장비에 맞춤 적용.",
+    tags: ["소형장비", "컴팩트", "특수장비"],
   },
 ];
 
@@ -216,31 +219,53 @@ function CombustionCard({ product, index }: { product: typeof combustionProducts
   );
 }
 
-// ── 버너 카드 ────────────────────────────────────────────────
+// ── 버너 카드 (링크 카드 방식) ──────────────────────────────────
 function BurnerCard({ product, index }: { product: typeof burnerProducts[0]; index: number }) {
   const { ref, isInView } = useInView({ threshold: 0.15 });
   return (
     <div
       ref={ref}
-      className={`group transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
-      style={{ transitionDelay: `${index * 150}ms` }}
+      className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
+      style={{ transitionDelay: `${(index % 3) * 150}ms` }}
     >
-      <div className="relative aspect-[4/3] mb-6 overflow-hidden bg-[#DCE2E8]">
-        <Image src={product.image} alt={product.title} fill className="object-cover group-hover:scale-105 transition-transform duration-700" />
-      </div>
-      <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-1">{product.subtitle}</span>
-      <h3 className="text-lg md:text-xl tracking-[0.08em] font-medium text-[#2d2a28] mb-3">
-        {product.title}
-        {product.isMain && (
-          <span className="ml-2 text-[10px] tracking-[0.1em] border border-[#C05010] text-[#C05010] px-2 py-0.5 align-middle">주력</span>
-        )}
-      </h3>
-      <p className="text-xs leading-[2] text-[#888480] mb-4">{product.description}</p>
-      <div className="flex flex-wrap gap-2">
-        {product.tags.map((tag) => (
-          <span key={tag} className="text-[10px] tracking-[0.08em] border border-[#D4DAE2] px-2 py-0.5 text-[#888480]">{tag}</span>
-        ))}
-      </div>
+      <Link href={product.href} className="group block">
+        <div className="relative aspect-[4/3] mb-6 overflow-hidden bg-[#DCE2E8]">
+          <Image
+            src={product.image}
+            alt={product.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-[#2d2a28]/0 group-hover:bg-[#2d2a28]/10 transition-all duration-500" />
+          <div className="absolute bottom-4 right-4 w-8 h-8 flex items-center justify-center border border-white/60 rounded-full bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+              <path d="M1 7L7 1M7 1H2M7 1V6" stroke="white" strokeWidth="1"/>
+            </svg>
+          </div>
+        </div>
+        <div>
+          <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
+            {product.subtitle}
+          </span>
+          <h3 className="text-lg md:text-xl tracking-[0.08em] font-medium text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
+            {product.title}
+          </h3>
+          <p className="text-xs leading-[2] text-[#888480] mb-4">{product.description}</p>
+          <div className="flex flex-wrap gap-2 mb-4">
+            {product.tags.map((tag) => (
+              <span key={tag} className="text-[10px] tracking-[0.08em] border border-[#D4DAE2] px-2 py-0.5 text-[#888480]">
+                {tag}
+              </span>
+            ))}
+          </div>
+          <div className="flex items-center gap-2 text-[11px] tracking-[0.12em] uppercase text-[#2d2a28]/40 group-hover:text-[#C05010] transition-colors duration-300">
+            <span>상세 보기</span>
+            <svg width="14" height="6" viewBox="0 0 14 6" fill="none" className="transition-transform group-hover:translate-x-1">
+              <path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1"/>
+            </svg>
+          </div>
+        </div>
+      </Link>
     </div>
   );
 }
@@ -349,11 +374,11 @@ function ProductsPageInner() {
             </div>
           )}
 
-          {/* 산업용 버너 */}
+          {/* 산업용 버너 — 4열 링크 카드 */}
           {activeTab === "burner" && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
               {burnerProducts.map((product, index) => (
-                <BurnerCard key={product.title} product={product} index={index} />
+                <BurnerCard key={product.id} product={product} index={index} />
               ))}
             </div>
           )}

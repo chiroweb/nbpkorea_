@@ -17,6 +17,11 @@ const combustionSubs = [
   { id: "paint-dryer", label: "도장 건조기", href: "/products/combustion/paint-dryer" },
 ];
 
+const burnerSubs = [
+  { id: "nbp-mb", label: "NBP-MB", href: "/products/burner/nbp-mb" },
+  { id: "nbp-smb", label: "NBP-SMB", href: "/products/burner/nbp-smb" },
+];
+
 interface ProductNavProps {
   /** 현재 활성 메인 탭 */
   activeTab: "environment" | "combustion" | "burner";
@@ -109,6 +114,35 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
                 key={sub.id}
                 href={sub.href}
                 className={`relative px-4 md:px-5 py-1.5 text-xs tracking-[0.08em] transition-colors duration-200 ${
+                  activeProduct === sub.id
+                    ? "text-[#C05010] font-medium"
+                    : "text-[#888480] hover:text-[#C05010]"
+                } ${i > 0 ? "border-l border-[#E8ECF0]" : ""}`}
+              >
+                {sub.label}
+                {activeProduct === sub.id && (
+                  <span className="absolute bottom-0 left-4 right-4 h-0.5 bg-[#C05010]" />
+                )}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* 산업용 버너 하위 메뉴 */}
+        <div
+          className={`overflow-hidden transition-all duration-300 ${
+            activeTab === "burner" ? "max-h-20 opacity-100" : "max-h-0 opacity-0"
+          }`}
+        >
+          <div className="flex flex-wrap items-center gap-0 py-3 border-t border-[#E8ECF0]">
+            <span className="text-[10px] tracking-[0.15em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0]">
+              Sub
+            </span>
+            {burnerSubs.map((sub, i) => (
+              <Link
+                key={sub.id}
+                href={sub.href}
+                className={`relative px-4 md:px-6 py-1.5 text-xs tracking-[0.12em] uppercase transition-colors duration-200 ${
                   activeProduct === sub.id
                     ? "text-[#C05010] font-medium"
                     : "text-[#888480] hover:text-[#C05010]"
