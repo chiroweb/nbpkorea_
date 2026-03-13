@@ -32,28 +32,31 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
 
   return (
     <div
-      className={`fixed inset-0 z-50 transition-opacity duration-500 ${
+      className={`fixed inset-0 z-50 flex flex-col items-center justify-center bg-[#F5F7F8] transition-opacity duration-500 ${
         isExiting ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     >
-      {/* Background Video */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        src="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/intro-video.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-      />
+      {/* Video — 사업분야 이미지 크기 정도, 마스크 처리 */}
+      <div
+        className="overflow-hidden rounded-sm"
+        style={{ width: "min(480px, 72vw)", aspectRatio: "4/3" }}
+      >
+        <video
+          className="w-full h-full object-cover"
+          src="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/intro-video.mp4"
+          autoPlay
+          muted
+          loop
+          playsInline
+        />
+      </div>
 
       {/* Counter */}
-      <div className="absolute inset-0 flex items-end justify-end pb-12 pr-12">
-        <span
-          className="text-[clamp(3rem,8vw,7rem)] font-light tracking-[0.1em] leading-none text-white"
-          style={{ textShadow: "0 2px 20px rgba(0,0,0,0.3)" }}
-        >
-          {count}
-        </span>
+      <div
+        className="mt-6 text-sm tracking-[0.2em] font-light"
+        style={{ color: "#888480" }}
+      >
+        {count}
       </div>
     </div>
   );
