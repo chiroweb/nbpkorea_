@@ -29,8 +29,8 @@ export default function Header() {
             <Image
               src="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/loogo(2).png"
               alt="NBP KOREA"
-              width={72}
-              height={72}
+              width={140}
+              height={56}
               className="object-contain"
             />
           </Link>

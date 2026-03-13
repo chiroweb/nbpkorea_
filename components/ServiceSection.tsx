@@ -158,9 +158,10 @@ export default function ServiceSection() {
             {services.map((service, index) => (
               <div
                 key={service.id}
-                className="absolute inset-0 flex flex-col justify-center px-12 md:px-16"
+                className="absolute inset-0 flex flex-col justify-center items-center px-8"
                 style={getTextStyle(index)}
               >
+              <div className="w-full max-w-lg">
                 <span className="text-[72px] md:text-[88px] font-light text-[#DCE2E8] leading-none block mb-2">
                   {String(index + 1).padStart(2, "0")}
                 </span>
@@ -194,6 +195,7 @@ export default function ServiceSection() {
                     <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1" />
                   </svg>
                 </Link>
+              </div>
               </div>
             ))}
           </div>
