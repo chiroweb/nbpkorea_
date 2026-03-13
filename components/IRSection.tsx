@@ -37,7 +37,7 @@ export default function IRSection() {
               {[
                 { label: "대표전화", value: "031-434-6566~7", sub: "평일 09:00 - 18:00" },
                 { label: "이메일", value: "nbpkorea@nbpkorea.co.kr", sub: "영업일 기준 24시간 이내 회신" },
-                { label: "주소", value: "경기도 안산시 단원구 산단로 76", sub: "성곡동" },
+                { label: "주소", value: "경기도 안산시 단원구 엠티브이로 8길 22", sub: "" },
               ].map((item) => (
                 <div
                   key={item.label}

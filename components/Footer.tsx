@@ -98,7 +98,7 @@ export default function Footer() {
               </h4>
               <p className="text-sm leading-[2] mb-4">
                 경기도 안산시 단원구<br />
-                산단로 76 (성곡동)<br />
+                엠티브이로 8길 22<br />
                 사업자등록번호 119-13-28296
               </p>
               <Link

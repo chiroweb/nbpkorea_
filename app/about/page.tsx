@@ -284,7 +284,7 @@ function CompanyInfoSection() {
             { label: "대표이사", value: "최혁순" },
             { label: "사업분야", value: "환경설비 (CTO, RTO, RCO, TO, DTO) / 산업용 연소장비" },
             { label: "사업자등록번호", value: "119-13-28296" },
-            { label: "소재지", value: "경기도 안산시 단원구 산단로 76 (성곡동)" },
+            { label: "소재지", value: "경기도 안산시 단원구 엠티브이로 8길 22" },
           ].map((item) => (
             <div
               key={item.label}
@@ -471,7 +471,7 @@ function DirectionsSection() {
           >
             <div className="aspect-[4/3] w-full overflow-hidden">
               <iframe
-                src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EC%95%88%EC%82%B0%EC%8B%9C+%EB%8B%A8%EC%9B%90%EA%B5%AC+%EC%82%B0%EB%8B%A8%EB%A1%9C+76&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EC%95%88%EC%82%B0%EC%8B%9C+%EB%8B%A8%EC%9B%90%EA%B5%AC+%EC%97%A0%ED%8B%B0%EB%B8%8C%EC%9D%B4%EB%A1%9C+8%EA%B8%B8+22&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -490,7 +490,7 @@ function DirectionsSection() {
               <div>
                 <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-2">Address</p>
                 <p className="text-sm text-[#2d2a28] leading-[2]">
-                  경기도 안산시 단원구 산단로 76 (성곡동)
+                  경기도 안산시 단원구 엠티브이로 8길 22
                 </p>
               </div>
               <div>
@@ -515,10 +515,10 @@ function DirectionsSection() {
                 <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-3">Transit</p>
                 <div className="space-y-2">
                   <p className="text-sm text-[#888480] leading-[1.8]">
-                    <span className="text-[#2d2a28] font-medium">지하철</span> — 수인·분당선 초지역 1번 출구 도보 15분
+                    <span className="text-[#2d2a28] font-medium">지하철</span> — 수인·분당선 초지역 1번 출구 도보 10분
                   </p>
                   <p className="text-sm text-[#888480] leading-[1.8]">
-                    <span className="text-[#2d2a28] font-medium">버스</span> — 안산 산단로 정류장 하차
+                    <span className="text-[#2d2a28] font-medium">버스</span> — 안산 엠티브이로 정류장 하차
                   </p>
                 </div>
               </div>

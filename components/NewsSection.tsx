@@ -8,9 +8,9 @@ export default function NewsSection() {
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   const newsItems = [
-    { id: 1, category: "수상", date: "2021. 11. 15", title: "산업통상자원부 장관 표창 수상", image: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/reward-1/%EB%B6%80%EC%B4%9D%EB%A6%AC%EA%B2%B8%EA%B5%90%EC%9C%A1%EB%B6%80%EC%9E%A5%EA%B4%80%EC%83%81_%ED%91%9C%EC%B0%BD%EC%9E%A5(2021).png" },
-    { id: 2, category: "인증", date: "2022. 03. 10", title: "기업부설연구소 KOITA 인증 취득", image: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/intro2.jpg" },
-    { id: 3, category: "신제품", date: "2023. 06. 20", title: "차세대 금속화이버 버너 NBP-MB 시리즈 출시", image: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/metal%20burner1.png" },
+    { id: 1, category: "기술 인사이트", date: "2025.12.10", title: "RTO 시스템, 조선소 도장 공정 악취 처리의 해법", image: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/service-environment.png", href: "/news/rto-case-study-shipbuilding", objectPosition: "center center" },
+    { id: 2, category: "제품 소식", date: "2025.11.20", title: "NBP-MB 금속화이버 버너, NOx 저감 30% 달성 검증", image: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/service-burner.png", href: "/news/metal-fiber-burner-nox-reduction", objectPosition: "center center" },
+    { id: 3, category: "회사 소식", date: "2025.10.05", title: "ISO 9001 · ISO 14001 통합 인증 갱신 완료", image: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/service-combustion.png", href: "/news/nbpkorea-iso-certification", objectPosition: "center center" },
   ];
 
   return (
@@ -27,7 +27,7 @@ export default function NewsSection() {
             <h2 className="section-title">LATEST NEWS</h2>
           </div>
 
-          <Link href="#" className="btn-link group mt-6 md:mt-0">
+          <Link href="/news" className="btn-link group mt-6 md:mt-0">
             <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
               <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
                 <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1"/>
@@ -45,7 +45,7 @@ export default function NewsSection() {
           {newsItems.map((item, index) => (
             <Link
               key={item.id}
-              href="#"
+              href={item.href}
               className={`group transition-all duration-1000 ${
                 isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
@@ -58,6 +58,7 @@ export default function NewsSection() {
                   alt={item.title}
                   fill
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  style={{ objectPosition: item.objectPosition }}
                 />
               </div>
 

@@ -100,7 +100,7 @@ function FAQSection() {
     {
       question: "현장 방문 상담이 가능한가요?",
       answer:
-        "네, 사전 예약 후 경기도 안산 본사 방문 상담이 가능합니다. 제품 시연 및 기업부설연구소 견학도 안내해 드립니다. 전화 또는 이메일로 방문 일정을 조율해 주세요.",
+        "네, 사전 예약 후 안산시 단원구 엠티브이로 8길 22 본사 방문 상담이 가능합니다. 제품 시연 및 기업부설연구소 견학도 안내해 드립니다. 전화 또는 이메일로 방문 일정을 조율해 주세요.",
     },
   ];
 
@@ -346,7 +346,7 @@ function ContactFormSection() {
             </div>
             <div className="aspect-[16/9] w-full overflow-hidden">
               <iframe
-                src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EC%95%88%EC%82%B0%EC%8B%9C+%EB%8B%A8%EC%9B%90%EA%B5%AC+%EC%82%B0%EB%8B%A8%EB%A1%9C+76&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=%EA%B2%BD%EA%B8%B0%EB%8F%84+%EC%95%88%EC%82%B0%EC%8B%9C+%EB%8B%A8%EC%9B%90%EA%B5%AC+%EC%97%A0%ED%8B%B0%EB%B8%8C%EC%9D%B4%EB%A1%9C+8%EA%B8%B8+22&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -354,7 +354,7 @@ function ContactFormSection() {
               />
             </div>
             <p className="text-sm text-[#888480] mt-4 leading-[2]">
-              경기도 안산시 단원구 산단로 76 (성곡동)
+              경기도 안산시 단원구 엠티브이로 8길 22
             </p>
           </div>
         </div>
