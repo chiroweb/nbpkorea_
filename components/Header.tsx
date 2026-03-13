@@ -11,6 +11,7 @@ export default function Header() {
     { label: "제품/솔루션", href: "/products" },
     { label: "회사소개", href: "/about" },
     { label: "기술/R&D", href: "/technology" },
+    { label: "NBP/NEWS", href: "/news" },
     { label: "고객센터", href: "/support" },
     { label: "사업분야", href: "/business" },
   ];
@@ -24,15 +25,14 @@ export default function Header() {
       <header className="fixed top-0 left-0 right-0 z-40 header-steel">
         <div className="flex items-center justify-between px-6 md:px-12 py-4">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center">
             <Image
               src="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/loogo(2).png"
               alt="NBP KOREA"
-              width={40}
-              height={40}
+              width={44}
+              height={44}
               className="object-contain"
             />
-            <span className="text-lg tracking-[0.2em] font-medium">NBP KOREA</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -41,7 +41,7 @@ export default function Header() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-xs tracking-[0.15em] uppercase hover:opacity-60 transition-opacity"
+                className="text-sm tracking-[0.12em] uppercase hover:opacity-60 transition-opacity"
               >
                 {item.label}
               </Link>
