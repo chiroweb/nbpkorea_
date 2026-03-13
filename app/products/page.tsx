@@ -140,7 +140,7 @@ function EnvironmentCard({ product, index }: { product: typeof environmentProduc
             src={product.image}
             alt={product.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            className="object-contain group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-[#2d2a28]/0 group-hover:bg-[#2d2a28]/10 transition-all duration-500" />
           <div className="absolute bottom-4 right-4 w-8 h-8 flex items-center justify-center border border-white/60 rounded-full bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -192,7 +192,7 @@ function CombustionCard({ product, index }: { product: typeof combustionProducts
             src={product.image}
             alt={product.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            className="object-contain group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-[#2d2a28]/0 group-hover:bg-[#2d2a28]/10 transition-all duration-500" />
           <div className="absolute bottom-4 right-4 w-8 h-8 flex items-center justify-center border border-white/60 rounded-full bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300">
@@ -243,7 +243,7 @@ function BurnerCard({ product, index }: { product: typeof burnerProducts[0]; ind
             src={product.image}
             alt={product.title}
             fill
-            className="object-cover group-hover:scale-105 transition-transform duration-700"
+            className="object-contain group-hover:scale-105 transition-transform duration-700"
           />
           <div className="absolute inset-0 bg-[#2d2a28]/0 group-hover:bg-[#2d2a28]/10 transition-all duration-500" />
           <div className="absolute bottom-4 right-4 w-8 h-8 flex items-center justify-center border border-white/60 rounded-full bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300">
