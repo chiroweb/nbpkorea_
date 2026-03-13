@@ -47,69 +47,43 @@ const environmentProducts = [
 ];
 
 // ── 연소설비 ──────────────────────────────────────────────────
-type SpecRow = { model: string; capacity: string; fuel: string; power: string; control: string };
-
+// combustionProducts는 링크 카드로만 사용 (상세 페이지 별도)
 const combustionProducts = [
   {
     id: "direct-heater",
     title: "직접가열식 가스히터",
     subtitle: "Direct Gas Heater (NKGH Series)",
+    href: "/products/combustion/nkgh",
     image: `${S3}/images/%EC%97%B0%EC%86%8C/1p1.png`,
-    description: "공장, 조선소, 창고 등 대공간을 빠르게 가열하는 직접 연소 방식의 산업용 가스히터입니다. 250,000~1,000,000 Kcal/h의 다양한 용량으로 제공됩니다.",
+    description: "조선소·창고·공장 등 대공간을 빠르게 가열하는 직화식 산업용 가스히터. 250,000~1,000,000 Kcal/h 5개 모델 라인업.",
     tags: ["조선", "제조공장", "대공간"],
-    specs: [
-      { model: "NKGH-25", capacity: "250,000", fuel: "LNG/LPG", power: "AC 220V/380V", control: "비례제어" },
-      { model: "NKGH-40", capacity: "400,000", fuel: "LNG/LPG", power: "AC 220V/380V", control: "비례제어" },
-      { model: "NKGH-60", capacity: "600,000", fuel: "LNG/LPG", power: "AC 220V/380V", control: "비례제어" },
-      { model: "NKGH-80", capacity: "800,000", fuel: "LNG/LPG", power: "AC 220V/380V", control: "비례제어" },
-      { model: "NKGH-100", capacity: "1,000,000", fuel: "LNG/LPG", power: "AC 220V/380V", control: "비례제어" },
-    ] as SpecRow[],
-    specHeaders: ["MODEL", "용량(Kcal/h)", "연료", "전원", "제어방식"],
-    specKeys: ["model", "capacity", "fuel", "power", "control"] as (keyof SpecRow)[],
   },
   {
     id: "indirect-heater",
     title: "간접가열식 가스히터",
     subtitle: "Indirect Gas Heater (NK-IDGH Series)",
+    href: "/products/combustion/nk-idgh",
     image: `${S3}/images/%EA%B0%84%EC%A0%91%EC%8B%9D/2-100.png`,
-    description: "열교환기를 통해 청정한 공기를 공급하는 간접 가열 방식입니다. 도장 부스, 식품 가공, 클린룸 등 청정 공기가 필요한 현장에 적합합니다.",
+    description: "열교환기를 통해 청정 공기를 공급하는 간접 가열 방식. 도장 부스·식품 가공·클린룸 등 청정 환경 필수 현장에 최적.",
     tags: ["도장부스", "식품", "클린룸"],
-    specs: [
-      { model: "NK-IDGH-40", capacity: "400,000", fuel: "LNG/LPG", power: "AC 220V/380V", control: "비례제어" },
-      { model: "NK-IDGH-60", capacity: "600,000", fuel: "LNG/LPG", power: "AC 220V/380V", control: "비례제어" },
-      { model: "NK-IDGH-80", capacity: "800,000", fuel: "LNG/LPG", power: "AC 220V/380V", control: "비례제어" },
-      { model: "NK-IDGH-100", capacity: "1,000,000", fuel: "LNG/LPG", power: "AC 220V/380V", control: "비례제어" },
-    ] as SpecRow[],
-    specHeaders: ["MODEL", "용량(Kcal/h)", "연료", "전원", "제어방식"],
-    specKeys: ["model", "capacity", "fuel", "power", "control"] as (keyof SpecRow)[],
   },
   {
     id: "dehumidifier",
     title: "하이브리드 제습기",
-    subtitle: "Hybrid Dehumidifier System",
+    subtitle: "Hybrid Dehumidifier (NK-NDGH Series)",
+    href: "/products/combustion/dehumidifier",
     image: `${S3}/images/humidremover.jpg`,
-    description: "가열과 제습을 동시에 처리하는 복합 시스템입니다. 선박 블록 탱크, 도장 공정 전처리 등 고습 환경의 공정에 최적화되어 있습니다.",
-    tags: ["조선", "도장전처리"],
-    specs: [
-      { model: "시스템 구성", capacity: "용량 맞춤 설계", fuel: "가스히터 + 냉각코일", power: "4계절 운전", control: "자동 제어" },
-    ] as SpecRow[],
-    specHeaders: ["구분", "용량", "구성요소", "운전방식", "제어"],
-    specKeys: ["model", "capacity", "fuel", "power", "control"] as (keyof SpecRow)[],
-    note: "AIR(고습도) → 루버 → 댐퍼 → 냉각코일(냉각제습) → 엘리미네이터 → 가스히터(동계 가온용) → 송풍기 → Room(저습도)",
+    description: "냉동 제습 + 가스 가열 복합 패키지. 4계절 운전 지원, 선박 블록 도장·용접·클린룸 등 고습 환경 전용.",
+    tags: ["조선", "도장전처리", "클린룸"],
   },
   {
     id: "paint-dryer",
     title: "차량 도장 건조 시스템",
     subtitle: "Paint Dryer System",
+    href: "/products/combustion/paint-dryer",
     image: `${S3}/images/forcar.png`,
-    description: "자동차 및 조선 도장 라인에 특화된 열풍 건조 시스템입니다. 균일한 온도 분포와 정밀 제어로 도장 품질을 향상시킵니다.",
-    tags: ["자동차", "조선"],
-    specs: [
-      { model: "도장건조기", capacity: "250,000", fuel: "LNG/LPG", power: "AC 380V", control: "PLC 비례제어" },
-    ] as SpecRow[],
-    specHeaders: ["구분", "용량(Kcal/h)", "연료", "전원", "제어"],
-    specKeys: ["model", "capacity", "fuel", "power", "control"] as (keyof SpecRow)[],
-    note: "KIA, BMW, 아우디 협력사 도장 라인 적용 실적",
+    description: "자동차 도장 부스 특화 열풍 건조 시스템. 1,250,000 Kcal/h 고출력, PLC 비례제어, KIA·BMW 협력사 납품 실적.",
+    tags: ["자동차", "도장부스"],
   },
 ];
 
@@ -190,111 +164,54 @@ function EnvironmentCard({ product, index }: { product: typeof environmentProduc
   );
 }
 
-// ── 연소설비 아코디언 카드 ────────────────────────────────────
-function CombustionCard({
-  product,
-  index,
-  expanded,
-  onToggle,
-}: {
-  product: typeof combustionProducts[0];
-  index: number;
-  expanded: boolean;
-  onToggle: () => void;
-}) {
-  const { ref, isInView } = useInView({ threshold: 0.1 });
-  const [selectedModel, setSelectedModel] = useState<string | null>(null);
+// ── 연소설비 카드 (환경설비와 동일한 링크 방식) ──────────────────
+function CombustionCard({ product, index }: { product: typeof combustionProducts[0]; index: number }) {
+  const { ref, isInView } = useInView({ threshold: 0.15 });
 
   return (
     <div
       ref={ref}
-      className={`border border-[#D4DAE2] transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
-      style={{ transitionDelay: `${index * 100}ms` }}
+      className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"}`}
+      style={{ transitionDelay: `${(index % 3) * 150}ms` }}
     >
-      {/* Card Header — clickable */}
-      <button
-        onClick={onToggle}
-        className="w-full flex items-center gap-6 p-6 text-left hover:bg-[#F2F4F7] transition-colors duration-200"
-      >
-        <div className="relative w-20 h-16 flex-shrink-0 overflow-hidden bg-[#DCE2E8]">
-          <Image src={product.image} alt={product.title} fill className="object-cover" />
+      <Link href={product.href} className="group block">
+        <div className="relative aspect-[4/3] mb-6 overflow-hidden bg-[#DCE2E8]">
+          <Image
+            src={product.image}
+            alt={product.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-700"
+          />
+          <div className="absolute inset-0 bg-[#2d2a28]/0 group-hover:bg-[#2d2a28]/10 transition-all duration-500" />
+          <div className="absolute bottom-4 right-4 w-8 h-8 flex items-center justify-center border border-white/60 rounded-full bg-white/10 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-all duration-300">
+            <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+              <path d="M1 7L7 1M7 1H2M7 1V6" stroke="white" strokeWidth="1"/>
+            </svg>
+          </div>
         </div>
-        <div className="flex-1 min-w-0">
-          <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-0.5">
+        <div>
+          <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
             {product.subtitle}
           </span>
-          <h3 className="text-base md:text-lg tracking-[0.05em] font-medium text-[#2d2a28]">
+          <h3 className="text-lg md:text-xl tracking-[0.08em] font-medium text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
             {product.title}
           </h3>
-          <div className="flex flex-wrap gap-2 mt-2">
+          <p className="text-xs leading-[2] text-[#888480] mb-4">{product.description}</p>
+          <div className="flex flex-wrap gap-2 mb-4">
             {product.tags.map((tag) => (
               <span key={tag} className="text-[10px] tracking-[0.08em] border border-[#D4DAE2] px-2 py-0.5 text-[#888480]">
                 {tag}
               </span>
             ))}
           </div>
-        </div>
-        <div className={`flex-shrink-0 w-8 h-8 flex items-center justify-center border transition-all duration-300 ${expanded ? "border-[#C05010] bg-[#C05010] text-white" : "border-[#D4DAE2] text-[#888480]"}`}>
-          <svg
-            width="10" height="10" viewBox="0 0 10 10" fill="none"
-            className={`transition-transform duration-300 ${expanded ? "rotate-45" : ""}`}
-          >
-            <path d="M5 1V9M1 5H9" stroke="currentColor" strokeWidth="1.2"/>
-          </svg>
-        </div>
-      </button>
-
-      {/* Accordion content */}
-      <div className={`overflow-hidden transition-all duration-500 ${expanded ? "max-h-[700px] opacity-100" : "max-h-0 opacity-0"}`}>
-        <div className="px-6 pb-6 border-t border-[#D4DAE2]">
-          <p className="text-xs text-[#8B95A1] leading-[2] mt-4 mb-4">{product.description}</p>
-
-          {product.note && (
-            <div className="mb-4 p-3 bg-[#F2F4F7] border border-[#D4DAE2] text-[11px] text-[#8B95A1] tracking-[0.03em]">
-              {product.note}
-            </div>
-          )}
-
-          <p className="text-[10px] tracking-[0.1em] uppercase text-[#888480] mb-2">제품 제원 — 행 클릭으로 모델 선택</p>
-          <div className="overflow-x-auto">
-            <table className="w-full text-xs border-collapse min-w-[480px]">
-              <thead>
-                <tr className="border-b border-[#2d2a28]">
-                  {product.specHeaders.map((h) => (
-                    <th key={h} className="py-2.5 px-3 text-left text-[10px] tracking-[0.12em] uppercase text-[#2d2a28] font-medium first:text-left text-center first:text-left">
-                      {h}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-              <tbody>
-                {product.specs.map((row) => (
-                  <tr
-                    key={row.model}
-                    onClick={() => setSelectedModel(selectedModel === row.model ? null : row.model)}
-                    className={`cursor-pointer border-b border-[#D4DAE2] transition-colors duration-200 ${
-                      selectedModel === row.model
-                        ? "bg-[#C05010]/10 border-l-2 border-[#C05010]"
-                        : "hover:bg-[#F5F7F8]"
-                    }`}
-                  >
-                    {product.specKeys.map((key, ki) => (
-                      <td
-                        key={key}
-                        className={`py-3 px-3 ${ki === 0 ? "font-medium" : "text-center"} ${
-                          selectedModel === row.model && ki === 0 ? "text-[#C05010]" : ki === 0 ? "text-[#2d2a28]" : "text-[#8B95A1]"
-                        }`}
-                      >
-                        {row[key]}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="flex items-center gap-2 text-[11px] tracking-[0.12em] uppercase text-[#2d2a28]/40 group-hover:text-[#C05010] transition-colors duration-300">
+            <span>상세 보기</span>
+            <svg width="14" height="6" viewBox="0 0 14 6" fill="none" className="transition-transform group-hover:translate-x-1">
+              <path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1"/>
+            </svg>
           </div>
         </div>
-      </div>
+      </Link>
     </div>
   );
 }
@@ -389,7 +306,6 @@ function FeatureSection() {
 function ProductsPageInner() {
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState("environment");
-  const [expandedCombustion, setExpandedCombustion] = useState<string | null>(null);
 
   // URL query param으로 탭 초기화 (상세 페이지에서 돌아올 때)
   useEffect(() => {
@@ -424,17 +340,11 @@ function ProductsPageInner() {
             </div>
           )}
 
-          {/* 연소설비 — 아코디언 */}
+          {/* 연소설비 — 4열 링크 카드 */}
           {activeTab === "combustion" && (
-            <div className="space-y-3 max-w-4xl">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
               {combustionProducts.map((product, index) => (
-                <CombustionCard
-                  key={product.id}
-                  product={product}
-                  index={index}
-                  expanded={expandedCombustion === product.id}
-                  onToggle={() => setExpandedCombustion(expandedCombustion === product.id ? null : product.id)}
-                />
+                <CombustionCard key={product.id} product={product} index={index} />
               ))}
             </div>
           )}
