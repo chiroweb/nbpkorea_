@@ -18,8 +18,9 @@ const combustionSubs = [
 ];
 
 const burnerSubs = [
-  { id: "nbp-mb", label: "NBP-MB", href: "/products/burner/nbp-mb" },
-  { id: "nbp-smb", label: "NBP-SMB", href: "/products/burner/nbp-smb" },
+  { id: "duct-burner", label: "덕트버너", href: "/products/burner/duct-burner" },
+  { id: "line-burner", label: "라인버너", href: "/products/burner/line-burner" },
+  { id: "portable-burner", label: "이동버너", href: "/products/burner/portable-burner" },
 ];
 
 interface ProductNavProps {
