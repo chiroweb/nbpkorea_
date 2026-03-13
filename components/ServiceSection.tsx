@@ -36,6 +36,25 @@ const services = [
   },
 ];
 
+// 스크롤 구간 정의
+// 0.00 ~ 0.20 : 서비스 1 머무름
+// 0.20 ~ 0.40 : 1→2 전환
+// 0.40 ~ 0.60 : 서비스 2 머무름
+// 0.60 ~ 0.80 : 2→3 전환
+// 0.80 ~ 1.00 : 서비스 3 머무름
+const DWELL = 0.20;
+const TRANS = 0.20;
+
+function getActiveService(p: number): number {
+  if (p < DWELL + TRANS / 2) return 0;
+  if (p < DWELL + TRANS + DWELL + TRANS / 2) return 1;
+  return 2;
+}
+
+function easeInOut(t: number): number {
+  return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
+}
+
 export default function ServiceSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
@@ -46,164 +65,141 @@ export default function ServiceSection() {
       if (!section) return;
       const rect = section.getBoundingClientRect();
       const scrollable = section.offsetHeight - window.innerHeight;
-      const progress = Math.max(0, Math.min(1, -rect.top / scrollable));
-      setScrollProgress(progress);
+      const raw = Math.max(0, Math.min(1, -rect.top / scrollable));
+      setScrollProgress(raw);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const activeService =
-    scrollProgress < 0.33 ? 0 : scrollProgress < 0.66 ? 1 : 2;
+  const activeService = getActiveService(scrollProgress);
 
-  // 블라인드 진행도: 각 이미지가 덮이는 타이밍
-  // 이미지 2: 0.2 ~ 0.4 구간에서 위→아래 reveal
-  const img2Progress = Math.max(0, Math.min(1, (scrollProgress - 0.2) / 0.2));
-  // 이미지 3: 0.5 ~ 0.7 구간에서 위→아래 reveal
-  const img3Progress = Math.max(0, Math.min(1, (scrollProgress - 0.5) / 0.2));
+  // 블라인드: 1→2 전환 (0.20 ~ 0.40)
+  const img2Raw = Math.max(0, Math.min(1, (scrollProgress - DWELL) / TRANS));
+  const img2Progress = easeInOut(img2Raw);
 
-  // 크레딧 텍스트 translateY: 0~100% 스크롤에서 0→-200vh 범위
-  const textTranslate = scrollProgress * 200;
+  // 블라인드: 2→3 전환 (0.60 ~ 0.80)
+  const img3Raw = Math.max(0, Math.min(1, (scrollProgress - DWELL - TRANS - DWELL) / TRANS));
+  const img3Progress = easeInOut(img3Raw);
+
+  // 텍스트 블록: 각 서비스마다 active 여부에 따라 fade + slide
+  const getTextStyle = (i: number) => {
+    const isActive = activeService === i;
+    const isPast = i < activeService;
+    return {
+      opacity: isActive ? 1 : 0,
+      transform: isActive ? "translateY(0)" : isPast ? "translateY(-32px)" : "translateY(32px)",
+      transition: "opacity 0.6s ease, transform 0.6s ease",
+      pointerEvents: isActive ? "auto" as const : "none" as const,
+    };
+  };
 
   return (
-    <section id="service" ref={sectionRef} style={{ height: "300vh" }} className="relative">
+    <section id="service" ref={sectionRef} style={{ height: "500vh" }} className="relative">
       {/* Sticky container */}
       <div className="sticky top-0 h-screen overflow-hidden">
+
         {/* Section Header */}
-        <div className="absolute top-12 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none">
-          <span className="section-label block mb-2">Service</span>
-          <h2 className="text-2xl md:text-3xl font-light tracking-[0.15em] text-[#2d2a28]">
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none">
+          <span className="section-label block mb-1">Service</span>
+          <h2 className="text-xl md:text-2xl font-light tracking-[0.15em] text-[#2d2a28]">
             사업 분야
           </h2>
         </div>
 
         {/* Desktop Layout */}
         <div className="hidden md:grid h-full" style={{ gridTemplateColumns: "42% 58%" }}>
-          {/* Left: Image blind stack */}
+
+          {/* ── 왼쪽: 블라인드 이미지 ── */}
           <div className="relative overflow-hidden py-16 px-8">
             <div className="relative h-full overflow-hidden rounded-sm">
-            {/* Image 1 — 항상 아래에 깔림 */}
-            <div className="absolute inset-0">
-              <Image
-                src={services[0].image}
-                alt={services[0].title}
-                fill
-                className="object-cover"
-                priority
-              />
+              {/* 이미지 1 — 항상 밑에 */}
+              <div className="absolute inset-0">
+                <Image src={services[0].image} alt={services[0].title} fill className="object-cover" priority />
+              </div>
+
+              {/* 이미지 2 — 위→아래 블라인드 */}
+              <div
+                className="absolute inset-0"
+                style={{ clipPath: `inset(0 0 ${(1 - img2Progress) * 100}% 0)` }}
+              >
+                <Image src={services[1].image} alt={services[1].title} fill className="object-cover" />
+              </div>
+
+              {/* 이미지 3 — 위→아래 블라인드 */}
+              <div
+                className="absolute inset-0"
+                style={{ clipPath: `inset(0 0 ${(1 - img3Progress) * 100}% 0)` }}
+              >
+                <Image src={services[2].image} alt={services[2].title} fill className="object-cover" />
+              </div>
             </div>
 
-            {/* Image 2 — 블라인드 내리며 덮음 */}
-            <div
-              className="absolute inset-0"
-              style={{
-                clipPath: `inset(0 0 ${100 - img2Progress * 100}% 0)`,
-              }}
-            >
-              <Image
-                src={services[1].image}
-                alt={services[1].title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* Image 3 — 블라인드 내리며 덮음 */}
-            <div
-              className="absolute inset-0"
-              style={{
-                clipPath: `inset(0 0 ${100 - img3Progress * 100}% 0)`,
-              }}
-            >
-              <Image
-                src={services[2].image}
-                alt={services[2].title}
-                fill
-                className="object-cover"
-              />
-            </div>
-
-            {/* 좌측 오버레이 */}
-            <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#F5F7F8]/10" />
-            </div>
-          </div>
-
-          {/* Right: Credits text */}
-          <div className="relative flex items-center overflow-hidden bg-[#F5F7F8]">
-            <div
-              className="absolute w-full px-12 md:px-16"
-              style={{
-                transform: `translateY(${-textTranslate}vh)`,
-                top: "100vh",
-              }}
-            >
-              {services.map((service, index) => {
-                const isActive = activeService === index;
-                return (
-                  <div
-                    key={service.id}
-                    className="mb-32 transition-opacity duration-700"
-                    style={{ opacity: isActive ? 1 : 0.12 }}
-                  >
-                    <span className="text-[80px] font-light text-[#C8D0DA] leading-none block mb-4">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <span className="text-xs tracking-[0.2em] uppercase text-[#C05010] block mb-3">
-                      {service.subtitle}
-                    </span>
-                    <h3 className="text-3xl md:text-4xl tracking-[0.1em] font-light text-[#2d2a28] mb-6">
-                      {service.title}
-                    </h3>
-                    <p className="text-sm text-[#8B95A1] leading-[2] mb-6 max-w-md">
-                      {service.description}
-                    </p>
-                    <div className="flex flex-wrap gap-2 mb-8">
-                      {service.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="text-[10px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                    <Link href="/business" className="btn-link group">
-                      <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
-                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
-                          <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1" />
-                        </svg>
-                      </span>
-                      <span>사업분야 보기</span>
-                      <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="transition-transform group-hover:translate-x-1">
-                        <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1" />
-                      </svg>
-                    </Link>
-                  </div>
-                );
-              })}
-            </div>
-
-            {/* Progress indicator */}
-            <div className="absolute right-8 top-1/2 -translate-y-1/2 flex flex-col gap-3">
-              {services.map((_, index) => (
+            {/* 서비스 번호 인디케이터 (이미지 좌측 하단) */}
+            <div className="absolute bottom-20 left-12 flex flex-col gap-2 z-10">
+              {services.map((_, i) => (
                 <div
-                  key={index}
+                  key={i}
                   className="transition-all duration-500"
                   style={{
-                    width: activeService === index ? 32 : 4,
                     height: 4,
+                    width: activeService === i ? 28 : 4,
                     borderRadius: 2,
-                    backgroundColor:
-                      activeService === index ? "#C05010" : "#C8D0DA",
+                    backgroundColor: activeService === i ? "#C05010" : "#C8D0DA",
                   }}
                 />
               ))}
             </div>
           </div>
+
+          {/* ── 오른쪽: 텍스트 (fade in/out) ── */}
+          <div className="relative flex items-center bg-[#F5F7F8]">
+            {services.map((service, index) => (
+              <div
+                key={service.id}
+                className="absolute inset-0 flex flex-col justify-center px-12 md:px-16"
+                style={getTextStyle(index)}
+              >
+                <span className="text-[72px] md:text-[88px] font-light text-[#DCE2E8] leading-none block mb-2">
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span className="text-xs tracking-[0.25em] uppercase text-[#C05010] block mb-3">
+                  {service.subtitle}
+                </span>
+                <h3 className="text-2xl md:text-3xl tracking-[0.08em] font-light text-[#2d2a28] mb-6">
+                  {service.title}
+                </h3>
+                <p className="text-sm text-[#8B95A1] leading-[2] mb-6 max-w-md">
+                  {service.description}
+                </p>
+                <div className="flex flex-wrap gap-2 mb-8">
+                  {service.tags.map((tag) => (
+                    <span
+                      key={tag}
+                      className="text-[10px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <Link href="/business" className="btn-link group">
+                  <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none">
+                      <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1" />
+                    </svg>
+                  </span>
+                  <span>사업분야 보기</span>
+                  <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="transition-transform group-hover:translate-x-1">
+                    <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1" />
+                  </svg>
+                </Link>
+              </div>
+            ))}
+          </div>
         </div>
 
-        {/* Mobile Layout — 단순 세로 카드 (스크롤 고정 없음) */}
+        {/* Mobile Layout */}
         <div className="md:hidden h-full overflow-y-auto">
           <div className="pt-32 pb-16 px-6 space-y-16">
             {services.map((service, index) => (
@@ -233,6 +229,7 @@ export default function ServiceSection() {
             ))}
           </div>
         </div>
+
       </div>
     </section>
   );
