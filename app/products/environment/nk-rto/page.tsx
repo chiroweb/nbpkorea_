@@ -1,6 +1,7 @@
 "use client";
 
 import SubpageLayout from "@/components/SubpageLayout";
+import ProductNav from "@/components/ProductNav";
 import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
 import Image from "next/image";
@@ -55,6 +56,9 @@ export default function NkRtoPage() {
         { label: "NK-RTO", href: "/products/environment/nk-rto" },
       ]}
     >
+      {/* 공통 제품 네비게이션 */}
+      <ProductNav activeTab="environment" activeProduct="nk-rto" />
+
       {/* Hero */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">

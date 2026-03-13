@@ -1,9 +1,11 @@
 "use client";
 
 import SubpageLayout from "@/components/SubpageLayout";
+import ProductNav from "@/components/ProductNav";
 import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect, Suspense } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
 const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
@@ -384,11 +386,18 @@ function FeatureSection() {
   );
 }
 
-export default function ProductsPage() {
+function ProductsPageInner() {
+  const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState("environment");
   const [expandedCombustion, setExpandedCombustion] = useState<string | null>(null);
 
-  const currentTab = tabs.find((t) => t.id === activeTab) ?? tabs[0];
+  // URL query param으로 탭 초기화 (상세 페이지에서 돌아올 때)
+  useEffect(() => {
+    const tabParam = searchParams.get("tab");
+    if (tabParam && ["environment", "combustion", "burner"].includes(tabParam)) {
+      setActiveTab(tabParam);
+    }
+  }, [searchParams]);
 
   return (
     <SubpageLayout
@@ -396,43 +405,19 @@ export default function ProductsPage() {
       subtitle="환경설비, 연소설비, 산업용 버너 — 산업 현장을 위한 최적의 솔루션"
       breadcrumb={[{ label: "제품/솔루션", href: "/products" }]}
     >
-      {/* Tab Navigation */}
-      <section className="py-16 px-6 md:px-12 border-b border-[#D4DAE2]">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex gap-0">
-            {tabs.map((tab) => (
-              <button
-                key={tab.id}
-                onClick={() => setActiveTab(tab.id)}
-                className={`flex-1 md:flex-none px-8 py-4 text-xs tracking-[0.15em] uppercase border transition-all ${
-                  activeTab === tab.id
-                    ? "bg-[#2d2a28] text-[#F5F7F8] border-[#2d2a28]"
-                    : "border-[#D4DAE2] text-[#888480] hover:border-[#C05010] hover:text-[#C05010]"
-                }`}
-              >
-                <span className="hidden md:inline">{tab.label}</span>
-                <span className="md:hidden">{tab.sublabel}</span>
-              </button>
-            ))}
-          </div>
-          <div className="mt-6">
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480]">{currentTab.sublabel}</span>
-            <p className="text-sm text-[#2d2a28] mt-1 tracking-[0.05em]">
-              {currentTab.label}
-              {activeTab === "environment" && <span className="text-[#888480]"> — 클릭하여 상세 페이지 이동</span>}
-              {activeTab === "combustion" && <span className="text-[#888480]"> — 클릭하여 스펙 테이블 펼치기</span>}
-            </p>
-          </div>
-        </div>
-      </section>
+      {/* 공통 ProductNav */}
+      <ProductNav
+        activeTab={activeTab as "environment" | "combustion" | "burner"}
+        onTabChange={setActiveTab}
+      />
 
       {/* Product Content */}
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
 
-          {/* 환경설비 */}
+          {/* 환경설비 — 4열 그리드 */}
           {activeTab === "environment" && (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-6 gap-y-12">
               {environmentProducts.map((product, index) => (
                 <EnvironmentCard key={product.title} product={product} index={index} />
               ))}
@@ -490,5 +475,13 @@ export default function ProductsPage() {
         </div>
       </section>
     </SubpageLayout>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense>
+      <ProductsPageInner />
+    </Suspense>
   );
 }
