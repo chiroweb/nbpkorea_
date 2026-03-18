@@ -12,8 +12,8 @@ export function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/", request.url));
   }
 
-  // ── 2. Admin API 보호
-  if (pathname.startsWith("/api/admin")) {
+  // ── 2. Admin API 보호 (로그인 엔드포인트는 제외)
+  if (pathname.startsWith("/api/admin") && pathname !== "/api/admin/login") {
     const session = request.cookies.get(SESSION_COOKIE)?.value;
     if (session !== SESSION_TOKEN) {
       return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
