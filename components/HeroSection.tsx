@@ -5,9 +5,9 @@ import { useEffect, useState, useRef } from "react";
 const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
 
 const slides = [
-  { label: "NBPKOREA 산업 현장 1", src: `${S3}/videos/hero1.mp4` },
-  { label: "NBPKOREA 산업 현장 2", src: `${S3}/videos/hero2.mp4` },
-  { label: "NBPKOREA 환경설비",    src: `${S3}/videos/hero3.mp4` },
+  { label: "NBPKOREA 산업 현장 1", src: `${S3}/videos/hero1.mp4`, duration: 7000 },
+  { label: "NBPKOREA 산업 현장 2", src: `${S3}/videos/hero2.mp4`, duration: 7000 },
+  { label: "NBPKOREA 환경설비",    src: `${S3}/videos/hero3.mp4`, duration: 8000 },
 ];
 
 interface HeroSectionProps {
@@ -17,7 +17,18 @@ interface HeroSectionProps {
 export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const currentSlideRef = useRef(0);
+
+  function scheduleNext(index: number) {
+    if (timerRef.current) clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
+      const next = (index + 1) % slides.length;
+      currentSlideRef.current = next;
+      setCurrentSlide(next);
+      scheduleNext(next);
+    }, slides[index].duration);
+  }
 
   // 로딩 완료 시 첫 영상 시작 + 슬라이드 타이머 시작
   useEffect(() => {
@@ -29,13 +40,12 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
       video.play().catch(() => {});
     }
 
-    timerRef.current = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 7500);
+    scheduleNext(0);
 
     return () => {
-      if (timerRef.current) clearInterval(timerRef.current);
+      if (timerRef.current) clearTimeout(timerRef.current);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shouldPlay]);
 
   // 슬라이드 전환 시 해당 비디오를 처음부터 재생
@@ -95,7 +105,12 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
         {slides.map((_, index) => (
           <button
             key={index}
-            onClick={() => setCurrentSlide(index)}
+            onClick={() => {
+              if (timerRef.current) clearTimeout(timerRef.current);
+              currentSlideRef.current = index;
+              setCurrentSlide(index);
+              scheduleNext(index);
+            }}
             className={`h-px transition-all duration-500 ${
               currentSlide === index ? "bg-white w-10" : "bg-white/40 w-4"
             }`}
