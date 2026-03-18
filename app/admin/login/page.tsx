@@ -1,11 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { useRouter } from "next/navigation";
 import { ADMIN_PATH } from "@/lib/admin-path";
 
 export default function AdminLoginPage() {
-  const router = useRouter();
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -15,25 +13,33 @@ export default function AdminLoginPage() {
     setLoading(true);
     setError("");
 
-    const res = await fetch("/api/admin/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ password }),
-    });
+    try {
+      const res = await fetch("/api/admin/login", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ password }),
+        credentials: "same-origin",
+      });
 
-    if (res.ok) {
-      router.push(ADMIN_PATH);
-    } else {
+      if (res.ok) {
+        // 풀 페이지 이동 — 쿠키가 반드시 다음 요청에 포함됨
+        window.location.href = ADMIN_PATH;
+        // 이동 중 버튼 비활성 유지 (setLoading(false) 호출 안 함)
+        return;
+      }
+
       const data = await res.json();
       setError(data.error ?? "로그인 실패");
+    } catch {
+      setError("네트워크 오류가 발생했습니다.");
     }
+
     setLoading(false);
   }
 
   return (
     <div className="min-h-screen bg-[#F5F7F8] flex items-center justify-center">
       <div className="bg-white p-10 w-full max-w-sm shadow-sm border border-[#D4DAE2]">
-        {/* Logo */}
         <div className="mb-8 text-center">
           <span className="text-2xl font-light tracking-[0.3em] text-[#2d2a28] uppercase">NBP</span>
           <span className="block text-xs tracking-[0.3em] text-[#8B95A1] mt-1 uppercase">Admin</span>
@@ -51,6 +57,7 @@ export default function AdminLoginPage() {
               className="w-full border border-[#D4DAE2] px-4 py-3 text-sm text-[#2d2a28] focus:outline-none focus:border-[#C05010] transition-colors"
               placeholder="관리자 비밀번호 입력"
               required
+              autoComplete="current-password"
             />
           </div>
 
