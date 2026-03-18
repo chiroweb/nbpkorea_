@@ -54,7 +54,7 @@ export default function HeroSection() {
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.1em] text-white mb-4 leading-tight">
           NBPKOREA
           <br />
-          <span className="text-[#C05010]">세계 1위</span> 연소 솔루션
+          <span className="text-[#C05010]">최고의</span> 연소 솔루션
         </h1>
         <p className="text-sm md:text-base tracking-[0.1em] text-white/70 max-w-lg leading-relaxed">
           산업용 연소장비와 환경설비의 기술 파트너, NBP KOREA
@@ -78,7 +78,7 @@ export default function HeroSection() {
 
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-12 right-8 md:right-16 flex flex-col items-center gap-3 z-10">
-        <span className="text-[10px] tracking-[0.2em] uppercase text-white/50 -rotate-90 mb-4">
+        <span className="text-[13px] tracking-[0.2em] uppercase text-white/50 -rotate-90 mb-4">
           Scroll
         </span>
         <div className="scroll-indicator">
@@ -91,9 +91,9 @@ export default function HeroSection() {
 
       {/* Contact Quick Info */}
       <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-end gap-2 z-10">
-        <span className="text-[10px] tracking-[0.15em] text-white/50">031-434-6566~7</span>
+        <span className="text-[13px] tracking-[0.15em] text-white/50">031-434-6566~7</span>
         <div className="w-8 h-px bg-white/20" />
-        <span className="text-[10px] tracking-[0.1em] text-white/40">Ansan, Korea</span>
+        <span className="text-[13px] tracking-[0.1em] text-white/40">Ansan, Korea</span>
       </div>
     </section>
   );

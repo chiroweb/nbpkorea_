@@ -96,7 +96,7 @@ function BusinessCard({ area, index }: { area: (typeof businessAreas)[0]; index:
         <span className="text-5xl font-light text-[#D4DAE2] block mb-4">
           {String(index + 1).padStart(2, "0")}
         </span>
-        <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
+        <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
           {area.subtitle}
         </span>
         <h3 className="text-xl md:text-2xl tracking-[0.08em] font-medium text-[#2d2a28] mb-4">
@@ -107,7 +107,7 @@ function BusinessCard({ area, index }: { area: (typeof businessAreas)[0]; index:
           {area.tags.map((tag) => (
             <span
               key={tag}
-              className="text-[10px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#888480]"
+              className="text-[13px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#888480]"
             >
               {tag}
             </span>
@@ -171,7 +171,7 @@ function IndustryApplicationsSection() {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-4">
+          <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-4">
             Industry Applications
           </span>
           <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-white">
@@ -190,7 +190,7 @@ function IndustryApplicationsSection() {
             >
               <div className="flex items-start gap-6">
                 <div>
-                  <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
+                  <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
                     {industry.subtitle}
                   </span>
                   <h3 className="text-lg tracking-[0.08em] font-medium text-white mb-3">
@@ -199,7 +199,7 @@ function IndustryApplicationsSection() {
                   <p className="text-sm leading-[2] text-[#888480] mb-4">
                     {industry.description}
                   </p>
-                  <p className="text-[11px] text-[#888480]/70 tracking-[0.03em]">
+                  <p className="text-[14px] text-[#888480]/70 tracking-[0.03em]">
                     주요 고객: {industry.clients}
                   </p>
                 </div>
@@ -248,7 +248,7 @@ function StatsSection() {
               <span className="text-sm tracking-[0.08em] text-[#2d2a28] block mb-1">
                 {stat.label}
               </span>
-              <span className="text-[11px] text-[#888480]">{stat.sub}</span>
+              <span className="text-[14px] text-[#888480]">{stat.sub}</span>
             </div>
           ))}
         </div>

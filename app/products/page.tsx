@@ -150,7 +150,7 @@ function EnvironmentCard({ product, index }: { product: typeof environmentProduc
           </div>
         </div>
         <div>
-          <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
+          <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
             {product.subtitle}
           </span>
           <h3 className="text-lg md:text-xl tracking-[0.08em] font-medium text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
@@ -159,12 +159,12 @@ function EnvironmentCard({ product, index }: { product: typeof environmentProduc
           <p className="text-xs leading-[2] text-[#888480] mb-4">{product.description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
             {product.tags.map((tag) => (
-              <span key={tag} className="text-[10px] tracking-[0.08em] border border-[#D4DAE2] px-2 py-0.5 text-[#888480]">
+              <span key={tag} className="text-[13px] tracking-[0.08em] border border-[#D4DAE2] px-2 py-0.5 text-[#888480]">
                 {tag}
               </span>
             ))}
           </div>
-          <div className="flex items-center gap-2 text-[11px] tracking-[0.12em] uppercase text-[#2d2a28]/40 group-hover:text-[#C05010] transition-colors duration-300">
+          <div className="flex items-center gap-2 text-[14px] tracking-[0.12em] uppercase text-[#2d2a28]/40 group-hover:text-[#C05010] transition-colors duration-300">
             <span>상세 보기</span>
             <svg width="14" height="6" viewBox="0 0 14 6" fill="none" className="transition-transform group-hover:translate-x-1">
               <path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1"/>
@@ -202,7 +202,7 @@ function CombustionCard({ product, index }: { product: typeof combustionProducts
           </div>
         </div>
         <div>
-          <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
+          <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
             {product.subtitle}
           </span>
           <h3 className="text-lg md:text-xl tracking-[0.08em] font-medium text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
@@ -211,12 +211,12 @@ function CombustionCard({ product, index }: { product: typeof combustionProducts
           <p className="text-xs leading-[2] text-[#888480] mb-4">{product.description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
             {product.tags.map((tag) => (
-              <span key={tag} className="text-[10px] tracking-[0.08em] border border-[#D4DAE2] px-2 py-0.5 text-[#888480]">
+              <span key={tag} className="text-[13px] tracking-[0.08em] border border-[#D4DAE2] px-2 py-0.5 text-[#888480]">
                 {tag}
               </span>
             ))}
           </div>
-          <div className="flex items-center gap-2 text-[11px] tracking-[0.12em] uppercase text-[#2d2a28]/40 group-hover:text-[#C05010] transition-colors duration-300">
+          <div className="flex items-center gap-2 text-[14px] tracking-[0.12em] uppercase text-[#2d2a28]/40 group-hover:text-[#C05010] transition-colors duration-300">
             <span>상세 보기</span>
             <svg width="14" height="6" viewBox="0 0 14 6" fill="none" className="transition-transform group-hover:translate-x-1">
               <path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1"/>
@@ -253,7 +253,7 @@ function BurnerCard({ product, index }: { product: typeof burnerProducts[0]; ind
           </div>
         </div>
         <div>
-          <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
+          <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
             {product.subtitle}
           </span>
           <h3 className="text-lg md:text-xl tracking-[0.08em] font-medium text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
@@ -262,12 +262,12 @@ function BurnerCard({ product, index }: { product: typeof burnerProducts[0]; ind
           <p className="text-xs leading-[2] text-[#888480] mb-4">{product.description}</p>
           <div className="flex flex-wrap gap-2 mb-4">
             {product.tags.map((tag) => (
-              <span key={tag} className="text-[10px] tracking-[0.08em] border border-[#D4DAE2] px-2 py-0.5 text-[#888480]">
+              <span key={tag} className="text-[13px] tracking-[0.08em] border border-[#D4DAE2] px-2 py-0.5 text-[#888480]">
                 {tag}
               </span>
             ))}
           </div>
-          <div className="flex items-center gap-2 text-[11px] tracking-[0.12em] uppercase text-[#2d2a28]/40 group-hover:text-[#C05010] transition-colors duration-300">
+          <div className="flex items-center gap-2 text-[14px] tracking-[0.12em] uppercase text-[#2d2a28]/40 group-hover:text-[#C05010] transition-colors duration-300">
             <span>상세 보기</span>
             <svg width="14" height="6" viewBox="0 0 14 6" fill="none" className="transition-transform group-hover:translate-x-1">
               <path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1"/>
@@ -285,7 +285,7 @@ function IndustryTagsSection() {
   return (
     <section ref={ref} className="py-16 px-6 md:px-12 bg-[#F2F4F7] border-t border-[#D4DAE2]">
       <div className="max-w-7xl mx-auto">
-        <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-6">Industry Applications</p>
+        <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-6">Industry Applications</p>
         <div className={`flex flex-wrap gap-3 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
           {tags.map((tag) => (
             <span key={tag} className="text-xs tracking-[0.08em] border border-[#C8D0DA] px-4 py-2 text-[#888480] hover:border-[#C05010] hover:text-[#C05010] transition-colors cursor-default">
@@ -321,7 +321,7 @@ function FeatureSection() {
               ].map((stat) => (
                 <div key={stat.label}>
                   <span className="text-2xl md:text-3xl font-light text-[#2d2a28] block mb-1">{stat.number}</span>
-                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#888480]">{stat.label}</span>
+                  <span className="text-[13px] tracking-[0.15em] uppercase text-[#888480]">{stat.label}</span>
                 </div>
               ))}
             </div>

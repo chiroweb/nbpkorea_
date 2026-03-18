@@ -95,21 +95,21 @@ function PostCard({ post, index }: { post: typeof posts[0]; index: number }) {
           className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-[#2d2a28]/0 group-hover:bg-[#2d2a28]/10 transition-all duration-500" />
-        <span className="absolute top-4 left-4 text-[10px] tracking-[0.15em] uppercase bg-[#F5F7F8]/90 text-[#C05010] px-3 py-1">
+        <span className="absolute top-4 left-4 text-[13px] tracking-[0.15em] uppercase bg-[#F5F7F8]/90 text-[#C05010] px-3 py-1">
           {post.category}
         </span>
       </div>
       <div>
         <div className="flex items-center gap-3 mb-3">
-          <span className="text-[11px] tracking-[0.1em] text-[#8B95A1]">{post.date}</span>
+          <span className="text-[14px] tracking-[0.1em] text-[#8B95A1]">{post.date}</span>
           <span className="w-1 h-1 rounded-full bg-[#C8D0DA]" />
-          <span className="text-[11px] tracking-[0.1em] text-[#8B95A1]">읽기 {post.readTime}</span>
+          <span className="text-[14px] tracking-[0.1em] text-[#8B95A1]">읽기 {post.readTime}</span>
         </div>
         <h3 className="text-base tracking-[0.05em] text-[#2d2a28] font-medium mb-2 leading-snug group-hover:text-[#C05010] transition-colors duration-300">
           {post.title}
         </h3>
         <p className="text-sm text-[#8B95A1] leading-[1.8] line-clamp-2">{post.excerpt}</p>
-        <div className="flex items-center gap-2 mt-4 text-[11px] tracking-[0.15em] uppercase text-[#2d2a28]/50 group-hover:text-[#C05010] transition-colors duration-300">
+        <div className="flex items-center gap-2 mt-4 text-[14px] tracking-[0.15em] uppercase text-[#2d2a28]/50 group-hover:text-[#C05010] transition-colors duration-300">
           <span>Read More</span>
           <svg width="14" height="6" viewBox="0 0 14 6" fill="none" className="transition-transform group-hover:translate-x-1">
             <path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1"/>
@@ -135,7 +135,7 @@ export default function NewsPage() {
             {categories.map((cat) => (
               <button
                 key={cat}
-                className={`text-[11px] tracking-[0.15em] uppercase px-4 py-2 border transition-all duration-300 ${
+                className={`text-[14px] tracking-[0.15em] uppercase px-4 py-2 border transition-all duration-300 ${
                   cat === "전체"
                     ? "border-[#2d2a28] bg-[#2d2a28] text-[#F5F7F8]"
                     : "border-[#D4DAE2] text-[#8B95A1] hover:border-[#C05010] hover:text-[#C05010]"

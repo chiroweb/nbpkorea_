@@ -43,7 +43,7 @@ export default function IRSection() {
                   key={item.label}
                   className="py-6 border-b border-[#2d2a28]/20"
                 >
-                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-1">
+                  <span className="text-[13px] tracking-[0.15em] uppercase text-[#888480] block mb-1">
                     {item.label}
                   </span>
                   <span className="text-base tracking-[0.05em] text-[#2d2a28] block">{item.value}</span>
@@ -81,11 +81,11 @@ export default function IRSection() {
                   }`}
                   style={{ transitionDelay: `${400 + index * 80}ms` }}
                 >
-                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#888480] group-hover:text-[#C8D0DA]">
+                  <span className="text-[13px] tracking-[0.15em] uppercase text-[#888480] group-hover:text-[#C8D0DA]">
                     {type.subtitle}
                   </span>
                   <span className="text-sm tracking-[0.08em] font-medium">{type.title}</span>
-                  <span className="text-[11px] text-[#888480] group-hover:text-[#C8D0DA] mt-auto">
+                  <span className="text-[14px] text-[#888480] group-hover:text-[#C8D0DA] mt-auto">
                     {type.desc}
                   </span>
                   <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="opacity-0 group-hover:opacity-100 transition-opacity self-end">

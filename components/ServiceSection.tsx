@@ -162,7 +162,7 @@ export default function ServiceSection() {
                 style={getTextStyle(index)}
               >
               <div className="w-full max-w-lg">
-                <span className="text-[72px] md:text-[88px] font-light text-[#DCE2E8] leading-none block mb-2">
+                <span className="text-[94px] md:text-[114px] font-light text-[#DCE2E8] leading-none block mb-2">
                   {String(index + 1).padStart(2, "0")}
                 </span>
                 <span className="text-xs tracking-[0.25em] uppercase text-[#C05010] block mb-3">
@@ -178,7 +178,7 @@ export default function ServiceSection() {
                   {service.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[10px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]"
+                      className="text-[13px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]"
                     >
                       {tag}
                     </span>
@@ -209,7 +209,7 @@ export default function ServiceSection() {
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#DCE2E8] mb-6">
                   <Image src={service.image} alt={service.title} fill className="object-cover" />
                 </div>
-                <span className="text-[10px] tracking-[0.2em] uppercase text-[#C05010] block mb-2">
+                <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-2">
                   {service.subtitle}
                 </span>
                 <h3 className="text-xl tracking-[0.1em] font-medium text-[#2d2a28] mb-3">

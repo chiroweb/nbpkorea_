@@ -64,7 +64,7 @@ export default function NewsSection() {
 
               {/* Content */}
               <div className="flex items-center gap-4 mb-3">
-                <span className="text-[10px] tracking-[0.15em] uppercase px-3 py-1 border border-[#C8D0DA]">
+                <span className="text-[13px] tracking-[0.15em] uppercase px-3 py-1 border border-[#C8D0DA]">
                   {item.category}
                 </span>
                 <span className="text-xs text-[#888480]">{item.date}</span>

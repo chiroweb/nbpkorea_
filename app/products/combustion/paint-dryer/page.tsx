@@ -68,7 +68,7 @@ export default function PaintDryerPage() {
             ref={heroRef}
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
               Combustion · Paint Dryer System
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
@@ -82,7 +82,7 @@ export default function PaintDryerPage() {
             </p>
             <div className="flex flex-wrap gap-3">
               {["1,250,000 Kcal/h", "고정형 설치", "PLC 비례제어", "균일 온도 분포"].map((tag) => (
-                <span key={tag} className="text-[11px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
                   {tag}
                 </span>
               ))}
@@ -103,7 +103,7 @@ export default function PaintDryerPage() {
       {/* 시스템 흐름 */}
       <section className="px-6 md:px-12 py-12 bg-[#F2F4F7] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">System Flow</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">System Flow</p>
           <div className="flex flex-wrap items-center gap-3">
             {[
               { label: "가스 공급\nLNG/LPG", bg: "#DCE2E8", text: "#2d2a28" },
@@ -124,14 +124,14 @@ export default function PaintDryerPage() {
               )
             )}
           </div>
-          <p className="text-[11px] text-[#8B95A1] mt-4">PLC 비례제어 — 부스 내 온도 균일 유지 / 과열 방지 자동 차단</p>
+          <p className="text-[14px] text-[#8B95A1] mt-4">PLC 비례제어 — 부스 내 온도 균일 유지 / 과열 방지 자동 차단</p>
         </div>
       </section>
 
       {/* 특징 */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 특징</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 특징</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
@@ -146,14 +146,14 @@ export default function PaintDryerPage() {
       {/* 스펙 테이블 */}
       <section ref={specRef} className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">제품 제원</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">제품 제원</p>
           <p className="text-xs text-[#8B95A1] mb-8 tracking-[0.05em]">행을 클릭하여 선택하세요</p>
           <div className={`overflow-x-auto transition-all duration-1000 ${specInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <table className="w-full text-xs border-collapse min-w-[480px]">
               <thead>
                 <tr className="border-b-2 border-[#2d2a28]">
                   {["구분", "용량 (Kcal/h)", "연료", "설치 방식", "제어방식"].map((h) => (
-                    <th key={h} className="py-3 px-4 text-left text-[10px] tracking-[0.12em] uppercase text-[#2d2a28] font-medium">{h}</th>
+                    <th key={h} className="py-3 px-4 text-left text-[13px] tracking-[0.12em] uppercase text-[#2d2a28] font-medium">{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -176,14 +176,14 @@ export default function PaintDryerPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-[10px] text-[#8B95A1] mt-4">※ 도장 부스 규모와 현장 조건에 따라 용량 및 사양이 조정됩니다.</p>
+          <p className="text-[13px] text-[#8B95A1] mt-4">※ 도장 부스 규모와 현장 조건에 따라 용량 및 사양이 조정됩니다.</p>
         </div>
       </section>
 
       {/* 납품 실적 */}
       <section className="px-6 md:px-12 py-12 bg-white border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">주요 납품 실적</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">주요 납품 실적</p>
           <div className="flex flex-wrap gap-4">
             {["KIA 협력사 도장 라인", "BMW 협력사 도장 부스", "아우디 협력사 도장 시설", "자동차 부품사 건조 시스템"].map((item) => (
               <div key={item} className="border border-[#D4DAE2] px-4 py-2.5 text-xs text-[#8B95A1] tracking-[0.05em]">
@@ -197,10 +197,10 @@ export default function PaintDryerPage() {
       {/* 적용 분야 */}
       <section ref={appRef} className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">적용 분야</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">적용 분야</p>
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {applications.map((app) => (
-              <div key={app} className="border border-[#D4DAE2] px-3 py-3 text-[11px] text-[#8B95A1] text-center leading-snug hover:border-[#C05010] hover:text-[#C05010] transition-colors bg-white">
+              <div key={app} className="border border-[#D4DAE2] px-3 py-3 text-[14px] text-[#8B95A1] text-center leading-snug hover:border-[#C05010] hover:text-[#C05010] transition-colors bg-white">
                 {app}
               </div>
             ))}

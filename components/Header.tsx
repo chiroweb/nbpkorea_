@@ -1,19 +1,36 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < lastScrollY.current) {
+        setIsVisible(true);
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        setIsVisible(false);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const navItems = [
-    { label: "제품/솔루션", href: "/products" },
     { label: "회사소개", href: "/about" },
+    { label: "사업분야", href: "/business" },
+    { label: "제품/솔루션", href: "/products" },
     { label: "기술/R&D", href: "/technology" },
     { label: "NBP/NEWS", href: "/news" },
     { label: "고객센터", href: "/support" },
-    { label: "사업분야", href: "/business" },
   ];
 
   const externalLinks = [
@@ -22,8 +39,8 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-40 header-steel">
-        <div className="flex items-center justify-between px-6 md:px-12 py-4">
+      <header className={`fixed top-0 left-0 right-0 z-40 header-steel transition-transform duration-300 ${isVisible ? "translate-y-0" : "-translate-y-full"}`}>
+        <div className="flex items-center justify-between px-6 md:px-12 py-2">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image

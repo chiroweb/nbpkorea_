@@ -61,7 +61,7 @@ export default function PortableBurnerPage() {
             ref={heroRef}
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
               Industrial Burner · Portable Burner
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
@@ -75,7 +75,7 @@ export default function PortableBurnerPage() {
             </p>
             <div className="flex flex-wrap gap-3">
               {["이동형", "현장 즉시 투입", "독립 운전", "복합 연료 대응"].map((tag) => (
-                <span key={tag} className="text-[11px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
                   {tag}
                 </span>
               ))}
@@ -105,7 +105,7 @@ export default function PortableBurnerPage() {
       {/* 주요 특성 */}
       <section className="px-6 md:px-12 py-12 bg-[#F2F4F7] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">이동버너 핵심 특성</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">이동버너 핵심 특성</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { icon: "→", label: "현장 즉시 투입", desc: "별도 공장 설비 불필요 — 현장 가스 연결 즉시 가동" },
@@ -116,7 +116,7 @@ export default function PortableBurnerPage() {
               <div key={item.label} className="bg-white border border-[#D4DAE2] p-4">
                 <span className="text-[#C05010] text-lg mb-2 block">{item.icon}</span>
                 <span className="text-xs font-medium text-[#2d2a28] block mb-1">{item.label}</span>
-                <span className="text-[11px] text-[#8B95A1] leading-[1.7]">{item.desc}</span>
+                <span className="text-[14px] text-[#8B95A1] leading-[1.7]">{item.desc}</span>
               </div>
             ))}
           </div>
@@ -126,7 +126,7 @@ export default function PortableBurnerPage() {
       {/* 특징 */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 특징</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 특징</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
@@ -141,7 +141,7 @@ export default function PortableBurnerPage() {
       {/* 스펙 안내 */}
       <section className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">제품 제원</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">제품 제원</p>
           <div className="border border-[#D4DAE2] bg-white p-6">
             <p className="text-sm text-[#8B95A1] leading-[2]">
               이동버너는 현장 투입 목적·공간 조건·요구 열량에 따라 맞춤 설계·제작됩니다.<br />
@@ -155,23 +155,23 @@ export default function PortableBurnerPage() {
                 { label: "운전 방식", value: "독립형 패키지" },
               ].map((item) => (
                 <div key={item.label} className="border border-[#E8ECF0] p-3">
-                  <span className="text-[10px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
+                  <span className="text-[13px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
                   <span className="text-xs text-[#2d2a28]">{item.value}</span>
                 </div>
               ))}
             </div>
           </div>
-          <p className="text-[10px] text-[#8B95A1] mt-4">※ 현장 조건 및 요구 사양에 따라 맞춤 설계합니다. 사전 현장 조사 후 최적 사양을 제안해 드립니다.</p>
+          <p className="text-[13px] text-[#8B95A1] mt-4">※ 현장 조건 및 요구 사양에 따라 맞춤 설계합니다. 사전 현장 조사 후 최적 사양을 제안해 드립니다.</p>
         </div>
       </section>
 
       {/* 적용 분야 */}
       <section ref={appRef} className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">적용 분야</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">적용 분야</p>
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {applications.map((app) => (
-              <div key={app} className="border border-[#D4DAE2] px-3 py-3 text-[11px] text-[#8B95A1] text-center leading-snug hover:border-[#C05010] hover:text-[#C05010] transition-colors bg-white">
+              <div key={app} className="border border-[#D4DAE2] px-3 py-3 text-[14px] text-[#8B95A1] text-center leading-snug hover:border-[#C05010] hover:text-[#C05010] transition-colors bg-white">
                 {app}
               </div>
             ))}

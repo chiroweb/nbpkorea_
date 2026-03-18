@@ -93,12 +93,12 @@ export default function NewsDetailPage({ params }: { params: Promise<{ slug: str
               isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#C05010] border border-[#C05010]/30 px-3 py-1">
+            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] border border-[#C05010]/30 px-3 py-1">
               {post.category}
             </span>
-            <span className="text-[11px] tracking-[0.1em] text-[#8B95A1]">{post.date}</span>
+            <span className="text-[14px] tracking-[0.1em] text-[#8B95A1]">{post.date}</span>
             <span className="w-1 h-1 rounded-full bg-[#C8D0DA]" />
-            <span className="text-[11px] tracking-[0.1em] text-[#8B95A1]">읽기 {post.readTime}</span>
+            <span className="text-[14px] tracking-[0.1em] text-[#8B95A1]">읽기 {post.readTime}</span>
           </div>
 
           {/* Title */}

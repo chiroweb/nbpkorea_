@@ -63,7 +63,7 @@ function InquiryTypesSection() {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <span className="text-2xl text-[#C8D0DA] block mb-4">{type.icon}</span>
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
+              <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
                 {type.subtitle}
               </span>
               <h3 className="text-base font-medium text-[#2d2a28] mb-3">{type.title}</h3>
@@ -83,24 +83,24 @@ function FAQSection() {
 
   const faqs = [
     {
-      question: "B2B 대량 구매(설비 발주) 절차는 어떻게 되나요?",
+      question: "견적 의뢰 절차는 어떻게 되나요?",
       answer:
-        "홈페이지 문의 양식 또는 전화(031-434-6566~7)로 상담 신청 후, 담당 엔지니어가 현장 조사를 진행합니다. 이후 설계 → 견적 → 계약 → 제작 → 납품 · 설치 순으로 진행됩니다. 현장 조건에 따라 일정은 달라질 수 있습니다.",
+        "홈페이지 문의 양식 또는 전화(031-434-6566~7)로 견적 의뢰 후, 담당 엔지니어가 현장 조건을 파악하여 맞춤 설계 및 견적서를 제출해 드립니다. 현장 조건에 따라 일정은 달라질 수 있습니다.",
     },
     {
       question: "A/S는 어떻게 신청하나요?",
       answer:
-        "전화(031-434-6566~7) 또는 이메일(nbpkorea@nbpkorea.co.kr)로 접수하시면, 담당 엔지니어가 영업일 기준 48시간 이내에 연락드립니다. 보증기간(납품일로부터 1년) 이내는 무상, 이후는 유상 서비스로 진행됩니다.",
+        "유선(031-434-6566~7) 또는 홈페이지 온라인 문의를 통해 접수하시면 담당 엔지니어가 연락드립니다. 산업용 장비(단품 제외)의 경우 보증기간은 시운전 완료일을 기점으로 1년입니다.",
     },
     {
       question: "제품 기술 자료나 카탈로그를 받을 수 있나요?",
       answer:
-        "문의 양식을 통해 요청하시면 제품별 기술 사양서 및 카탈로그를 이메일로 발송해 드립니다. 기밀 유지가 필요한 자료는 NDA 체결 후 제공됩니다.",
+        "회사 내 모든 자료는 대표 승인 후 제공 가능합니다. 문의 양식을 통해 요청해 주시면 검토 후 안내드리겠습니다.",
     },
     {
-      question: "현장 방문 상담이 가능한가요?",
+      question: "방문 상담이 가능한가요?",
       answer:
-        "네, 사전 예약 후 안산시 단원구 엠티브이로 8길 22 본사 방문 상담이 가능합니다. 제품 시연 및 기업부설연구소 견학도 안내해 드립니다. 전화 또는 이메일로 방문 일정을 조율해 주세요.",
+        "견적 상담에 있어 필요시 담당자와 일정을 협의한 후 방문 상담을 진행할 수 있습니다. 전화 또는 홈페이지 문의를 통해 연락 주시면 안내드리겠습니다.",
     },
   ];
 
@@ -214,12 +214,9 @@ function ASProcedureSection() {
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
           }`}
         >
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-2">Warranty Policy</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">Warranty Policy</p>
           <p className="text-sm leading-[2] text-[#2d2a28]">
-            보증기간: 납품일로부터 <strong>1년</strong> (소모품 제외)
-          </p>
-          <p className="text-sm leading-[2] text-[#888480]">
-            보증기간 이후 유상 서비스는 별도 안내드립니다. 정기 점검 계약을 통해 설비의 최적 상태를 유지하세요.
+            산업용 장비(단품 제외)의 보증기간은 <strong>시운전 완료일로부터 1년</strong>입니다 (소모품 제외).
           </p>
         </div>
       </div>
@@ -246,7 +243,7 @@ function ContactFormSection() {
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
+                  <label className="text-[13px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
                     이름
                   </label>
                   <input
@@ -256,7 +253,7 @@ function ContactFormSection() {
                   />
                 </div>
                 <div>
-                  <label className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
+                  <label className="text-[13px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
                     회사명
                   </label>
                   <input
@@ -267,7 +264,7 @@ function ContactFormSection() {
                 </div>
               </div>
               <div>
-                <label className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
+                <label className="text-[13px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
                   이메일
                 </label>
                 <input
@@ -277,7 +274,7 @@ function ContactFormSection() {
                 />
               </div>
               <div>
-                <label className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
+                <label className="text-[13px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
                   문의 유형
                 </label>
                 <select className="w-full border-b border-[#D4DAE2] bg-transparent py-3 text-sm text-[#888480] outline-none focus:border-[#2d2a28] transition-colors appearance-none cursor-pointer">
@@ -289,7 +286,7 @@ function ContactFormSection() {
                 </select>
               </div>
               <div>
-                <label className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
+                <label className="text-[13px] tracking-[0.15em] uppercase text-[#888480] block mb-2">
                   문의 내용
                 </label>
                 <textarea
@@ -326,19 +323,19 @@ function ContactFormSection() {
                 { label: "이메일", value: "nbpkorea@nbpkorea.co.kr", sub: "영업일 기준 24시간 이내 회신" },
               ].map((info) => (
                 <div key={info.label} className="border-b border-[#D4DAE2] pb-4">
-                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-1">
+                  <span className="text-[13px] tracking-[0.15em] uppercase text-[#888480] block mb-1">
                     {info.label}
                   </span>
                   <span className="text-base tracking-[0.05em] text-[#2d2a28] block">
                     {info.value}
                   </span>
                   {info.sub && (
-                    <span className="text-[11px] text-[#888480]">{info.sub}</span>
+                    <span className="text-[14px] text-[#888480]">{info.sub}</span>
                   )}
                 </div>
               ))}
               <div className="border-b border-[#D4DAE2] pb-4">
-                <span className="text-[10px] tracking-[0.15em] uppercase text-[#888480] block mb-1">
+                <span className="text-[13px] tracking-[0.15em] uppercase text-[#888480] block mb-1">
                   사업자등록번호
                 </span>
                 <span className="text-sm tracking-[0.05em] text-[#2d2a28]">119-13-28296</span>

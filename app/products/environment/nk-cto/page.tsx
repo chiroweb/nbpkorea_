@@ -66,7 +66,7 @@ export default function NkCtoPage() {
             ref={heroRef}
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
               Environment · Catalytic Thermal Oxidizer
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
@@ -80,7 +80,7 @@ export default function NkCtoPage() {
             </p>
             <div className="flex flex-wrap gap-3">
               {["처리효율 98%+", "NOx 저감", "저온산화 250~450°C", "열회수율 95%+"].map((tag) => (
-                <span key={tag} className="text-[11px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
                   {tag}
                 </span>
               ))}
@@ -105,7 +105,7 @@ export default function NkCtoPage() {
       {/* Mechanism */}
       <section className="px-6 md:px-12 py-12 bg-[#F2F4F7] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">Mechanism</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">Mechanism</p>
           <div className="flex flex-wrap items-center gap-3 md:gap-4">
             {[
               { label: "VOCs + O₂", bg: "#DCE2E8", text: "#2d2a28" },
@@ -129,14 +129,14 @@ export default function NkCtoPage() {
               )
             ))}
           </div>
-          <p className="text-[11px] text-[#8B95A1] mt-4 tracking-[0.05em]">열 재이용 (Heat Recovery)</p>
+          <p className="text-[14px] text-[#8B95A1] mt-4 tracking-[0.05em]">열 재이용 (Heat Recovery)</p>
         </div>
       </section>
 
       {/* Features */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 특징</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 특징</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
@@ -151,7 +151,7 @@ export default function NkCtoPage() {
       {/* Spec Table */}
       <section ref={specRef} className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">제품 제원</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">제품 제원</p>
           <p className="text-xs text-[#8B95A1] mb-8 tracking-[0.05em]">행을 클릭하여 원하는 모델을 선택하세요</p>
           <div
             className={`overflow-x-auto transition-all duration-1000 ${specInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
@@ -159,13 +159,13 @@ export default function NkCtoPage() {
             <table className="w-full text-xs border-collapse min-w-[640px]">
               <thead>
                 <tr className="border-b-2 border-[#2d2a28]">
-                  <th className="text-left py-3 px-4 text-[10px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">MODEL</th>
-                  <th className="text-center py-3 px-4 text-[10px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">처리풍량<br />(Nm³/min)</th>
-                  <th className="text-center py-3 px-4 text-[10px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">발열량<br />(Kcal/hr)</th>
-                  <th className="text-center py-3 px-4 text-[10px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">전력<br />(kW)</th>
-                  <th className="text-center py-3 px-4 text-[10px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">길이<br />(mm)</th>
-                  <th className="text-center py-3 px-4 text-[10px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">폭<br />(mm)</th>
-                  <th className="text-center py-3 px-4 text-[10px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">높이<br />(mm)</th>
+                  <th className="text-left py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">MODEL</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">처리풍량<br />(Nm³/min)</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">발열량<br />(Kcal/hr)</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">전력<br />(kW)</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">길이<br />(mm)</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">폭<br />(mm)</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">높이<br />(mm)</th>
                 </tr>
               </thead>
               <tbody>
@@ -193,7 +193,7 @@ export default function NkCtoPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-[10px] text-[#8B95A1] mt-4 tracking-[0.03em]">
+          <p className="text-[13px] text-[#8B95A1] mt-4 tracking-[0.03em]">
             ※ 본 제원은 시운전 표준용량 제원 수치이며, 기능 향상을 위하여 예고 없이 일부 변경될 수 있습니다.
           </p>
         </div>
@@ -202,12 +202,12 @@ export default function NkCtoPage() {
       {/* Applications */}
       <section ref={appRef} className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">적용 분야</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">적용 분야</p>
           <div
             className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
             {applications.map((app) => (
-              <div key={app} className="border border-[#D4DAE2] px-3 py-3 text-[11px] text-[#8B95A1] text-center tracking-[0.03em] leading-snug hover:border-[#C05010] hover:text-[#C05010] transition-colors">
+              <div key={app} className="border border-[#D4DAE2] px-3 py-3 text-[14px] text-[#8B95A1] text-center tracking-[0.03em] leading-snug hover:border-[#C05010] hover:text-[#C05010] transition-colors">
                 {app}
               </div>
             ))}

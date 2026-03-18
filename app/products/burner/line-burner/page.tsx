@@ -61,7 +61,7 @@ export default function LineBurnerPage() {
             ref={heroRef}
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
               Industrial Burner · Line Burner
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
@@ -75,7 +75,7 @@ export default function LineBurnerPage() {
             </p>
             <div className="flex flex-wrap gap-3">
               {["원통형 구조", "직선 가열", "연속 공정", "NOₓ 저배출"].map((tag) => (
-                <span key={tag} className="text-[11px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
                   {tag}
                 </span>
               ))}
@@ -96,7 +96,7 @@ export default function LineBurnerPage() {
       {/* 연소 원리 */}
       <section className="px-6 md:px-12 py-12 bg-[#F2F4F7] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">연소 방식 — Continuous Line Heating</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">연소 방식 — Continuous Line Heating</p>
           <div className="flex flex-wrap items-center gap-3">
             {[
               { label: "가스 공급\nNatural/LPG", bg: "#DCE2E8", text: "#2d2a28" },
@@ -119,14 +119,14 @@ export default function LineBurnerPage() {
               )
             )}
           </div>
-          <p className="text-[11px] text-[#8B95A1] mt-4">30단계 화염 제어 / 화염 길이 25cm 이하 / 컨베이어 연속 공정 최적화</p>
+          <p className="text-[14px] text-[#8B95A1] mt-4">30단계 화염 제어 / 화염 길이 25cm 이하 / 컨베이어 연속 공정 최적화</p>
         </div>
       </section>
 
       {/* 특징 */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 특징</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 특징</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
@@ -141,7 +141,7 @@ export default function LineBurnerPage() {
       {/* 스펙 안내 */}
       <section className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">제품 제원</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">제품 제원</p>
           <div className="border border-[#D4DAE2] bg-white p-6">
             <p className="text-sm text-[#8B95A1] leading-[2]">
               라인버너는 현장 공정 라인의 길이·폭·요구 온도·연료 조건에 따라 맞춤 설계·제작됩니다.<br />
@@ -155,23 +155,23 @@ export default function LineBurnerPage() {
                 { label: "설치 방식", value: "현장 맞춤 설계" },
               ].map((item) => (
                 <div key={item.label} className="border border-[#E8ECF0] p-3">
-                  <span className="text-[10px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
+                  <span className="text-[13px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
                   <span className="text-xs text-[#2d2a28]">{item.value}</span>
                 </div>
               ))}
             </div>
           </div>
-          <p className="text-[10px] text-[#8B95A1] mt-4">※ 현장 공정 조건에 따라 길이·용량·제어 방식을 맞춤 설계합니다.</p>
+          <p className="text-[13px] text-[#8B95A1] mt-4">※ 현장 공정 조건에 따라 길이·용량·제어 방식을 맞춤 설계합니다.</p>
         </div>
       </section>
 
       {/* 적용 분야 */}
       <section ref={appRef} className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">적용 분야</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">적용 분야</p>
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {applications.map((app) => (
-              <div key={app} className="border border-[#D4DAE2] px-3 py-3 text-[11px] text-[#8B95A1] text-center leading-snug hover:border-[#C05010] hover:text-[#C05010] transition-colors bg-white">
+              <div key={app} className="border border-[#D4DAE2] px-3 py-3 text-[14px] text-[#8B95A1] text-center leading-snug hover:border-[#C05010] hover:text-[#C05010] transition-colors bg-white">
                 {app}
               </div>
             ))}

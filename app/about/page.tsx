@@ -2,6 +2,7 @@
 
 import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
 const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
@@ -165,7 +166,7 @@ function VisionSection() {
                   />
                 </div>
               </div>
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
+              <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
                 {item.subtitle}
               </span>
               <h3 className="text-xl tracking-[0.1em] font-medium text-[#2d2a28] mb-4">
@@ -204,8 +205,8 @@ function HistorySection() {
   ];
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section ref={ref} className="py-24 bg-white overflow-hidden">
+      <div className="px-6 md:px-12 max-w-7xl mx-auto">
         <div
           className={`mb-16 transition-all duration-1000 ${
             isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
@@ -216,38 +217,39 @@ function HistorySection() {
             연혁
           </h2>
         </div>
+      </div>
 
-        <div className="relative">
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-[#D4DAE2] md:-translate-x-px" />
+      <div className="relative overflow-hidden group">
+        {/* 좌우 페이드 마스크 */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-white to-transparent" />
 
-          {timelineItems.map((item, index) => (
+        <div
+          className={`flex gap-0 ${isInView ? "animate-scroll" : ""}`}
+          style={{
+            animationDuration: "50s",
+            animationPlayState: "running",
+          }}
+          onMouseEnter={(e) => { (e.currentTarget as HTMLDivElement).style.animationPlayState = "paused"; }}
+          onMouseLeave={(e) => { (e.currentTarget as HTMLDivElement).style.animationPlayState = "running"; }}
+        >
+          {[...timelineItems, ...timelineItems].map((item, index) => (
             <div
-              key={item.year}
-              className={`relative flex flex-col md:flex-row items-start mb-12 last:mb-0 transition-all duration-1000 ${
-                isInView
-                  ? "opacity-100 translate-y-0"
-                  : "opacity-0 translate-y-8"
-              }`}
-              style={{ transitionDelay: `${index * 80}ms` }}
+              key={index}
+              className="flex-shrink-0 w-56 border-r border-[#D4DAE2] px-8 py-8"
             >
-              <div className="md:w-1/2 md:pr-12 md:text-right">
-                <span className="text-3xl md:text-4xl font-light text-[#C8D0DA] tracking-[0.05em]">
-                  {item.year}
-                </span>
-              </div>
-
-              <div className="absolute left-[-4px] md:left-1/2 md:-translate-x-1/2 top-3 w-[9px] h-[9px] rounded-full bg-[#C05010] z-10" />
-
-              <div className="md:w-1/2 md:pl-12 pl-6 mt-1">
-                {item.events.map((event) => (
-                  <p
-                    key={event}
-                    className="text-sm text-[#888480] leading-[2] tracking-[0.03em]"
-                  >
-                    {event}
-                  </p>
-                ))}
-              </div>
+              <span className="text-4xl font-light text-[#DCE2E8] tracking-[0.05em] block mb-4">
+                {item.year}
+              </span>
+              <div className="w-6 h-px bg-[#C05010] mb-4" />
+              {item.events.map((event) => (
+                <p
+                  key={event}
+                  className="text-sm text-[#888480] leading-[1.9] tracking-[0.02em]"
+                >
+                  {event}
+                </p>
+              ))}
             </div>
           ))}
         </div>
@@ -355,7 +357,7 @@ function PatentsSection() {
               }`}
               style={{ transitionDelay: `${index * 50}ms` }}
             >
-              <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
+              <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
                 Patent {String(index + 1).padStart(2, "0")}
               </span>
               <p className="text-sm text-[#2d2a28] tracking-[0.03em] leading-[1.8]">
@@ -488,31 +490,31 @@ function DirectionsSection() {
           >
             <div className="space-y-8">
               <div>
-                <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-2">Address</p>
+                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">Address</p>
                 <p className="text-sm text-[#2d2a28] leading-[2]">
                   경기도 안산시 단원구 엠티브이로 8길 22
                 </p>
               </div>
               <div>
-                <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-2">Phone / Fax</p>
+                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">Phone / Fax</p>
                 <p className="text-sm text-[#2d2a28] leading-[2]">
                   TEL 031-434-6566~7<br />
                   FAX 031-434-6568
                 </p>
               </div>
               <div>
-                <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-2">Email</p>
+                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">Email</p>
                 <p className="text-sm text-[#2d2a28]">nbpkorea@nbpkorea.co.kr</p>
               </div>
               <div>
-                <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-2">Business Hours</p>
+                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">Business Hours</p>
                 <p className="text-sm text-[#2d2a28] leading-[2]">
                   평일 09:00 — 18:00<br />
                   <span className="text-[#888480]">토·일·공휴일 휴무</span>
                 </p>
               </div>
               <div>
-                <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-3">Transit</p>
+                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-3">Transit</p>
                 <div className="space-y-2">
                   <p className="text-sm text-[#888480] leading-[1.8]">
                     <span className="text-[#2d2a28] font-medium">지하철</span> — 수인·분당선 초지역 1번 출구 도보 10분
@@ -530,21 +532,137 @@ function DirectionsSection() {
   );
 }
 
+const TABS = [
+  { id: "ceo", label: "대표인사말" },
+  { id: "ci", label: "CI" },
+  { id: "history", label: "역사" },
+  { id: "network", label: "네트워크" },
+  { id: "patents", label: "특허" },
+  { id: "directions", label: "오시는길" },
+] as const;
+
+type TabId = (typeof TABS)[number]["id"];
+
+function CISection() {
+  const { ref, isInView } = useInView({ threshold: 0.15 });
+  return (
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-white min-h-[40vh] flex items-center">
+      <div className="max-w-7xl mx-auto w-full">
+        <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <span className="section-label block mb-4">CI</span>
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">기업 아이덴티티</h2>
+        </div>
+        <div className={`border border-dashed border-[#D4DAE2] flex items-center justify-center py-24 transition-all duration-1000 delay-300 ${isInView ? "opacity-100" : "opacity-0"}`}>
+          <p className="placeholder-box text-[#C8D0DA] tracking-[0.2em] text-sm uppercase">CI 준비중</p>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 export default function AboutPage() {
+  const [activeTab, setActiveTab] = useState<TabId>("ceo");
+  const activeLabel = TABS.find((t) => t.id === activeTab)?.label ?? "";
+  const [headerVisible, setHeaderVisible] = useState(false);
+  const [headerHeight, setHeaderHeight] = useState(0);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const measureHeader = () => {
+      const header = document.querySelector("header");
+      if (header) setHeaderHeight(header.offsetHeight);
+    };
+    measureHeader();
+    window.addEventListener("resize", measureHeader);
+
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < lastScrollY.current) {
+        setHeaderVisible(true);
+      } else if (currentScrollY > lastScrollY.current && currentScrollY > 80) {
+        setHeaderVisible(false);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", measureHeader);
+    };
+  }, []);
+
   return (
     <SubpageLayout
       title="ABOUT US"
       subtitle="신뢰와 도전, 열정으로 산업 현장의 가치를 높여갑니다"
-      breadcrumb={[{ label: "회사소개", href: "/about" }]}
+      breadcrumb={[
+        { label: "회사소개", href: "/about" },
+        { label: activeLabel, href: "/about" },
+      ]}
     >
-      <CeoSection />
-      <ImpactNumbersSection />
-      <VisionSection />
-      <HistorySection />
-      <CompanyInfoSection />
-      <PatentsSection />
-      <ClientsMarqueeSection />
-      <DirectionsSection />
+      {/* Tab Navigation */}
+      <div
+        className="sticky z-30 bg-white border-b border-[#D4DAE2] transition-[top] duration-300"
+        style={{ top: headerVisible ? headerHeight : 0 }}
+      >
+        <div className="max-w-7xl mx-auto px-6 md:px-12">
+          <div className="flex overflow-x-auto scrollbar-hide">
+            {TABS.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id)}
+                className={`flex-shrink-0 px-6 py-3.5 text-sm tracking-[0.12em] border-b-2 transition-all duration-200 whitespace-nowrap ${
+                  activeTab === tab.id
+                    ? "border-[#C05010] text-[#2d2a28] font-medium"
+                    : "border-transparent text-[#888480] hover:text-[#2d2a28]"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Tab Content */}
+      {activeTab === "ceo" && (
+        <>
+          <CeoSection />
+          <ImpactNumbersSection />
+          <CompanyInfoSection />
+        </>
+      )}
+      {activeTab === "ci" && (
+        <>
+          <CISection />
+          <ImpactNumbersSection />
+          <VisionSection />
+        </>
+      )}
+      {activeTab === "history" && (
+        <>
+          <HistorySection />
+          <ImpactNumbersSection />
+        </>
+      )}
+      {activeTab === "network" && (
+        <>
+          <ClientsMarqueeSection />
+          <ImpactNumbersSection />
+        </>
+      )}
+      {activeTab === "patents" && (
+        <>
+          <PatentsSection />
+          <ImpactNumbersSection />
+        </>
+      )}
+      {activeTab === "directions" && (
+        <>
+          <DirectionsSection />
+          <ImpactNumbersSection />
+        </>
+      )}
     </SubpageLayout>
   );
 }

@@ -78,7 +78,7 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
           }`}
         >
           <div className="flex flex-wrap items-center gap-0 py-3 border-t border-[#E8ECF0]">
-            <span className="text-[10px] tracking-[0.15em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0]">
+            <span className="text-[13px] tracking-[0.15em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0]">
               Sub
             </span>
             {environmentSubs.map((sub, i) => (
@@ -107,7 +107,7 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
           }`}
         >
           <div className="flex flex-wrap items-center gap-0 py-3 border-t border-[#E8ECF0]">
-            <span className="text-[10px] tracking-[0.15em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0]">
+            <span className="text-[13px] tracking-[0.15em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0]">
               Sub
             </span>
             {combustionSubs.map((sub, i) => (
@@ -136,7 +136,7 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
           }`}
         >
           <div className="flex flex-wrap items-center gap-0 py-3 border-t border-[#E8ECF0]">
-            <span className="text-[10px] tracking-[0.15em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0]">
+            <span className="text-[13px] tracking-[0.15em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0]">
               Sub
             </span>
             {burnerSubs.map((sub, i) => (

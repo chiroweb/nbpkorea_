@@ -81,7 +81,7 @@ export default function DehumidifierPage() {
             ref={heroRef}
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <span className="text-[10px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
               Combustion · Hybrid Dehumidifier
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
@@ -95,7 +95,7 @@ export default function DehumidifierPage() {
             </p>
             <div className="flex flex-wrap gap-3">
               {["냉동 제습 + 가스 가열", "4계절 복합 운전", "6,000~50,000 m³/h", "에너지 절감"].map((tag) => (
-                <span key={tag} className="text-[11px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
                   {tag}
                 </span>
               ))}
@@ -116,11 +116,11 @@ export default function DehumidifierPage() {
       {/* 시스템 구성도 */}
       <section className="px-6 md:px-12 py-12 bg-[#F2F4F7] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">Dehumidifier System Flow</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">Dehumidifier System Flow</p>
           <div className="flex flex-wrap items-center gap-2">
             {systemFlow.map((step, i) => (
               <div key={step} className="flex items-center gap-2">
-                <div className={`px-3 py-2 text-[11px] tracking-[0.05em] text-center ${
+                <div className={`px-3 py-2 text-[14px] tracking-[0.05em] text-center ${
                   step === "냉각코일 (냉각제습)" || step === "가스히터 (동계 가온용)"
                     ? "bg-[#C05010] text-white"
                     : step === "AIR (고습도)" || step === "Room (저습도)"
@@ -135,14 +135,14 @@ export default function DehumidifierPage() {
               </div>
             ))}
           </div>
-          <p className="text-[11px] text-[#8B95A1] mt-4">실외기(방열) 탑재 — 냉각+가온 4계절 복합 운전</p>
+          <p className="text-[14px] text-[#8B95A1] mt-4">실외기(방열) 탑재 — 냉각+가온 4계절 복합 운전</p>
         </div>
       </section>
 
       {/* 특징 */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 특징</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 특징</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
@@ -157,14 +157,14 @@ export default function DehumidifierPage() {
       {/* 스펙 테이블 */}
       <section ref={specRef} className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">제품 제원</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">제품 제원</p>
           <p className="text-xs text-[#8B95A1] mb-8 tracking-[0.05em]">행을 클릭하여 원하는 모델을 선택하세요</p>
           <div className={`overflow-x-auto transition-all duration-1000 ${specInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <table className="w-full text-xs border-collapse min-w-[560px]">
               <thead>
                 <tr className="border-b-2 border-[#2d2a28]">
                   {["MODEL", "처리풍량 (m³/h)", "길이 (mm)", "폭 (mm)", "높이 (mm)", "운전방식"].map((h) => (
-                    <th key={h} className="py-3 px-4 text-left text-[10px] tracking-[0.12em] uppercase text-[#2d2a28] font-medium">{h}</th>
+                    <th key={h} className="py-3 px-4 text-left text-[13px] tracking-[0.12em] uppercase text-[#2d2a28] font-medium">{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -188,17 +188,17 @@ export default function DehumidifierPage() {
               </tbody>
             </table>
           </div>
-          <p className="text-[10px] text-[#8B95A1] mt-4">※ 본 제원은 표준 사양 기준이며, 현장 조건에 따라 변경될 수 있습니다.</p>
+          <p className="text-[13px] text-[#8B95A1] mt-4">※ 본 제원은 표준 사양 기준이며, 현장 조건에 따라 변경될 수 있습니다.</p>
         </div>
       </section>
 
       {/* 적용 분야 */}
       <section ref={appRef} className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[10px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">적용 분야</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">적용 분야</p>
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {applications.map((app) => (
-              <div key={app} className="border border-[#D4DAE2] px-3 py-3 text-[11px] text-[#8B95A1] text-center leading-snug hover:border-[#C05010] hover:text-[#C05010] transition-colors">
+              <div key={app} className="border border-[#D4DAE2] px-3 py-3 text-[14px] text-[#8B95A1] text-center leading-snug hover:border-[#C05010] hover:text-[#C05010] transition-colors">
                 {app}
               </div>
             ))}

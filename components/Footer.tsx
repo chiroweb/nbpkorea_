@@ -133,11 +133,11 @@ export default function Footer() {
 
           {/* Bottom Bar */}
           <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-[#C8D0DA]">
-            <Link href="/privacy" className="text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors mb-4 md:mb-0">
+            <Link href="/privacy" className="text-[13px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors mb-4 md:mb-0">
               Privacy Policy
             </Link>
 
-            <p className="text-[10px] tracking-[0.15em] text-[#888480]">
+            <p className="text-[13px] tracking-[0.15em] text-[#888480]">
               Copyright NBP KOREA. All Rights Reserved.
             </p>
           </div>
@@ -146,7 +146,7 @@ export default function Footer() {
           <div className="flex justify-center mt-12">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex flex-col items-center gap-2 text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors group"
+              className="flex flex-col items-center gap-2 text-[13px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors group"
             >
               <div className="w-10 h-10 border border-[#C8D0DA] rounded-full flex items-center justify-center group-hover:border-[#C05010] group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="rotate-[-90deg]">

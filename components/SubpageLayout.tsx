@@ -37,7 +37,7 @@ export default function SubpageLayout({
           >
             <Link
               href="/"
-              className="text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors"
+              className="text-[13px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors"
             >
               Home
             </Link>
@@ -45,13 +45,13 @@ export default function SubpageLayout({
               <span key={item.label} className="flex items-center gap-2">
                 <span className="text-[#C8D0DA]">/</span>
                 {index === breadcrumb.length - 1 ? (
-                  <span className="text-[10px] tracking-[0.15em] uppercase text-[#C05010]">
+                  <span className="text-[13px] tracking-[0.15em] uppercase text-[#C05010]">
                     {item.label}
                   </span>
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-[10px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors"
+                    className="text-[13px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors"
                   >
                     {item.label}
                   </Link>

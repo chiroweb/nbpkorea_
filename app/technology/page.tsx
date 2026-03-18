@@ -94,7 +94,7 @@ function TechRow({
         <span className="text-5xl font-light text-[#D4DAE2] block mb-4">
           {String(index + 1).padStart(2, "0")}
         </span>
-        <span className="text-[10px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
+        <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
           {tech.subtitle}
         </span>
         <h3 className="text-xl md:text-2xl tracking-[0.08em] font-medium text-[#2d2a28] mb-4">
@@ -165,7 +165,7 @@ function GlobalPartnersSection() {
             >
               <div className="flex items-start justify-between mb-6">
                 <div>
-                  <p className="text-[10px] tracking-[0.2em] uppercase text-[#888480] mb-2">
+                  <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">
                     {partner.country}
                   </p>
                   <h3 className="text-xl tracking-[0.05em] font-medium text-[#2d2a28]">
@@ -173,7 +173,7 @@ function GlobalPartnersSection() {
                   </h3>
                 </div>
                 <div className="text-right">
-                  <p className="text-[10px] tracking-[0.15em] uppercase text-[#888480] mb-1">Partnership Since</p>
+                  <p className="text-[13px] tracking-[0.15em] uppercase text-[#888480] mb-1">Partnership Since</p>
                   <p className="text-2xl font-light text-[#C8D0DA]">{partner.since}</p>
                 </div>
               </div>
