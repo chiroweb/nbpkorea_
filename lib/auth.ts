@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 
 const SESSION_COOKIE = "admin_session";
+const SESSION_TOKEN = "nbp_admin_authenticated";
 
 export function isAuthenticated(request: NextRequest): boolean {
-  const secret = process.env.ADMIN_PASSWORD ?? "admin1234";
   const session = request.cookies.get(SESSION_COOKIE)?.value;
-  return session === `nbp_${secret}`;
+  return session === SESSION_TOKEN;
 }
 
 export const UNAUTHORIZED = NextResponse.json(
