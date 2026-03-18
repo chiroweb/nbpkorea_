@@ -99,7 +99,7 @@ function BusinessCard({ area, index }: { area: (typeof businessAreas)[0]; index:
         <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
           {area.subtitle}
         </span>
-        <h3 className="text-xl md:text-2xl tracking-[0.08em] font-medium text-[#2d2a28] mb-4">
+        <h3 className="text-xl md:text-2xl tracking-[0.08em] font-bold text-[#2d2a28] mb-4">
           {area.title}
         </h3>
         <p className="text-sm leading-[2] text-[#888480] mb-6">{area.description}</p>
@@ -174,7 +174,7 @@ function IndustryApplicationsSection() {
           <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-4">
             Industry Applications
           </span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-white">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-white">
             산업별 적용 분야
           </h2>
         </div>
@@ -193,7 +193,7 @@ function IndustryApplicationsSection() {
                   <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
                     {industry.subtitle}
                   </span>
-                  <h3 className="text-lg tracking-[0.08em] font-medium text-white mb-3">
+                  <h3 className="text-lg tracking-[0.08em] font-bold text-white mb-3">
                     {industry.title}
                   </h3>
                   <p className="text-sm leading-[2] text-[#888480] mb-4">
@@ -224,7 +224,7 @@ function StatsSection() {
           }`}
         >
           <span className="section-label block mb-4">Performance</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             사업 실적
           </h2>
         </div>
@@ -269,7 +269,7 @@ function PartnersSection() {
           }`}
         >
           <span className="section-label block mb-4">Partners & Clients</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             주요 고객사
           </h2>
         </div>

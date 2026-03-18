@@ -99,7 +99,7 @@ body::before {
 
 /* Base Typography */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 500;
+  font-weight: 700;
   letter-spacing: 0.1em;
 }
 
@@ -208,7 +208,7 @@ a:hover {
 
 .section-title {
   font-size: clamp(41.6px, 5vw, 62.4px);
-  font-weight: 400;
+  font-weight: 700;
   letter-spacing: 0.15em;
 }
 

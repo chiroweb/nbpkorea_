@@ -153,7 +153,7 @@ function EnvironmentCard({ product, index }: { product: typeof environmentProduc
           <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
             {product.subtitle}
           </span>
-          <h3 className="text-lg md:text-xl tracking-[0.08em] font-medium text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
+          <h3 className="text-lg md:text-xl tracking-[0.08em] font-bold text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
             {product.title}
           </h3>
           <p className="text-xs leading-[2] text-[#888480] mb-4">{product.description}</p>
@@ -205,7 +205,7 @@ function CombustionCard({ product, index }: { product: typeof combustionProducts
           <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
             {product.subtitle}
           </span>
-          <h3 className="text-lg md:text-xl tracking-[0.08em] font-medium text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
+          <h3 className="text-lg md:text-xl tracking-[0.08em] font-bold text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
             {product.title}
           </h3>
           <p className="text-xs leading-[2] text-[#888480] mb-4">{product.description}</p>
@@ -256,7 +256,7 @@ function BurnerCard({ product, index }: { product: typeof burnerProducts[0]; ind
           <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-1">
             {product.subtitle}
           </span>
-          <h3 className="text-lg md:text-xl tracking-[0.08em] font-medium text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
+          <h3 className="text-lg md:text-xl tracking-[0.08em] font-bold text-[#2d2a28] mb-3 group-hover:text-[#C05010] transition-colors duration-300">
             {product.title}
           </h3>
           <p className="text-xs leading-[2] text-[#888480] mb-4">{product.description}</p>
@@ -306,7 +306,7 @@ function FeatureSection() {
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
             <span className="section-label block mb-4">Why NBPKOREA</span>
-            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28] mb-6">
+            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-6">
               20년 기술력으로<br />산업 현장에 최적화된 솔루션
             </h2>
             <p className="text-sm leading-[2] text-[#888480] mb-8">
@@ -401,7 +401,7 @@ function ProductsPageInner() {
       {/* CTA */}
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28] mb-4">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-4">
             맞춤 설비 솔루션이 필요하신가요?
           </h2>
           <p className="text-sm text-[#888480] tracking-[0.08em] mb-8">

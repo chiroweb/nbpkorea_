@@ -44,7 +44,7 @@ function CoreTechSection() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <span className="section-label block mb-4">Core Technology</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             핵심 기술
           </h2>
         </div>
@@ -97,7 +97,7 @@ function TechRow({
         <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
           {tech.subtitle}
         </span>
-        <h3 className="text-xl md:text-2xl tracking-[0.08em] font-medium text-[#2d2a28] mb-4">
+        <h3 className="text-xl md:text-2xl tracking-[0.08em] font-bold text-[#2d2a28] mb-4">
           {tech.title}
         </h3>
         <p className="text-sm leading-[2] text-[#888480] mb-6">{tech.description}</p>
@@ -143,7 +143,7 @@ function GlobalPartnersSection() {
           }`}
         >
           <span className="section-label block mb-4">Global Partners</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             글로벌 기술 파트너
           </h2>
           <p className="text-sm text-[#888480] mt-4 max-w-xl mx-auto leading-[2]">
@@ -168,7 +168,7 @@ function GlobalPartnersSection() {
                   <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">
                     {partner.country}
                   </p>
-                  <h3 className="text-xl tracking-[0.05em] font-medium text-[#2d2a28]">
+                  <h3 className="text-xl tracking-[0.05em] font-bold text-[#2d2a28]">
                     {partner.name}
                   </h3>
                 </div>
@@ -217,7 +217,7 @@ function AwardsCertificationsSection() {
             }`}
           >
             <span className="section-label block mb-4">Awards</span>
-            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28] mb-8">
+            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-8">
               수상 내역
             </h2>
             <div className="space-y-3">
@@ -252,7 +252,7 @@ function AwardsCertificationsSection() {
             }`}
           >
             <span className="section-label block mb-4">Certifications</span>
-            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28] mb-8">
+            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-8">
               인증 현황
             </h2>
             <div className="grid grid-cols-2 gap-4">
@@ -304,7 +304,7 @@ function RDCenterSection() {
           }`}
         >
           <span className="section-label block mb-4">R&D Center</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             기업부설연구소
           </h2>
           <p className="text-sm text-[#888480] mt-4 max-w-xl mx-auto leading-[2]">

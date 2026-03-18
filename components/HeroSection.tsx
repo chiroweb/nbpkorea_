@@ -1,29 +1,56 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import Image from "next/image";
+import { useEffect, useState, useRef } from "react";
 
-const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
 
-export default function HeroSection() {
+const slides = [
+  { label: "NBPKOREA 산업 현장 1", src: `${S3}/videos/hero1.mp4` },
+  { label: "NBPKOREA 산업 현장 2", src: `${S3}/videos/hero2.mp4` },
+  { label: "NBPKOREA 환경설비",    src: `${S3}/videos/hero3.mp4` },
+];
+
+interface HeroSectionProps {
+  shouldPlay?: boolean;
+}
+
+export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
   const [currentSlide, setCurrentSlide] = useState(0);
-  const slides = [
-    { label: "NBPKOREA 산업 현장 1", src: `${S3}/images/hero1.png` },
-    { label: "NBPKOREA 산업 현장 2", src: `${S3}/images/hero2.png` },
-    { label: "NBPKOREA 환경설비", src: `${S3}/images/hero3.png` },
-    { label: "NBPKOREA 연소설비", src: `${S3}/images/hero4.png` },
-  ];
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
+  // 로딩 완료 시 첫 영상 시작 + 슬라이드 타이머 시작
   useEffect(() => {
-    const timer = setInterval(() => {
+    if (!shouldPlay) return;
+
+    const video = videoRefs.current[0];
+    if (video) {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    }
+
+    timerRef.current = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length);
-    }, 5000);
-    return () => clearInterval(timer);
-  }, [slides.length]);
+    }, 7500);
+
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
+  }, [shouldPlay]);
+
+  // 슬라이드 전환 시 해당 비디오를 처음부터 재생
+  useEffect(() => {
+    if (!shouldPlay || currentSlide === 0) return;
+    const video = videoRefs.current[currentSlide];
+    if (video) {
+      video.currentTime = 0;
+      video.play().catch(() => {});
+    }
+  }, [currentSlide, shouldPlay]);
 
   return (
     <section className="relative h-screen flex items-end justify-start overflow-hidden">
-      {/* Background Slides */}
+      {/* Background Video Slides */}
       <div className="absolute inset-0">
         {slides.map((slide, index) => (
           <div
@@ -32,12 +59,14 @@ export default function HeroSection() {
               currentSlide === index ? "opacity-100" : "opacity-0"
             }`}
           >
-            <Image
+            <video
+              ref={(el) => { videoRefs.current[index] = el; }}
               src={slide.src}
-              alt={slide.label}
-              fill
-              className="object-cover"
-              priority={index === 0}
+              muted
+              playsInline
+              loop
+              className="w-full h-full object-cover"
+              aria-label={slide.label}
             />
           </div>
         ))}
@@ -68,9 +97,7 @@ export default function HeroSection() {
             key={index}
             onClick={() => setCurrentSlide(index)}
             className={`h-px transition-all duration-500 ${
-              currentSlide === index
-                ? "bg-white w-10"
-                : "bg-white/40 w-4"
+              currentSlide === index ? "bg-white w-10" : "bg-white/40 w-4"
             }`}
           />
         ))}

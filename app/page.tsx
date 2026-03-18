@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
@@ -11,13 +11,34 @@ import HistorySection from "@/components/HistorySection";
 import RecruitSection from "@/components/RecruitSection";
 import IRSection from "@/components/IRSection";
 import Footer from "@/components/Footer";
+import PopupModal from "@/components/PopupModal";
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
+  const contentRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!contentRef.current) return;
+      const progress = Math.min(window.scrollY / 400, 1);
+      const radius = progress * 36;
+      const shadowBlur = progress * 80;
+      const shadowOpacity = progress * 0.22;
+      contentRef.current.style.borderRadius = `${radius}px ${radius}px 0 0`;
+      contentRef.current.style.boxShadow =
+        progress > 0.02
+          ? `0 -${shadowBlur * 0.4}px ${shadowBlur}px rgba(0,0,0,${shadowOpacity})`
+          : "none";
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <>
       {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+      <PopupModal />
 
       <div
         className={`transition-opacity duration-500 ${
@@ -27,9 +48,9 @@ export default function Home() {
         <Header />
         <main>
           <div className="sticky top-0 z-0 h-screen">
-            <HeroSection />
+            <HeroSection shouldPlay={!isLoading} />
           </div>
-          <div className="relative z-10 bg-[#F5F7F8]">
+          <div ref={contentRef} className="relative z-10 bg-[#F5F7F8]">
             <CompanySection />
             <NewsSection />
             <ServiceSection />

@@ -48,7 +48,7 @@ function InquiryTypesSection() {
           }`}
         >
           <span className="section-label block mb-4">Inquiry Types</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             문의 유형
           </h2>
         </div>
@@ -66,7 +66,7 @@ function InquiryTypesSection() {
               <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
                 {type.subtitle}
               </span>
-              <h3 className="text-base font-medium text-[#2d2a28] mb-3">{type.title}</h3>
+              <h3 className="text-base font-bold text-[#2d2a28] mb-3">{type.title}</h3>
               <p className="text-xs leading-[1.9] text-[#888480] mb-4">{type.description}</p>
               <p className="text-xs text-[#2d2a28] tracking-[0.05em]">{type.contact}</p>
             </div>
@@ -113,7 +113,7 @@ function FAQSection() {
           }`}
         >
           <span className="section-label block mb-4">FAQ</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             자주 묻는 질문
           </h2>
         </div>
@@ -184,7 +184,7 @@ function ASProcedureSection() {
           }`}
         >
           <span className="section-label block mb-4">A/S Procedure</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             A/S 처리 절차
           </h2>
         </div>
@@ -203,7 +203,7 @@ function ASProcedureSection() {
                 <div className="hidden md:block absolute right-0 top-1/2 w-px h-4 bg-[#D4DAE2] translate-x-px -translate-y-1/2" />
               )}
               <span className="text-3xl font-light text-[#D4DAE2] block mb-4">{step.num}</span>
-              <h3 className="text-base font-medium text-[#2d2a28] mb-2">{step.title}</h3>
+              <h3 className="text-base font-bold text-[#2d2a28] mb-2">{step.title}</h3>
               <p className="text-xs leading-[1.8] text-[#888480]">{step.desc}</p>
             </div>
           ))}
@@ -237,7 +237,7 @@ function ContactFormSection() {
             }`}
           >
             <span className="section-label block mb-4">Contact</span>
-            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28] mb-8">
+            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-8">
               문의하기
             </h2>
             <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
@@ -313,7 +313,7 @@ function ContactFormSection() {
             }`}
           >
             <span className="section-label block mb-4">Information</span>
-            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28] mb-8">
+            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-8">
               연락처 안내
             </h2>
             <div className="space-y-6 mb-10">

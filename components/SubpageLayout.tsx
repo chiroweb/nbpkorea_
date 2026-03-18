@@ -66,7 +66,7 @@ export default function SubpageLayout({
               isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.15em] text-[#2d2a28] mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.15em] text-[#2d2a28] mb-4">
               {title}
             </h1>
             {subtitle && (

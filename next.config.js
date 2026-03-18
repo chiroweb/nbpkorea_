@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+const adminPath = process.env.NEXT_PUBLIC_ADMIN_PATH || "admin";
+
 const nextConfig = {
   images: {
     unoptimized: true,
@@ -20,7 +22,15 @@ const nextConfig = {
       },
     ],
   },
+
+  async rewrites() {
+    // If custom path is set, rewrite /nbp6600/* → /admin/*
+    if (adminPath === "admin") return [];
+    return [
+      { source: `/${adminPath}`, destination: "/admin" },
+      { source: `/${adminPath}/:path*`, destination: "/admin/:path*" },
+    ];
+  },
 };
-  
-  module.exports = nextConfig;
-  
+
+module.exports = nextConfig;

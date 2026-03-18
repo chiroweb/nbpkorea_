@@ -39,7 +39,7 @@ function CeoSection() {
             }`}
           >
             <span className="section-label block mb-4">CEO Message</span>
-            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28] mb-2">
+            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-2">
               대표이사 인사말
             </h2>
             <div className="w-12 h-px bg-[#C05010] mb-8" />
@@ -124,7 +124,7 @@ function VisionSection() {
           }`}
         >
           <span className="section-label block mb-4">Vision & Mission</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             비전과 미션
           </h2>
         </div>
@@ -169,7 +169,7 @@ function VisionSection() {
               <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
                 {item.subtitle}
               </span>
-              <h3 className="text-xl tracking-[0.1em] font-medium text-[#2d2a28] mb-4">
+              <h3 className="text-xl tracking-[0.1em] font-bold text-[#2d2a28] mb-4">
                 {item.title}
               </h3>
               <p className="text-sm leading-[2] text-[#888480]">{item.text}</p>
@@ -213,7 +213,7 @@ function HistorySection() {
           }`}
         >
           <span className="section-label block mb-4">History</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             연혁
           </h2>
         </div>
@@ -270,7 +270,7 @@ function CompanyInfoSection() {
           }`}
         >
           <span className="section-label block mb-4">Company Overview</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             기업 개요
           </h2>
         </div>
@@ -340,7 +340,7 @@ function PatentsSection() {
           }`}
         >
           <span className="section-label block mb-4">Patents</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             등록 특허
           </h2>
           <p className="text-sm text-[#888480] mt-4">19건의 독자 기술 특허를 보유하고 있습니다</p>
@@ -418,7 +418,7 @@ function ClientsMarqueeSection() {
           }`}
         >
           <span className="section-label block mb-4">Clients</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             주요 고객사
           </h2>
           <p className="text-sm text-[#888480] mt-4">국내외 80여 기업이 NBPKOREA의 기술을 신뢰합니다</p>
@@ -459,7 +459,7 @@ function DirectionsSection() {
           }`}
         >
           <span className="section-label block mb-4">Directions</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
             오시는 길
           </h2>
         </div>
@@ -550,7 +550,7 @@ function CISection() {
       <div className="max-w-7xl mx-auto w-full">
         <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">CI</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">기업 아이덴티티</h2>
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">기업 아이덴티티</h2>
         </div>
         <div className={`border border-dashed border-[#D4DAE2] flex items-center justify-center py-24 transition-all duration-1000 delay-300 ${isInView ? "opacity-100" : "opacity-0"}`}>
           <p className="placeholder-box text-[#C8D0DA] tracking-[0.2em] text-sm uppercase">CI 준비중</p>

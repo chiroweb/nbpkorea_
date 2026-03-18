@@ -103,7 +103,7 @@ export default function ServiceSection() {
         {/* Section Header */}
         <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none">
           <span className="section-label block mb-1">Service</span>
-          <h2 className="text-xl md:text-2xl font-light tracking-[0.15em] text-[#2d2a28]">
+          <h2 className="text-xl md:text-2xl font-bold tracking-[0.15em] text-[#2d2a28]">
             사업 분야
           </h2>
         </div>
@@ -168,7 +168,7 @@ export default function ServiceSection() {
                 <span className="text-xs tracking-[0.25em] uppercase text-[#C05010] block mb-3">
                   {service.subtitle}
                 </span>
-                <h3 className="text-2xl md:text-3xl tracking-[0.08em] font-light text-[#2d2a28] mb-6">
+                <h3 className="text-2xl md:text-3xl tracking-[0.08em] font-bold text-[#2d2a28] mb-6">
                   {service.title}
                 </h3>
                 <p className="text-sm text-[#8B95A1] leading-[2] mb-6 max-w-md">
@@ -212,7 +212,7 @@ export default function ServiceSection() {
                 <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-2">
                   {service.subtitle}
                 </span>
-                <h3 className="text-xl tracking-[0.1em] font-medium text-[#2d2a28] mb-3">
+                <h3 className="text-xl tracking-[0.1em] font-bold text-[#2d2a28] mb-3">
                   {service.title}
                 </h3>
                 <p className="text-sm text-[#8B95A1] leading-[2] mb-6">{service.description}</p>

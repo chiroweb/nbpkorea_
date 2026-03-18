@@ -33,8 +33,8 @@ export default function CompanySection() {
               isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
-            <span className="section-label block mb-4">Company</span>
-            <h2 className="section-title mb-8">NBPKOREA</h2>
+            <span className="section-label block mb-6">Company</span>
+            <h2 className="font-bold tracking-[0.1em] text-[#2d2a28] mb-8 leading-none" style={{ fontSize: "clamp(62.4px, 7.5vw, 93.6px)" }}>NBPKOREA</h2>
             <p className="text-sm leading-[2] text-[#888480] mb-12">
               NBPKOREA는 2006년 경기도 안산에서 설립된 산업용 연소장비 및 환경설비 전문 기업입니다.
               금속화이버 버너를 비롯한 독자 기술과 19건의 등록 특허, 미국·터키의 글로벌 파트너십을 기반으로
