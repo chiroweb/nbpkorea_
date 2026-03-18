@@ -65,8 +65,16 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       {/* Main content */}
       <div className="flex-1 flex flex-col min-w-0">
         {/* Top bar */}
-        <header className="h-14 bg-white border-b border-[#D4DAE2] flex items-center px-8">
+        <header className="h-14 bg-white border-b border-[#D4DAE2] flex items-center justify-between px-8">
           <span className="text-sm tracking-[0.15em] text-[#8B95A1] uppercase">NBPKOREA Admin</span>
+          <Link
+            href="/"
+            target="_blank"
+            className="flex items-center gap-1.5 text-[12px] tracking-[0.1em] text-[#8B95A1] hover:text-[#C05010] transition-colors"
+          >
+            <span>홈페이지 이동</span>
+            <span>↗</span>
+          </Link>
         </header>
 
         <main className="flex-1 p-8">
