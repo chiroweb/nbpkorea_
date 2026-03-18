@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const services = [
   {

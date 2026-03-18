@@ -8,9 +8,9 @@ export default function NewsSection() {
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   const newsItems = [
-    { id: 1, category: "기술 인사이트", date: "2025.12.10", title: "RTO 시스템, 조선소 도장 공정 악취 처리의 해법", image: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/service-environment.png", href: "/news/rto-case-study-shipbuilding", objectPosition: "center center" },
-    { id: 2, category: "제품 소식", date: "2025.11.20", title: "NBP-MB 금속화이버 버너, NOx 저감 30% 달성 검증", image: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/service-burner.png", href: "/news/metal-fiber-burner-nox-reduction", objectPosition: "center center" },
-    { id: 3, category: "회사 소식", date: "2025.10.05", title: "ISO 9001 · ISO 14001 통합 인증 갱신 완료", image: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/service-combustion.png", href: "/news/nbpkorea-iso-certification", objectPosition: "center center" },
+    { id: 1, category: "기술 인사이트", date: "2025.12.10", title: "RTO 시스템, 조선소 도장 공정 악취 처리의 해법", image: "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/service-environment.png", href: "/news/rto-case-study-shipbuilding", objectPosition: "center center" },
+    { id: 2, category: "제품 소식", date: "2025.11.20", title: "NBP-MB 금속화이버 버너, NOx 저감 30% 달성 검증", image: "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/service-burner.png", href: "/news/metal-fiber-burner-nox-reduction", objectPosition: "center center" },
+    { id: 3, category: "회사 소식", date: "2025.10.05", title: "ISO 9001 · ISO 14001 통합 인증 갱신 완료", image: "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/service-combustion.png", href: "/news/NBPKOREA-iso-certification", objectPosition: "center center" },
   ];
 
   return (

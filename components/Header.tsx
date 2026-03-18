@@ -44,8 +44,8 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <Image
-              src="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/loogo(2).png"
-              alt="NBP KOREA"
+              src="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/loogo(2).png"
+              alt="NBPKOREA"
               width={140}
               height={56}
               className="object-contain"

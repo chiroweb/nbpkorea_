@@ -6,7 +6,7 @@ import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
 import Image from "next/image";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const features = [
   "NO₂ 및 CO 배출 최소화 — ANSI Z83.4 / Z83.18 기준 적합",
@@ -68,7 +68,7 @@ export default function LineBurnerPage() {
               라인버너<br />(Line Burner)
             </h2>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
-              NBP KOREA 라인버너는 연속 공정 라인에서 직선 방향으로 균일한 열원을 공급하도록 설계된 원통형 구조의 산업용 버너입니다. 섬유·인쇄·코팅·식품 건조 등 컨베이어 기반의 연속 생산 공정에 최적화되어 있습니다.
+              NBPKOREA 라인버너는 연속 공정 라인에서 직선 방향으로 균일한 열원을 공급하도록 설계된 원통형 구조의 산업용 버너입니다. 섬유·인쇄·코팅·식품 건조 등 컨베이어 기반의 연속 생산 공정에 최적화되어 있습니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
               MIDCO International(미국) 기술을 기반으로, 2단 연소 방식으로 최대 출력 시에도 NOₓ 배출을 최소화하며 화염 안정성을 유지합니다. 30단계 정밀 턴다운 제어로 공정 온도를 균일하게 관리할 수 있으며, 노즐 교체 없이 Natural Gas / Propane / Butane 가스를 모두 사용할 수 있습니다.

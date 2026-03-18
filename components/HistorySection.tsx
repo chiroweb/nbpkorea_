@@ -17,7 +17,7 @@ export default function HistorySection() {
             }`}
           >
             <span className="section-label block mb-4 text-[#a3a09b]">History</span>
-            <h2 className="section-title mb-8">NBP KOREA의 발자취</h2>
+            <h2 className="section-title mb-8">NBPKOREA의 발자취</h2>
 
             <div className="flex items-baseline gap-4 mb-12">
               <span className="text-5xl md:text-7xl font-light">(2006</span>
@@ -26,7 +26,7 @@ export default function HistorySection() {
             </div>
 
             <p className="text-sm leading-[2] text-[#a3a09b] mb-12">
-              2006년 경기도 안산에서 시작한 NBP KOREA는 산업용 연소장비와 환경설비 분야에서
+              2006년 경기도 안산에서 시작한 NBPKOREA는 산업용 연소장비와 환경설비 분야에서
               끊임없이 기술을 혁신하며 성장해 왔습니다. 신뢰와 도전, 열정의 가치를 지켜온 20년의 역사.
             </p>
 
@@ -55,7 +55,7 @@ export default function HistorySection() {
 
               {/* Timeline Items */}
               {[
-                { year: "2006", event: "NBP KOREA 설립 (안산시)" },
+                { year: "2006", event: "NBPKOREA 설립 (안산시)" },
                 { year: "2007", event: "MIDCO International 기술제휴" },
                 { year: "2013", event: "ECOSTAR 파트너십 체결" },
                 { year: "2022", event: "기업부설연구소 설립 (KOITA)" },

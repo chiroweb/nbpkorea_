@@ -5,7 +5,7 @@ import { useInView } from "@/hooks/useInView";
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 const LOGO_BASE = `${S3}/images/%EC%A3%BC%EC%9A%94%EA%B1%B0%EB%9E%98%EC%B2%98`;
 
 function CeoSection() {
@@ -25,7 +25,7 @@ function CeoSection() {
             <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#DCE2E8]">
               <Image
                 src={`${S3}/images/CEO.jpeg`}
-                alt="NBP KOREA 대표이사 최혁순"
+                alt="NBPKOREA 대표이사 최혁순"
                 fill
                 className="object-cover object-top"
               />
@@ -44,10 +44,10 @@ function CeoSection() {
             </h2>
             <div className="w-12 h-px bg-[#C05010] mb-8" />
             <p className="text-sm leading-[2.2] text-[#888480] mb-6">
-              안녕하십니까. NBP KOREA 대표이사 최혁순입니다.
+              안녕하십니까. NBPKOREA 대표이사 최혁순입니다.
             </p>
             <p className="text-sm leading-[2.2] text-[#888480] mb-6">
-              NBP KOREA는 2006년 창립 이래, 산업용 연소장비와 환경설비 분야에서
+              NBPKOREA는 2006년 창립 이래, 산업용 연소장비와 환경설비 분야에서
               단 하나의 가치—<strong className="text-[#2d2a28] font-medium">신뢰</strong>—를
               중심으로 성장해 왔습니다. 현장의 요구를 가장 가까이에서 이해하고,
               기술로 응답하는 것이 저희의 사명입니다.
@@ -160,7 +160,7 @@ function VisionSection() {
                 <div className="relative w-10 h-10 opacity-20">
                   <Image
                     src={`${S3}/images/dragon-logo.png`}
-                    alt="NBP KOREA"
+                    alt="NBPKOREA"
                     fill
                     className="object-contain"
                   />
@@ -201,7 +201,7 @@ function HistorySection() {
     { year: "2009", events: ["경기도지사 표창 수상"] },
     { year: "2008", events: ["금속화이버 버너 첫 제품 출시"] },
     { year: "2007", events: ["MIDCO International (미국) 기술제휴 체결"] },
-    { year: "2006", events: ["NBP KOREA 설립 (경기도 안산시)"] },
+    { year: "2006", events: ["NBPKOREA 설립 (경기도 안산시)"] },
   ];
 
   return (
@@ -281,7 +281,7 @@ function CompanyInfoSection() {
           }`}
         >
           {[
-            { label: "회사명", value: "주식회사 NBP KOREA" },
+            { label: "회사명", value: "주식회사 NBPKOREA" },
             { label: "설립일", value: "2006년" },
             { label: "대표이사", value: "최혁순" },
             { label: "사업분야", value: "환경설비 (CTO, RTO, RCO, TO, DTO) / 산업용 연소장비" },
@@ -421,7 +421,7 @@ function ClientsMarqueeSection() {
           <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28]">
             주요 고객사
           </h2>
-          <p className="text-sm text-[#888480] mt-4">국내외 80여 기업이 NBP KOREA의 기술을 신뢰합니다</p>
+          <p className="text-sm text-[#888480] mt-4">국내외 80여 기업이 NBPKOREA의 기술을 신뢰합니다</p>
         </div>
 
         <div className="relative overflow-hidden">
@@ -477,7 +477,7 @@ function DirectionsSection() {
                 className="w-full h-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="NBP KOREA 본사 위치"
+                title="NBPKOREA 본사 위치"
               />
             </div>
           </div>
@@ -504,7 +504,7 @@ function DirectionsSection() {
               </div>
               <div>
                 <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">Email</p>
-                <p className="text-sm text-[#2d2a28]">nbpkorea@nbpkorea.co.kr</p>
+                <p className="text-sm text-[#2d2a28]">NBPKOREA@NBPKOREA.co.kr</p>
               </div>
               <div>
                 <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">Business Hours</p>

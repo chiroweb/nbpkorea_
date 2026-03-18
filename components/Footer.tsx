@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import Image from "next/image";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const galleryImages = [
   { src: `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20RTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`, alt: "환경설비 플랜트" },
@@ -34,7 +34,7 @@ export default function Footer() {
   const contactInfo = [
     { label: "TEL 031-434-6566~7", href: "tel:031-434-6566" },
     { label: "FAX 031-434-6568", href: "#" },
-    { label: "nbpkorea@nbpkorea.co.kr", href: "mailto:nbpkorea@nbpkorea.co.kr" },
+    { label: "NBPKOREA@NBPKOREA.co.kr", href: "mailto:NBPKOREA@NBPKOREA.co.kr" },
   ];
 
   return (
@@ -47,7 +47,7 @@ export default function Footer() {
               key={i}
               className="flex-shrink-0 text-[clamp(2rem,5vw,4rem)] font-light tracking-[0.25em] text-[#C8D0DA] uppercase mr-16"
             >
-              NBP KOREA IS ALWAYS NEXT TO YOU FOR BUSINESS
+              NBPKOREA IS ALWAYS NEXT TO YOU FOR BUSINESS
               <span className="mx-8 text-[#D4DAE2]">✦</span>
             </span>
           ))}
@@ -138,24 +138,10 @@ export default function Footer() {
             </Link>
 
             <p className="text-[13px] tracking-[0.15em] text-[#888480]">
-              Copyright NBP KOREA. All Rights Reserved.
+              Copyright NBPKOREA. All Rights Reserved.
             </p>
           </div>
 
-          {/* Back to Top */}
-          <div className="flex justify-center mt-12">
-            <button
-              onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex flex-col items-center gap-2 text-[13px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors group"
-            >
-              <div className="w-10 h-10 border border-[#C8D0DA] rounded-full flex items-center justify-center group-hover:border-[#C05010] group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="rotate-[-90deg]">
-                  <path d="M1 6H11M11 6L6 1M11 6L6 11" stroke="currentColor" strokeWidth="1"/>
-                </svg>
-              </div>
-              Page Top
-            </button>
-          </div>
         </div>
       </div>
 

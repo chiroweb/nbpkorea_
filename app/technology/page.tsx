@@ -4,7 +4,7 @@ import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
 import Image from "next/image";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 function CoreTechSection() {
   const technologies = [
@@ -147,7 +147,7 @@ function GlobalPartnersSection() {
             글로벌 기술 파트너
           </h2>
           <p className="text-sm text-[#888480] mt-4 max-w-xl mx-auto leading-[2]">
-            1940년대부터 이어온 파트너사의 기술 유산과 NBP KOREA의 현장 경험이 만나
+            1940년대부터 이어온 파트너사의 기술 유산과 NBPKOREA의 현장 경험이 만나
             최고의 솔루션을 만들어냅니다
           </p>
         </div>

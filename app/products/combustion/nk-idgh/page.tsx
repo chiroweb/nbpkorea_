@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const specs = [
   { model: "NK-IDGH-40",  capacity: "400,000",   fuel: "LNG/LPG/도시가스", power: "AC 220/380V", type: "열교환 간접식", control: "비례제어" },

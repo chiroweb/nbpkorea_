@@ -15,7 +15,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "nbpkoreare.s3.ap-northeast-2.amazonaws.com",
+        hostname: "NBPKOREAre.s3.ap-northeast-2.amazonaws.com",
         pathname: "/**",
       },
     ],

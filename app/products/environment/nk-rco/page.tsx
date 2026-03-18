@@ -7,7 +7,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const specs = [
   { model: "NKRCO-050", airflow: 50, heatInput: "250,000", power: 22, length: "4,060", width: "2,300", height: "3,700" },

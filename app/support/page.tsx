@@ -28,14 +28,14 @@ function InquiryTypesSection() {
       title: "견적 요청",
       subtitle: "Quote Request",
       description: "현장 조건에 맞는 맞춤 설비 설계 및 견적서 발행 요청",
-      contact: "nbpkorea@nbpkorea.co.kr",
+      contact: "NBPKOREA@NBPKOREA.co.kr",
     },
     {
       icon: "□",
       title: "기타 문의",
       subtitle: "Other Inquiries",
       description: "파트너십, 기술 자료 요청, 채용 관련 등 기타 문의 사항",
-      contact: "nbpkorea@nbpkorea.co.kr",
+      contact: "NBPKOREA@NBPKOREA.co.kr",
     },
   ];
 
@@ -320,7 +320,7 @@ function ContactFormSection() {
               {[
                 { label: "대표전화", value: "031-434-6566~7", sub: "평일 09:00 - 18:00" },
                 { label: "팩스", value: "031-434-6568", sub: "" },
-                { label: "이메일", value: "nbpkorea@nbpkorea.co.kr", sub: "영업일 기준 24시간 이내 회신" },
+                { label: "이메일", value: "NBPKOREA@NBPKOREA.co.kr", sub: "영업일 기준 24시간 이내 회신" },
               ].map((info) => (
                 <div key={info.label} className="border-b border-[#D4DAE2] pb-4">
                   <span className="text-[13px] tracking-[0.15em] uppercase text-[#888480] block mb-1">
@@ -347,7 +347,7 @@ function ContactFormSection() {
                 className="w-full h-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                title="NBP KOREA 본사 위치"
+                title="NBPKOREA 본사 위치"
               />
             </div>
             <p className="text-sm text-[#888480] mt-4 leading-[2]">

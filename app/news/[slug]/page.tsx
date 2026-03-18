@@ -5,7 +5,7 @@ import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
 import Image from "next/image";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 // 실제 운영 시 CMS나 DB로 교체할 데이터
 const posts: Record<string, {
@@ -27,8 +27,8 @@ const posts: Record<string, {
     content: [
       { type: "h2", text: "조선소 도장 공정과 VOCs 문제" },
       { type: "p", text: "선박 블록 도장 과정에서 발생하는 휘발성유기화합물(VOCs)과 복합 악취는 작업자 건강과 주변 환경에 직접적인 영향을 미칩니다. 국내 조선업 특성상 대형 밀폐 공간에서의 도장 작업이 많아 고농도 VOCs 처리 장치가 필수적입니다." },
-      { type: "h2", text: "NBP KOREA의 RTO 적용 사례" },
-      { type: "p", text: "NBP KOREA는 한화오션, HD현대미포조선 등 국내 주요 조선소의 도장 블록 작업장에 축열식연소산화장치(RTO)를 공급했습니다. 당사 RTO는 축열재를 이용해 연소열을 회수, 자체 연료 소비를 최소화하면서 VOCs 처리 효율 99% 이상을 실현합니다." },
+      { type: "h2", text: "NBPKOREA의 RTO 적용 사례" },
+      { type: "p", text: "NBPKOREA는 한화오션, HD현대미포조선 등 국내 주요 조선소의 도장 블록 작업장에 축열식연소산화장치(RTO)를 공급했습니다. 당사 RTO는 축열재를 이용해 연소열을 회수, 자체 연료 소비를 최소화하면서 VOCs 처리 효율 99% 이상을 실현합니다." },
       { type: "h3", text: "주요 성능 지표" },
       { type: "ul", items: [
         "VOCs 처리 효율: 99% 이상",
@@ -40,7 +40,7 @@ const posts: Record<string, {
       { type: "p", text: "RTO의 핵심 경쟁력은 열 회수입니다. 연소 시 발생한 고온 가스를 축열재(세라믹 허니콤)에 저장하고, 다음 처리 사이클의 예열에 활용함으로써 추가 연료 투입 없이도 안정적인 연소 온도를 유지할 수 있습니다." },
       { type: "p", text: "실제 납품 현장에서는 기존 직접 연소 방식 대비 연간 수억 원의 연료비 절감이 확인됐으며, 설비 투자비 회수 기간은 평균 2~3년 수준으로 집계됐습니다." },
       { type: "h2", text: "문의 및 상담" },
-      { type: "p", text: "VOCs 처리 설비 도입을 검토 중이라면 NBP KOREA 기술팀에 문의하세요. 현장 조건에 맞는 최적 사양을 제안해 드립니다." },
+      { type: "p", text: "VOCs 처리 설비 도입을 검토 중이라면 NBPKOREA 기술팀에 문의하세요. 현장 조건에 맞는 최적 사양을 제안해 드립니다." },
     ],
   },
   "metal-fiber-burner-nox-reduction": {

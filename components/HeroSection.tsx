@@ -3,15 +3,15 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
-    { label: "NBP KOREA 산업 현장 1", src: `${S3}/images/hero1.png` },
-    { label: "NBP KOREA 산업 현장 2", src: `${S3}/images/hero2.png` },
-    { label: "NBP KOREA 환경설비", src: `${S3}/images/hero3.png` },
-    { label: "NBP KOREA 연소설비", src: `${S3}/images/hero4.png` },
+    { label: "NBPKOREA 산업 현장 1", src: `${S3}/images/hero1.png` },
+    { label: "NBPKOREA 산업 현장 2", src: `${S3}/images/hero2.png` },
+    { label: "NBPKOREA 환경설비", src: `${S3}/images/hero3.png` },
+    { label: "NBPKOREA 연소설비", src: `${S3}/images/hero4.png` },
   ];
 
   useEffect(() => {
@@ -51,13 +51,13 @@ export default function HeroSection() {
         <p className="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">
           Since 2006 · Ansan, Korea
         </p>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-[0.1em] text-white mb-4 leading-tight">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.1em] text-white mb-4 leading-tight">
           NBPKOREA
           <br />
           <span className="text-[#C05010]">최고의</span> 연소 솔루션
         </h1>
         <p className="text-sm md:text-base tracking-[0.1em] text-white/70 max-w-lg leading-relaxed">
-          산업용 연소장비와 환경설비의 기술 파트너, NBP KOREA
+          산업용 연소장비와 환경설비의 기술 파트너, NBPKOREA
         </p>
       </div>
 
@@ -77,7 +77,7 @@ export default function HeroSection() {
       </div>
 
       {/* Scroll Down Indicator */}
-      <div className="absolute bottom-12 right-8 md:right-16 flex flex-col items-center gap-3 z-10">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10">
         <span className="text-[13px] tracking-[0.2em] uppercase text-white/50 -rotate-90 mb-4">
           Scroll
         </span>
@@ -91,9 +91,9 @@ export default function HeroSection() {
 
       {/* Contact Quick Info */}
       <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-end gap-2 z-10">
-        <span className="text-[13px] tracking-[0.15em] text-white/50">031-434-6566~7</span>
+        <span className="text-base tracking-[0.15em] text-white/50">031-434-6566~7</span>
         <div className="w-8 h-px bg-white/20" />
-        <span className="text-[13px] tracking-[0.1em] text-white/40">Ansan, Korea</span>
+        <span className="text-base tracking-[0.1em] text-white/40">Ansan, Korea</span>
       </div>
     </section>
   );

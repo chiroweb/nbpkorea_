@@ -4,7 +4,7 @@ import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
 import Image from "next/image";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 export default function RecruitSection() {
   const { ref, isInView } = useInView({ threshold: 0.1 });
@@ -52,7 +52,7 @@ export default function RecruitSection() {
             <h2 className="section-title mb-8">TRUSTED BY</h2>
 
             <p className="text-sm leading-[2] text-[#888480] mb-8">
-              국내외 80여 주요 기업이 NBP KOREA의 기술력을 신뢰합니다.
+              국내외 80여 주요 기업이 NBPKOREA의 기술력을 신뢰합니다.
               글로벌 파트너십과 현장 검증된 기술로 산업 현장의 요구에 응답합니다.
             </p>
 

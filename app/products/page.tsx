@@ -8,7 +8,7 @@ import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 // ── 환경설비 ──────────────────────────────────────────────────
 const environmentProducts = [
@@ -305,7 +305,7 @@ function FeatureSection() {
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
-            <span className="section-label block mb-4">Why NBP KOREA</span>
+            <span className="section-label block mb-4">Why NBPKOREA</span>
             <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-light text-[#2d2a28] mb-6">
               20년 기술력으로<br />산업 현장에 최적화된 솔루션
             </h2>
@@ -328,7 +328,7 @@ function FeatureSection() {
           </div>
           <div className={`transition-all duration-1000 delay-300 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#DCE2E8]">
-              <Image src={`${S3}/images/building.jpg`} alt="NBP KOREA 제품 개요" fill className="object-cover" />
+              <Image src={`${S3}/images/building.jpg`} alt="NBPKOREA 제품 개요" fill className="object-cover" />
             </div>
           </div>
         </div>

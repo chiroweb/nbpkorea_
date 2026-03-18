@@ -5,7 +5,7 @@ import { useInView } from "@/hooks/useInView";
 import Link from "next/link";
 import Image from "next/image";
 
-const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const posts = [
   {
@@ -29,12 +29,12 @@ const posts = [
     readTime: "4분",
   },
   {
-    slug: "nbpkorea-iso-certification",
+    slug: "NBPKOREA-iso-certification",
     category: "회사 소식",
     date: "2025.10.05",
     title: "ISO 9001 · ISO 14001 통합 인증 갱신 완료",
     excerpt:
-      "NBP KOREA는 품질경영시스템(ISO 9001)과 환경경영시스템(ISO 14001) 인증을 성공적으로 갱신했습니다. 글로벌 기준에 부합하는 품질과 환경 경영 체계를 지속 유지합니다.",
+      "NBPKOREA는 품질경영시스템(ISO 9001)과 환경경영시스템(ISO 14001) 인증을 성공적으로 갱신했습니다. 글로벌 기준에 부합하는 품질과 환경 경영 체계를 지속 유지합니다.",
     image: `${S3}/images/service-combustion.png`,
     readTime: "3분",
   },
@@ -64,7 +64,7 @@ const posts = [
     date: "2025.07.30",
     title: "하이브리드 제습기, 자동차 도장 부스 적용 확대",
     excerpt:
-      "BMW·아우디·기아 협력사 도장 라인에 적용된 NBP KOREA 하이브리드 제습기의 성능과 에너지 절감 효과를 소개합니다.",
+      "BMW·아우디·기아 협력사 도장 라인에 적용된 NBPKOREA 하이브리드 제습기의 성능과 에너지 절감 효과를 소개합니다.",
     image: `${S3}/images/service-combustion.png`,
     readTime: "5분",
   },
@@ -125,7 +125,7 @@ export default function NewsPage() {
   return (
     <SubpageLayout
       title="NBP / NEWS"
-      subtitle="NBP KOREA의 기술 인사이트, 제품 소식, 파트너십 업데이트를 전합니다"
+      subtitle="NBPKOREA의 기술 인사이트, 제품 소식, 파트너십 업데이트를 전합니다"
       breadcrumb={[{ label: "NBP/NEWS", href: "/news" }]}
     >
       {/* Category Filter */}
@@ -164,7 +164,7 @@ export default function NewsPage() {
         <div className="flex animate-scroll whitespace-nowrap">
           {[...Array(6)].map((_, i) => (
             <span key={i} className="flex-shrink-0 text-[clamp(1.5rem,3vw,2.5rem)] font-light tracking-[0.3em] text-[#D4DAE2] uppercase mr-12">
-              NBP KOREA IS ALWAYS NEXT TO YOU FOR BUSINESS
+              NBPKOREA IS ALWAYS NEXT TO YOU FOR BUSINESS
               <span className="mx-6 text-[#DCE2E8]">✦</span>
             </span>
           ))}

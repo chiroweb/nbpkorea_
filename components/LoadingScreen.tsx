@@ -40,7 +40,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       <video
         className="rounded-sm"
         style={{ width: "min(480px, 72vw)", height: "auto" }}
-        src="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/intro-video.mp4"
+        src="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/intro-video.mp4"
         autoPlay
         muted
         loop

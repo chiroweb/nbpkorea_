@@ -19,8 +19,8 @@ export default function CompanySection() {
           >
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#DCE2E8]">
               <Image
-                src="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/building.jpg"
-                alt="NBP KOREA 본사"
+                src="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/building.jpg"
+                alt="NBPKOREA 본사"
                 fill
                 className="object-cover"
               />
@@ -34,9 +34,9 @@ export default function CompanySection() {
             }`}
           >
             <span className="section-label block mb-4">Company</span>
-            <h2 className="section-title mb-8">NBP KOREA</h2>
+            <h2 className="section-title mb-8">NBPKOREA</h2>
             <p className="text-sm leading-[2] text-[#888480] mb-12">
-              NBP KOREA는 2006년 경기도 안산에서 설립된 산업용 연소장비 및 환경설비 전문 기업입니다.
+              NBPKOREA는 2006년 경기도 안산에서 설립된 산업용 연소장비 및 환경설비 전문 기업입니다.
               금속화이버 버너를 비롯한 독자 기술과 19건의 등록 특허, 미국·터키의 글로벌 파트너십을 기반으로
               조선, 자동차, 중공업, 화학 등 다양한 산업 현장의 80여 주요 기업에 신뢰할 수 있는 솔루션을 공급합니다.
             </p>
