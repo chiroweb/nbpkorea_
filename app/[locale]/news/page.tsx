@@ -129,7 +129,7 @@ export default function NewsPage() {
         <div className="flex animate-scroll whitespace-nowrap">
           {[...Array(6)].map((_, i) => (
             <span key={i} className="flex-shrink-0 text-[clamp(1.5rem,3vw,2.5rem)] font-light tracking-[0.3em] text-[#D4DAE2] uppercase mr-12">
-              NBPKOREA IS ALWAYS NEXT TO YOU FOR BUSINESS
+              NBPKOREA IS BEST OPTION FOR YOUR BUISSNESS
               <span className="mx-6 text-[#DCE2E8]">✦</span>
             </span>
           ))}

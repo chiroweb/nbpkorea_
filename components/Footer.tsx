@@ -17,9 +17,15 @@ const galleryImages = [
   { src: `${S3}/images/into3.jpg`, alt: "Global Partner Site" },
 ];
 
+const FAMILY_SITES = [
+  { label: "MIDCO International", href: "https://www.midco-intl.com" },
+  { label: "ECOSTAR", href: "https://www.ecostar.com.tr" },
+];
+
 export default function Footer() {
   const t = useTranslations("common.footer");
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
+  const [familyOpen, setFamilyOpen] = useState(false);
 
   const navItems = [
     { label: t("products"), href: "/products", image: "products" },
@@ -83,6 +89,47 @@ export default function Footer() {
                     <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
                   </svg>
                 </Link>
+
+                {/* Family Site Dropdown */}
+                <div className="relative">
+                  <button
+                    onClick={() => setFamilyOpen((v) => !v)}
+                    className={`flex items-center gap-2 text-xs tracking-[0.15em] uppercase border px-4 py-2 transition-all ${
+                      familyOpen
+                        ? "bg-[#C05010] text-[#F5F7F8] border-[#C05010]"
+                        : "border-[#C05010] text-[#C05010] hover:bg-[#C05010] hover:text-[#F5F7F8]"
+                    }`}
+                  >
+                    Family Site
+                    <svg
+                      width="10" height="10" viewBox="0 0 10 10" fill="none"
+                      className={`transition-transform duration-200 ${familyOpen ? "rotate-180" : ""}`}
+                    >
+                      <path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </button>
+
+                  {/* Upward dropdown */}
+                  {familyOpen && (
+                    <div className="absolute bottom-full left-0 mb-2 min-w-[180px] bg-white border border-[#D4DAE2] shadow-md z-20">
+                      {FAMILY_SITES.map((site) => (
+                        <a
+                          key={site.label}
+                          href={site.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          onClick={() => setFamilyOpen(false)}
+                          className="flex items-center justify-between px-4 py-3 text-xs tracking-[0.1em] uppercase text-[#2d2a28] hover:bg-[#C05010] hover:text-white transition-colors border-b border-[#F0F0F0] last:border-b-0"
+                        >
+                          {site.label}
+                          <svg width="9" height="9" viewBox="0 0 12 12" fill="none">
+                            <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
+                          </svg>
+                        </a>
+                      ))}
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
 
