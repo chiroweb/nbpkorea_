@@ -6,7 +6,7 @@ import ContentEditor from "./ContentEditor";
 import { ContentBlock, News } from "@/lib/types";
 import { ADMIN_PATH } from "@/lib/admin-path";
 
-const CATEGORIES = ["기술 인사이트", "제품 소식", "회사 소식", "파트너십"];
+const CATEGORIES = ["기술 인사이트", "제품 소식", "회사 소식", "파트너십", "언론 보도"];
 
 interface Props {
   initial?: Partial<News>;

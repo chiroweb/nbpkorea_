@@ -318,7 +318,18 @@
       "ctaTitle": "Need a Custom Equipment Solution?",
       "ctaMainDesc": "We will propose the optimal environmental and combustion equipment for your site conditions. Consult with our specialist engineers.",
       "ctaButton": "Inquiry",
-      "industryTags": ["Shipbuilding/Marine", "Automotive", "Heavy Industry", "Chemical/Petrochemical", "Environmental/Odor Control", "Semiconductor", "Food Processing", "Pharmaceutical", "Textile", "Energy"]
+      "industryTags": [
+        "Shipbuilding/Marine",
+        "Automotive",
+        "Heavy Industry",
+        "Chemical/Petrochemical",
+        "Environmental/Odor Control",
+        "Semiconductor",
+        "Food Processing",
+        "Pharmaceutical",
+        "Textile",
+        "Energy"
+      ]
     },
     "nav": {
       "directHeater": "Direct Heater",
@@ -341,7 +352,12 @@
         "heroTitle": "Catalytic Thermal Oxidizer (CTO)",
         "heroDesc1": "CTO uses a catalyst to combust (contact oxidation) and render harmless odorous substances contained in exhaust gas — chemically the same as ordinary combustion decomposition. The catalytic material acts as a facilitator, participating in combustion to accelerate the reaction, enabling a new combustion technology that greatly reduces nitrogen oxide (NOx) generation from low-temperature, low-concentration combustion while significantly improving energy savings.",
         "heroDesc2": "Catalytic combustion oxidation at normal temperatures of 250–450°C achieves combustion efficiency of 98% or more for odorous substances, with a very high treatment efficiency of about 99% for odor concentration. It is also environmentally friendly with few secondary pollution factors.",
-        "tags": ["98%+ Treatment Efficiency", "NOx Reduction", "Low-temp Oxidation 250–450°C", "95%+ Heat Recovery"],
+        "tags": [
+          "98%+ Treatment Efficiency",
+          "NOx Reduction",
+          "Low-temp Oxidation 250–450°C",
+          "95%+ Heat Recovery"
+        ],
         "mechanism": "Catalytic Oxidation 250–450°C",
         "heatRecovery": "Heat Recovery",
         "features": [
@@ -359,11 +375,21 @@
           "Eco-friendly system with no secondary pollutants"
         ],
         "applications": [
-          "Semiconductors, Displays, LCD", "Automotive, Shipbuilding, Steel, Plants", "Petroleum, Chemical Manufacturing",
-          "Painting Processes, Paint Manufacturing", "Water/Sewage, Sewage Sludge, Odor Treatment", "Printing, Ink Manufacturing",
-          "Plastics, Synthetic Rubber Resin Manufacturing", "Plywood and Furniture Factories", "Food Waste, Animal Byproduct Sludge",
-          "Food Processing, Biotech", "Pharmaceutical Manufacturing", "Textiles, Leather, Wood Manufacturing",
-          "New Materials Manufacturing/Processing", "Metal, Molds, Castings, Wire Manufacturing", "Other VOCs and Odor-emitting Sites"
+          "Semiconductors, Displays, LCD",
+          "Automotive, Shipbuilding, Steel, Plants",
+          "Petroleum, Chemical Manufacturing",
+          "Painting Processes, Paint Manufacturing",
+          "Water/Sewage, Sewage Sludge, Odor Treatment",
+          "Printing, Ink Manufacturing",
+          "Plastics, Synthetic Rubber Resin Manufacturing",
+          "Plywood and Furniture Factories",
+          "Food Waste, Animal Byproduct Sludge",
+          "Food Processing, Biotech",
+          "Pharmaceutical Manufacturing",
+          "Textiles, Leather, Wood Manufacturing",
+          "New Materials Manufacturing/Processing",
+          "Metal, Molds, Castings, Wire Manufacturing",
+          "Other VOCs and Odor-emitting Sites"
         ],
         "tableClickModel": "Click a row to select your desired model",
         "tableHeaders": {
@@ -486,20 +512,47 @@
     "awards": {
       "title": "Awards",
       "items": [
-        { "year": "2021", "title": "Minister of Trade, Industry and Energy Award" },
-        { "year": "2019", "title": "Minister of Trade, Industry and Energy Award" },
-        { "year": "2017", "title": "Minister of SMEs and Startups Award" },
-        { "year": "2014", "title": "Commissioner of the Small and Medium Business Administration Award" },
-        { "year": "2009", "title": "Gyeonggi Governor's Award" }
+        {
+          "year": "2021",
+          "title": "Minister of Trade, Industry and Energy Award"
+        },
+        {
+          "year": "2019",
+          "title": "Minister of Trade, Industry and Energy Award"
+        },
+        {
+          "year": "2017",
+          "title": "Minister of SMEs and Startups Award"
+        },
+        {
+          "year": "2014",
+          "title": "Commissioner of the Small and Medium Business Administration Award"
+        },
+        {
+          "year": "2009",
+          "title": "Gyeonggi Governor's Award"
+        }
       ]
     },
     "certifications": {
       "title": "Certifications",
       "list": [
-        { "name": "ISO 9001", "desc": "Quality Management System" },
-        { "name": "ISO 14001", "desc": "Environmental Management System" },
-        { "name": "CE Mark", "desc": "European Safety Certification" },
-        { "name": "KS Mark", "desc": "Korean Industrial Standard" }
+        {
+          "name": "ISO 9001",
+          "desc": "Quality Management System"
+        },
+        {
+          "name": "ISO 14001",
+          "desc": "Environmental Management System"
+        },
+        {
+          "name": "CE Mark",
+          "desc": "European Safety Certification"
+        },
+        {
+          "name": "KS Mark",
+          "desc": "Korean Industrial Standard"
+        }
       ]
     },
     "rdCenter": {
@@ -526,7 +579,8 @@
       "tech": "Tech Insights",
       "product": "Product News",
       "company": "Company News",
-      "partnership": "Partnership"
+      "partnership": "Partnership",
+      "press": "Press"
     },
     "loading": "Loading...",
     "empty": "No posts found.",
@@ -581,10 +635,26 @@
     "as": {
       "title": "A/S Procedure",
       "steps": [
-        { "num": "01", "title": "Request", "desc": "Submit A/S request by phone or email" },
-        { "num": "02", "title": "Diagnosis", "desc": "Remote or on-site visit diagnosis" },
-        { "num": "03", "title": "Repair", "desc": "Expert engineer dispatched for repair" },
-        { "num": "04", "title": "Follow-up", "desc": "Post-repair monitoring" }
+        {
+          "num": "01",
+          "title": "Request",
+          "desc": "Submit A/S request by phone or email"
+        },
+        {
+          "num": "02",
+          "title": "Diagnosis",
+          "desc": "Remote or on-site visit diagnosis"
+        },
+        {
+          "num": "03",
+          "title": "Repair",
+          "desc": "Expert engineer dispatched for repair"
+        },
+        {
+          "num": "04",
+          "title": "Follow-up",
+          "desc": "Post-repair monitoring"
+        }
       ],
       "warranty": "The warranty period for industrial equipment (excluding individual items) is 1 year from the date of commissioning completion (consumables excluded)."
     },

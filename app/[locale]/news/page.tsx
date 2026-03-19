@@ -66,6 +66,7 @@ export default function NewsPage() {
     { key: "product", label: t("categories.product"), filter: "제품 소식" },
     { key: "company", label: t("categories.company"), filter: "회사 소식" },
     { key: "partnership", label: t("categories.partnership"), filter: "파트너십" },
+    { key: "press", label: t("categories.press"), filter: "언론 보도" },
   ];
 
   useEffect(() => {
