@@ -5,7 +5,6 @@ import { useParams } from "next/navigation";
 import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
 import { News } from "@/lib/types";
 import { useTranslations } from "next-intl";
 
@@ -13,7 +12,6 @@ export default function NewsDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const [post, setPost] = useState<News | null>(null);
   const [loading, setLoading] = useState(true);
-  const [imgError, setImgError] = useState(false);
   const { ref, isInView } = useInView({ threshold: 0.1 });
   const t = useTranslations("news");
   const tNav = useTranslations("common.nav");
@@ -90,24 +88,6 @@ export default function NewsDetailPage() {
           >
             {post.excerpt}
           </p>
-
-          {/* Thumbnail — only show if image loads successfully */}
-          {post.image_url && !imgError && (
-            <div
-              className={`relative aspect-[16/9] overflow-hidden bg-[#DCE2E8] mb-12 transition-all duration-700 delay-300 ${
-                isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-            >
-              <Image
-                src={post.image_url}
-                alt={post.title}
-                fill
-                className="object-cover"
-                priority
-                onError={() => setImgError(true)}
-              />
-            </div>
-          )}
 
           {/* Divider */}
           <div className="h-px bg-[#D4DAE2] mb-12" />
