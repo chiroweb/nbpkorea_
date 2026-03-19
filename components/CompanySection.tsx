@@ -1,10 +1,12 @@
 "use client";
 
 import { useInView } from "@/hooks/useInView";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export default function CompanySection() {
+  const t = useTranslations("home.company");
   const { ref, isInView } = useInView({ threshold: 0.2 });
 
   return (
@@ -20,7 +22,7 @@ export default function CompanySection() {
             <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#DCE2E8]">
               <Image
                 src="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/building.jpg"
-                alt="NBPKOREA 본사"
+                alt="NBPKOREA HQ"
                 fill
                 className="object-cover"
               />
@@ -36,9 +38,7 @@ export default function CompanySection() {
             <span className="section-label block mb-6">Company</span>
             <h2 className="font-bold tracking-[0.1em] text-[#2d2a28] mb-8 leading-none" style={{ fontSize: "clamp(62.4px, 7.5vw, 93.6px)" }}>NBPKOREA</h2>
             <p className="text-sm leading-[2] text-[#888480] mb-12">
-              NBPKOREA는 2006년 경기도 안산에서 설립된 산업용 연소장비 및 환경설비 전문 기업입니다.
-              금속화이버 버너를 비롯한 독자 기술과 19건의 등록 특허, 미국·터키의 글로벌 파트너십을 기반으로
-              조선, 자동차, 중공업, 화학 등 다양한 산업 현장의 80여 주요 기업에 신뢰할 수 있는 솔루션을 공급합니다.
+              {t("description")}
             </p>
 
             <Link
@@ -50,7 +50,7 @@ export default function CompanySection() {
                   <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1"/>
                 </svg>
               </span>
-              <span>회사소개 보기</span>
+              <span>{t("link")}</span>
               <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="transition-transform group-hover:translate-x-1">
                 <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/>
               </svg>

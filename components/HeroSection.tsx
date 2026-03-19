@@ -1,13 +1,14 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
+import { useTranslations } from "next-intl";
 
 const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
 
 const slides = [
-  { label: "NBPKOREA 산업 현장 1", src: `${S3}/videos/hero1.mp4`, duration: 7000 },
-  { label: "NBPKOREA 산업 현장 2", src: `${S3}/videos/hero2.mp4`, duration: 7000 },
-  { label: "NBPKOREA 환경설비",    src: `${S3}/videos/hero3.mp4`, duration: 8000 },
+  { label: "NBPKOREA Industrial Site 1", src: `${S3}/videos/hero1.mp4`, duration: 7000 },
+  { label: "NBPKOREA Industrial Site 2", src: `${S3}/videos/hero2.mp4`, duration: 7000 },
+  { label: "NBPKOREA Environmental Systems", src: `${S3}/videos/hero3.mp4`, duration: 8000 },
 ];
 
 interface HeroSectionProps {
@@ -15,6 +16,7 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
+  const t = useTranslations("home.hero");
   const [currentSlide, setCurrentSlide] = useState(0);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const timerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -30,7 +32,6 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
     }, slides[index].duration);
   }
 
-  // 로딩 완료 시 첫 영상 시작 + 슬라이드 타이머 시작
   useEffect(() => {
     if (!shouldPlay) return;
 
@@ -48,7 +49,6 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [shouldPlay]);
 
-  // 슬라이드 전환 시 해당 비디오를 처음부터 재생
   useEffect(() => {
     if (!shouldPlay || currentSlide === 0) return;
     const video = videoRefs.current[currentSlide];
@@ -85,18 +85,18 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
       {/* Overlay Gradient */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/70 via-[#1a1a1a]/20 to-transparent" />
 
-      {/* Hero Content — 왼쪽 정렬 */}
+      {/* Hero Content */}
       <div className="relative z-10 px-8 md:px-16 pb-36 max-w-3xl">
         <p className="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">
-          Since 2006 · Ansan, Korea
+          {t("since")}
         </p>
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.1em] text-white mb-4 leading-tight">
-          NBPKOREA
+          {t("title")}
           <br />
-          <span className="text-[#C05010]">최고의</span> 연소 솔루션
+          <span className="text-[#C05010]">{t("titleHighlight")}</span> {t("titleSuffix")}
         </h1>
         <p className="text-sm md:text-base tracking-[0.1em] text-white/70 max-w-lg leading-relaxed">
-          산업용 연소장비와 환경설비의 기술 파트너, NBPKOREA
+          {t("subtitle")}
         </p>
       </div>
 
@@ -121,7 +121,7 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10">
         <span className="text-[13px] tracking-[0.2em] uppercase text-white/50 -rotate-90 mb-4">
-          Scroll
+          {t("scroll")}
         </span>
         <div className="scroll-indicator">
           <svg width="20" height="30" viewBox="0 0 20 30" fill="none" className="opacity-40">

@@ -2,7 +2,7 @@
 
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useInView } from "@/hooks/useInView";
 
 interface SubpageLayoutProps {

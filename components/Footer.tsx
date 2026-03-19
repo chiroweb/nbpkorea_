@@ -1,34 +1,32 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { useState } from "react";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const galleryImages = [
-  { src: `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20RTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`, alt: "환경설비 플랜트" },
-  { src: `${S3}/images/metal%20burner1.png`, alt: "금속화이버 버너" },
-  { src: `${S3}/assets/industry1.png`, alt: "조선소 현장" },
-  { src: `${S3}/assets/industry2.png`, alt: "자동차 도장라인" },
-  { src: `${S3}/images/intro2.jpg`, alt: "연구소 전경" },
-  { src: `${S3}/assets/industry3.png`, alt: "화학공정 현장" },
-  { src: `${S3}/images/into3.jpg`, alt: "글로벌 파트너 현장" },
+  { src: `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20RTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`, alt: "Environmental Plant" },
+  { src: `${S3}/images/metal%20burner1.png`, alt: "Metal Fiber Burner" },
+  { src: `${S3}/assets/industry1.png`, alt: "Shipyard" },
+  { src: `${S3}/assets/industry2.png`, alt: "Automotive Paint Line" },
+  { src: `${S3}/images/intro2.jpg`, alt: "Research Center" },
+  { src: `${S3}/assets/industry3.png`, alt: "Chemical Plant" },
+  { src: `${S3}/images/into3.jpg`, alt: "Global Partner Site" },
 ];
 
 export default function Footer() {
+  const t = useTranslations("common.footer");
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   const navItems = [
-    { label: "제품/솔루션", href: "/products", image: "products" },
-    { label: "회사소개", href: "/about", image: "about" },
-    { label: "기술/R&D", href: "/technology", image: "technology" },
-    { label: "고객센터", href: "/support", image: "support" },
-    { label: "사업분야", href: "/business", image: "business" },
-  ];
-
-  const externalLinks = [
-    { label: "문의하기", href: "/support" },
+    { label: t("products"), href: "/products", image: "products" },
+    { label: t("about"), href: "/about", image: "about" },
+    { label: t("technology"), href: "/technology", image: "technology" },
+    { label: t("supportNav"), href: "/support", image: "support" },
+    { label: t("businessNav"), href: "/business", image: "business" },
   ];
 
   const contactInfo = [
@@ -63,7 +61,7 @@ export default function Footer() {
               <nav className="grid grid-cols-2 sm:grid-cols-3 gap-4">
                 {navItems.map((item) => (
                   <Link
-                    key={item.label}
+                    key={item.href}
                     href={item.href}
                     onMouseEnter={() => setHoveredImage(item.image)}
                     onMouseLeave={() => setHoveredImage(null)}
@@ -76,36 +74,31 @@ export default function Footer() {
 
               {/* External Links */}
               <div className="flex flex-wrap gap-4 mt-8">
-                {externalLinks.map((link) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-4 py-2 hover:bg-[#C05010] hover:text-[#F5F7F8] transition-all"
-                  >
-                    {link.label}
-                    <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                      <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
-                    </svg>
-                  </Link>
-                ))}
+                <Link
+                  href="/support"
+                  className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-4 py-2 hover:bg-[#C05010] hover:text-[#F5F7F8] transition-all"
+                >
+                  {t("contactUs")}
+                  <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
+                    <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
+                  </svg>
+                </Link>
               </div>
             </div>
 
             {/* Access */}
             <div>
               <h4 className="text-xs tracking-[0.2em] uppercase text-[#888480] mb-4">
-                Access
+                {t("access")}
               </h4>
-              <p className="text-sm leading-[2] mb-4">
-                경기도 안산시 단원구<br />
-                엠티브이로 8길 22<br />
-                사업자등록번호 119-13-28296
+              <p className="text-sm leading-[2] mb-4 whitespace-pre-line">
+                {t("address")}
               </p>
               <Link
                 href="/about"
                 className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase hover:opacity-60 transition-opacity"
               >
-                오시는 길
+                {t("directions")}
                 <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
                 </svg>
@@ -115,17 +108,17 @@ export default function Footer() {
             {/* Contact */}
             <div>
               <h4 className="text-xs tracking-[0.2em] uppercase text-[#888480] mb-4">
-                Contact
+                {t("contact")}
               </h4>
               <div className="flex flex-col gap-3">
                 {contactInfo.map((info) => (
-                  <Link
+                  <a
                     key={info.label}
                     href={info.href}
                     className="text-sm tracking-[0.05em] hover:opacity-60 transition-opacity"
                   >
                     {info.label}
-                  </Link>
+                  </a>
                 ))}
               </div>
             </div>
@@ -134,11 +127,11 @@ export default function Footer() {
           {/* Bottom Bar */}
           <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-[#C8D0DA]">
             <Link href="/privacy" className="text-[13px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors mb-4 md:mb-0">
-              Privacy Policy
+              {t("privacy")}
             </Link>
 
             <p className="text-[13px] tracking-[0.15em] text-[#888480]">
-              Copyright NBPKOREA. All Rights Reserved.
+              {t("copyright")}
             </p>
           </div>
 

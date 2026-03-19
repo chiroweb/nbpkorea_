@@ -1,10 +1,19 @@
 "use client";
 
 import { useInView } from "@/hooks/useInView";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function HistorySection() {
+  const t = useTranslations("home.history");
   const { ref, isInView } = useInView({ threshold: 0.1 });
+
+  const timelineItems = [
+    { year: "2006", event: t("founded") },
+    { year: "2007", event: t("midco") },
+    { year: "2013", event: t("ecostar") },
+    { year: "2022", event: t("rnd") },
+  ];
 
   return (
     <section id="history" className="py-32 px-6 md:px-12 bg-[#2d2a28] text-[#F5F7F8]" ref={ref}>
@@ -17,17 +26,16 @@ export default function HistorySection() {
             }`}
           >
             <span className="section-label block mb-4 text-[#a3a09b]">History</span>
-            <h2 className="section-title mb-8">NBPKOREA의 발자취</h2>
+            <h2 className="section-title mb-8">{t("label")}</h2>
 
             <div className="flex items-baseline gap-4 mb-12">
-              <span className="text-5xl md:text-7xl font-light">(2006</span>
+              <span className="text-5xl md:text-7xl font-light">{t("since")}</span>
               <span className="text-xl text-[#888480]">—</span>
-              <span className="text-5xl md:text-7xl font-light">현재)</span>
+              <span className="text-5xl md:text-7xl font-light">{t("present")}</span>
             </div>
 
             <p className="text-sm leading-[2] text-[#a3a09b] mb-12">
-              2006년 경기도 안산에서 시작한 NBPKOREA는 산업용 연소장비와 환경설비 분야에서
-              끊임없이 기술을 혁신하며 성장해 왔습니다. 신뢰와 도전, 열정의 가치를 지켜온 20년의 역사.
+              {t("description")}
             </p>
 
             <Link href="/about" className="btn-link group text-[#F5F7F8]">
@@ -36,7 +44,7 @@ export default function HistorySection() {
                   <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1"/>
                 </svg>
               </span>
-              <span>회사 연혁 보기</span>
+              <span>{t("viewHistory")}</span>
               <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="transition-transform group-hover:translate-x-1">
                 <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/>
               </svg>
@@ -54,12 +62,7 @@ export default function HistorySection() {
               <div className="absolute left-4 top-0 bottom-0 w-px bg-[#888480]/30" />
 
               {/* Timeline Items */}
-              {[
-                { year: "2006", event: "NBPKOREA 설립 (안산시)" },
-                { year: "2007", event: "MIDCO International 기술제휴" },
-                { year: "2013", event: "ECOSTAR 파트너십 체결" },
-                { year: "2022", event: "기업부설연구소 설립 (KOITA)" },
-              ].map((item, index) => (
+              {timelineItems.map((item) => (
                 <div key={item.year} className="flex items-center gap-8 mb-8 last:mb-0">
                   <div className="w-8 h-8 rounded-full border border-[#888480]/30 flex items-center justify-center bg-[#2d2a28] z-10">
                     <div className="w-2 h-2 rounded-full bg-[#F5F7F8]" />

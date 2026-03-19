@@ -1,7 +1,14 @@
+const createNextIntlPlugin = require("next-intl/plugin");
+
+const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
+
 /** @type {import('next').NextConfig} */
 const adminPath = process.env.NEXT_PUBLIC_ADMIN_PATH || "admin";
 
 const nextConfig = {
+  experimental: {
+    cpus: 1,
+  },
   images: {
     unoptimized: true,
     remotePatterns: [
@@ -20,6 +27,11 @@ const nextConfig = {
         hostname: "NBPKOREAre.s3.ap-northeast-2.amazonaws.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "nbpkoreare.s3.ap-northeast-2.amazonaws.com",
+        pathname: "/**",
+      },
     ],
   },
 
@@ -33,4 +45,4 @@ const nextConfig = {
   },
 };
 
-module.exports = nextConfig;
+module.exports = withNextIntl(nextConfig);

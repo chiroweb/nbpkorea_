@@ -1,8 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import createMiddleware from "next-intl/middleware";
+import { routing } from "./i18n/routing";
 
 const SESSION_COOKIE = "admin_session";
 const SESSION_TOKEN = "nbp_admin_authenticated";
 const ADMIN_SLUG = process.env.NEXT_PUBLIC_ADMIN_PATH || "admin";
+
+const intlMiddleware = createMiddleware(routing);
 
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
@@ -30,11 +34,24 @@ export function middleware(request: NextRequest) {
     if (session !== SESSION_TOKEN) {
       return NextResponse.redirect(new URL(loginPath, request.url));
     }
+    return NextResponse.next();
   }
 
-  return NextResponse.next();
+  // ── 4. Admin/API 경로는 next-intl 건너뜀
+  if (
+    pathname.startsWith("/admin") ||
+    pathname.startsWith("/api") ||
+    (ADMIN_SLUG !== "admin" && pathname.startsWith(`/${ADMIN_SLUG}`))
+  ) {
+    return NextResponse.next();
+  }
+
+  // ── 5. 그 외: next-intl locale 처리
+  return intlMiddleware(request);
 }
 
 export const config = {
-  matcher: ["/((?!_next/static|_next/image|fonts|favicon.ico|images|.*\\.png$|.*\\.jpg$|.*\\.svg$|.*\\.mp4$).*)"],
+  matcher: [
+    "/((?!_next/static|_next/image|fonts|favicon.ico|images|.*\\.png$|.*\\.jpg$|.*\\.svg$|.*\\.mp4$).*)",
+  ],
 };

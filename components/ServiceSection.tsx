@@ -1,47 +1,12 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
-const services = [
-  {
-    id: 1,
-    title: "환경설비",
-    subtitle: "Environment",
-    description:
-      "촉매연소산화장치(CTO)는 촉매를 이용해 배기가스 내 악취물질을 저온 연소·무해화하며 NOx 생성을 최소화합니다. 축열식 연소산화장치(RTO)는 연소열을 축열재로 회수하여 폐열을 생산 공정 열원으로 재활용하는 에너지 절감형 시스템이며, 축열촉매(RCO)·직접연소(TO)·직접탈취(DTO) 설비까지 반도체·도장·화학·식품 등 14개 이상 산업 분야의 VOCs 및 복합악취를 설계·제작·시공부터 유지보수까지 원스톱으로 처리합니다.",
-    tags: ["CTO", "RTO", "RCO", "TO", "DTO"],
-    image: `${S3}/images/service-environment.png`,
-  },
-  {
-    id: 2,
-    title: "연소설비",
-    subtitle: "Combustion",
-    description:
-      "전 세계에서 NBPKOREA에서만 구현하는 연소식 고효율 환경설비. 직화식 가스히터(NKGH 시리즈, 25,000~1,000,000 kcal/h)·간접식 가스히터(NK-IDGH 시리즈)·복합식 제습기·차량 도장 건조기까지 자동차 도장 부스, 선박 블록 작업장, 물류 창고, 식품·화학 공장 등 광범위한 산업 현장에 컴팩트하게 최적화된 연소 솔루션을 제공합니다.",
-    tags: ["직화식 가스히터", "간접식 가스히터", "복합제습기", "도장건조기"],
-    image: `${S3}/images/service-combustion.png`,
-  },
-  {
-    id: 3,
-    title: "산업용 버너",
-    subtitle: "Burner",
-    description:
-      "NBPKOREA 독자 개발 금속화이버 버너(NBP-MB·NBP-SMB)는 균등 연소와 적외선 복사열을 통해 에너지 효율을 극대화하고 NOx 배출을 대폭 저감합니다. 소형 메탈 버너는 컴팩트 설계로 설치 공간을 절약하며 간편한 유지보수를 실현합니다. 산업용 보일러·소각로·건조로·열매체 보일러·발전소·석유화학 플랜트 등 고온 연소가 요구되는 모든 설비에 적용 가능합니다.",
-    tags: ["NBP-MB", "NBP-SMB", "저NOx", "균등연소"],
-    image: `${S3}/images/service-burner.png`,
-  },
-];
-
-// 스크롤 구간 정의
-// 0.00 ~ 0.20 : 서비스 1 머무름
-// 0.20 ~ 0.40 : 1→2 전환
-// 0.40 ~ 0.60 : 서비스 2 머무름
-// 0.60 ~ 0.80 : 2→3 전환
-// 0.80 ~ 1.00 : 서비스 3 머무름
 const DWELL = 0.20;
 const TRANS = 0.20;
 
@@ -56,8 +21,36 @@ function easeInOut(t: number): number {
 }
 
 export default function ServiceSection() {
+  const t = useTranslations("home.service");
   const sectionRef = useRef<HTMLDivElement>(null);
   const [scrollProgress, setScrollProgress] = useState(0);
+
+  const services = [
+    {
+      id: 1,
+      title: t("environment.title"),
+      subtitle: "Environment",
+      description: t("environment.description"),
+      tags: ["CTO", "RTO", "RCO", "TO", "DTO"],
+      image: `${S3}/images/service-environment.png`,
+    },
+    {
+      id: 2,
+      title: t("combustion.title"),
+      subtitle: "Combustion",
+      description: t("combustion.description"),
+      tags: ["NKGH", "NK-IDGH", "NK-NDGH", "Paint Dryer"],
+      image: `${S3}/images/service-combustion.png`,
+    },
+    {
+      id: 3,
+      title: t("burner.title"),
+      subtitle: "Burner",
+      description: t("burner.description"),
+      tags: ["NBP-MB", "NBP-SMB", "Low-NOx", "Uniform Combustion"],
+      image: `${S3}/images/service-burner.png`,
+    },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,15 +68,12 @@ export default function ServiceSection() {
 
   const activeService = getActiveService(scrollProgress);
 
-  // 블라인드: 1→2 전환 (0.20 ~ 0.40)
   const img2Raw = Math.max(0, Math.min(1, (scrollProgress - DWELL) / TRANS));
   const img2Progress = easeInOut(img2Raw);
 
-  // 블라인드: 2→3 전환 (0.60 ~ 0.80)
   const img3Raw = Math.max(0, Math.min(1, (scrollProgress - DWELL - TRANS - DWELL) / TRANS));
   const img3Progress = easeInOut(img3Raw);
 
-  // 텍스트 블록: 각 서비스마다 active 여부에 따라 fade + slide
   const getTextStyle = (i: number) => {
     const isActive = activeService === i;
     const isPast = i < activeService;
@@ -104,30 +94,25 @@ export default function ServiceSection() {
         <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none">
           <span className="section-label block mb-1">Service</span>
           <h2 className="text-xl md:text-2xl font-bold tracking-[0.15em] text-[#2d2a28]">
-            사업 분야
+            {t("label")}
           </h2>
         </div>
 
         {/* Desktop Layout */}
         <div className="hidden md:grid h-full" style={{ gridTemplateColumns: "42% 58%" }}>
 
-          {/* ── 왼쪽: 블라인드 이미지 ── */}
+          {/* Left: Blind Image */}
           <div className="relative overflow-hidden py-16 px-8">
             <div className="relative h-full overflow-hidden rounded-sm">
-              {/* 이미지 1 — 항상 밑에 */}
               <div className="absolute inset-0">
                 <Image src={services[0].image} alt={services[0].title} fill className="object-cover" priority />
               </div>
-
-              {/* 이미지 2 — 위→아래 블라인드 */}
               <div
                 className="absolute inset-0"
                 style={{ clipPath: `inset(0 0 ${(1 - img2Progress) * 100}% 0)` }}
               >
                 <Image src={services[1].image} alt={services[1].title} fill className="object-cover" />
               </div>
-
-              {/* 이미지 3 — 위→아래 블라인드 */}
               <div
                 className="absolute inset-0"
                 style={{ clipPath: `inset(0 0 ${(1 - img3Progress) * 100}% 0)` }}
@@ -136,7 +121,6 @@ export default function ServiceSection() {
               </div>
             </div>
 
-            {/* 서비스 번호 인디케이터 (이미지 좌측 하단) */}
             <div className="absolute bottom-20 left-12 flex flex-col gap-2 z-10">
               {services.map((_, i) => (
                 <div
@@ -153,7 +137,7 @@ export default function ServiceSection() {
             </div>
           </div>
 
-          {/* ── 오른쪽: 텍스트 (fade in/out) ── */}
+          {/* Right: Text */}
           <div className="relative flex items-center bg-[#F5F7F8]">
             {services.map((service, index) => (
               <div
@@ -190,7 +174,7 @@ export default function ServiceSection() {
                       <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1" />
                     </svg>
                   </span>
-                  <span>사업분야 보기</span>
+                  <span>{t("viewBusiness")}</span>
                   <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="transition-transform group-hover:translate-x-1">
                     <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1" />
                   </svg>
@@ -222,7 +206,7 @@ export default function ServiceSection() {
                       <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1" />
                     </svg>
                   </span>
-                  <span>사업분야 보기</span>
+                  <span>{t("viewBusiness")}</span>
                   <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="transition-transform group-hover:translate-x-1">
                     <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1" />
                   </svg>

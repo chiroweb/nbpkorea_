@@ -1,21 +1,23 @@
 "use client";
 
 import { useInView } from "@/hooks/useInView";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 export default function RecruitSection() {
+  const t = useTranslations("home.partners");
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   const partners = [
-    { title: "MIDCO International", type: "USA / 기술제휴 파트너", since: "2007" },
-    { title: "ECOSTAR", type: "Turkey / 기술 파트너", since: "2013" },
-    { title: "한화오션", type: "조선/해양 분야" },
-    { title: "HD현대미포", type: "조선/해양 분야" },
-    { title: "BMW", type: "자동차 분야" },
-    { title: "POSCO", type: "중공업/소재 분야" },
+    { title: "MIDCO International", type: t("midcoType"), since: "2007" },
+    { title: "ECOSTAR", type: t("ecostarType"), since: "2013" },
+    { title: "한화오션", type: t("hanwhaType") },
+    { title: "HD현대미포", type: t("hdType") },
+    { title: "BMW", type: t("bmwType") },
+    { title: "POSCO", type: t("poscoType") },
   ];
 
   return (
@@ -29,16 +31,16 @@ export default function RecruitSection() {
             }`}
           >
             <div className="relative aspect-square overflow-hidden bg-[#DCE2E8]">
-              <Image src={`${S3}/images/intro4.JPG`} alt="MIDCO 파트너 현장" fill className="object-cover" />
+              <Image src={`${S3}/images/intro4.JPG`} alt="MIDCO Partner Site" fill className="object-cover" />
             </div>
             <div className="relative aspect-square mt-8 overflow-hidden bg-[#DCE2E8]">
-              <Image src={`${S3}/images/into3.jpg`} alt="ECOSTAR 파트너 현장" fill className="object-cover" />
+              <Image src={`${S3}/images/into3.jpg`} alt="ECOSTAR Partner Site" fill className="object-cover" />
             </div>
             <div className="relative aspect-square -mt-8 overflow-hidden bg-[#DCE2E8]">
-              <Image src={`${S3}/assets/industry1.png`} alt="조선 현장" fill className="object-cover" />
+              <Image src={`${S3}/assets/industry1.png`} alt="Shipbuilding Site" fill className="object-cover" />
             </div>
             <div className="relative aspect-square overflow-hidden bg-[#DCE2E8]">
-              <Image src={`${S3}/assets/industry2.png`} alt="자동차 현장" fill className="object-cover" />
+              <Image src={`${S3}/assets/industry2.png`} alt="Automotive Site" fill className="object-cover" />
             </div>
           </div>
 
@@ -52,8 +54,7 @@ export default function RecruitSection() {
             <h2 className="section-title mb-8">TRUSTED BY</h2>
 
             <p className="text-sm leading-[2] text-[#888480] mb-8">
-              국내외 80여 주요 기업이 NBPKOREA의 기술력을 신뢰합니다.
-              글로벌 파트너십과 현장 검증된 기술로 산업 현장의 요구에 응답합니다.
+              {t("description")}
             </p>
 
             <div className="border-t border-[#C8D0DA] mb-8">
@@ -79,7 +80,7 @@ export default function RecruitSection() {
                   <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1"/>
                 </svg>
               </span>
-              <span>주요 고객사 보기</span>
+              <span>{t("viewClients")}</span>
               <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="transition-transform group-hover:translate-x-1">
                 <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/>
               </svg>

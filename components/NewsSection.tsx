@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { useInView } from "@/hooks/useInView";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { News } from "@/lib/types";
 

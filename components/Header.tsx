@@ -1,10 +1,13 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function Header() {
+  const t = useTranslations("common.nav");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
   const lastScrollY = useRef(0);
@@ -25,16 +28,12 @@ export default function Header() {
   }, []);
 
   const navItems = [
-    { label: "회사소개", href: "/about" },
-    { label: "사업분야", href: "/business" },
-    { label: "제품/솔루션", href: "/products" },
-    { label: "기술/R&D", href: "/technology" },
-    { label: "NBP/NEWS", href: "/news" },
-    { label: "고객센터", href: "/support" },
-  ];
-
-  const externalLinks = [
-    { label: "문의하기", href: "/support" },
+    { label: t("about"), href: "/about" },
+    { label: t("business"), href: "/business" },
+    { label: t("products"), href: "/products" },
+    { label: t("technology"), href: "/technology" },
+    { label: t("news"), href: "/news" },
+    { label: t("support"), href: "/support" },
   ];
 
   return (
@@ -56,7 +55,7 @@ export default function Header() {
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
               <Link
-                key={item.label}
+                key={item.href}
                 href={item.href}
                 className="text-sm tracking-[0.12em] uppercase hover:opacity-60 transition-opacity"
               >
@@ -65,20 +64,18 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* External Links */}
+          {/* Right side: Language Switcher + Contact */}
           <div className="hidden lg:flex items-center gap-6">
-            {externalLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-4 py-2 hover:bg-[#C05010] hover:text-[#F5F7F8] transition-all"
-              >
-                {link.label}
-                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="opacity-60">
-                  <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
-                </svg>
-              </Link>
-            ))}
+            <LanguageSwitcher />
+            <Link
+              href="/support"
+              className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-4 py-2 hover:bg-[#C05010] hover:text-[#F5F7F8] transition-all"
+            >
+              {t("contact")}
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="opacity-60">
+                <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
+              </svg>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,7 +94,7 @@ export default function Header() {
           <nav className="flex flex-col gap-4 px-6 py-6 border-t border-[#C8D0DA]">
             {navItems.map((item) => (
               <Link
-                key={item.label}
+                key={item.href}
                 href={item.href}
                 onClick={() => setIsMenuOpen(false)}
                 className="text-sm tracking-[0.15em] uppercase"
@@ -106,18 +103,19 @@ export default function Header() {
               </Link>
             ))}
             <div className="h-px bg-[#C8D0DA] my-2" />
-            {externalLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="flex items-center gap-2 text-sm tracking-[0.15em] uppercase"
-              >
-                {link.label}
-                <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                  <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
-                </svg>
-              </Link>
-            ))}
+            <Link
+              href="/support"
+              onClick={() => setIsMenuOpen(false)}
+              className="flex items-center gap-2 text-sm tracking-[0.15em] uppercase"
+            >
+              {t("contact")}
+              <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
+                <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
+              </svg>
+            </Link>
+            <div className="pt-2">
+              <LanguageSwitcher />
+            </div>
           </nav>
         </div>
       </header>

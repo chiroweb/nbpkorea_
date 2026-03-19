@@ -1,26 +1,14 @@
 "use client";
 
-import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { Link } from "@/i18n/navigation";
+import { useRouter } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 const environmentSubs = [
   { id: "nk-cto", label: "NK-CTO", href: "/products/environment/nk-cto" },
   { id: "nk-rto", label: "NK-RTO", href: "/products/environment/nk-rto" },
   { id: "nk-rco", label: "NK-RCO", href: "/products/environment/nk-rco" },
   { id: "nk-to", label: "NK-TO", href: "/products/environment/nk-to" },
-];
-
-const combustionSubs = [
-  { id: "nkgh", label: "직접가열식", href: "/products/combustion/nkgh" },
-  { id: "nk-idgh", label: "간접가열식", href: "/products/combustion/nk-idgh" },
-  { id: "dehumidifier", label: "하이브리드 제습기", href: "/products/combustion/dehumidifier" },
-  { id: "paint-dryer", label: "도장 건조기", href: "/products/combustion/paint-dryer" },
-];
-
-const burnerSubs = [
-  { id: "duct-burner", label: "덕트버너", href: "/products/burner/duct-burner" },
-  { id: "line-burner", label: "라인버너", href: "/products/burner/line-burner" },
-  { id: "portable-burner", label: "이동버너", href: "/products/burner/portable-burner" },
 ];
 
 interface ProductNavProps {
@@ -34,11 +22,25 @@ interface ProductNavProps {
 
 export default function ProductNav({ activeTab, activeProduct, onTabChange }: ProductNavProps) {
   const router = useRouter();
+  const t = useTranslations("products");
 
   const mainTabs = [
-    { id: "environment", label: "환경설비" },
-    { id: "combustion", label: "연소설비" },
-    { id: "burner", label: "산업용 버너" },
+    { id: "environment", label: t("categories.environment") },
+    { id: "combustion", label: t("categories.combustion") },
+    { id: "burner", label: t("categories.burner") },
+  ];
+
+  const combustionSubs = [
+    { id: "nkgh", label: t("nav.directHeater"), href: "/products/combustion/nkgh" },
+    { id: "nk-idgh", label: t("nav.indirectHeater"), href: "/products/combustion/nk-idgh" },
+    { id: "dehumidifier", label: t("nav.dehumidifier"), href: "/products/combustion/dehumidifier" },
+    { id: "paint-dryer", label: t("nav.paintDryer"), href: "/products/combustion/paint-dryer" },
+  ];
+
+  const burnerSubs = [
+    { id: "duct-burner", label: t("nav.ductBurner"), href: "/products/burner/duct-burner" },
+    { id: "line-burner", label: t("nav.lineBurner"), href: "/products/burner/line-burner" },
+    { id: "portable-burner", label: t("nav.portableBurner"), href: "/products/burner/portable-burner" },
   ];
 
   function handleMainTabClick(tabId: string) {

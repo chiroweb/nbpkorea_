@@ -1,16 +1,18 @@
 "use client";
 
 import { useInView } from "@/hooks/useInView";
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function IRSection() {
+  const t = useTranslations("home.contact");
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   const inquiryTypes = [
-    { title: "제품 상담", subtitle: "Product", desc: "환경설비·연소설비 제품 문의", href: "/support" },
-    { title: "견적 요청", subtitle: "Quote", desc: "현장 맞춤 설비 설계 및 견적", href: "/support" },
-    { title: "A/S 문의", subtitle: "After Service", desc: "유지보수·긴급 출동 요청", href: "/support" },
-    { title: "방문 상담", subtitle: "Visit", desc: "안산 본사 방문 상담 예약", href: "/support" },
+    { title: t("productConsult"), subtitle: "Product", desc: t("productDesc"), href: "/support" },
+    { title: t("quoteRequest"), subtitle: "Quote", desc: t("quoteDesc"), href: "/support" },
+    { title: t("asInquiry"), subtitle: "After Service", desc: t("asDesc"), href: "/support" },
+    { title: t("visitConsult"), subtitle: "Visit", desc: t("visitDesc"), href: "/support" },
   ];
 
   return (
@@ -23,7 +25,7 @@ export default function IRSection() {
           }`}
         >
           <span className="section-label block mb-4">Contact</span>
-          <h2 className="section-title">문의하기</h2>
+          <h2 className="section-title">{t("title")}</h2>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 md:gap-16">
@@ -35,9 +37,9 @@ export default function IRSection() {
           >
             <div className="border-t border-[#2d2a28]/20">
               {[
-                { label: "대표전화", value: "031-434-6566~7", sub: "평일 09:00 - 18:00" },
-                { label: "이메일", value: "NBPKOREA@NBPKOREA.co.kr", sub: "영업일 기준 24시간 이내 회신" },
-                { label: "주소", value: "경기도 안산시 단원구 엠티브이로 8길 22", sub: "" },
+                { label: t("phone"), value: "031-434-6566~7", sub: t("phoneHours") },
+                { label: t("email"), value: "NBPKOREA@NBPKOREA.co.kr", sub: t("emailReply") },
+                { label: t("address"), value: t("addressValue"), sub: "" },
               ].map((item) => (
                 <div
                   key={item.label}
@@ -58,7 +60,7 @@ export default function IRSection() {
                   <path d="M1 7L7 1M7 1H2M7 1V6" stroke="currentColor" strokeWidth="1"/>
                 </svg>
               </span>
-              <span>온라인 문의하기</span>
+              <span>{t("onlineInquiry")}</span>
               <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="transition-transform group-hover:translate-x-1">
                 <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/>
               </svg>
