@@ -128,16 +128,27 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
         />
       </div>
 
-      {/* Skip button — bottom-right, orange background */}
+      {/* Skip button — bottom-right, same circular style as ScrollToTop */}
       <button
         onClick={handleSkip}
-        className="absolute bottom-8 right-8 flex items-center gap-2 px-5 py-3 bg-[#C05010] text-white text-sm font-medium rounded-sm hover:bg-[#a04010] transition-colors duration-200"
         aria-label="인트로 건너뛰기"
+        className="absolute bottom-10 right-10 z-50 w-[100px] h-[100px] group hover:opacity-70 transition-opacity duration-300"
       >
-        <span>건너뛰기</span>
-        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
+        {/* Rotating text ring */}
+        <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full animate-spin-slow">
+          <defs>
+            <path id="skipTextCircle" d="M 50,50 m -36,0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0" />
+          </defs>
+          <text fill="#C05010" fontSize="10.5" letterSpacing="3.2" fontFamily="Roboto, sans-serif" fontWeight="500">
+            <textPath href="#skipTextCircle">NBPKOREA · NBPKOREA · </textPath>
+          </text>
         </svg>
+        {/* Center right arrow */}
+        <div className="absolute inset-[22px] rounded-full flex items-center justify-center">
+          <svg width="22" height="22" viewBox="0 0 14 14" fill="none" className="text-[#C05010]">
+            <path d="M3 7h8M7 3l4 4-4 4" stroke="currentColor" strokeWidth="1.3" strokeLinecap="round" strokeLinejoin="round" />
+          </svg>
+        </div>
       </button>
     </div>
   );

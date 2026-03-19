@@ -33,7 +33,7 @@ export default function ScrollToTop() {
           />
         </defs>
         <text
-          fill="#2d2a28"
+          fill="#C05010"
           fontSize="10.5"
           letterSpacing="3.2"
           fontFamily="Roboto, sans-serif"
@@ -50,7 +50,7 @@ export default function ScrollToTop() {
           height="22"
           viewBox="0 0 14 14"
           fill="none"
-          className="text-[#2d2a28] transition-colors duration-300"
+          className="text-[#C05010] transition-colors duration-300"
         >
           <path
             d="M7 11V3M3 7L7 3L11 7"
