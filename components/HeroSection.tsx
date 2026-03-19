@@ -9,6 +9,7 @@ const slides = [
   { label: "NBPKOREA Industrial Site 1", src: `${S3}/videos/hero1.mp4`, duration: 7000 },
   { label: "NBPKOREA Industrial Site 2", src: `${S3}/videos/hero2.mp4`, duration: 7000 },
   { label: "NBPKOREA Environmental Systems", src: `${S3}/videos/hero3.mp4`, duration: 8000 },
+  { label: "NBPKOREA Industrial Site 5", src: `${S3}/videos/hero5.mp4`, duration: 7000 },
 ];
 
 interface HeroSectionProps {

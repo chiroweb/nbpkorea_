@@ -10,10 +10,9 @@ export default function CompanySection() {
   const { ref, isInView } = useInView({ threshold: 0.2 });
 
   return (
-    <section id="company" className="py-32 px-6 md:px-12" ref={ref}>
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          {/* Image */}
+    <section id="company" className="py-32 overflow-hidden" ref={ref}>
+      <div className="grid md:grid-cols-2 items-center">
+          {/* Image — bleeds to left edge, right mask (aspect-ratio clip) preserved */}
           <div
             className={`transition-all duration-1000 ${
               isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
@@ -31,7 +30,7 @@ export default function CompanySection() {
 
           {/* Content */}
           <div
-            className={`transition-all duration-1000 delay-300 ${
+            className={`px-6 md:px-12 transition-all duration-1000 delay-300 ${
               isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >
@@ -56,7 +55,6 @@ export default function CompanySection() {
               </svg>
             </Link>
           </div>
-        </div>
       </div>
     </section>
   );
