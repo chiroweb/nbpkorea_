@@ -24,30 +24,10 @@ export default function RecruitSection() {
     <section id="partners" className="py-32 px-6 md:px-12" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          {/* Image Grid */}
-          <div
-            className={`grid grid-cols-2 gap-4 transition-all duration-1000 ${
-              isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-            }`}
-          >
-            <div className="relative aspect-square overflow-hidden bg-[#DCE2E8]">
-              <Image src={`${S3}/images/intro4.JPG`} alt="MIDCO Partner Site" fill className="object-cover" />
-            </div>
-            <div className="relative aspect-square mt-8 overflow-hidden bg-[#DCE2E8]">
-              <Image src={`${S3}/images/into3.jpg`} alt="ECOSTAR Partner Site" fill className="object-cover" />
-            </div>
-            <div className="relative aspect-square -mt-8 overflow-hidden bg-[#DCE2E8]">
-              <Image src={`${S3}/assets/industry1.png`} alt="Shipbuilding Site" fill className="object-cover" />
-            </div>
-            <div className="relative aspect-square overflow-hidden bg-[#DCE2E8]">
-              <Image src={`${S3}/assets/industry2.png`} alt="Automotive Site" fill className="object-cover" />
-            </div>
-          </div>
-
           {/* Content */}
           <div
-            className={`transition-all duration-1000 delay-300 ${
-              isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+            className={`transition-all duration-1000 ${
+              isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
             <span className="section-label block mb-4">Partners</span>
@@ -85,6 +65,17 @@ export default function RecruitSection() {
                 <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/>
               </svg>
             </Link>
+          </div>
+
+          {/* MIDCO Image */}
+          <div
+            className={`transition-all duration-1000 delay-300 ${
+              isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
+            }`}
+          >
+            <div className="relative aspect-[4/5] w-full overflow-hidden bg-[#DCE2E8]">
+              <Image src={`${S3}/images/intro4.JPG`} alt="MIDCO Partner Site" fill className="object-cover" />
+            </div>
           </div>
         </div>
       </div>

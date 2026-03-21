@@ -67,10 +67,10 @@ export default function PortableBurnerPage() {
               Industrial Burner · Portable Burner
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
-              이동버너<br />(Portable Burner)
+              메탈버너<br />(Portable Burner)
             </h2>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
-              NBPKOREA 이동버너는 고정 설비 없이 현장에 직접 투입하여 즉시 운전할 수 있는 이동형 산업용 버너입니다. 조선소 블록 내부 가열, 건설 현장 콘크리트 양생, 선박 탱크 건조 등 일시적·이동성이 필요한 현장에 최적화되어 있습니다.
+              NBPKOREA 메탈버너는 고정 설비 없이 현장에 직접 투입하여 즉시 운전할 수 있는 이동형 산업용 버너입니다. 조선소 블록 내부 가열, 건설 현장 콘크리트 양생, 선박 탱크 건조 등 일시적·이동성이 필요한 현장에 최적화되어 있습니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
               MIDCO International(미국) 기술 기반의 2단 연소 방식으로 NOₓ·CO 배출을 최소화하며, 노즐 교체 없이 Natural Gas / Propane / Butane 가스를 모두 사용할 수 있습니다. 독립 운전 구성으로 현장 가스 공급만으로 즉시 가동됩니다.
@@ -88,14 +88,14 @@ export default function PortableBurnerPage() {
               <div className="relative aspect-[4/3] overflow-hidden bg-[#DCE2E8]">
                 <Image
                   src={`${S3}/images/burner/portable-40man.png`}
-                  alt="이동버너 패키지"
+                  alt="메탈버너 패키지"
                   fill className="object-cover" priority
                 />
               </div>
               <div className="relative aspect-[4/3] overflow-hidden bg-[#1a1a1a]">
                 <Image
                   src={`${S3}/images/burner/field-photo.jpg`}
-                  alt="이동버너 현장 가동"
+                  alt="메탈버너 현장 가동"
                   fill className="object-cover opacity-90" priority
                 />
               </div>
@@ -107,7 +107,7 @@ export default function PortableBurnerPage() {
       {/* 주요 특성 */}
       <section className="px-6 md:px-12 py-12 bg-[#F2F4F7] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">이동버너 핵심 특성</p>
+          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">메탈버너 핵심 특성</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { icon: "→", label: "현장 즉시 투입", desc: "별도 공장 설비 불필요 — 현장 가스 연결 즉시 가동" },
@@ -146,7 +146,7 @@ export default function PortableBurnerPage() {
           <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">{t("common.specifications")}</p>
           <div className="border border-[#D4DAE2] bg-white p-6">
             <p className="text-sm text-[#8B95A1] leading-[2]">
-              이동버너는 현장 투입 목적·공간 조건·요구 열량에 따라 맞춤 설계·제작됩니다.<br />
+              메탈버너는 현장 투입 목적·공간 조건·요구 열량에 따라 맞춤 설계·제작됩니다.<br />
               <span className="text-[#2d2a28] font-medium">주문 제작 방식</span>으로 공급되므로, 구체적인 용량 및 치수는 엔지니어 상담을 통해 확정합니다.
             </p>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">

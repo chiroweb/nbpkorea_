@@ -308,9 +308,17 @@ export default function BusinessPage() {
       id: 2,
       title: t("combustion.title"),
       subtitle: "Combustion Division",
-      image: `${S3}/images/%EC%97%B0%EC%86%8C%EC%82%AC%EC%97%85%EB%B6%80/%EA%B7%B8%EB%A6%BC3.png`,
+      image: `${S3}/images/business-combustion-main.jpg`,
       description: t("combustion.description"),
       tags: ["가스히터", "금속버너", "제습기", "건조시스템"],
+    },
+    {
+      id: 3,
+      title: t("burner.title"),
+      subtitle: "Burner Division",
+      image: `${S3}/images/business-burner-main.jpg`,
+      description: t("burner.description"),
+      tags: ["NBP-MB", "NBP-SMB", "Low-NOx", "균등연소"],
     },
   ];
 

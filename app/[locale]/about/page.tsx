@@ -15,31 +15,17 @@ function CeoSection() {
 
   return (
     <section ref={ref} className="py-20 px-6 md:px-12">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
-          <div className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
-            <div className="relative aspect-[3/4] w-full overflow-hidden bg-[#DCE2E8]">
-              <Image src={`${S3}/images/CEO.jpeg`} alt="NBPKOREA CEO" fill className="object-cover object-top" />
-            </div>
-          </div>
-          <div className={`transition-all duration-1000 delay-300 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
-            <span className="section-label block mb-4">{t("label")}</span>
-            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-2">{t("title")}</h2>
-            <div className="w-12 h-px bg-[#C05010] mb-8" />
-            <p className="text-sm leading-[2.2] text-[#888480] mb-6">{t("p1")}</p>
-            <p className="text-sm leading-[2.2] text-[#888480] mb-6">
-              {t("p2Start")}<strong className="text-[#2d2a28] font-medium">{t("p2Trust")}</strong>{t("p2End")}
-            </p>
-            <p className="text-sm leading-[2.2] text-[#888480] mb-6">
-              {t("p3Start")}<strong className="text-[#2d2a28] font-medium">{t("p3Challenge")}</strong>{t("p3End")}
-            </p>
-            <p className="text-sm leading-[2.2] text-[#888480] mb-8">
-              {t("p4Start")}<strong className="text-[#2d2a28] font-medium">{t("p4Passion")}</strong>{t("p4End")}
-            </p>
-            <p className="text-base tracking-[0.1em] text-[#2d2a28]">
-              {t("signature")} <span className="font-medium">{t("ceoName")}</span>
-            </p>
-          </div>
+      <div className="max-w-4xl mx-auto">
+        <div className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <span className="section-label block mb-4">{t("label")}</span>
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-2">{t("title")}</h2>
+          <div className="w-12 h-px bg-[#C05010] mb-10" />
+          <p className="text-sm leading-[2.2] text-[#888480] mb-6">{t("p1")}</p>
+          <p className="text-sm leading-[2.2] text-[#888480] mb-6">{t("p2")}</p>
+          <p className="text-sm leading-[2.2] text-[#888480] mb-10">{t("p3")}</p>
+          <p className="text-base tracking-[0.1em] text-[#2d2a28]">
+            {t("signature")} <span className="font-medium">{t("ceoName")}</span>
+          </p>
         </div>
       </div>
     </section>
@@ -354,8 +340,16 @@ function CISection() {
           <span className="section-label block mb-4">CI</span>
           <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">{t("title")}</h2>
         </div>
-        <div className={`border border-dashed border-[#D4DAE2] flex items-center justify-center py-24 transition-all duration-1000 delay-300 ${isInView ? "opacity-100" : "opacity-0"}`}>
-          <p className="placeholder-box text-[#C8D0DA] tracking-[0.2em] text-sm uppercase">{t("comingSoon")}</p>
+        <div className={`flex items-center justify-center py-16 transition-all duration-1000 delay-300 ${isInView ? "opacity-100" : "opacity-0"}`}>
+          <div className="relative w-full max-w-3xl">
+            <Image
+              src={`${S3}/images/nbpkorea-ci.png`}
+              alt="NBPKOREA CI"
+              width={900}
+              height={400}
+              className="w-full h-auto object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>

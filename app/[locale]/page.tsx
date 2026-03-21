@@ -52,10 +52,10 @@ export default function Home() {
           </div>
           <div ref={contentRef} className="relative z-10 bg-[#F5F7F8]">
             <CompanySection />
-            <NewsSection />
             <ServiceSection />
             <HistorySection />
             <RecruitSection />
+            <NewsSection />
             <IRSection />
           </div>
         </main>

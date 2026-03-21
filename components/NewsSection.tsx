@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
-import Image from "next/image";
 import { News } from "@/lib/types";
 
 export default function NewsSection() {
@@ -14,7 +13,7 @@ export default function NewsSection() {
     fetch("/api/news")
       .then((r) => r.json())
       .then((data: News[]) => {
-        if (Array.isArray(data)) setNewsItems(data.slice(0, 3));
+        if (Array.isArray(data)) setNewsItems(data.slice(0, 5));
       })
       .catch(() => {});
   }, []);
@@ -30,7 +29,7 @@ export default function NewsSection() {
         >
           <div>
             <span className="section-label block mb-4">News</span>
-            <h2 className="section-title">LATEST NEWS</h2>
+            <h2 className="section-title">NBP NEWS</h2>
           </div>
 
           <Link href="/news" className="btn-link group mt-6 md:mt-0">
@@ -46,38 +45,31 @@ export default function NewsSection() {
           </Link>
         </div>
 
-        {/* News Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* News List */}
+        <div className="border-t border-[#C8D0DA]">
           {newsItems.map((item, index) => (
             <Link
               key={item.id}
               href={`/news/${item.slug}`}
-              className={`group transition-all duration-1000 ${
-                isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+              className={`group flex items-center justify-between py-6 border-b border-[#C8D0DA] transition-all duration-700 hover:opacity-60 ${
+                isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
               }`}
-              style={{ transitionDelay: `${index * 150}ms` }}
+              style={{ transitionDelay: `${index * 80}ms` }}
             >
-              {/* Image */}
-              <div className="relative aspect-[16/10] mb-6 overflow-hidden bg-[#DCE2E8]">
-                <Image
-                  src={item.image_url}
-                  alt={item.title}
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-
-              {/* Content */}
-              <div className="flex items-center gap-4 mb-3">
-                <span className="text-[13px] tracking-[0.15em] uppercase px-3 py-1 border border-[#C8D0DA]">
+              <div className="flex items-center gap-6 min-w-0">
+                <span className="text-[13px] tracking-[0.15em] uppercase text-[#888480] flex-shrink-0">
                   {item.category}
                 </span>
-                <span className="text-xs text-[#888480]">{item.date}</span>
+                <span className="text-sm tracking-[0.04em] text-[#2d2a28] truncate">
+                  {item.title}
+                </span>
               </div>
-
-              <h3 className="text-base tracking-[0.05em] group-hover:opacity-60 transition-opacity">
-                {item.title}
-              </h3>
+              <div className="flex items-center gap-6 flex-shrink-0 ml-8">
+                <span className="text-xs text-[#888480] hidden md:block">{item.date}</span>
+                <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="text-[#C8D0DA] transition-transform group-hover:translate-x-1 group-hover:text-[#C05010]">
+                  <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1" />
+                </svg>
+              </div>
             </Link>
           ))}
         </div>

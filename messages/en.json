@@ -281,7 +281,11 @@
       "partners": "Global Partners",
       "partnersSub": "USA · Turkey"
     },
-    "clientsTitle": "Major Clients"
+    "clientsTitle": "Major Clients",
+    "burner": {
+      "title": "Industrial Burner Division",
+      "description": "NBPKOREA's proprietary metal fiber burners (NBP-MB · NBP-SMB) maximize energy efficiency through uniform combustion and infrared radiant heat while dramatically reducing NOx emissions. The compact metal burner saves installation space with its space-saving design and enables easy maintenance. Applicable to all equipment requiring high-temperature combustion including industrial boilers, incinerators, drying ovens, thermal oil boilers, power plants, and petrochemical plants."
+    }
   },
   "products": {
     "title": "PRODUCTS & SOLUTIONS",
