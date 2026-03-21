@@ -1,7 +1,79 @@
 {
   "metadata": {
     "title": "NBPKOREA | Industrial Combustion & Environmental Equipment",
-    "description": "NBPKOREA, established in 2006, is a specialist in industrial combustion equipment and environmental systems. We design, manufacture, and install high-efficiency solutions including metal fiber burners, environmental systems (CTO, RTO, RCO), and industrial gas heaters."
+    "description": "NBPKOREA, established in 2006, is a specialist in industrial combustion equipment and environmental systems. We design, manufacture, and install high-efficiency solutions including metal fiber burners, environmental systems (CTO, RTO, RCO), and industrial gas heaters.",
+    "home": {
+      "title": "NBPKOREA | Industrial Combustion & Environmental Equipment",
+      "description": "Specialists in industrial combustion and environmental systems. Metal fiber burners, CTO, RTO, RCO high-efficiency solutions. Est. 2006, trusted by 80+ major companies."
+    },
+    "about": {
+      "title": "About Us | NBPKOREA",
+      "description": "NBPKOREA, founded in Ansan, Korea in 2006. 19 registered patents, global partnerships in USA & Turkey, solutions delivered to 80+ major enterprises."
+    },
+    "business": {
+      "title": "Business Areas | NBPKOREA",
+      "description": "NBPKOREA's three core business areas: Environmental Systems (CTO, RTO, RCO, TO), Combustion Systems (gas heaters, dehumidifiers, paint dryers), Industrial Burners."
+    },
+    "products": {
+      "title": "Products & Solutions | NBPKOREA",
+      "description": "Full NBPKOREA product lineup: NK-CTO, NK-RTO, NK-RCO, NK-TO oxidizers, NKGH gas heaters, NK-IDGH, metal fiber burners and more."
+    },
+    "technology": {
+      "title": "Technology & R&D | NBPKOREA",
+      "description": "NBPKOREA's core technologies: metal fiber burners and compact metal heaters. 19 registered patents, KOITA-certified corporate R&D center."
+    },
+    "news": {
+      "title": "NBP NEWS | NBPKOREA",
+      "description": "Stay updated with NBPKOREA's latest news, technology insights, product announcements, partnerships, and press coverage."
+    },
+    "support": {
+      "title": "Support | NBPKOREA",
+      "description": "NBPKOREA customer support. Product consultation, quote requests, after-service, visit scheduling. Call 031-434-6566, weekdays 09:00-18:00."
+    },
+    "nkCto": {
+      "title": "NK-CTO Catalytic Thermal Oxidizer | NBPKOREA",
+      "description": "NK-CTO neutralizes VOCs and odors at low temperatures using catalysts. Minimizes NOx formation. Ideal for semiconductor, painting, chemical, and food industries."
+    },
+    "nkRto": {
+      "title": "NK-RTO Regenerative Thermal Oxidizer | NBPKOREA",
+      "description": "NK-RTO recovers combustion heat through regenerative media. 99%+ thermal efficiency, energy-saving VOC treatment system."
+    },
+    "nkRco": {
+      "title": "NK-RCO Regenerative Catalytic Oxidizer | NBPKOREA",
+      "description": "NK-RCO combines regenerative heat recovery with catalytic combustion for high-efficiency VOC treatment at lower operating temperatures."
+    },
+    "nkTo": {
+      "title": "NK-TO Direct-Fired Thermal Oxidizer | NBPKOREA",
+      "description": "NK-TO treats VOCs via high-temperature direct combustion. Optimized for high-concentration, high-volume exhaust gas processing."
+    },
+    "nkgh": {
+      "title": "NKGH Direct-Fired Gas Heater | NBPKOREA",
+      "description": "NKGH Series direct-fired gas heaters, 25,000–1,000,000 kcal/h. Optimal for automotive paint booths, shipyard block shops, and warehouses."
+    },
+    "nkIdgh": {
+      "title": "NK-IDGH Indirect Gas Heater | NBPKOREA",
+      "description": "NK-IDGH provides indirect heating via heat exchanger. Suitable for clean-environment workplaces."
+    },
+    "dehumidifier": {
+      "title": "Hybrid Dehumidifier | NBPKOREA",
+      "description": "NBPKOREA hybrid dehumidifier combining combustion and cooling methods for high-efficiency industrial dehumidification."
+    },
+    "paintDryer": {
+      "title": "Vehicle Paint Dryer | NBPKOREA",
+      "description": "NBPKOREA vehicle paint dryer — high-efficiency drying system for automotive paint booths."
+    },
+    "ductBurner": {
+      "title": "Duct Burner | NBPKOREA",
+      "description": "NBPKOREA duct burner — high-efficiency industrial burner installed directly inside exhaust ducts."
+    },
+    "lineBurner": {
+      "title": "Line Burner | NBPKOREA",
+      "description": "NBPKOREA line burner — metal fiber line burner maximizing energy efficiency through uniform combustion."
+    },
+    "portableBurner": {
+      "title": "Portable Burner | NBPKOREA",
+      "description": "NBPKOREA portable burner — compact, mobile industrial burner with easy-install design."
+    }
   },
   "common": {
     "nav": {
