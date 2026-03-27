@@ -184,7 +184,7 @@ function ProductsPageInner() {
       title: t("hvac.directAhu.subtitle"),
       subtitle: "Direct-Fired AHU",
       href: "/products/hvac/direct-ahu",
-      image: `${S3}/images/hvac/direct-ahu-main.jpg`,
+      image: `${S3}/images/hvac/direct-ahu-thumb.jpg`,
       description: t("hvac.directAhu.description"),
       tags: ["직화식", "공조"],
     },

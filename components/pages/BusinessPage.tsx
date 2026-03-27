@@ -405,7 +405,7 @@ export default function BusinessPage() {
       subtitle: "Combustion Division",
       image: `${S3}/images/combustion-main.jpeg`,
       description: t("combustion.description"),
-      tags: ["가스히터", "금속버너", "제습기", "건조시스템"],
+      tags: ["가스히터", "공조기", "건조시스템"],
       marketShare: "80%",
       applications: ["조선소 선박 도장", "자동차 도장 건조", "각종 플랜트", "공기조화", "건조 설비", "소각 처리"],
     },

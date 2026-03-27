@@ -17,7 +17,7 @@ export default function DirectAhuPage() {
       titleKo="직화식 공조기"
       titleEn="Direct-Fired Air Handling Unit"
       description={t("hvac.directAhu.description")}
-      image="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/hvac/direct-ahu-main.jpg"
+      image="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/hvac/direct-ahu-thumb.jpg"
       tags={["직화식", "고효율", "공조"]}
       ctaTitleKey="직화식 공조기 도입을 검토 중이신가요?"
       ctaDescKey="현장 조건에 맞는 최적 사양을 제안해 드립니다."
