@@ -56,13 +56,28 @@ export default function PerformanceForm({ initial, id }: Props) {
     sort_order: initial?.sort_order ?? 0,
   });
   const [tags, setTags] = useState<string[]>(initial?.tags ?? []);
-  const [images, setImages] = useState<string[]>(initial?.images ?? ["", "", ""]);
+  const [images, setImages] = useState<string[]>(
+    (initial?.images ?? ["", "", ""]).map((url) => url.replace(/#rotate=\d+/, ""))
+  );
   const [specs, setSpecs] = useState<PerformanceSpec[]>(
     initial?.specs ?? [{ label: "", value: "" }]
   );
+  // 기존 이미지 URL에서 회전값 파싱
+  const [rotations, setRotations] = useState<Record<number, number>>(() => {
+    const rots: Record<number, number> = {};
+    (initial?.images ?? []).forEach((url, i) => {
+      const match = url.match(/#rotate=(\d+)/);
+      if (match) rots[i] = Number(match[1]);
+    });
+    return rots;
+  });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [tagDropdownOpen, setTagDropdownOpen] = useState(false);
+
+  function rotateImage(idx: number) {
+    setRotations((prev) => ({ ...prev, [idx]: ((prev[idx] ?? 0) + 90) % 360 }));
+  }
 
   const availableTags = TAG_PRESETS[form.category] ?? [];
 
@@ -97,10 +112,19 @@ export default function PerformanceForm({ initial, id }: Props) {
     setLoading(true);
     setError("");
 
+    // 회전값이 있으면 URL 해시에 추가
+    const processedImages = images
+      .filter((u) => u.trim())
+      .map((url, i) => {
+        const rot = rotations[i] ?? 0;
+        const cleanUrl = url.replace(/#rotate=\d+/, "");
+        return rot > 0 ? `${cleanUrl}#rotate=${rot}` : cleanUrl;
+      });
+
     const payload = {
       ...form,
       tags,
-      images: images.filter((u) => u.trim()),
+      images: processedImages,
       specs: specs.filter((s) => s.label.trim()),
     };
 
@@ -279,26 +303,37 @@ export default function PerformanceForm({ initial, id }: Props) {
                   placeholder={`이미지 ${i + 1} URL`}
                 />
                 {url.trim() && (
-                  <img
-                    src={url}
-                    alt={`미리보기 ${i + 1}`}
-                    className="w-32 h-20 object-cover border border-[#D4DAE2]"
-                    style={{ imageOrientation: "from-image" }}
-                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-                  />
+                  <div className="flex items-start gap-2">
+                    <img
+                      src={url}
+                      alt={`미리보기 ${i + 1}`}
+                      className="w-32 h-32 object-cover border border-[#D4DAE2]"
+                      style={{ transform: `rotate(${rotations[i] ?? 0}deg)`, imageOrientation: "from-image" }}
+                      onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                    />
+                    <div className="flex flex-col gap-1">
+                      <button
+                        type="button"
+                        onClick={() => rotateImage(i)}
+                        className="text-xs text-[#888480] hover:text-[#C05010] px-2 py-1.5 border border-[#D4DAE2] hover:border-[#C05010] transition-colors"
+                        title="90° 회전"
+                      >
+                        ↻ 회전
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setImages((prev) => prev.filter((_, idx) => idx !== i));
+                          setRotations((prev) => { const n = { ...prev }; delete n[i]; return n; });
+                        }}
+                        className="text-xs text-red-400 hover:text-red-600 px-2 py-1.5 border border-red-200 hover:border-red-400 transition-colors"
+                      >
+                        삭제
+                      </button>
+                    </div>
+                  </div>
                 )}
               </div>
-              {url.trim() && (
-                <button
-                  type="button"
-                  onClick={() => {
-                    setImages((prev) => prev.filter((_, idx) => idx !== i));
-                  }}
-                  className="text-xs text-red-400 hover:text-red-600 px-2 py-2 border border-red-200 hover:border-red-400 transition-colors mt-1"
-                >
-                  삭제
-                </button>
-              )}
             </div>
           ))}
         </div>

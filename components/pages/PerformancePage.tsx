@@ -14,6 +14,11 @@ const TABS = [
   { id: "burner", label: "산업용 버너", en: "Industrial Burners" },
 ];
 
+function parseImageUrl(url: string): { src: string; rotate: number } {
+  const match = url.match(/#rotate=(\d+)/);
+  return { src: url.replace(/#rotate=\d+/, ""), rotate: match ? Number(match[1]) : 0 };
+}
+
 function PerformanceCard({ item }: { item: Performance }) {
   const [activeImg, setActiveImg] = useState(0);
   const images = item.images?.length ? item.images : [];
@@ -45,12 +50,18 @@ function PerformanceCard({ item }: { item: Performance }) {
           {images.length > 0 ? (
             <>
               <div className="relative aspect-[4/3] bg-[#F2F4F7] overflow-hidden mb-2">
-                <Image
-                  src={images[activeImg] ?? images[0]}
-                  alt={item.title}
-                  fill
-                  className="object-cover"
-                />
+                {(() => {
+                  const { src, rotate } = parseImageUrl(images[activeImg] ?? images[0]);
+                  return (
+                    <Image
+                      src={src}
+                      alt={item.title}
+                      fill
+                      className="object-cover"
+                      style={rotate ? { transform: `rotate(${rotate}deg)`, transformOrigin: "center" } : undefined}
+                    />
+                  );
+                })()}
               </div>
               {images.length > 1 && (
                 <div className="flex gap-1.5">
@@ -62,7 +73,10 @@ function PerformanceCard({ item }: { item: Performance }) {
                         activeImg === i ? "border-[#C05010]" : "border-[#D4DAE2]"
                       }`}
                     >
-                      <Image src={img} alt={`${item.title} ${i + 1}`} fill className="object-cover" />
+                      {(() => {
+                        const { src, rotate } = parseImageUrl(img);
+                        return <Image src={src} alt={`${item.title} ${i + 1}`} fill className="object-cover" style={rotate ? { transform: `rotate(${rotate}deg)` } : undefined} />;
+                      })()}
                     </button>
                   ))}
                 </div>
