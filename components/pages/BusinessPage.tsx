@@ -288,22 +288,14 @@ function StatsSection() {
 
 function FieldGallerySection() {
   const { ref, isInView } = useInView({ threshold: 0.15 });
-  const G = `${S3}/images/field-gallery`;
+  const G = `${S3}/images/field-gallery-en`;
 
-  const row1 = [
-    "그림5.jpg","그림6.png","그림7.jpg","그림8.jpg","그림9.jpg","그림10.jpg","그림11.jpg",
-    "그림12.jpg","그림13.png","그림14.jpg","그림15.jpg","그림16.jpg","그림17.jpg","그림18.jpg",
-    "그림19.jpg","그림20.jpg","그림21.jpg","그림22.jpg","그림23.jpg","그림24.jpg","그림25.jpg",
-    "그림26.jpg","그림27.jpg","그림28.jpg","그림29.jpg","그림30.jpg","그림31.jpg","그림32.jpg",
-    "그림33.jpg","그림34.jpg","그림35.jpg",
+  const allFiles = [
+    ...Array.from({ length: 59 }, (_, i) => `field-${String(i + 1).padStart(2, "0")}.jpg`),
+    "field-60.png", "field-61.png", "field-62.png",
   ];
-  const row2 = [
-    "그림36.jpg","그림37.jpg","그림38.jpg","그림39.jpg","그림40.jpg","그림41.jpg","그림42.jpg",
-    "그림43.jpg","그림45.jpg","그림46.jpg","그림47.jpg","그림48.jpg","그림49.jpg","그림50.jpg",
-    "그림51.jpg","그림52.jpg","그림53.jpg","그림54.jpg","그림55.jpg","그림56.jpg","그림57.jpg",
-    "그림58.jpg","그림59.jpg","그림60.jpg","그림61.jpg","그림62.jpg","그림65.jpg","그림68.jpg",
-    "그림96.jpg","그림97.jpg",
-  ];
+  const row1 = allFiles.slice(0, 31);
+  const row2 = allFiles.slice(31);
 
   return (
     <section ref={ref} className="py-20 bg-white border-t border-[#D4DAE2] overflow-hidden">
