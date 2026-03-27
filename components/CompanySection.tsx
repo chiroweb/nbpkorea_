@@ -5,17 +5,18 @@ import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 const images = [
   {
-    src: "/images/company/building-1.jpg",
+    src: `${S3}/images/company/building-1.jpg`,
     alt: "NBPKOREA 신사옥 전경",
   },
   {
-    src: "/images/company/building-2.jpg",
+    src: `${S3}/images/company/building-2.jpg`,
     alt: "NBPKOREA 신사옥",
   },
   {
-    src: "/images/company/building-3.jpg",
+    src: `${S3}/images/company/building-3.jpg`,
     alt: "NBPKOREA 사옥",
   },
 ];

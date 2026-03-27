@@ -297,10 +297,10 @@ function FacilityGallerySection() {
   const { ref, isInView } = useInView({ threshold: 0.15 });
 
   const facilities = [
-    { title: "HQ Front View", subtitle: "Ansan MTV Headquarters", image: `/images/about/hq-front.jpg` },
+    { title: "HQ Front View", subtitle: "Ansan MTV Headquarters", image: `${S3}/images/about/hq-front.jpg` },
     { title: "HQ & Factory Wing", subtitle: "Office and production complex", image: `${S3}/images/about/hq-side.jpg` },
     { title: "Factory Entrance", subtitle: "Owner-operated production base", image: `${S3}/images/about/factory-front.jpg` },
-    { title: "Plant Platform", subtitle: "On-site engineering execution", image: `/images/about/plant-platform.jpg` },
+    { title: "Plant Platform", subtitle: "On-site engineering execution", image: `${S3}/images/about/plant-platform.jpg` },
   ];
 
   return (
