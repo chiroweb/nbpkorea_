@@ -288,45 +288,51 @@ function StatsSection() {
 
 function FieldGallerySection() {
   const { ref, isInView } = useInView({ threshold: 0.15 });
+  const G = `${S3}/images/field-gallery`;
 
-  const fields = [
-    { title: "Environmental System Installation", subtitle: "RTO / RCO site delivery", image: `${S3}/images/main-1.jpg` },
-    { title: "Process Layout Visualization", subtitle: "Multi-unit environmental system layout", image: `${S3}/images/environment-business.jpg` },
-    { title: "직화식 가스히터 설치", subtitle: "NKGH Series 현장 납품", image: `${S3}/images/applications/nkgh-installed.jpg` },
-    { title: "간접식 가스히터 현장", subtitle: "NK-IDGH Series 설치 현장", image: `${S3}/images/applications/nk-idgh-field.jpg` },
-    { title: "메탈버너 블루 플레임", subtitle: "금속화이버 버너 연소 현장", image: `${S3}/images/applications/burner-flame.jpg` },
-    { title: "산업용 버너 시스템", subtitle: "다연장 버너 라인 설치", image: `${S3}/images/applications/burner-system-line.jpg` },
-    { title: "가스 밸브 트레인", subtitle: "가스 배관 및 제어 시스템", image: `${S3}/images/burner/valve-train-main.jpg` },
-    { title: "NKGH 공장 출하", subtitle: "직화식 가스히터 제작 완료", image: `${S3}/images/applications/nkgh-factory.jpg` },
+  const row1 = [
+    "그림5.jpg","그림6.png","그림7.jpg","그림8.jpg","그림9.jpg","그림10.jpg","그림11.jpg",
+    "그림12.jpg","그림13.png","그림14.jpg","그림15.jpg","그림16.jpg","그림17.jpg","그림18.jpg",
+    "그림19.jpg","그림20.jpg","그림21.jpg","그림22.jpg","그림23.jpg","그림24.jpg","그림25.jpg",
+    "그림26.jpg","그림27.jpg","그림28.jpg","그림29.jpg","그림30.jpg","그림31.jpg","그림32.jpg",
+    "그림33.jpg","그림34.jpg","그림35.jpg",
+  ];
+  const row2 = [
+    "그림36.jpg","그림37.jpg","그림38.jpg","그림39.jpg","그림40.jpg","그림41.jpg","그림42.jpg",
+    "그림43.jpg","그림45.jpg","그림46.jpg","그림47.jpg","그림48.jpg","그림49.jpg","그림50.jpg",
+    "그림51.jpg","그림52.jpg","그림53.jpg","그림54.jpg","그림55.jpg","그림56.jpg","그림57.jpg",
+    "그림58.jpg","그림59.jpg","그림60.jpg","그림61.jpg","그림62.jpg","그림65.jpg","그림68.jpg",
+    "그림96.jpg","그림97.jpg",
   ];
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-white border-t border-[#D4DAE2]">
-      <div className="max-w-7xl mx-auto">
-        <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <span className="section-label block mb-4">Field Gallery</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">Installed Systems & Site Applications</h2>
+    <section ref={ref} className="py-20 bg-white border-t border-[#D4DAE2] overflow-hidden">
+      <div className="max-w-7xl mx-auto px-6 md:px-12">
+        <div className={`mb-12 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <span className="section-label block mb-4">현장 갤러리</span>
+          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">설치 현장 및 적용 사례</h2>
           <p className="text-sm text-[#888480] mt-4 max-w-3xl leading-[2]">
-            사업계획서와 납품 이력 자료에서 추출한 실제 설비 및 현장 이미지를 통해 NBPKOREA의 적용 범위와 실행 결과를 보여줍니다.
+            NBPKOREA가 설계·제작·시공한 실제 설비 및 현장 설치 사진입니다.
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-          {fields.map((field, index) => (
-            <div
-              key={field.title}
-              className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
-              style={{ transitionDelay: `${index * 80}ms` }}
-            >
-              <div className="relative aspect-square overflow-hidden bg-[#F2F4F7]">
-                <Image src={field.image} alt={field.title} fill className="object-cover hover:scale-105 transition-transform duration-500" />
-              </div>
-              <div className="px-2 py-3">
-                <p className="text-xs font-medium tracking-[0.04em] text-[#2d2a28]">{field.title}</p>
-                <p className="text-[11px] text-[#888480] mt-0.5">{field.subtitle}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+      </div>
+
+      {/* Row 1 → left */}
+      <div className="flex gap-3 animate-scroll-fast mb-3">
+        {[...row1, ...row1].map((img, i) => (
+          <div key={`r1-${i}`} className="flex-shrink-0 w-40 h-28 md:w-52 md:h-36 overflow-hidden bg-[#F2F4F7]">
+            <img src={`${G}/${encodeURIComponent(img)}`} alt="" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
+          </div>
+        ))}
+      </div>
+
+      {/* Row 2 → right */}
+      <div className="flex gap-3 animate-scroll-reverse-fast">
+        {[...row2, ...row2].map((img, i) => (
+          <div key={`r2-${i}`} className="flex-shrink-0 w-40 h-28 md:w-52 md:h-36 overflow-hidden bg-[#F2F4F7]">
+            <img src={`${G}/${encodeURIComponent(img)}`} alt="" className="w-full h-full object-cover hover:scale-110 transition-transform duration-500" loading="lazy" />
+          </div>
+        ))}
       </div>
     </section>
   );

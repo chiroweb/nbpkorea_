@@ -298,6 +298,14 @@ a:hover {
   animation: scroll-reverse 30s linear infinite;
 }
 
+.animate-scroll-fast {
+  animation: scroll 18s linear infinite;
+}
+
+.animate-scroll-reverse-fast {
+  animation: scroll-reverse 18s linear infinite;
+}
+
 @keyframes spin-slow {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
