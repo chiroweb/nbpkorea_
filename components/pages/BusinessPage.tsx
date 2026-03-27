@@ -296,7 +296,7 @@ function FieldGallerySection() {
     { title: "간접식 가스히터 현장", subtitle: "NK-IDGH Series 설치 현장", image: `${S3}/images/applications/nk-idgh-field.jpg` },
     { title: "메탈버너 블루 플레임", subtitle: "금속화이버 버너 연소 현장", image: `${S3}/images/applications/burner-flame.jpg` },
     { title: "산업용 버너 시스템", subtitle: "다연장 버너 라인 설치", image: `${S3}/images/applications/burner-system-line.jpg` },
-    { title: "가스 밸브 트레인", subtitle: "가스 배관 및 제어 시스템", image: `${S3}/images/applications/gas-piping.jpg` },
+    { title: "가스 밸브 트레인", subtitle: "가스 배관 및 제어 시스템", image: `${S3}/images/burner/valve-train-main.jpg` },
     { title: "NKGH 공장 출하", subtitle: "직화식 가스히터 제작 완료", image: `${S3}/images/applications/nkgh-factory.jpg` },
   ];
 
