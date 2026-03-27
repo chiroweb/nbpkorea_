@@ -1,0 +1,867 @@
+{
+  "metadata": {
+    "title": "NBPKOREA | Industrial Combustion & Environmental Equipment",
+    "description": "NBPKOREA, established in 2006, is a specialist in industrial combustion equipment and environmental systems. We design, manufacture, and install high-efficiency solutions including metal fiber burners, environmental systems (RTO, RCO, CTO), and industrial gas heaters.",
+    "home": {
+      "title": "NBPKOREA | Industrial Combustion & Environmental Equipment",
+      "description": "Specialists in industrial combustion and environmental systems. Metal fiber burners, RTO, RCO, CTO high-efficiency solutions. Est. 2006, trusted by 80+ major companies."
+    },
+    "about": {
+      "title": "About Us | NBPKOREA",
+      "description": "NBPKOREA, founded in Ansan, Korea in 2006. 17 registered patents, global partnerships in USA & Turkey, solutions delivered to 80+ major enterprises."
+    },
+    "business": {
+      "title": "Business Areas | NBPKOREA",
+      "description": "NBPKOREA's three core business areas: Environmental Systems (RTO, RCO, CTO, TO), Combustion Systems (gas heaters, dehumidifiers, paint dryers), Industrial Burners."
+    },
+    "products": {
+      "title": "Products & Solutions | NBPKOREA",
+      "description": "Full NBPKOREA product lineup: NK-RTO, NK-RCO, NK-CTO, NK-TO oxidizers, NKGH gas heaters, NK-IDGH, metal fiber burners and more."
+    },
+    "technology": {
+      "title": "Technology & R&D | NBPKOREA",
+      "description": "NBPKOREA's core technologies: metal fiber burners and compact metal heaters. 17 registered patents, KOITA-certified corporate R&D center."
+    },
+    "news": {
+      "title": "NBP NEWS | NBPKOREA",
+      "description": "Stay updated with NBPKOREA's latest news, technology insights, product announcements, partnerships, and press coverage."
+    },
+    "support": {
+      "title": "Support | NBPKOREA",
+      "description": "NBPKOREA customer support. Product consultation, quote requests, after-service, visit scheduling. Call 031-434-6566, weekdays 09:00-18:00."
+    },
+    "performance": {
+      "title": "Business Performance | NBPKOREA",
+      "description": "NBPKOREA's key business achievements and project delivery records."
+    },
+    "nkCto": {
+      "title": "NK-CTO Catalytic Thermal Oxidizer | NBPKOREA",
+      "description": "NK-CTO neutralizes VOCs and odors at low temperatures using catalysts. Minimizes NOx formation. Ideal for semiconductor, painting, chemical, and food industries."
+    },
+    "nkRto": {
+      "title": "NK-RTO Regenerative Thermal Oxidizer | NBPKOREA",
+      "description": "NK-RTO recovers combustion heat through regenerative media. 99%+ thermal efficiency, energy-saving VOC treatment system."
+    },
+    "nkRco": {
+      "title": "NK-RCO Regenerative Catalytic Oxidizer | NBPKOREA",
+      "description": "NK-RCO combines regenerative heat recovery with catalytic combustion for high-efficiency VOC treatment at lower operating temperatures."
+    },
+    "nkTo": {
+      "title": "NK-TO Direct-Fired Thermal Oxidizer | NBPKOREA",
+      "description": "NK-TO treats VOCs via high-temperature direct combustion. Optimized for high-concentration, high-volume exhaust gas processing."
+    },
+    "nkgh": {
+      "title": "NKGH Direct-Fired Gas Heater | NBPKOREA",
+      "description": "NKGH Series direct-fired gas heaters, 25,000–1,000,000 kcal/h. Optimal for automotive paint booths, shipyard block shops, and warehouses."
+    },
+    "nkIdgh": {
+      "title": "NK-IDGH Indirect Gas Heater | NBPKOREA",
+      "description": "NK-IDGH provides indirect heating via heat exchanger. Suitable for clean-environment workplaces."
+    },
+    "dehumidifier": {
+      "title": "Hybrid Dehumidifier | NBPKOREA",
+      "description": "NBPKOREA hybrid dehumidifier combining combustion and cooling methods for high-efficiency industrial dehumidification."
+    },
+    "paintDryer": {
+      "title": "Vehicle Paint Dryer | NBPKOREA",
+      "description": "NBPKOREA vehicle paint dryer — high-efficiency drying system for automotive paint booths."
+    },
+    "ductBurner": {
+      "title": "Duct Burner | NBPKOREA",
+      "description": "NBPKOREA duct burner — high-efficiency industrial burner installed directly inside exhaust ducts."
+    },
+    "lineBurner": {
+      "title": "Line Burner | NBPKOREA",
+      "description": "NBPKOREA line burner — metal fiber line burner maximizing energy efficiency through uniform combustion."
+    },
+    "portableBurner": {
+      "title": "Portable Burner | NBPKOREA",
+      "description": "NBPKOREA portable burner — compact, mobile industrial burner with easy-install design."
+    }
+  },
+  "common": {
+    "nav": {
+      "about": "About",
+      "business": "Business",
+      "products": "Products",
+      "technology": "Technology",
+      "news": "NBP/NEWS",
+      "support": "Support",
+      "contact": "Contact Us"
+    },
+    "footer": {
+      "access": "Access",
+      "contact": "Contact",
+      "address": "22, MTV-ro 8-gil, Danwon-gu\nAnsan-si, Gyeonggi-do, Korea\nBiz. Reg. 119-13-28296",
+      "directions": "Get Directions",
+      "privacy": "Privacy Policy",
+      "copyright": "Copyright NBPKOREA. All Rights Reserved.",
+      "products": "Products",
+      "about": "About",
+      "technology": "Technology",
+      "supportNav": "Support",
+      "businessNav": "Business",
+      "contactUs": "Contact Us"
+    }
+  },
+  "home": {
+    "hero": {
+      "since": "Since 2006 · Ansan, Korea",
+      "title": "NBPKOREA",
+      "titleHighlight": "Best",
+      "titleSuffix": "Combustion Solutions",
+      "subtitle": "Your Technology Partner for Industrial Combustion & Environmental Systems",
+      "scroll": "Scroll"
+    },
+    "company": {
+      "description": "Since its founding in 2006, NBPKOREA has been providing eco-friendly energy solutions to domestic and international industrial sites including shipbuilding, automotive, steel, and plant sectors with over 20 years of experience and expertise. We actively invest in the development of advanced energy-saving eco-friendly products, striving to become a global leader that creates greater value for a world where humans and nature coexist.",
+      "link": "Learn More"
+    },
+    "service": {
+      "label": "Business Areas",
+      "viewBusiness": "View Business Areas",
+      "environment": {
+        "title": "Environmental Systems",
+        "description": "Regenerative Thermal Oxidizers (RTO) recover combustion heat through regenerative media for energy-efficient thermal reuse in production processes. Regenerative Catalytic Oxidizers (RCO) combine catalytic and regenerative technology for high-efficiency treatment. Catalytic Thermal Oxidizers (CTO) neutralize odorous compounds in exhaust gas at low temperatures using catalysts while minimizing NOx formation. From TO and DTO systems to turnkey VOC and odor control across 14+ industries including semiconductors, painting, chemicals, and food processing — NBPKOREA delivers end-to-end design, fabrication, installation, and maintenance."
+      },
+      "hvac": {
+        "title": "HVAC Systems",
+        "description": "Precision temperature, humidity, and cleanliness control for advanced industries — semiconductor cleanrooms, secondary battery Dry Rooms, pharmaceutical GMP, direct-fired AHUs, door heaters, and hybrid dehumidifiers (NK-MDGH). We design, manufacture, and install energy-efficient HVAC solutions."
+      },
+      "combustion": {
+        "title": "Combustion Systems",
+        "description": "High-efficiency combustion environmental systems available only from NBPKOREA worldwide. From direct-fired gas heaters (NKGH Series, 25,000–1,000,000 kcal/h) and indirect gas heaters (NK-IDGH Series) to hybrid dehumidifiers and vehicle paint dryers — we deliver compact, optimized combustion solutions for automotive paint booths, shipyard block shops, warehouses, and food and chemical plants."
+      },
+      "burner": {
+        "title": "Industrial Burners",
+        "description": "NBPKOREA's proprietary metal fiber burners (NBP-MB · NBP-SMB) maximize energy efficiency through uniform combustion and infrared radiant heat while dramatically reducing NOx emissions. The compact metal burner saves installation space with its space-saving design and enables easy maintenance. Applicable to all equipment requiring high-temperature combustion including industrial boilers, incinerators, drying ovens, thermal oil boilers, power plants, and petrochemical plants."
+      }
+    },
+    "history": {
+      "label": "Our History",
+      "since": "(2006",
+      "present": "— Present)",
+      "description": "Since its founding in Ansan, Gyeonggi-do in 2006, NBPKOREA has continuously innovated in industrial combustion equipment and environmental systems. Twenty years of history built on trust, challenge, and passion.",
+      "viewHistory": "View Full History",
+      "founded": "NBPKOREA Founded (Ansan)",
+      "midco": "MIDCO International Technology Alliance",
+      "ecostar": "ECOSTAR Partnership Established",
+      "rnd": "Corporate R&D Center Established (KOITA)"
+    },
+    "partners": {
+      "description": "Over 80 major domestic and international companies trust NBPKOREA's technology. We respond to the demands of industrial sites with global partnerships and field-proven technology.",
+      "viewClients": "View Major Clients",
+      "midcoType": "USA / Technology Partner",
+      "ecostarType": "Turkey / Technology Partner",
+      "combhexType": "Turkey / Technology Partner",
+      "hanwhaType": "Shipbuilding & Marine",
+      "hdType": "Shipbuilding & Marine",
+      "bmwType": "Electronics & Machinery",
+      "lgType": "Battery & Energy",
+      "poscoType": "Heavy Industry & Materials"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "phone": "Phone",
+      "phoneHours": "Weekdays 09:00 - 18:00",
+      "email": "Email",
+      "emailReply": "Reply within 24 hours on business days",
+      "address": "Address",
+      "addressValue": "22, MTV-ro 8-gil, Danwon-gu, Ansan-si, Gyeonggi-do",
+      "onlineInquiry": "Online Inquiry",
+      "productConsult": "Product Consultation",
+      "productDesc": "Inquiries on environmental & combustion products",
+      "quoteRequest": "Quote Request",
+      "quoteDesc": "Custom equipment design & quotation",
+      "asInquiry": "After Service",
+      "asDesc": "Maintenance & emergency dispatch requests",
+      "visitConsult": "Visit Consultation",
+      "visitDesc": "Schedule a visit to our Ansan HQ"
+    }
+  },
+  "about": {
+    "title": "ABOUT US",
+    "subtitle": "Elevating industrial value through trust, challenge, and passion",
+    "breadcrumb": "About",
+    "tabs": {
+      "ceo": "CEO Message",
+      "overview": "Company Overview",
+      "ci": "CI",
+      "history": "History",
+      "network": "Network",
+      "patents": "Patents",
+      "directions": "Directions"
+    },
+    "ceo": {
+      "label": "CEO Message",
+      "title": "Message from the CEO",
+      "p1": "Welcome. I am Choe Hyeok-sun, CEO of NBPKOREA.",
+      "p2Start": "Since our founding in 2006, NBPKOREA has grown in the industrial combustion equipment and environmental systems sector with a single core value — ",
+      "p2Trust": "Trust",
+      "p2End": ". Our mission is to understand the needs of industrial sites most closely and respond with technology.",
+      "p3Start": "Through relentless ",
+      "p3Challenge": "Challenge",
+      "p3End": ", we have developed proprietary core technologies including metal fiber burners, and have achieved world-class technological capabilities through global partnerships with MIDCO International in the US and ECOSTAR in Turkey.",
+      "p4Start": "Going forward, we will continue to devote our ",
+      "p4Passion": "Passion",
+      "p4End": " to providing the most suitable solutions for your industrial sites. We sincerely ask for your continued trust and support.",
+      "signature": "CEO",
+      "ceoName": "Choe Hyeok-sun"
+    },
+    "stats": {
+      "years": "Years",
+      "yearsSub": "Est. 2006",
+      "patents": "IP Assets",
+      "patentsSub": "Patents, designs, trademarks",
+      "clients": "Major Clients",
+      "clientsSub": "Domestic & International",
+      "customerProjects": "Customers",
+      "customerProjectsSub": "Project Deliveries",
+      "awards": "Awards",
+      "awardsSub": "Government & Institution"
+    },
+    "vision": {
+      "title": "Vision & Mission",
+      "vision": "Vision",
+      "visionText": "As a global leader in industrial combustion and environmental systems, we create cleaner and more efficient industrial environments",
+      "mission": "Mission",
+      "missionText": "We simultaneously improve energy efficiency and environmental conditions at industrial sites through customized technical solutions",
+      "coreValue": "Core Value",
+      "coreValueText": "We grow together with our customers based on Trust, Challenge, and Passion"
+    },
+    "history": {
+      "title": "History",
+      "events": {
+        "2025a": "Exclusive Korean Agency Agreement with COMBHEX (Turkey)",
+        "2025b": "Exclusive Korean Agency Agreement with DEMIRBAS MAKINA (Turkey)",
+        "2023": "Exclusive Korean Agency Agreement with KUBAN Coffee Roasters (Turkey)",
+        "2022": "Corporate R&D Center Established (KOITA Certified)",
+        "2021": "Minister of Trade, Industry and Energy Award",
+        "2020": "ISO 14001 Environmental Management System Certified",
+        "2019a": "Regenerative Catalytic Oxidation System Patent Filed",
+        "2019b": "Export Performance Expanded",
+        "2018": "NBP-MB Series Metal Fiber Burner Lineup Expanded",
+        "2017": "Minister of SMEs and Startups Award",
+        "2016": "CE Mark Certification Obtained",
+        "2015": "KS Mark Certification Obtained",
+        "2014a": "Commissioner of the Small and Medium Business Administration Award",
+        "2014b": "MIDCO International Technology Alliance Expanded",
+        "2013": "ECOSTAR (Turkey) Technology Partnership Established",
+        "2012": "Environmental Systems Division Expanded (RTO, RCO Lines)",
+        "2011": "ISO 9001 Quality Management System Certified",
+        "2010": "Entered Industrial Gas Heater Market",
+        "2009": "Gyeonggi Governor's Award",
+        "2008": "First Metal Fiber Burner Product Released",
+        "2007": "MIDCO International (USA) Technology Alliance Established",
+        "2006": "NBPKOREA Founded (Ansan-si, Gyeonggi-do)"
+      }
+    },
+    "companyInfo": {
+      "title": "Company Overview",
+      "companyName": "Company",
+      "companyNameValue": "NBPKOREA Co., Ltd.",
+      "founded": "Founded",
+      "foundedValue": "2006",
+      "employees": "Employees",
+      "employeesValue": "35",
+      "capital": "Capital",
+      "capitalValue": "KRW 8 billion",
+      "ceo": "CEO",
+      "ceoValue": "Choe Hyeok-sun",
+      "business": "Business",
+      "businessValue": "Environmental Systems (RTO, RCO, CTO, TO, DTO) / Industrial Combustion Equipment",
+      "ip": "IP Assets",
+      "ipValue": "17 patents / 15 designs / 6 trademarks",
+      "alliances": "Tech Alliances",
+      "alliancesValue": "Exclusive Korean agency agreements with 5 global companies",
+      "certifications": "Key Certifications",
+      "certificationsValue": "ISO 9001 / 14001, INNO-BIZ, Venture Company, Root Technology Company, Corporate R&D Center",
+      "factory": "Production Base",
+      "factoryValue": "Owner-operated Ansan MTV factory and corporate R&D center",
+      "bizReg": "Biz. Reg. No.",
+      "bizRegValue": "119-13-28296",
+      "address": "Address",
+      "addressValue": "22, MTV-ro 8-gil, Danwon-gu, Ansan-si, Gyeonggi-do, Korea"
+    },
+    "patents": {
+      "title": "Registered Patents",
+      "subtitle": "We hold 17 proprietary technology patents",
+      "list": [
+        "High-Efficiency Direct-Fired Dryer",
+        "Burner Degradation Prevention Device",
+        "Direct-Fired Marine Paint Dryer",
+        "Combustion Chamber for Direct-Fired Air Heater",
+        "Internal Support Structure for Burner",
+        "Proportional Control Device for Burner Mixed Gas",
+        "Direct-Fired Burner Unit",
+        "Gas Fryer",
+        "Indirect Hot Air Dryer",
+        "Exhaust Gas Re-combustion Heating Device",
+        "Heating Device Using Air Wall",
+        "Hazardous Gas Re-combustion Device",
+        "Hazardous Gas Re-combustion Device",
+        "Regenerative Catalytic Oxidation System by Direct Combustion",
+        "Modular Regenerative Catalytic Oxidation System by Direct Combustion",
+        "Hazardous Gas Re-combustion Device",
+        "Fine Grinding Device for Nuts"
+      ]
+    },
+    "clients": {
+      "title": "Major Clients",
+      "subtitle": "Over 80 domestic and international companies trust NBPKOREA's technology"
+    },
+    "ci": {
+      "title": "Corporate Identity",
+      "comingSoon": "CI Coming Soon"
+    },
+    "directions": {
+      "title": "Directions",
+      "address": "Address",
+      "addressValue": "22, MTV-ro 8-gil, Danwon-gu, Ansan-si, Gyeonggi-do, Korea",
+      "phoneFax": "Phone / Fax",
+      "email": "Email",
+      "website": "Website",
+      "hours": "Business Hours",
+      "hoursValue": "Mon–Fri 09:00 — 18:00",
+      "holiday": "Closed on weekends & public holidays",
+      "transit": "Transit",
+      "subway": "Subway",
+      "subwayValue": "Suin-Bundang Line, Exit 1 of Choji Station, 10-min walk",
+      "bus": "Bus",
+      "busValue": "Get off at Ansan MTV-ro Stop",
+      "mapTitle": "NBPKOREA Headquarters Location"
+    }
+  },
+  "business": {
+    "title": "BUSINESS AREAS",
+    "subtitle": "Environmental and combustion systems — two pillars elevating industrial value",
+    "breadcrumb": "Business",
+    "viewProducts": "View Products",
+    "viewPerformance": "View Cases",
+    "environment": {
+      "title": "Environmental Systems Division",
+      "description": "We design, manufacture, and install environmental systems including Regenerative Thermal Oxidizers (RTO), Regenerative Catalytic Oxidizers (RCO), Catalytic Thermal Oxidizers (CTO), Thermal Oxidizers (TO), and Direct Thermal Oxidizers (DTO) to treat volatile organic compounds (VOCs) and odors generated at industrial sites."
+    },
+    "hvac": {
+      "title": "HVAC Systems Division",
+      "description": "We design, manufacture, and install precision air conditioning systems for semiconductor cleanrooms, secondary battery Dry Rooms, pharmaceutical GMP facilities, and more. Our solutions include direct-fired AHUs, door heaters, and hybrid dehumidifiers (NK-MDGH) for energy-efficient climate control."
+    },
+    "combustion": {
+      "title": "Combustion Systems Division",
+      "description": "We design, manufacture, and supply high-efficiency combustion equipment for various industries, including industrial direct/indirect gas heaters, proprietary metal fiber burners (NBP-MB), hybrid dehumidifiers, and vehicle paint drying systems."
+    },
+    "industries": {
+      "title": "Industry Applications",
+      "shipbuilding": {
+        "title": "Shipbuilding & Marine",
+        "description": "We supply combustion and environmental systems optimized for the unique environments of shipyards, including hull block construction, paint drying, tank dehumidification, and ship component heat treatment.",
+        "clients": "Hanwha Ocean, HD Hyundai Mipo, Daewoo Shipbuilding, Samsung Heavy Industries"
+      },
+      "automotive": {
+        "title": "Automotive",
+        "description": "We provide thermal and environmental solutions for automotive production lines, including body paint drying, component heat treatment, paint booth deodorization, and factory ventilation.",
+        "clients": "BMW, Audi, Hyundai Motor, Kia"
+      },
+      "heavyIndustry": {
+        "title": "Heavy Industry & Chemicals",
+        "description": "We handle high-temperature solutions for the heavy chemical industry, including plant process heating, chemical process heat supply, exhaust gas treatment, and industrial equipment heat treatment.",
+        "clients": "POSCO, LG Chem, SK Innovation, Doosan Enerbility"
+      },
+      "environmental": {
+        "title": "Environmental & Odor Control",
+        "description": "We supply environmental systems (RTO, CTO, RCO) to treat VOCs and odors at various industrial sites including semiconductors, painting, food processing, and pharmaceuticals.",
+        "clients": "Semiconductor manufacturers, food processors, pharmaceutical companies, etc."
+      },
+      "mainClients": "Key Clients"
+    },
+    "stats": {
+      "title": "Performance",
+      "years": "Years",
+      "yearsSub": "Est. 2006",
+      "clients": "Major Clients",
+      "clientsSub": "Domestic & International",
+      "patents": "Patents",
+      "patentsSub": "Registered Patents",
+      "partners": "Global Partners",
+      "partnersSub": "USA · Turkey"
+    },
+    "clientsTitle": "Major Clients",
+    "burner": {
+      "title": "Industrial Burner Division",
+      "description": "NBPKOREA's proprietary metal fiber burners (NBP-MB · NBP-SMB) maximize energy efficiency through uniform combustion and infrared radiant heat while dramatically reducing NOx emissions. The compact metal burner saves installation space with its space-saving design and enables easy maintenance. Applicable to all equipment requiring high-temperature combustion including industrial boilers, incinerators, drying ovens, thermal oil boilers, power plants, and petrochemical plants."
+    }
+  },
+  "products": {
+    "title": "PRODUCTS & SOLUTIONS",
+    "subtitle": "Combustion and environmental solutions optimized for industrial sites",
+    "breadcrumb": "Products",
+    "categories": {
+      "environment": "Environmental",
+      "hvac": "HVAC",
+      "combustion": "Combustion",
+      "burner": "Industrial Burners"
+    },
+    "viewDetail": "View Details",
+    "inquiry": "Product Inquiry",
+    "common": {
+      "features": "Product Features",
+      "specifications": "Specifications",
+      "applications": "Applications",
+      "backToList": "Back to List",
+      "contact": "Contact Us",
+      "selectModel": "Click a row to select a model",
+      "specNote": "Specifications are subject to change without notice for improvement.",
+      "mechanism": "Mechanism",
+      "heatRecovery": "Heat Recovery",
+      "ctaDesc": "We will propose the optimal specifications for your site conditions.",
+      "industryLabel": "Industry Applications",
+      "whyLabel": "Why NBPKOREA",
+      "whyTitle": "20 Years of Expertise\nOptimized for Industrial Sites",
+      "whyDesc": "Backed by our own R&D, 17 registered patents, and global partnerships in the US and Turkey, we provide one-stop service — design, manufacturing, installation, and A/S — for everything from environmental systems to combustion equipment.",
+      "whyPatentsNum": "17",
+      "whyPatentsLabel": "Patents",
+      "whyDeliveriesNum": "80+",
+      "whyDeliveriesLabel": "Deliveries",
+      "whyServiceNum": "A/S",
+      "whyServiceLabel": "Nationwide Service",
+      "ctaTitle": "Need a Custom Equipment Solution?",
+      "ctaMainDesc": "We will propose the optimal environmental and combustion equipment for your site conditions. Consult with our specialist engineers.",
+      "ctaButton": "Inquiry",
+      "industryTags": [
+        "Shipbuilding/Marine",
+        "Automotive",
+        "Heavy Industry",
+        "Chemical/Petrochemical",
+        "Environmental/Odor Control",
+        "Semiconductor",
+        "Food Processing",
+        "Pharmaceutical",
+        "Textile",
+        "Energy"
+      ]
+    },
+    "nav": {
+      "cleanroom": "Clean Room",
+      "dryRoom": "Dry Room",
+      "directAhu": "Direct-Fired AHU",
+      "doorHeater": "Door Heater",
+      "dehumidifier": "Dehumidifier",
+      "directHeater": "Direct Gas Heater",
+      "indirectHeater": "Indirect Gas Heater",
+      "ductBurner": "Duct Burner",
+      "fpbBurner": "FPB Burner",
+      "furnaceBurner": "Furnace Burner",
+      "lowNoxBurner": "Low NOx Burner",
+      "ovenBurner": "Oven Burner",
+      "metalFiberBurner": "Metal Fiber Burner",
+      "lineBurner": "Line Burner",
+      "valveTrain": "Valve Train Parts"
+    },
+    "breadcrumbs": {
+      "environment": "Environmental",
+      "hvac": "HVAC",
+      "combustion": "Combustion",
+      "burner": "Industrial Burners"
+    },
+    "environment": {
+      "nkCto": {
+        "subtitle": "Catalytic Thermal Oxidizer",
+        "description": "Oxidatively decomposes VOCs and odors at low temperatures (250–450°C) using a catalyst. An energy-efficient environmental system with over 98% treatment efficiency and favorable NOx reduction.",
+        "heroTitle": "Catalytic Thermal Oxidizer (CTO)",
+        "heroDesc1": "CTO uses a catalyst to combust (contact oxidation) and render harmless odorous substances contained in exhaust gas — chemically the same as ordinary combustion decomposition. The catalytic material acts as a facilitator, participating in combustion to accelerate the reaction, enabling a new combustion technology that greatly reduces nitrogen oxide (NOx) generation from low-temperature, low-concentration combustion while significantly improving energy savings.",
+        "heroDesc2": "Catalytic combustion oxidation at normal temperatures of 250–450°C achieves combustion efficiency of 98% or more for odorous substances, with a very high treatment efficiency of about 99% for odor concentration. It is also environmentally friendly with few secondary pollution factors.",
+        "tags": [
+          "98%+ Treatment Efficiency",
+          "NOx Reduction",
+          "Low-temp Oxidation 250–450°C",
+          "95%+ Heat Recovery"
+        ],
+        "mechanism": "Catalytic Oxidation 250–450°C",
+        "heatRecovery": "Heat Recovery",
+        "features": [
+          "Perfect smokeless treatment efficiency (98%)",
+          "Maximum heat recovery rate of 95% or more",
+          "Minimized NOx generation through low-temperature oxidation",
+          "Minimized installation space through complete design technology",
+          "ICT-based touch panel technology (touch screen)",
+          "Gas cost possible based on soft switching flow",
+          "MIDCO U.S.A & ECOSTAR TURKEY",
+          "Inverter switching system applied according to capacity changes",
+          "Vertical inspection for maintenance safety and continuity",
+          "Various layouts possible depending on site installation conditions",
+          "Specialized product with technical and design protection",
+          "Eco-friendly system with no secondary pollutants"
+        ],
+        "applications": [
+          "Semiconductors, Displays, LCD",
+          "Automotive, Shipbuilding, Steel, Plants",
+          "Petroleum, Chemical Manufacturing",
+          "Painting Processes, Paint Manufacturing",
+          "Water/Sewage, Sewage Sludge, Odor Treatment",
+          "Printing, Ink Manufacturing",
+          "Plastics, Synthetic Rubber Resin Manufacturing",
+          "Plywood and Furniture Factories",
+          "Food Waste, Animal Byproduct Sludge",
+          "Food Processing, Biotech",
+          "Pharmaceutical Manufacturing",
+          "Textiles, Leather, Wood Manufacturing",
+          "New Materials Manufacturing/Processing",
+          "Metal, Molds, Castings, Wire Manufacturing",
+          "Other VOCs and Odor-emitting Sites"
+        ],
+        "tableClickModel": "Click a row to select your desired model",
+        "tableHeaders": {
+          "model": "MODEL",
+          "airflow": "Airflow\n(Nm³/min)",
+          "heatInput": "Heat Input\n(Kcal/hr)",
+          "power": "Power\n(kW)",
+          "length": "Length\n(mm)",
+          "width": "Width\n(mm)",
+          "height": "Height\n(mm)"
+        },
+        "ctaTitle": "Considering NK-CTO?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "nkRto": {
+        "subtitle": "Regenerative Thermal Oxidizer",
+        "description": "Oxidatively decomposes VOCs at high temperatures above 850°C, recovering over 95% of heat through regenerative media. A high-efficiency environmental system suitable for high-volume air flow treatment.",
+        "ctaTitle": "Considering NK-RTO?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "nkRco": {
+        "subtitle": "Regenerative Catalytic Oxidizer",
+        "description": "A hybrid system combining the advantages of regenerative and catalytic methods. Optimized for treating high-concentration VOCs in medium to small air volumes.",
+        "ctaTitle": "Considering NK-RCO?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "nkTo": {
+        "subtitle": "Thermal Oxidizer",
+        "description": "Directly oxidatively treats high-concentration odors and VOCs by direct combustion at 700–900°C. Suitable for small-scale sites and intermittent generation processes.",
+        "ctaTitle": "Considering NK-TO?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      }
+    },
+    "hvac": {
+      "cleanroom": {
+        "subtitle": "Clean Room HVAC System",
+        "description": "Cleanroom HVAC system optimized for ultra-clean environments in semiconductor, display, pharmaceutical (GMP), and precision equipment industries. Achieves Class 1–100,000 cleanliness with HEPA/ULPA filtration, precision temperature/humidity control, and positive pressure management."
+      },
+      "dryRoom": {
+        "subtitle": "Dry Room HVAC System",
+        "description": "Ultra-low humidity Dry Room HVAC system specialized for secondary battery (lithium-ion) manufacturing. Maintains dew point below -40°C to ensure electrode and assembly process quality and safety."
+      },
+      "directAhu": {
+        "subtitle": "Direct-Fired Air Handling Unit",
+        "description": "High-efficiency air handling unit that directly heats air using gas combustion. Significantly reduces energy costs compared to electric heaters, with rapid temperature rise for large spaces and precise proportional control."
+      },
+      "doorHeater": {
+        "subtitle": "Door Heater",
+        "description": "Air curtain heater installed at factory, logistics center, and cold storage entrances to block outside cold air and maintain indoor temperature. Gas direct-fired operation reduces operating costs compared to electric air curtains."
+      },
+      "dehumidifier": {
+        "subtitle": "Hybrid Dehumidifier (NK-MDGH Series)",
+        "description": "Hybrid dehumidification system combining cooling dehumidifier and direct-fired gas heater. Achieves 30% fuel cost reduction, 4-season hybrid operation, and 8,500–30,000 m³/h airflow for shipyard block shops, paint workshops, and cleanrooms."
+      }
+    },
+    "combustion": {
+      "nkgh": {
+        "subtitle": "Direct Gas Heater (NKGH Series)",
+        "description": "Direct-fired industrial gas heater for rapidly heating large spaces such as shipyards, warehouses, and factories. 5-model lineup from 250,000 to 1,000,000 Kcal/h.",
+        "ctaTitle": "Considering NKGH?",
+        "ctaDesc": "We will propose the optimal capacity and installation method for your site conditions."
+      },
+      "nkIdgh": {
+        "subtitle": "Indirect Gas Heater (NK-IDGH Series)",
+        "description": "Indirect heating method supplying clean air through a heat exchanger. Optimal for environments requiring clean air such as paint booths, food processing, and clean rooms.",
+        "ctaTitle": "Considering NK-IDGH?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "dehumidifier": {
+        "subtitle": "Hybrid Dehumidifier (NK-MDGH Series)",
+        "description": "Combined refrigeration dehumidification and gas heating package. 4-season operation support, dedicated to high-humidity environments like ship block painting, welding, and clean rooms.",
+        "ctaTitle": "Considering the Hybrid Dehumidifier?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "paintDryer": {
+        "subtitle": "Paint Dryer System",
+        "description": "Hot air drying system specialized for automotive paint booths. 1,250,000 Kcal/h high output, PLC proportional control, supplied to KIA and BMW partners.",
+        "ctaTitle": "Considering the Paint Dryer System?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      }
+    },
+    "burner": {
+      "ductBurner": {
+        "subtitle": "Duct Burner — Metal Fiber Surface Combustion",
+        "description": "Duct heating burner using metal fiber surface combustion method. Various lineup from 0.5FT to 5FT, 30-step precise flame control, low NOₓ/CO emissions.",
+        "ctaTitle": "Considering the Duct Burner?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "fpbBurner": {
+        "subtitle": "FPB Burner",
+        "description": "Industrial burner lineup based on ECOSTAR (Turkey) technology partnership. Offers 13 categories of combustion solutions including gas burners, dual-fuel burners, fuel oil burners, and process burners.",
+        "ctaTitle": "Considering the FPB Burner?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "metalFiberBurner": {
+        "subtitle": "Metal Fiber Burner",
+        "description": "NBPKOREA's proprietary metal fiber burner. Maximizes energy efficiency through uniform combustion and infrared radiant heat while dramatically reducing NOx emissions.",
+        "ctaTitle": "Considering the Metal Fiber Burner?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "furnaceBurner": {
+        "subtitle": "Furnace Burner — High-Temp Industrial Furnace",
+        "description": "Burner optimized for high-temperature industrial furnaces including steel heating furnaces, melting furnaces, glass melting furnaces, plastic heating furnaces, building materials, and rotary kilns. Supports Gas+Oil dual-fuel operation.",
+        "ctaTitle": "Considering the Furnace Burner?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "lowNoxBurner": {
+        "subtitle": "Low NOx Burner — Eco-Friendly Low Emission",
+        "description": "Eco-friendly low-emission burner that dramatically reduces nitrogen oxide (NOx) emissions. Applies two-stage combustion and flue gas recirculation (FGR) technology to meet environmental regulations while maintaining high thermal efficiency.",
+        "ctaTitle": "Considering the Low NOx Burner?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "ovenBurner": {
+        "subtitle": "Oven Burner — Heat Treatment Specialized",
+        "description": "Burner specialized for dry ovens and drying equipment including food processing, plastic thermoforming, paint drying, printing/coating, cement, and textile tenter dryers.",
+        "ctaTitle": "Considering the Oven Burner?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "lineBurner": {
+        "subtitle": "Line Burner — Continuous Process Linear Heating",
+        "description": "Cylindrical industrial burner designed to supply uniform linear heat along continuous process lines. Optimized for conveyor-based continuous production in textile, printing, coating, and food drying applications.",
+        "ctaTitle": "Considering the Line Burner?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
+      "valveTrain": {
+        "subtitle": "Valve Train Parts — Gas Control System",
+        "description": "Valve train assemblies for safe and precise gas supply control of industrial burners. Configures gas control systems with gas valves, regulators, and safety shut-off devices tailored to site conditions.",
+        "ctaTitle": "Considering Valve Train Parts?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      }
+    }
+  },
+  "technology": {
+    "title": "TECHNOLOGY & R&D",
+    "subtitle": "Leading industrial combustion and environmental technology through continuous research and innovation",
+    "breadcrumb": "Technology",
+    "coreTech": {
+      "title": "Core Technology",
+      "metalBurner": {
+        "title": "High-Efficiency Metal Fiber Burner",
+        "description": "Our proprietary metal fiber burner utilizes heat-resistant metal fibers as the combustion surface to maximize infrared radiant heat. It features significant NOx reduction, over 30% improvement in energy efficiency, uniform heat distribution, noise reduction design, excellent durability (5+ years lifespan), compact design, multi-fuel compatibility (LNG/LPG), automatic temperature control, and multiple safety devices.",
+        "features": [
+          "Infrared radiant heat utilization",
+          "Significant NOx reduction",
+          "30%+ energy efficiency improvement",
+          "Uniform heat distribution",
+          "Noise reduction design",
+          "5+ year durability",
+          "Compact design",
+          "LNG/LPG compatible",
+          "Automatic temperature control",
+          "Multiple safety devices"
+        ]
+      },
+      "compactHeater": {
+        "title": "Compact Metal Heater",
+        "description": "A high-efficiency industrial gas heater applying metal fiber burner technology. Available in three types: direct-fired (rapid heating of large spaces), indirect-fired (for environments requiring clean air heating), and hybrid (simultaneous heating and dehumidification) — providing solutions optimized for various industrial sites.",
+        "features": [
+          "Direct-fired — rapid heating of large spaces",
+          "Indirect-fired — clean air maintenance",
+          "Hybrid — simultaneous heating & dehumidification"
+        ]
+      }
+    },
+    "globalPartners": {
+      "title": "Global Technology Partners",
+      "subtitle": "The technological heritage of our partners dating back to the 1940s meets NBPKOREA's field experience to create the best solutions",
+      "midcoDesc": "NBPKOREA has maintained a technology partnership with MIDCO International, an industrial burner specialist based in Chicago, USA, since 2007, incorporating global-level combustion technology and strengthening product competitiveness through joint development.",
+      "ecostarDesc": "NBPKOREA established a technology partnership with ECOSTAR, an industrial combustion equipment specialist based in Turkey, in 2013. We supply equipment that meets European market technical standards and continuously improve our technological capabilities through mutual technology exchange.",
+      "combhexDesc": "NBPKOREA has continued a technology partnership with CombHEX in Turkey since 2018. Based on practical experience in heat exchange and combustion systems, we are expanding both equipment quality and on-site applicability together.",
+      "partnershipSince": "Partnership Since"
+    },
+    "awards": {
+      "title": "Awards",
+      "items": [
+        {
+          "year": "2021",
+          "title": "Minister of Trade, Industry and Energy Award"
+        },
+        {
+          "year": "2019",
+          "title": "Minister of Trade, Industry and Energy Award"
+        },
+        {
+          "year": "2017",
+          "title": "Minister of SMEs and Startups Award"
+        },
+        {
+          "year": "2014",
+          "title": "Commissioner of the Small and Medium Business Administration Award"
+        },
+        {
+          "year": "2009",
+          "title": "Gyeonggi Governor's Award"
+        }
+      ]
+    },
+    "certifications": {
+      "title": "Certifications",
+      "list": [
+        {
+          "name": "ISO 9001",
+          "desc": "Quality Management System"
+        },
+        {
+          "name": "ISO 14001",
+          "desc": "Environmental Management System"
+        },
+        {
+          "name": "CE Mark",
+          "desc": "European Safety Certification"
+        },
+        {
+          "name": "KS Mark",
+          "desc": "Korean Industrial Standard"
+        }
+      ]
+    },
+    "rdCenter": {
+      "title": "Corporate R&D Center",
+      "subtitle": "KOITA (Korea Industrial Technology Association) certified Corporate R&D Center (established 2022) — continuing to develop proprietary technologies backed by specialized research staff and state-of-the-art testing facilities",
+      "rooms": [
+        "R&D Center Overview",
+        "Burner Test Lab",
+        "Environmental Systems Test Facility",
+        "Heat Treatment Test Room",
+        "Measurement Analysis Lab",
+        "Quality Inspection Lab",
+        "Prototype Assembly Room",
+        "Document Room"
+      ]
+    }
+  },
+  "news": {
+    "title": "NBP / NEWS",
+    "subtitle": "Technology insights, product news, and partnership updates from NBPKOREA",
+    "breadcrumb": "NBP/NEWS",
+    "categories": {
+      "all": "All",
+      "tech": "Tech Insights",
+      "product": "Product News",
+      "company": "Company News",
+      "partnership": "Partnership",
+      "press": "Press"
+    },
+    "loading": "Loading...",
+    "empty": "No posts found.",
+    "readTime": "Read",
+    "readMore": "Read More",
+    "backToList": "Back to List"
+  },
+  "performance": {
+    "title": "BUSINESS PERFORMANCE",
+    "subtitle": "Key business achievements and project delivery records of NBPKOREA",
+    "comingSoon": "Business performance page is under preparation."
+  },
+  "support": {
+    "title": "CUSTOMER SUPPORT",
+    "subtitle": "We provide the best technical support for your successful production environment",
+    "breadcrumb": "Support",
+    "inquiryTypes": {
+      "title": "Inquiry Types",
+      "product": {
+        "title": "Product Consultation",
+        "description": "Product consultation and specification inquiries for environmental systems, combustion systems, and industrial burners"
+      },
+      "maintenance": {
+        "title": "Maintenance & A/S",
+        "description": "After-sales service inquiries including maintenance, parts replacement, and emergency dispatch for delivered products"
+      },
+      "quote": {
+        "title": "Quote Request",
+        "description": "Request for custom equipment design and quotation tailored to site conditions"
+      },
+      "other": {
+        "title": "Other Inquiries",
+        "description": "Other inquiries including partnerships, technical material requests, and recruitment-related matters"
+      }
+    },
+    "faq": {
+      "title": "FAQ",
+      "items": [
+        {
+          "question": "What is the quote request process?",
+          "answer": "After submitting a quote request via the website inquiry form or by phone (031-434-6566~7), our responsible engineer will assess your site conditions and submit a customized design and quotation. Schedules may vary depending on site conditions."
+        },
+        {
+          "question": "How do I request A/S?",
+          "answer": "Please contact us by phone (031-434-6566~7) or through the online inquiry on our website, and our responsible engineer will contact you. For industrial equipment (excluding individual items), the warranty period is 1 year from the date of commissioning completion."
+        },
+        {
+          "question": "Can I receive product technical materials or catalogs?",
+          "answer": "All company materials are available after approval from the CEO. Please submit a request through the inquiry form and we will review and provide guidance."
+        },
+        {
+          "question": "Is it possible to have an in-person consultation?",
+          "answer": "If necessary for a quote consultation, we can arrange a visit consultation after scheduling with our representative. Please contact us by phone or website inquiry and we will provide guidance."
+        }
+      ]
+    },
+    "as": {
+      "title": "A/S Procedure",
+      "steps": [
+        {
+          "num": "01",
+          "title": "Request",
+          "desc": "Submit A/S request by phone or email"
+        },
+        {
+          "num": "02",
+          "title": "Diagnosis",
+          "desc": "Remote or on-site visit diagnosis"
+        },
+        {
+          "num": "03",
+          "title": "Repair",
+          "desc": "Expert engineer dispatched for repair"
+        },
+        {
+          "num": "04",
+          "title": "Follow-up",
+          "desc": "Post-repair monitoring"
+        }
+      ],
+      "warranty": "The warranty period for industrial equipment (excluding individual items) is 1 year from the date of commissioning completion (consumables excluded)."
+    },
+    "form": {
+      "title": "Contact Us",
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "company": "Company",
+      "companyPlaceholder": "Your Company Name",
+      "email": "Email",
+      "inquiryType": "Inquiry Type",
+      "selectType": "Please select",
+      "productOption": "Product Consultation",
+      "asOption": "Maintenance / A/S",
+      "quoteOption": "Quote Request",
+      "otherOption": "Other Inquiries",
+      "message": "Message",
+      "messagePlaceholder": "Please enter your inquiry details.",
+      "submit": "Send Inquiry"
+    },
+    "info": {
+      "title": "Contact Information",
+      "phone": "Phone",
+      "phoneHours": "Weekdays 09:00 - 18:00",
+      "fax": "Fax",
+      "email": "Email",
+      "website": "Website",
+      "emailReply": "Reply within 24 hours on business days",
+      "bizReg": "Biz. Reg. No.",
+      "addressValue": "22, MTV-ro 8-gil, Danwon-gu, Ansan-si, Gyeonggi-do, Korea",
+      "mapTitle": "NBPKOREA Headquarters Location"
+    }
+  }
+}

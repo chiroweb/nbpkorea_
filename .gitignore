@@ -1,0 +1,66 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# large files / reference materials (not for deployment)
+10_카다로그/
+ECOSTAR BURNER MODEL/
+홈페이지 백업데이터/
+docs/
+*.zip
+*.pptx
+*.avi
+*.mp4
+공조-도어히터.jpg
+공조기 설치.jpg
+설치사례_*.pdf
+public/company.pdf
+public/AIR CONDITIONING.pdf
+public/images/burner/fpb/
+public/images/about/hq-front.jpg
+public/images/about/hq-side.jpg
+public/images/company/building-*.jpg
+public/images/service-burner.png
+public/images/combustion-main.jpeg
+Pretendard-1.3.9*
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+공조기 옆면.jpg
+공조기 작동.jpg
+public/다운로드*.png
