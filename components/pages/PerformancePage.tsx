@@ -174,14 +174,11 @@ function PerformancePageInner() {
       });
   }, [activeTab, searchByTag]);
 
-  // Filter by tag — 부분 매칭 (단어 분리 검색)
+  // Filter by tag — 정확한 태그 매칭 (TO ≠ RTO/CTO)
   const filtered = activeTag
     ? items.filter((item) => {
         if (!item.tags || item.tags.length === 0) return false;
-        const searchWords = activeTag.split(/[\s,·]+/).filter(Boolean);
-        return searchWords.some((word) =>
-          item.tags!.some((dbTag) => dbTag.includes(word) || word.includes(dbTag))
-        );
+        return item.tags.some((dbTag) => dbTag === activeTag);
       })
     : items;
 

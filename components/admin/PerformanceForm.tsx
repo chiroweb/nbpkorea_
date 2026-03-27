@@ -264,21 +264,53 @@ export default function PerformanceForm({ initial, id }: Props) {
         />
       </div>
 
-      {/* 이미지 3장 */}
+      {/* 이미지 */}
       <div>
-        <label className={labelClass}>이미지 URL (최대 3장)</label>
+        <label className={labelClass}>이미지 URL (최대 5장)</label>
         <div className="space-y-3">
           {images.map((url, i) => (
-            <input
-              key={i}
-              type="text"
-              value={url}
-              onChange={(e) => updateImage(i, e.target.value)}
-              className={inputClass}
-              placeholder={`이미지 ${i + 1} URL`}
-            />
+            <div key={i} className="flex gap-2 items-start">
+              <div className="flex-1 space-y-2">
+                <input
+                  type="text"
+                  value={url}
+                  onChange={(e) => updateImage(i, e.target.value)}
+                  className={inputClass}
+                  placeholder={`이미지 ${i + 1} URL`}
+                />
+                {url.trim() && (
+                  <img
+                    src={url}
+                    alt={`미리보기 ${i + 1}`}
+                    className="w-32 h-20 object-cover border border-[#D4DAE2]"
+                    style={{ imageOrientation: "from-image" }}
+                    onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
+                  />
+                )}
+              </div>
+              {url.trim() && (
+                <button
+                  type="button"
+                  onClick={() => {
+                    setImages((prev) => prev.filter((_, idx) => idx !== i));
+                  }}
+                  className="text-xs text-red-400 hover:text-red-600 px-2 py-2 border border-red-200 hover:border-red-400 transition-colors mt-1"
+                >
+                  삭제
+                </button>
+              )}
+            </div>
           ))}
         </div>
+        {images.length < 5 && (
+          <button
+            type="button"
+            onClick={() => setImages((prev) => [...prev, ""])}
+            className="mt-2 text-xs text-[#C05010] hover:underline"
+          >
+            + 이미지 추가
+          </button>
+        )}
       </div>
 
       {/* 스펙 */}

@@ -24,7 +24,8 @@ export default function AdminPopupsPage() {
 
   async function handleDelete(id: string, title: string) {
     if (!confirm(`"${title}" 팝업을 삭제하시겠습니까?`)) return;
-    await fetch(`/api/popups/${id}`, { method: "DELETE" });
+    const res = await fetch(`/api/popups/${id}`, { method: "DELETE", credentials: "include" });
+    if (!res.ok) { alert("삭제 실패"); return; }
     load();
   }
 

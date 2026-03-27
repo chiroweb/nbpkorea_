@@ -28,7 +28,12 @@ export default function AdminPerformancesPage() {
 
   async function handleDelete(id: string, title: string) {
     if (!confirm(`"${title}" 을(를) 삭제하시겠습니까?`)) return;
-    await fetch(`/api/performances/${id}`, { method: "DELETE" });
+    const res = await fetch(`/api/performances/${id}`, { method: "DELETE", credentials: "include" });
+    if (!res.ok) {
+      const data = await res.json().catch(() => ({}));
+      alert(data.error ?? "삭제 실패");
+      return;
+    }
     load();
   }
 

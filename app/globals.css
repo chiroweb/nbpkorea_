@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@300;400;500;600;700&display=swap');
 
+/* EXIF 회전 대응 - 모든 이미지에 적용 */
+img {
+  image-orientation: from-image;
+}
+
 @font-face {
   font-family: 'Pretendard';
   src: url('/fonts/PretendardVariable.woff2') format('woff2-variations');

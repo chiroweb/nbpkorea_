@@ -22,7 +22,8 @@ export default function AdminNewsPage() {
 
   async function handleDelete(id: string, title: string) {
     if (!confirm(`"${title}" 을(를) 삭제하시겠습니까?`)) return;
-    await fetch(`/api/news/${id}`, { method: "DELETE" });
+    const res = await fetch(`/api/news/${id}`, { method: "DELETE", credentials: "include" });
+    if (!res.ok) { alert("삭제 실패"); return; }
     load();
   }
 
