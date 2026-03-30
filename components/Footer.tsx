@@ -10,7 +10,7 @@ const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 const SOCIAL_LINKS = [
   {
     label: "Instagram",
-    href: "https://www.instagram.com/nbpkorea",
+    href: "https://www.instagram.com/nbpkorea_official/",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <rect x="2" y="2" width="20" height="20" rx="5" />
@@ -21,7 +21,7 @@ const SOCIAL_LINKS = [
   },
   {
     label: "YouTube",
-    href: "https://www.youtube.com/@nbpkorea",
+    href: "https://www.youtube.com/@NBPKOREA_Official",
     icon: (
       <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
         <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31.5 31.5 0 0 0 0 12a31.5 31.5 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1c.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8ZM9.5 15.5V8.5l6.5 3.5-6.5 3.5Z" />
