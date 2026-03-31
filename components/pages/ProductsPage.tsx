@@ -213,7 +213,7 @@ function ProductsPageInner() {
     {
       id: "direct-heater",
       title: t("combustion.nkgh.subtitle"),
-      subtitle: "Direct Gas Heater (NKGH Series)",
+      subtitle: "Direct-Fired Gas Heater",
       href: "/products/combustion/nkgh",
       image: `${S3}/images/%EC%97%B0%EC%86%8C/1p1.png`,
       description: t("combustion.nkgh.description"),
@@ -222,7 +222,7 @@ function ProductsPageInner() {
     {
       id: "indirect-heater",
       title: t("combustion.nkIdgh.subtitle"),
-      subtitle: "Indirect Gas Heater (NK-IDGH Series)",
+      subtitle: "Indirect Gas Heater",
       href: "/products/combustion/nk-idgh",
       image: `${S3}/images/%EA%B0%84%EC%A0%91%EC%8B%9D/2-100.png`,
       description: t("combustion.nkIdgh.description"),

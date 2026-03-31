@@ -81,13 +81,13 @@ export default function NkghPage() {
               Combustion · Direct Gas Heater
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
-              직접식 가스히터<br />(NKGH Series)
+              직화식 가스히터
             </h2>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
-              NKGH 시리즈는 NBPKOREA와 미국 MIDCO International의 기술 협력을 바탕으로 개발된 직화식 산업용 가스히터입니다. 연소 버너의 화염이 공기와 직접 접촉하는 직화 방식으로, 대공간을 빠른 시간 내에 가열할 수 있어 조선소 블록 작업장, 창고, 도장 부스 등 광범위한 현장에서 사용됩니다.
+              NBPKOREA와 미국 MIDCO International의 기술 협력을 바탕으로 개발된 직화식 산업용 가스히터입니다. 연소 버너의 화염이 공기와 직접 접촉하는 직화 방식으로, 대공간을 빠른 시간 내에 가열할 수 있어 조선소 블록 작업장, 창고, 도장 부스 등 광범위한 현장에서 사용됩니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
-              250,000 Kcal/h(NKGH-25)부터 1,000,000 Kcal/h(NKGH-100)까지 총 5개 모델로 구성되며, LNG·LPG·도시가스를 모두 사용할 수 있고 비례제어 방식으로 정밀한 온도 관리가 가능합니다. 이동식·고정식 설치 옵션을 모두 지원합니다.
+              250,000 Kcal/h부터 1,000,000 Kcal/h까지 총 5개 모델로 구성되며, LNG·LPG·도시가스를 모두 사용할 수 있고 비례제어 방식으로 정밀한 온도 관리가 가능합니다. 이동식·고정식 설치 옵션을 모두 지원합니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["250,000~1,000,000 Kcal/h", "직화 방식", "LNG/LPG", "비례제어"].map((tag) => (
@@ -101,7 +101,7 @@ export default function NkghPage() {
             <div className="relative aspect-[4/3] overflow-hidden bg-[#DCE2E8]">
               <Image
                 src={`${S3}/images/%EC%97%B0%EC%86%8C/1p1.png`}
-                alt="NKGH 직접식 가스히터"
+                alt="직화식 가스히터"
                 fill className="object-cover" priority
               />
             </div>

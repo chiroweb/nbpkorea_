@@ -80,13 +80,13 @@ export default function NkIdghPage() {
               Combustion · Indirect Gas Heater
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
-              간접식 가스히터<br />(NK-IDGH Series)
+              간접식 가스히터
             </h2>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
-              NK-IDGH 시리즈는 열교환기(Heat Exchanger)를 사용하여 연소 가스와 공급 공기를 완전히 분리하는 간접 가열 방식의 산업용 가스히터입니다. 연소 배기가스가 가열 공기와 섞이지 않으므로 도장 부스, 식품 가공, 클린룸, 제약 시설 등 청정한 공기가 반드시 필요한 현장에 최적화되어 있습니다.
+              열교환기(Heat Exchanger)를 사용하여 연소 가스와 공급 공기를 완전히 분리하는 간접 가열 방식의 산업용 가스히터입니다. 연소 배기가스가 가열 공기와 섞이지 않으므로 도장 부스, 식품 가공, 클린룸, 제약 시설 등 청정한 공기가 반드시 필요한 현장에 최적화되어 있습니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
-              400,000 Kcal/h(NK-IDGH-40)부터 1,000,000 Kcal/h(NK-IDGH-100)까지 4개 모델로 구성되며, 스테인리스 열교환기를 적용하여 내식성과 내열성이 뛰어납니다. LNG·LPG·도시가스를 모두 사용할 수 있으며, 비례제어 방식으로 공급 온도를 정밀하게 관리합니다.
+              400,000 Kcal/h부터 1,000,000 Kcal/h까지 4개 모델로 구성되며, 스테인리스 열교환기를 적용하여 내식성과 내열성이 뛰어납니다. LNG·LPG·도시가스를 모두 사용할 수 있으며, 비례제어 방식으로 공급 온도를 정밀하게 관리합니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["400,000~1,000,000 Kcal/h", "간접 열교환 방식", "청정 공기 공급", "비례제어"].map((tag) => (

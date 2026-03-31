@@ -126,15 +126,15 @@
       },
       "hvac": {
         "title": "HVAC Systems",
-        "description": "Precision temperature, humidity, and cleanliness control for advanced industries — semiconductor cleanrooms, secondary battery Dry Rooms, pharmaceutical GMP, direct-fired AHUs, door heaters, and combined dehumidifiers (NK-MDGH). We design, manufacture, and install energy-efficient HVAC solutions."
+        "description": "Precision temperature, humidity, and cleanliness control for advanced industries — semiconductor cleanrooms, secondary battery Dry Rooms, pharmaceutical GMP, direct-fired AHUs, door heaters, and combined dehumidifiers. We design, manufacture, and install energy-efficient HVAC solutions."
       },
       "combustion": {
         "title": "Combustion Systems",
-        "description": "High-efficiency combustion environmental systems available only from NBPKOREA worldwide. From direct-fired gas heaters (NKGH Series, 25,000–1,000,000 kcal/h) and indirect gas heaters (NK-IDGH Series) to combined dehumidifiers and vehicle paint dryers — we deliver compact, optimized combustion solutions for automotive paint booths, shipyard block shops, warehouses, and food and chemical plants."
+        "description": "High-efficiency combustion environmental systems available only from NBPKOREA worldwide. From direct-fired gas heaters and indirect gas heaters to combined dehumidifiers and vehicle paint dryers — we deliver compact, optimized combustion solutions for automotive paint booths, shipyard block shops, warehouses, and food and chemical plants."
       },
       "burner": {
         "title": "Industrial Burners",
-        "description": "NBPKOREA's proprietary metal fiber burners (NBP-MB · NBP-SMB) maximize energy efficiency through uniform combustion and infrared radiant heat while dramatically reducing NOx emissions. The compact metal burner saves installation space with its space-saving design and enables easy maintenance. Applicable to all equipment requiring high-temperature combustion including industrial boilers, incinerators, drying ovens, thermal oil boilers, power plants, and petrochemical plants."
+        "description": "NBPKOREA's proprietary metal fiber burners maximize energy efficiency through uniform combustion and infrared radiant heat while dramatically reducing NOx emissions. The compact metal burner saves installation space with its space-saving design and enables easy maintenance. Applicable to all equipment requiring high-temperature combustion including industrial boilers, incinerators, drying ovens, thermal oil boilers, power plants, and petrochemical plants."
       }
     },
     "history": {
@@ -344,11 +344,11 @@
     },
     "hvac": {
       "title": "HVAC Systems Division",
-      "description": "We design, manufacture, and install precision air conditioning systems for semiconductor cleanrooms, secondary battery Dry Rooms, pharmaceutical GMP facilities, and more. Our solutions include direct-fired AHUs, door heaters, and combined dehumidifiers (NK-MDGH) for energy-efficient climate control."
+      "description": "We design, manufacture, and install precision air conditioning systems for semiconductor cleanrooms, secondary battery Dry Rooms, pharmaceutical GMP facilities, and more. Our solutions include direct-fired AHUs, door heaters, and combined dehumidifiers for energy-efficient climate control."
     },
     "combustion": {
       "title": "Combustion Systems Division",
-      "description": "We design, manufacture, and supply high-efficiency combustion equipment for various industries, including industrial direct/indirect gas heaters, proprietary metal fiber burners (NBP-MB), combined dehumidifiers, and vehicle paint drying systems."
+      "description": "We design, manufacture, and supply high-efficiency combustion equipment for various industries, including industrial direct/indirect gas heaters, proprietary metal fiber burners, combined dehumidifiers, and vehicle paint drying systems."
     },
     "industries": {
       "title": "Industry Applications",
@@ -388,7 +388,7 @@
     "clientsTitle": "Major Clients",
     "burner": {
       "title": "Industrial Burner Division",
-      "description": "NBPKOREA's proprietary metal fiber burners (NBP-MB · NBP-SMB) maximize energy efficiency through uniform combustion and infrared radiant heat while dramatically reducing NOx emissions. The compact metal burner saves installation space with its space-saving design and enables easy maintenance. Applicable to all equipment requiring high-temperature combustion including industrial boilers, incinerators, drying ovens, thermal oil boilers, power plants, and petrochemical plants."
+      "description": "NBPKOREA's proprietary metal fiber burners maximize energy efficiency through uniform combustion and infrared radiant heat while dramatically reducing NOx emissions. The compact metal burner saves installation space with its space-saving design and enables easy maintenance. Applicable to all equipment requiring high-temperature combustion including industrial boilers, incinerators, drying ovens, thermal oil boilers, power plants, and petrochemical plants."
     }
   },
   "products": {
@@ -565,21 +565,21 @@
     },
     "combustion": {
       "nkgh": {
-        "subtitle": "Direct Gas Heater (NKGH Series)",
+        "subtitle": "Direct-Fired Gas Heater",
         "description": "Direct-fired industrial gas heater for rapidly heating large spaces such as shipyards, warehouses, and factories. 5-model lineup from 250,000 to 1,000,000 Kcal/h.",
-        "ctaTitle": "Considering NKGH?",
+        "ctaTitle": "Considering a Direct-Fired Gas Heater?",
         "ctaDesc": "We will propose the optimal capacity and installation method for your site conditions."
       },
       "nkIdgh": {
-        "subtitle": "Indirect Gas Heater (NK-IDGH Series)",
+        "subtitle": "Indirect Gas Heater",
         "description": "Indirect heating method supplying clean air through a heat exchanger. Optimal for environments requiring clean air such as paint booths, food processing, and clean rooms.",
-        "ctaTitle": "Considering NK-IDGH?",
+        "ctaTitle": "Considering an Indirect Gas Heater?",
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
       },
       "dehumidifier": {
         "subtitle": "Combined Dehumidifier",
         "description": "Combined refrigeration dehumidification and gas heating package. 4-season operation support, dedicated to high-humidity environments like ship block painting, welding, and clean rooms.",
-        "ctaTitle": "Considering the Combined Dehumidifier?",
+        "ctaTitle": "Considering a Combined Dehumidifier?",
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
       },
       "paintDryer": {

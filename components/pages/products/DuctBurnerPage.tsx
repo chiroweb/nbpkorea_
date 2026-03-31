@@ -103,7 +103,7 @@ export default function DuctBurnerPage() {
               NBPKOREA 덕트버너는 내열 금속섬유(Metal Fiber)로 제작된 연소면에서 적외선 복사열을 발생시키는 표면연소 방식의 산업용 덕트 가열 버너입니다. MIDCO International(미국)과의 기술 협력을 바탕으로, ANSI Z83.4 / Z83.18 기준을 충족하는 NOₓ·CO 저배출 설계를 실현합니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
-              소형(NBP-SMB, 0.5FT~2FT)부터 대형(NBP-MB, 1FT~5FT)까지 10개 모델 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 Natural Gas / Propane / Butane 가스를 모두 사용할 수 있습니다.
+              소형(0.5FT~2FT)부터 대형(1FT~5FT)까지 10개 모델 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 Natural Gas / Propane / Butane 가스를 모두 사용할 수 있습니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["2단 연소 방식", "30단계 화염 제어", "NOₓ 저배출", "0.5FT~5FT 라인업"].map((tag) => (
