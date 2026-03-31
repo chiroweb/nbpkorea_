@@ -22,10 +22,15 @@ export async function generateMetadata({
       template: "%s",
     },
     description: t("description"),
+    keywords: t.has("keywords") ? t("keywords").split(", ") : undefined,
     openGraph: {
       type: "website",
       siteName: "NBPKOREA",
-      images: [{ url: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/og-image.png", width: 1200, height: 630, alt: "NBPKOREA" }],
+      title: t("title"),
+      description: t("description"),
+      url: BASE_URL,
+      locale: locale === "ko" ? "ko_KR" : "en_US",
+      images: [{ url: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/og-image.png", width: 1200, height: 630, alt: "NBPKOREA 엔비피코리아" }],
     },
     twitter: {
       card: "summary_large_image",
@@ -34,7 +39,10 @@ export async function generateMetadata({
     verification: {
       google: "G0e3Fu9PKHVK1FKNaEeTI4yWVshHWX5ye_hZNpc8BcY",
       other: {
-        "naver-site-verification": "660a1318bb81316856f860eed804e95c00af33a2",
+        "naver-site-verification": [
+          "660a1318bb81316856f860eed804e95c00af33a2",
+          "7a53b48b9c79782fc4bcd662b5b22bbffd093874",
+        ],
       },
     },
     manifest: "/manifest.json",
@@ -70,8 +78,9 @@ export default async function LocaleLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "NBPKOREA",
+    alternateName: "엔비피코리아",
     url: BASE_URL,
-    logo: `${BASE_URL}/icon.png`,
+    logo: `${BASE_URL}/icon-512.png`,
     telephone: "031-434-6566",
     email: "nbpkorea@nbpkorea.co.kr",
     address: {

@@ -1,81 +1,82 @@
 {
   "metadata": {
-    "title": "NBPKOREA | 산업용 연소/환경 설비 전문기업",
-    "description": "NBPKOREA는 2006년 설립 이래 산업용 연소장비 및 환경설비 분야의 전문 기업입니다. 메탈버너, 환경설비(RTO, RCO, CTO), 산업용 가스히터 등 고효율 솔루션을 설계·제작·시공합니다.",
+    "title": "NBPKOREA(엔비피코리아) | 산업용 연소/환경 설비 전문기업",
+    "description": "엔비피코리아(NBPKOREA)는 2006년 설립 이래 산업용 연소장비 및 환경설비 분야의 전문 기업입니다. 메탈버너, 환경설비(RTO, RCO, CTO), 산업용 가스히터 등 고효율 솔루션을 설계·제작·시공합니다.",
+    "keywords": "엔비피코리아, NBPKOREA, NBP코리아, 산업용버너, 메탈버너, RTO, RCO, CTO, 환경설비, 연소설비, 가스히터, VOCs, 축열식연소산화장치",
     "home": {
-      "title": "NBPKOREA | 산업용 연소/환경 설비 전문기업",
-      "description": "산업용 연소장비 및 환경설비 전문. 메탈버너, RTO, RCO, CTO 등 고효율 솔루션을 설계·제작·시공합니다. 2006년 설립, 80여 주요 기업 납품."
+      "title": "NBPKOREA(엔비피코리아) | 산업용 연소/환경 설비 전문기업",
+      "description": "엔비피코리아(NBPKOREA) - 산업용 연소장비 및 환경설비 전문. 메탈버너, RTO, RCO, CTO 등 고효율 솔루션을 설계·제작·시공합니다. 2006년 설립, 80여 주요 기업 납품."
     },
     "about": {
-      "title": "회사소개 | NBPKOREA",
-      "description": "2006년 경기도 안산에서 설립된 NBPKOREA. 17건의 등록 특허, 미국·터키 글로벌 파트너십, 80여 기업 납품 실적을 보유한 산업용 연소·환경설비 전문기업."
+      "title": "회사소개 | NBPKOREA(엔비피코리아)",
+      "description": "2006년 경기도 안산에서 설립된 엔비피코리아(NBPKOREA). 17건의 등록 특허, 미국·터키 글로벌 파트너십, 80여 기업 납품 실적을 보유한 산업용 연소·환경설비 전문기업."
     },
     "business": {
-      "title": "사업분야 | NBPKOREA",
-      "description": "NBPKOREA의 3대 사업분야: 환경설비(RTO·RCO·CTO·TO), 연소설비(가스히터·제습기·도장건조기), 산업용 버너. VOCs 저감부터 고효율 연소까지 원스톱 솔루션."
+      "title": "사업분야 | NBPKOREA(엔비피코리아)",
+      "description": "엔비피코리아의 3대 사업분야: 환경설비(RTO·RCO·CTO·TO), 연소설비(가스히터·제습기·도장건조기), 산업용 버너. VOCs 저감부터 고효율 연소까지 원스톱 솔루션."
     },
     "products": {
-      "title": "제품/솔루션 | NBPKOREA",
-      "description": "NBPKOREA 전제품 라인업. NK-RTO 축열식연소산화장치, NK-RCO 축열식촉매연소산화장치, NK-CTO 촉매연소산화장치, NK-TO, NKGH 가스히터, NK-IDGH, 메탈버너 등."
+      "title": "제품/솔루션 | NBPKOREA(엔비피코리아)",
+      "description": "엔비피코리아 전제품 라인업. NK-RTO 축열식연소산화장치, NK-RCO 축열식촉매연소산화장치, NK-CTO 촉매연소산화장치, NK-TO, NKGH 가스히터, NK-IDGH, 메탈버너 등."
     },
     "technology": {
-      "title": "기술/R&D | NBPKOREA",
-      "description": "NBPKOREA의 핵심 기술: 메탈버너, 컴팩트 메탈 히터. 17건 등록 특허 기반 독자 기술 개발. KOITA 인증 기업부설연구소 운영."
+      "title": "기술/R&D | NBPKOREA(엔비피코리아)",
+      "description": "엔비피코리아의 핵심 기술: 메탈버너, 컴팩트 메탈 히터. 17건 등록 특허 기반 독자 기술 개발. KOITA 인증 기업부설연구소 운영."
     },
     "news": {
-      "title": "NBP NEWS | NBPKOREA",
-      "description": "NBPKOREA의 최신 뉴스, 기술 인사이트, 제품 소식, 파트너십 및 언론 보도를 확인하세요."
+      "title": "NBP NEWS | NBPKOREA(엔비피코리아)",
+      "description": "엔비피코리아의 최신 뉴스, 기술 인사이트, 제품 소식, 파트너십 및 언론 보도를 확인하세요."
     },
     "support": {
-      "title": "고객센터 | NBPKOREA",
-      "description": "NBPKOREA 고객센터. 제품 상담, 견적 요청, A/S 문의, 방문 상담 예약. 전화 031-434-6566, 평일 09:00-18:00."
+      "title": "고객센터 | NBPKOREA(엔비피코리아)",
+      "description": "엔비피코리아 고객센터. 제품 상담, 견적 요청, A/S 문의, 방문 상담 예약. 전화 031-434-6566, 평일 09:00-18:00."
     },
     "performance": {
-      "title": "사업실적 | NBPKOREA",
-      "description": "NBPKOREA의 주요 사업실적 및 프로젝트 납품 현황."
+      "title": "사업실적 | NBPKOREA(엔비피코리아)",
+      "description": "엔비피코리아의 주요 사업실적 및 프로젝트 납품 현황."
     },
     "nkCto": {
-      "title": "NK-CTO 촉매연소산화장치 | NBPKOREA",
+      "title": "NK-CTO 촉매연소산화장치 | NBPKOREA(엔비피코리아)",
       "description": "NK-CTO는 촉매를 이용해 VOCs·악취를 저온 연소·무해화하는 촉매연소산화장치. NOx 생성 최소화, 반도체·도장·화학·식품 산업 적용."
     },
     "nkRto": {
-      "title": "NK-RTO 축열식연소산화장치 | NBPKOREA",
+      "title": "NK-RTO 축열식연소산화장치 | NBPKOREA(엔비피코리아)",
       "description": "NK-RTO는 연소열을 축열재로 회수하는 축열식연소산화장치. 99% 이상 열효율, 에너지 절감형 VOCs 처리 시스템."
     },
     "nkRco": {
-      "title": "NK-RCO 축열촉매산화장치 | NBPKOREA",
+      "title": "NK-RCO 축열촉매산화장치 | NBPKOREA(엔비피코리아)",
       "description": "NK-RCO는 축열식과 촉매연소를 결합한 고효율 VOCs 처리 시스템. 저온 운전으로 운영비 절감."
     },
     "nkTo": {
-      "title": "NK-TO 직접연소산화장치 | NBPKOREA",
+      "title": "NK-TO 직접연소산화장치 | NBPKOREA(엔비피코리아)",
       "description": "NK-TO는 고온 직접연소 방식의 VOCs 처리 장치. 고농도·고유량 배기가스 처리에 최적화."
     },
     "nkgh": {
-      "title": "NKGH 직화식 가스히터 | NBPKOREA",
+      "title": "NKGH 직화식 가스히터 | NBPKOREA(엔비피코리아)",
       "description": "NKGH 시리즈는 25,000~1,000,000 kcal/h 직화식 가스히터. 자동차 도장 부스, 선박 블록 작업장, 물류 창고에 최적."
     },
     "nkIdgh": {
-      "title": "NK-IDGH 간접식 가스히터 | NBPKOREA",
+      "title": "NK-IDGH 간접식 가스히터 | NBPKOREA(엔비피코리아)",
       "description": "NK-IDGH는 열교환기를 통한 간접 가열 방식의 산업용 가스히터. 청정 환경이 요구되는 작업장에 적합."
     },
     "dehumidifier": {
-      "title": "복합식 제습기 | NBPKOREA",
+      "title": "복합식 제습기 | NBPKOREA(엔비피코리아)",
       "description": "NBPKOREA 복합식 제습기. 연소방식과 냉각방식을 결합한 고효율 산업용 제습 시스템."
     },
     "paintDryer": {
-      "title": "차량 도장 건조기 | NBPKOREA",
+      "title": "차량 도장 건조기 | NBPKOREA(엔비피코리아)",
       "description": "NBPKOREA 차량 도장 건조기. 자동차 도장 부스 전용 고효율 건조 시스템."
     },
     "ductBurner": {
-      "title": "덕트 버너 | NBPKOREA",
+      "title": "덕트 버너 | NBPKOREA(엔비피코리아)",
       "description": "NBPKOREA 덕트 버너. 배기 덕트 내 직접 설치형 고효율 산업용 버너."
     },
     "lineBurner": {
-      "title": "라인 버너 | NBPKOREA",
+      "title": "라인 버너 | NBPKOREA(엔비피코리아)",
       "description": "NBPKOREA 라인 버너. 균등 연소로 에너지 효율을 극대화하는 금속화이버 라인 버너."
     },
     "portableBurner": {
-      "title": "포터블 버너 | NBPKOREA",
+      "title": "포터블 버너 | NBPKOREA(엔비피코리아)",
       "description": "NBPKOREA 포터블 버너. 이동식 설계의 컴팩트 산업용 버너."
     }
   },
