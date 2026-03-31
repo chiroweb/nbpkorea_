@@ -32,6 +32,7 @@ export async function generateMetadata({
       images: ["https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/og-image.png"],
     },
     verification: {
+      google: "G0e3Fu9PKHVK1FKNaEeTI4yWVshHWX5ye_hZNpc8BcY",
       other: {
         "naver-site-verification": "660a1318bb81316856f860eed804e95c00af33a2",
       },
