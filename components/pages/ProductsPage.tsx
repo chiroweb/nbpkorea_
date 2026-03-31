@@ -237,7 +237,7 @@ function ProductsPageInner() {
       title: t("nav.ductBurner"),
       subtitle: t("burner.ductBurner.subtitle"),
       href: "/products/burner/duct-burner",
-      image: `${S3}/images/burner/1FT.png`,
+      image: `/images/duct-burner-hero.jpg`,
       description: t("burner.ductBurner.description"),
       tags: ["주력 제품", "NOₓ 저배출", "범용"],
     },
