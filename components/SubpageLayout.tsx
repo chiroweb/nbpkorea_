@@ -10,6 +10,7 @@ interface SubpageLayoutProps {
   title: string;
   subtitle?: string;
   breadcrumb: { label: string; href: string }[];
+  compact?: boolean;
 }
 
 export default function SubpageLayout({
@@ -17,6 +18,7 @@ export default function SubpageLayout({
   title,
   subtitle,
   breadcrumb,
+  compact = false,
 }: SubpageLayoutProps) {
   const { ref, isInView } = useInView({ threshold: 0.3 });
 
@@ -44,7 +46,7 @@ export default function SubpageLayout({
       {/* Page Hero Banner */}
       <section
         ref={ref}
-        className="pt-32 pb-20 md:pt-40 md:pb-28 px-6 md:px-12 bg-white"
+        className={`pt-32 px-6 md:px-12 bg-white ${compact ? "pb-8 md:pt-36 md:pb-10" : "pb-20 md:pt-40 md:pb-28"}`}
       >
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumb */}

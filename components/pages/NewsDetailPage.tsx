@@ -71,6 +71,7 @@ export default function NewsDetailPage() {
         { label: t("breadcrumb"), href: "/news" },
         { label: post.category, href: "/news" },
       ]}
+      compact
     >
       <article className="px-6 md:px-12 pt-4 pb-16">
         <div className="max-w-3xl mx-auto">
