@@ -91,11 +91,11 @@ const navData = [
         label: "공조설비",
         href: "/products/hvac",
         items: [
-          { label: "클린룸", href: "/products/hvac/cleanroom" },
-          { label: "Dry Room", href: "/products/hvac/dry-room" },
+          { label: "클린룸 공조기", href: "/products/hvac/cleanroom" },
+          { label: "드라이룸 공조기", href: "/products/hvac/dry-room" },
           { label: "직화식 공조기", href: "/products/hvac/direct-ahu" },
           { label: "도어히터", href: "/products/hvac/door-heater" },
-          { label: "제습기", href: "/products/hvac/dehumidifier" },
+          { label: "복합식 제습기", href: "/products/hvac/dehumidifier" },
         ],
       },
       {

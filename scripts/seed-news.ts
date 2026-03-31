@@ -99,14 +99,14 @@ const news = [
     slug: "hybrid-dehumidifier-paint-booth",
     category: "제품 소식",
     date: "2025.07.30",
-    title: "하이브리드 제습기, 자동차 도장 부스 적용 확대",
-    excerpt: "BMW·아우디·기아 협력사 도장 라인에 적용된 NBPKOREA 하이브리드 제습기의 성능과 에너지 절감 효과를 소개합니다.",
+    title: "복합식 제습기, 자동차 도장 부스 적용 확대",
+    excerpt: "BMW·아우디·기아 협력사 도장 라인에 적용된 NBPKOREA 복합식 제습기의 성능과 에너지 절감 효과를 소개합니다.",
     image_url: `${S3}/images/service-combustion.png`,
     read_time: "5분",
     is_published: true,
     content: [
-      { type: "h2", text: "하이브리드 제습기 개요" },
-      { type: "p", text: "NBPKOREA 하이브리드 제습기는 BMW, 아우디, 기아 협력사 도장 라인에 납품되어 에너지 절감과 품질 향상을 동시에 실현했습니다." },
+      { type: "h2", text: "복합식 제습기 개요" },
+      { type: "p", text: "NBPKOREA 복합식 제습기는 BMW, 아우디, 기아 협력사 도장 라인에 납품되어 에너지 절감과 품질 향상을 동시에 실현했습니다." },
     ],
   },
 ];

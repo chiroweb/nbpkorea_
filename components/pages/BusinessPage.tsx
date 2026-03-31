@@ -396,7 +396,7 @@ export default function BusinessPage() {
       image: `${S3}/images/hvac/hvac-main.png`,
       description: t("hvac.description"),
       tags: ["공조", "환기", "설비"],
-      applications: ["반도체 클린룸", "2차전지 Dry Room", "도장 부스", "식품 공장", "제약 GMP", "데이터센터"],
+      applications: ["반도체 클린룸", "2차전지 드라이룸", "도장 부스", "식품 공장", "제약 GMP", "데이터센터"],
     },
     {
       id: 3,

@@ -126,11 +126,11 @@
       },
       "hvac": {
         "title": "HVAC Systems",
-        "description": "Precision temperature, humidity, and cleanliness control for advanced industries — semiconductor cleanrooms, secondary battery Dry Rooms, pharmaceutical GMP, direct-fired AHUs, door heaters, and hybrid dehumidifiers (NK-MDGH). We design, manufacture, and install energy-efficient HVAC solutions."
+        "description": "Precision temperature, humidity, and cleanliness control for advanced industries — semiconductor cleanrooms, secondary battery Dry Rooms, pharmaceutical GMP, direct-fired AHUs, door heaters, and combined dehumidifiers (NK-MDGH). We design, manufacture, and install energy-efficient HVAC solutions."
       },
       "combustion": {
         "title": "Combustion Systems",
-        "description": "High-efficiency combustion environmental systems available only from NBPKOREA worldwide. From direct-fired gas heaters (NKGH Series, 25,000–1,000,000 kcal/h) and indirect gas heaters (NK-IDGH Series) to hybrid dehumidifiers and vehicle paint dryers — we deliver compact, optimized combustion solutions for automotive paint booths, shipyard block shops, warehouses, and food and chemical plants."
+        "description": "High-efficiency combustion environmental systems available only from NBPKOREA worldwide. From direct-fired gas heaters (NKGH Series, 25,000–1,000,000 kcal/h) and indirect gas heaters (NK-IDGH Series) to combined dehumidifiers and vehicle paint dryers — we deliver compact, optimized combustion solutions for automotive paint booths, shipyard block shops, warehouses, and food and chemical plants."
       },
       "burner": {
         "title": "Industrial Burners",
@@ -344,11 +344,11 @@
     },
     "hvac": {
       "title": "HVAC Systems Division",
-      "description": "We design, manufacture, and install precision air conditioning systems for semiconductor cleanrooms, secondary battery Dry Rooms, pharmaceutical GMP facilities, and more. Our solutions include direct-fired AHUs, door heaters, and hybrid dehumidifiers (NK-MDGH) for energy-efficient climate control."
+      "description": "We design, manufacture, and install precision air conditioning systems for semiconductor cleanrooms, secondary battery Dry Rooms, pharmaceutical GMP facilities, and more. Our solutions include direct-fired AHUs, door heaters, and combined dehumidifiers (NK-MDGH) for energy-efficient climate control."
     },
     "combustion": {
       "title": "Combustion Systems Division",
-      "description": "We design, manufacture, and supply high-efficiency combustion equipment for various industries, including industrial direct/indirect gas heaters, proprietary metal fiber burners (NBP-MB), hybrid dehumidifiers, and vehicle paint drying systems."
+      "description": "We design, manufacture, and supply high-efficiency combustion equipment for various industries, including industrial direct/indirect gas heaters, proprietary metal fiber burners (NBP-MB), combined dehumidifiers, and vehicle paint drying systems."
     },
     "industries": {
       "title": "Industry Applications",
@@ -441,11 +441,11 @@
       ]
     },
     "nav": {
-      "cleanroom": "Clean Room",
-      "dryRoom": "Dry Room",
+      "cleanroom": "Cleanroom AHU",
+      "dryRoom": "Dry Room AHU",
       "directAhu": "Direct-Fired AHU",
       "doorHeater": "Door Heater",
-      "dehumidifier": "Dehumidifier",
+      "dehumidifier": "Combined Dehumidifier",
       "directHeater": "Direct Gas Heater",
       "indirectHeater": "Indirect Gas Heater",
       "ductBurner": "Duct Burner",
@@ -543,11 +543,11 @@
     },
     "hvac": {
       "cleanroom": {
-        "subtitle": "Clean Room HVAC System",
+        "subtitle": "Cleanroom AHU",
         "description": "Cleanroom HVAC system optimized for ultra-clean environments in semiconductor, display, pharmaceutical (GMP), and precision equipment industries. Achieves Class 1–100,000 cleanliness with HEPA/ULPA filtration, precision temperature/humidity control, and positive pressure management."
       },
       "dryRoom": {
-        "subtitle": "Dry Room HVAC System",
+        "subtitle": "Dry Room AHU",
         "description": "Ultra-low humidity Dry Room HVAC system specialized for secondary battery (lithium-ion) manufacturing. Maintains dew point below -40°C to ensure electrode and assembly process quality and safety."
       },
       "directAhu": {
@@ -559,8 +559,8 @@
         "description": "Air curtain heater installed at factory, logistics center, and cold storage entrances to block outside cold air and maintain indoor temperature. Gas direct-fired operation reduces operating costs compared to electric air curtains."
       },
       "dehumidifier": {
-        "subtitle": "Hybrid Dehumidifier (NK-MDGH Series)",
-        "description": "Hybrid dehumidification system combining cooling dehumidifier and direct-fired gas heater. Achieves 30% fuel cost reduction, 4-season hybrid operation, and 8,500–30,000 m³/h airflow for shipyard block shops, paint workshops, and cleanrooms."
+        "subtitle": "Combined Dehumidifier (NK-MDGH Series)",
+        "description": "Combined dehumidification system combining cooling dehumidifier and direct-fired gas heater. Achieves 30% fuel cost reduction, 4-season hybrid operation, and 8,500–30,000 m³/h airflow for shipyard block shops, paint workshops, and cleanrooms."
       }
     },
     "combustion": {
@@ -577,9 +577,9 @@
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
       },
       "dehumidifier": {
-        "subtitle": "Hybrid Dehumidifier (NK-MDGH Series)",
+        "subtitle": "Combined Dehumidifier (NK-MDGH Series)",
         "description": "Combined refrigeration dehumidification and gas heating package. 4-season operation support, dedicated to high-humidity environments like ship block painting, welding, and clean rooms.",
-        "ctaTitle": "Considering the Hybrid Dehumidifier?",
+        "ctaTitle": "Considering the Combined Dehumidifier?",
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
       },
       "paintDryer": {

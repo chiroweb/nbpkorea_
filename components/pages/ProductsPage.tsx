@@ -164,7 +164,7 @@ function ProductsPageInner() {
     {
       id: "cleanroom",
       title: t("hvac.cleanroom.subtitle"),
-      subtitle: "Clean Room",
+      subtitle: "Cleanroom AHU",
       href: "/products/hvac/cleanroom",
       image: `${S3}/images/hvac/cleanroom.jpg`,
       description: t("hvac.cleanroom.description"),
@@ -173,7 +173,7 @@ function ProductsPageInner() {
     {
       id: "dry-room",
       title: t("hvac.dryRoom.subtitle"),
-      subtitle: "Dry Room",
+      subtitle: "Dry Room AHU",
       href: "/products/hvac/dry-room",
       image: `${S3}/images/hvac/dry-room-main.jpg`,
       description: t("hvac.dryRoom.description"),

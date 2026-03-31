@@ -14,8 +14,8 @@ export default function CleanroomPage() {
       breadcrumbCategory={t("breadcrumbs.hvac")}
       breadcrumbCategoryHref="/products?tab=hvac"
       subtitle="HVAC · Clean Room"
-      titleKo="클린룸 공조 시스템"
-      titleEn="Clean Room HVAC System"
+      titleKo="클린룸 공조기"
+      titleEn="Cleanroom AHU"
       description={t("hvac.cleanroom.description")}
       image="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/hvac/cleanroom.jpg"
       tags={["반도체", "제약", "정밀제조", "청정환경"]}
