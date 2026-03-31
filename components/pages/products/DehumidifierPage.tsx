@@ -69,7 +69,7 @@ export default function DehumidifierPage() {
 
   return (
     <SubpageLayout
-      title="NK-MDGH Series"
+      title="복합식 제습기"
       subtitle={`${t("combustion.dehumidifier.subtitle")} — Gas Heater Hybrid Dehumidifier`}
       breadcrumb={[
         { label: t("breadcrumb"), href: "/products" },
@@ -91,7 +91,7 @@ export default function DehumidifierPage() {
               Combustion · Hybrid Dehumidifier
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
-              복합식 제습기<br />(NK-MDGH Series)
+              복합식 제습기
             </h2>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
               NK-MDGH 시리즈는 냉각제습기와 직화식 가스히터를 병행하여 설비 투자 비용 및 에너지 절약, 운전비용 절감 효과를 실현한 복합식 제습 시스템입니다. 습기에 의한 불쾌감 또는 제품 품질의 생산성 저하를 막기 위해 공급공기를 그 노점온도 이하로 냉각시켜 공기 중의 수분을 제거하는 방식입니다.

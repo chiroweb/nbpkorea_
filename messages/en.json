@@ -559,7 +559,7 @@
         "description": "Air curtain heater installed at factory, logistics center, and cold storage entrances to block outside cold air and maintain indoor temperature. Gas direct-fired operation reduces operating costs compared to electric air curtains."
       },
       "dehumidifier": {
-        "subtitle": "Combined Dehumidifier (NK-MDGH Series)",
+        "subtitle": "Combined Dehumidifier",
         "description": "Combined dehumidification system combining cooling dehumidifier and direct-fired gas heater. Achieves 30% fuel cost reduction, 4-season hybrid operation, and 8,500–30,000 m³/h airflow for shipyard block shops, paint workshops, and cleanrooms."
       }
     },
@@ -577,7 +577,7 @@
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
       },
       "dehumidifier": {
-        "subtitle": "Combined Dehumidifier (NK-MDGH Series)",
+        "subtitle": "Combined Dehumidifier",
         "description": "Combined refrigeration dehumidification and gas heating package. 4-season operation support, dedicated to high-humidity environments like ship block painting, welding, and clean rooms.",
         "ctaTitle": "Considering the Combined Dehumidifier?",
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
