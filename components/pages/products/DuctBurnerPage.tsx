@@ -13,16 +13,16 @@ import FloatingCaseLink from "@/components/FloatingCaseLink";
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const specs = [
-  { model: "NBP-SMB-10", size: "0.5FT (10cm)", capacity: "40,000",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
-  { model: "NBP-SMB-15", size: "0.75FT (15cm)", capacity: "60,000",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
-  { model: "NBP-SMB-20", size: "1FT (20cm)", capacity: "80,000",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
-  { model: "NBP-SMB-25", size: "1.25FT (25cm)", capacity: "100,000", pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
-  { model: "NBP-SMB-30", size: "1.5FT (30cm)", capacity: "120,000", pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
-  { model: "NBP-SMB-50", size: "2FT (50cm)", capacity: "200,000", pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
-  { model: "NBP-MB-30",  size: "1FT (30cm)", capacity: "187,500",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
-  { model: "NBP-MB-50",  size: "1.5FT (50cm)", capacity: "312,500",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
-  { model: "NBP-MB-100", size: "3FT (100cm)", capacity: "625,000",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
-  { model: "NBP-MB-200", size: "5FT (200cm)", capacity: "1,250,000", pressure: "50", turndown: "30단계", fuel: "LNG / LPG" },
+  { model: "KHMA-050", size: "0.5FT", capacity: "125,000", kw: "147", pressure: "35", fuel: "LNG / LPG" },
+  { model: "KHMA-100", size: "1FT", capacity: "250,000", kw: "293", pressure: "35", fuel: "LNG / LPG" },
+  { model: "KHMA-150", size: "1.5FT", capacity: "375,000", kw: "440", pressure: "35", fuel: "LNG / LPG" },
+  { model: "KHMA-200", size: "2FT", capacity: "500,000", kw: "586", pressure: "35", fuel: "LNG / LPG" },
+  { model: "KHMA-250", size: "2.5FT", capacity: "625,000", kw: "733", pressure: "35", fuel: "LNG / LPG" },
+  { model: "KHMA-300", size: "3FT", capacity: "750,000", kw: "879", pressure: "35", fuel: "LNG / LPG" },
+  { model: "KHMA-400", size: "4FT", capacity: "1,000,000", kw: "1,172", pressure: "35", fuel: "LNG / LPG" },
+  { model: "KHMA-450", size: "4.5FT", capacity: "1,125,000", kw: "1,319", pressure: "35", fuel: "LNG / LPG" },
+  { model: "KHMA-500", size: "5FT", capacity: "1,250,000", kw: "1,466", pressure: "50", fuel: "LNG / LPG" },
+  { model: "KHMA-600", size: "6FT", capacity: "1,500,000", kw: "1,759", pressure: "50", fuel: "LNG / LPG" },
 ];
 
 const sizeGallery = [
@@ -31,8 +31,6 @@ const sizeGallery = [
   { label: "1.5FT", image: `${S3}/images/burner/1.5FT.png` },
   { label: "3FT",   image: `${S3}/images/burner/3FT-T.png` },
   { label: "5FT",   image: `${S3}/images/burner/5FT-T.png` },
-  { label: "100만 Kcal/h", image: `${S3}/images/burner/100man.png` },
-  { label: "150만 Kcal/h", image: `${S3}/images/burner/150man.png` },
 ];
 
 const features = [
@@ -44,8 +42,8 @@ const features = [
   "공기 속도 800~4,000 ft/min 대응 — 다양한 덕트 설계에 유연 적용",
   "2단 연소 시스템으로 화염 안정성 극대화, 화염 길이 25cm 이하 유지",
   "노즐 교체 없이 LNG / LPG 가스 모두 사용 가능",
-  "내열 금속섬유 연소면 — 복사 열전달로 에너지 효율 30% 이상 향상",
-  "0.5FT(10cm)~5FT(200cm) 다양한 라인업으로 덕트 크기에 맞춤 선택",
+  "내열 메탈파이버 연소면 — 복사 열전달로 에너지 효율 30% 이상 향상",
+  "0.5FT~6FT 다양한 KHMA 라인업으로 덕트 크기에 맞춤 선택",
   "화염 제어 30단계 — 타 메이커 버너 대비 정밀 온도 제어",
   "MIDCO International(미국) 기술 협력 — 글로벌 검증된 연소 시스템",
 ];
@@ -100,13 +98,13 @@ export default function DuctBurnerPage() {
               덕트버너<br />(Duct Burner)
             </h2>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
-              NBPKOREA 덕트버너는 내열 금속섬유(Metal Fiber)로 제작된 연소면에서 적외선 복사열을 발생시키는 표면연소 방식의 산업용 덕트 가열 버너입니다. MIDCO International(미국)과의 기술 협력을 바탕으로, ANSI Z83.4 / Z83.18 기준을 충족하는 NOₓ·CO 저배출 설계를 실현합니다.
+              NBPKOREA 덕트버너는 내열 메탈파이버(Metal Fiber)로 제작된 연소면에서 적외선 복사열을 발생시키는 표면연소 방식의 산업용 덕트 가열 버너입니다. MIDCO International(미국)과의 기술 협력을 바탕으로, ANSI Z83.4 / Z83.18 기준을 충족하는 NOₓ·CO 저배출 설계를 실현합니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
-              소형(0.5FT~2FT)부터 대형(1FT~5FT)까지 10개 모델 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다.
+              소형(0.5FT)부터 대형(6FT)까지 KHMA 시리즈 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다.
             </p>
             <div className="flex flex-wrap gap-3">
-              {["2단 연소 방식", "30단계 화염 제어", "NOₓ 저배출", "0.5FT~5FT 라인업"].map((tag) => (
+              {["2단 연소 방식", "30단계 화염 제어", "NOₓ 저배출", "0.5FT~6FT 라인업"].map((tag) => (
                 <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
                   {tag}
                 </span>
@@ -117,7 +115,7 @@ export default function DuctBurnerPage() {
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
               <Image
                 src={`${S3}/images/burner/1FT.png`}
-                alt="덕트버너 — 금속화이버 표면연소 버너"
+                alt="덕트버너 — 메탈 표면연소 버너"
                 fill className="object-cover object-center" priority
               />
             </div>
@@ -146,13 +144,13 @@ export default function DuctBurnerPage() {
           <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">연소 원리 — Two-Stage Surface Combustion</p>
           <div className="flex flex-wrap items-center gap-3">
             {[
-              { label: "가스 공급\nNatural/LPG", bg: "#DCE2E8", text: "#2d2a28" },
+              { label: "가스 공급\nLNG/LPG", bg: "#DCE2E8", text: "#2d2a28" },
               { label: "→", isArrow: true },
               { label: "1차 연소\n(저NOₓ 예혼합)", bg: "#C05010", text: "#fff" },
               { label: "→", isArrow: true },
               { label: "2차 연소\n(완전 연소)", bg: "#E8A060", text: "#fff" },
               { label: "→", isArrow: true },
-              { label: "금속섬유면\n적외선 복사열", bg: "#2d2a28", text: "#fff" },
+              { label: "메탈파이버면\n적외선 복사열", bg: "#2d2a28", text: "#fff" },
               { label: "→", isArrow: true },
               { label: "덕트 내\n균일 가열", bg: "#4A5568", text: "#fff" },
             ].map((step, i) =>
@@ -189,7 +187,7 @@ export default function DuctBurnerPage() {
       <section ref={galleryRef} className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
           <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">사이즈별 라인업</p>
-          <p className="text-xs text-[#8B95A1] mb-8 tracking-[0.05em]">소형 0.5FT부터 대형 5FT(150만 Kcal/h)까지 현장 덕트 크기에 맞춘 맞춤 선택</p>
+          <p className="text-xs text-[#8B95A1] mb-8 tracking-[0.05em]">소형 0.5FT부터 대형 6FT(150만 Kcal/h)까지 현장 덕트 크기에 맞춘 맞춤 선택</p>
           <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 transition-all duration-1000 ${galleryInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {sizeGallery.map((item) => (
               <div key={item.label} className="bg-white border border-[#D4DAE2] overflow-hidden">
@@ -219,7 +217,7 @@ export default function DuctBurnerPage() {
             <table className="w-full text-xs border-collapse min-w-[640px]">
               <thead>
                 <tr className="border-b-2 border-[#2d2a28]">
-                  {["MODEL", "사이즈", "연소 용량 (Kcal/h)", "통과압력 (mmAq)", "턴다운", "연료"].map((h) => (
+                  {["MODEL", "사이즈", "출력 (kW)", "연소 용량 (Kcal/h)", "통과압력 (mmAq)", "연료"].map((h) => (
                     <th key={h} className="py-3 px-4 text-left text-[13px] tracking-[0.12em] uppercase text-[#2d2a28] font-medium">{h}</th>
                   ))}
                 </tr>
@@ -235,9 +233,9 @@ export default function DuctBurnerPage() {
                   >
                     <td className={`py-3.5 px-4 font-medium tracking-[0.05em] ${selectedModel === row.model ? "text-[#C05010]" : "text-[#2d2a28]"}`}>{row.model}</td>
                     <td className="py-3.5 px-4 text-[#8B95A1]">{row.size}</td>
+                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.kw}</td>
                     <td className="py-3.5 px-4 text-[#8B95A1]">{row.capacity}</td>
                     <td className="py-3.5 px-4 text-[#8B95A1]">{row.pressure}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.turndown}</td>
                     <td className="py-3.5 px-4 text-[#8B95A1]">{row.fuel}</td>
                   </tr>
                 ))}

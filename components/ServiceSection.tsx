@@ -47,7 +47,7 @@ export default function ServiceSection() {
       title: t("burner.title"),
       subtitle: "Burner",
       description: t("burner.description"),
-      tags: ["NBP-MB", "NBP-SMB", "Low-NOx", "Uniform Combustion"],
+      tags: ["KHMA Series", "Low-NOx", "Metal Fiber", "Uniform Combustion"],
       image: `${S3}/images/metal-burner2.png`,
     },
   ];

@@ -21,7 +21,7 @@ const subProducts = [
     name: "메탈섬유 버너",
     nameEn: "Metal Fiber Knit Burner",
     image: `${S3}/images/burner/metal-fiber-burner.png`,
-    description: "내열 금속섬유를 니트상으로 짜서 만든 신개념의 표면 연소 버너. 다양한 형태로 가공이 가능하며 높은 효율 및 컴팩트한 구조가 특징입니다.",
+    description: "내열 메탈파이버를 니트상으로 짜서 만든 신개념의 표면 연소 버너. 다양한 형태로 가공이 가능하며 높은 효율 및 컴팩트한 구조가 특징입니다.",
   },
 ];
 
@@ -133,7 +133,7 @@ export default function MetalFiberBurnerPage() {
       </SubpageLayout>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 -mt-8 mb-8">
-        <ApplicationTags category="burner" tags={["금속화이버", "세라믹 버너", "적외선", "저NOx"]} />
+        <ApplicationTags category="burner" tags={["메탈버너", "세라믹 버너", "적외선", "저NOx"]} />
       </div>
       <FloatingCaseLink category="burner" tag="메탈버너" label="메탈버너 적용 사례 보러가기" />
     </>
