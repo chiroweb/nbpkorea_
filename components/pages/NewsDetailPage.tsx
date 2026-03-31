@@ -9,6 +9,23 @@ import Image from "next/image";
 import { News } from "@/lib/types";
 import { useTranslations } from "next-intl";
 
+function NewsImage({ src, alt }: { src: string; alt: string }) {
+  const [error, setError] = useState(false);
+  if (error) return null;
+  return (
+    <div className="relative w-full aspect-[16/9] mb-12 overflow-hidden bg-[#E8ECF0]">
+      <Image
+        src={src}
+        alt={alt}
+        fill
+        className="object-cover"
+        priority
+        onError={() => setError(true)}
+      />
+    </div>
+  );
+}
+
 export default function NewsDetailPage() {
   const { slug } = useParams<{ slug: string }>();
   const [post, setPost] = useState<News | null>(null);
@@ -92,19 +109,7 @@ export default function NewsDetailPage() {
 
           {/* Thumbnail */}
           {post.image_url && (
-            <div
-              className={`relative w-full aspect-[16/9] mb-12 overflow-hidden bg-[#E8ECF0] transition-all duration-700 delay-300 ${
-                isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
-              }`}
-            >
-              <Image
-                src={post.image_url}
-                alt={post.title}
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+            <NewsImage src={post.image_url} alt={post.title} />
           )}
 
           {/* Divider */}
