@@ -46,7 +46,7 @@ export default function SubpageLayout({
       {/* Page Hero Banner */}
       <section
         ref={ref}
-        className={`pt-32 px-6 md:px-12 bg-white ${compact ? "pb-8 md:pt-36 md:pb-10" : "pb-20 md:pt-40 md:pb-28"}`}
+        className={`px-6 md:px-12 bg-white ${compact ? "pt-28 pb-4 md:pt-32 md:pb-6" : "pt-32 pb-20 md:pt-40 md:pb-28"}`}
       >
         <div className="max-w-7xl mx-auto">
           {/* Breadcrumb */}
