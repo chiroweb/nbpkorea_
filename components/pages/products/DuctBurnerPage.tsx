@@ -34,8 +34,8 @@ const sizeGallery = [
 ];
 
 const features = [
-  "NO₂ 및 CO 배출 최소화 — ANSI Z83.4 / Z83.18 기준 적합",
-  "2단 연소(Two-Stage) 방식으로 최대 연소 시에도 NOₓ 배출 최소화",
+  "NO2 및 CO 배출 최소화 — ANSI Z83.4 / Z83.18 기준 적합",
+  "2단 연소(Two-Stage) 방식으로 최대 연소 시에도 NOx 배출 최소화",
   "폭 30cm 기준 통과압력 35mmAq일 때 187,500 Kcal/h 고출력 실현",
   "50mmAQ 조건에서 250,000 Kcal/h 이상 연소 가능 (대형 모델)",
   "HMA-2 방식 — 차압 0.05″~1.4″ W.C. 광범위 운전",
@@ -97,13 +97,13 @@ export default function DuctBurnerPage() {
               덕트버너<br />(Duct Burner)
             </h2>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
-              NBPKOREA 덕트버너는 내열 메탈파이버(Metal Fiber)로 제작된 연소면에서 적외선 복사열을 발생시키는 표면연소 방식의 산업용 덕트 가열 버너입니다. MIDCO International(미국)과의 기술 협력을 바탕으로, ANSI Z83.4 / Z83.18 기준을 충족하는 NOₓ·CO 저배출 설계를 실현합니다.
+              NBPKOREA 덕트버너는 내열 메탈파이버(Metal Fiber)로 제작된 연소면에서 적외선 복사열을 발생시키는 표면연소 방식의 산업용 덕트 가열 버너입니다. MIDCO International(미국)과의 기술 협력을 바탕으로, ANSI Z83.4 / Z83.18 기준을 충족하는 NOx·CO 저배출 설계를 실현합니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
               소형(0.5FT)부터 대형(6FT)까지 NBP 시리즈 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다.
             </p>
             <div className="flex flex-wrap gap-3">
-              {["2단 연소 방식", "30단계 화염 제어", "NOₓ 저배출", "0.5FT~6FT 라인업"].map((tag) => (
+              {["2단 연소 방식", "30단계 화염 제어", "NOx 저배출", "0.5FT~6FT 라인업"].map((tag) => (
                 <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
                   {tag}
                 </span>
@@ -145,7 +145,7 @@ export default function DuctBurnerPage() {
             {[
               { label: "가스 공급\nLNG/LPG", bg: "#DCE2E8", text: "#2d2a28" },
               { label: "→", isArrow: true },
-              { label: "1차 연소\n(저NOₓ 예혼합)", bg: "#C05010", text: "#fff" },
+              { label: "1차 연소\n(저NOx 예혼합)", bg: "#C05010", text: "#fff" },
               { label: "→", isArrow: true },
               { label: "2차 연소\n(완전 연소)", bg: "#E8A060", text: "#fff" },
               { label: "→", isArrow: true },

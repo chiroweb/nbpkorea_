@@ -239,7 +239,7 @@ function ProductsPageInner() {
       href: "/products/burner/duct-burner",
       image: `/images/duct-burner-hero.jpg`,
       description: t("burner.ductBurner.description"),
-      tags: ["주력 제품", "NOₓ 저배출", "범용"],
+      tags: ["주력 제품", "NOx 저배출", "범용"],
     },
     {
       id: "fpb-burner",
