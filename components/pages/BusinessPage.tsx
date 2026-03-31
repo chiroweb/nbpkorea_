@@ -416,7 +416,7 @@ export default function BusinessPage() {
       subtitle: "Burner Division",
       image: `${S3}/images/business-burner-main.jpg`,
       description: t("burner.description"),
-      tags: ["덕트버너", "로용버너", "저녹스버너", "오븐버너", "라인버너", "메탈화이버"],
+      tags: ["덕트버너", "로용버너", "저녹스버너", "오븐버너", "메탈버너"],
       marketShare: "40%",
       applications: ["철강 가열로", "유리 용해로", "플라스틱 성형", "식품 건조", "섬유 건조", "프린팅·코팅", "시멘트", "열처리"],
     },

@@ -16,7 +16,6 @@ const staticPaths = [
   "/products/combustion/dehumidifier",
   "/products/combustion/paint-dryer",
   "/products/burner/duct-burner",
-  "/products/burner/line-burner",
   "/products/burner/portable-burner",
   "/technology",
   "/news",

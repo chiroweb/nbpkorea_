@@ -50,7 +50,6 @@ const features = [
 
 const applications = [
   "덕트 가열 시스템",
-  "환경설비(RTO/CTO) 보조 버너",
   "도장 부스 열풍 공급",
   "농수산물 건조 라인",
   "목재·합판 건조",

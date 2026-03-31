@@ -71,10 +71,6 @@
       "title": "Duct Burner | NBPKOREA",
       "description": "NBPKOREA duct burner — high-efficiency industrial burner installed directly inside exhaust ducts."
     },
-    "lineBurner": {
-      "title": "Line Burner | NBPKOREA",
-      "description": "NBPKOREA line burner — metal fiber line burner maximizing energy efficiency through uniform combustion."
-    },
     "portableBurner": {
       "title": "Portable Burner | NBPKOREA",
       "description": "NBPKOREA portable burner — compact, mobile industrial burner with easy-install design."
@@ -455,7 +451,6 @@
       "lowNoxBurner": "Low NOx Burner",
       "ovenBurner": "Oven Burner",
       "metalFiberBurner": "Metal Fiber Burner",
-      "lineBurner": "Line Burner",
       "valveTrain": "Valve Train Parts"
     },
     "breadcrumbs": {
@@ -625,12 +620,6 @@
         "subtitle": "Oven Burner — Heat Treatment Specialized",
         "description": "Burner specialized for dry ovens and drying equipment including food processing, plastic thermoforming, paint drying, printing/coating, cement, and textile tenter dryers.",
         "ctaTitle": "Considering the Oven Burner?",
-        "ctaDesc": "We will propose the optimal specifications for your site conditions."
-      },
-      "lineBurner": {
-        "subtitle": "Line Burner — Continuous Process Linear Heating",
-        "description": "Cylindrical industrial burner designed to supply uniform linear heat along continuous process lines. Optimized for conveyor-based continuous production in textile, printing, coating, and food drying applications.",
-        "ctaTitle": "Considering the Line Burner?",
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
       },
       "valveTrain": {

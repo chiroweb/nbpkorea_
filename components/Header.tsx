@@ -115,7 +115,6 @@ const navData = [
           { label: "로용 버너", href: "/products/burner/furnace-burner" },
           { label: "저녹스 버너", href: "/products/burner/low-nox-burner" },
           { label: "오븐 버너", href: "/products/burner/oven-burner" },
-          { label: "라인버너", href: "/products/burner/line-burner" },
           { label: "메탈버너", href: "/products/burner/metal-fiber-burner" },
           { label: "밸브트레인/부품류", href: "/products/burner/valve-train" },
         ],

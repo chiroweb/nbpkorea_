@@ -278,15 +278,6 @@ function ProductsPageInner() {
       tags: ["오븐", "열처리"],
     },
     {
-      id: "line-burner",
-      title: t("nav.lineBurner"),
-      subtitle: t("burner.lineBurner.subtitle"),
-      href: "/products/burner/line-burner",
-      image: `${S3}/images/burner/valve-burner.jpg`,
-      description: t("burner.lineBurner.description"),
-      tags: ["라인", "버너"],
-    },
-    {
       id: "metal-fiber-burner",
       title: t("nav.metalFiberBurner"),
       subtitle: t("burner.metalFiberBurner.subtitle"),

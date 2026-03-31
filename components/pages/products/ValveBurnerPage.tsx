@@ -14,7 +14,7 @@ export default function ValveBurnerPage() {
       breadcrumbCategory={t("breadcrumbs.burner")}
       breadcrumbCategoryHref="/products?tab=burner"
       subtitle="Industrial Burner · Valve"
-      titleKo="라인버너"
+      titleKo="밸브버너"
       titleEn="Valve Burner"
       description={t("burner.valveBurner.description")}
       image="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/burner/valve-burner.jpg"
@@ -25,6 +25,6 @@ export default function ValveBurnerPage() {
     <div className="max-w-7xl mx-auto px-6 md:px-12 -mt-8 mb-8">
       <ApplicationTags category="burner" tags={["밸브", "버너"]} />
     </div>
-    <FloatingCaseLink category="burner" tag="라인버너" label="라인버너 적용 사례 보러가기" /></>
+    <FloatingCaseLink category="burner" tag="밸브버너" label="밸브버너 적용 사례 보러가기" /></>
   );
 }
