@@ -16,7 +16,7 @@ const features = [
   "독립 운전 가능 — 별도 공장 설비 없이 현장 가스 공급만으로 운전",
   "NO₂ 및 CO 배출 최소화 — ANSI Z83.4 / Z83.18 기준 적합",
   "2단 연소(Two-Stage) 방식으로 최대 연소 시에도 NOₓ 배출 최소화",
-  "노즐 교체 없이 Natural / Propane / Butane 가스 모두 사용 가능",
+  "노즐 교체 없이 LNG / LPG 가스 모두 사용 가능",
   "30단계 정밀 화염 제어 — 현장 온도 조건 대응",
   "조선소 블록 내부 등 협소 현장에도 투입 가능한 컴팩트 구성",
   "화염 안정성 — 2단 연소 시스템으로 화염 길이 25cm 이하 유지",
@@ -76,7 +76,7 @@ export default function PortableBurnerPage() {
               NBPKOREA 메탈버너는 고정 설비 없이 현장에 직접 투입하여 즉시 운전할 수 있는 이동형 산업용 버너입니다. 조선소 블록 내부 가열, 건설 현장 콘크리트 양생, 선박 탱크 건조 등 일시적·이동성이 필요한 현장에 최적화되어 있습니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
-              MIDCO International(미국) 기술 기반의 2단 연소 방식으로 NOₓ·CO 배출을 최소화하며, 노즐 교체 없이 Natural Gas / Propane / Butane 가스를 모두 사용할 수 있습니다. 독립 운전 구성으로 현장 가스 공급만으로 즉시 가동됩니다.
+              MIDCO International(미국) 기술 기반의 2단 연소 방식으로 NOₓ·CO 배출을 최소화하며, 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다. 독립 운전 구성으로 현장 가스 공급만으로 즉시 가동됩니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["이동형", "현장 즉시 투입", "독립 운전", "복합 연료 대응"].map((tag) => (
@@ -121,7 +121,7 @@ export default function PortableBurnerPage() {
             {[
               { icon: "→", label: "현장 즉시 투입", desc: "별도 공장 설비 불필요 — 현장 가스 연결 즉시 가동" },
               { icon: "◎", label: "독립 운전", desc: "내장 제어반 탑재 — 단독 패키지로 완전 독립 운전 가능" },
-              { icon: "▲", label: "다연료 대응", desc: "노즐 교체 없이 LNG / LPG / Butane 가스 모두 사용" },
+              { icon: "▲", label: "다연료 대응", desc: "노즐 교체 없이 LNG / LPG 가스 모두 사용" },
               { icon: "●", label: "안전 시스템", desc: "과열 방지·불꽃 감지 자동 차단 안전 장치 기본 탑재" },
             ].map((item) => (
               <div key={item.label} className="bg-white border border-[#D4DAE2] p-4">
@@ -160,7 +160,7 @@ export default function PortableBurnerPage() {
             </p>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: "연료", value: "Natural / Propane / Butane" },
+                { label: "연료", value: "LNG / LPG" },
                 { label: "제어 방식", value: "PLC 또는 수동" },
                 { label: "배출 기준", value: "ANSI Z83.4 / Z83.18" },
                 { label: "운전 방식", value: "독립형 패키지" },

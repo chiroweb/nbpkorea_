@@ -13,16 +13,16 @@ import FloatingCaseLink from "@/components/FloatingCaseLink";
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const specs = [
-  { model: "NBP-SMB-10", size: "0.5FT (10cm)", capacity: "40,000",  pressure: "35", turndown: "30단계", fuel: "Natural/Propane/Butane" },
-  { model: "NBP-SMB-15", size: "0.75FT (15cm)", capacity: "60,000",  pressure: "35", turndown: "30단계", fuel: "Natural/Propane/Butane" },
-  { model: "NBP-SMB-20", size: "1FT (20cm)", capacity: "80,000",  pressure: "35", turndown: "30단계", fuel: "Natural/Propane/Butane" },
-  { model: "NBP-SMB-25", size: "1.25FT (25cm)", capacity: "100,000", pressure: "35", turndown: "30단계", fuel: "Natural/Propane/Butane" },
-  { model: "NBP-SMB-30", size: "1.5FT (30cm)", capacity: "120,000", pressure: "35", turndown: "30단계", fuel: "Natural/Propane/Butane" },
-  { model: "NBP-SMB-50", size: "2FT (50cm)", capacity: "200,000", pressure: "35", turndown: "30단계", fuel: "Natural/Propane/Butane" },
-  { model: "NBP-MB-30",  size: "1FT (30cm)", capacity: "187,500",  pressure: "35", turndown: "30단계", fuel: "Natural/Propane/Butane" },
-  { model: "NBP-MB-50",  size: "1.5FT (50cm)", capacity: "312,500",  pressure: "35", turndown: "30단계", fuel: "Natural/Propane/Butane" },
-  { model: "NBP-MB-100", size: "3FT (100cm)", capacity: "625,000",  pressure: "35", turndown: "30단계", fuel: "Natural/Propane/Butane" },
-  { model: "NBP-MB-200", size: "5FT (200cm)", capacity: "1,250,000", pressure: "50", turndown: "30단계", fuel: "Natural/Propane/Butane" },
+  { model: "NBP-SMB-10", size: "0.5FT (10cm)", capacity: "40,000",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
+  { model: "NBP-SMB-15", size: "0.75FT (15cm)", capacity: "60,000",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
+  { model: "NBP-SMB-20", size: "1FT (20cm)", capacity: "80,000",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
+  { model: "NBP-SMB-25", size: "1.25FT (25cm)", capacity: "100,000", pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
+  { model: "NBP-SMB-30", size: "1.5FT (30cm)", capacity: "120,000", pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
+  { model: "NBP-SMB-50", size: "2FT (50cm)", capacity: "200,000", pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
+  { model: "NBP-MB-30",  size: "1FT (30cm)", capacity: "187,500",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
+  { model: "NBP-MB-50",  size: "1.5FT (50cm)", capacity: "312,500",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
+  { model: "NBP-MB-100", size: "3FT (100cm)", capacity: "625,000",  pressure: "35", turndown: "30단계", fuel: "LNG / LPG" },
+  { model: "NBP-MB-200", size: "5FT (200cm)", capacity: "1,250,000", pressure: "50", turndown: "30단계", fuel: "LNG / LPG" },
 ];
 
 const sizeGallery = [
@@ -43,7 +43,7 @@ const features = [
   "HMA-2 방식 — 차압 0.05″~1.4″ W.C. 광범위 운전",
   "공기 속도 800~4,000 ft/min 대응 — 다양한 덕트 설계에 유연 적용",
   "2단 연소 시스템으로 화염 안정성 극대화, 화염 길이 25cm 이하 유지",
-  "노즐 교체 없이 Natural / Propane / Butane 가스 모두 사용 가능",
+  "노즐 교체 없이 LNG / LPG 가스 모두 사용 가능",
   "내열 금속섬유 연소면 — 복사 열전달로 에너지 효율 30% 이상 향상",
   "0.5FT(10cm)~5FT(200cm) 다양한 라인업으로 덕트 크기에 맞춤 선택",
   "화염 제어 30단계 — 타 메이커 버너 대비 정밀 온도 제어",
@@ -103,7 +103,7 @@ export default function DuctBurnerPage() {
               NBPKOREA 덕트버너는 내열 금속섬유(Metal Fiber)로 제작된 연소면에서 적외선 복사열을 발생시키는 표면연소 방식의 산업용 덕트 가열 버너입니다. MIDCO International(미국)과의 기술 협력을 바탕으로, ANSI Z83.4 / Z83.18 기준을 충족하는 NOₓ·CO 저배출 설계를 실현합니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
-              소형(0.5FT~2FT)부터 대형(1FT~5FT)까지 10개 모델 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 Natural Gas / Propane / Butane 가스를 모두 사용할 수 있습니다.
+              소형(0.5FT~2FT)부터 대형(1FT~5FT)까지 10개 모델 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["2단 연소 방식", "30단계 화염 제어", "NOₓ 저배출", "0.5FT~5FT 라인업"].map((tag) => (

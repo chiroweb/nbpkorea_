@@ -16,7 +16,7 @@ const features = [
   "2단 연소(Two-Stage) 방식으로 최대 연소 시에도 NOₓ 배출 최소화",
   "원통형 구조로 연속 공정 라인에 균일한 직선 가열 실현",
   "화염 안정성 극대화 — 2단 연소로 화염 길이 25cm 이하 유지",
-  "노즐 교체 없이 Natural / Propane / Butane 가스 모두 사용 가능",
+  "노즐 교체 없이 LNG / LPG 가스 모두 사용 가능",
   "내열 금속섬유 연소면 — 복사 열전달로 에너지 효율 30% 이상 향상",
   "30단계 정밀 화염 제어 — 공정 라인 온도 균일성 확보",
   "차압 범위 0.05″~1.4″ W.C. 광범위 운전 지원",
@@ -76,7 +76,7 @@ export default function LineBurnerPage() {
               NBPKOREA 라인버너는 연속 공정 라인에서 직선 방향으로 균일한 열원을 공급하도록 설계된 원통형 구조의 산업용 버너입니다. 섬유·인쇄·코팅·식품 건조 등 컨베이어 기반의 연속 생산 공정에 최적화되어 있습니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
-              MIDCO International(미국) 기술을 기반으로, 2단 연소 방식으로 최대 출력 시에도 NOₓ 배출을 최소화하며 화염 안정성을 유지합니다. 30단계 정밀 턴다운 제어로 공정 온도를 균일하게 관리할 수 있으며, 노즐 교체 없이 Natural Gas / Propane / Butane 가스를 모두 사용할 수 있습니다.
+              MIDCO International(미국) 기술을 기반으로, 2단 연소 방식으로 최대 출력 시에도 NOₓ 배출을 최소화하며 화염 안정성을 유지합니다. 30단계 정밀 턴다운 제어로 공정 온도를 균일하게 관리할 수 있으며, 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["원통형 구조", "직선 가열", "연속 공정", "NOₓ 저배출"].map((tag) => (
@@ -169,7 +169,7 @@ export default function LineBurnerPage() {
             </p>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
               {[
-                { label: "연료", value: "Natural / Propane / Butane" },
+                { label: "연료", value: "LNG / LPG" },
                 { label: "제어 방식", value: "30단계 화염 제어" },
                 { label: "배출 기준", value: "ANSI Z83.4 / Z83.18" },
                 { label: "설치 방식", value: "현장 맞춤 설계" },
