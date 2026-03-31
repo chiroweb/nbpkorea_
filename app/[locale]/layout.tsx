@@ -31,6 +31,11 @@ export async function generateMetadata({
       card: "summary_large_image",
       images: ["https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/og-image.png"],
     },
+    verification: {
+      other: {
+        "naver-site-verification": "660a1318bb81316856f860eed804e95c00af33a2",
+      },
+    },
     manifest: "/manifest.json",
     icons: {
       icon: [
