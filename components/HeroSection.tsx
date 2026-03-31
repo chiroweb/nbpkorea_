@@ -108,9 +108,9 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
           <p className="text-[10px] tracking-[0.3em] uppercase text-white/60 mb-3">
             {t("since")}
           </p>
-          <h1 className="text-[22px] font-bold tracking-[0.1em] text-white leading-tight">
+          <p className="text-[22px] font-bold tracking-[0.1em] text-white leading-tight">
             {t("title")}
-          </h1>
+          </p>
           <p className="text-[22px] font-bold tracking-[0.1em] leading-tight">
             <span className="text-[#C05010]">{t("titleHighlight")}</span>{" "}
             <span className="text-white">{t("titleSuffix")}</span>

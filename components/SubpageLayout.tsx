@@ -20,9 +20,27 @@ export default function SubpageLayout({
 }: SubpageLayoutProps) {
   const { ref, isInView } = useInView({ threshold: 0.3 });
 
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: "https://www.nbpkorea.co.kr" },
+      ...breadcrumb.map((item, i) => ({
+        "@type": "ListItem",
+        position: i + 2,
+        name: item.label,
+        ...(i < breadcrumb.length - 1 ? { item: `https://www.nbpkorea.co.kr${item.href}` } : {}),
+      })),
+    ],
+  };
+
   return (
     <>
       <Header />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
       {/* Page Hero Banner */}
       <section
         ref={ref}

@@ -19,6 +19,7 @@ export async function generateMetadata({
       locale: locale === "ko" ? "ko_KR" : "en_US",
     },
     alternates: {
+      canonical: locale === "ko" ? "/support" : "/en/support",
       languages: {
         ko: "/support",
         en: "/en/support",
