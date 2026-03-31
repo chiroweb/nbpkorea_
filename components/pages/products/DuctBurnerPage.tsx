@@ -13,16 +13,16 @@ import FloatingCaseLink from "@/components/FloatingCaseLink";
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const specs = [
-  { model: "KHMA-050", size: "0.5FT", capacity: "125,000", kw: "147", pressure: "35", fuel: "LNG / LPG" },
-  { model: "KHMA-100", size: "1FT", capacity: "250,000", kw: "293", pressure: "35", fuel: "LNG / LPG" },
-  { model: "KHMA-150", size: "1.5FT", capacity: "375,000", kw: "440", pressure: "35", fuel: "LNG / LPG" },
-  { model: "KHMA-200", size: "2FT", capacity: "500,000", kw: "586", pressure: "35", fuel: "LNG / LPG" },
-  { model: "KHMA-250", size: "2.5FT", capacity: "625,000", kw: "733", pressure: "35", fuel: "LNG / LPG" },
-  { model: "KHMA-300", size: "3FT", capacity: "750,000", kw: "879", pressure: "35", fuel: "LNG / LPG" },
-  { model: "KHMA-400", size: "4FT", capacity: "1,000,000", kw: "1,172", pressure: "35", fuel: "LNG / LPG" },
-  { model: "KHMA-450", size: "4.5FT", capacity: "1,125,000", kw: "1,319", pressure: "35", fuel: "LNG / LPG" },
-  { model: "KHMA-500", size: "5FT", capacity: "1,250,000", kw: "1,466", pressure: "50", fuel: "LNG / LPG" },
-  { model: "KHMA-600", size: "6FT", capacity: "1,500,000", kw: "1,759", pressure: "50", fuel: "LNG / LPG" },
+  { model: "NBP-050", size: "0.5FT", capacity: "125,000", kw: "147", pressure: "35", fuel: "LNG / LPG" },
+  { model: "NBP-100", size: "1FT", capacity: "250,000", kw: "293", pressure: "35", fuel: "LNG / LPG" },
+  { model: "NBP-150", size: "1.5FT", capacity: "375,000", kw: "440", pressure: "35", fuel: "LNG / LPG" },
+  { model: "NBP-200", size: "2FT", capacity: "500,000", kw: "586", pressure: "35", fuel: "LNG / LPG" },
+  { model: "NBP-250", size: "2.5FT", capacity: "625,000", kw: "733", pressure: "35", fuel: "LNG / LPG" },
+  { model: "NBP-300", size: "3FT", capacity: "750,000", kw: "879", pressure: "35", fuel: "LNG / LPG" },
+  { model: "NBP-400", size: "4FT", capacity: "1,000,000", kw: "1,172", pressure: "35", fuel: "LNG / LPG" },
+  { model: "NBP-450", size: "4.5FT", capacity: "1,125,000", kw: "1,319", pressure: "35", fuel: "LNG / LPG" },
+  { model: "NBP-500", size: "5FT", capacity: "1,250,000", kw: "1,466", pressure: "50", fuel: "LNG / LPG" },
+  { model: "NBP-600", size: "6FT", capacity: "1,500,000", kw: "1,759", pressure: "50", fuel: "LNG / LPG" },
 ];
 
 const sizeGallery = [
@@ -43,7 +43,7 @@ const features = [
   "2단 연소 시스템으로 화염 안정성 극대화, 화염 길이 25cm 이하 유지",
   "노즐 교체 없이 LNG / LPG 가스 모두 사용 가능",
   "내열 메탈파이버 연소면 — 복사 열전달로 에너지 효율 30% 이상 향상",
-  "0.5FT~6FT 다양한 KHMA 라인업으로 덕트 크기에 맞춤 선택",
+  "0.5FT~6FT 다양한 NBP 라인업으로 덕트 크기에 맞춤 선택",
   "화염 제어 30단계 — 타 메이커 버너 대비 정밀 온도 제어",
   "MIDCO International(미국) 기술 협력 — 글로벌 검증된 연소 시스템",
 ];
@@ -101,7 +101,7 @@ export default function DuctBurnerPage() {
               NBPKOREA 덕트버너는 내열 메탈파이버(Metal Fiber)로 제작된 연소면에서 적외선 복사열을 발생시키는 표면연소 방식의 산업용 덕트 가열 버너입니다. MIDCO International(미국)과의 기술 협력을 바탕으로, ANSI Z83.4 / Z83.18 기준을 충족하는 NOₓ·CO 저배출 설계를 실현합니다.
             </p>
             <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
-              소형(0.5FT)부터 대형(6FT)까지 KHMA 시리즈 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다.
+              소형(0.5FT)부터 대형(6FT)까지 NBP 시리즈 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["2단 연소 방식", "30단계 화염 제어", "NOₓ 저배출", "0.5FT~6FT 라인업"].map((tag) => (
