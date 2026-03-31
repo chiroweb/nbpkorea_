@@ -5,6 +5,7 @@ import { useParams } from "next/navigation";
 import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
 import { News } from "@/lib/types";
 import { useTranslations } from "next-intl";
 
@@ -88,6 +89,23 @@ export default function NewsDetailPage() {
           >
             {post.excerpt}
           </p>
+
+          {/* Thumbnail */}
+          {post.image_url && (
+            <div
+              className={`relative w-full aspect-[16/9] mb-12 overflow-hidden bg-[#E8ECF0] transition-all duration-700 delay-300 ${
+                isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+              }`}
+            >
+              <Image
+                src={post.image_url}
+                alt={post.title}
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          )}
 
           {/* Divider */}
           <div className="h-px bg-[#D4DAE2] mb-12" />
