@@ -72,7 +72,7 @@ export default function NewsDetailPage() {
         { label: post.category, href: "/news" },
       ]}
     >
-      <article className="px-6 md:px-12 py-16">
+      <article className="px-6 md:px-12 pt-4 pb-16">
         <div className="max-w-3xl mx-auto">
           {/* Meta */}
           <div
