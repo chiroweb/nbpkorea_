@@ -75,7 +75,7 @@ export default function ProductPlaceholderPage({
             </div>
           </div>
           <div>
-            <div className="relative aspect-[4/3] overflow-hidden bg-[#F2F4F7] flex items-center justify-center border border-[#D4DAE2]">
+            <div className="relative aspect-[4/3] overflow-hidden bg-white flex items-center justify-center border border-[#C05010]/30">
               {image ? (
                 <img src={image} alt={titleKo} className="object-cover w-full h-full" />
               ) : (

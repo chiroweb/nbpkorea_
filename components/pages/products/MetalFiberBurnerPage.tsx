@@ -63,7 +63,7 @@ export default function MetalFiberBurnerPage() {
               </div>
             </div>
             <div>
-              <div className="relative aspect-[4/3] overflow-hidden bg-[#F2F4F7] border border-[#D4DAE2]">
+              <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
                 <img
                   src={`${S3}/images/burner/ceramic-burner.jpg`}
                   alt="세라믹 버너"

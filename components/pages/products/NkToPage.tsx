@@ -94,7 +94,7 @@ export default function NkToPage() {
           <div
             className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
           >
-            <div className="relative aspect-[4/3] overflow-hidden bg-[#DCE2E8]">
+            <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
               <Image
                 src={`${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20DTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`}
                 alt="NK-TO 직접연소탈취장치"

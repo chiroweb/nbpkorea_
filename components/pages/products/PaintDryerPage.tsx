@@ -94,7 +94,7 @@ export default function PaintDryerPage() {
             </div>
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
-            <div className="relative aspect-[4/3] overflow-hidden bg-[#DCE2E8]">
+            <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
               <Image
                 src={`${S3}/images/forcar.png`}
                 alt="차량 도장 건조기"
