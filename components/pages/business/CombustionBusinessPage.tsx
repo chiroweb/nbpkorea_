@@ -122,13 +122,16 @@ function IndustryCard({ item, index }: { item: (typeof industries)[0]; index: nu
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   return (
-    <Link
-      href={`/performance?tag=${encodeURIComponent(item.tag)}&cat=combustion`}
+    <div
       ref={ref}
-      className={`group relative block aspect-[4/3] overflow-hidden transition-all duration-700 ${
+      className={`transition-all duration-700 ${
         isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       }`}
       style={{ transitionDelay: `${index * 80}ms` }}
+    >
+    <Link
+      href={`/performance?tag=${encodeURIComponent(item.tag)}&cat=combustion`}
+      className="group relative block aspect-[4/3] overflow-hidden"
     >
       {/* 배경 사진 */}
       <Image
@@ -157,6 +160,7 @@ function IndustryCard({ item, index }: { item: (typeof industries)[0]; index: nu
         </span>
       </div>
     </Link>
+    </div>
   );
 }
 
