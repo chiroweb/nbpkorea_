@@ -2,7 +2,6 @@
 
 import { Link } from "@/i18n/navigation";
 import { useState } from "react";
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
@@ -109,15 +108,13 @@ function FamilySiteDropdown() {
 
 export default function Footer() {
   const t = useTranslations("common.footer");
-  const [hoveredImage, setHoveredImage] = useState<string | null>(null);
-
   const navItems = [
-    { label: t("about"), href: "/about", image: `${S3}/images/company/building-1.jpg` },
-    { label: t("businessNav"), href: "/business", image: `${S3}/images/combustion-site-hd.jpg` },
-    { label: t("products"), href: "/products", image: `${S3}/images/burner/duct-burner-hero.jpg` },
-    { label: "사업실적", href: "/performance", image: `${S3}/images/intro2.jpg` },
-    { label: "NBP NEWS", href: "/news", image: `${S3}/images/into3.jpg` },
-    { label: t("supportNav"), href: "/support", image: `${S3}/images/hvac/hvac-main.png` },
+    { label: t("about"), href: "/about" },
+    { label: t("businessNav"), href: "/business" },
+    { label: t("products"), href: "/products" },
+    { label: "사업실적", href: "/performance" },
+    { label: "NBP NEWS", href: "/news" },
+    { label: t("supportNav"), href: "/support" },
   ];
 
   const contactInfo = [
@@ -139,8 +136,6 @@ export default function Footer() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    onMouseEnter={() => setHoveredImage(item.image)}
-                    onMouseLeave={() => setHoveredImage(null)}
                     className="text-sm tracking-[0.06em] uppercase py-3 border-b border-[#C8D0DA] hover:border-[#C05010] transition-colors"
                   >
                     {item.label}
@@ -245,14 +240,6 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Hover Image Preview */}
-      {hoveredImage && (
-        <div className="fixed bottom-20 right-20 w-56 h-36 pointer-events-none z-50 hidden lg:block">
-          <div className="relative w-full h-full border border-[#C05010]/30 shadow-lg overflow-hidden">
-            <Image src={hoveredImage} alt="preview" fill className="object-cover" />
-          </div>
-        </div>
-      )}
     </footer>
   );
 }
