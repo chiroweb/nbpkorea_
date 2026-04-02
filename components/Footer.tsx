@@ -112,11 +112,12 @@ export default function Footer() {
   const [hoveredImage, setHoveredImage] = useState<string | null>(null);
 
   const navItems = [
-    { label: t("products"), href: "/products", image: "products" },
-    { label: t("about"), href: "/about", image: "about" },
-    { label: t("technology"), href: "/technology", image: "technology" },
-    { label: t("supportNav"), href: "/support", image: "support" },
-    { label: t("businessNav"), href: "/business", image: "business" },
+    { label: t("about"), href: "/about", image: `${S3}/images/company/building-1.jpg` },
+    { label: t("businessNav"), href: "/business", image: `${S3}/images/combustion-site-hd.jpg` },
+    { label: t("products"), href: "/products", image: `${S3}/images/burner/duct-burner-hero.jpg` },
+    { label: "사업실적", href: "/performance", image: `${S3}/images/intro2.jpg` },
+    { label: "NBP NEWS", href: "/news", image: `${S3}/images/into3.jpg` },
+    { label: t("supportNav"), href: "/support", image: `${S3}/images/hvac/hvac-main.png` },
   ];
 
   const contactInfo = [
@@ -246,9 +247,9 @@ export default function Footer() {
 
       {/* Hover Image Preview */}
       {hoveredImage && (
-        <div className="fixed bottom-20 right-20 w-64 h-80 pointer-events-none z-50 hidden lg:block">
-          <div className="placeholder-box w-full h-full animate-scale-in">
-            {hoveredImage} preview
+        <div className="fixed bottom-20 right-20 w-56 h-36 pointer-events-none z-50 hidden lg:block">
+          <div className="relative w-full h-full border border-[#C05010]/30 shadow-lg overflow-hidden">
+            <Image src={hoveredImage} alt="preview" fill className="object-cover" />
           </div>
         </div>
       )}

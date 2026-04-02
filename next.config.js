@@ -25,7 +25,7 @@ const nextConfig = {
           {
             key: "Content-Security-Policy",
             value:
-              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://nbpkoreare.s3.ap-northeast-2.amazonaws.com https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com https://images.unsplash.com; font-src 'self' data:; connect-src 'self' https://*.sanity.io https://nbpkoreare.s3.ap-northeast-2.amazonaws.com; media-src 'self' https://nbpkoreare.s3.ap-northeast-2.amazonaws.com https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com; frame-ancestors 'self'",
+              "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://nbpkoreare.s3.ap-northeast-2.amazonaws.com https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com https://images.unsplash.com; font-src 'self' data:; connect-src 'self' https://*.sanity.io https://nbpkoreare.s3.ap-northeast-2.amazonaws.com; media-src 'self' https://nbpkoreare.s3.ap-northeast-2.amazonaws.com https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com; frame-src 'self' https://maps.google.com https://www.google.com; frame-ancestors 'self'",
           },
         ],
       },
