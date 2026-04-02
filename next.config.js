@@ -64,12 +64,12 @@ const nextConfig = {
       { source: "/customer/:path*", destination: "/support", permanent: true },
       { source: "/business/performance_view.php", destination: "/performance", permanent: true },
       { source: "/business/coffee_performance.php", destination: "/performance", permanent: true },
-      { source: "/business/:path*", destination: "/business", permanent: true },
+      { source: "/business/:path*.php", destination: "/business", permanent: true },
       { source: "/bbs/:path*", destination: "/", permanent: true },
       { source: "/eng/careers/:path*", destination: "/", permanent: true },
       { source: "/eng/business/:path*", destination: "/business", permanent: true },
       { source: "/eng/customer/:path*", destination: "/support", permanent: true },
-      { source: "/eng/:path*", destination: "/en", permanent: true },
+      { source: "/eng/:path*.php", destination: "/en", permanent: true },
     ];
   },
 

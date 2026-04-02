@@ -89,20 +89,20 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
 
       {/* Hero Content — Desktop */}
       <div className="relative z-10 px-8 md:px-16 pb-32 max-w-3xl hidden md:block">
-        <p className="text-[11px] tracking-[0.12em] uppercase text-white/40 mb-8">
+        <p className="text-[13px] tracking-[0.14em] uppercase text-white/60 mb-8">
           {t("since")}
         </p>
-        <h1 className="text-5xl lg:text-[5.5rem] font-bold tracking-[-0.02em] text-white leading-none mb-4">
+        <h1 className="text-6xl lg:text-[6.5rem] font-bold tracking-[-0.02em] text-white leading-none mb-5">
           {t("title")}
         </h1>
-        <div className="w-12 h-[2px] bg-[#C05010] mb-5" />
-        <p className="text-base tracking-[0.08em] uppercase text-[#C05010]/90 font-medium mb-10">
+        <div className="w-14 h-[2px] bg-[#C05010] mb-6" />
+        <p className="text-lg lg:text-xl tracking-[0.1em] uppercase text-[#C05010] font-semibold mb-12">
           {t("engLine")}
         </p>
-        <p className="text-xl lg:text-2xl font-semibold tracking-[-0.01em] text-white/85 mb-3">
+        <p className="text-2xl lg:text-3xl font-bold tracking-[-0.01em] text-white mb-4">
           {t("tagline")}
         </p>
-        <p className="text-[13px] tracking-[0.02em] text-white/40 max-w-md leading-relaxed">
+        <p className="text-[15px] tracking-[0.02em] text-white/60 max-w-md leading-relaxed">
           {t("subtitle")}
         </p>
       </div>
@@ -110,22 +110,22 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
       {/* Hero Content — Mobile */}
       <div className="md:hidden absolute inset-0 z-10 flex flex-col justify-between px-6 pt-24 pb-16">
         <div className="text-right">
-          <p className="text-[10px] tracking-[0.1em] uppercase text-white/40 mb-4">
+          <p className="text-[12px] tracking-[0.12em] uppercase text-white/60 mb-4">
             {t("since")}
           </p>
-          <p className="text-[28px] font-bold tracking-[-0.02em] text-white leading-none mb-3">
+          <p className="text-[32px] font-bold tracking-[-0.02em] text-white leading-none mb-3">
             {t("title")}
           </p>
-          <div className="w-8 h-[2px] bg-[#C05010] ml-auto mb-3" />
-          <p className="text-[12px] tracking-[0.08em] uppercase text-[#C05010]/90 font-medium">
+          <div className="w-10 h-[2px] bg-[#C05010] ml-auto mb-3" />
+          <p className="text-[14px] tracking-[0.1em] uppercase text-[#C05010] font-semibold">
             {t("engLine")}
           </p>
         </div>
         <div>
-          <p className="text-lg font-semibold tracking-[-0.01em] text-white/85 mb-2">
+          <p className="text-xl font-bold tracking-[-0.01em] text-white mb-2">
             {t("tagline")}
           </p>
-          <p className="text-[11px] tracking-[0.02em] text-white/40 leading-relaxed">
+          <p className="text-[13px] tracking-[0.02em] text-white/60 leading-relaxed">
             {t("subtitle")}
           </p>
         </div>
