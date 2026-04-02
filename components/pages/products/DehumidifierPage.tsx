@@ -87,21 +87,21 @@ export default function DehumidifierPage() {
             ref={heroRef}
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
               Combustion · Combined Dehumidifier
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
               복합식 제습기
             </h2>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-6">
               냉각제습기와 직화식 가스히터를 병행하여 설비 투자 비용 및 에너지 절약, 운전비용 절감 효과를 실현한 복합식 제습 시스템입니다. 습기에 의한 불쾌감 또는 제품 품질의 생산성 저하를 막기 위해 공급공기를 그 노점온도 이하로 냉각시켜 공기 중의 수분을 제거하는 방식입니다.
             </p>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               직화방식으로 연료비 30% 절감 및 완전연소 친환경 설비이며, 4계절 복합형으로 운전이 가능합니다. 검증된 Midco Gas Burner를 사용하여 안전성을 확보했으며, 선박 블록 공장, 도장 작업장, 클린룸, 저장창고 등 고습 환경 전반에 적용됩니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["냉각제습 + 직화식 가스히터", "4계절 복합 운전", "8,500~30,000 m³/h", "연료비 30% 절감"].map((tag) => (
-                <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                <span key={tag} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-1 text-[#5C6470]">
                   {tag}
                 </span>
               ))}
@@ -122,10 +122,10 @@ export default function DehumidifierPage() {
       {/* 적용 분야 */}
       <section ref={appRef} className="px-6 md:px-12 py-12 border-t border-[#D4DAE2] bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">{t("common.applications")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.applications")}</p>
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {applications.map((app) => (
-              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=combustion`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#888480] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
+              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=combustion`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
                 
                 {app}
               </Link>
@@ -135,9 +135,9 @@ export default function DehumidifierPage() {
       </section>
 
       {/* 시스템 구성도 */}
-      <section className="px-6 md:px-12 py-12 bg-[#F2F4F7] border-y border-[#D4DAE2]">
+      <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">Dehumidifier System Flow</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Dehumidifier System Flow</p>
           <div className="flex flex-wrap items-center gap-2">
             {systemFlow.map((step, i) => (
               <div key={step} className="flex items-center gap-2">
@@ -146,7 +146,7 @@ export default function DehumidifierPage() {
                     ? "bg-[#C05010] text-white"
                     : step === "AIR (고습도)" || step === "Room (저습도)"
                     ? "bg-[#2d2a28] text-white"
-                    : "bg-white border border-[#D4DAE2] text-[#8B95A1]"
+                    : "bg-white border border-[#D4DAE2] text-[#5C6470]"
                 }`}>
                   {step}
                 </div>
@@ -156,19 +156,19 @@ export default function DehumidifierPage() {
               </div>
             ))}
           </div>
-          <p className="text-[14px] text-[#8B95A1] mt-4">실외기(방열) 탑재 — 냉각+가온 4계절 복합 운전</p>
+          <p className="text-[14px] text-[#5C6470] mt-4">실외기(방열) 탑재 — 냉각+가온 4계절 복합 운전</p>
         </div>
       </section>
 
       {/* 특징 */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">{t("common.features")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.features")}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
                 <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
-                <span className="text-xs text-[#8B95A1] leading-[1.8]">{f}</span>
+                <span className="text-sm text-[#3D4450] leading-relaxed">{f}</span>
               </div>
             ))}
           </div>
@@ -176,12 +176,12 @@ export default function DehumidifierPage() {
       </section>
 
       {/* 스펙 테이블 */}
-      <section ref={specRef} className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
+      <section ref={specRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">{t("common.specifications")}</p>
-          <p className="text-xs text-[#8B95A1] mb-8 tracking-[0.05em]">{t("common.selectModel")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">{t("common.specifications")}</p>
+          <p className="text-xs text-[#5C6470] mb-8 tracking-[0.05em]">{t("common.selectModel")}</p>
           <div className={`overflow-x-auto transition-all duration-1000 ${specInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <table className="w-full text-xs border-collapse min-w-[900px]">
+            <table className="w-full text-sm border-collapse min-w-[900px]">
               <thead>
                 <tr className="border-b-2 border-[#2d2a28]">
                   {["MODEL", "처리풍량 (m³/h)", "냉각용량 (Kcal/h)", "가온용량 (Kcal/h)", "팬모터 (kW)", "길이 (mm)", "폭 (mm)", "높이 (mm)", "중량 (ton)"].map((h) => (
@@ -199,20 +199,20 @@ export default function DehumidifierPage() {
                     }`}
                   >
                     <td className={`py-3.5 px-3 font-medium tracking-[0.05em] ${selectedModel === row.model ? "text-[#C05010]" : "text-[#2d2a28]"}`}>{row.model}</td>
-                    <td className="py-3.5 px-3 text-[#8B95A1]">{row.airflow}</td>
-                    <td className="py-3.5 px-3 text-[#8B95A1]">{row.coolingCap}</td>
-                    <td className="py-3.5 px-3 text-[#8B95A1]">{row.heatingCap}</td>
-                    <td className="py-3.5 px-3 text-[#8B95A1]">{row.fanMotor}</td>
-                    <td className="py-3.5 px-3 text-[#8B95A1]">{row.length}</td>
-                    <td className="py-3.5 px-3 text-[#8B95A1]">{row.width}</td>
-                    <td className="py-3.5 px-3 text-[#8B95A1]">{row.height}</td>
-                    <td className="py-3.5 px-3 text-[#8B95A1]">{row.weight}</td>
+                    <td className="py-3.5 px-3 text-[#5C6470]">{row.airflow}</td>
+                    <td className="py-3.5 px-3 text-[#5C6470]">{row.coolingCap}</td>
+                    <td className="py-3.5 px-3 text-[#5C6470]">{row.heatingCap}</td>
+                    <td className="py-3.5 px-3 text-[#5C6470]">{row.fanMotor}</td>
+                    <td className="py-3.5 px-3 text-[#5C6470]">{row.length}</td>
+                    <td className="py-3.5 px-3 text-[#5C6470]">{row.width}</td>
+                    <td className="py-3.5 px-3 text-[#5C6470]">{row.height}</td>
+                    <td className="py-3.5 px-3 text-[#5C6470]">{row.weight}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-[13px] text-[#8B95A1] mt-4">※ {t("common.specNote")}</p>
+          <p className="text-[13px] text-[#5C6470] mt-4">※ {t("common.specNote")}</p>
         </div>
       </section>
 
@@ -221,14 +221,17 @@ export default function DehumidifierPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <h3 className="text-lg tracking-[0.08em] font-light text-[#2d2a28] mb-2">{t("combustion.dehumidifier.ctaTitle")}</h3>
-            <p className="text-sm text-[#8B95A1]">{t("combustion.dehumidifier.ctaDesc")}</p>
+            <p className="text-sm text-[#5C6470]">{t("combustion.dehumidifier.ctaDesc")}</p>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/products?tab=combustion" className="btn-link group text-[#8B95A1] text-xs tracking-[0.15em] uppercase">
+            <Link href="/products?tab=combustion" className="btn-link group text-[#5C6470] text-xs tracking-[0.06em] uppercase">
               <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="rotate-180"><path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/></svg>
               {t("common.backToList")}
             </Link>
-            <Link href="/support" className="text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-6 py-3 hover:bg-[#C05010] hover:border-[#C05010] hover:text-white transition-all duration-300">
+            <Link href="/support?type=catalog" className="text-xs tracking-[0.06em] uppercase border border-[#D4DAE2] px-6 py-3 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-all duration-300">
+              카탈로그 신청
+            </Link>
+            <Link href="/support" className="text-xs tracking-[0.06em] uppercase bg-[#C05010] text-white px-6 py-3 hover:bg-[#2d2a28] transition-all duration-300">
               {t("common.contact")}
             </Link>
           </div>

@@ -49,21 +49,21 @@ export default function NkCtoPage() {
             ref={heroRef}
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
               Environment · Catalytic Thermal Oxidizer
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
               {t("environment.nkCto.heroTitle")}
             </h2>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-6">
               {t("environment.nkCto.heroDesc1")}
             </p>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               {t("environment.nkCto.heroDesc2")}
             </p>
             <div className="flex flex-wrap gap-3">
               {tags.map((tag) => (
-                <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                <span key={tag} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-1 text-[#5C6470]">
                   {tag}
                 </span>
               ))}
@@ -88,10 +88,10 @@ export default function NkCtoPage() {
       {/* 적용 분야 — 히어로 바로 아래 */}
       <section ref={appRef} className="px-6 md:px-12 py-12 border-t border-[#D4DAE2] bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">{t("common.applications")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.applications")}</p>
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {applications.map((app) => (
-              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=environment`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#888480] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
+              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=environment`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
                 
                 {app}
               </Link>
@@ -103,7 +103,7 @@ export default function NkCtoPage() {
       {/* Mechanism */}
       <section className="px-6 md:px-12 py-12 bg-white border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">Mechanism</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Mechanism</p>
           <div className="flex flex-wrap items-center gap-3 md:gap-4">
             {[
               { label: "VOCs + O₂", bg: "#DCE2E8", text: "#2d2a28" },
@@ -127,7 +127,7 @@ export default function NkCtoPage() {
               )
             ))}
           </div>
-          <p className="text-[14px] text-[#8B95A1] mt-4 tracking-[0.05em]">{t("common.heatRecovery")} (Heat Recovery)</p>
+          <p className="text-[14px] text-[#5C6470] mt-4 tracking-[0.05em]">{t("common.heatRecovery")} (Heat Recovery)</p>
           <div className="mt-10 flex justify-start">
             <div className="relative w-full max-w-4xl overflow-hidden border border-[#D4DAE2] bg-white">
               <Image
@@ -145,12 +145,12 @@ export default function NkCtoPage() {
       {/* Features */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">{t("common.features")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.features")}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
                 <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
-                <span className="text-xs text-[#8B95A1] leading-[1.8] tracking-[0.02em]">{f}</span>
+                <span className="text-sm text-[#3D4450] leading-relaxed tracking-[0.02em]">{f}</span>
               </div>
             ))}
           </div>
@@ -158,23 +158,23 @@ export default function NkCtoPage() {
       </section>
 
       {/* Spec Table */}
-      <section ref={specRef} className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
+      <section ref={specRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">{t("common.specifications")}</p>
-          <p className="text-xs text-[#8B95A1] mb-8 tracking-[0.05em]">{t("common.selectModel")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">{t("common.specifications")}</p>
+          <p className="text-xs text-[#5C6470] mb-8 tracking-[0.05em]">{t("common.selectModel")}</p>
           <div
             className={`overflow-x-auto transition-all duration-1000 ${specInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
           >
-            <table className="w-full text-xs border-collapse min-w-[640px]">
+            <table className="w-full text-sm border-collapse min-w-[640px]">
               <thead>
                 <tr className="border-b-2 border-[#2d2a28]">
-                  <th className="text-left py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">MODEL</th>
-                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">Airflow<br />(Nm³/min)</th>
-                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">Heat Input<br />(Kcal/hr)</th>
-                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">Power<br />(kW)</th>
-                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">Length<br />(mm)</th>
-                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">Width<br />(mm)</th>
-                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.15em] uppercase text-[#2d2a28] font-medium">Height<br />(mm)</th>
+                  <th className="text-left py-3 px-4 text-[13px] tracking-[0.06em] uppercase text-[#2d2a28] font-medium">MODEL</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.06em] uppercase text-[#2d2a28] font-medium">Airflow<br />(Nm³/min)</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.06em] uppercase text-[#2d2a28] font-medium">Heat Input<br />(Kcal/hr)</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.06em] uppercase text-[#2d2a28] font-medium">Power<br />(kW)</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.06em] uppercase text-[#2d2a28] font-medium">Length<br />(mm)</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.06em] uppercase text-[#2d2a28] font-medium">Width<br />(mm)</th>
+                  <th className="text-center py-3 px-4 text-[13px] tracking-[0.06em] uppercase text-[#2d2a28] font-medium">Height<br />(mm)</th>
                 </tr>
               </thead>
               <tbody>
@@ -191,18 +191,18 @@ export default function NkCtoPage() {
                     <td className={`py-3.5 px-4 font-medium tracking-[0.05em] ${selectedModel === row.model ? "text-[#C05010]" : "text-[#2d2a28]"}`}>
                       {row.model}
                     </td>
-                    <td className="py-3.5 px-4 text-center text-[#8B95A1]">{row.airflow}</td>
-                    <td className="py-3.5 px-4 text-center text-[#8B95A1]">{row.heatInput}</td>
-                    <td className="py-3.5 px-4 text-center text-[#8B95A1]">{row.power}</td>
-                    <td className="py-3.5 px-4 text-center text-[#8B95A1]">{row.length}</td>
-                    <td className="py-3.5 px-4 text-center text-[#8B95A1]">{row.width}</td>
-                    <td className="py-3.5 px-4 text-center text-[#8B95A1]">{row.height}</td>
+                    <td className="py-3.5 px-4 text-center text-[#5C6470]">{row.airflow}</td>
+                    <td className="py-3.5 px-4 text-center text-[#5C6470]">{row.heatInput}</td>
+                    <td className="py-3.5 px-4 text-center text-[#5C6470]">{row.power}</td>
+                    <td className="py-3.5 px-4 text-center text-[#5C6470]">{row.length}</td>
+                    <td className="py-3.5 px-4 text-center text-[#5C6470]">{row.width}</td>
+                    <td className="py-3.5 px-4 text-center text-[#5C6470]">{row.height}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-[13px] text-[#8B95A1] mt-4 tracking-[0.03em]">
+          <p className="text-[13px] text-[#5C6470] mt-4 tracking-[0.03em]">
             ※ {t("common.specNote")}
           </p>
         </div>
@@ -213,10 +213,10 @@ export default function NkCtoPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <h3 className="text-lg tracking-[0.08em] font-light text-[#2d2a28] mb-2">{t("environment.nkCto.ctaTitle")}</h3>
-            <p className="text-sm text-[#8B95A1]">{t("environment.nkCto.ctaDesc")}</p>
+            <p className="text-sm text-[#5C6470]">{t("environment.nkCto.ctaDesc")}</p>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/products" className="btn-link group text-[#8B95A1] text-xs tracking-[0.15em] uppercase">
+            <Link href="/products" className="btn-link group text-[#5C6470] text-xs tracking-[0.06em] uppercase">
               <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="rotate-180">
                 <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/>
               </svg>
@@ -224,7 +224,7 @@ export default function NkCtoPage() {
             </Link>
             <Link
               href="/support"
-              className="text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-6 py-3 hover:bg-[#C05010] hover:border-[#C05010] hover:text-white transition-all duration-300"
+              className="text-xs tracking-[0.06em] uppercase border border-[#2d2a28] px-6 py-3 hover:bg-[#C05010] hover:border-[#C05010] hover:text-white transition-all duration-300"
             >
               {t("common.contact")}
             </Link>

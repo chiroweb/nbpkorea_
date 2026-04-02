@@ -65,7 +65,7 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
   function renderSubMenu(subs: { id: string; label: string; href: string }[]) {
     return (
       <div className="flex flex-wrap items-center gap-0 py-3 border-t border-[#E8ECF0]">
-        <span className="text-[13px] tracking-[0.15em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0]">
+        <span className="text-[13px] tracking-[0.06em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0]">
           Sub
         </span>
         {subs.map((sub, i) => (
@@ -75,7 +75,7 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
             className={`relative px-4 md:px-5 py-1.5 text-xs tracking-[0.08em] transition-colors duration-200 ${
               activeProduct === sub.id
                 ? "text-[#C05010] font-medium"
-                : "text-[#888480] hover:text-[#C05010]"
+                : "text-[#5C6470] hover:text-[#C05010]"
             } ${i > 0 ? "border-l border-[#E8ECF0]" : ""}`}
           >
             {sub.label}
@@ -97,10 +97,10 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
             <button
               key={tab.id}
               onClick={() => handleMainTabClick(tab.id)}
-              className={`px-6 md:px-8 py-3.5 text-xs tracking-[0.15em] uppercase border-b-2 transition-all duration-200 ${
+              className={`px-6 md:px-8 py-3.5 text-xs tracking-[0.06em] uppercase border-b-2 transition-all duration-200 ${
                 activeTab === tab.id
                   ? "border-[#C05010] text-[#C05010] font-medium"
-                  : "border-transparent text-[#888480] hover:text-[#C05010]"
+                  : "border-transparent text-[#5C6470] hover:text-[#C05010]"
               }`}
             >
               {tab.label}
@@ -108,17 +108,17 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
           ))}
         </div>
 
-        {/* 환경설비 하위 메뉴 */}
+        {/* 환경시스템 하위 메뉴 */}
         <div className={`overflow-hidden transition-all duration-300 ${activeTab === "environment" ? "max-h-20 opacity-100" : "max-h-0 opacity-0"}`}>
           {renderSubMenu(environmentSubs)}
         </div>
 
-        {/* 공조설비 하위 메뉴 */}
+        {/* 공조시스템 하위 메뉴 */}
         <div className={`overflow-hidden transition-all duration-300 ${activeTab === "hvac" ? "max-h-20 opacity-100" : "max-h-0 opacity-0"}`}>
           {renderSubMenu(hvacSubs)}
         </div>
 
-        {/* 연소설비 하위 메뉴 */}
+        {/* 연소시스템 하위 메뉴 */}
         <div className={`overflow-hidden transition-all duration-300 ${activeTab === "combustion" ? "max-h-20 opacity-100" : "max-h-0 opacity-0"}`}>
           {renderSubMenu(combustionSubs)}
         </div>

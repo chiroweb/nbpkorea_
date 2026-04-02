@@ -57,15 +57,15 @@ export default function NewsSection() {
               style={{ transitionDelay: `${index * 80}ms` }}
             >
               <div className="flex items-center min-w-0">
-                <span className="text-[13px] tracking-[0.15em] uppercase text-[#888480] flex-shrink-0 w-[120px]">
+                <span className="text-[13px] tracking-[0.06em] uppercase text-[#5C6470] flex-shrink-0 w-[120px]">
                   {item.category}
                 </span>
-                <span className="text-sm tracking-[0.04em] text-[#2d2a28] truncate">
+                <span className="text-sm md:text-base tracking-normal text-[#2d2a28] font-medium truncate">
                   {item.title}
                 </span>
               </div>
               <div className="flex items-center gap-6 flex-shrink-0 ml-8">
-                <span className="text-xs text-[#888480] hidden md:block">{item.date}</span>
+                <span className="text-xs text-[#5C6470] hidden md:block">{item.date}</span>
                 <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="text-[#C8D0DA] transition-transform group-hover:translate-x-1 group-hover:text-[#C05010]">
                   <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1" />
                 </svg>

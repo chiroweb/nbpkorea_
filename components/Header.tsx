@@ -52,12 +52,8 @@ const navData = [
     label: "회사소개",
     href: "/about",
     children: [
-      { label: "인사말씀", href: "/about?tab=ceo" },
-      { label: "기업 개요", href: "/about?tab=overview" },
-      { label: "CI", href: "/about?tab=ci" },
-      { label: "역사", href: "/about?tab=history" },
-      { label: "네트워크", href: "/about?tab=network" },
-      { label: "특허", href: "/about?tab=patents" },
+      { label: "회사 소개", href: "/about?tab=about" },
+      { label: "파트너십 & 인증", href: "/about?tab=partnership" },
       { label: "오시는길", href: "/about?tab=directions" },
     ],
   },
@@ -66,10 +62,10 @@ const navData = [
     label: "사업분야",
     href: "/business",
     children: [
-      { label: "환경설비 사업부", href: "/business#environment" },
-      { label: "공조설비 사업부", href: "/business#hvac" },
-      { label: "연소설비 사업부", href: "/business#combustion" },
-      { label: "산업용 버너 사업부", href: "/business#burner" },
+      { label: "환경시스템", href: "/business/environment" },
+      { label: "공조시스템", href: "/business/hvac" },
+      { label: "연소시스템", href: "/business/combustion" },
+      { label: "산업용 버너", href: "/business/burner" },
     ],
   },
   {
@@ -78,7 +74,7 @@ const navData = [
     href: "/products",
     groups: [
       {
-        label: "환경설비",
+        label: "환경시스템",
         href: "/products/environment",
         items: [
           { label: "NK-RTO", href: "/products/environment/nk-rto" },
@@ -88,7 +84,7 @@ const navData = [
         ],
       },
       {
-        label: "공조설비",
+        label: "공조시스템",
         href: "/products/hvac",
         items: [
           { label: "클린룸 공조기", href: "/products/hvac/cleanroom" },
@@ -99,7 +95,7 @@ const navData = [
         ],
       },
       {
-        label: "연소설비",
+        label: "연소시스템",
         href: "/products/combustion",
         items: [
           { label: "직화식 가스히터", href: "/products/combustion/nkgh" },
@@ -107,7 +103,7 @@ const navData = [
         ],
       },
       {
-        label: "버너",
+        label: "산업용 버너",
         href: "/products/burner",
         items: [
           { label: "덕트버너", href: "/products/burner/duct-burner" },
@@ -207,7 +203,7 @@ export default function Header() {
                     className={`relative block px-5 py-3.5 text-[15px] tracking-[0.14em] uppercase transition-colors duration-200 ${
                       activeKey === item.key
                         ? "text-[#C05010]"
-                        : "text-white/80 hover:text-white"
+                        : "text-white/90 hover:text-white"
                     }`}
                   >
                     {item.label}
@@ -282,7 +278,7 @@ export default function Header() {
               <div>
                 <Link
                   href="/about"
-                  className="block text-[13px] tracking-[0.2em] uppercase text-[#C05010] font-semibold mb-3 pb-3 border-b-2 border-[#C05010]"
+                  className="block text-[15px] tracking-[0.04em] text-[#C05010] font-bold mb-5 pb-2.5 border-b-2 border-[#C05010] hover:border-b-[3px] transition-all duration-200"
                 >
                   회사소개
                 </Link>
@@ -292,7 +288,7 @@ export default function Header() {
                       <Link
                         href={child.href}
                         onClick={() => setMegaOpen(false)}
-                        className="text-[13px] tracking-[0.04em] text-[#666] hover:text-[#C05010] transition-colors duration-150 block py-0.5"
+                        className="text-[13px] tracking-[0.04em] text-[#555] hover:text-[#C05010] hover:bg-[#FDF8F6] transition-all duration-150 block py-1.5 px-2 -mx-2 rounded-sm"
                       >
                         {child.label}
                       </Link>
@@ -305,7 +301,7 @@ export default function Header() {
               <div>
                 <Link
                   href="/business"
-                  className="block text-[13px] tracking-[0.2em] uppercase text-[#C05010] font-semibold mb-3 pb-3 border-b-2 border-[#C05010]"
+                  className="block text-[15px] tracking-[0.04em] text-[#C05010] font-bold mb-5 pb-2.5 border-b-2 border-[#C05010] hover:border-b-[3px] transition-all duration-200"
                 >
                   사업분야
                 </Link>
@@ -315,7 +311,7 @@ export default function Header() {
                       <Link
                         href={child.href}
                         onClick={() => setMegaOpen(false)}
-                        className="text-[13px] tracking-[0.04em] text-[#666] hover:text-[#C05010] transition-colors duration-150 block py-0.5"
+                        className="text-[13px] tracking-[0.04em] text-[#555] hover:text-[#C05010] hover:bg-[#FDF8F6] transition-all duration-150 block py-1.5 px-2 -mx-2 rounded-sm"
                       >
                         {child.label}
                       </Link>
@@ -328,25 +324,25 @@ export default function Header() {
               <div className="col-span-4">
                 <Link
                   href="/products"
-                  className="block text-[13px] tracking-[0.2em] uppercase text-[#C05010] font-semibold mb-3 pb-3 border-b-2 border-[#C05010]"
+                  className="block text-[15px] tracking-[0.04em] text-[#C05010] font-bold mb-5 pb-2.5 border-b-2 border-[#C05010] hover:border-b-[3px] transition-all duration-200"
                 >
                   제품/솔루션
                 </Link>
-                <div className="grid grid-cols-4 gap-5">
+                <div className="grid grid-cols-4 gap-6">
                   {navData[2].groups!.map((group) => (
                     <div key={group.label}>
                       <span
-                        className="text-[12px] tracking-[0.1em] text-[#2d2a28] font-medium block mb-2"
+                        className="text-[14px] tracking-[0.04em] text-[#2d2a28] font-semibold block mb-3 hover:text-[#C05010] transition-colors duration-150 cursor-default"
                       >
                         {group.label}
                       </span>
-                      <ul className="space-y-1.5">
+                      <ul className="space-y-2">
                         {group.items.map((item) => (
                           <li key={item.label}>
                             <Link
                               href={item.href}
                               onClick={() => setMegaOpen(false)}
-                              className="text-[13px] tracking-[0.03em] text-[#888] hover:text-[#C05010] transition-colors duration-150 block py-0.5 pl-3 border-l border-[#E8ECF0] hover:border-[#C05010]"
+                              className="text-[13px] tracking-[0.03em] text-[#555] hover:text-[#C05010] hover:bg-[#FDF8F6] transition-all duration-150 block py-1.5 pl-3 border-l border-[#E8ECF0] hover:border-[#C05010]"
                             >
                               {item.label}
                             </Link>
@@ -370,7 +366,7 @@ export default function Header() {
                       <Link
                         href={item.href}
                         onClick={() => setMegaOpen(false)}
-                        className="block text-[13px] tracking-[0.2em] uppercase text-[#C05010] font-semibold mb-3 pb-3 border-b-2 border-[#C05010]"
+                        className="block text-[15px] tracking-[0.04em] text-[#C05010] font-bold mb-5 pb-2.5 border-b-2 border-[#C05010] hover:border-b-[3px] transition-all duration-200"
                       >
                         {item.label}
                       </Link>
@@ -382,7 +378,7 @@ export default function Header() {
                     <div className="overflow-hidden max-h-0 group-hover/family:max-h-40 transition-all duration-300 ease-in-out">
                       <div className="pt-3 space-y-2">
                         {[
-                          { label: "MIDCO International", href: "https://www.midco-intl.com" },
+                          { label: "MIDCO International", href: "https://midcointernational.com/" },
                           { label: "ECOSTAR", href: "https://www.ecostar.com.tr" },
                           { label: "CombHEX", href: "https://www.combhex.com/" },
                         ].map((site) => (
@@ -392,7 +388,7 @@ export default function Header() {
                             target="_blank"
                             rel="noopener noreferrer"
                             onClick={() => setMegaOpen(false)}
-                            className="flex items-center gap-2 text-[13px] tracking-[0.06em] text-[#888] hover:text-[#C05010] transition-colors"
+                            className="flex items-center gap-2 text-[13px] tracking-[0.06em] text-[#555] hover:text-[#C05010] hover:bg-[#FDF8F6] transition-all duration-150 py-1 px-2 -mx-2 rounded-sm"
                           >
                             {site.label}
                             <svg width="8" height="8" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/></svg>

@@ -44,19 +44,19 @@ export default function MetalFiberBurnerPage() {
         <section className="px-6 md:px-12 py-16">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+              <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
                 Industrial Burner · Metal Fiber / Ceramic
               </span>
               <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-4">
                 메탈버너<br />
-                <span className="text-lg text-[#8B95A1]">(Metal Fiber Burner)</span>
+                <span className="text-lg text-[#5C6470]">(Metal Fiber Burner)</span>
               </h2>
-              <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
+              <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
                 {t("burner.metalFiberBurner.description")}
               </p>
               <div className="flex flex-wrap gap-3">
                 {["세라믹 버너", "메탈섬유 버너", "적외선 복사열", "저NOx", "고효율"].map((tag) => (
-                  <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                  <span key={tag} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-1 text-[#5C6470]">
                     {tag}
                   </span>
                 ))}
@@ -77,14 +77,14 @@ export default function MetalFiberBurnerPage() {
         {/* Sub Products */}
         <section className="px-6 md:px-12 py-16 bg-[#F9FAFB] border-y border-[#D4DAE2]">
           <div className="max-w-7xl mx-auto">
-            <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">제품 라인업</p>
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">제품 라인업</p>
             <div className="grid md:grid-cols-2 gap-8">
               {subProducts.map((product) => (
                 <div
                   key={product.id}
                   className="group border border-[#D4DAE2] bg-white hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="relative aspect-[16/10] overflow-hidden bg-[#F2F4F7]">
+                  <div className="relative aspect-[16/10] overflow-hidden bg-[#FAFAFA]">
                     <img
                       src={product.image}
                       alt={product.name}
@@ -98,7 +98,7 @@ export default function MetalFiberBurnerPage() {
                     <p className="text-xs text-[#C05010] tracking-[0.08em] mb-3">
                       {product.nameEn}
                     </p>
-                    <p className="text-sm text-[#8B95A1] leading-[1.8]">
+                    <p className="text-sm text-[#5C6470] leading-[1.8]">
                       {product.description}
                     </p>
                   </div>
@@ -115,16 +115,19 @@ export default function MetalFiberBurnerPage() {
               <h3 className="text-lg tracking-[0.08em] font-light text-[#2d2a28] mb-2">
                 {t("burner.metalFiberBurner.ctaTitle")}
               </h3>
-              <p className="text-sm text-[#8B95A1]">
+              <p className="text-sm text-[#5C6470]">
                 {t("burner.metalFiberBurner.ctaDesc")}
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/products?tab=burner" className="btn-link group text-[#8B95A1] text-xs tracking-[0.15em] uppercase">
+              <Link href="/products?tab=burner" className="btn-link group text-[#5C6470] text-xs tracking-[0.06em] uppercase">
                 <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="rotate-180"><path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/></svg>
                 {t("common.backToList")}
               </Link>
-              <Link href="/support" className="text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-6 py-3 hover:bg-[#C05010] hover:border-[#C05010] hover:text-white transition-all duration-300">
+              <Link href="/support?type=catalog" className="text-xs tracking-[0.06em] uppercase border border-[#D4DAE2] px-6 py-3 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-all duration-300">
+              카탈로그 신청
+            </Link>
+            <Link href="/support" className="text-xs tracking-[0.06em] uppercase bg-[#C05010] text-white px-6 py-3 hover:bg-[#2d2a28] transition-all duration-300">
                 {t("common.contact")}
               </Link>
             </div>

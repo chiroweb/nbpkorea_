@@ -30,7 +30,7 @@ function ProductCard({ product, viewDetail, index, category }: { product: { titl
             <svg width="8" height="8" viewBox="0 0 8 8" fill="none"><path d="M1 7L7 1M7 1H2M7 1V6" stroke="white" strokeWidth="1"/></svg>
           </div>
         </div>
-        <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-1">{product.subtitle}</span>
+        <span className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] block mb-1">{product.subtitle}</span>
         <h3 className="text-lg md:text-xl tracking-[0.08em] font-bold text-[#2d2a28] mb-2 group-hover:text-[#C05010] transition-colors duration-300">{product.title}</h3>
       </Link>
 
@@ -40,14 +40,14 @@ function ProductCard({ product, viewDetail, index, category }: { product: { titl
           <Link
             key={tag}
             href={`/performance?tag=${encodeURIComponent(tag)}${category ? `&cat=${category}` : ""}`}
-            className="text-[13px] tracking-[0.06em] border border-[#D4DAE2] px-2.5 py-1 text-[#888480] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200"
+            className="text-[13px] tracking-[0.06em] border border-[#D4DAE2] px-2.5 py-1 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200"
           >
             {tag}
           </Link>
         ))}
       </div>
 
-      <p className="text-xs leading-[2] text-[#888480] mb-3">{product.description}</p>
+      <p className="text-sm leading-relaxed text-[#5C6470] mb-3">{product.description}</p>
       <Link href={product.href} className="group/detail flex items-center gap-2 text-[14px] tracking-[0.12em] uppercase text-[#2d2a28]/40 hover:text-[#C05010] transition-colors duration-300">
         <span>{viewDetail}</span>
         <svg width="14" height="6" viewBox="0 0 14 6" fill="none" className="transition-transform group-hover/detail:translate-x-1">
@@ -61,12 +61,12 @@ function ProductCard({ product, viewDetail, index, category }: { product: { titl
 function IndustryTagsSection({ tags, label }: { tags: string[]; label: string }) {
   const { ref, isInView } = useInView({ threshold: 0.2 });
   return (
-    <section ref={ref} className="py-16 px-6 md:px-12 bg-[#F2F4F7] border-t border-[#D4DAE2]">
+    <section ref={ref} className="py-16 px-6 md:px-12 bg-[#FAFAFA] border-t border-[#D4DAE2]">
       <div className="max-w-7xl mx-auto">
-        <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-6">{label}</p>
+        <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{label}</p>
         <div className={`flex flex-wrap gap-3 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}>
           {tags.map((tag) => (
-            <span key={tag} className="text-xs tracking-[0.08em] border border-[#C8D0DA] px-4 py-2 text-[#888480] hover:border-[#C05010] hover:text-[#C05010] transition-colors cursor-default">
+            <span key={tag} className="text-xs tracking-[0.08em] border border-[#C8D0DA] px-4 py-2 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-colors cursor-default">
               {tag}
             </span>
           ))}
@@ -79,22 +79,22 @@ function IndustryTagsSection({ tags, label }: { tags: string[]; label: string })
 function FeatureSection({ whyLabel, whyTitle, whyDesc, stats }: { whyLabel: string; whyTitle: string; whyDesc: string; stats: { number: string; label: string }[] }) {
   const { ref, isInView } = useInView({ threshold: 0.2 });
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
           <div className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
             <span className="section-label block mb-4">{whyLabel}</span>
-            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-6" style={{ whiteSpace: "pre-line" }}>
+            <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28] mb-6" style={{ whiteSpace: "pre-line" }}>
               {whyTitle}
             </h2>
-            <p className="text-sm leading-[2] text-[#888480] mb-8">
+            <p className="text-sm md:text-base leading-relaxed text-[#5C6470] mb-8">
               {whyDesc}
             </p>
             <div className="grid grid-cols-3 gap-8">
               {stats.map((stat) => (
                 <div key={stat.label}>
                   <span className="text-2xl md:text-3xl font-light text-[#2d2a28] block mb-1">{stat.number}</span>
-                  <span className="text-[13px] tracking-[0.15em] uppercase text-[#888480]">{stat.label}</span>
+                  <span className="text-[13px] tracking-[0.06em] uppercase text-[#5C6470]">{stat.label}</span>
                 </div>
               ))}
             </div>
@@ -123,7 +123,7 @@ function ProductsPageInner() {
     }
   }, [searchParams]);
 
-  // ── 환경설비 ──────────────────────────────────────────────────
+  // ── 환경시스템 ──────────────────────────────────────────────────
   const environmentProducts = [
     {
       title: "NK-RTO",
@@ -159,7 +159,7 @@ function ProductsPageInner() {
     },
   ];
 
-  // ── 공조설비 ──────────────────────────────────────────────
+  // ── 공조시스템 ──────────────────────────────────────────────
   const hvacProducts = [
     {
       id: "cleanroom",
@@ -208,7 +208,7 @@ function ProductsPageInner() {
     },
   ];
 
-  // ── 연소설비 ──────────────────────────────────────────────────
+  // ── 연소시스템 ──────────────────────────────────────────────────
   const combustionProducts = [
     {
       id: "direct-heater",
@@ -237,7 +237,7 @@ function ProductsPageInner() {
       title: t("nav.ductBurner"),
       subtitle: t("burner.ductBurner.subtitle"),
       href: "/products/burner/duct-burner",
-      image: `/images/duct-burner-hero.jpg`,
+      image: `${S3}/images/burner/duct-burner-hero.jpg`,
       description: t("burner.ductBurner.description"),
       tags: ["주력 제품", "NOx 저배출", "범용"],
     },
@@ -320,10 +320,10 @@ function ProductsPageInner() {
       <section className="py-20 px-6 md:px-12">
         <div className="max-w-7xl mx-auto">
 
-          {/* 환경설비 */}
+          {/* 환경시스템 */}
           {activeTab === "environment" && (
             <div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-10">
+              <div className="grid grid-cols-2 lg:flex lg:gap-6 [&>*]:lg:flex-1">
                 {environmentProducts.map((product, index) => (
                   <ProductCard key={product.title} product={product} viewDetail={t("viewDetail")} index={index} category="environment" />
                 ))}
@@ -331,19 +331,19 @@ function ProductsPageInner() {
               <div className="mt-12 flex justify-center">
                 <Link
                   href="/performance?cat=environment"
-                  className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.1em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
+                  className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.04em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
                 >
-                  환경설비 설치사례 보러가기
+                  환경시스템 설치사례 보러가기
                   <svg width="14" height="6" viewBox="0 0 14 6" fill="none"><path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1" /></svg>
                 </Link>
               </div>
             </div>
           )}
 
-          {/* 공조설비 */}
+          {/* 공조시스템 */}
           {activeTab === "hvac" && (
             <div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-10">
+              <div className="grid grid-cols-2 lg:flex lg:gap-6 [&>*]:lg:flex-1">
                 {hvacProducts.map((product, index) => (
                   <ProductCard key={product.title} product={product} viewDetail={t("viewDetail")} index={index} category="hvac" />
                 ))}
@@ -351,19 +351,19 @@ function ProductsPageInner() {
               <div className="mt-12 flex justify-center">
                 <Link
                   href="/performance?cat=hvac"
-                  className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.1em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
+                  className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.04em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
                 >
-                  공조설비 설치사례 보러가기
+                  공조시스템 설치사례 보러가기
                   <svg width="14" height="6" viewBox="0 0 14 6" fill="none"><path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1" /></svg>
                 </Link>
               </div>
             </div>
           )}
 
-          {/* 연소설비 */}
+          {/* 연소시스템 */}
           {activeTab === "combustion" && (
             <div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-10">
+              <div className="grid grid-cols-2 lg:flex lg:gap-6 [&>*]:lg:flex-1 lg:max-w-3xl">
                 {combustionProducts.map((product, index) => (
                   <ProductCard key={product.title} product={product} viewDetail={t("viewDetail")} index={index} category="combustion" />
                 ))}
@@ -371,19 +371,19 @@ function ProductsPageInner() {
               <div className="mt-12 flex justify-center">
                 <Link
                   href="/performance?cat=combustion"
-                  className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.1em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
+                  className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.04em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
                 >
-                  연소설비 설치사례 보러가기
+                  연소시스템 설치사례 보러가기
                   <svg width="14" height="6" viewBox="0 0 14 6" fill="none"><path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1" /></svg>
                 </Link>
               </div>
             </div>
           )}
 
-          {/* 산업용 버너 */}
+          {/* 산업용 버너 — 7개 → 데스크탑 1행 4개 + 2행 3개 균등 */}
           {activeTab === "burner" && (
             <div>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-10">
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
                 {burnerProducts.map((product, index) => (
                   <ProductCard key={product.title} product={product} viewDetail={t("viewDetail")} index={index} category="burner" />
                 ))}
@@ -391,7 +391,7 @@ function ProductsPageInner() {
               <div className="mt-12 flex justify-center">
                 <Link
                   href="/performance?cat=burner"
-                  className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.1em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
+                  className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.04em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
                 >
                   산업용 버너 설치사례 보러가기
                   <svg width="14" height="6" viewBox="0 0 14 6" fill="none"><path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1" /></svg>
@@ -414,21 +414,32 @@ function ProductsPageInner() {
       {/* CTA */}
       <section className="py-24 px-6 md:px-12 bg-white">
         <div className="max-w-7xl mx-auto text-center">
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-4">
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28] mb-4">
             {t("common.ctaTitle")}
           </h2>
-          <p className="text-sm text-[#888480] tracking-[0.08em] mb-8">
+          <p className="text-sm text-[#5C6470] tracking-[0.08em] mb-8">
             {t("common.ctaMainDesc")}
           </p>
-          <Link
-            href="/support"
-            className="inline-flex items-center gap-3 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-8 py-4 hover:bg-[#C05010] hover:text-white transition-all"
-          >
-            {t("common.ctaButton")}
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-              <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
-            </svg>
-          </Link>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <Link
+              href="/support?type=catalog"
+              className="inline-flex items-center gap-3 text-xs tracking-[0.06em] uppercase border border-[#D4DAE2] px-8 py-4 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-all"
+            >
+              카탈로그 신청
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
+              </svg>
+            </Link>
+            <Link
+              href="/support"
+              className="inline-flex items-center gap-3 text-xs tracking-[0.06em] uppercase bg-[#C05010] text-white px-8 py-4 hover:bg-[#2d2a28] transition-all"
+            >
+              {t("common.ctaButton")}
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
+              </svg>
+            </Link>
+          </div>
         </div>
       </section>
     </SubpageLayout>

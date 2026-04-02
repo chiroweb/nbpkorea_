@@ -90,21 +90,21 @@ export default function DuctBurnerPage() {
             ref={heroRef}
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
               Industrial Burner · Duct Burner
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
               덕트버너<br />(Duct Burner)
             </h2>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-6">
               NBPKOREA 덕트버너는 내열 메탈파이버(Metal Fiber)로 제작된 연소면에서 적외선 복사열을 발생시키는 표면연소 방식의 산업용 덕트 가열 버너입니다. MIDCO International(미국)과의 기술 협력을 바탕으로, ANSI Z83.4 / Z83.18 기준을 충족하는 NOx·CO 저배출 설계를 실현합니다.
             </p>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               소형(0.5FT)부터 대형(6FT)까지 NBP 시리즈 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["2단 연소 방식", "30단계 화염 제어", "NOx 저배출", "0.5FT~6FT 라인업"].map((tag) => (
-                <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                <span key={tag} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-1 text-[#5C6470]">
                   {tag}
                 </span>
               ))}
@@ -113,7 +113,7 @@ export default function DuctBurnerPage() {
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
               <Image
-                src="/images/duct-burner-hero.jpg"
+                src={`${S3}/images/burner/duct-burner-hero.jpg`}
                 alt="덕트버너 — 메탈 표면연소 버너"
                 fill className="object-cover object-center" priority
               />
@@ -125,10 +125,10 @@ export default function DuctBurnerPage() {
       {/* 적용 분야 */}
       <section ref={appRef} className="px-6 md:px-12 py-12 border-t border-[#D4DAE2] bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">{t("common.applications")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.applications")}</p>
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {applications.map((app) => (
-              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=burner`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#888480] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
+              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=burner`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
                 
                 {app}
               </Link>
@@ -138,9 +138,9 @@ export default function DuctBurnerPage() {
       </section>
 
       {/* 연소 원리 */}
-      <section className="px-6 md:px-12 py-12 bg-[#F2F4F7] border-y border-[#D4DAE2]">
+      <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">연소 원리 — Two-Stage Surface Combustion</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">연소 원리 — Two-Stage Surface Combustion</p>
           <div className="flex flex-wrap items-center gap-3">
             {[
               { label: "가스 공급\nLNG/LPG", bg: "#DCE2E8", text: "#2d2a28" },
@@ -163,19 +163,19 @@ export default function DuctBurnerPage() {
               )
             )}
           </div>
-          <p className="text-[14px] text-[#8B95A1] mt-4">화염 길이 25cm 이하 유지 / 30단계 정밀 턴다운 제어 / 차압 0.05″~1.4″ W.C. 광범위 운전</p>
+          <p className="text-[14px] text-[#5C6470] mt-4">화염 길이 25cm 이하 유지 / 30단계 정밀 턴다운 제어 / 차압 0.05″~1.4″ W.C. 광범위 운전</p>
         </div>
       </section>
 
       {/* 특징 */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">{t("common.features")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.features")}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
                 <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
-                <span className="text-xs text-[#8B95A1] leading-[1.8]">{f}</span>
+                <span className="text-sm text-[#3D4450] leading-relaxed">{f}</span>
               </div>
             ))}
           </div>
@@ -183,10 +183,10 @@ export default function DuctBurnerPage() {
       </section>
 
       {/* 사이즈별 갤러리 */}
-      <section ref={galleryRef} className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
+      <section ref={galleryRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">사이즈별 라인업</p>
-          <p className="text-xs text-[#8B95A1] mb-8 tracking-[0.05em]">소형 0.5FT부터 대형 6FT(150만 Kcal/h)까지 현장 덕트 크기에 맞춘 맞춤 선택</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">사이즈별 라인업</p>
+          <p className="text-xs text-[#5C6470] mb-8 tracking-[0.05em]">소형 0.5FT부터 대형 6FT(150만 Kcal/h)까지 현장 덕트 크기에 맞춘 맞춤 선택</p>
           <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 transition-all duration-1000 ${galleryInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {sizeGallery.map((item) => (
               <div key={item.label} className="bg-white border border-[#D4DAE2] overflow-hidden">
@@ -210,10 +210,10 @@ export default function DuctBurnerPage() {
       {/* 스펙 테이블 */}
       <section ref={specRef} className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">{t("common.specifications")}</p>
-          <p className="text-xs text-[#8B95A1] mb-8 tracking-[0.05em]">{t("common.selectModel")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">{t("common.specifications")}</p>
+          <p className="text-xs text-[#5C6470] mb-8 tracking-[0.05em]">{t("common.selectModel")}</p>
           <div className={`overflow-x-auto transition-all duration-1000 ${specInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <table className="w-full text-xs border-collapse min-w-[640px]">
+            <table className="w-full text-sm border-collapse min-w-[640px]">
               <thead>
                 <tr className="border-b-2 border-[#2d2a28]">
                   {["MODEL", "사이즈", "출력 (kW)", "연소 용량 (Kcal/h)", "통과압력 (mmAq)", "연료"].map((h) => (
@@ -231,27 +231,27 @@ export default function DuctBurnerPage() {
                     }`}
                   >
                     <td className={`py-3.5 px-4 font-medium tracking-[0.05em] ${selectedModel === row.model ? "text-[#C05010]" : "text-[#2d2a28]"}`}>{row.model}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.size}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.kw}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.capacity}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.pressure}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.fuel}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.size}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.kw}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.capacity}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.pressure}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.fuel}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-[13px] text-[#8B95A1] mt-4">※ {t("common.specNote")}</p>
+          <p className="text-[13px] text-[#5C6470] mt-4">※ {t("common.specNote")}</p>
         </div>
       </section>
 
       {/* 기술 파트너십 */}
       <section className="px-6 md:px-12 py-12 bg-white border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">기술 파트너십</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">기술 파트너십</p>
           <div className="flex flex-wrap gap-4">
             {["MIDCO International (미국) 기술 제휴", "ANSI Z83.4 / Z83.18 기준 적합", "19건 등록 특허", "글로벌 연소 기술 현지 적용"].map((item) => (
-              <div key={item} className="border border-[#D4DAE2] px-4 py-2.5 text-xs text-[#8B95A1] tracking-[0.05em]">
+              <div key={item} className="border border-[#D4DAE2] px-4 py-2.5 text-xs text-[#5C6470] tracking-[0.05em]">
                 {item}
               </div>
             ))}
@@ -264,14 +264,17 @@ export default function DuctBurnerPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <h3 className="text-lg tracking-[0.08em] font-light text-[#2d2a28] mb-2">{t("burner.ductBurner.ctaTitle")}</h3>
-            <p className="text-sm text-[#8B95A1]">{t("burner.ductBurner.ctaDesc")}</p>
+            <p className="text-sm text-[#5C6470]">{t("burner.ductBurner.ctaDesc")}</p>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/products?tab=burner" className="btn-link group text-[#8B95A1] text-xs tracking-[0.15em] uppercase">
+            <Link href="/products?tab=burner" className="btn-link group text-[#5C6470] text-xs tracking-[0.06em] uppercase">
               <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="rotate-180"><path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/></svg>
               {t("common.backToList")}
             </Link>
-            <Link href="/support" className="text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-6 py-3 hover:bg-[#C05010] hover:border-[#C05010] hover:text-white transition-all duration-300">
+            <Link href="/support?type=catalog" className="text-xs tracking-[0.06em] uppercase border border-[#D4DAE2] px-6 py-3 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-all duration-300">
+              카탈로그 신청
+            </Link>
+            <Link href="/support" className="text-xs tracking-[0.06em] uppercase bg-[#C05010] text-white px-6 py-3 hover:bg-[#2d2a28] transition-all duration-300">
               {t("common.contact")}
             </Link>
           </div>

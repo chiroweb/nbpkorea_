@@ -89,8 +89,8 @@ export default function CompanySection() {
           }`}
         >
           <span className="section-label block mb-6">Company</span>
-          <h2 className="font-bold tracking-[0.1em] text-[#2d2a28] mb-8 leading-none" style={{ fontSize: "clamp(32px, 7.5vw, 93.6px)" }}>NBPKOREA</h2>
-          <p className="text-sm leading-[2] text-[#888480] mb-12">
+          <h2 className="font-bold tracking-[0.02em] text-[#2d2a28] mb-8 leading-none text-4xl md:text-5xl lg:text-6xl">NBPKOREA</h2>
+          <p className="text-sm md:text-base leading-relaxed text-[#5C6470] mb-12">
             {t("description")}
           </p>
 

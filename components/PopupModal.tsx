@@ -97,7 +97,7 @@ export default function PopupModal() {
         <div className="flex items-center justify-between px-4 py-3 border-t border-[#D4DAE2] bg-white">
           <button
             onClick={hideToday}
-            className="text-xs text-[#8B95A1] hover:text-[#2d2a28] tracking-wide transition-colors"
+            className="text-xs text-[#5C6470] hover:text-[#2d2a28] tracking-wide transition-colors"
           >
             오늘 하루 보지 않기
           </button>

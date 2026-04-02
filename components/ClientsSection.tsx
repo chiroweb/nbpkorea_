@@ -44,12 +44,12 @@ export default function ClientsSection() {
   const { ref, isInView } = useInView({ threshold: 0.2 });
 
   return (
-    <section id="clients" className="py-32 px-6 md:px-12 bg-[#F2F4F7]" ref={ref}>
+    <section id="clients" className="py-32 px-6 md:px-12 bg-[#FAFAFA]" ref={ref}>
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">Clients</span>
           <h2 className="section-title mb-4">{t("title")}</h2>
-          <p className="text-sm text-[#888480]">{t("subtitle")}</p>
+          <p className="text-sm text-[#5C6470]">{t("subtitle")}</p>
         </div>
         <div className="flex flex-col gap-4 overflow-hidden">
           {/* Row 1: right-to-left */}

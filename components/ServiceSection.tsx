@@ -93,7 +93,7 @@ export default function ServiceSection() {
         {/* Section Header */}
         <div className="absolute top-10 left-1/2 -translate-x-1/2 z-20 text-center pointer-events-none">
           <span className="section-label block mb-1">Service</span>
-          <h2 className="text-xl md:text-2xl font-bold tracking-[0.15em] text-[#2d2a28]">
+          <h2 className="text-xl md:text-2xl font-bold tracking-[0.06em] text-[#2d2a28]">
             {t("label")}
           </h2>
         </div>
@@ -155,14 +155,14 @@ export default function ServiceSection() {
                 <h3 className="text-2xl md:text-3xl tracking-[0.08em] font-bold text-[#2d2a28] mb-6">
                   {service.title}
                 </h3>
-                <p className="text-sm text-[#8B95A1] leading-[2] mb-6 max-w-md">
+                <p className="text-sm text-[#5C6470] leading-relaxed mb-6 max-w-md">
                   {service.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-8">
                   {service.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-[13px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]"
+                      className="text-[13px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-1 text-[#5C6470]"
                     >
                       {tag}
                     </span>
@@ -193,13 +193,13 @@ export default function ServiceSection() {
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#DCE2E8] mb-6">
                   <Image src={service.image} alt={service.title} fill className="object-cover" />
                 </div>
-                <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-2">
+                <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-2">
                   {service.subtitle}
                 </span>
-                <h3 className="text-xl tracking-[0.1em] font-bold text-[#2d2a28] mb-3">
+                <h3 className="text-xl tracking-[0.04em] font-bold text-[#2d2a28] mb-3">
                   {service.title}
                 </h3>
-                <p className="text-sm text-[#8B95A1] leading-[2] mb-6">{service.description}</p>
+                <p className="text-sm text-[#5C6470] leading-relaxed mb-6">{service.description}</p>
                 <Link href="/business" className="btn-link group">
                   <span className="w-8 h-8 flex items-center justify-center border border-[#2d2a28]/30 rounded-full group-hover:bg-[#C05010] group-hover:text-[#F5F7F8] transition-all">
                     <svg width="8" height="8" viewBox="0 0 8 8" fill="none">

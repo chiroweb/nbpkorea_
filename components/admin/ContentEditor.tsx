@@ -86,7 +86,7 @@ export default function ContentEditor({ blocks, onChange }: Props) {
                 type="button"
                 onClick={() => moveBlock(i, -1)}
                 disabled={i === 0}
-                className="text-[#8B95A1] hover:text-[#2d2a28] disabled:opacity-30 text-xs px-1"
+                className="text-[#5C6470] hover:text-[#2d2a28] disabled:opacity-30 text-xs px-1"
               >
                 ↑
               </button>
@@ -94,7 +94,7 @@ export default function ContentEditor({ blocks, onChange }: Props) {
                 type="button"
                 onClick={() => moveBlock(i, 1)}
                 disabled={i === blocks.length - 1}
-                className="text-[#8B95A1] hover:text-[#2d2a28] disabled:opacity-30 text-xs px-1"
+                className="text-[#5C6470] hover:text-[#2d2a28] disabled:opacity-30 text-xs px-1"
               >
                 ↓
               </button>
@@ -131,7 +131,7 @@ export default function ContentEditor({ blocks, onChange }: Props) {
               <button
                 type="button"
                 onClick={() => addItem(i)}
-                className="text-xs text-[#8B95A1] hover:text-[#C05010] tracking-wide"
+                className="text-xs text-[#5C6470] hover:text-[#C05010] tracking-wide"
               >
                 + 항목 추가
               </button>
@@ -163,7 +163,7 @@ export default function ContentEditor({ blocks, onChange }: Props) {
             key={type}
             type="button"
             onClick={() => addBlock(type)}
-            className="border border-dashed border-[#D4DAE2] text-[11px] tracking-[0.1em] text-[#8B95A1] px-3 py-1.5 hover:border-[#C05010] hover:text-[#C05010] transition-colors"
+            className="border border-dashed border-[#D4DAE2] text-[11px] tracking-[0.1em] text-[#5C6470] px-3 py-1.5 hover:border-[#C05010] hover:text-[#C05010] transition-colors"
           >
             + {BLOCK_LABELS[type]}
           </button>

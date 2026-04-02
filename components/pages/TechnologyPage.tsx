@@ -32,7 +32,7 @@ function CoreTechSection() {
       <div className="max-w-7xl mx-auto">
         <div className="mb-16">
           <span className="section-label block mb-4">Core Technology</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">
             {t("coreTech.title")}
           </h2>
         </div>
@@ -82,18 +82,18 @@ function TechRow({
         <span className="text-5xl font-light text-[#D4DAE2] block mb-4">
           {String(index + 1).padStart(2, "0")}
         </span>
-        <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
+        <span className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] block mb-2">
           {tech.subtitle}
         </span>
         <h3 className="text-xl md:text-2xl tracking-[0.08em] font-bold text-[#2d2a28] mb-4">
           {tech.title}
         </h3>
-        <p className="text-sm leading-[2] text-[#888480] mb-6">{tech.description}</p>
+        <p className="text-sm md:text-base leading-relaxed text-[#5C6470] mb-6">{tech.description}</p>
         <div className="space-y-2">
           {tech.features.map((f) => (
             <div key={f} className="flex items-center gap-3">
               <div className="w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
-              <span className="text-xs text-[#888480] tracking-[0.03em]">{f}</span>
+              <span className="text-xs text-[#5C6470] tracking-[0.03em]">{f}</span>
             </div>
           ))}
         </div>
@@ -129,7 +129,7 @@ function GlobalPartnersSection() {
   ];
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto">
         <div
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -137,10 +137,10 @@ function GlobalPartnersSection() {
           }`}
         >
           <span className="section-label block mb-4">Global Partners</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">
             {t("globalPartners.title")}
           </h2>
-          <p className="text-sm text-[#888480] mt-4 max-w-xl mx-auto leading-[2]">
+          <p className="text-sm text-[#5C6470] mt-4 max-w-xl mx-auto leading-relaxed">
             {t("globalPartners.subtitle")}
           </p>
         </div>
@@ -169,7 +169,7 @@ function GlobalPartnersSection() {
                       />
                     </div>
                   )}
-                  <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">
+                  <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">
                     {partner.country}
                   </p>
                   <h3 className="text-xl tracking-[0.05em] font-bold text-[#2d2a28]">
@@ -177,11 +177,11 @@ function GlobalPartnersSection() {
                   </h3>
                 </div>
                 <div className="text-right">
-                  <p className="text-[13px] tracking-[0.15em] uppercase text-[#888480] mb-1">{t("globalPartners.partnershipSince")}</p>
+                  <p className="text-[13px] tracking-[0.06em] uppercase text-[#5C6470] mb-1">{t("globalPartners.partnershipSince")}</p>
                   <p className="text-2xl font-light text-[#C8D0DA]">{partner.since}</p>
                 </div>
               </div>
-              <p className="text-sm leading-[2] text-[#888480]">{partner.description}</p>
+              <p className="text-sm md:text-base leading-relaxed text-[#5C6470]">{partner.description}</p>
             </div>
           ))}
         </div>
@@ -216,8 +216,8 @@ function AgencyCertificatesSection() {
       <div className="max-w-7xl mx-auto">
         <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">Certificates</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">Agency Agreements & Certification Records</h2>
-          <p className="text-sm text-[#888480] mt-4 max-w-3xl leading-[2]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">Agency Agreements & Certification Records</h2>
+          <p className="text-sm text-[#5C6470] mt-4 max-w-3xl leading-relaxed">
             회사소개 자료에서 확인된 독점 대리점 협약서와 인증 기록입니다. 기술 협력의 공식성과 대외 신뢰도를 함께 보여줍니다.
           </p>
         </div>
@@ -233,7 +233,7 @@ function AgencyCertificatesSection() {
               </div>
               <div className="border border-t-0 border-[#D4DAE2] px-5 py-4">
                 <p className="text-sm font-medium tracking-[0.04em] text-[#2d2a28]">{certificate.title}</p>
-                <p className="text-[13px] text-[#888480] mt-1">{certificate.subtitle}</p>
+                <p className="text-[13px] text-[#5C6470] mt-1">{certificate.subtitle}</p>
               </div>
             </div>
           ))}
@@ -263,7 +263,7 @@ function AwardsCertificationsSection() {
             }`}
           >
             <span className="section-label block mb-4">Awards</span>
-            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-8">
+            <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28] mb-8">
               {t("awards.title")}
             </h2>
             <div className="space-y-3">
@@ -298,7 +298,7 @@ function AwardsCertificationsSection() {
             }`}
           >
             <span className="section-label block mb-4">Certifications</span>
-            <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-8">
+            <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28] mb-8">
               {t("certifications.title")}
             </h2>
             <div className="grid grid-cols-2 gap-4">
@@ -313,7 +313,7 @@ function AwardsCertificationsSection() {
                   style={{ transitionDelay: `${300 + index * 100}ms` }}
                 >
                   <p className="text-base font-medium text-[#2d2a28] mb-1">{cert.name}</p>
-                  <p className="text-xs text-[#888480]">{cert.desc}</p>
+                  <p className="text-xs text-[#5C6470]">{cert.desc}</p>
                 </div>
               ))}
             </div>
@@ -356,7 +356,7 @@ function RDCenterSection() {
   ];
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto">
         <div
           className={`text-center mb-16 transition-all duration-1000 ${
@@ -364,10 +364,10 @@ function RDCenterSection() {
           }`}
         >
           <span className="section-label block mb-4">R&D Center</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">
             {t("rdCenter.title")}
           </h2>
-          <p className="text-sm text-[#888480] mt-4 max-w-xl mx-auto leading-[2]">
+          <p className="text-sm text-[#5C6470] mt-4 max-w-xl mx-auto leading-relaxed">
             {t("rdCenter.subtitle")}
           </p>
         </div>

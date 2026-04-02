@@ -14,8 +14,9 @@ export default function HvacDehumidifierPage() {
       breadcrumbCategory={t("breadcrumbs.hvac")}
       breadcrumbCategoryHref="/products?tab=hvac"
       subtitle="HVAC · Dehumidifier"
-      titleKo="제습기"
-      titleEn="Dehumidifier"
+      titleKo="복합식 제습기"
+      titleEn="Combined Dehumidifier"
+      image="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/humidremover.jpg"
       description={t("hvac.dehumidifier.description")}
       tags={["제습", "도장", "조선", "클린룸"]}
       ctaTitleKey="제습기 도입을 검토 중이신가요?"

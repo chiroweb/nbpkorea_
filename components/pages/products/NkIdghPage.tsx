@@ -76,21 +76,21 @@ export default function NkIdghPage() {
             ref={heroRef}
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
               Combustion · Indirect Gas Heater
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
               간접식 가스히터
             </h2>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-6">
               열교환기(Heat Exchanger)를 사용하여 연소 가스와 공급 공기를 완전히 분리하는 간접 가열 방식의 산업용 가스히터입니다. 연소 배기가스가 가열 공기와 섞이지 않으므로 도장 부스, 식품 가공, 클린룸, 제약 시설 등 청정한 공기가 반드시 필요한 현장에 최적화되어 있습니다.
             </p>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               400,000 Kcal/h부터 1,000,000 Kcal/h까지 4개 모델로 구성되며, 스테인리스 열교환기를 적용하여 내식성과 내열성이 뛰어납니다. LNG·LPG·도시가스를 모두 사용할 수 있으며, 비례제어 방식으로 공급 온도를 정밀하게 관리합니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["400,000~1,000,000 Kcal/h", "간접 열교환 방식", "청정 공기 공급", "비례제어"].map((tag) => (
-                <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                <span key={tag} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-1 text-[#5C6470]">
                   {tag}
                 </span>
               ))}
@@ -111,10 +111,10 @@ export default function NkIdghPage() {
       {/* 적용 분야 */}
       <section ref={appRef} className="px-6 md:px-12 py-12 border-t border-[#D4DAE2] bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">{t("common.applications")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.applications")}</p>
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {applications.map((app) => (
-              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=combustion`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#888480] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
+              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=combustion`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
                 
                 {app}
               </Link>
@@ -124,9 +124,9 @@ export default function NkIdghPage() {
       </section>
 
       {/* 작동 원리 */}
-      <section className="px-6 md:px-12 py-12 bg-[#F2F4F7] border-y border-[#D4DAE2]">
+      <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">작동 원리 — Indirect Firing Principle</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">작동 원리 — Indirect Firing Principle</p>
           <div className="flex flex-wrap items-center gap-3 md:gap-4">
             {[
               { label: "가스 공급\nLNG/LPG", bg: "#DCE2E8", text: "#2d2a28" },
@@ -147,19 +147,19 @@ export default function NkIdghPage() {
               )
             )}
           </div>
-          <p className="text-[14px] text-[#8B95A1] mt-4">연소 배기가스는 외부로 배출 — 가열 공기는 청정 상태 유지</p>
+          <p className="text-[14px] text-[#5C6470] mt-4">연소 배기가스는 외부로 배출 — 가열 공기는 청정 상태 유지</p>
         </div>
       </section>
 
       {/* 특징 */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">{t("common.features")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.features")}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
                 <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
-                <span className="text-xs text-[#8B95A1] leading-[1.8]">{f}</span>
+                <span className="text-sm text-[#3D4450] leading-relaxed">{f}</span>
               </div>
             ))}
           </div>
@@ -167,12 +167,12 @@ export default function NkIdghPage() {
       </section>
 
       {/* 스펙 테이블 */}
-      <section ref={specRef} className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
+      <section ref={specRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-2">{t("common.specifications")}</p>
-          <p className="text-xs text-[#8B95A1] mb-8 tracking-[0.05em]">{t("common.selectModel")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">{t("common.specifications")}</p>
+          <p className="text-xs text-[#5C6470] mb-8 tracking-[0.05em]">{t("common.selectModel")}</p>
           <div className={`overflow-x-auto transition-all duration-1000 ${specInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            <table className="w-full text-xs border-collapse min-w-[900px]">
+            <table className="w-full text-sm border-collapse min-w-[900px]">
               <thead>
                 <tr className="border-b-2 border-[#2d2a28]">
                   {["MODEL", "용량 (Kcal/h)", "연료", "풍량 (m³/min)", "CMH", "최대압력 (mmAq)", "크기 (m)", "중량 (kg)"].map((h) => (
@@ -190,19 +190,19 @@ export default function NkIdghPage() {
                     }`}
                   >
                     <td className={`py-3.5 px-4 font-medium tracking-[0.05em] ${selectedModel === row.model ? "text-[#C05010]" : "text-[#2d2a28]"}`}>{row.model}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.capacity}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.fuel}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.volume}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.cmh}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.maxPressure}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.size}</td>
-                    <td className="py-3.5 px-4 text-[#8B95A1]">{row.weight}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.capacity}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.fuel}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.volume}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.cmh}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.maxPressure}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.size}</td>
+                    <td className="py-3.5 px-4 text-[#5C6470]">{row.weight}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
           </div>
-          <p className="text-[13px] text-[#8B95A1] mt-4">※ {t("common.specNote")}</p>
+          <p className="text-[13px] text-[#5C6470] mt-4">※ {t("common.specNote")}</p>
         </div>
       </section>
 
@@ -211,14 +211,17 @@ export default function NkIdghPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <h3 className="text-lg tracking-[0.08em] font-light text-[#2d2a28] mb-2">{t("combustion.nkIdgh.ctaTitle")}</h3>
-            <p className="text-sm text-[#8B95A1]">{t("combustion.nkIdgh.ctaDesc")}</p>
+            <p className="text-sm text-[#5C6470]">{t("combustion.nkIdgh.ctaDesc")}</p>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/products?tab=combustion" className="btn-link group text-[#8B95A1] text-xs tracking-[0.15em] uppercase">
+            <Link href="/products?tab=combustion" className="btn-link group text-[#5C6470] text-xs tracking-[0.06em] uppercase">
               <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="rotate-180"><path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/></svg>
               {t("common.backToList")}
             </Link>
-            <Link href="/support" className="text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-6 py-3 hover:bg-[#C05010] hover:border-[#C05010] hover:text-white transition-all duration-300">
+            <Link href="/support?type=catalog" className="text-xs tracking-[0.06em] uppercase border border-[#D4DAE2] px-6 py-3 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-all duration-300">
+              카탈로그 신청
+            </Link>
+            <Link href="/support" className="text-xs tracking-[0.06em] uppercase bg-[#C05010] text-white px-6 py-3 hover:bg-[#2d2a28] transition-all duration-300">
               {t("common.contact")}
             </Link>
           </div>

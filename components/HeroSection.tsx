@@ -6,10 +6,11 @@ import { useTranslations } from "next-intl";
 const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
 
 const slides = [
-  { label: "NBPKOREA Industrial Site 1", src: `${S3}/videos/hero1.mp4`, duration: 7000 },
-  { label: "NBPKOREA Environmental Systems", src: `${S3}/videos/hero3.mp4`, duration: 8000 },
-  { label: "NBPKOREA Industrial Site 5", src: `${S3}/videos/hero5.mp4`, duration: 7000 },
-  { label: "NBPKOREA Industrial Site 2", src: `${S3}/videos/hero2.mp4`, duration: 7000 },
+  { label: "NBPKOREA Combustion Systems", src: `${S3}/videos/hero-new-1.mp4`, duration: 5000 },
+  { label: "NBPKOREA Industrial Site", src: `${S3}/videos/hero-new-2.mp4`, duration: 5000 },
+  { label: "NBPKOREA Battery Manufacturing", src: `${S3}/videos/hero-new-3.mp4`, duration: 5000 },
+  { label: "NBPKOREA Field Operations 1", src: `${S3}/videos/hero-new-4.mp4`, duration: 5000 },
+  { label: "NBPKOREA Field Operations 2", src: `${S3}/videos/hero-new-5.mp4`, duration: 5000 },
 ];
 
 interface HeroSectionProps {
@@ -87,40 +88,47 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
       <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/70 via-[#1a1a1a]/20 to-transparent" />
 
       {/* Hero Content — Desktop */}
-      <div className="relative z-10 px-8 md:px-16 pb-36 max-w-3xl hidden md:block">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/60 mb-4">
+      <div className="relative z-10 px-8 md:px-16 pb-32 max-w-3xl hidden md:block">
+        <p className="text-[11px] tracking-[0.12em] uppercase text-white/40 mb-8">
           {t("since")}
         </p>
-        <h1 className="text-5xl lg:text-6xl font-bold tracking-[0.1em] text-white mb-4 leading-tight">
+        <h1 className="text-5xl lg:text-[5.5rem] font-bold tracking-[-0.02em] text-white leading-none mb-4">
           {t("title")}
-          <br />
-          <span className="text-[#C05010]">{t("titleHighlight")}</span> {t("titleSuffix")}
         </h1>
-        <p className="text-base tracking-[0.1em] text-white/70 max-w-lg leading-relaxed">
+        <div className="w-12 h-[2px] bg-[#C05010] mb-5" />
+        <p className="text-base tracking-[0.08em] uppercase text-[#C05010]/90 font-medium mb-10">
+          {t("engLine")}
+        </p>
+        <p className="text-xl lg:text-2xl font-semibold tracking-[-0.01em] text-white/85 mb-3">
+          {t("tagline")}
+        </p>
+        <p className="text-[13px] tracking-[0.02em] text-white/40 max-w-md leading-relaxed">
           {t("subtitle")}
         </p>
       </div>
 
       {/* Hero Content — Mobile */}
       <div className="md:hidden absolute inset-0 z-10 flex flex-col justify-between px-6 pt-24 pb-16">
-        {/* Top: since + title, right-aligned */}
         <div className="text-right">
-          <p className="text-[10px] tracking-[0.3em] uppercase text-white/60 mb-3">
+          <p className="text-[10px] tracking-[0.1em] uppercase text-white/40 mb-4">
             {t("since")}
           </p>
-          <p className="text-[22px] font-bold tracking-[0.1em] text-white leading-tight">
+          <p className="text-[28px] font-bold tracking-[-0.02em] text-white leading-none mb-3">
             {t("title")}
           </p>
-          <p className="text-[22px] font-bold tracking-[0.1em] leading-tight">
-            <span className="text-[#C05010]">{t("titleHighlight")}</span>{" "}
-            <span className="text-white">{t("titleSuffix")}</span>
+          <div className="w-8 h-[2px] bg-[#C05010] ml-auto mb-3" />
+          <p className="text-[12px] tracking-[0.08em] uppercase text-[#C05010]/90 font-medium">
+            {t("engLine")}
           </p>
         </div>
-
-        {/* Bottom: subtitle */}
-        <p className="text-xs tracking-[0.06em] text-white/70 leading-relaxed">
-          {t("subtitle")}
-        </p>
+        <div>
+          <p className="text-lg font-semibold tracking-[-0.01em] text-white/85 mb-2">
+            {t("tagline")}
+          </p>
+          <p className="text-[11px] tracking-[0.02em] text-white/40 leading-relaxed">
+            {t("subtitle")}
+          </p>
+        </div>
       </div>
 
       {/* Slide Indicators — desktop only */}
@@ -143,7 +151,7 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
 
       {/* Scroll Down Indicator */}
       <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex-col items-center gap-3 z-10 hidden md:flex">
-        <span className="text-[13px] tracking-[0.2em] uppercase text-white/50 -rotate-90 mb-4">
+        <span className="text-[13px] tracking-[0.1em] uppercase text-white/50 -rotate-90 mb-4">
           {t("scroll")}
         </span>
         <div className="scroll-indicator">
@@ -156,9 +164,9 @@ export default function HeroSection({ shouldPlay = false }: HeroSectionProps) {
 
       {/* Contact Quick Info */}
       <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 hidden lg:flex flex-col items-end gap-2 z-10">
-        <span className="text-base tracking-[0.15em] text-white/50">031-434-6566~7</span>
+        <span className="text-base tracking-[0.06em] text-white/50">031-434-6566~7</span>
         <div className="w-8 h-px bg-white/20" />
-        <span className="text-base tracking-[0.1em] text-white/40">Ansan, Korea</span>
+        <span className="text-base tracking-[0.1em] text-white/40">South Korea</span>
       </div>
     </section>
   );

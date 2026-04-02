@@ -8,9 +8,9 @@ import { useTranslations } from "next-intl";
 import { Performance } from "@/lib/types";
 
 const TABS = [
-  { id: "environment", label: "환경설비", en: "Environmental" },
-  { id: "hvac", label: "공조설비", en: "HVAC" },
-  { id: "combustion", label: "연소설비", en: "Combustion" },
+  { id: "environment", label: "환경시스템", en: "Environmental" },
+  { id: "hvac", label: "공조시스템", en: "HVAC" },
+  { id: "combustion", label: "연소시스템", en: "Combustion" },
   { id: "burner", label: "산업용 버너", en: "Industrial Burners" },
 ];
 
@@ -34,14 +34,14 @@ function PerformanceCard({ item }: { item: Performance }) {
           {item.tags && item.tags.length > 0 && (
             <div className="flex gap-1.5 flex-shrink-0">
               {item.tags.map((tag) => (
-                <span key={tag} className="text-[11px] tracking-[0.08em] px-2 py-0.5 bg-[#C05010]/10 text-[#C05010] border border-[#C05010]/20">
+                <span key={tag} className="text-xs tracking-[0.08em] px-2 py-0.5 bg-[#C05010]/10 text-[#C05010] border border-[#C05010]/20">
                   {tag}
                 </span>
               ))}
             </div>
           )}
         </div>
-        <span className="text-[13px] tracking-[0.1em] text-[#8B95A1] flex-shrink-0 ml-4">No. {item.number}</span>
+        <span className="text-[13px] tracking-[0.04em] text-[#5C6470] flex-shrink-0 ml-4">No. {item.number}</span>
       </div>
 
       <div className="grid md:grid-cols-[1fr_2fr] gap-0">
@@ -49,7 +49,7 @@ function PerformanceCard({ item }: { item: Performance }) {
         <div className="p-4 border-r border-[#D4DAE2]">
           {images.length > 0 ? (
             <>
-              <div className="relative aspect-[4/3] bg-[#F2F4F7] overflow-hidden mb-2">
+              <div className="relative aspect-[4/3] bg-[#FAFAFA] overflow-hidden mb-2">
                 {(() => {
                   const { src, rotate } = parseImageUrl(images[activeImg] ?? images[0]);
                   return (
@@ -83,7 +83,7 @@ function PerformanceCard({ item }: { item: Performance }) {
               )}
             </>
           ) : (
-            <div className="aspect-[4/3] bg-[#F2F4F7] flex items-center justify-center">
+            <div className="aspect-[4/3] bg-[#FAFAFA] flex items-center justify-center">
               <span className="text-sm text-[#C8D0DA]">No Image</span>
             </div>
           )}
@@ -97,7 +97,7 @@ function PerformanceCard({ item }: { item: Performance }) {
                 <tbody>
                   {item.specs.map((spec, i) => (
                     <tr key={i} className="border-b border-[#E8ECF0] last:border-0">
-                      <td className="py-2.5 pr-4 text-[#8B95A1] text-[13px] tracking-[0.04em] whitespace-nowrap w-28">
+                      <td className="py-2.5 pr-4 text-[#5C6470] text-[13px] tracking-[0.04em] whitespace-nowrap w-28">
                         {spec.label}
                       </td>
                       <td className="py-2.5 text-[#2d2a28] text-[13px] tracking-[0.02em]">
@@ -112,19 +112,19 @@ function PerformanceCard({ item }: { item: Performance }) {
 
           {(item.before_text || item.after_text) && (
             <div className="border-t border-[#D4DAE2] pt-5">
-              <p className="text-[11px] tracking-[0.2em] uppercase text-[#8B95A1] mb-3">
+              <p className="text-xs tracking-[0.04em] uppercase text-[#5C6470] mb-3">
                 Performance Result
               </p>
               <div className="grid grid-cols-2 gap-4">
                 {item.before_text && (
                   <div className="bg-[#F5F7F8] p-4">
-                    <span className="text-[10px] tracking-[0.2em] uppercase text-[#C8D0DA] block mb-2">Before</span>
-                    <p className="text-[13px] leading-[1.8] text-[#8B95A1] whitespace-pre-line">{item.before_text}</p>
+                    <span className="text-xs tracking-[0.04em] uppercase text-[#C8D0DA] block mb-2">Before</span>
+                    <p className="text-[13px] leading-[1.8] text-[#5C6470] whitespace-pre-line">{item.before_text}</p>
                   </div>
                 )}
                 {item.after_text && (
                   <div className="bg-[#C05010]/5 border border-[#C05010]/15 p-4">
-                    <span className="text-[10px] tracking-[0.2em] uppercase text-[#C05010] block mb-2">After</span>
+                    <span className="text-xs tracking-[0.04em] uppercase text-[#C05010] block mb-2">After</span>
                     <p className="text-[13px] leading-[1.8] text-[#2d2a28] whitespace-pre-line">{item.after_text}</p>
                   </div>
                 )}
@@ -222,10 +222,10 @@ function PerformancePageInner() {
               <button
                 key={tab.id}
                 onClick={() => handleTabChange(tab.id)}
-                className={`px-6 md:px-8 py-3.5 text-xs tracking-[0.15em] uppercase border-b-2 transition-all duration-200 ${
+                className={`px-6 md:px-8 py-3.5 text-xs tracking-[0.06em] uppercase border-b-2 transition-all duration-200 ${
                   activeTab === tab.id
                     ? "border-[#C05010] text-[#C05010] font-medium"
-                    : "border-transparent text-[#888480] hover:text-[#C05010]"
+                    : "border-transparent text-[#5C6470] hover:text-[#C05010]"
                 }`}
               >
                 {tab.label}
@@ -250,7 +250,7 @@ function PerformancePageInner() {
                 className={`flex items-center gap-2 px-4 py-2 text-[13px] tracking-[0.08em] border transition-colors ${
                   activeTag
                     ? "border-[#C05010] text-[#C05010] bg-[#C05010]/5"
-                    : "border-[#D4DAE2] text-[#888480] hover:border-[#C05010]"
+                    : "border-[#D4DAE2] text-[#5C6470] hover:border-[#C05010]"
                 }`}
               >
                 <span>적용분야</span>
@@ -270,7 +270,7 @@ function PerformancePageInner() {
                   <button
                     onClick={() => handleTagSelect(null)}
                     className={`w-full text-left px-4 py-2.5 text-[13px] tracking-[0.06em] transition-colors border-b border-[#E8ECF0] ${
-                      !activeTag ? "text-[#C05010] bg-[#C05010]/5" : "text-[#888480] hover:bg-[#F5F7F8]"
+                      !activeTag ? "text-[#C05010] bg-[#C05010]/5" : "text-[#5C6470] hover:bg-[#F5F7F8]"
                     }`}
                   >
                     전체 보기
@@ -297,7 +297,7 @@ function PerformancePageInner() {
             {activeTag && (
               <button
                 onClick={() => setActiveTag(null)}
-                className="text-[12px] tracking-[0.1em] text-[#888480] hover:text-[#C05010] transition-colors flex items-center gap-1"
+                className="text-[12px] tracking-[0.04em] text-[#5C6470] hover:text-[#C05010] transition-colors flex items-center gap-1"
               >
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                   <path d="M2 2L8 8M8 2L2 8" stroke="currentColor" strokeWidth="1" />
@@ -310,12 +310,12 @@ function PerformancePageInner() {
       </div>
 
       {/* Content */}
-      <section className="py-12 px-6 md:px-12 bg-[#F2F4F7] min-h-[60vh]">
+      <section className="py-12 px-6 md:px-12 bg-[#FAFAFA] min-h-[60vh]">
         <div className="max-w-7xl mx-auto">
           {loading ? (
-            <p className="text-sm text-[#8B95A1] text-center py-20">로딩 중...</p>
+            <p className="text-sm text-[#5C6470] text-center py-20">로딩 중...</p>
           ) : filtered.length === 0 ? (
-            <p className="text-sm text-[#8B95A1] text-center py-20">
+            <p className="text-sm text-[#5C6470] text-center py-20">
               {activeTag ? `"${activeTag}" 태그에 해당하는 실적이 없습니다.` : "등록된 사업실적이 없습니다."}
             </p>
           ) : (

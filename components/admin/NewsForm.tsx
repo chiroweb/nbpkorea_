@@ -79,7 +79,7 @@ export default function NewsForm({ initial, id }: Props) {
 
   const inputClass =
     "w-full border border-[#D4DAE2] px-3 py-2.5 text-sm text-[#2d2a28] focus:outline-none focus:border-[#C05010] transition-colors";
-  const labelClass = "block text-[11px] tracking-[0.15em] text-[#8B95A1] uppercase mb-1.5";
+  const labelClass = "block text-[11px] tracking-[0.15em] text-[#5C6470] uppercase mb-1.5";
 
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl space-y-6">

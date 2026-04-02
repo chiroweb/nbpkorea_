@@ -103,11 +103,11 @@
   },
   "home": {
     "hero": {
-      "since": "Since 2006 · Ansan, Korea",
+      "since": "SINCE 2006 · SOUTH KOREA",
       "title": "NBPKOREA",
-      "titleHighlight": "Best",
-      "titleSuffix": "Combustion Solutions",
-      "subtitle": "Your Technology Partner for Industrial Combustion & Environmental Systems",
+      "engLine": "Next-level Burn Performance",
+      "tagline": "Setting New Standards in Combustion",
+      "subtitle": "Industrial combustion equipment & environmental systems — rewriting the standard of performance",
       "scroll": "Scroll"
     },
     "company": {
@@ -187,7 +187,9 @@
       "history": "History",
       "network": "Network",
       "patents": "Patents",
-      "directions": "Directions"
+      "directions": "Directions",
+      "about": "About",
+      "partnership": "Partnership & Certification"
     },
     "ceo": {
       "label": "CEO Message",
@@ -785,8 +787,8 @@
           "answer": "After submitting a quote request via the website inquiry form or by phone (031-434-6566~7), our responsible engineer will assess your site conditions and submit a customized design and quotation. Schedules may vary depending on site conditions."
         },
         {
-          "question": "How do I request A/S?",
-          "answer": "Please contact us by phone (031-434-6566~7) or through the online inquiry on our website, and our responsible engineer will contact you. For industrial equipment (excluding individual items), the warranty period is 1 year from the date of commissioning completion."
+          "question": "Can you provide custom-designed solutions for our site conditions?",
+          "answer": "Yes. NBPKOREA designs and manufactures all equipment tailored to your site conditions (airflow, temperature, humidity, installation space, etc.). Our engineers will assess your site and propose the optimal specifications."
         },
         {
           "question": "Can I receive product technical materials or catalogs?",

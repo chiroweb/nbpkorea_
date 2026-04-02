@@ -44,16 +44,16 @@ function PostRow({ post, index }: { post: News; index: number }) {
         {/* Content */}
         <div className="flex-1 min-w-0 flex flex-col justify-center">
           <div className="flex items-center gap-3 mb-1.5">
-            <span className="text-[12px] tracking-[0.15em] uppercase text-[#C05010]">
+            <span className="text-[12px] tracking-[0.06em] uppercase text-[#C05010]">
               {post.category}
             </span>
             <span className="text-[12px] text-[#C8D0DA]">|</span>
-            <span className="text-[12px] tracking-[0.08em] text-[#8B95A1]">{post.date}</span>
+            <span className="text-[12px] tracking-[0.08em] text-[#5C6470]">{post.date}</span>
           </div>
           <h3 className="text-sm md:text-base tracking-[0.03em] text-[#2d2a28] font-medium leading-snug group-hover:text-[#C05010] transition-colors duration-300 truncate">
             {post.title}
           </h3>
-          <p className="text-xs text-[#8B95A1] leading-[1.8] mt-1 line-clamp-1 hidden md:block">
+          <p className="text-xs text-[#5C6470] leading-[1.8] mt-1 line-clamp-1 hidden md:block">
             {post.excerpt}
           </p>
         </div>
@@ -119,10 +119,10 @@ export default function NewsPage() {
               <button
                 key={cat.key}
                 onClick={() => handleCategoryChange(cat.key)}
-                className={`text-[14px] tracking-[0.15em] uppercase px-4 py-2 border transition-all duration-300 ${
+                className={`text-[14px] tracking-[0.06em] uppercase px-4 py-2 border transition-all duration-300 ${
                   cat.key === activeCategory
                     ? "border-[#2d2a28] bg-[#2d2a28] text-[#F5F7F8]"
-                    : "border-[#D4DAE2] text-[#8B95A1] hover:border-[#C05010] hover:text-[#C05010]"
+                    : "border-[#D4DAE2] text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010]"
                 }`}
               >
                 {cat.label}
@@ -136,9 +136,9 @@ export default function NewsPage() {
       <section className="px-6 md:px-12 py-12">
         <div className="max-w-7xl mx-auto">
           {loading ? (
-            <p className="text-sm text-[#8B95A1]">{t("loading")}</p>
+            <p className="text-sm text-[#5C6470]">{t("loading")}</p>
           ) : filtered.length === 0 ? (
-            <p className="text-sm text-[#8B95A1]">{t("empty")}</p>
+            <p className="text-sm text-[#5C6470]">{t("empty")}</p>
           ) : (
             <>
               <div className="border-t border-[#2d2a28]">
@@ -153,7 +153,7 @@ export default function NewsPage() {
                   <button
                     onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
                     disabled={currentPage === 1}
-                    className="w-9 h-9 flex items-center justify-center border border-[#D4DAE2] text-[#888480] hover:border-[#C05010] hover:text-[#C05010] transition-colors disabled:opacity-30 disabled:pointer-events-none"
+                    className="w-9 h-9 flex items-center justify-center border border-[#D4DAE2] text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-colors disabled:opacity-30 disabled:pointer-events-none"
                   >
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                       <path d="M7 1L3 5L7 9" stroke="currentColor" strokeWidth="1" />
@@ -163,10 +163,10 @@ export default function NewsPage() {
                     <button
                       key={page}
                       onClick={() => setCurrentPage(page)}
-                      className={`w-9 h-9 flex items-center justify-center text-xs tracking-[0.1em] border transition-colors ${
+                      className={`w-9 h-9 flex items-center justify-center text-xs tracking-[0.04em] border transition-colors ${
                         page === currentPage
                           ? "border-[#2d2a28] bg-[#2d2a28] text-white"
-                          : "border-[#D4DAE2] text-[#888480] hover:border-[#C05010] hover:text-[#C05010]"
+                          : "border-[#D4DAE2] text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010]"
                       }`}
                     >
                       {page}
@@ -175,7 +175,7 @@ export default function NewsPage() {
                   <button
                     onClick={() => setCurrentPage((p) => Math.min(totalPages, p + 1))}
                     disabled={currentPage === totalPages}
-                    className="w-9 h-9 flex items-center justify-center border border-[#D4DAE2] text-[#888480] hover:border-[#C05010] hover:text-[#C05010] transition-colors disabled:opacity-30 disabled:pointer-events-none"
+                    className="w-9 h-9 flex items-center justify-center border border-[#D4DAE2] text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-colors disabled:opacity-30 disabled:pointer-events-none"
                   >
                     <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                       <path d="M3 1L7 5L3 9" stroke="currentColor" strokeWidth="1" />

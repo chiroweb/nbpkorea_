@@ -57,7 +57,7 @@ export default function SubpageLayout({
           >
             <Link
               href="/"
-              className="text-[13px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors"
+              className="text-[13px] tracking-[0.06em] uppercase text-[#5C6470] hover:text-[#C05010] transition-colors"
             >
               Home
             </Link>
@@ -65,13 +65,13 @@ export default function SubpageLayout({
               <span key={item.label} className="flex items-center gap-2">
                 <span className="text-[#C8D0DA]">/</span>
                 {index === breadcrumb.length - 1 ? (
-                  <span className="text-[13px] tracking-[0.15em] uppercase text-[#C05010]">
+                  <span className="text-[13px] tracking-[0.06em] uppercase text-[#C05010]">
                     {item.label}
                   </span>
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-[13px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors"
+                    className="text-[13px] tracking-[0.06em] uppercase text-[#5C6470] hover:text-[#C05010] transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -86,11 +86,11 @@ export default function SubpageLayout({
               isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.15em] text-[#2d2a28] mb-4">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[0.06em] text-[#2d2a28] mb-4">
               {title}
             </h1>
             {subtitle && (
-              <p className="text-sm md:text-base tracking-[0.1em] text-[#888480] max-w-2xl">
+              <p className="text-sm md:text-base tracking-[0.04em] text-[#5C6470] max-w-2xl">
                 {subtitle}
               </p>
             )}

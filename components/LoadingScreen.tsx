@@ -4,6 +4,7 @@ import { useEffect, useState, useRef, useCallback } from "react";
 
 const VIDEO_SRC = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/videos/intro-logo.mp4";
 const MIN_TOTAL_MS = 3000;
+const STORAGE_KEY = "nbp_intro_seen";
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -15,6 +16,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
   const pageReadyRef = useRef(false);
   const minTimeRef = useRef(false);
   const videoEndedRef = useRef(false);
+  const skippedRef = useRef(false);
 
   const tryComplete = useCallback(() => {
     if (pageReadyRef.current && minTimeRef.current) {
@@ -23,8 +25,23 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
     }
   }, [onComplete]);
 
+  // 재방문 시 인트로 스킵
+  useEffect(() => {
+    try {
+      if (sessionStorage.getItem(STORAGE_KEY)) {
+        skippedRef.current = true;
+        onComplete();
+        return;
+      }
+      sessionStorage.setItem(STORAGE_KEY, "1");
+    } catch {
+      // private browsing 등에서 sessionStorage 실패 시 정상 진행
+    }
+  }, [onComplete]);
+
   // Gate 1: page fully loaded
   useEffect(() => {
+    if (skippedRef.current) return;
     const markReady = () => {
       pageReadyRef.current = true;
       tryComplete();
@@ -39,6 +56,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
 
   // Gate 2: minimum time + video playback
   useEffect(() => {
+    if (skippedRef.current) return;
     const timer = setTimeout(() => {
       minTimeRef.current = true;
       tryComplete();

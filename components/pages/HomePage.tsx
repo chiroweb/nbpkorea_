@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import LoadingScreen from "@/components/LoadingScreen";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import BusinessHighlight from "@/components/BusinessHighlight";
 import CompanySection from "@/components/CompanySection";
 import NewsSection from "@/components/NewsSection";
 import HistorySection from "@/components/HistorySection";
@@ -50,6 +51,7 @@ export default function HomePage() {
             <HeroSection shouldPlay={!isLoading} />
           </div>
           <div ref={contentRef} className="relative z-10 bg-[#F5F7F8]">
+            <BusinessHighlight />
             <CompanySection />
             <HistorySection />
             <ClientsSection />

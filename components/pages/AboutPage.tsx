@@ -2,6 +2,7 @@
 
 import SubpageLayout from "@/components/SubpageLayout";
 import ClientsSection from "@/components/ClientsSection";
+import { Link } from "@/i18n/navigation";
 import { useInView } from "@/hooks/useInView";
 import { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
@@ -18,7 +19,7 @@ function Highlight({ text, keywords }: { text: string; keywords: string[] }) {
     <>
       {parts.map((part, i) =>
         keywords.includes(part) ? (
-          <span key={i} className="text-[#C05010] font-medium">{part}</span>
+          <span key={i} className="text-[#C05010] font-medium underline decoration-[#C05010]/30 underline-offset-4">{part}</span>
         ) : (
           <span key={i}>{part}</span>
         )
@@ -28,17 +29,15 @@ function Highlight({ text, keywords }: { text: string; keywords: string[] }) {
 }
 
 const CEO_HIGHLIGHTS_P1 = [
-  "엔비피코리아", "20여년", "친환경 에너지 솔루션",
-  "SMART 직접연소산화시스템", "클린룸", "드라이룸",
-  "에너지전문기업", "기획, 설계, 생산, 시공, TAB 사후관리",
+  "친환경 에너지 솔루션",
+  "기획, 설계, 생산, 시공, TAB 사후관리",
 ];
 const CEO_HIGHLIGHTS_P2 = [
-  "엔비피코리아", "환경, 에너지 전문 기업",
   "첨단 에너지 절감형 친환경제품",
 ];
 const CEO_HIGHLIGHTS_P3 = [
-  "엔비피코리아", "세계 최고의 품질과 서비스",
-  "인간과 자연이 공존하는 세상", "글로벌 리더 기업",
+  "인간과 자연이 공존하는 세상",
+  "글로벌 리더 기업",
 ];
 
 function CeoSection() {
@@ -46,18 +45,31 @@ function CeoSection() {
   const { ref, isInView } = useInView({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-20 px-6 md:px-12">
-      <div className="max-w-4xl mx-auto">
+    <section ref={ref} className="py-24 px-6 md:px-12">
+      <div className="max-w-7xl mx-auto">
         <div className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <span className="section-label block mb-4">{t("label")}</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28] mb-2">{t("title")}</h2>
-          <div className="w-12 h-px bg-[#C05010] mb-10" />
-          <p className="text-sm leading-[2.2] text-[#888480] mb-6"><Highlight text={t("p1")} keywords={CEO_HIGHLIGHTS_P1} /></p>
-          <p className="text-sm leading-[2.2] text-[#888480] mb-6"><Highlight text={t("p2")} keywords={CEO_HIGHLIGHTS_P2} /></p>
-          <p className="text-sm leading-[2.2] text-[#888480] mb-10"><Highlight text={t("p3")} keywords={CEO_HIGHLIGHTS_P3} /></p>
-          <p className="text-base tracking-[0.1em] text-[#2d2a28] text-right">
-            {t("signature")} <span className="font-medium">{t("ceoName")}</span>
-          </p>
+          <div className="grid md:grid-cols-[1fr,280px] gap-12 md:gap-20">
+
+            {/* 왼쪽: 인사말 본문 */}
+            <div>
+              <span className="section-label block mb-4">{t("label")}</span>
+              <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28] mb-2">{t("title")}</h2>
+              <div className="w-12 h-[2px] bg-[#C05010] mb-10" />
+              <p className="text-sm leading-[2.2] text-[#5C6470] mb-6"><Highlight text={t("p1")} keywords={CEO_HIGHLIGHTS_P1} /></p>
+              <p className="text-sm leading-[2.2] text-[#5C6470] mb-6"><Highlight text={t("p2")} keywords={CEO_HIGHLIGHTS_P2} /></p>
+              <p className="text-sm leading-[2.2] text-[#5C6470]"><Highlight text={t("p3")} keywords={CEO_HIGHLIGHTS_P3} /></p>
+            </div>
+
+            {/* 오른쪽: 서명 */}
+            <div className="flex flex-col justify-end items-end text-right">
+              <div className="w-full border-t border-[#C05010]/30 pt-6">
+                <span className="text-[11px] tracking-[0.15em] uppercase text-[#5C6470] block mb-3">{t("signature")}</span>
+                <span className="text-2xl font-bold text-[#2d2a28] tracking-[0.04em] block mb-1">{t("ceoName")}</span>
+                <span className="text-xs tracking-[0.1em] uppercase text-[#C05010]">NBPKOREA</span>
+              </div>
+            </div>
+
+          </div>
         </div>
       </div>
     </section>
@@ -87,8 +99,8 @@ function ImpactNumbersSection() {
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <p className="text-4xl md:text-5xl font-light text-white tracking-[0.05em] mb-2">{stat.value}</p>
-              <p className="text-sm tracking-[0.15em] uppercase text-[#C8D0DA] mb-1">{stat.label}</p>
-              <p className="text-xs text-[#888480]">{stat.sub}</p>
+              <p className="text-sm tracking-[0.06em] uppercase text-[#C8D0DA] mb-1">{stat.label}</p>
+              <p className="text-xs text-[#5C6470]">{stat.sub}</p>
             </div>
           ))}
         </div>
@@ -102,11 +114,11 @@ function VisionSection() {
   const { ref, isInView } = useInView({ threshold: 0.15 });
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-20 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">Vision & Mission</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">{t("title")}</h2>
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">{t("title")}</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
           {[
@@ -124,9 +136,9 @@ function VisionSection() {
                   <Image src={`${S3}/images/dragon-logo.png`} alt="NBPKOREA" fill className="object-contain" />
                 </div>
               </div>
-              <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">{item.subtitle}</span>
-              <h3 className="text-xl tracking-[0.1em] font-bold text-[#2d2a28] mb-4">{item.title}</h3>
-              <p className="text-sm leading-[2] text-[#888480]">{item.text}</p>
+              <span className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] block mb-2">{item.subtitle}</span>
+              <h3 className="text-xl tracking-[0.04em] font-bold text-[#2d2a28] mb-4">{item.title}</h3>
+              <p className="text-sm md:text-base leading-relaxed text-[#5C6470]">{item.text}</p>
             </div>
           ))}
         </div>
@@ -135,13 +147,56 @@ function VisionSection() {
   );
 }
 
+function ContactCTASection() {
+  const { ref, isInView } = useInView({ threshold: 0.15 });
+
+  return (
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#2d2a28]">
+      <div className="max-w-7xl mx-auto">
+        <div className={`text-center mb-14 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <span className="section-label block mb-4 text-[#C8C3BD]">Contact</span>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">NBPKOREA와 함께하세요</h2>
+          <p className="text-sm md:text-base text-[#C8C3BD] max-w-xl mx-auto leading-relaxed">
+            기술 미팅, 현장 방문, 견적 상담 등 어떤 문의든 환영합니다.
+          </p>
+        </div>
+        <div className={`grid md:grid-cols-3 gap-4 md:gap-6 transition-all duration-1000 delay-200 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <Link
+            href="/support"
+            className="group border border-white/10 p-8 hover:border-[#C05010]/60 hover:bg-white/5 transition-all duration-300"
+          >
+            <span className="text-xs tracking-[0.08em] uppercase text-[#C05010] block mb-3">Technical Meeting</span>
+            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#C05010] transition-colors">기술 미팅 요청</h3>
+            <p className="text-sm text-[#C8C3BD] leading-relaxed">현장 조건에 맞는 최적의 솔루션을 기술진이 직접 제안해드립니다.</p>
+          </Link>
+          <Link
+            href="/support"
+            className="group border border-white/10 p-8 hover:border-[#C05010]/60 hover:bg-white/5 transition-all duration-300"
+          >
+            <span className="text-xs tracking-[0.08em] uppercase text-[#C05010] block mb-3">Site Visit</span>
+            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#C05010] transition-colors">현장 방문 상담</h3>
+            <p className="text-sm text-[#C8C3BD] leading-relaxed">안산 본사 및 공장 견학, 또는 고객 현장 방문 상담을 예약하세요.</p>
+          </Link>
+          <Link
+            href="/support?type=catalog"
+            className="group border border-white/10 p-8 hover:border-[#C05010]/60 hover:bg-white/5 transition-all duration-300"
+          >
+            <span className="text-xs tracking-[0.08em] uppercase text-[#C05010] block mb-3">Catalog</span>
+            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#C05010] transition-colors">카탈로그 신청</h3>
+            <p className="text-sm text-[#C8C3BD] leading-relaxed">제품별 상세 카탈로그를 신청하시면 담당자가 발송해드립니다.</p>
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function HistorySection() {
   const t = useTranslations("about.history");
-  const { ref, isInView } = useInView({ threshold: 0.1 });
-  const scrollRef = useRef<HTMLDivElement>(null);
-  const isDragging = useRef(false);
-  const startX = useRef(0);
-  const scrollLeft = useRef(0);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const isHovering = useRef(false);
+  const wheelAccum = useRef(0);
 
   const timelineItems = [
     { year: "2006", events: [t("events.2006")] },
@@ -165,87 +220,168 @@ function HistorySection() {
     { year: "2025", events: [t("events.2025a"), t("events.2025b")] },
   ];
 
-  const scroll = (direction: "left" | "right") => {
-    if (!scrollRef.current) return;
-    const amount = 448;
-    scrollRef.current.scrollBy({ left: direction === "right" ? amount : -amount, behavior: "smooth" });
-  };
+  // 섹션 내 wheel 이벤트 → 타임라인 인덱스 제어
+  useEffect(() => {
+    const section = sectionRef.current;
+    if (!section) return;
 
-  const handleMouseDown = (e: React.MouseEvent) => {
-    if (!scrollRef.current) return;
-    isDragging.current = true;
-    startX.current = e.pageX - scrollRef.current.offsetLeft;
-    scrollLeft.current = scrollRef.current.scrollLeft;
-    scrollRef.current.style.cursor = "grabbing";
-  };
+    const THRESHOLD = 60; // 누적 delta 임계값
 
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging.current || !scrollRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX.current) * 1.5;
-    scrollRef.current.scrollLeft = scrollLeft.current - walk;
-  };
+    const handleWheel = (e: WheelEvent) => {
+      if (!isHovering.current) return;
 
-  const handleMouseUp = () => {
-    isDragging.current = false;
-    if (scrollRef.current) scrollRef.current.style.cursor = "grab";
-  };
+      // 첫 아이템에서 위로 스크롤 or 마지막에서 아래로 → 통과시킴
+      const atStart = activeIndex === 0 && e.deltaY < 0;
+      const atEnd = activeIndex === timelineItems.length - 1 && e.deltaY > 0;
+      if (atStart || atEnd) {
+        wheelAccum.current = 0;
+        return;
+      }
+
+      e.preventDefault();
+      wheelAccum.current += e.deltaY;
+
+      if (wheelAccum.current > THRESHOLD) {
+        setActiveIndex((prev) => Math.min(timelineItems.length - 1, prev + 1));
+        wheelAccum.current = 0;
+      } else if (wheelAccum.current < -THRESHOLD) {
+        setActiveIndex((prev) => Math.max(0, prev - 1));
+        wheelAccum.current = 0;
+      }
+    };
+
+    section.addEventListener("wheel", handleWheel, { passive: false });
+    return () => section.removeEventListener("wheel", handleWheel);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeIndex]);
+
+  // 자동 재생: 마우스가 없을 때 1.5초마다 다음으로
+  useEffect(() => {
+    if (isHovering.current) return;
+
+    const timer = setInterval(() => {
+      if (isHovering.current) return;
+      setActiveIndex((prev) => {
+        if (prev >= timelineItems.length - 1) return 0; // 끝까지 가면 처음으로
+        return prev + 1;
+      });
+    }, 1500);
+
+    return () => clearInterval(timer);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeIndex]);
 
   return (
-    <section ref={ref} className="py-24 bg-white">
-      <div className="px-6 md:px-12 max-w-7xl mx-auto">
-        <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <span className="section-label block mb-4">History</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">{t("title")}</h2>
-        </div>
-      </div>
+    <div
+      ref={sectionRef}
+      onMouseEnter={() => { isHovering.current = true; }}
+      onMouseLeave={() => { isHovering.current = false; wheelAccum.current = 0; }}
+      className="relative bg-[#2d2a28] h-[45vh] flex items-center overflow-hidden"
+    >
+        <div className="w-full px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-12 md:gap-20 items-center">
 
-      <div className="relative flex items-stretch">
-        {/* Left arrow button */}
-        <button
-          onClick={() => scroll("left")}
-          className="flex-shrink-0 w-10 bg-[#F2F4F7] hover:bg-[#E8ECF0] transition-colors flex items-center justify-center z-10 border-r border-[#D4DAE2]"
-          aria-label="이전"
-        >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M8 1L3 6L8 11" stroke="#888480" strokeWidth="1.2" />
-          </svg>
-        </button>
+            {/* 왼쪽: 연도 + 타임라인 네비 */}
+            <div>
+              <span className="section-label block mb-6 text-[#C8C3BD]">History</span>
 
-        {/* Timeline */}
-        <div
-          ref={scrollRef}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseUp}
-          className="flex gap-0 overflow-x-auto flex-1 select-none"
-          style={{ scrollbarWidth: "none", cursor: "grab" }}
-        >
-          {timelineItems.map((item, index) => (
-            <div key={index} className="flex-shrink-0 w-56 border-r border-[#D4DAE2] px-8 py-8">
-              <span className="text-4xl font-light text-[#DCE2E8] tracking-[0.05em] block mb-4">{item.year}</span>
-              <div className="w-6 h-px bg-[#C05010] mb-4" />
-              {item.events.map((event) => (
-                <p key={event} className="text-sm text-[#888480] leading-[1.9] tracking-[0.02em]">{event}</p>
+              {/* 연도 룰렛 — 3개 표시, 가운데 활성, 부드러운 슬라이드 */}
+              <div className="relative h-[120px] mb-4 overflow-hidden">
+                <div
+                  className="absolute left-0 w-full transition-transform duration-500 ease-out"
+                  style={{ transform: `translateY(${-activeIndex * 40 + 40}px)` }}
+                >
+                  {timelineItems.map((item, i) => (
+                    <div
+                      key={item.year}
+                      className="h-[40px] flex items-center transition-all duration-500"
+                    >
+                      <span
+                        className={`font-bold transition-all duration-500 ${
+                          i === activeIndex
+                            ? "text-4xl md:text-5xl text-[#C05010]"
+                            : Math.abs(i - activeIndex) === 1
+                              ? "text-2xl md:text-3xl text-white/20"
+                              : "text-xl text-white/5"
+                        }`}
+                      >
+                        {item.year}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              {/* 타임라인 도트 네비 */}
+              <div className="flex items-center gap-1.5">
+                {timelineItems.map((item, i) => (
+                  <button
+                    key={item.year}
+                    className={`transition-all duration-300 rounded-full ${
+                      i === activeIndex
+                        ? "w-6 h-2 bg-[#C05010]"
+                        : i <= activeIndex
+                          ? "w-2 h-2 bg-[#C05010]/40"
+                          : "w-2 h-2 bg-white/15"
+                    }`}
+                    aria-label={item.year}
+                  />
+                ))}
+              </div>
+
+              {/* 진행률 */}
+              <div className="mt-6 flex items-center gap-4">
+                <span className="text-xs text-[#C8C3BD]">2006</span>
+                <div className="flex-1 h-px bg-white/10 relative">
+                  <div
+                    className="absolute left-0 top-0 h-full bg-[#C05010] transition-all duration-300"
+                    style={{ width: `${(activeIndex / (timelineItems.length - 1)) * 100}%` }}
+                  />
+                </div>
+                <span className="text-xs text-[#C8C3BD]">2025</span>
+              </div>
+            </div>
+
+            {/* 오른쪽: 이벤트 내용 — 큰 텍스트 */}
+            <div className="relative min-h-[160px] flex items-center">
+              {timelineItems.map((item, i) => (
+                <div
+                  key={item.year}
+                  className={`absolute inset-0 flex items-center transition-all duration-500 ${
+                    i === activeIndex
+                      ? "opacity-100 translate-y-0"
+                      : i < activeIndex
+                        ? "opacity-0 -translate-y-10"
+                        : "opacity-0 translate-y-10"
+                  }`}
+                >
+                  <div className="border-l-[3px] border-[#C05010] pl-8">
+                    {item.events.map((event) => (
+                      <p
+                        key={event}
+                        className="text-base md:text-lg lg:text-xl text-white font-light leading-snug mb-3 last:mb-0"
+                      >
+                        {event}
+                      </p>
+                    ))}
+                  </div>
+                </div>
               ))}
             </div>
-          ))}
+
+          </div>
         </div>
 
-        {/* Right arrow button */}
-        <button
-          onClick={() => scroll("right")}
-          className="flex-shrink-0 w-10 bg-[#F2F4F7] hover:bg-[#E8ECF0] transition-colors flex items-center justify-center z-10 border-l border-[#D4DAE2]"
-          aria-label="다음"
-        >
-          <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M4 1L9 6L4 11" stroke="#888480" strokeWidth="1.2" />
-          </svg>
-        </button>
-      </div>
-    </section>
+        {/* 스크롤 안내 + 진행 카운터 */}
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2">
+          <span className="text-sm text-white/80 font-medium">
+            <span className="text-[#C05010]">{activeIndex + 1}</span>
+            <span className="text-white/30 mx-1">/</span>
+            <span className="text-white/30">{timelineItems.length}</span>
+          </span>
+          <span className="text-xs text-white/20 tracking-[0.1em] uppercase">Scroll here</span>
+        </div>
+    </div>
   );
 }
 
@@ -254,11 +390,11 @@ function CompanyInfoSection() {
   const { ref, isInView } = useInView({ threshold: 0.2 });
 
   return (
-    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#F2F4F7]">
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#FAFAFA]">
       <div className="max-w-7xl mx-auto">
         <div className={`mb-12 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">Company Overview</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">{t("title")}</h2>
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">{t("title")}</h2>
         </div>
         <div className="grid lg:grid-cols-[3fr_2fr] gap-8 items-stretch">
           {/* Table */}
@@ -278,7 +414,7 @@ function CompanyInfoSection() {
               { label: t("address"), value: t("addressValue") },
             ].map((item) => (
               <div key={item.label} className="flex border-b border-[#D4DAE2] last:border-b-0">
-                <div className="w-24 md:w-32 flex-shrink-0 bg-[#f5f5f5] px-3 py-3 text-[11px] tracking-[0.1em] text-[#888480] uppercase">{item.label}</div>
+                <div className="w-24 md:w-32 flex-shrink-0 bg-[#f5f5f5] px-3 py-3 text-xs tracking-[0.04em] text-[#5C6470] uppercase">{item.label}</div>
                 <div className="px-3 py-3 text-xs text-[#2d2a28] tracking-[0.03em]">{item.value}</div>
               </div>
             ))}
@@ -297,10 +433,10 @@ function FacilityGallerySection() {
   const { ref, isInView } = useInView({ threshold: 0.15 });
 
   const facilities = [
-    { title: "HQ Front View", subtitle: "Ansan MTV Headquarters", image: `${S3}/images/about/hq-front.jpg` },
-    { title: "HQ & Factory Wing", subtitle: "Office and production complex", image: `${S3}/images/about/hq-side.jpg` },
-    { title: "Factory Entrance", subtitle: "Owner-operated production base", image: `${S3}/images/about/factory-front.jpg` },
-    { title: "Plant Platform", subtitle: "On-site engineering execution", image: `${S3}/images/about/plant-platform.jpg` },
+    { title: "본사 전경", subtitle: "안산 MTV 본사", image: `${S3}/images/about/hq-front.jpg` },
+    { title: "본사 · 공장동", subtitle: "사무동 및 생산 시설", image: `${S3}/images/about/hq-side.jpg` },
+    { title: "자가 공장", subtitle: "자체 생산 기반", image: `${S3}/images/about/factory-front.jpg` },
+    { title: "현장 플랜트", subtitle: "현장 엔지니어링 수행", image: `${S3}/images/about/plant-platform.jpg` },
   ];
 
   return (
@@ -308,9 +444,9 @@ function FacilityGallerySection() {
       <div className="max-w-7xl mx-auto">
         <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">Facilities</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">Headquarters & Production Base</h2>
-          <p className="text-sm text-[#888480] mt-4 max-w-3xl leading-[2]">
-            안산 MTV 본사와 자가 공장, 현장 엔지니어링 수행 이미지를 기반으로 NBPKOREA의 생산 인프라와 실행 역량을 보여줍니다.
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">본사 · 생산시설</h2>
+          <p className="text-sm text-[#5C6470] mt-4 max-w-3xl leading-relaxed">
+            안산 MTV 본사와 자가 공장을 기반으로 설계·생산·시공을 일괄 수행합니다.
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -320,12 +456,12 @@ function FacilityGallerySection() {
               className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               style={{ transitionDelay: `${index * 120}ms` }}
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-[#F2F4F7]">
+              <div className="relative aspect-[4/3] overflow-hidden bg-[#FAFAFA]">
                 <Image src={facility.image} alt={facility.title} fill className="object-cover" />
               </div>
               <div className="border border-t-0 border-[#D4DAE2] px-4 py-3">
                 <p className="text-sm font-medium tracking-[0.04em] text-[#2d2a28]">{facility.title}</p>
-                <p className="text-[12px] text-[#888480] mt-1">{facility.subtitle}</p>
+                <p className="text-[12px] text-[#5C6470] mt-1">{facility.subtitle}</p>
               </div>
             </div>
           ))}
@@ -347,8 +483,8 @@ function PatentsSection() {
       <div className="max-w-7xl mx-auto">
         <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">Patents</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">{t("title")}</h2>
-          <p className="text-sm text-[#888480] mt-4">{t("subtitle")}</p>
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">{t("title")}</h2>
+          <p className="text-sm text-[#5C6470] mt-4">{t("subtitle")}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           {visiblePatents.map((patent, index) => (
@@ -357,7 +493,7 @@ function PatentsSection() {
               className={`border border-[#D4DAE2] p-6 transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
               style={{ transitionDelay: `${index * 50}ms` }}
             >
-              <span className="text-[13px] tracking-[0.2em] uppercase text-[#888480] block mb-2">
+              <span className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] block mb-2">
                 Patent {String(index + 1).padStart(2, "0")}
               </span>
               <p className="text-sm text-[#2d2a28] tracking-[0.03em] leading-[1.8]">{patent}</p>
@@ -368,7 +504,7 @@ function PatentsSection() {
           <div className="flex justify-center mt-10">
             <button
               onClick={() => setExpanded(true)}
-              className="flex items-center gap-2 text-sm tracking-[0.15em] uppercase border border-[#C05010] text-[#C05010] px-6 py-3 hover:bg-[#C05010] hover:text-white transition-all"
+              className="flex items-center gap-2 text-sm tracking-[0.06em] uppercase border border-[#C05010] text-[#C05010] px-6 py-3 hover:bg-[#C05010] hover:text-white transition-all"
             >
               더보기
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
@@ -387,7 +523,7 @@ function PartnersSection() {
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   const partners = [
-    { title: "MIDCO International", type: t("midcoType"), since: "2007", href: "https://www.midco-intl.com" },
+    { title: "MIDCO International", type: t("midcoType"), since: "2007", href: "https://midcointernational.com/" },
     { title: "ECOSTAR", type: t("ecostarType"), since: "2013", href: "https://www.ecostar.com.tr" },
     { title: "CombHEX", type: t("combhexType"), since: "2018", href: "https://www.combhex.com/" },
     { title: "한화오션", type: t("hanwhaType") },
@@ -398,7 +534,7 @@ function PartnersSection() {
   ];
 
   const globalPartners = [
-    { title: "MIDCO International", subtitle: t("midcoType"), since: "2007", logo: `${S3}/images/midco.webp`, href: "https://www.midco-intl.com" },
+    { title: "MIDCO International", subtitle: t("midcoType"), since: "2007", logo: `${S3}/images/midco.webp`, href: "https://midcointernational.com/" },
     { title: "ECOSTAR", subtitle: t("ecostarType"), since: "2013", logo: `${S3}/images/ecostar.png`, href: "https://www.ecostar.com.tr" },
     { title: "CombHEX", subtitle: t("combhexType"), since: "2018", logo: `${S3}/images/combhex.jpeg`, href: "https://www.combhex.com/" },
   ];
@@ -408,8 +544,8 @@ function PartnersSection() {
       <div className="max-w-7xl mx-auto">
         <div className={`mb-12 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">Partners</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">TRUSTED BY</h2>
-          <p className="text-sm text-[#888480] mt-4">{t("description")}</p>
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">TRUSTED BY</h2>
+          <p className="text-sm text-[#5C6470] mt-4">{t("description")}</p>
         </div>
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div className="border-t border-[#C8D0DA]">
@@ -418,10 +554,10 @@ function PartnersSection() {
                 <>
                   <div>
                     <span className="block text-sm tracking-[0.05em] text-[#2d2a28]">{partner.title}</span>
-                    <span className="text-xs text-[#888480]">{partner.type}</span>
+                    <span className="text-xs text-[#5C6470]">{partner.type}</span>
                   </div>
                   {partner.since && (
-                    <span className="text-xs text-[#C8D0DA] tracking-[0.1em]">Since {partner.since}</span>
+                    <span className="text-xs text-[#C8D0DA] tracking-[0.04em]">Since {partner.since}</span>
                   )}
                 </>
               );
@@ -442,7 +578,7 @@ function PartnersSection() {
                 <div className="mb-2 flex h-12 items-center">
                   <Image src={partner.logo} alt={`${partner.title} logo`} width={183} height={65} className="h-10 w-auto object-contain" />
                 </div>
-                <p className="text-[13px] tracking-[0.16em] uppercase text-[#888480]">{partner.subtitle}</p>
+                <p className="text-[13px] tracking-[0.16em] uppercase text-[#5C6470]">{partner.subtitle}</p>
                 <p className="mt-1 text-[13px] tracking-[0.14em] uppercase text-[#C8D0DA]">Since {partner.since}</p>
               </a>
             ))}
@@ -463,7 +599,7 @@ function DirectionsSection() {
       <div className="max-w-7xl mx-auto">
         <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">Directions</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">{t("title")}</h2>
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">{t("title")}</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-12">
           <div className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
@@ -480,35 +616,35 @@ function DirectionsSection() {
           <div className={`transition-all duration-1000 delay-300 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="space-y-8">
               <div>
-                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">{t("address")}</p>
-                <p className="text-sm text-[#2d2a28] leading-[2]">{t("addressValue")}</p>
+                <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">{t("address")}</p>
+                <p className="text-sm text-[#2d2a28] leading-relaxed">{t("addressValue")}</p>
               </div>
               <div>
-                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">{t("phoneFax")}</p>
-                <p className="text-sm text-[#2d2a28] leading-[2]">TEL 031-434-6566~7<br />FAX 031-434-6568</p>
+                <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">{t("phoneFax")}</p>
+                <p className="text-sm text-[#2d2a28] leading-relaxed">TEL 031-434-6566~7<br />FAX 031-434-6568</p>
               </div>
               <div>
-                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">{t("email")}</p>
+                <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">{t("email")}</p>
                 <p className="text-sm text-[#2d2a28]">nbpkorea@nbpkorea.co.kr</p>
               </div>
               <div>
-                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">{t("website")}</p>
+                <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">{t("website")}</p>
                 <p className="text-sm text-[#2d2a28]">www.nbpkorea.co.kr</p>
               </div>
               <div>
-                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-2">{t("hours")}</p>
-                <p className="text-sm text-[#2d2a28] leading-[2]">
+                <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">{t("hours")}</p>
+                <p className="text-sm text-[#2d2a28] leading-relaxed">
                   {t("hoursValue")}<br />
-                  <span className="text-[#888480]">{t("holiday")}</span>
+                  <span className="text-[#5C6470]">{t("holiday")}</span>
                 </p>
               </div>
               <div>
-                <p className="text-[13px] tracking-[0.2em] uppercase text-[#888480] mb-3">{t("transit")}</p>
+                <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-3">{t("transit")}</p>
                 <div className="space-y-2">
-                  <p className="text-sm text-[#888480] leading-[1.8]">
+                  <p className="text-sm text-[#5C6470] leading-[1.8]">
                     <span className="text-[#2d2a28] font-medium">{t("subway")}</span> — {t("subwayValue")}
                   </p>
-                  <p className="text-sm text-[#888480] leading-[1.8]">
+                  <p className="text-sm text-[#5C6470] leading-[1.8]">
                     <span className="text-[#2d2a28] font-medium">{t("bus")}</span> — {t("busValue")}
                   </p>
                 </div>
@@ -529,7 +665,7 @@ function CISection() {
       <div className="max-w-7xl mx-auto w-full">
         <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">CI</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.1em] font-bold text-[#2d2a28]">{t("title")}</h2>
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">{t("title")}</h2>
         </div>
         <div className={`flex items-center justify-center py-16 transition-all duration-1000 delay-300 ${isInView ? "opacity-100" : "opacity-0"}`}>
           <div className="relative w-full max-w-3xl">
@@ -548,30 +684,37 @@ function CISection() {
 }
 
 const TABS = [
-  { id: "ceo" as const },
-  { id: "overview" as const },
-  { id: "ci" as const },
-  { id: "history" as const },
-  { id: "network" as const },
-  { id: "patents" as const },
+  { id: "about" as const },
+  { id: "partnership" as const },
   { id: "directions" as const },
 ];
 
 type TabId = (typeof TABS)[number]["id"];
 
+/* 기존 탭 → 새 탭 호환 매핑 */
+const TAB_COMPAT: Record<string, TabId> = {
+  ceo: "about",
+  overview: "about",
+  ci: "about",
+  history: "about",
+  network: "partnership",
+  patents: "partnership",
+};
+
 function AboutPageInner() {
   const t = useTranslations("about");
   const searchParams = useSearchParams();
-  const [activeTab, setActiveTab] = useState<TabId>("ceo");
+  const [activeTab, setActiveTab] = useState<TabId>("about");
   const [headerVisible, setHeaderVisible] = useState(false);
   const [headerHeight, setHeaderHeight] = useState(0);
   const lastScrollY = useRef(0);
 
-  // Sync tab from URL query param
+  // Sync tab from URL query param (기존 URL 호환 포함)
   useEffect(() => {
-    const tab = searchParams.get("tab") as TabId;
-    if (tab && TABS.some((t) => t.id === tab)) {
-      setActiveTab(tab);
+    const rawTab = searchParams.get("tab") ?? "";
+    const mapped = TAB_COMPAT[rawTab] ?? rawTab;
+    if (TABS.some((t) => t.id === mapped)) {
+      setActiveTab(mapped as TabId);
     }
   }, [searchParams]);
 
@@ -622,7 +765,7 @@ function AboutPageInner() {
                 className={`flex-shrink-0 px-6 py-3.5 text-sm tracking-[0.12em] border-b-2 transition-all duration-200 whitespace-nowrap ${
                   activeTab === tab.id
                     ? "border-[#C05010] text-[#2d2a28] font-medium"
-                    : "border-transparent text-[#888480] hover:text-[#2d2a28]"
+                    : "border-transparent text-[#5C6470] hover:text-[#2d2a28]"
                 }`}
               >
                 {t(`tabs.${tab.id}`)}
@@ -632,13 +775,25 @@ function AboutPageInner() {
         </div>
       </div>
 
-      {activeTab === "ceo" && <><CeoSection /><ImpactNumbersSection /></>}
-      {activeTab === "overview" && <><CompanyInfoSection /><FacilityGallerySection /><ImpactNumbersSection /></>}
-      {activeTab === "ci" && <><CISection /><ImpactNumbersSection /><VisionSection /></>}
-      {activeTab === "history" && <><HistorySection /><ImpactNumbersSection /></>}
-      {activeTab === "network" && <><PartnersSection /><ClientsSection /><ImpactNumbersSection /></>}
-      {activeTab === "patents" && <><PatentsSection /><ImpactNumbersSection /></>}
-      {activeTab === "directions" && <><DirectionsSection /><ImpactNumbersSection /></>}
+      {activeTab === "about" && (
+        <>
+          <CeoSection />
+          <HistorySection />
+          <CompanyInfoSection />
+          <ImpactNumbersSection />
+          <FacilityGallerySection />
+          <CISection />
+          <ContactCTASection />
+        </>
+      )}
+      {activeTab === "partnership" && (
+        <>
+          <PartnersSection />
+          <PatentsSection />
+          <ImpactNumbersSection />
+        </>
+      )}
+      {activeTab === "directions" && <DirectionsSection />}
     </SubpageLayout>
   );
 }

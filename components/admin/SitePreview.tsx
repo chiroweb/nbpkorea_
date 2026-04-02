@@ -25,15 +25,15 @@ export default function SitePreview({ src = "/", label = "nbpkorea.com" }: SiteP
           <span className="w-2.5 h-2.5 rounded-full bg-[#FF5F57]" />
           <span className="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]" />
           <span className="w-2.5 h-2.5 rounded-full bg-[#28C840]" />
-          <span className="ml-3 text-[11px] tracking-[0.1em] text-[#8B95A1]">{label}</span>
+          <span className="ml-3 text-[11px] tracking-[0.1em] text-[#5C6470]">{label}</span>
         </div>
         <div className="flex items-center gap-3">
           {loading && (
-            <span className="text-[10px] text-[#8B95A1] tracking-wide">로딩 중...</span>
+            <span className="text-[10px] text-[#5C6470] tracking-wide">로딩 중...</span>
           )}
           <button
             onClick={refresh}
-            className="text-[11px] tracking-[0.1em] text-[#8B95A1] hover:text-[#C05010] transition-colors"
+            className="text-[11px] tracking-[0.1em] text-[#5C6470] hover:text-[#C05010] transition-colors"
             title="새로고침"
           >
             ↺
@@ -41,7 +41,7 @@ export default function SitePreview({ src = "/", label = "nbpkorea.com" }: SiteP
           <Link
             href={src}
             target="_blank"
-            className="text-[11px] tracking-[0.1em] text-[#8B95A1] hover:text-[#C05010] transition-colors"
+            className="text-[11px] tracking-[0.1em] text-[#5C6470] hover:text-[#C05010] transition-colors"
             title="새 탭에서 열기"
           >
             ↗
@@ -55,7 +55,7 @@ export default function SitePreview({ src = "/", label = "nbpkorea.com" }: SiteP
           <div className="absolute inset-0 flex items-center justify-center z-10 bg-[#F5F7F8]">
             <div className="flex flex-col items-center gap-3">
               <div className="w-5 h-5 border border-[#C05010] border-t-transparent rounded-full animate-spin" />
-              <span className="text-[11px] tracking-[0.15em] text-[#8B95A1]">LOADING</span>
+              <span className="text-[11px] tracking-[0.15em] text-[#5C6470]">LOADING</span>
             </div>
           </div>
         )}

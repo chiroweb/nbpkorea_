@@ -107,14 +107,14 @@ export default function FpbBurnerPage() {
         {/* Hero */}
         <section className="px-6 md:px-12 py-16">
           <div className="max-w-7xl mx-auto">
-            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
               Industrial Burner · FPB
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-4">
               FPB 버너<br />
-              <span className="text-lg text-[#8B95A1]">(FPB Burner)</span>
+              <span className="text-lg text-[#5C6470]">(FPB Burner)</span>
             </h2>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-12 max-w-2xl">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-12 max-w-2xl">
               {t("burner.fpbBurner.description")}
             </p>
 
@@ -125,7 +125,7 @@ export default function FpbBurnerPage() {
                   key={product.id}
                   className="group border border-[#D4DAE2] bg-white hover:shadow-lg transition-all duration-300"
                 >
-                  <div className="relative aspect-square overflow-hidden bg-[#F2F4F7]">
+                  <div className="relative aspect-square overflow-hidden bg-[#FAFAFA]">
                     <img
                       src={product.image}
                       alt={product.nameKo}
@@ -136,7 +136,7 @@ export default function FpbBurnerPage() {
                     <h3 className="text-sm font-medium text-[#2d2a28] tracking-[0.05em] mb-1">
                       {product.nameKo}
                     </h3>
-                    <p className="text-xs text-[#8B95A1] tracking-[0.05em]">
+                    <p className="text-xs text-[#5C6470] tracking-[0.05em]">
                       {product.name}
                     </p>
                   </div>
@@ -153,16 +153,19 @@ export default function FpbBurnerPage() {
               <h3 className="text-lg tracking-[0.08em] font-light text-[#2d2a28] mb-2">
                 {t("burner.fpbBurner.ctaTitle")}
               </h3>
-              <p className="text-sm text-[#8B95A1]">
+              <p className="text-sm text-[#5C6470]">
                 {t("burner.fpbBurner.ctaDesc")}
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <Link href="/products?tab=burner" className="btn-link group text-[#8B95A1] text-xs tracking-[0.15em] uppercase">
+              <Link href="/products?tab=burner" className="btn-link group text-[#5C6470] text-xs tracking-[0.06em] uppercase">
                 <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="rotate-180"><path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/></svg>
                 {t("common.backToList")}
               </Link>
-              <Link href="/support" className="text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-6 py-3 hover:bg-[#C05010] hover:border-[#C05010] hover:text-white transition-all duration-300">
+              <Link href="/support?type=catalog" className="text-xs tracking-[0.06em] uppercase border border-[#D4DAE2] px-6 py-3 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-all duration-300">
+              카탈로그 신청
+            </Link>
+            <Link href="/support" className="text-xs tracking-[0.06em] uppercase bg-[#C05010] text-white px-6 py-3 hover:bg-[#2d2a28] transition-all duration-300">
                 {t("common.contact")}
               </Link>
             </div>

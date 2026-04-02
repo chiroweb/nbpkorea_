@@ -66,21 +66,21 @@ export default function PortableBurnerPage() {
             ref={heroRef}
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
-            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] block mb-3">
+            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
               Industrial Burner · Metal Burner
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
               메탈버너<br />(Metal Burner)
             </h2>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-6">
               NBPKOREA 메탈버너는 고정 설비 없이 현장에 직접 투입하여 즉시 운전할 수 있는 이동형 산업용 버너입니다. 조선소 블록 내부 가열, 건설 현장 콘크리트 양생, 선박 탱크 건조 등 일시적·이동성이 필요한 현장에 최적화되어 있습니다.
             </p>
-            <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               MIDCO International(미국) 기술 기반의 2단 연소 방식으로 NOx·CO 배출을 최소화하며, 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다. 독립 운전 구성으로 현장 가스 공급만으로 즉시 가동됩니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {["이동형", "현장 즉시 투입", "독립 운전", "복합 연료 대응"].map((tag) => (
-                <span key={tag} className="text-[14px] tracking-[0.1em] border border-[#D4DAE2] px-3 py-1 text-[#8B95A1]">
+                <span key={tag} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-1 text-[#5C6470]">
                   {tag}
                 </span>
               ))}
@@ -101,10 +101,10 @@ export default function PortableBurnerPage() {
       {/* 적용 분야 */}
       <section ref={appRef} className="px-6 md:px-12 py-12 border-t border-[#D4DAE2] bg-[#F9FAFB]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">{t("common.applications")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.applications")}</p>
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {applications.map((app) => (
-              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=burner`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#888480] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
+              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=burner`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
                 
                 {app}
               </Link>
@@ -114,9 +114,9 @@ export default function PortableBurnerPage() {
       </section>
 
       {/* 주요 특성 */}
-      <section className="px-6 md:px-12 py-12 bg-[#F2F4F7] border-y border-[#D4DAE2]">
+      <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">메탈버너 핵심 특성</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">메탈버너 핵심 특성</p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               { icon: "→", label: "현장 즉시 투입", desc: "별도 공장 설비 불필요 — 현장 가스 연결 즉시 가동" },
@@ -127,7 +127,7 @@ export default function PortableBurnerPage() {
               <div key={item.label} className="bg-white border border-[#D4DAE2] p-4">
                 <span className="text-[#C05010] text-lg mb-2 block">{item.icon}</span>
                 <span className="text-xs font-medium text-[#2d2a28] block mb-1">{item.label}</span>
-                <span className="text-[14px] text-[#8B95A1] leading-[1.7]">{item.desc}</span>
+                <span className="text-[14px] text-[#5C6470] leading-[1.7]">{item.desc}</span>
               </div>
             ))}
           </div>
@@ -137,12 +137,12 @@ export default function PortableBurnerPage() {
       {/* 특징 */}
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-8">{t("common.features")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.features")}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {features.map((f, i) => (
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
                 <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
-                <span className="text-xs text-[#8B95A1] leading-[1.8]">{f}</span>
+                <span className="text-sm text-[#3D4450] leading-relaxed">{f}</span>
               </div>
             ))}
           </div>
@@ -150,11 +150,11 @@ export default function PortableBurnerPage() {
       </section>
 
       {/* 스펙 안내 */}
-      <section className="px-6 md:px-12 py-16 bg-[#F2F4F7] border-t border-[#D4DAE2]">
+      <section className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.2em] uppercase text-[#8B95A1] mb-6">{t("common.specifications")}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.specifications")}</p>
           <div className="border border-[#D4DAE2] bg-white p-6">
-            <p className="text-sm text-[#8B95A1] leading-[2]">
+            <p className="text-sm text-[#5C6470] leading-relaxed">
               메탈버너는 현장 투입 목적·공간 조건·요구 열량에 따라 맞춤 설계·제작됩니다.<br />
               <span className="text-[#2d2a28] font-medium">주문 제작 방식</span>으로 공급되므로, 구체적인 용량 및 치수는 엔지니어 상담을 통해 확정합니다.
             </p>
@@ -172,7 +172,7 @@ export default function PortableBurnerPage() {
               ))}
             </div>
           </div>
-          <p className="text-[13px] text-[#8B95A1] mt-4">※ 현장 조건 및 요구 사양에 따라 맞춤 설계합니다. 사전 현장 조사 후 최적 사양을 제안해 드립니다.</p>
+          <p className="text-[13px] text-[#5C6470] mt-4">※ 현장 조건 및 요구 사양에 따라 맞춤 설계합니다. 사전 현장 조사 후 최적 사양을 제안해 드립니다.</p>
         </div>
       </section>
 
@@ -181,14 +181,17 @@ export default function PortableBurnerPage() {
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
             <h3 className="text-lg tracking-[0.08em] font-light text-[#2d2a28] mb-2">{t("burner.portableBurner.ctaTitle")}</h3>
-            <p className="text-sm text-[#8B95A1]">{t("burner.portableBurner.ctaDesc")}</p>
+            <p className="text-sm text-[#5C6470]">{t("burner.portableBurner.ctaDesc")}</p>
           </div>
           <div className="flex items-center gap-4">
-            <Link href="/products?tab=burner" className="btn-link group text-[#8B95A1] text-xs tracking-[0.15em] uppercase">
+            <Link href="/products?tab=burner" className="btn-link group text-[#5C6470] text-xs tracking-[0.06em] uppercase">
               <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="rotate-180"><path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/></svg>
               {t("common.backToList")}
             </Link>
-            <Link href="/support" className="text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-6 py-3 hover:bg-[#C05010] hover:border-[#C05010] hover:text-white transition-all duration-300">
+            <Link href="/support?type=catalog" className="text-xs tracking-[0.06em] uppercase border border-[#D4DAE2] px-6 py-3 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-all duration-300">
+              카탈로그 신청
+            </Link>
+            <Link href="/support" className="text-xs tracking-[0.06em] uppercase bg-[#C05010] text-white px-6 py-3 hover:bg-[#2d2a28] transition-all duration-300">
               {t("common.contact")}
             </Link>
           </div>

@@ -10,7 +10,7 @@ export default function RecruitSection() {
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   const partners = [
-    { title: "MIDCO International", type: t("midcoType"), since: "2007", href: "https://www.midco-intl.com" },
+    { title: "MIDCO International", type: t("midcoType"), since: "2007", href: "https://midcointernational.com/" },
     { title: "ECOSTAR", type: t("ecostarType"), since: "2013", href: "https://www.ecostar.com.tr" },
     { title: "CombHEX", type: t("combhexType"), since: "2018", href: "https://www.combhex.com/" },
     { title: "한화오션", type: t("hanwhaType") },
@@ -21,7 +21,7 @@ export default function RecruitSection() {
   ];
 
   const globalPartners = [
-    { title: "MIDCO International", subtitle: t("midcoType"), since: "2007", logo: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/midco.jpeg", href: "https://www.midco-intl.com" },
+    { title: "MIDCO International", subtitle: t("midcoType"), since: "2007", logo: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/midco.jpeg", href: "https://midcointernational.com/" },
     { title: "ECOSTAR", subtitle: t("ecostarType"), since: "2013", logo: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/ecostar.png", href: "https://www.ecostar.com.tr" },
     { title: "CombHEX", subtitle: t("combhexType"), since: "2018", logo: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/combhex.jpeg", href: "https://www.combhex.com/" },
   ];
@@ -39,7 +39,7 @@ export default function RecruitSection() {
             <span className="section-label block mb-4">Partners</span>
             <h2 className="section-title mb-8">TRUSTED BY</h2>
 
-            <p className="text-sm leading-[2] text-[#888480] mb-8">
+            <p className="text-sm md:text-base leading-relaxed text-[#5C6470] mb-8">
               {t("description")}
             </p>
 
@@ -49,10 +49,10 @@ export default function RecruitSection() {
                   <>
                     <div>
                       <span className="block text-sm tracking-[0.05em] text-[#2d2a28]">{partner.title}</span>
-                      <span className="text-xs text-[#888480]">{partner.type}</span>
+                      <span className="text-xs text-[#5C6470]">{partner.type}</span>
                     </div>
                     {partner.since && (
-                      <span className="text-xs text-[#C8D0DA] tracking-[0.1em]">Since {partner.since}</span>
+                      <span className="text-xs text-[#C8D0DA] tracking-[0.04em]">Since {partner.since}</span>
                     )}
                   </>
                 );
@@ -103,7 +103,7 @@ export default function RecruitSection() {
                   ) : (
                     <p className="mb-2 text-lg font-semibold tracking-[0.04em] text-[#2d2a28]">{partner.title}</p>
                   )}
-                  <p className="text-[13px] tracking-[0.16em] uppercase text-[#888480]">{partner.subtitle}</p>
+                  <p className="text-[13px] tracking-[0.16em] uppercase text-[#5C6470]">{partner.subtitle}</p>
                   <p className="mt-1 text-[13px] tracking-[0.14em] uppercase text-[#C8D0DA]">Since {partner.since}</p>
                 </a>
               ))}

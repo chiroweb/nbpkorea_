@@ -59,7 +59,7 @@ const galleryImages = [
 ];
 
 const FAMILY_SITES = [
-  { label: "MIDCO International", href: "https://www.midco-intl.com" },
+  { label: "MIDCO International", href: "https://midcointernational.com/" },
   { label: "ECOSTAR", href: "https://www.ecostar.com.tr" },
   { label: "CombHEX", href: "https://www.combhex.com/" },
 ];
@@ -70,7 +70,7 @@ function FamilySiteDropdown() {
     <div className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
-        className={`flex items-center gap-2 text-xs tracking-[0.15em] uppercase border px-4 py-2 transition-all ${
+        className={`flex items-center gap-2 text-xs tracking-[0.06em] uppercase border px-4 py-2 transition-all ${
           open
             ? "bg-[#C05010] text-[#F5F7F8] border-[#C05010]"
             : "border-[#C05010] text-[#C05010] hover:bg-[#C05010] hover:text-[#F5F7F8]"
@@ -93,7 +93,7 @@ function FamilySiteDropdown() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="flex items-center justify-between px-4 py-3 text-xs tracking-[0.1em] uppercase text-[#2d2a28] hover:bg-[#C05010] hover:text-white transition-colors border-b border-[#F0F0F0] last:border-b-0"
+              className="flex items-center justify-between px-4 py-3 text-xs tracking-[0.04em] uppercase text-[#2d2a28] hover:bg-[#C05010] hover:text-white transition-colors border-b border-[#F0F0F0] last:border-b-0"
             >
               {site.label}
               <svg width="9" height="9" viewBox="0 0 12 12" fill="none">
@@ -140,7 +140,7 @@ export default function Footer() {
                     href={item.href}
                     onMouseEnter={() => setHoveredImage(item.image)}
                     onMouseLeave={() => setHoveredImage(null)}
-                    className="text-sm tracking-[0.15em] uppercase py-3 border-b border-[#C8D0DA] hover:border-[#C05010] transition-colors"
+                    className="text-sm tracking-[0.06em] uppercase py-3 border-b border-[#C8D0DA] hover:border-[#C05010] transition-colors"
                   >
                     {item.label}
                   </Link>
@@ -151,7 +151,7 @@ export default function Footer() {
               <div className="flex flex-wrap gap-4 mt-8">
                 <Link
                   href="/support"
-                  className="flex items-center gap-2 text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-4 py-2 hover:bg-[#C05010] hover:text-[#F5F7F8] transition-all"
+                  className="flex items-center gap-2 text-xs tracking-[0.06em] uppercase border border-[#2d2a28] px-4 py-2 hover:bg-[#C05010] hover:text-[#F5F7F8] transition-all"
                 >
                   {t("contactUs")}
                   <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
@@ -165,15 +165,15 @@ export default function Footer() {
 
             {/* Access */}
             <div>
-              <h4 className="text-xs tracking-[0.2em] uppercase text-[#888480] mb-4">
+              <h4 className="text-xs tracking-[0.04em] uppercase text-[#5C6470] mb-4">
                 {t("access")}
               </h4>
-              <p className="text-sm leading-[2] mb-4 whitespace-pre-line">
+              <p className="text-sm leading-relaxed mb-4 whitespace-pre-line">
                 {t("address")}
               </p>
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 text-xs tracking-[0.15em] uppercase hover:opacity-60 transition-opacity"
+                className="inline-flex items-center gap-2 text-xs tracking-[0.06em] uppercase hover:opacity-60 transition-opacity"
               >
                 {t("directions")}
                 <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
@@ -184,7 +184,7 @@ export default function Footer() {
 
             {/* Contact */}
             <div>
-              <h4 className="text-xs tracking-[0.2em] uppercase text-[#888480] mb-4">
+              <h4 className="text-xs tracking-[0.04em] uppercase text-[#5C6470] mb-4">
                 {t("contact")}
               </h4>
               <div className="flex flex-col gap-3">
@@ -208,7 +208,7 @@ export default function Footer() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.label}
-                    className="text-[#888480] hover:text-[#C05010] transition-colors duration-200"
+                    className="text-[#5C6470] hover:text-[#C05010] transition-colors duration-200"
                   >
                     {s.icon}
                   </a>
@@ -220,14 +220,14 @@ export default function Footer() {
           {/* Bottom Bar */}
           <div className="flex flex-col md:flex-row items-center justify-between pt-8 border-t border-[#C8D0DA]">
             <div className="flex flex-col md:flex-row items-center gap-4 mb-4 md:mb-0">
-              <Link href="/privacy" className="text-[13px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors">
+              <Link href="/privacy" className="text-[13px] tracking-[0.06em] uppercase text-[#5C6470] hover:text-[#C05010] transition-colors">
                 {t("privacy")}
               </Link>
               <a
                 href="https://chiroweb.co.kr/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-[13px] tracking-[0.15em] uppercase text-[#888480] hover:text-[#C05010] transition-colors"
+                className="inline-flex items-center gap-2 text-[13px] tracking-[0.06em] uppercase text-[#5C6470] hover:text-[#C05010] transition-colors"
               >
                 <span>Made by Chiroweb</span>
                 <svg width="10" height="10" viewBox="0 0 12 12" fill="none" aria-hidden="true">
@@ -236,7 +236,7 @@ export default function Footer() {
               </a>
             </div>
 
-            <p className="text-[13px] tracking-[0.15em] text-[#888480]">
+            <p className="text-[13px] tracking-[0.06em] text-[#5C6470]">
               {t("copyright")}
             </p>
           </div>

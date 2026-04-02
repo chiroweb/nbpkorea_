@@ -46,7 +46,7 @@ export default function NewsDetailPage() {
   if (loading) {
     return (
       <SubpageLayout title={t("loading")} breadcrumb={[{ label: t("breadcrumb"), href: "/news" }]}>
-        <div className="px-6 md:px-12 py-32 text-center text-[#8B95A1] text-sm">{t("loading")}</div>
+        <div className="px-6 md:px-12 py-32 text-center text-[#5C6470] text-sm">{t("loading")}</div>
       </SubpageLayout>
     );
   }
@@ -55,8 +55,8 @@ export default function NewsDetailPage() {
     return (
       <SubpageLayout title="Not Found" breadcrumb={[{ label: t("breadcrumb"), href: "/news" }]}>
         <div className="px-6 md:px-12 py-32 text-center">
-          <p className="text-[#8B95A1] text-sm mb-6">{t("empty")}</p>
-          <Link href="/news" className="text-xs tracking-[0.15em] uppercase text-[#C05010] hover:underline">
+          <p className="text-[#5C6470] text-sm mb-6">{t("empty")}</p>
+          <Link href="/news" className="text-xs tracking-[0.06em] uppercase text-[#C05010] hover:underline">
             {t("backToList")}
           </Link>
         </div>
@@ -82,12 +82,12 @@ export default function NewsDetailPage() {
               isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
-            <span className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] border border-[#C05010]/30 px-3 py-1">
+            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] border border-[#C05010]/30 px-3 py-1">
               {post.category}
             </span>
-            <span className="text-[14px] tracking-[0.1em] text-[#8B95A1]">{post.date}</span>
+            <span className="text-[14px] tracking-[0.04em] text-[#5C6470]">{post.date}</span>
             <span className="w-1 h-1 rounded-full bg-[#C8D0DA]" />
-            <span className="text-[14px] tracking-[0.1em] text-[#8B95A1]">{t("readTime")} {post.read_time}</span>
+            <span className="text-[14px] tracking-[0.04em] text-[#5C6470]">{t("readTime")} {post.read_time}</span>
           </div>
 
           {/* Title */}
@@ -101,7 +101,7 @@ export default function NewsDetailPage() {
 
           {/* Excerpt */}
           <p
-            className={`text-base text-[#8B95A1] leading-[2] mb-12 border-l-2 border-[#C05010] pl-6 transition-all duration-700 delay-200 ${
+            className={`text-base text-[#5C6470] leading-relaxed mb-12 border-l-2 border-[#C05010] pl-6 transition-all duration-700 delay-200 ${
               isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
             }`}
           >
@@ -137,7 +137,7 @@ export default function NewsDetailPage() {
                 return (
                   <ul key={i} className="space-y-2">
                     {block.items?.map((item, j) => (
-                      <li key={j} className="flex items-start gap-3 text-sm text-[#8B95A1] leading-[1.8]">
+                      <li key={j} className="flex items-start gap-3 text-sm text-[#5C6470] leading-[1.8]">
                         <span className="mt-2 w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
                         {item}
                       </li>
@@ -146,7 +146,7 @@ export default function NewsDetailPage() {
                 );
               }
               return (
-                <p key={i} className="text-sm text-[#8B95A1] leading-[2]">
+                <p key={i} className="text-sm text-[#5C6470] leading-relaxed">
                   {block.text}
                 </p>
               );
@@ -155,15 +155,15 @@ export default function NewsDetailPage() {
 
           {/* Back & CTA */}
           <div className="mt-20 pt-12 border-t border-[#D4DAE2] flex items-center justify-between">
-            <Link href="/news" className="btn-link group text-[#8B95A1]">
+            <Link href="/news" className="btn-link group text-[#5C6470]">
               <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="rotate-180 transition-transform group-hover:-translate-x-1">
                 <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1" />
               </svg>
-              <span className="text-xs tracking-[0.15em] uppercase">{t("backToList")}</span>
+              <span className="text-xs tracking-[0.06em] uppercase">{t("backToList")}</span>
             </Link>
             <Link
               href="/support"
-              className="text-xs tracking-[0.15em] uppercase border border-[#2d2a28] px-5 py-2.5 hover:bg-[#C05010] hover:border-[#C05010] hover:text-white transition-all duration-300"
+              className="text-xs tracking-[0.06em] uppercase border border-[#2d2a28] px-5 py-2.5 hover:bg-[#C05010] hover:border-[#C05010] hover:text-white transition-all duration-300"
             >
               {tNav("contact")}
             </Link>

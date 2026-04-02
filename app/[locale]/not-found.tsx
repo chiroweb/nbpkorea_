@@ -10,7 +10,7 @@ export default function NotFound() {
         <h1 className="text-5xl font-bold tracking-[0.15em] text-[#2d2a28] mb-6">
           404
         </h1>
-        <p className="text-sm text-[#8B95A1] leading-[2] mb-8">
+        <p className="text-sm text-[#5C6470] leading-[2] mb-8">
           요청하신 페이지를 찾을 수 없습니다.<br />
           주소를 다시 확인하시거나 아래 버튼을 눌러 메인으로 이동해 주세요.
         </p>
@@ -23,7 +23,7 @@ export default function NotFound() {
           </Link>
           <Link
             href="/support"
-            className="text-xs tracking-[0.15em] uppercase text-[#8B95A1] hover:text-[#C05010] transition-colors"
+            className="text-xs tracking-[0.15em] uppercase text-[#5C6470] hover:text-[#C05010] transition-colors"
           >
             문의하기
           </Link>

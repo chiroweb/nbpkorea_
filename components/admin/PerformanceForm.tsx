@@ -152,7 +152,7 @@ export default function PerformanceForm({ initial, id }: Props) {
 
   const inputClass =
     "w-full border border-[#D4DAE2] px-4 py-2.5 text-sm text-[#2d2a28] focus:outline-none focus:border-[#C05010] transition-colors bg-white";
-  const labelClass = "block text-[11px] tracking-[0.15em] uppercase text-[#8B95A1] mb-2";
+  const labelClass = "block text-[11px] tracking-[0.15em] uppercase text-[#5C6470] mb-2";
 
   return (
     <form onSubmit={handleSubmit} className="max-w-2xl space-y-6">
@@ -205,7 +205,7 @@ export default function PerformanceForm({ initial, id }: Props) {
           <button
             type="button"
             onClick={() => setTagDropdownOpen(!tagDropdownOpen)}
-            className="flex items-center gap-2 px-4 py-2 text-xs tracking-[0.1em] border border-[#D4DAE2] text-[#888480] hover:border-[#C05010] hover:text-[#C05010] transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-xs tracking-[0.1em] border border-[#D4DAE2] text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-colors"
           >
             + 태그 추가
             <svg
@@ -218,7 +218,7 @@ export default function PerformanceForm({ initial, id }: Props) {
 
           {tagDropdownOpen && (
             <div className="absolute top-full left-0 mt-1 bg-white border border-[#D4DAE2] shadow-lg z-20 min-w-[320px] max-h-[280px] overflow-y-auto p-3">
-              <p className="text-[10px] tracking-[0.15em] uppercase text-[#8B95A1] mb-2">
+              <p className="text-[10px] tracking-[0.15em] uppercase text-[#5C6470] mb-2">
                 {CATEGORIES.find((c) => c.id === form.category)?.label} 관련 태그
               </p>
               <div className="flex flex-wrap gap-1.5">
@@ -232,7 +232,7 @@ export default function PerformanceForm({ initial, id }: Props) {
                       className={`px-2.5 py-1 text-xs tracking-[0.04em] border transition-colors ${
                         selected
                           ? "bg-[#C05010] border-[#C05010] text-white"
-                          : "border-[#D4DAE2] text-[#888480] hover:border-[#C05010] hover:text-[#C05010]"
+                          : "border-[#D4DAE2] text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010]"
                       }`}
                     >
                       {tag}
@@ -243,7 +243,7 @@ export default function PerformanceForm({ initial, id }: Props) {
               <button
                 type="button"
                 onClick={() => setTagDropdownOpen(false)}
-                className="mt-3 text-[11px] text-[#8B95A1] hover:text-[#C05010] transition-colors"
+                className="mt-3 text-[11px] text-[#5C6470] hover:text-[#C05010] transition-colors"
               >
                 닫기
               </button>
@@ -315,7 +315,7 @@ export default function PerformanceForm({ initial, id }: Props) {
                       <button
                         type="button"
                         onClick={() => rotateImage(i)}
-                        className="text-xs text-[#888480] hover:text-[#C05010] px-2 py-1.5 border border-[#D4DAE2] hover:border-[#C05010] transition-colors"
+                        className="text-xs text-[#5C6470] hover:text-[#C05010] px-2 py-1.5 border border-[#D4DAE2] hover:border-[#C05010] transition-colors"
                         title="90° 회전"
                       >
                         ↻ 회전
@@ -371,7 +371,7 @@ export default function PerformanceForm({ initial, id }: Props) {
               <button
                 type="button"
                 onClick={() => removeSpec(i)}
-                className="text-xs text-[#8B95A1] hover:text-red-500 px-2"
+                className="text-xs text-[#5C6470] hover:text-red-500 px-2"
               >
                 x
               </button>
