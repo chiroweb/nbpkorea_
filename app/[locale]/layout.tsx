@@ -23,6 +23,13 @@ export async function generateMetadata({
     },
     description: t("description"),
     keywords: t.has("keywords") ? t("keywords").split(", ") : undefined,
+    alternates: {
+      canonical: `${BASE_URL}`,
+      languages: {
+        ko: `${BASE_URL}`,
+        en: `${BASE_URL}/en`,
+      },
+    },
     openGraph: {
       type: "website",
       siteName: "NBPKOREA",
