@@ -522,67 +522,125 @@ function PartnersSection() {
   const t = useTranslations("home.partners");
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
-  const partners = [
-    { title: "MIDCO International", type: t("midcoType"), since: "2007", href: "https://midcointernational.com/" },
-    { title: "ECOSTAR", type: t("ecostarType"), since: "2013", href: "https://www.ecostar.com.tr" },
-    { title: "CombHEX", type: t("combhexType"), since: "2018", href: "https://www.combhex.com/" },
-    { title: "한화오션", type: t("hanwhaType") },
-    { title: "현대중공업", type: t("hdType") },
-    { title: "더 금영", type: t("bmwType") },
-    { title: "LG엔솔", type: t("lgType") },
-    { title: "POSCO", type: t("poscoType") },
-  ];
-
   const globalPartners = [
     { title: "MIDCO International", subtitle: t("midcoType"), since: "2007", logo: `${S3}/images/midco.webp`, href: "https://midcointernational.com/" },
     { title: "ECOSTAR", subtitle: t("ecostarType"), since: "2013", logo: `${S3}/images/ecostar.png`, href: "https://www.ecostar.com.tr" },
     { title: "CombHEX", subtitle: t("combhexType"), since: "2018", logo: `${S3}/images/combhex.jpeg`, href: "https://www.combhex.com/" },
   ];
 
+  const clientLogos = [
+    { name: "현대중공업", src: `${S3}/images/clients/hyundai-hi.svg` },
+    { name: "현대미포조선", src: `${S3}/images/clients/hyundai-mipo.png` },
+    { name: "현대삼호중공업", src: `${S3}/images/clients/hyundai-samho.png` },
+    { name: "한국조선해양", src: `${S3}/images/clients/ksoe.svg` },
+    { name: "SK오션플랜트", src: `${S3}/images/clients/sk-ocean.png` },
+    { name: "HSG성동조선", src: `${S3}/images/clients/hsg-sungdong.jpg` },
+    { name: "케이조선", src: `${S3}/images/clients/k-shipbuilding.png` },
+    { name: "대선조선", src: `${S3}/images/clients/daesun.jpg` },
+    { name: "대한조선", src: `${S3}/images/clients/daehan.webp` },
+  ];
+
   return (
     <section ref={ref} className="py-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
-        <div className={`mb-12 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <span className="section-label block mb-4">Partners</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">TRUSTED BY</h2>
-          <p className="text-sm text-[#5C6470] mt-4">{t("description")}</p>
+        {/* 글로벌 파트너 */}
+        <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <span className="section-label block mb-4">Global Partners</span>
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28] mb-4">TRUSTED BY</h2>
+          <p className="text-sm text-[#5C6470]">{t("description")}</p>
         </div>
-        <div className="grid md:grid-cols-2 gap-12 items-start">
-          <div className="border-t border-[#C8D0DA]">
-            {partners.map((partner) => {
-              const content = (
-                <>
+        <div className="grid md:grid-cols-3 gap-6 mb-20">
+          {globalPartners.map((partner, index) => (
+            <a
+              key={partner.title}
+              href={partner.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`group border border-[#D4DAE2] bg-white p-8 hover:border-[#C05010] transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+              style={{ transitionDelay: `${index * 150}ms` }}
+            >
+              <div className="flex items-center h-16 mb-6">
+                <Image src={partner.logo} alt={partner.title} width={200} height={70} className="h-14 w-auto object-contain group-hover:scale-105 transition-transform duration-500" />
+              </div>
+              <div className="border-t border-[#E8ECF0] pt-4">
+                <h3 className="text-base font-bold text-[#2d2a28] mb-1 group-hover:text-[#C05010] transition-colors">{partner.title}</h3>
+                <p className="text-[13px] text-[#5C6470] mb-2">{partner.subtitle}</p>
+                <span className="text-xs tracking-[0.1em] uppercase text-[#C8D0DA]">Since {partner.since}</span>
+              </div>
+            </a>
+          ))}
+        </div>
+
+        {/* 국내 주요 고객사 로고 슬라이드 */}
+        <div className={`transition-all duration-1000 delay-300 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+          <span className="section-label block mb-6">Major Clients</span>
+          <div className="relative overflow-hidden">
+            <div className="flex animate-[scroll_20s_linear_infinite] gap-12 items-center">
+              {[...clientLogos, ...clientLogos].map((logo, i) => (
+                <div key={`${logo.name}-${i}`} className="flex-shrink-0 h-10 w-28 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
+                  <Image src={logo.src} alt={logo.name} width={112} height={40} className="h-8 w-auto object-contain" />
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CertificationsSection() {
+  const t = useTranslations("about.certifications");
+  const at = useTranslations("about.awards");
+  const { ref, isInView } = useInView({ threshold: 0.1 });
+  const certs = t.raw("list") as { name: string; desc: string }[];
+  const awards = at.raw("items") as { year: string; title: string }[];
+
+  return (
+    <section ref={ref} className="py-24 px-6 md:px-12 bg-[#FAFAFA]">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-16">
+
+          {/* 인증 */}
+          <div className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
+            <span className="section-label block mb-4">Certifications</span>
+            <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28] mb-8">{t("title")}</h2>
+            <div className="grid grid-cols-2 gap-4">
+              {certs.map((cert, i) => (
+                <div
+                  key={cert.name}
+                  className={`border border-[#D4DAE2] bg-white p-6 text-center transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
+                  style={{ transitionDelay: `${i * 100}ms` }}
+                >
+                  <span className="text-xl font-bold text-[#C05010] block mb-2">{cert.name}</span>
+                  <span className="text-xs text-[#5C6470]">{cert.desc}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* 수상 */}
+          <div className={`transition-all duration-1000 delay-200 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
+            <span className="section-label block mb-4">Awards</span>
+            <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28] mb-8">{at("title")}</h2>
+            <div className="relative">
+              <div className="absolute left-[7px] top-2 bottom-2 w-px bg-[#D4DAE2]" />
+              {awards.map((award, i) => (
+                <div
+                  key={`${award.year}-${i}`}
+                  className={`flex items-start gap-6 mb-6 last:mb-0 transition-all duration-700 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}`}
+                  style={{ transitionDelay: `${i * 100}ms` }}
+                >
+                  <div className="w-[15px] h-[15px] rounded-full border-2 border-[#C05010] bg-white flex-shrink-0 mt-0.5 z-10" />
                   <div>
-                    <span className="block text-sm tracking-[0.05em] text-[#2d2a28]">{partner.title}</span>
-                    <span className="text-xs text-[#5C6470]">{partner.type}</span>
+                    <span className="text-xs tracking-[0.1em] uppercase text-[#C05010] font-semibold block mb-1">{award.year}</span>
+                    <span className="text-sm text-[#2d2a28]">{award.title}</span>
                   </div>
-                  {partner.since && (
-                    <span className="text-xs text-[#C8D0DA] tracking-[0.04em]">Since {partner.since}</span>
-                  )}
-                </>
-              );
-              return partner.href ? (
-                <a key={partner.title} href={partner.href} target="_blank" rel="noopener noreferrer" className="flex items-center justify-between py-2 border-b border-[#C8D0DA] hover:text-[#C05010] transition-colors">
-                  {content}
-                </a>
-              ) : (
-                <div key={partner.title} className="flex items-center justify-between py-2 border-b border-[#C8D0DA]">
-                  {content}
                 </div>
-              );
-            })}
+              ))}
+            </div>
           </div>
-          <div className="grid gap-3">
-            {globalPartners.map((partner) => (
-              <a key={partner.title} href={partner.href} target="_blank" rel="noopener noreferrer" className="border border-[#C8D0DA] bg-white px-4 py-3 hover:border-[#C05010] transition-colors block">
-                <div className="mb-2 flex h-12 items-center">
-                  <Image src={partner.logo} alt={`${partner.title} logo`} width={183} height={65} className="h-10 w-auto object-contain" />
-                </div>
-                <p className="text-[13px] tracking-[0.16em] uppercase text-[#5C6470]">{partner.subtitle}</p>
-                <p className="mt-1 text-[13px] tracking-[0.14em] uppercase text-[#C8D0DA]">Since {partner.since}</p>
-              </a>
-            ))}
-          </div>
+
         </div>
       </div>
     </section>
@@ -789,6 +847,7 @@ function AboutPageInner() {
       {activeTab === "partnership" && (
         <>
           <PartnersSection />
+          <CertificationsSection />
           <PatentsSection />
           <ImpactNumbersSection />
         </>
