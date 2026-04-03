@@ -121,8 +121,8 @@ export default function HvacBusinessPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-10">
             {products.map((product, index) => (
               <Link href={product.href} key={product.title} className={`group block transition-all duration-700 ${productInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: `${index * 100}ms` }}>
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#FAFAFA] border border-[#D4DAE2] group-hover:border-[#C05010]/50 transition-colors duration-300">
-                  <Image src={product.image} alt={product.title} fill className="object-contain group-hover:scale-105 transition-transform duration-700" />
+                <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#D4DAE2] group-hover:border-[#C05010]/50 transition-colors duration-300">
+                  <Image src={product.image} alt={product.title} fill className="object-contain group-hover:scale-105 transition-transform duration-700" unoptimized />
                 </div>
                 <div className="mt-4">
                   <span className="text-xs tracking-[0.06em] uppercase text-[#5C6470]">{product.subtitle}</span>
