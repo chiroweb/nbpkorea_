@@ -1,0 +1,7 @@
+{
+  "tool_name": "Bash",
+  "tool_input_preview": "{\"command\":\"for f in app/[locale]/loading.tsx app/[locale]/error.tsx app/[locale]/not-found.tsx; do [ -f \\\"$f\\\" ] && sed -i '' 's/text-\\\\[#8B95A1\\\\]/text-\\\\[#5C6470\\\\]/g' \\\"$f\\\"; done\",\"description\":\"...",
+  "error": "Exit code 1\n(eval):1: no matches found: app/[locale]/loading.tsx",
+  "timestamp": "2026-04-01T00:26:28.089Z",
+  "retry_count": 1
+}

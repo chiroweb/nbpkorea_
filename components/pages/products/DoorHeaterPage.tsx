@@ -17,7 +17,7 @@ export default function DoorHeaterPage() {
       titleKo="도어히터"
       titleEn="Door Heater"
       description={t("hvac.doorHeater.description")}
-      image="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/hvac/door-heater-new.jpg"
+      image="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/hvac/door-heater.png"
       tags={["출입구", "에어커튼", "열손실 방지"]}
       ctaTitleKey="도어히터 도입을 검토 중이신가요?"
       ctaDescKey="현장 조건에 맞는 최적 사양을 제안해 드립니다."

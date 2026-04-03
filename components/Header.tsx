@@ -107,7 +107,7 @@ const navData = [
         href: "/products/burner",
         items: [
           { label: "덕트버너", href: "/products/burner/duct-burner" },
-          { label: "FPB 버너", href: "/products/burner/fpb-burner" },
+          { label: "패키지 버너", href: "/products/burner/fpb-burner" },
           { label: "로용 버너", href: "/products/burner/furnace-burner" },
           { label: "저녹스 버너", href: "/products/burner/low-nox-burner" },
           { label: "오븐 버너", href: "/products/burner/oven-burner" },

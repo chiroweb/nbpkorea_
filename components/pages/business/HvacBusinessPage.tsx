@@ -8,11 +8,11 @@ import Image from "next/image";
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const products = [
-  { title: "클린룸 공조기", subtitle: "Cleanroom AHU", desc: "반도체·제약 등 초정밀 청정 환경을 위한 공기조화 시스템.", image: `${S3}/images/hvac/cleanroom.jpg`, href: "/products/hvac/cleanroom" },
-  { title: "드라이룸 공조기", subtitle: "Dry Room AHU", desc: "2차전지 제조 공정의 극저습 환경을 구현하는 제습 공조기.", image: `${S3}/images/hvac/dry-room-main.jpg`, href: "/products/hvac/dry-room" },
-  { title: "직화식 공조기", subtitle: "Direct-Fired AHU", desc: "가스 직화 방식으로 대풍량을 빠르게 가열하는 산업용 공조기.", image: `${S3}/images/hvac/direct-ahu-thumb.jpg`, href: "/products/hvac/direct-ahu" },
-  { title: "도어히터", subtitle: "Door Heater", desc: "출입구 에어커튼으로 외부 공기 유입을 차단하는 히터.", image: `${S3}/images/hvac/door-heater-new.jpg`, href: "/products/hvac/door-heater" },
-  { title: "복합식 제습기", subtitle: "Dehumidifier", desc: "냉각식+흡착식 복합 방식으로 정밀 습도 제어.", image: `${S3}/images/humidremover.jpg`, href: "/products/hvac/dehumidifier" },
+  { title: "클린룸 공조기", subtitle: "Cleanroom AHU", desc: "반도체·제약 등 초정밀 청정 환경을 위한 공기조화 시스템.", image: `${S3}/images/hvac/cleanroom-ahu.png`, href: "/products/hvac/cleanroom" },
+  { title: "드라이룸 공조기", subtitle: "Dry Room AHU", desc: "2차전지 제조 공정의 극저습 환경을 구현하는 제습 공조기.", image: `${S3}/images/hvac/dry-room-ahu.png`, href: "/products/hvac/dry-room" },
+  { title: "직화식 공조기", subtitle: "Direct-Fired AHU", desc: "가스 직화 방식으로 대풍량을 빠르게 가열하는 산업용 공조기.", image: `${S3}/images/hvac/direct-ahu.png`, href: "/products/hvac/direct-ahu" },
+  { title: "도어히터", subtitle: "Door Heater", desc: "출입구 에어커튼으로 외부 공기 유입을 차단하는 히터.", image: `${S3}/images/hvac/door-heater.png`, href: "/products/hvac/door-heater" },
+  { title: "복합식 제습기", subtitle: "Dehumidifier", desc: "냉각식+흡착식 복합 방식으로 정밀 습도 제어.", image: `/images/dehumidifier-thumb.jpg`, href: "/products/hvac/dehumidifier" },
 ];
 
 const coreValues = [

@@ -95,7 +95,7 @@ export default function FpbBurnerPage() {
     <>
       <SubpageLayout
         title={t("nav.fpbBurner")}
-        subtitle="Industrial Burner · FPB"
+        subtitle="Industrial Package Burner"
         breadcrumb={[
           { label: t("breadcrumb"), href: "/products" },
           { label: t("breadcrumbs.burner"), href: "/products?tab=burner" },
@@ -108,11 +108,11 @@ export default function FpbBurnerPage() {
         <section className="px-6 md:px-12 py-16">
           <div className="max-w-7xl mx-auto">
             <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
-              Industrial Burner · FPB
+              Industrial Package Burner
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-4">
-              FPB 버너<br />
-              <span className="text-lg text-[#5C6470]">(FPB Burner)</span>
+              패키지 버너<br />
+              <span className="text-lg text-[#5C6470]">(Package Burner)</span>
             </h2>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-12 max-w-2xl">
               {t("burner.fpbBurner.description")}
@@ -174,9 +174,9 @@ export default function FpbBurnerPage() {
       </SubpageLayout>
 
       <div className="max-w-7xl mx-auto px-6 md:px-12 -mt-8 mb-8">
-        <ApplicationTags category="burner" tags={["FPB"]} />
+        <ApplicationTags category="burner" tags={["패키지 버너"]} />
       </div>
-      <FloatingCaseLink category="burner" tag="FPB 버너" label="FPB 버너 적용 사례 보러가기" />
+      <FloatingCaseLink category="burner" tag="패키지 버너" label="패키지 버너 적용 사례 보러가기" />
     </>
   );
 }

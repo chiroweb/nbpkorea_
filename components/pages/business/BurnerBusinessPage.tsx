@@ -9,7 +9,7 @@ const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const products = [
   { title: "덕트버너", subtitle: "Duct Burner", desc: "메탈파이버 표면연소 방식의 NOx 저배출 산업용 덕트 가열 버너. 0.5FT~6FT 라인업.", image: `${S3}/images/burner/duct-burner-hero.jpg`, href: "/products/burner/duct-burner", badge: "주력 제품" },
-  { title: "FPB 버너", subtitle: "Forced Pre-mix Burner", desc: "강제 예혼합 방식으로 완전 연소를 실현하는 고효율 산업용 버너.", image: `${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`, href: "/products/burner/fpb-burner" },
+  { title: "패키지 버너", subtitle: "Package Burner", desc: "강제 예혼합 방식으로 완전 연소를 실현하는 고효율 산업용 버너.", image: `${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`, href: "/products/burner/fpb-burner" },
   { title: "저녹스 버너", subtitle: "Low-NOx Burner", desc: "NOx 배출을 극한까지 저감하는 환경 친화형 버너.", image: `${S3}/images/burner/fpb/gas-burners-low-nox-40199-6408963.jpg`, href: "/products/burner/low-nox-burner" },
   { title: "메탈파이버 버너", subtitle: "Metal Fiber Burner", desc: "적외선 복사열 기반 표면연소. 에너지 효율 극대화, NOx 대폭 저감.", image: `${S3}/images/burner/ceramic-burner.jpg`, href: "/products/burner/metal-fiber-burner" },
   { title: "로용 버너", subtitle: "Furnace Burner", desc: "산업용 열처리로·소각로·보일러 등 고온 연소가 요구되는 설비에 적용.", image: `${S3}/images/burner/furnace-burner-main.jpg`, href: "/products/burner/furnace-burner" },

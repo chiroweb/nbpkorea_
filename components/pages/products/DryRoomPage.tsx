@@ -17,7 +17,7 @@ export default function DryRoomPage() {
       titleKo="드라이룸 공조기"
       titleEn="Dry Room AHU"
       description={t("hvac.dryRoom.description")}
-      image="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/hvac/dry-room-main.jpg"
+      image="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/hvac/dry-room-ahu.png"
       tags={["2차전지", "저녹스", "초저습"]}
       ctaTitleKey="드라이룸 공조기 도입을 검토 중이신가요?"
       ctaDescKey="현장 조건에 맞는 최적 사양을 제안해 드립니다."

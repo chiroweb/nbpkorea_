@@ -17,7 +17,7 @@ export default function CleanroomPage() {
       titleKo="클린룸 공조기"
       titleEn="Cleanroom AHU"
       description={t("hvac.cleanroom.description")}
-      image="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/hvac/cleanroom.jpg"
+      image="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/hvac/cleanroom-ahu.png"
       tags={["반도체", "제약", "정밀제조", "청정환경"]}
       ctaTitleKey={t("hvac.cleanroom.subtitle") + " 도입을 검토 중이신가요?"}
       ctaDescKey="현장 조건에 맞는 최적 사양을 제안해 드립니다."

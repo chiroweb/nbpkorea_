@@ -441,7 +441,7 @@
       "directHeater": "직화식 가스히터",
       "indirectHeater": "간접식 가스히터",
       "ductBurner": "덕트버너",
-      "fpbBurner": "FPB 버너",
+      "fpbBurner": "패키지 버너",
       "furnaceBurner": "로용 버너",
       "lowNoxBurner": "저녹스 버너",
       "ovenBurner": "오븐 버너",
@@ -576,9 +576,9 @@
         "ctaDesc": "현장 조건에 맞는 최적 사양을 제안해 드립니다."
       },
       "fpbBurner": {
-        "subtitle": "FPB 버너",
+        "subtitle": "패키지 버너",
         "description": "ECOSTAR(터키) 기술 제휴 기반의 산업용 버너 라인업. 가스 버너, 이중연료 버너, 경유 버너, 프로세스 버너 등 13개 카테고리의 다양한 연소 솔루션을 제공합니다.",
-        "ctaTitle": "FPB 버너 도입을 검토 중이신가요?",
+        "ctaTitle": "패키지 버너 도입을 검토 중이신가요?",
         "ctaDesc": "현장 조건에 맞는 최적 사양을 제안해 드립니다."
       },
       "metalFiberBurner": {

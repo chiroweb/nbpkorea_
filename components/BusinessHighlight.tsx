@@ -35,8 +35,8 @@ const subBusinesses = [
   {
     title: "산업용 버너",
     subtitle: "Industrial Burners",
-    keywords: "덕트 · FPB · 메탈 · 오븐",
-    description: "덕트버너, FPB, 메탈파이버 등 다양한 산업용 버너 라인업을 갖추고 있습니다.",
+    keywords: "덕트 · 패키지 · 메탈 · 오븐",
+    description: "덕트버너, 패키지 버너, 메탈파이버 등 다양한 산업용 버너 라인업을 갖추고 있습니다.",
     image: `${S3}/images/burner/duct-burner-hero.jpg`,
     href: "/business/burner",
   },

@@ -448,7 +448,7 @@
       "directHeater": "Direct Gas Heater",
       "indirectHeater": "Indirect Gas Heater",
       "ductBurner": "Duct Burner",
-      "fpbBurner": "FPB Burner",
+      "fpbBurner": "Package Burner",
       "furnaceBurner": "Furnace Burner",
       "lowNoxBurner": "Low NOx Burner",
       "ovenBurner": "Oven Burner",
