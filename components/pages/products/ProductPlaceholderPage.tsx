@@ -77,7 +77,7 @@ export default function ProductPlaceholderPage({
           <div>
             <div className="relative aspect-[4/3] overflow-hidden bg-white flex items-center justify-center border border-[#C05010]/30">
               {image ? (
-                <img src={image} alt={titleKo} className="object-cover w-full h-full" />
+                <img src={image} alt={titleKo} className="object-contain w-full h-full" />
               ) : (
                 <div className="text-center">
                   <p className="text-sm text-[#C8D0DA] tracking-[0.04em]">제품 이미지 준비 중</p>
