@@ -81,7 +81,7 @@ export default function BurnerBusinessPage() {
         <div className="max-w-7xl mx-auto">
           <div className={`max-w-3xl mb-16 transition-all duration-1000 ${aboutInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             <p className="text-lg md:text-xl lg:text-2xl text-[#2d2a28] leading-relaxed font-light">
-              NBPKOREA 산업용 버너 사업부는 <strong className="font-bold">덕트버너, FPB, 메탈파이버, 로용 버너</strong> 등
+              NBPKOREA 산업용 버너 사업부는 <strong className="font-bold">덕트버너, 패키지 버너, 메탈파이버, 로용 버너</strong> 등
               다양한 산업용 버너를 독자 개발·생산합니다. <strong className="font-bold">미국 MIDCO International</strong>과의
               기술 제휴로 글로벌 수준의 <strong className="font-bold">NOx 저배출·고효율 연소 기술</strong>을 국내에 적용합니다.
             </p>
@@ -104,7 +104,7 @@ export default function BurnerBusinessPage() {
             {[
               { number: "17건+", label: "등록 특허", sub: "연소 기술 독자 특허" },
               { number: "30단계", label: "화염 제어", sub: "업계 최고 턴다운" },
-              { number: "6종", label: "버너 라인업", sub: "덕트·FPB·메탈·로용·오븐·저녹스" },
+              { number: "6종", label: "버너 라인업", sub: "덕트·패키지·메탈·로용·오븐·저녹스" },
               { number: "2007~", label: "MIDCO 제휴", sub: "미국 기술 파트너십" },
             ].map((stat) => (
               <div key={stat.label} className="text-center md:text-left">

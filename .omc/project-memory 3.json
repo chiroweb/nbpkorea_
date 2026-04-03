@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "lastScanned": 1775173134737,
+  "lastScanned": 1775086293606,
   "projectRoot": "/Users/choejeong-won/Desktop/AFTER",
   "techStack": {
     "languages": [
@@ -79,7 +79,7 @@
       "path": "10_카다로그",
       "purpose": null,
       "fileCount": 6,
-      "lastAccessed": 1775173134652,
+      "lastAccessed": 1775086293509,
       "keyFiles": [
         "2024 회사소개서(국문) - 추후 수정 예정.pdf",
         "[NBPKOREA] DIRECT GAS HEATER_210906.pdf",
@@ -92,7 +92,7 @@
       "path": "ECOSTAR BURNER MODEL",
       "purpose": null,
       "fileCount": 36,
-      "lastAccessed": 1775173134656,
+      "lastAccessed": 1775086293544,
       "keyFiles": [
         "Process-Burner-2.jpeg",
         "air-heating-burners-40199-6454995.jpg",
@@ -105,7 +105,7 @@
       "path": "Pretendard-1.3.9 (1)",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1775173134701,
+      "lastAccessed": 1775086293545,
       "keyFiles": [
         "LICENSE.txt"
       ]
@@ -114,7 +114,7 @@
       "path": "app",
       "purpose": "Application code",
       "fileCount": 5,
-      "lastAccessed": 1775173134706,
+      "lastAccessed": 1775086293548,
       "keyFiles": [
         "global-error.tsx",
         "globals.css",
@@ -127,7 +127,7 @@
       "path": "components",
       "purpose": "UI components",
       "fileCount": 19,
-      "lastAccessed": 1775173134709,
+      "lastAccessed": 1775086293550,
       "keyFiles": [
         "ApplicationTags.tsx",
         "BusinessHighlight.tsx",
@@ -140,7 +140,7 @@
       "path": "docs",
       "purpose": "Documentation",
       "fileCount": 3,
-      "lastAccessed": 1775173134710,
+      "lastAccessed": 1775086293551,
       "keyFiles": [
         "backup-data-inventory.md",
         "design-review-2026-04.md",
@@ -151,7 +151,7 @@
       "path": "hooks",
       "purpose": null,
       "fileCount": 1,
-      "lastAccessed": 1775173134711,
+      "lastAccessed": 1775086293552,
       "keyFiles": [
         "useInView.ts"
       ]
@@ -160,7 +160,7 @@
       "path": "i18n",
       "purpose": null,
       "fileCount": 4,
-      "lastAccessed": 1775173134711,
+      "lastAccessed": 1775086293553,
       "keyFiles": [
         "config.ts",
         "navigation.ts",
@@ -172,7 +172,7 @@
       "path": "lib",
       "purpose": "Library code",
       "fileCount": 5,
-      "lastAccessed": 1775173134711,
+      "lastAccessed": 1775086293553,
       "keyFiles": [
         "admin-path.ts",
         "auth.ts",
@@ -185,7 +185,7 @@
       "path": "messages",
       "purpose": null,
       "fileCount": 2,
-      "lastAccessed": 1775173134712,
+      "lastAccessed": 1775086293554,
       "keyFiles": [
         "en.json",
         "ko.json"
@@ -194,8 +194,8 @@
     "public": {
       "path": "public",
       "purpose": "Public files",
-      "fileCount": 15,
-      "lastAccessed": 1775173134713,
+      "fileCount": 17,
+      "lastAccessed": 1775086293555,
       "keyFiles": [
         "AIR CONDITIONING.pdf",
         "apple-icon.png",
@@ -208,7 +208,7 @@
       "path": "scripts",
       "purpose": "Build/utility scripts",
       "fileCount": 5,
-      "lastAccessed": 1775173134714,
+      "lastAccessed": 1775086293557,
       "keyFiles": [
         "performance-data.json",
         "seed-combustion-performances.ts",
@@ -221,70 +221,52 @@
       "path": "Pretendard-1.3.9 (1)/public",
       "purpose": "Public files",
       "fileCount": 0,
-      "lastAccessed": 1775173134716,
+      "lastAccessed": 1775086293560,
       "keyFiles": []
     },
     "app/api": {
       "path": "app/api",
       "purpose": "API routes",
       "fileCount": 0,
-      "lastAccessed": 1775173134717,
+      "lastAccessed": 1775086293562,
       "keyFiles": []
     }
   },
   "hotPaths": [
     {
       "path": "components/pages/AboutPage.tsx",
-      "accessCount": 72,
-      "lastAccessed": 1775110941116,
-      "type": "file"
-    },
-    {
-      "path": "components/Header.tsx",
-      "accessCount": 52,
-      "lastAccessed": 1775176003019,
+      "accessCount": 65,
+      "lastAccessed": 1775093044481,
       "type": "file"
     },
     {
       "path": "components/pages/BusinessPage.tsx",
-      "accessCount": 52,
-      "lastAccessed": 1775195039688,
+      "accessCount": 50,
+      "lastAccessed": 1775089640651,
+      "type": "file"
+    },
+    {
+      "path": "components/Header.tsx",
+      "accessCount": 50,
+      "lastAccessed": 1775091237490,
       "type": "file"
     },
     {
       "path": "components/BusinessHighlight.tsx",
-      "accessCount": 21,
-      "lastAccessed": 1775176006062,
+      "accessCount": 19,
+      "lastAccessed": 1775087959865,
       "type": "file"
     },
     {
       "path": "components/pages/ProductsPage.tsx",
-      "accessCount": 19,
-      "lastAccessed": 1775176012294,
+      "accessCount": 17,
+      "lastAccessed": 1775086500155,
       "type": "file"
     },
     {
       "path": "app/globals.css",
       "accessCount": 17,
       "lastAccessed": 1775088470557,
-      "type": "file"
-    },
-    {
-      "path": "messages/ko.json",
-      "accessCount": 17,
-      "lastAccessed": 1775175997947,
-      "type": "directory"
-    },
-    {
-      "path": "messages/en.json",
-      "accessCount": 15,
-      "lastAccessed": 1775195015309,
-      "type": "directory"
-    },
-    {
-      "path": "components/pages/business/CombustionBusinessPage.tsx",
-      "accessCount": 14,
-      "lastAccessed": 1775175350390,
       "type": "file"
     },
     {
@@ -300,9 +282,15 @@
       "type": "file"
     },
     {
-      "path": "components/pages/business/BurnerBusinessPage.tsx",
-      "accessCount": 12,
-      "lastAccessed": 1775195024319,
+      "path": "messages/ko.json",
+      "accessCount": 11,
+      "lastAccessed": 1775095130213,
+      "type": "directory"
+    },
+    {
+      "path": "components/pages/business/CombustionBusinessPage.tsx",
+      "accessCount": 11,
+      "lastAccessed": 1775105564995,
       "type": "file"
     },
     {
@@ -312,10 +300,22 @@
       "type": "file"
     },
     {
+      "path": "components/pages/business/BurnerBusinessPage.tsx",
+      "accessCount": 8,
+      "lastAccessed": 1775091238646,
+      "type": "file"
+    },
+    {
       "path": "components/Footer.tsx",
       "accessCount": 8,
       "lastAccessed": 1775107478215,
       "type": "file"
+    },
+    {
+      "path": "messages/en.json",
+      "accessCount": 7,
+      "lastAccessed": 1775095158462,
+      "type": "directory"
     },
     {
       "path": "components/pages/SupportPage.tsx",
@@ -363,18 +363,6 @@
       "path": "app/[locale]/layout.tsx",
       "accessCount": 3,
       "lastAccessed": 1775105362498,
-      "type": "file"
-    },
-    {
-      "path": "components/pages/business/HvacBusinessPage.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775175351328,
-      "type": "file"
-    },
-    {
-      "path": "app/[locale]/business/burner/page.tsx",
-      "accessCount": 3,
-      "lastAccessed": 1775195041627,
       "type": "file"
     },
     {
@@ -474,9 +462,21 @@
       "type": "file"
     },
     {
+      "path": "app/[locale]/business/burner/page.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1775009497116,
+      "type": "file"
+    },
+    {
       "path": "components/pages/business/EnvironmentBusinessPage.tsx",
       "accessCount": 1,
       "lastAccessed": 1775009580384,
+      "type": "file"
+    },
+    {
+      "path": "components/pages/business/HvacBusinessPage.tsx",
+      "accessCount": 1,
+      "lastAccessed": 1775009710882,
       "type": "file"
     },
     {
