@@ -21,7 +21,7 @@ const products = [
     title: "간접식 가스히터",
     subtitle: "Indirect Gas Heater",
     desc: "열교환기 방식으로 깨끗한 열풍 공급. 도장부스·식품·클린룸 적용.",
-    image: `/images/indirect-heater-thumb.jpg`,
+    image: `${S3}/images/combustion/indirect-heater-thumb.jpg`,
     href: "/products/combustion/nk-idgh",
   },
 ];
