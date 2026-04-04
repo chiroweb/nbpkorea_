@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import NewsDetailPage from "@/components/pages/NewsDetailPage";
+import { getBrandDisplayName } from "@/lib/seo";
 
 export async function generateMetadata({
   params,
@@ -20,13 +21,23 @@ export async function generateMetadata({
     if (res.ok) {
       const post = await res.json();
       if (post) {
+        const brand = getBrandDisplayName(locale as "ko" | "en");
+        const canonical = locale === "ko" ? `/news/${slug}` : `/en/news/${slug}`;
         return {
-          title: `${post.title} | NBPKOREA`,
+          title: `${post.title} | ${brand}`,
           description: post.excerpt ?? t("news.description"),
+          alternates: {
+            canonical,
+            languages: {
+              ko: `/news/${slug}`,
+              en: `/en/news/${slug}`,
+            },
+          },
           openGraph: {
-            title: `${post.title} | NBPKOREA`,
+            title: `${post.title} | ${brand}`,
             description: post.excerpt ?? t("news.description"),
             images: post.image_url ? [{ url: post.image_url }] : undefined,
+            url: canonical,
             locale: locale === "ko" ? "ko_KR" : "en_US",
           },
         };
@@ -39,6 +50,13 @@ export async function generateMetadata({
   return {
     title: t("news.title"),
     description: t("news.description"),
+    alternates: {
+      canonical: locale === "ko" ? `/news/${slug}` : `/en/news/${slug}`,
+      languages: {
+        ko: `/news/${slug}`,
+        en: `/en/news/${slug}`,
+      },
+    },
   };
 }
 

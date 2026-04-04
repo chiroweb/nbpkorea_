@@ -4,8 +4,9 @@ import { getMessages, getTranslations, setRequestLocale } from "next-intl/server
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import ScrollToTop from "@/components/ScrollToTop";
+import { getBaseUrl, getBrandDisplayName, getOrganizationName } from "@/lib/seo";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.nbpkorea.co.kr";
+const BASE_URL = getBaseUrl();
 
 export async function generateMetadata({
   params,
@@ -23,21 +24,13 @@ export async function generateMetadata({
     },
     description: t("description"),
     keywords: t.has("keywords") ? t("keywords").split(", ") : undefined,
-    alternates: {
-      canonical: `${BASE_URL}`,
-      languages: {
-        ko: `${BASE_URL}`,
-        en: `${BASE_URL}/en`,
-      },
-    },
     openGraph: {
       type: "website",
-      siteName: "NBPKOREA",
+      siteName: getBrandDisplayName(locale as "ko" | "en"),
       title: t("title"),
       description: t("description"),
-      url: BASE_URL,
       locale: locale === "ko" ? "ko_KR" : "en_US",
-      images: [{ url: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/og-image.png", width: 1200, height: 630, alt: "NBPKOREA 엔비피코리아" }],
+      images: [{ url: "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/og-image.png", width: 1200, height: 630, alt: "엔비피코리아 NBPKOREA" }],
     },
     twitter: {
       card: "summary_large_image",
@@ -80,12 +73,14 @@ export default async function LocaleLayout({
   setRequestLocale(locale);
 
   const messages = await getMessages();
+  const brandName = getOrganizationName(locale as "ko" | "en");
+  const brandDisplayName = getBrandDisplayName(locale as "ko" | "en");
 
-  const jsonLd = {
+  const organizationJsonLd = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "NBPKOREA",
-    alternateName: "엔비피코리아",
+    name: brandName,
+    alternateName: ["NBPKOREA", "엔비피코리아", "NBP코리아"],
     url: BASE_URL,
     logo: `${BASE_URL}/icon-512.png`,
     telephone: "031-434-6566",
@@ -102,12 +97,25 @@ export default async function LocaleLayout({
     sameAs: [],
   };
 
+  const websiteJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: brandDisplayName,
+    alternateName: ["NBPKOREA", "엔비피코리아"],
+    url: locale === "ko" ? BASE_URL : `${BASE_URL}/en`,
+    inLanguage: locale,
+  };
+
   return (
     <html lang={locale}>
       <body>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <NextIntlClientProvider locale={locale} messages={messages}>
           {children}

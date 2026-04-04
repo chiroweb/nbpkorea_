@@ -1,6 +1,0 @@
-{"t":0,"agent":"system","event":"skill_invoked","skill_name":"compound-engineering:ce-plan"}
-{"t":0,"agent":"a784a88","agent_type":"compound-engineering:research:repo-research-analyst","event":"agent_start","parent_mode":"none"}
-{"t":0,"agent":"adc8a8e","agent_type":"compound-engineering:research:learnings-researcher","event":"agent_start","parent_mode":"none"}
-{"t":0,"agent":"adc8a8e","agent_type":"compound-engineering:research:learnings-researcher","event":"agent_stop","success":true,"duration_ms":15577}
-{"t":0,"agent":"a784a88","agent_type":"compound-engineering:research:repo-research-analyst","event":"agent_stop","success":true,"duration_ms":81019}
-{"t":0,"agent":"ad2dd58","agent_type":"Explore","event":"agent_start","parent_mode":"none"}
