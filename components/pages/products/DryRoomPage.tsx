@@ -101,7 +101,7 @@ export default function DryRoomPage() {
             </p>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               전극, 조립, 보관 공정 전반에서 수분 관리는 배터리 품질과 직결됩니다.
-              NBPKOREA 드라이룸 공조기는 외기 조건과 공정 부하 변화에도 안정적인 극저습 상태를 유지하도록 제습, 재가열, 풍량 제어를 통합적으로 설계합니다.
+              엔비피코리아 드라이룸 공조기는 외기 조건과 공정 부하 변화에도 안정적인 극저습 상태를 유지하도록 제습, 재가열, 풍량 제어를 통합적으로 설계합니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {heroTags.map((tag) => (

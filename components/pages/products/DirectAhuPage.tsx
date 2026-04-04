@@ -97,7 +97,7 @@ export default function DirectAhuPage() {
             </p>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               직화식 공조기는 대풍량 공기를 빠르게 승온시켜야 하는 현장에서 특히 유리합니다.
-              NBPKOREA는 현장 요구 온도, 풍량, 설치 공간, 자동제어 조건을 반영해 자동차 도장 라인부터 조선·물류 현장까지 맞춤형 AHU를 설계합니다.
+              엔비피코리아는 현장 요구 온도, 풍량, 설치 공간, 자동제어 조건을 반영해 자동차 도장 라인부터 조선·물류 현장까지 맞춤형 AHU를 설계합니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {heroTags.map((tag) => (
@@ -109,7 +109,7 @@ export default function DirectAhuPage() {
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
-              <Image src={`${S3}/images/hvac/direct-ahu-main.jpg`} alt="직화식 공조기" fill className="object-cover" priority />
+              <Image src={`${S3}/images/hvac/direct-ahu-main.jpg`} alt="직화식 공조기" fill className="object-cover scale-[1.15]" priority />
             </div>
           </div>
         </div>

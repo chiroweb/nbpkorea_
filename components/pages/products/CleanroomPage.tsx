@@ -100,7 +100,7 @@ export default function CleanroomPage() {
               {t("hvac.cleanroom.description")}
             </p>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
-              NBPKOREA 클린룸 공조기는 공정실 내부의 청정도, 온도, 습도, 차압을 하나의 시스템으로 관리하도록 설계됩니다.
+              엔비피코리아 클린룸 공조기는 공정실 내부의 청정도, 온도, 습도, 차압을 하나의 시스템으로 관리하도록 설계됩니다.
               반도체 FAB, 디스플레이 라인, 제약 GMP 시설처럼 미세 입자와 외기 유입 통제가 중요한 현장에서 안정적인 생산 환경을 구현합니다.
             </p>
             <div className="flex flex-wrap gap-3">

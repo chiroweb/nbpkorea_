@@ -90,7 +90,7 @@ export default function DoorHeaterPage() {
             <p className="text-sm text-[#5C6470] leading-relaxed mb-6">{t("hvac.doorHeater.description")}</p>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               출입구는 난방 손실과 외기 유입이 가장 크게 발생하는 지점입니다.
-              NBPKOREA 도어히터는 출입구 형상과 개폐 빈도에 맞춰 열풍 장벽을 형성하도록 설계돼 작업 환경 안정성과 에너지 손실 저감에 기여합니다.
+              엔비피코리아 도어히터는 출입구 형상과 개폐 빈도에 맞춰 열풍 장벽을 형성하도록 설계돼 작업 환경 안정성과 에너지 손실 저감에 기여합니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {heroTags.map((tag) => (
@@ -100,7 +100,7 @@ export default function DoorHeaterPage() {
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
-              <Image src={`${S3}/images/hvac/door-heater-new.jpg`} alt="도어히터" fill className="object-cover" priority />
+              <Image src={`${S3}/images/hvac/door-heater-new.jpg`} alt="도어히터" fill className="object-cover scale-[1.15]" priority />
             </div>
           </div>
         </div>

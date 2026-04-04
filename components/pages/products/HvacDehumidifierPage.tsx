@@ -91,7 +91,7 @@ export default function HvacDehumidifierPage() {
             <p className="text-sm text-[#5C6470] leading-relaxed mb-6">{t("hvac.dehumidifier.description")}</p>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               단순 제습만으로는 부족한 현장에서는 냉각, 제습, 재가열, 송풍이 함께 고려되어야 합니다.
-              NBPKOREA 복합식 제습기는 고습 환경의 작업성과 품질 유지를 위해 공조와 열원을 통합한 패키지형 솔루션으로 구성됩니다.
+              엔비피코리아 복합식 제습기는 고습 환경의 작업성과 품질 유지를 위해 공조와 열원을 통합한 패키지형 솔루션으로 구성됩니다.
             </p>
             <div className="flex flex-wrap gap-3">
               {heroTags.map((tag) => (

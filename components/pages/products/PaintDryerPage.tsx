@@ -80,7 +80,7 @@ export default function PaintDryerPage() {
               차량 도장 건조기<br />(Paint Dryer System)
             </h2>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-6">
-              NBPKOREA 차량 도장 건조기는 자동차 도장 부스 및 선박 도장 라인에 특화된 고출력 열풍 건조 시스템입니다. 1,250,000 Kcal/h의 고출력으로 대형 도장 부스를 단시간 내에 목표 온도로 승온하고, PLC 비례제어 방식으로 부스 내 온도를 균일하게 유지합니다.
+              엔비피코리아 차량 도장 건조기는 자동차 도장 부스 및 선박 도장 라인에 특화된 고출력 열풍 건조 시스템입니다. 1,250,000 Kcal/h의 고출력으로 대형 도장 부스를 단시간 내에 목표 온도로 승온하고, PLC 비례제어 방식으로 부스 내 온도를 균일하게 유지합니다.
             </p>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               열풍 균등 분배 덕트 설계를 통해 도장 표면의 온도 편차를 최소화하여 도장 품질과 생산성을 동시에 향상시킵니다. KIA, BMW, 아우디 협력사 도장 라인에 납품된 실적을 보유하고 있으며, LNG·LPG·도시가스를 모두 사용할 수 있습니다.

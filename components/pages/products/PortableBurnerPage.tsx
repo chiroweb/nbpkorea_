@@ -73,7 +73,7 @@ export default function PortableBurnerPage() {
               메탈버너<br />(Metal Burner)
             </h2>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-6">
-              NBPKOREA 메탈버너는 고정 설비 없이 현장에 직접 투입하여 즉시 운전할 수 있는 이동형 산업용 버너입니다. 조선소 블록 내부 가열, 건설 현장 콘크리트 양생, 선박 탱크 건조 등 일시적·이동성이 필요한 현장에 최적화되어 있습니다.
+              엔비피코리아 메탈버너는 고정 설비 없이 현장에 직접 투입하여 즉시 운전할 수 있는 이동형 산업용 버너입니다. 조선소 블록 내부 가열, 건설 현장 콘크리트 양생, 선박 탱크 건조 등 일시적·이동성이 필요한 현장에 최적화되어 있습니다.
             </p>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               MIDCO International(미국) 기술 기반의 2단 연소 방식으로 NOx·CO 배출을 최소화하며, 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다. 독립 운전 구성으로 현장 가스 공급만으로 즉시 가동됩니다.

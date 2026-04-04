@@ -97,7 +97,7 @@ export default function DuctBurnerPage() {
               덕트버너<br />(Duct Burner)
             </h2>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-6">
-              NBPKOREA 덕트버너는 내열 메탈파이버(Metal Fiber)로 제작된 연소면에서 적외선 복사열을 발생시키는 표면연소 방식의 산업용 덕트 가열 버너입니다. MIDCO International(미국)과의 기술 협력을 바탕으로, ANSI Z83.4 / Z83.18 기준을 충족하는 NOx·CO 저배출 설계를 실현합니다.
+              엔비피코리아 덕트버너는 내열 메탈파이버(Metal Fiber)로 제작된 연소면에서 적외선 복사열을 발생시키는 표면연소 방식의 산업용 덕트 가열 버너입니다. MIDCO International(미국)과의 기술 협력을 바탕으로, ANSI Z83.4 / Z83.18 기준을 충족하는 NOx·CO 저배출 설계를 실현합니다.
             </p>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
               소형(0.5FT)부터 대형(6FT)까지 NBP 시리즈 라인업을 갖추고 있으며, 2단 연소 방식과 30단계 정밀 턴다운 제어로 덕트 내 온도를 안정적으로 관리합니다. 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다.
