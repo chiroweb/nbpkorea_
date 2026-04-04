@@ -1,30 +1,193 @@
 "use client";
-import ProductPlaceholderPage from "./ProductPlaceholderPage";
-import { useTranslations } from "next-intl";
+
 import FloatingCaseLink from "@/components/FloatingCaseLink";
-import ApplicationTags from "@/components/ApplicationTags";
+import ProductNav from "@/components/ProductNav";
+import SubpageLayout from "@/components/SubpageLayout";
+import { useInView } from "@/hooks/useInView";
+import { Link } from "@/i18n/navigation";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+
+const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
+
+const heroTags = ["직화 가열", "고효율 열전달", "빠른 승온", "PLC 비례제어"];
+
+const applications = [
+  "자동차 도장 라인",
+  "조선 블록 작업장",
+  "물류센터·창고",
+  "대형 제조 공정실",
+  "건조·가열 공정 구역",
+  "급속 승온 필요 현장",
+];
+
+const processFlow = [
+  "외기 / 환기 공기",
+  "버너 연소",
+  "직접 열전달",
+  "풍량 · 온도 제어",
+  "공정 / 실내 공급",
+];
+
+const features = [
+  "열교환 손실 없이 연소열을 직접 전달해 빠른 승온에 유리",
+  "대풍량 처리와 고속 응답이 필요한 산업 현장에 적합",
+  "PLC 비례제어 기반으로 목표 온도 정밀 제어 가능",
+  "자동차·조선·물류 등 대공간 공조 시스템에 적용 가능",
+  "설비 규모와 현장 조건에 맞춘 풍량·열량 커스터마이징 대응",
+  "가스 열원 기반으로 전기히터 대비 운영 효율 개선 검토 가능",
+  "덕트, 필터, 송풍부와 연계한 패키지형 공조 구성 가능",
+  "설계·제작·설치·시운전·유지관리까지 통합 대응",
+];
+
+const capabilityCards = [
+  {
+    title: "Heating Response",
+    value: "Rapid Temperature Rise",
+    description: "대공간이나 공정 라인의 초기 승온 시간을 줄이는 데 유리합니다.",
+  },
+  {
+    title: "Thermal Efficiency",
+    value: "Direct Heat Transfer",
+    description: "열교환 손실을 줄이는 직화 방식으로 고효율 운전을 구성합니다.",
+  },
+  {
+    title: "System Control",
+    value: "PLC Modulating",
+    description: "부하 변화에 따라 풍량과 온도를 연속적으로 조정할 수 있습니다.",
+  },
+  {
+    title: "Field Engineering",
+    value: "Custom AHU Design",
+    description: "열량, 풍량, 설치 공간, 공정 조건에 맞춘 맞춤 설계를 제안합니다.",
+  },
+];
 
 export default function DirectAhuPage() {
   const t = useTranslations("products");
+  const { ref: heroRef, isInView: heroInView } = useInView({ threshold: 0.1 });
+  const { ref: appRef, isInView: appInView } = useInView({ threshold: 0.1 });
+  const { ref: featureRef, isInView: featureInView } = useInView({ threshold: 0.1 });
+  const { ref: capabilityRef, isInView: capabilityInView } = useInView({ threshold: 0.1 });
+
   return (
-    <><ProductPlaceholderPage
-      activeTab="hvac"
-      activeProduct="direct-ahu"
-      navLabel={t("nav.directAhu")}
-      breadcrumbCategory={t("breadcrumbs.hvac")}
-      breadcrumbCategoryHref="/products?tab=hvac"
-      subtitle="HVAC · Direct-Fired AHU"
-      titleKo="직화식 공조기"
-      titleEn="Direct-Fired Air Handling Unit"
-      description={t("hvac.directAhu.description")}
-      image="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/hvac/direct-ahu.png"
-      tags={["직화식", "고효율", "공조"]}
-      ctaTitleKey="직화식 공조기 도입을 검토 중이신가요?"
-      ctaDescKey="현장 조건에 맞는 최적 사양을 제안해 드립니다."
-    />
-    <div className="max-w-7xl mx-auto px-6 md:px-12 -mt-8 mb-8">
-      <ApplicationTags category="hvac" tags={["직화식", "공조"]} />
-    </div>
-    <FloatingCaseLink category="hvac" tag="직화식 공조기" label="직화식 공조기 적용 사례 보러가기" /></>
+    <SubpageLayout
+      title="직화식 공조기"
+      subtitle={`${t("hvac.directAhu.subtitle")} — Direct-Fired Air Handling Unit`}
+      breadcrumb={[
+        { label: t("breadcrumb"), href: "/products" },
+        { label: t("breadcrumbs.hvac"), href: "/products?tab=hvac" },
+        { label: t("nav.directAhu"), href: "/products/hvac/direct-ahu" },
+      ]}
+    >
+      <FloatingCaseLink category="hvac" tag="직화식 공조기" label="직화식 공조기 적용 사례 보러가기" />
+      <ProductNav activeTab="hvac" activeProduct="direct-ahu" />
+
+      <section className="px-6 md:px-12 py-16">
+        <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+          <div ref={heroRef} className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
+            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
+              HVAC · Direct-Fired AHU
+            </span>
+            <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
+              직화식 공조기
+            </h2>
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-6">
+              {t("hvac.directAhu.description")}
+            </p>
+            <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
+              직화식 공조기는 대풍량 공기를 빠르게 승온시켜야 하는 현장에서 특히 유리합니다.
+              NBPKOREA는 현장 요구 온도, 풍량, 설치 공간, 자동제어 조건을 반영해 자동차 도장 라인부터 조선·물류 현장까지 맞춤형 AHU를 설계합니다.
+            </p>
+            <div className="flex flex-wrap gap-3">
+              {heroTags.map((tag) => (
+                <span key={tag} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-1 text-[#5C6470]">
+                  {tag}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
+            <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
+              <Image src={`${S3}/images/hvac/direct-ahu-main.jpg`} alt="직화식 공조기" fill className="object-cover" priority />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section ref={appRef} className="px-6 md:px-12 py-12 border-t border-[#D4DAE2] bg-[#F9FAFB]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.applications")}</p>
+          <div className={`grid grid-cols-2 md:grid-cols-3 gap-3 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            {applications.map((item) => (
+              <div key={item} className="border border-[#D4DAE2] bg-white px-4 py-3 text-sm text-[#3D4450]">{item}</div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Direct-Fired AHU Flow</p>
+          <div className="flex flex-wrap items-center gap-2">
+            {processFlow.map((step, index) => (
+              <div key={step} className="flex items-center gap-2">
+                <div className={`px-3 py-2 text-[14px] tracking-[0.05em] text-center ${step === "버너 연소" || step === "직접 열전달" ? "bg-[#C05010] text-white" : step === "공정 / 실내 공급" ? "bg-[#2d2a28] text-white" : "bg-white border border-[#D4DAE2] text-[#5C6470]"}`}>
+                  {step}
+                </div>
+                {index < processFlow.length - 1 && <span className="text-[#C8D0DA]">→</span>}
+              </div>
+            ))}
+          </div>
+          <p className="text-[14px] text-[#5C6470] mt-4">직화 가열과 송풍 제어를 결합해 필요한 온도 조건을 빠르게 형성하도록 구성합니다.</p>
+        </div>
+      </section>
+
+      <section ref={featureRef} className="px-6 md:px-12 py-16">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.features")}</p>
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${featureInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            {features.map((feature, index) => (
+              <div key={index} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
+                <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
+                <span className="text-sm text-[#3D4450] leading-relaxed">{feature}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section ref={capabilityRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">Key Capabilities</p>
+          <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${capabilityInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+            {capabilityCards.map((card) => (
+              <div key={card.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-[12px] tracking-[0.08em] uppercase text-[#5C6470] mb-3">{card.title}</p>
+                <p className="text-xl font-light text-[#2d2a28] mb-3">{card.value}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{card.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+          <div>
+            <h3 className="text-lg tracking-[0.08em] font-light text-[#2d2a28] mb-2">직화식 공조기 도입을 검토 중이신가요?</h3>
+            <p className="text-sm text-[#5C6470]">열량, 풍량, 제어 방식, 설치 환경에 맞춘 최적 사양을 제안해 드립니다.</p>
+          </div>
+          <div className="flex items-center gap-4">
+            <Link href="/products?tab=hvac" className="btn-link group text-[#5C6470] text-xs tracking-[0.06em] uppercase">
+              <svg width="16" height="8" viewBox="0 0 16 8" fill="none" className="rotate-180"><path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1"/></svg>
+              {t("common.backToList")}
+            </Link>
+            <Link href="/support?type=catalog" className="text-xs tracking-[0.06em] uppercase border border-[#D4DAE2] px-6 py-3 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-all duration-300">카탈로그 신청</Link>
+            <Link href="/support" className="text-xs tracking-[0.06em] uppercase bg-[#C05010] text-white px-6 py-3 hover:bg-[#2d2a28] transition-all duration-300">{t("common.contact")}</Link>
+          </div>
+        </div>
+      </section>
+    </SubpageLayout>
   );
 }
