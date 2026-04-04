@@ -224,7 +224,7 @@ function ProductsPageInner() {
       title: t("combustion.nkIdgh.subtitle"),
       subtitle: "Indirect Gas Heater",
       href: "/products/combustion/nk-idgh",
-      image: `${S3}/images/combustion/indirect-heater-thumb.jpg`,
+      image: `${S3}/images/combustion/indirect-heater-thumb.png`,
       description: t("combustion.nkIdgh.description"),
       tags: ["도장부스", "식품", "클린룸"],
     },
