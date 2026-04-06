@@ -29,6 +29,18 @@ const capabilityCards = [
   { title: "Retrofit", value: "New / Existing Systems", description: "신규 설비와 기존 설비 개조 모두 고려할 수 있습니다." },
   { title: "Integration", value: "Burner + Valve Assembly", description: "버너와 제어부를 분리하지 않고 통합적으로 검토합니다." },
 ];
+const valveTrainItems = [
+  { title: "차단 밸브", description: "안전 차단을 위한 이중 차단 또는 인터록 연계 구성을 검토합니다." },
+  { title: "레귤레이터", description: "입구 압력 변동이 큰 현장에서도 안정적인 연소 압력을 유지하도록 설계합니다." },
+  { title: "비례 제어", description: "온도 제어기, PLC와 연동해 출력에 따라 가스 유량을 정밀 조절합니다." },
+  { title: "압력 감시", description: "저압·고압 스위치와 인터록으로 이상 상태를 신속히 감지합니다." },
+];
+const specGuide = [
+  { label: "적용 연료", value: "NG / LPG / 도시가스" },
+  { label: "제어 대상", value: "유량·압력·점화·인터록" },
+  { label: "적용 설비", value: "오븐·열풍기·공정 버너" },
+  { label: "구성 방식", value: "신규 / 기존 개조 대응" },
+];
 
 export default function ValveBurnerPage() {
   const t = useTranslations("products");
@@ -122,6 +134,57 @@ export default function ValveBurnerPage() {
                 <p className="text-[12px] tracking-[0.08em] uppercase text-[#5C6470] mb-3">{card.title}</p>
                 <p className="text-xl font-light text-[#2d2a28] mb-3">{card.value}</p>
                 <p className="text-sm leading-relaxed text-[#5C6470]">{card.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">주요 구성 요소</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {valveTrainItems.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.specifications")}</p>
+          <div className="border border-[#D4DAE2] bg-white p-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed">
+              밸브버너는 버너 헤드보다 가스 트레인 설계가 운전 안정성에 더 큰 영향을 주는 경우가 많습니다.
+              현장 압력 범위와 제어 정밀도 요구를 검토해 적합한 밸브 트레인과 제어 구성을 제안합니다.
+            </p>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {specGuide.map((item) => (
+                <div key={item.label} className="border border-[#E8ECF0] p-3">
+                  <span className="text-[13px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
+                  <span className="text-xs text-[#2d2a28]">{item.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">적용 예시</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: `${S3}/images/burner/valve-burner.jpg`, alt: "밸브버너 적용 예시 1" },
+              { src: `${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`, alt: "밸브버너 적용 예시 2" },
+              { src: `${S3}/images/burner/fpb/gas-burners-low-nox-40199-6408963.jpg`, alt: "밸브버너 적용 예시 3" },
+            ].map((img) => (
+              <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
+                <Image src={img.src} alt={img.alt} fill className="object-cover" />
               </div>
             ))}
           </div>

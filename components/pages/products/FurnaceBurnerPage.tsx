@@ -36,6 +36,18 @@ const capabilityCards = [
   { title: "Flame Design", value: "Process-Matched Flame", description: "로 길이, 버너 위치, 열부하에 맞는 화염 패턴을 제안합니다." },
   { title: "Field Engineering", value: "Furnace-Custom Layout", description: "산업로 구조와 생산 공정에 맞춘 맞춤 설계를 제공합니다." },
 ];
+const engineeringPoints = [
+  { title: "화염 길이", description: "가열 대상과 로 길이에 맞춰 직진형, 확산형, 와류형 등 화염 특성을 검토합니다." },
+  { title: "열부하 분배", description: "로내 열수지와 제품 배치를 기준으로 버너 수량과 위치를 조정합니다." },
+  { title: "예열 공기", description: "공기 예열 조건이 있을 경우 버너 헤드 재질과 제어 범위를 함께 검토합니다." },
+  { title: "연료 구성", description: "Gas 단독 또는 Dual Fuel 구성에 따라 점화 방식과 밸브 트레인을 설계합니다." },
+];
+const specGuide = [
+  { label: "적용 연료", value: "NG / LPG / Oil / Dual Fuel" },
+  { label: "주요 공정", value: "열처리·용해·소성·가열" },
+  { label: "설계 기준", value: "열부하 / 로 형상 / 예열공기" },
+  { label: "제어 범위", value: "점화·비례제어·안전인터록" },
+];
 
 export default function FurnaceBurnerPage() {
   const t = useTranslations("products");
@@ -129,6 +141,57 @@ export default function FurnaceBurnerPage() {
                 <p className="text-[12px] tracking-[0.08em] uppercase text-[#5C6470] mb-3">{card.title}</p>
                 <p className="text-xl font-light text-[#2d2a28] mb-3">{card.value}</p>
                 <p className="text-sm leading-relaxed text-[#5C6470]">{card.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">설계 검토 포인트</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {engineeringPoints.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.specifications")}</p>
+          <div className="border border-[#D4DAE2] bg-white p-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed">
+              로용 버너는 산업로 온도 조건, 목표 생산량, 로 길이, 배기 조건에 따라 설계가 크게 달라집니다.
+              현장 사양 검토 후 버너 타입, 연료 방식, 제어 로직, 설치 레이아웃을 맞춤 제안합니다.
+            </p>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {specGuide.map((item) => (
+                <div key={item.label} className="border border-[#E8ECF0] p-3">
+                  <span className="text-[13px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
+                  <span className="text-xs text-[#2d2a28]">{item.value}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">적용 예시</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: `${S3}/images/burner/furnace-burner-main.jpg`, alt: "로용 버너 적용 예시 1" },
+              { src: `${S3}/images/burner/fpb/Process-Burner-2.jpeg`, alt: "로용 버너 적용 예시 2" },
+              { src: `${S3}/images/burner/fpb/dual-fuel-burners-40199-6408931.jpg`, alt: "로용 버너 적용 예시 3" },
+            ].map((img) => (
+              <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
+                <Image src={img.src} alt={img.alt} fill className="object-cover" />
               </div>
             ))}
           </div>

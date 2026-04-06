@@ -5,6 +5,8 @@ import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 import FloatingCaseLink from "@/components/FloatingCaseLink";
 import ApplicationTags from "@/components/ApplicationTags";
+import { useInView } from "@/hooks/useInView";
+import Image from "next/image";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
@@ -89,8 +91,39 @@ const fpbProducts = [
   },
 ];
 
+const heroTags = ["패키지 일체형", "저NOx 대응", "높은 턴다운", "BMS 연동", "정비 용이성"];
+const applications = [
+  "산업용 보일러",
+  "열수·스팀 설비",
+  "공정 가열기",
+  "직화 오븐",
+  "열풍 공급 설비",
+  "연료 전환 프로젝트",
+];
+const processFlow = ["연료 스키드 공급", "연소공기 팬 제어", "점화·화염 감시", "안정 화염 형성", "열원·스팀 생산"];
+const featureHighlights = [
+  "버너, 팬, 점화부, 제어반을 하나의 패키지로 구성해 설치와 시운전 대응성을 높입니다.",
+  "가스, 오일, 듀얼퓨얼 등 다양한 연료 조건을 고려해 현장에 맞는 패키지 구성을 제안할 수 있습니다.",
+  "짧고 안정적인 화염 설계가 가능해 보일러 및 열원 장비 내부의 화염 충돌 위험을 줄이는 데 유리합니다.",
+  "높은 턴다운 특성 검토를 통해 부분부하 구간에서도 제어 안정성과 연료 효율을 확보할 수 있습니다.",
+  "자동 화염감시, 안전 차단, 인터록 로직 등 버너 매니지먼트 시스템과의 연계가 용이합니다.",
+  "저소음 운전, 컴팩트 배치, 정비 접근성을 고려한 일체형 설비 구성으로 유지관리 편의성을 높일 수 있습니다.",
+  "기존 설비 교체, 연료 전환, 배출 개선 프로젝트 등 리트로핏 작업에도 적용성이 높습니다.",
+  "용량, 배압, 연료 압력, 현장 규격에 따라 구성품과 제어 사양을 맞춤 설계할 수 있습니다.",
+];
+const capabilityCards = [
+  { title: "System Format", value: "Integrated Package", description: "주요 구성품을 일체형으로 묶어 현장 설치와 배관·배선 복잡도를 줄이는 방향으로 설계합니다." },
+  { title: "Combustion Control", value: "Wide Turndown", description: "부하 변동이 큰 설비에서도 안정적 화염 유지와 출력 제어를 검토할 수 있습니다." },
+  { title: "Fuel Flexibility", value: "Gas / Oil / Dual Fuel", description: "현장 연료 인프라와 운전 목적에 따라 연료 구성을 유연하게 선택할 수 있습니다." },
+  { title: "Operation Safety", value: "BMS Ready", description: "점화, 화염감시, 차단밸브, 인터록을 포함한 안전 제어 체계와의 통합이 용이합니다." },
+];
+
 export default function FpbBurnerPage() {
   const t = useTranslations("products");
+  const { ref: heroRef, isInView: heroInView } = useInView({ threshold: 0.1 });
+  const { ref: appRef, isInView: appInView } = useInView({ threshold: 0.1 });
+  const { ref: featureRef, isInView: featureInView } = useInView({ threshold: 0.1 });
+  const { ref: capabilityRef, isInView: capabilityInView } = useInView({ threshold: 0.1 });
   return (
     <>
       <SubpageLayout
@@ -106,19 +139,76 @@ export default function FpbBurnerPage() {
 
         {/* Hero */}
         <section className="px-6 md:px-12 py-16">
-          <div className="max-w-7xl mx-auto">
-            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
-              Industrial Package Burner
-            </span>
-            <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-4">
-              패키지 버너<br />
-              <span className="text-lg text-[#5C6470]">(Package Burner)</span>
-            </h2>
-            <p className="text-sm text-[#5C6470] leading-relaxed mb-12 max-w-2xl">
-              {t("burner.fpbBurner.description")}
-            </p>
+          <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <div
+              ref={heroRef}
+              className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
+            >
+              <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
+                Industrial Package Burner
+              </span>
+              <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
+                패키지 버너<br />
+                <span className="text-lg text-[#5C6470]">(Package Burner)</span>
+              </h2>
+              <p className="text-sm text-[#5C6470] leading-relaxed mb-6 max-w-2xl">
+                {t("burner.fpbBurner.description")}
+              </p>
+              <p className="text-sm text-[#5C6470] leading-relaxed mb-8 max-w-2xl">
+                패키지 버너는 단순 버너 본체가 아니라 연소공기 팬, 점화부, 제어반, 안전장치를 하나의 시스템으로
+                구성해 현장 설치와 운전을 단순화하는 산업용 열원 솔루션입니다. 엔비피코리아는 현장 부하와 연료 조건,
+                배출 요구 수준을 검토해 적합한 패키지 버너 구성을 제안합니다.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {heroTags.map((tag) => (
+                  <span key={tag} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-1 text-[#5C6470]">
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+            <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
+              <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
+                <Image
+                  src={`${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`}
+                  alt="패키지 버너"
+                  fill
+                  className="object-cover"
+                  priority
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
-            {/* Product Grid */}
+        <section ref={appRef} className="px-6 md:px-12 py-12 border-t border-[#D4DAE2] bg-[#F9FAFB]">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.applications")}</p>
+            <div className={`grid grid-cols-2 md:grid-cols-3 gap-3 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+              {applications.map((item) => (
+                <div key={item} className="border border-[#D4DAE2] bg-white px-4 py-3 text-sm text-[#3D4450]">{item}</div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Package Burner System Flow</p>
+            <div className="flex flex-wrap items-center gap-2">
+              {processFlow.map((step, index) => (
+                <div key={step} className="flex items-center gap-2">
+                  <div className={`px-3 py-2 text-[14px] tracking-[0.05em] text-center ${step === "점화·화염 감시" || step === "안정 화염 형성" ? "bg-[#C05010] text-white" : step === "열원·스팀 생산" ? "bg-[#2d2a28] text-white" : "bg-white border border-[#D4DAE2] text-[#5C6470]"}`}>{step}</div>
+                  {index < processFlow.length - 1 && <span className="text-[#C8D0DA]">→</span>}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-6 md:px-12 py-16">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">제품 라인업</p>
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
               {fpbProducts.map((product) => (
                 <div
@@ -126,10 +216,11 @@ export default function FpbBurnerPage() {
                   className="group border border-[#D4DAE2] bg-white hover:shadow-lg transition-all duration-300"
                 >
                   <div className="relative aspect-square overflow-hidden bg-[#FAFAFA]">
-                    <img
+                    <Image
                       src={product.image}
                       alt={product.nameKo}
-                      className="object-cover w-full h-full group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <div className="p-4">
@@ -140,6 +231,35 @@ export default function FpbBurnerPage() {
                       {product.name}
                     </p>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section ref={featureRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.features")}</p>
+            <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${featureInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+              {featureHighlights.map((feature, index) => (
+                <div key={index} className="flex items-start gap-3 p-4 border border-[#D4DAE2] bg-white">
+                  <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
+                  <span className="text-sm text-[#3D4450] leading-relaxed">{feature}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section ref={capabilityRef} className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">Key Capabilities</p>
+            <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${capabilityInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
+              {capabilityCards.map((card) => (
+                <div key={card.title} className="border border-[#D4DAE2] bg-white p-5">
+                  <p className="text-[12px] tracking-[0.08em] uppercase text-[#5C6470] mb-3">{card.title}</p>
+                  <p className="text-xl font-light text-[#2d2a28] mb-3">{card.value}</p>
+                  <p className="text-sm leading-relaxed text-[#5C6470]">{card.description}</p>
                 </div>
               ))}
             </div>

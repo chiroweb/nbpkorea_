@@ -63,6 +63,24 @@ const capabilityCards = [
     description: "라인 규모, 외기 조건, 공정 발열, 실압 조건에 맞춘 맞춤 사양을 제안합니다.",
   },
 ];
+const coreModules = [
+  { title: "흡착 제습부", description: "저노점 공기 형성을 위해 로터 또는 제습 모듈을 중심으로 제습 성능을 확보합니다." },
+  { title: "전처리 코일", description: "외기 상태에 따라 예냉·예열 조건을 조정해 본 제습부의 부하를 줄입니다." },
+  { title: "재가열부", description: "제습 후 공급 공기의 온도를 보정해 공정 및 작업 환경에 맞는 상태로 맞춥니다." },
+  { title: "국소 저습 구역", description: "드라이부스나 집중 제습 구간을 분리 설계해 전체 운전 에너지를 줄일 수 있습니다." },
+];
+const designPoints = [
+  { title: "목표 노점", description: "라인별 목표 Dew Point와 허용 편차에 따라 제습량과 재생 조건을 설정합니다." },
+  { title: "외기 부하", description: "계절별 외기 수분 부하와 침기량을 고려해 제습 시스템 용량을 산정합니다." },
+  { title: "에너지 절감", description: "국소 제습, 재생열 최적화, 풍량 제어를 통해 운영 비용 절감 방향을 검토합니다." },
+  { title: "확장성", description: "라인 증설이나 배터리 공정 변경을 고려해 모듈형 증설 구조를 검토할 수 있습니다." },
+];
+const specGuide = [
+  { label: "목표 조건", value: "초저습 / 저노점 운전" },
+  { label: "적용 산업", value: "2차전지 / 전고체 공정" },
+  { label: "제어 항목", value: "Dew Point / Temp / RH / DP" },
+  { label: "구성 방식", value: "드라이룸 / 드라이부스 대응" },
+];
 
 export default function DryRoomPage() {
   const t = useTranslations("products");
@@ -190,6 +208,54 @@ export default function DryRoomPage() {
                 <p className="text-sm leading-relaxed text-[#5C6470]">{card.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">주요 구성 요소</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {coreModules.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">설계 검토 포인트</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {designPoints.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.specifications")}</p>
+          <div className="border border-[#D4DAE2] bg-white p-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed">
+              드라이룸 공조기는 단순 제습기가 아니라 전처리, 본 제습, 재가열, 실압 관리가 결합된 초저습 생산 인프라입니다.
+              배터리 제조 환경에 맞춰 저노점 성능과 운영 에너지의 균형을 함께 검토합니다.
+            </p>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {specGuide.map((item) => (
+                <div key={item.label} className="border border-[#E8ECF0] p-3">
+                  <span className="text-[13px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
+                  <span className="text-xs text-[#2d2a28]">{item.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

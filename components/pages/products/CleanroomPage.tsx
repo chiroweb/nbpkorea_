@@ -63,6 +63,24 @@ const capabilityCards = [
     description: "온도, 습도, 차압을 함께 관리해 생산 품질 편차를 줄입니다.",
   },
 ];
+const coreModules = [
+  { title: "필터 단계", description: "프리필터, 미디엄 필터, HEPA/ULPA 최종 필터를 조합해 공정별 청정도를 맞춥니다." },
+  { title: "공기 순환", description: "FFU, 순환풍, 외기 도입량을 함께 검토해 안정적인 공기 흐름과 실내 균일도를 확보합니다." },
+  { title: "차압 관리", description: "청정구역과 일반구역 간 압력 차를 단계적으로 설계해 오염 유입을 최소화합니다." },
+  { title: "자동제어", description: "온도, 습도, 차압, 풍량을 중앙제어 및 BMS와 연동해 통합 관리할 수 있습니다." },
+];
+const designPoints = [
+  { title: "청정도 등급", description: "Class 기준과 공정 파티클 허용 수준에 따라 필터 등급과 기류 방식을 결정합니다." },
+  { title: "열부하 반영", description: "장비 발열, 조명, 인원, 외기 조건을 포함한 총 열부하를 기준으로 공조 용량을 산정합니다." },
+  { title: "기류 방식", description: "층류 또는 난류 방식, 천장 시스템, 리턴 경로를 공간 구조에 맞춰 검토합니다." },
+  { title: "시운전·TAB", description: "풍량 밸런싱과 차압 조정을 포함한 TAB 기준으로 최종 운전 상태를 맞춥니다." },
+];
+const specGuide = [
+  { label: "청정도", value: "Class 요구조건별 대응" },
+  { label: "제어 항목", value: "Temp / RH / DP / Airflow" },
+  { label: "적용 공간", value: "반도체·디스플레이·제약" },
+  { label: "구성 방식", value: "EPC / 개보수 / 증설 대응" },
+];
 
 export default function CleanroomPage() {
   const t = useTranslations("products");
@@ -190,6 +208,54 @@ export default function CleanroomPage() {
                 <p className="text-sm leading-relaxed text-[#5C6470]">{card.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">주요 구성 요소</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {coreModules.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">설계 검토 포인트</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {designPoints.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.specifications")}</p>
+          <div className="border border-[#D4DAE2] bg-white p-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed">
+              클린룸 공조기는 단일 장비보다 필터 단계, 실압 구조, 자동제어, 공조 열원을 포함한 전체 시스템 설계가 중요합니다.
+              신규 구축뿐 아니라 증설·개보수 현장까지 공정 요구조건에 맞춰 통합 사양을 제안합니다.
+            </p>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {specGuide.map((item) => (
+                <div key={item.label} className="border border-[#E8ECF0] p-3">
+                  <span className="text-[13px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
+                  <span className="text-xs text-[#2d2a28]">{item.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

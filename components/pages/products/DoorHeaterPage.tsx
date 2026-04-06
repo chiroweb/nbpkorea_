@@ -61,6 +61,24 @@ const capabilityCards = [
     description: "개구부 폭과 높이, 개폐 빈도에 따라 맞춤 사양을 제안합니다.",
   },
 ];
+const coreModules = [
+  { title: "가열부", description: "직화식 열원 또는 고온 열풍부를 통해 출입구 구간의 열풍 장벽을 형성합니다." },
+  { title: "송풍 노즐", description: "개구부 형상에 맞춰 토출 방향과 풍속을 조정해 외기 침입을 줄입니다." },
+  { title: "제어부", description: "도어 개폐 신호, 온도 조건, 수동·자동 운전을 연계해 필요 시점에 운전합니다." },
+  { title: "설치 프레임", description: "출입구 상부나 측면 구조에 맞춰 현장 설치와 정비가 용이한 형태로 제작합니다." },
+];
+const designPoints = [
+  { title: "개구부 크기", description: "출입구 폭과 높이에 따라 풍량, 토출 속도, 장비 길이를 산정합니다." },
+  { title: "개폐 빈도", description: "문 열림 시간과 통행 패턴을 반영해 연속 운전 또는 간헐 운전 방식을 검토합니다." },
+  { title: "온도차", description: "실내외 온도차와 계절 조건에 따라 필요한 가열 용량을 조정합니다." },
+  { title: "작업 환경", description: "소음, 체감풍, 작업 동선까지 고려해 설치 위치와 토출 방향을 설계합니다." },
+];
+const specGuide = [
+  { label: "적용 구간", value: "공장·창고·냉장전실 출입구" },
+  { label: "주요 목적", value: "열손실 저감 / 외기 차단" },
+  { label: "제어 항목", value: "도어 연동 / Temp / Fan" },
+  { label: "설계 기준", value: "개구부 크기 / 개폐 빈도" },
+];
 
 export default function DoorHeaterPage() {
   const t = useTranslations("products");
@@ -157,6 +175,54 @@ export default function DoorHeaterPage() {
                 <p className="text-sm leading-relaxed text-[#5C6470]">{card.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">주요 구성 요소</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {coreModules.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">선정 기준</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {designPoints.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.specifications")}</p>
+          <div className="border border-[#D4DAE2] bg-white p-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed">
+              도어히터는 개구부 조건에 따라 성능 차이가 크게 나타나는 장비입니다.
+              출입구 크기, 개폐 빈도, 실내외 온도차, 작업 동선을 기준으로 풍량과 열량을 최적화해 제안합니다.
+            </p>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {specGuide.map((item) => (
+                <div key={item.label} className="border border-[#E8ECF0] p-3">
+                  <span className="text-[13px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
+                  <span className="text-xs text-[#2d2a28]">{item.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

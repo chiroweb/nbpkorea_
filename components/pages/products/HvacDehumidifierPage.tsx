@@ -62,6 +62,24 @@ const capabilityCards = [
     description: "현장 목표 습도와 처리 풍량 조건에 맞춘 개별 사양을 제안합니다.",
   },
 ];
+const coreModules = [
+  { title: "냉각 코일", description: "공기 중 수분을 응축시키는 1차 제습 단계로 고습 외기에 대응합니다." },
+  { title: "재가열부", description: "제습 후 공급 공기의 온도를 다시 보정해 현장 사용 조건에 맞춥니다." },
+  { title: "필터·송풍부", description: "공기 청정도와 처리 풍량을 함께 관리해 안정적인 공급 상태를 유지합니다." },
+  { title: "댐퍼·제어부", description: "외기, 환기, 순환풍 비율을 조정해 계절별 운전 조건에 대응합니다." },
+];
+const operationModes = [
+  { title: "여름철 제습", description: "고온다습 외기에 대해 냉각 제습과 재가열을 결합해 목표 습도를 유지합니다." },
+  { title: "겨울철 보정", description: "저온 외기 조건에서도 과냉을 방지하며 필요한 공급 온도를 유지하도록 운전합니다." },
+  { title: "간헐 운전", description: "장비 비가동 시간대 결로 방지와 보존 환경 유지를 위한 부분 운전을 검토할 수 있습니다." },
+  { title: "품질 유지", description: "창고, 도장, 생산공정별 목표 RH에 맞춰 연속 제습과 공급 공기 조건을 조정합니다." },
+];
+const specGuide = [
+  { label: "제습 방식", value: "Cooling + Reheat" },
+  { label: "적용 공간", value: "도장·창고·보조 공조" },
+  { label: "제어 항목", value: "RH / Temp / Airflow" },
+  { label: "운전 형태", value: "사계절 복합 운전" },
+];
 
 export default function HvacDehumidifierPage() {
   const t = useTranslations("products");
@@ -158,6 +176,54 @@ export default function HvacDehumidifierPage() {
                 <p className="text-sm leading-relaxed text-[#5C6470]">{card.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">주요 구성 요소</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {coreModules.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">운전 포인트</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {operationModes.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.specifications")}</p>
+          <div className="border border-[#D4DAE2] bg-white p-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed">
+              복합식 제습기는 냉각, 제습, 재가열, 송풍을 분리하지 않고 하나의 패키지로 운영하는 장비입니다.
+              계절별 외기 변화와 현장 목표 RH를 함께 검토해 처리 풍량과 재가열 조건을 설계합니다.
+            </p>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {specGuide.map((item) => (
+                <div key={item.label} className="border border-[#E8ECF0] p-3">
+                  <span className="text-[13px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
+                  <span className="text-xs text-[#2d2a28]">{item.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>

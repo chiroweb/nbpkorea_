@@ -62,6 +62,24 @@ const capabilityCards = [
     description: "열량, 풍량, 설치 공간, 공정 조건에 맞춘 맞춤 설계를 제안합니다.",
   },
 ];
+const coreModules = [
+  { title: "버너 섹션", description: "직화 연소부와 안전장치를 통합해 고속 승온과 안정적인 열공급을 구성합니다." },
+  { title: "댐퍼·혼합부", description: "외기와 환기 공기의 혼합 비율을 조정해 필요한 공급 공기 조건을 맞춥니다." },
+  { title: "송풍부", description: "처리 풍량과 정압 조건에 맞춰 팬 용량과 덕트 연계를 설계합니다." },
+  { title: "자동제어", description: "PLC, 온도 제어기, 인터록을 통해 연소와 풍량을 함께 제어합니다." },
+];
+const designPoints = [
+  { title: "환기량 조건", description: "외기 비율, 배기 연동, 실내 압력 조건을 반영해 열량과 풍량을 산정합니다." },
+  { title: "승온 속도", description: "목표 온도까지 필요한 시간과 부하 변동성을 기준으로 버너 용량을 검토합니다." },
+  { title: "안전 설계", description: "연소 안전장치, 가스 인터록, 고온 보호 로직을 포함해 시스템을 구성합니다." },
+  { title: "설치 공간", description: "옥외형, 옥상형, 실내형 등 현장 설치 조건에 따라 케이싱과 정비 동선을 검토합니다." },
+];
+const specGuide = [
+  { label: "가열 방식", value: "Direct-Fired Heating" },
+  { label: "적용 공간", value: "도장·조선·대공간 공조" },
+  { label: "제어 항목", value: "Temp / Airflow / Gas Control" },
+  { label: "구성 방식", value: "패키지형 맞춤 제작" },
+];
 
 export default function DirectAhuPage() {
   const t = useTranslations("products");
@@ -168,6 +186,54 @@ export default function DirectAhuPage() {
                 <p className="text-sm leading-relaxed text-[#5C6470]">{card.description}</p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">주요 구성 요소</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {coreModules.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">설계 검토 포인트</p>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            {designPoints.map((item) => (
+              <div key={item.title} className="border border-[#D4DAE2] bg-white p-5">
+                <p className="text-sm tracking-[0.06em] text-[#2d2a28] mb-3">{item.title}</p>
+                <p className="text-sm leading-relaxed text-[#5C6470]">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.specifications")}</p>
+          <div className="border border-[#D4DAE2] bg-white p-6">
+            <p className="text-sm text-[#5C6470] leading-relaxed">
+              직화식 공조기는 빠른 승온과 대풍량 처리가 강점인 반면, 환기량과 연소 안전 조건을 함께 고려해야 하는 장비입니다.
+              공정용 환기, 난방, 건조 목적에 따라 열량과 제어 구성을 맞춤 설계합니다.
+            </p>
+            <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-4">
+              {specGuide.map((item) => (
+                <div key={item.label} className="border border-[#E8ECF0] p-3">
+                  <span className="text-[13px] tracking-[0.12em] uppercase text-[#C8D0DA] block mb-1">{item.label}</span>
+                  <span className="text-xs text-[#2d2a28]">{item.value}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
