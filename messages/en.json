@@ -236,7 +236,8 @@
         "2023": "Exclusive Korean Agency Agreement with KUBAN Coffee Roasters (Turkey)",
         "2022": "Corporate R&D Center Established (KOITA Certified)",
         "2021": "Minister of Trade, Industry and Energy Award",
-        "2020": "ISO 14001 Environmental Management System Certified",
+        "2020a": "Minister of Education Award",
+        "2020b": "ISO 14001 Environmental Management System Certified",
         "2019a": "Regenerative Catalytic Oxidation System Patent Filed",
         "2019b": "Export Performance Expanded",
         "2018": "NBP Series Metal Fiber Burner Lineup Expanded",
@@ -678,6 +679,10 @@
         {
           "year": "2021",
           "title": "Minister of Trade, Industry and Energy Award"
+        },
+        {
+          "year": "2020",
+          "title": "Minister of Education Award"
         },
         {
           "year": "2019",

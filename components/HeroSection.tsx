@@ -10,6 +10,7 @@ const slides = [
   { label: "NBPKOREA Industrial Site", src: `${S3}/videos/hero-new-2.mp4`, duration: 5000 },
   { label: "NBPKOREA Battery Manufacturing", src: `${S3}/videos/hero-new-3.mp4`, duration: 5000 },
   { label: "NBPKOREA Field Operations 1", src: `${S3}/videos/hero-new-4.mp4`, duration: 5000 },
+  { label: "NBPKOREA Field Operations Transition", src: `${S3}/videos/hero-new-4b.mp4`, duration: 3000 },
   { label: "NBPKOREA Field Operations 2", src: `${S3}/videos/hero-new-5.mp4`, duration: 5000 },
 ];
 

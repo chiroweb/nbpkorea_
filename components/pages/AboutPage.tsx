@@ -213,7 +213,7 @@ function HistorySection() {
     { year: "2017", events: [t("events.2017")] },
     { year: "2018", events: [t("events.2018")] },
     { year: "2019", events: [t("events.2019a"), t("events.2019b")] },
-    { year: "2020", events: [t("events.2020")] },
+    { year: "2020", events: [t("events.2020a"), t("events.2020b")] },
     { year: "2021", events: [t("events.2021")] },
     { year: "2022", events: [t("events.2022")] },
     { year: "2023", events: [t("events.2023")] },

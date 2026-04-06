@@ -65,8 +65,8 @@ export default function MetalFiberBurnerPage() {
             <div>
               <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
                 <img
-                  src={`${S3}/images/burner/ceramic-burner.jpg`}
-                  alt="세라믹 버너"
+                  src={`${S3}/images/burner/metal-fiber-burner-thumb.png`}
+                  alt="메탈버너"
                   className="object-cover w-full h-full"
                 />
               </div>
@@ -102,6 +102,23 @@ export default function MetalFiberBurnerPage() {
                       {product.description}
                     </p>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* 적용 예시 */}
+        <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+          <div className="max-w-7xl mx-auto">
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">적용 예시</p>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                { src: `${S3}/images/burner/metal-fiber-app-1.png`, alt: "메탈버너 적용 예시 1" },
+                { src: `${S3}/images/burner/metal-fiber-app-2.png`, alt: "메탈버너 적용 예시 2" },
+              ].map((img) => (
+                <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
+                  <img src={img.src} alt={img.alt} className="object-cover w-full h-full" />
                 </div>
               ))}
             </div>

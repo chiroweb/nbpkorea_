@@ -246,7 +246,7 @@ function ProductsPageInner() {
       title: t("nav.metalFiberBurner"),
       subtitle: t("burner.metalFiberBurner.subtitle"),
       href: "/products/burner/metal-fiber-burner",
-      image: `${S3}/images/burner/ceramic-burner.jpg`,
+      image: `${S3}/images/burner/metal-fiber-burner-thumb.png`,
       description: t("burner.metalFiberBurner.description"),
       tags: ["세라믹", "메탈섬유", "적외선", "저NOx"],
     },

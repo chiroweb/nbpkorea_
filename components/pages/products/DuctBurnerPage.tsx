@@ -259,6 +259,18 @@ export default function DuctBurnerPage() {
         </div>
       </section>
 
+      {/* 적용 예시 */}
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">적용 예시</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
+              <Image src={`${S3}/images/burner/duct-burner-app-1.jpg`} alt="덕트버너 적용 예시" fill className="object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
