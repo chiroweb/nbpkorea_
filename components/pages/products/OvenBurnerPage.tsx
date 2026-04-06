@@ -128,6 +128,26 @@ export default function OvenBurnerPage() {
         </div>
       </section>
 
+      {/* 적용 예시 */}
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">적용 예시</p>
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+            {[
+              { src: `${S3}/images/burner/oven-burner-app-1.jpg`, alt: "오븐 버너 적용 예시 1" },
+              { src: `${S3}/images/burner/oven-burner-app-2.jpg`, alt: "오븐 버너 적용 예시 2" },
+              { src: `${S3}/images/burner/oven-burner-app-3.jpg`, alt: "오븐 버너 적용 예시 3" },
+              { src: `${S3}/images/burner/oven-burner-app-4.jpg`, alt: "오븐 버너 적용 예시 4" },
+              { src: `${S3}/images/burner/oven-burner-app-5.jpg`, alt: "오븐 버너 적용 예시 5" },
+            ].map((img) => (
+              <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
+                <Image src={img.src} alt={img.alt} fill className="object-cover" />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
