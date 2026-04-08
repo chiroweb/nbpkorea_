@@ -1,12 +1,16 @@
 "use client";
 
-import { useState, useEffect, useCallback } from "react";
+import { useState, useCallback } from "react";
 import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 const images = [
+  {
+    src: `${S3}/images/company/company-main.png`,
+    alt: "NBPKOREA 메인",
+  },
   {
     src: `${S3}/images/company/building-1.jpg`,
     alt: "NBPKOREA 신사옥 전경",
@@ -30,12 +34,7 @@ export default function CompanySection() {
     setCurrent(idx);
   }, []);
 
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 3300);
-    return () => clearInterval(timer);
-  }, []);
+  // Manual navigation only — no auto-rotation
 
   return (
     <section id="company" className="py-32 overflow-hidden" ref={ref}>
