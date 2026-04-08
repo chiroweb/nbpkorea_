@@ -6,7 +6,7 @@ import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import FloatingCaseLink from "@/components/FloatingCaseLink";
 
 
@@ -17,12 +17,25 @@ const specs = [
   { model: "NKCTO-100", airflow: 100, heatInput: "550,000", power: 30, length: "4,000", width: "1,860", height: "2,130" },
 ];
 
+const content = {
+  en: {
+    mechanismLabel: "Catalytic Oxidation\n250~450°C",
+    floatingLabel: "View CTO Case Studies",
+  },
+  ko: {
+    mechanismLabel: "촉매산화\n250~450°C",
+    floatingLabel: "CTO 적용 사례 보러가기",
+  },
+};
+
 export default function NkCtoPage() {
   const [selectedModel, setSelectedModel] = useState<string | null>(null);
   const { ref: heroRef, isInView: heroInView } = useInView({ threshold: 0.1 });
   const { ref: specRef, isInView: specInView } = useInView({ threshold: 0.1 });
   const { ref: appRef, isInView: appInView } = useInView({ threshold: 0.1 });
   const t = useTranslations("products");
+  const locale = useLocale() as "en" | "ko";
+  const c = content[locale] ?? content.ko;
 
   const features = t.raw("environment.nkCto.features") as string[];
   const applications = t.raw("environment.nkCto.applications") as string[];
@@ -38,7 +51,7 @@ export default function NkCtoPage() {
         { label: "NK-CTO", href: "/products/environment/nk-cto" },
       ]}
     >
-      <FloatingCaseLink category="environment" tag="CTO" label="CTO 적용 사례 보러가기" />
+      <FloatingCaseLink category="environment" tag="CTO" label={c.floatingLabel} />
       {/* 공통 제품 네비게이션 */}
       <ProductNav activeTab="environment" activeProduct="nk-cto" />
 
@@ -92,7 +105,7 @@ export default function NkCtoPage() {
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {applications.map((app) => (
               <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=environment`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
-                
+
                 {app}
               </Link>
             ))}
@@ -108,7 +121,7 @@ export default function NkCtoPage() {
             {[
               { label: "VOCs + O₂", bg: "#DCE2E8", text: "#2d2a28" },
               { label: "→", bg: "transparent", text: "#C8D0DA", isArrow: true },
-              { label: "촉매산화\n250~450°C", bg: "#C05010", text: "#fff" },
+              { label: c.mechanismLabel, bg: "#C05010", text: "#fff" },
               { label: "→", bg: "transparent", text: "#C8D0DA", isArrow: true },
               { label: "CO₂ + H₂O", bg: "#E8A060", text: "#fff" },
               { label: "+", bg: "transparent", text: "#C8D0DA", isArrow: true },

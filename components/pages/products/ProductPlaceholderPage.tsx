@@ -3,7 +3,7 @@
 import SubpageLayout from "@/components/SubpageLayout";
 import ProductNav from "@/components/ProductNav";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
@@ -39,6 +39,7 @@ export default function ProductPlaceholderPage({
   ctaDescKey,
 }: ProductPlaceholderPageProps) {
   const t = useTranslations("products");
+  const locale = useLocale() as "en" | "ko";
 
   return (
     <SubpageLayout
@@ -80,7 +81,7 @@ export default function ProductPlaceholderPage({
                 <img src={image} alt={titleKo} className="object-contain w-full h-full" />
               ) : (
                 <div className="text-center">
-                  <p className="text-sm text-[#C8D0DA] tracking-[0.04em]">제품 이미지 준비 중</p>
+                  <p className="text-sm text-[#C8D0DA] tracking-[0.04em]">{t("common.imagePrep")}</p>
                 </div>
               )}
             </div>
@@ -92,11 +93,11 @@ export default function ProductPlaceholderPage({
       <section className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto text-center">
           <p className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] mb-4">Customized Solution</p>
-          <p className="text-base text-[#2d2a28] font-medium mb-2">현장 조건에 맞는 맞춤형 솔루션으로 제공됩니다.</p>
-          <p className="text-sm text-[#5C6470]">문의 주시면 상세한 상담과 견적을 제공해 드리겠습니다.</p>
+          <p className="text-base text-[#2d2a28] font-medium mb-2">{t("common.customSolutionDesc1")}</p>
+          <p className="text-sm text-[#5C6470]">{t("common.customSolutionDesc2")}</p>
           <div className="mt-6">
             <Link href="/support" className="inline-flex items-center gap-2 text-xs tracking-[0.06em] uppercase border border-[#C05010] text-[#C05010] px-6 py-3 hover:bg-[#C05010] hover:text-white transition-all duration-300">
-              상담 문의하기
+              {t("common.consultInquiry")}
               <svg width="10" height="10" viewBox="0 0 12 12" fill="none"><path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/></svg>
             </Link>
           </div>
@@ -116,7 +117,7 @@ export default function ProductPlaceholderPage({
               {t("common.backToList")}
             </Link>
             <Link href="/support?type=catalog" className="text-xs tracking-[0.06em] uppercase border border-[#D4DAE2] px-6 py-3 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-all duration-300">
-              카탈로그 신청
+              {t("common.catalog")}
             </Link>
             <Link href="/support" className="text-xs tracking-[0.06em] uppercase bg-[#C05010] text-white px-6 py-3 hover:bg-[#2d2a28] transition-all duration-300">
               {t("common.contact")}

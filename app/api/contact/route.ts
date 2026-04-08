@@ -1,6 +1,18 @@
 import { NextRequest, NextResponse } from "next/server";
 import nodemailer from "nodemailer";
 
+const REQUIRED_SMTP_ENV_KEYS = [
+  "SMTP_HOST",
+  "SMTP_PORT",
+  "SMTP_USER",
+  "SMTP_PASS",
+  "SMTP_TO",
+] as const;
+
+function getMissingSmtpEnvKeys() {
+  return REQUIRED_SMTP_ENV_KEYS.filter((key) => !process.env[key]?.trim());
+}
+
 export async function POST(req: NextRequest) {
   try {
     const { name, company, email, type, message } = await req.json();
@@ -16,10 +28,35 @@ export async function POST(req: NextRequest) {
       other: "기타 문의",
     };
 
+    const missingEnvKeys = getMissingSmtpEnvKeys();
+    if (missingEnvKeys.length > 0) {
+      console.error("Contact form SMTP env is missing:", missingEnvKeys);
+      return NextResponse.json(
+        {
+          error: "메일 전송 설정이 완료되지 않았습니다.",
+          code: "SMTP_ENV_MISSING",
+          missing: missingEnvKeys,
+        },
+        { status: 500 }
+      );
+    }
+
+    const smtpPort = Number(process.env.SMTP_PORT);
+    if (Number.isNaN(smtpPort)) {
+      console.error("Contact form SMTP_PORT is invalid:", process.env.SMTP_PORT);
+      return NextResponse.json(
+        {
+          error: "메일 전송 설정이 올바르지 않습니다.",
+          code: "SMTP_PORT_INVALID",
+        },
+        { status: 500 }
+      );
+    }
+
     const transporter = nodemailer.createTransport({
       host: process.env.SMTP_HOST,
-      port: Number(process.env.SMTP_PORT),
-      secure: true,
+      port: smtpPort,
+      secure: smtpPort === 465,
       auth: {
         user: process.env.SMTP_USER,
         pass: process.env.SMTP_PASS,
@@ -51,6 +88,12 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ success: true });
   } catch (error) {
     console.error("Contact form error:", error);
-    return NextResponse.json({ error: "메일 전송에 실패했습니다." }, { status: 500 });
+    return NextResponse.json(
+      {
+        error: "메일 전송에 실패했습니다.",
+        code: "SMTP_SEND_FAILED",
+      },
+      { status: 500 }
+    );
   }
 }

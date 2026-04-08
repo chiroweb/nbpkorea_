@@ -1,0 +1,7 @@
+{
+  "tool_name": "Read",
+  "tool_input_preview": "{\"file_path\":\"/Users/choejeong-won/.claude/projects/-Users-choejeong-won-Desktop-AFTER/87770a50-6199-4f04-b7fc-61123711e2bc/tool-results/toolu_015eP64Sqhb5iidW9peCybBc.txt\"}",
+  "error": "File content (48864 tokens) exceeds maximum allowed tokens (10000). Use offset and limit parameters to read specific portions of the file, or search for specific content instead of reading the whole file.",
+  "timestamp": "2026-04-08T00:45:05.618Z",
+  "retry_count": 1
+}
