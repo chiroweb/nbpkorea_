@@ -4,7 +4,8 @@ import nodemailer from "nodemailer";
 const REQUIRED_SMTP_ENV_KEYS = [
   "SMTP_HOST",
   "SMTP_PORT",
-  "SMTP_USER",
+  "SMTP_LOGIN",
+  "SMTP_FROM",
   "SMTP_PASS",
   "SMTP_TO",
 ] as const;
@@ -58,13 +59,13 @@ export async function POST(req: NextRequest) {
       port: smtpPort,
       secure: smtpPort === 465,
       auth: {
-        user: process.env.SMTP_USER,
+        user: process.env.SMTP_LOGIN,
         pass: process.env.SMTP_PASS,
       },
     });
 
     await transporter.sendMail({
-      from: `"NBPKOREA 홈페이지" <${process.env.SMTP_USER}>`,
+      from: `"NBPKOREA 홈페이지" <${process.env.SMTP_FROM}>`,
       to: process.env.SMTP_TO,
       replyTo: email,
       subject: `[홈페이지 문의] ${typeLabels[type] || type} — ${company || "개인"} ${name}`,
