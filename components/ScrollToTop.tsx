@@ -1,8 +1,10 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function ScrollToTop() {
+  const t = useTranslations("common.aria");
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -14,7 +16,7 @@ export default function ScrollToTop() {
   return (
     <button
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-      aria-label="맨 위로 이동"
+      aria-label={t("scrollToTop")}
       className={`fixed bottom-10 right-10 z-50 w-[100px] h-[100px] hidden md:block transition-all duration-500 group ${
         visible
           ? "opacity-100 translate-y-0"

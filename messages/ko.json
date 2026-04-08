@@ -84,7 +84,31 @@
       "technology": "기술/R&D",
       "news": "NBP/NEWS",
       "support": "고객센터",
-      "contact": "문의하기"
+      "contact": "문의하기",
+      "performance": "사업실적",
+      "consultation": "상담신청",
+      "menuAriaLabel": "메뉴",
+      "environment": "환경시스템",
+      "hvac": "공조시스템",
+      "combustion": "연소시스템",
+      "burner": "산업용 버너",
+      "aboutCompany": "회사 소개",
+      "partnershipCert": "파트너십 & 인증",
+      "directions": "오시는길",
+      "cleanroomAhu": "클린룸 공조기",
+      "dryRoomAhu": "드라이룸 공조기",
+      "directAhu": "직화식 공조기",
+      "doorHeater": "도어히터",
+      "dehumidifier": "복합식 제습기",
+      "directGasHeater": "직화식 가스히터",
+      "indirectGasHeater": "간접식 가스히터",
+      "ductBurner": "덕트버너",
+      "packageBurner": "패키지 버너",
+      "furnaceBurner": "로용 버너",
+      "lowNoxBurner": "저녹스 버너",
+      "ovenBurner": "오븐 버너",
+      "metalFiberBurner": "메탈버너",
+      "valveTrain": "밸브트레인/부품류"
     },
     "footer": {
       "access": "Access",
@@ -98,7 +122,17 @@
       "technology": "기술/R&D",
       "supportNav": "고객센터",
       "businessNav": "사업분야",
-      "contactUs": "문의하기"
+      "contactUs": "문의하기",
+      "performance": "사업실적",
+      "news": "NBP NEWS"
+    },
+    "popup": {
+      "close": "닫기",
+      "hideToday": "오늘 하루 보지 않기"
+    },
+    "aria": {
+      "scrollToTop": "맨 위로 이동",
+      "skipIntro": "인트로 건너뛰기"
     }
   },
   "home": {
@@ -156,6 +190,28 @@
       "bmwType": "전자/기계 분야",
       "lgType": "2차전지 분야",
       "poscoType": "중공업/소재 분야"
+    },
+    "businessHighlight": {
+      "sectionTitle": "사업분야",
+      "mainTitle": "연소시스템 & 산업용 버너",
+      "mainDesc": "NBPKOREA의 핵심 사업 분야입니다. 덕트버너, 직화식·간접식 가스히터를 포함한 산업용 연소 시스템을 설계·제조하며, MIDCO International(미국)과의 기술 제휴를 바탕으로 NOx 저배출·고효율 연소 솔루션을 제공합니다.",
+      "learnMore": "자세히 보기",
+      "viewAll": "전체 사업분야 보기",
+      "environment": {
+        "title": "환경시스템",
+        "keywords": "RTO · RCO · CTO · TO",
+        "desc": "유해가스·악취를 고온 산화 방식으로 처리하는 산업용 환경시스템을 설계·제조합니다."
+      },
+      "hvac": {
+        "title": "공조시스템",
+        "keywords": "클린룸 · 드라이룸 · 직화식 공조",
+        "desc": "반도체·2차전지 등 정밀 산업에 필요한 클린룸·드라이룸 공조 시스템을 제공합니다."
+      },
+      "burner": {
+        "title": "산업용 버너",
+        "keywords": "덕트 · 패키지 · 메탈 · 오븐",
+        "desc": "덕트버너, 패키지 버너, 메탈파이버 등 다양한 산업용 버너 라인업을 갖추고 있습니다."
+      }
     },
     "contact": {
       "title": "문의하기",
@@ -740,7 +796,15 @@
   "performance": {
     "title": "BUSINESS PERFORMANCE",
     "subtitle": "NBPKOREA의 주요 사업실적 및 프로젝트 납품 현황",
-    "comingSoon": "사업실적 페이지 준비 중입니다."
+    "comingSoon": "사업실적 페이지 준비 중입니다.",
+    "tabs": {
+      "environment": "환경시스템",
+      "hvac": "공조시스템",
+      "combustion": "연소시스템",
+      "burner": "산업용 버너"
+    },
+    "emptyTag": "\"{tag}\" 태그에 해당하는 실적이 없습니다.",
+    "emptyDefault": "등록된 사업실적이 없습니다."
   },
   "support": {
     "title": "CUSTOMER SUPPORT",

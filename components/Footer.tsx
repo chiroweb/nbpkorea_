@@ -112,8 +112,8 @@ export default function Footer() {
     { label: t("about"), href: "/about" },
     { label: t("businessNav"), href: "/business" },
     { label: t("products"), href: "/products" },
-    { label: "사업실적", href: "/performance" },
-    { label: "NBP NEWS", href: "/news" },
+    { label: t("performance"), href: "/performance" },
+    { label: t("news"), href: "/news" },
     { label: t("supportNav"), href: "/support" },
   ];
 

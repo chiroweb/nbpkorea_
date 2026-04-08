@@ -3,10 +3,12 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { Popup } from "@/lib/types";
+import { useTranslations } from "next-intl";
 
 const STORAGE_KEY = "popup_hidden_until";
 
 export default function PopupModal() {
+  const t = useTranslations("common.popup");
   const [popups, setPopups] = useState<Popup[]>([]);
   const [visible, setVisible] = useState(false);
   const [current, setCurrent] = useState(0);
@@ -60,7 +62,7 @@ export default function PopupModal() {
         <button
           onClick={close}
           className="absolute top-3 right-3 z-20 w-8 h-8 flex items-center justify-center bg-black/30 hover:bg-black/50 text-white transition-colors"
-          aria-label="닫기"
+          aria-label={t("close")}
         >
           ×
         </button>
@@ -99,13 +101,13 @@ export default function PopupModal() {
             onClick={hideToday}
             className="text-xs text-[#5C6470] hover:text-[#2d2a28] tracking-wide transition-colors"
           >
-            오늘 하루 보지 않기
+            {t("hideToday")}
           </button>
           <button
             onClick={close}
             className="text-xs text-[#2d2a28] hover:text-[#C05010] tracking-wide transition-colors"
           >
-            닫기
+            {t("close")}
           </button>
         </div>
       </div>

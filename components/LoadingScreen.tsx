@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef, useCallback } from "react";
+import { useTranslations } from "next-intl";
 
 const VIDEO_SRC = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/videos/intro-logo.mp4";
 const MIN_TOTAL_MS = 3000;
@@ -11,6 +12,7 @@ interface LoadingScreenProps {
 }
 
 export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
+  const t = useTranslations("common.aria");
   const [isExiting, setIsExiting] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const pageReadyRef = useRef(false);
@@ -101,7 +103,7 @@ export default function LoadingScreen({ onComplete }: LoadingScreenProps) {
       {/* Skip button */}
       <button
         onClick={handleSkip}
-        aria-label="인트로 건너뛰기"
+        aria-label={t("skipIntro")}
         className="absolute bottom-10 right-10 z-50 w-[100px] h-[100px] group hover:opacity-70 transition-opacity duration-300"
       >
         <svg viewBox="0 0 100 100" className="absolute inset-0 w-full h-full animate-spin-slow">

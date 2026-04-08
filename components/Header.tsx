@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { useTranslations } from "next-intl";
 
 const SOCIAL_LINKS = [
   {
@@ -46,102 +47,103 @@ const SOCIAL_LINKS = [
   },
 ];
 
-const navData = [
-  {
-    key: "about",
-    label: "회사소개",
-    href: "/about",
-    children: [
-      { label: "회사 소개", href: "/about?tab=about" },
-      { label: "파트너십 & 인증", href: "/about?tab=partnership" },
-      { label: "오시는길", href: "/about?tab=directions" },
-    ],
-  },
-  {
-    key: "business",
-    label: "사업분야",
-    href: "/business",
-    children: [
-      { label: "환경시스템", href: "/business/environment" },
-      { label: "공조시스템", href: "/business/hvac" },
-      { label: "연소시스템", href: "/business/combustion" },
-      { label: "산업용 버너", href: "/business/burner" },
-    ],
-  },
-  {
-    key: "products",
-    label: "제품/솔루션",
-    href: "/products",
-    groups: [
-      {
-        label: "환경시스템",
-        href: "/products/environment",
-        items: [
-          { label: "NK-RTO", href: "/products/environment/nk-rto" },
-          { label: "NK-RCO", href: "/products/environment/nk-rco" },
-          { label: "NK-CTO", href: "/products/environment/nk-cto" },
-          { label: "NK-TO", href: "/products/environment/nk-to" },
-        ],
-      },
-      {
-        label: "공조시스템",
-        href: "/products/hvac",
-        items: [
-          { label: "클린룸 공조기", href: "/products/hvac/cleanroom" },
-          { label: "드라이룸 공조기", href: "/products/hvac/dry-room" },
-          { label: "직화식 공조기", href: "/products/hvac/direct-ahu" },
-          { label: "도어히터", href: "/products/hvac/door-heater" },
-          { label: "복합식 제습기", href: "/products/hvac/dehumidifier" },
-        ],
-      },
-      {
-        label: "연소시스템",
-        href: "/products/combustion",
-        items: [
-          { label: "직화식 가스히터", href: "/products/combustion/nkgh" },
-          { label: "간접식 가스히터", href: "/products/combustion/nk-idgh" },
-        ],
-      },
-      {
-        label: "산업용 버너",
-        href: "/products/burner",
-        items: [
-          { label: "덕트버너", href: "/products/burner/duct-burner" },
-          { label: "패키지 버너", href: "/products/burner/fpb-burner" },
-          { label: "로용 버너", href: "/products/burner/furnace-burner" },
-          { label: "저녹스 버너", href: "/products/burner/low-nox-burner" },
-          { label: "오븐 버너", href: "/products/burner/oven-burner" },
-          { label: "메탈버너", href: "/products/burner/metal-fiber-burner" },
-          { label: "밸브트레인/부품류", href: "/products/burner/valve-train" },
-        ],
-      },
-    ],
-  },
-  {
-    key: "performance",
-    label: "사업실적",
-    href: "/performance",
-    children: [],
-  },
-  {
-    key: "news",
-    label: "NBP NEWS",
-    href: "/news",
-    children: [],
-  },
-  {
-    key: "support",
-    label: "고객센터",
-    href: "/support",
-    children: [],
-  },
-];
-
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);   // mobile
-  const [megaOpen, setMegaOpen] = useState(false);       // desktop mega
+  const t = useTranslations("common.nav");
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [megaOpen, setMegaOpen] = useState(false);
   const [activeKey, setActiveKey] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout>>();
+
+  const navData = [
+    {
+      key: "about",
+      label: t("about"),
+      href: "/about",
+      children: [
+        { label: t("aboutCompany"), href: "/about?tab=about" },
+        { label: t("partnershipCert"), href: "/about?tab=partnership" },
+        { label: t("directions"), href: "/about?tab=directions" },
+      ],
+    },
+    {
+      key: "business",
+      label: t("business"),
+      href: "/business",
+      children: [
+        { label: t("environment"), href: "/business/environment" },
+        { label: t("hvac"), href: "/business/hvac" },
+        { label: t("combustion"), href: "/business/combustion" },
+        { label: t("burner"), href: "/business/burner" },
+      ],
+    },
+    {
+      key: "products",
+      label: t("products"),
+      href: "/products",
+      groups: [
+        {
+          label: t("environment"),
+          href: "/products/environment",
+          items: [
+            { label: "NK-RTO", href: "/products/environment/nk-rto" },
+            { label: "NK-RCO", href: "/products/environment/nk-rco" },
+            { label: "NK-CTO", href: "/products/environment/nk-cto" },
+            { label: "NK-TO", href: "/products/environment/nk-to" },
+          ],
+        },
+        {
+          label: t("hvac"),
+          href: "/products/hvac",
+          items: [
+            { label: t("cleanroomAhu"), href: "/products/hvac/cleanroom" },
+            { label: t("dryRoomAhu"), href: "/products/hvac/dry-room" },
+            { label: t("directAhu"), href: "/products/hvac/direct-ahu" },
+            { label: t("doorHeater"), href: "/products/hvac/door-heater" },
+            { label: t("dehumidifier"), href: "/products/hvac/dehumidifier" },
+          ],
+        },
+        {
+          label: t("combustion"),
+          href: "/products/combustion",
+          items: [
+            { label: t("directGasHeater"), href: "/products/combustion/nkgh" },
+            { label: t("indirectGasHeater"), href: "/products/combustion/nk-idgh" },
+          ],
+        },
+        {
+          label: t("burner"),
+          href: "/products/burner",
+          items: [
+            { label: t("ductBurner"), href: "/products/burner/duct-burner" },
+            { label: t("packageBurner"), href: "/products/burner/fpb-burner" },
+            { label: t("furnaceBurner"), href: "/products/burner/furnace-burner" },
+            { label: t("lowNoxBurner"), href: "/products/burner/low-nox-burner" },
+            { label: t("ovenBurner"), href: "/products/burner/oven-burner" },
+            { label: t("metalFiberBurner"), href: "/products/burner/metal-fiber-burner" },
+            { label: t("valveTrain"), href: "/products/burner/valve-train" },
+          ],
+        },
+      ],
+    },
+    {
+      key: "performance",
+      label: t("performance"),
+      href: "/performance",
+      children: [],
+    },
+    {
+      key: "news",
+      label: "NBP NEWS",
+      href: "/news",
+      children: [],
+    },
+    {
+      key: "support",
+      label: t("support"),
+      href: "/support",
+      children: [],
+    },
+  ];
 
   const handleNavEnter = (key: string) => {
     clearTimeout(closeTimer.current);
@@ -242,7 +244,7 @@ export default function Header() {
                 href="/support"
                 className="flex items-center gap-2 text-[12px] tracking-[0.15em] uppercase border border-[#C05010] text-white px-4 py-2 hover:bg-[#C05010] transition-all duration-200"
               >
-                상담신청
+                {t("consultation")}
                 <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
                   <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1.2" />
                 </svg>
@@ -253,7 +255,7 @@ export default function Header() {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="lg:hidden flex flex-col gap-1.5 p-2"
-              aria-label="메뉴"
+              aria-label={t("menuAriaLabel")}
             >
               <span className={`w-6 h-px bg-white transition-transform duration-300 ${isMenuOpen ? "rotate-45 translate-y-2" : ""}`} />
               <span className={`w-6 h-px bg-white transition-opacity duration-300 ${isMenuOpen ? "opacity-0" : ""}`} />
@@ -274,13 +276,13 @@ export default function Header() {
           <div className="px-12 py-10 max-w-7xl mx-auto">
             <div className="grid grid-cols-7 gap-5">
 
-              {/* 회사소개 */}
+              {/* About */}
               <div>
                 <Link
                   href="/about"
                   className="block text-[15px] tracking-[0.04em] text-[#C05010] font-bold mb-5 pb-2.5 border-b-2 border-[#C05010] hover:border-b-[3px] transition-all duration-200"
                 >
-                  회사소개
+                  {t("about")}
                 </Link>
                 <ul className="space-y-2">
                   {navData[0].children!.map((child) => (
@@ -297,13 +299,13 @@ export default function Header() {
                 </ul>
               </div>
 
-              {/* 사업분야 */}
+              {/* Business */}
               <div>
                 <Link
                   href="/business"
                   className="block text-[15px] tracking-[0.04em] text-[#C05010] font-bold mb-5 pb-2.5 border-b-2 border-[#C05010] hover:border-b-[3px] transition-all duration-200"
                 >
-                  사업분야
+                  {t("business")}
                 </Link>
                 <ul className="space-y-2">
                   {navData[1].children!.map((child) => (
@@ -320,13 +322,13 @@ export default function Header() {
                 </ul>
               </div>
 
-              {/* 제품/솔루션 — 4컬럼 span */}
+              {/* Products — 4-column span */}
               <div className="col-span-4">
                 <Link
                   href="/products"
                   className="block text-[15px] tracking-[0.04em] text-[#C05010] font-bold mb-5 pb-2.5 border-b-2 border-[#C05010] hover:border-b-[3px] transition-all duration-200"
                 >
-                  제품/솔루션
+                  {t("products")}
                 </Link>
                 <div className="grid grid-cols-4 gap-6">
                   {navData[2].groups!.map((group) => (
@@ -354,13 +356,13 @@ export default function Header() {
                 </div>
               </div>
 
-              {/* NEWS · 사업실적 · 고객센터 */}
+              {/* Performance · NEWS · Support */}
               <div>
                 <div className="space-y-6">
                   {[
-                    { label: "사업실적", href: "/performance" },
+                    { label: t("performance"), href: "/performance" },
                     { label: "NBP NEWS", href: "/news" },
-                    { label: "고객센터", href: "/support" },
+                    { label: t("support"), href: "/support" },
                   ].map((item) => (
                     <div key={item.label}>
                       <Link
@@ -447,7 +449,7 @@ export default function Header() {
                 onClick={() => setIsMenuOpen(false)}
                 className="text-[12px] tracking-[0.15em] uppercase border border-[#C05010] text-white px-4 py-2 hover:bg-[#C05010] transition-all duration-200"
               >
-                상담신청
+                {t("consultation")}
               </Link>
             </div>
           </nav>

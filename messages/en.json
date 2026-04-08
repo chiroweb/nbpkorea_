@@ -84,7 +84,31 @@
       "technology": "Technology",
       "news": "NBP/NEWS",
       "support": "Support",
-      "contact": "Contact Us"
+      "contact": "Contact Us",
+      "performance": "Performance",
+      "consultation": "Consultation",
+      "menuAriaLabel": "Menu",
+      "environment": "Environmental Systems",
+      "hvac": "HVAC Systems",
+      "combustion": "Combustion Systems",
+      "burner": "Industrial Burners",
+      "aboutCompany": "About Us",
+      "partnershipCert": "Partnership & Certification",
+      "directions": "Directions",
+      "cleanroomAhu": "Cleanroom AHU",
+      "dryRoomAhu": "Dry Room AHU",
+      "directAhu": "Direct-Fired AHU",
+      "doorHeater": "Door Heater",
+      "dehumidifier": "Hybrid Dehumidifier",
+      "directGasHeater": "Direct-Fired Gas Heater",
+      "indirectGasHeater": "Indirect Gas Heater",
+      "ductBurner": "Duct Burner",
+      "packageBurner": "Package Burner",
+      "furnaceBurner": "Furnace Burner",
+      "lowNoxBurner": "Low-NOx Burner",
+      "ovenBurner": "Oven Burner",
+      "metalFiberBurner": "Metal Fiber Burner",
+      "valveTrain": "Valve Train & Parts"
     },
     "footer": {
       "access": "Access",
@@ -98,7 +122,17 @@
       "technology": "Technology",
       "supportNav": "Support",
       "businessNav": "Business",
-      "contactUs": "Contact Us"
+      "contactUs": "Contact Us",
+      "performance": "Performance",
+      "news": "NBP NEWS"
+    },
+    "popup": {
+      "close": "Close",
+      "hideToday": "Don't show today"
+    },
+    "aria": {
+      "scrollToTop": "Scroll to top",
+      "skipIntro": "Skip intro"
     }
   },
   "home": {
@@ -156,6 +190,28 @@
       "bmwType": "Electronics & Machinery",
       "lgType": "Battery & Energy",
       "poscoType": "Heavy Industry & Materials"
+    },
+    "businessHighlight": {
+      "sectionTitle": "Business Areas",
+      "mainTitle": "Combustion Systems & Industrial Burners",
+      "mainDesc": "NBPKOREA's core business area. We design and manufacture industrial combustion systems including duct burners, direct-fired and indirect gas heaters, delivering low-NOx, high-efficiency combustion solutions through our technology alliance with MIDCO International (USA).",
+      "learnMore": "Learn More",
+      "viewAll": "View All Business Areas",
+      "environment": {
+        "title": "Environmental Systems",
+        "keywords": "RTO · RCO · CTO · TO",
+        "desc": "We design and manufacture industrial environmental systems that treat hazardous gases and odors through high-temperature oxidation."
+      },
+      "hvac": {
+        "title": "HVAC Systems",
+        "keywords": "Cleanroom · Dry Room · Direct-Fired AHU",
+        "desc": "We provide cleanroom and dry room HVAC systems for precision industries such as semiconductors and secondary batteries."
+      },
+      "burner": {
+        "title": "Industrial Burners",
+        "keywords": "Duct · Package · Metal · Oven",
+        "desc": "We offer a diverse lineup of industrial burners including duct burners, package burners, and metal fiber burners."
+      }
     },
     "contact": {
       "title": "Contact Us",
@@ -759,7 +815,15 @@
   "performance": {
     "title": "BUSINESS PERFORMANCE",
     "subtitle": "Key business achievements and project delivery records of NBPKOREA",
-    "comingSoon": "Business performance page is under preparation."
+    "comingSoon": "Business performance page is under preparation.",
+    "tabs": {
+      "environment": "Environmental",
+      "hvac": "HVAC",
+      "combustion": "Combustion",
+      "burner": "Industrial Burners"
+    },
+    "emptyTag": "No results for tag \"{tag}\".",
+    "emptyDefault": "No business performance records found."
   },
   "support": {
     "title": "CUSTOMER SUPPORT",

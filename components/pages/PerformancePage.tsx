@@ -7,12 +7,7 @@ import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { Performance } from "@/lib/types";
 
-const TABS = [
-  { id: "environment", label: "환경시스템", en: "Environmental" },
-  { id: "hvac", label: "공조시스템", en: "HVAC" },
-  { id: "combustion", label: "연소시스템", en: "Combustion" },
-  { id: "burner", label: "산업용 버너", en: "Industrial Burners" },
-];
+const TAB_IDS = ["environment", "hvac", "combustion", "burner"] as const;
 
 function parseImageUrl(url: string): { src: string; rotate: number } {
   const match = url.match(/#rotate=(\d+)/);
@@ -154,9 +149,9 @@ function PerformancePageInner() {
     const tagParam = searchParams.get("tag");
     const tabParam = searchParams.get("tab");
     const catParam = searchParams.get("cat");
-    if (catParam && TABS.some((t) => t.id === catParam)) {
+    if (catParam && TAB_IDS.includes(catParam as typeof TAB_IDS[number])) {
       setActiveTab(catParam);
-    } else if (tabParam && TABS.some((t) => t.id === tabParam)) {
+    } else if (tabParam && TAB_IDS.includes(tabParam as typeof TAB_IDS[number])) {
       setActiveTab(tabParam);
     }
     if (tagParam) {
@@ -218,17 +213,17 @@ function PerformancePageInner() {
       <div className="border-b border-[#D4DAE2] bg-[#F5F7F8]">
         <div className="max-w-7xl mx-auto px-6 md:px-12">
           <div className="flex gap-0 pt-6">
-            {TABS.map((tab) => (
+            {TAB_IDS.map((id) => (
               <button
-                key={tab.id}
-                onClick={() => handleTabChange(tab.id)}
+                key={id}
+                onClick={() => handleTabChange(id)}
                 className={`px-6 md:px-8 py-3.5 text-xs tracking-[0.06em] uppercase border-b-2 transition-all duration-200 ${
-                  activeTab === tab.id
+                  activeTab === id
                     ? "border-[#C05010] text-[#C05010] font-medium"
                     : "border-transparent text-[#5C6470] hover:text-[#C05010]"
                 }`}
               >
-                {tab.label}
+                {t(`tabs.${id}`)}
               </button>
             ))}
           </div>
@@ -240,7 +235,7 @@ function PerformancePageInner() {
         <div className="max-w-7xl mx-auto px-6 md:px-12 py-4">
           <div className="flex items-center gap-4">
             <h2 className="text-lg md:text-xl tracking-[0.08em] font-bold text-[#2d2a28] flex-shrink-0">
-              {TABS.find((t) => t.id === activeTab)?.label} 분야
+              {t(`tabs.${activeTab}`)}
             </h2>
 
             {/* Tag dropdown */}
@@ -316,7 +311,7 @@ function PerformancePageInner() {
             <p className="text-sm text-[#5C6470] text-center py-20">로딩 중...</p>
           ) : filtered.length === 0 ? (
             <p className="text-sm text-[#5C6470] text-center py-20">
-              {activeTag ? `"${activeTag}" 태그에 해당하는 실적이 없습니다.` : "등록된 사업실적이 없습니다."}
+              {activeTag ? t("emptyTag", { tag: activeTag }) : t("emptyDefault")}
             </p>
           ) : (
             <div className="space-y-6">
