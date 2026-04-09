@@ -145,7 +145,7 @@ export default function NkRtoPage() {
                 fill
                 className="object-cover"
                 priority
-              />
+               unoptimized />
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@ export default function NkRtoPage() {
                 width={816}
                 height={600}
                 className="h-auto w-full"
-              />
+               unoptimized />
             </div>
           </div>
         </div>

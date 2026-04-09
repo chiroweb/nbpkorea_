@@ -26,9 +26,9 @@ const industries = [
   { name: "도장 건조", desc: "자동차·조선 도장 부스 열풍 공급", clients: "BMW, Mercedes-Benz, 현대중공업", image: `${S3}/assets/industry2.png`, tag: "도장" },
   { name: "산업용 건조", desc: "농수산물, 목재, 섬유, 인쇄 건조 라인", clients: "다수 산업 현장", image: `${S3}/assets/industry1.png`, tag: "건조" },
   { name: "열처리/소각", desc: "산업용 열처리로, 소각로, 보일러", clients: "POSCO, 동국제강", image: `${S3}/assets/industry3.png`, tag: "열처리" },
-  { name: "식품 가공", desc: "식품 건조, 로스팅, 오븐 가열", clients: "농협목우촌, 이디야커피", image: `${S3}/images/into3.jpg`, tag: "식품" },
-  { name: "에너지/플랜트", desc: "발전소, 석유화학 플랜트 열원", clients: "에너지 주요 기업", image: `${S3}/images/company/building-1.jpg`, tag: "에너지" },
-  { name: "반도체/클린룸", desc: "클린룸 보조 열원, 공정 가열", clients: "반도체 주요 제조사", image: `${S3}/images/intro2.jpg`, tag: "반도체" },
+  { name: "식품 가공", desc: "식품 건조, 로스팅, 오븐 가열", clients: "농협목우촌, 이디야커피", image: `/images/industry-food.png`, tag: "식품" },
+  { name: "에너지/플랜트", desc: "발전소, 석유화학 플랜트 열원", clients: "에너지 주요 기업", image: `/images/industry-energy-plant.png`, tag: "에너지" },
+  { name: "반도체/클린룸", desc: "클린룸 보조 열원, 공정 가열", clients: "반도체 주요 제조사", image: `/images/industry-semiconductor.png`, tag: "반도체" },
 ];
 
 const techFeatures = [
@@ -66,7 +66,7 @@ export default function BurnerBusinessPage() {
       {/* 1. 히어로 */}
       <section ref={heroRef} className="relative overflow-hidden">
         <div className="relative aspect-[21/9] md:aspect-[21/7] w-full bg-[#1a1a1a]">
-          <Image src={`${S3}/images/burner/duct-burner-hero.jpg`} alt="NBPKOREA 산업용 버너" fill className="object-cover opacity-60" priority />
+          <Image src={`${S3}/images/burner/duct-burner-hero.jpg`} alt="NBPKOREA 산업용 버너" fill className="object-cover opacity-60" priority  unoptimized />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/90 via-[#1a1a1a]/50 to-transparent" />
           <div className={`absolute inset-0 flex flex-col justify-center px-6 md:px-12 lg:px-20 max-w-4xl transition-all duration-1000 ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <span className="text-xs tracking-[0.1em] uppercase text-[#C05010] mb-3">Industrial Burners</span>
@@ -129,7 +129,7 @@ export default function BurnerBusinessPage() {
             {products.map((product, index) => (
               <Link href={product.href} key={product.title} className={`group block transition-all duration-700 ${productInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#FAFAFA] border border-[#D4DAE2] group-hover:border-[#C05010]/50 transition-colors duration-300">
-                  <Image src={product.image} alt={product.title} fill className="object-contain group-hover:scale-105 transition-transform duration-700" />
+                  <Image src={product.image} alt={product.title} fill className="object-contain group-hover:scale-105 transition-transform duration-700"  unoptimized />
                   {product.badge && <span className="absolute top-3 left-3 bg-[#C05010] text-white text-xs px-3 py-1 tracking-[0.04em]">{product.badge}</span>}
                 </div>
                 <div className="mt-4">
@@ -153,7 +153,7 @@ export default function BurnerBusinessPage() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {industries.map((item, index) => (
               <Link href={`/performance?tag=${encodeURIComponent(item.tag)}&cat=burner`} key={item.name} className={`group relative block aspect-[4/3] overflow-hidden transition-all duration-700 ${industryInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: `${index * 80}ms` }}>
-                <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700"  unoptimized />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/70 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5"><h3 className="text-lg font-bold text-white">{item.name}</h3></div>
                 <div className="absolute inset-0 bg-[#2d2a28]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center p-6">
@@ -213,7 +213,7 @@ export default function BurnerBusinessPage() {
             {partners.map((partner, index) => (
               <a key={partner.name} href={partner.href} target="_blank" rel="noopener noreferrer" className={`group border border-[#D4DAE2] bg-white hover:border-[#C05010]/30 transition-all duration-700 ${partnerInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: `${index * 150}ms` }}>
                 <div className="relative h-32 md:h-40 bg-[#F8F9FB] flex items-center justify-center p-8 border-b border-[#D4DAE2]">
-                  <Image src={partner.logo} alt={partner.name} width={200} height={80} className="object-contain max-h-16 md:max-h-20 group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={partner.logo} alt={partner.name} width={200} height={80} className="object-contain max-h-16 md:max-h-20 group-hover:scale-105 transition-transform duration-500"  unoptimized />
                 </div>
                 <div className="p-6 md:p-8">
                   <div className="flex items-center gap-3 mb-4">

@@ -177,7 +177,7 @@ export default function MetalFiberBurnerPage() {
                   fill
                   className="object-cover"
                   priority
-                />
+                 unoptimized />
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@ export default function MetalFiberBurnerPage() {
                       alt={product.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                     unoptimized />
                   </div>
                   <div className="p-6">
                     <h3 className="text-base font-medium text-[#2d2a28] tracking-[0.05em] mb-1">
@@ -279,7 +279,7 @@ export default function MetalFiberBurnerPage() {
             <div className="grid md:grid-cols-2 gap-6">
               {c.appImages.map((img) => (
                 <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
-                  <Image src={img.src} alt={img.alt} fill className="object-cover" />
+                  <Image src={img.src} alt={img.alt} fill className="object-cover"  unoptimized />
                 </div>
               ))}
             </div>

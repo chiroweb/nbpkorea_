@@ -201,7 +201,7 @@ export default function DuctBurnerPage() {
               <Image
                 src={`${S3}/images/burner/duct-burner-hero.jpg`}
                 alt={c.imgAlt}
-                fill className="object-cover object-center" priority
+                fill className="object-cover object-center" priority unoptimized
               />
             </div>
           </div>
@@ -272,6 +272,7 @@ export default function DuctBurnerPage() {
                     alt={`${c.sizeAltPrefix} ${item.label}`}
                     fill
                     className="object-contain p-4"
+                    unoptimized
                   />
                 </div>
                 <div className="px-3 py-2 border-t border-[#E8ECF0]">
@@ -341,7 +342,7 @@ export default function DuctBurnerPage() {
           <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.applicationExamples")}</p>
           <div className="grid md:grid-cols-2 gap-6">
             <div className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
-              <Image src={`${S3}/images/burner/duct-burner-app-1.jpg`} alt={c.appExampleAlt} fill className="object-cover" />
+              <Image src={`${S3}/images/burner/duct-burner-app-1.jpg`} alt={c.appExampleAlt} fill className="object-cover" unoptimized />
             </div>
           </div>
         </div>

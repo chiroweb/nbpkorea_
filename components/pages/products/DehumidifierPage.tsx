@@ -177,7 +177,7 @@ export default function DehumidifierPage() {
                 src={`${S3}/images/humidremover.jpg`}
                 alt={c.imgAlt}
                 fill className="object-cover" priority
-              />
+               unoptimized />
             </div>
           </div>
         </div>

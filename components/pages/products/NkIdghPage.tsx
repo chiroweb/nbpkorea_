@@ -178,7 +178,7 @@ export default function NkIdghPage() {
                 src={`${S3}/images/combustion/indirect-heater-thumb.png`}
                 alt={c.imgAlt}
                 fill className="object-cover" priority
-              />
+               unoptimized />
             </div>
           </div>
         </div>

@@ -173,7 +173,7 @@ export default function PortableBurnerPage() {
                 src={`${S3}/images/burner/metal-burner2.png`}
                 alt={c.imgAlt}
                 fill className="object-contain p-4" priority
-              />
+               unoptimized />
             </div>
           </div>
         </div>

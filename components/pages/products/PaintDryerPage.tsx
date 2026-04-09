@@ -178,7 +178,7 @@ export default function PaintDryerPage() {
                 src={`${S3}/images/forcar.png`}
                 alt={c.imgAlt}
                 fill className="object-cover" priority
-              />
+               unoptimized />
             </div>
           </div>
         </div>

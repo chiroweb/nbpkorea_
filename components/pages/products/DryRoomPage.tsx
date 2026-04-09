@@ -195,7 +195,7 @@ export default function DryRoomPage() {
                 fill
                 className="object-cover"
                 priority
-              />
+               unoptimized />
             </div>
           </div>
         </div>

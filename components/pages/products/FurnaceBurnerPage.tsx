@@ -156,7 +156,7 @@ export default function FurnaceBurnerPage() {
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
-              <Image src={`${S3}/images/burner/furnace-burner-main.jpg`} alt={c.imgAlt} fill className="object-cover" priority />
+              <Image src={`${S3}/images/burner/furnace-burner-main.jpg`} alt={c.imgAlt} fill className="object-cover" priority unoptimized />
             </div>
           </div>
         </div>
@@ -255,7 +255,7 @@ export default function FurnaceBurnerPage() {
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
             {c.appImages.map((img) => (
               <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
-                <Image src={img.src} alt={img.alt} fill className="object-cover" />
+                <Image src={img.src} alt={img.alt} fill className="object-cover" unoptimized />
               </div>
             ))}
           </div>

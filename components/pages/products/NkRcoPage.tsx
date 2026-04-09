@@ -144,7 +144,7 @@ export default function NkRcoPage() {
                 fill
                 className="object-cover"
                 priority
-              />
+               unoptimized />
             </div>
           </div>
         </div>
@@ -201,7 +201,7 @@ export default function NkRcoPage() {
                 width={816}
                 height={600}
                 className="h-auto w-full"
-              />
+               unoptimized />
             </div>
           </div>
         </div>

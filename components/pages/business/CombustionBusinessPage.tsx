@@ -139,7 +139,7 @@ function IndustryCard({ item, index }: { item: (typeof industries)[0]; index: nu
         alt={item.name}
         fill
         className="object-cover group-hover:scale-110 transition-transform duration-700"
-      />
+       unoptimized />
 
       {/* 기본: 하단 그라데이션 + 제목 */}
       <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/70 via-transparent to-transparent" />
@@ -191,7 +191,7 @@ export default function CombustionBusinessPage() {
             fill
             className="object-cover opacity-60"
             priority
-          />
+           unoptimized />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/90 via-[#1a1a1a]/50 to-transparent" />
           <div
             className={`absolute inset-0 flex flex-col justify-center px-6 md:px-12 lg:px-20 max-w-4xl transition-all duration-1000 ${
@@ -300,7 +300,7 @@ export default function CombustionBusinessPage() {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#FAFAFA] border border-[#D4DAE2] group-hover:border-[#C05010]/50 transition-colors duration-300">
-                  <Image src={product.image} alt={product.title} fill className="object-contain group-hover:scale-105 transition-transform duration-700" />
+                  <Image src={product.image} alt={product.title} fill className="object-contain group-hover:scale-105 transition-transform duration-700"  unoptimized />
                 </div>
                 <div className="mt-4">
                   <span className="text-xs tracking-[0.06em] uppercase text-[#5C6470]">{product.subtitle}</span>
@@ -437,7 +437,7 @@ export default function CombustionBusinessPage() {
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
                 <div className="relative h-32 md:h-40 bg-[#F8F9FB] flex items-center justify-center p-8 border-b border-[#D4DAE2]">
-                  <Image src={partner.logo} alt={partner.name} width={200} height={80} className="object-contain max-h-16 md:max-h-20 group-hover:scale-105 transition-transform duration-500" />
+                  <Image src={partner.logo} alt={partner.name} width={200} height={80} className="object-contain max-h-16 md:max-h-20 group-hover:scale-105 transition-transform duration-500"  unoptimized />
                 </div>
                 <div className="p-6 md:p-8">
                   <div className="flex items-center gap-3 mb-4">

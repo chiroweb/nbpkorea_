@@ -22,11 +22,11 @@ const coreValues = [
 ];
 
 const industries = [
-  { name: "반도체/디스플레이", desc: "클린룸 공조, FAB 온습도 관리", clients: "반도체 주요 제조사", image: `${S3}/images/intro2.jpg`, tag: "반도체" },
+  { name: "반도체/디스플레이", desc: "클린룸 공조, FAB 온습도 관리", clients: "반도체 주요 제조사", image: `/images/industry-semiconductor.png`, tag: "반도체" },
   { name: "2차전지", desc: "드라이룸 극저습 환경 구현", clients: "2차전지 주요 제조사", image: `${S3}/assets/industry3.png`, tag: "2차전지" },
-  { name: "제약/바이오", desc: "GMP 환경 공조, 클린룸 구축", clients: "제약·바이오 기업", image: `${S3}/images/into3.jpg`, tag: "제약" },
+  { name: "제약/바이오", desc: "GMP 환경 공조, 클린룸 구축", clients: "제약·바이오 기업", image: `/images/industry-food.png`, tag: "제약" },
   { name: "자동차", desc: "도장 부스 공조, 건조 라인 온도 관리", clients: "BMW, Mercedes-Benz, KIA", image: `${S3}/assets/industry2.png`, tag: "자동차" },
-  { name: "식품가공", desc: "식품 공장 온습도 관리, 건조 공정", clients: "농협목우촌, 이디야커피", image: `${S3}/images/company/building-1.jpg`, tag: "식품" },
+  { name: "식품가공", desc: "식품 공장 온습도 관리, 건조 공정", clients: "농협목우촌, 이디야커피", image: `/images/industry-food.png`, tag: "식품" },
   { name: "조선/해양", desc: "선박 블록 제습, 도장 공정 공조", clients: "한화오션, 현대중공업", image: `${S3}/assets/industry1.png`, tag: "조선" },
 ];
 
@@ -59,7 +59,7 @@ export default function HvacBusinessPage() {
       {/* 1. 히어로 */}
       <section ref={heroRef} className="relative overflow-hidden">
         <div className="relative aspect-[21/9] md:aspect-[21/7] w-full bg-[#1a1a1a]">
-          <Image src={`${S3}/images/hvac/hvac-main.png`} alt="NBPKOREA 공조시스템" fill className="object-cover opacity-60" priority />
+          <Image src={`${S3}/images/hvac/hvac-main.png`} alt="NBPKOREA 공조시스템" fill className="object-cover opacity-60" priority  unoptimized />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/90 via-[#1a1a1a]/50 to-transparent" />
           <div className={`absolute inset-0 flex flex-col justify-center px-6 md:px-12 lg:px-20 max-w-4xl transition-all duration-1000 ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <span className="text-xs tracking-[0.1em] uppercase text-[#C05010] mb-3">HVAC Systems</span>
@@ -145,7 +145,7 @@ export default function HvacBusinessPage() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {industries.map((item, index) => (
               <Link href={`/performance?tag=${encodeURIComponent(item.tag)}&cat=hvac`} key={item.name} className={`group relative block aspect-[4/3] overflow-hidden transition-all duration-700 ${industryInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: `${index * 80}ms` }}>
-                <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700"  unoptimized />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/70 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5"><h3 className="text-lg font-bold text-white">{item.name}</h3></div>
                 <div className="absolute inset-0 bg-[#2d2a28]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center p-6">

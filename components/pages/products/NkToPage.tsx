@@ -152,7 +152,7 @@ export default function NkToPage() {
                 fill
                 className="object-cover"
                 priority
-              />
+               unoptimized />
             </div>
           </div>
         </div>
@@ -216,7 +216,7 @@ export default function NkToPage() {
                 width={785}
                 height={631}
                 className="h-auto w-full"
-              />
+               unoptimized />
             </div>
           </div>
         </div>

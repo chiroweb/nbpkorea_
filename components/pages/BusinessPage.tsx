@@ -86,6 +86,7 @@ export default function BusinessPage() {
                   fill
                   priority
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  unoptimized
                 />
 
                 {/* 하단 그라데이션 (고정) */}

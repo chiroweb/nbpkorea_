@@ -24,8 +24,8 @@ const industries = [
   { name: "조선/해양", desc: "도장 공정 VOCs 처리, 악취 제거", clients: "한화오션, 현대중공업, 삼성중공업", image: `${S3}/assets/industry1.png`, tag: "조선" },
   { name: "자동차", desc: "도장 라인 배기가스 처리", clients: "BMW, Mercedes-Benz, KIA", image: `${S3}/assets/industry2.png`, tag: "자동차" },
   { name: "화학/석유화학", desc: "공정 배출 VOCs·악취 처리", clients: "경인양행, 화학 주요 기업", image: `${S3}/assets/industry3.png`, tag: "화학" },
-  { name: "반도체", desc: "클린룸 배기 유해가스 처리", clients: "반도체 주요 제조사", image: `${S3}/images/intro2.jpg`, tag: "반도체" },
-  { name: "식품/제약", desc: "식품 가공 악취, 제약 공정 배기 처리", clients: "농협목우촌, 이디야커피", image: `${S3}/images/into3.jpg`, tag: "식품" },
+  { name: "반도체", desc: "클린룸 배기 유해가스 처리", clients: "반도체 주요 제조사", image: `/images/industry-semiconductor.png`, tag: "반도체" },
+  { name: "식품/제약", desc: "식품 가공 악취, 제약 공정 배기 처리", clients: "농협목우촌, 이디야커피", image: `/images/industry-food.png`, tag: "식품" },
   { name: "환경/폐수처리", desc: "음식물·폐수 처리장 악취 제거", clients: "한국환경공단, 부산환경공단", image: `${S3}/images/company/building-1.jpg`, tag: "환경" },
 ];
 
@@ -58,7 +58,7 @@ export default function EnvironmentBusinessPage() {
       {/* 1. 히어로 */}
       <section ref={heroRef} className="relative overflow-hidden">
         <div className="relative aspect-[21/9] md:aspect-[21/7] w-full bg-[#1a1a1a]">
-          <Image src={`${S3}/images/combustion-site-hd.jpg`} alt="NBPKOREA 환경시스템" fill className="object-cover opacity-60" priority />
+          <Image src={`${S3}/images/combustion-site-hd.jpg`} alt="NBPKOREA 환경시스템" fill className="object-cover opacity-60" priority  unoptimized />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/90 via-[#1a1a1a]/50 to-transparent" />
           <div className={`absolute inset-0 flex flex-col justify-center px-6 md:px-12 lg:px-20 max-w-4xl transition-all duration-1000 ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <span className="text-xs tracking-[0.1em] uppercase text-[#C05010] mb-3">Environmental Systems</span>
@@ -121,7 +121,7 @@ export default function EnvironmentBusinessPage() {
             {products.map((product, index) => (
               <Link href={product.href} key={product.title} className={`group block transition-all duration-700 ${productInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`} style={{ transitionDelay: `${index * 100}ms` }}>
                 <div className="relative aspect-[4/3] overflow-hidden bg-[#FAFAFA] border border-[#D4DAE2] group-hover:border-[#C05010]/50 transition-colors duration-300">
-                  <Image src={product.image} alt={product.title} fill className="object-contain group-hover:scale-105 transition-transform duration-700" />
+                  <Image src={product.image} alt={product.title} fill className="object-contain group-hover:scale-105 transition-transform duration-700"  unoptimized />
                 </div>
                 <div className="mt-4">
                   <span className="text-xs tracking-[0.06em] uppercase text-[#5C6470]">{product.subtitle}</span>
@@ -144,7 +144,7 @@ export default function EnvironmentBusinessPage() {
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 md:gap-4">
             {industries.map((item, index) => (
               <Link href={`/performance?tag=${encodeURIComponent(item.tag)}&cat=environment`} key={item.name} className={`group relative block aspect-[4/3] overflow-hidden transition-all duration-700 ${industryInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`} style={{ transitionDelay: `${index * 80}ms` }}>
-                <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700" />
+                <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-110 transition-transform duration-700"  unoptimized />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#1a1a1a]/70 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-5"><h3 className="text-lg font-bold text-white">{item.name}</h3></div>
                 <div className="absolute inset-0 bg-[#2d2a28]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex flex-col justify-center p-6">

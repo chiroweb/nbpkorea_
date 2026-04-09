@@ -240,6 +240,7 @@ export default function FpbBurnerPage() {
                   fill
                   className="object-cover"
                   priority
+                  unoptimized
                 />
               </div>
             </div>
@@ -286,6 +287,7 @@ export default function FpbBurnerPage() {
                       alt={c.fpbProductNames[product.id] ?? product.name}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      unoptimized
                     />
                   </div>
                   <div className="p-4">

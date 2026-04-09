@@ -178,7 +178,7 @@ export default function NkghPage() {
                 src={`${S3}/images/%EC%97%B0%EC%86%8C/1p1.png`}
                 alt={c.imgAlt}
                 fill className="object-cover" priority
-              />
+               unoptimized />
             </div>
           </div>
         </div>
