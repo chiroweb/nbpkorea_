@@ -26,7 +26,7 @@ const industries = [
   { name: "화학/석유화학", desc: "공정 배출 VOCs·악취 처리", clients: "경인양행, 화학 주요 기업", image: `${S3}/assets/industry3.png`, tag: "화학" },
   { name: "반도체", desc: "클린룸 배기 유해가스 처리", clients: "반도체 주요 제조사", image: `/images/industry-semiconductor.png`, tag: "반도체" },
   { name: "식품/제약", desc: "식품 가공 악취, 제약 공정 배기 처리", clients: "농협목우촌, 이디야커피", image: `/images/industry-food.png`, tag: "식품" },
-  { name: "환경/폐수처리", desc: "음식물·폐수 처리장 악취 제거", clients: "한국환경공단, 부산환경공단", image: `${S3}/images/company/building-1.jpg`, tag: "환경" },
+  { name: "환경/폐수처리", desc: "음식물·폐수 처리장 악취 제거", clients: "한국환경공단, 부산환경공단", image: `/images/industry-energy-plant.png`, tag: "환경" },
 ];
 
 const techFeatures = [
