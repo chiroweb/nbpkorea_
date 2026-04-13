@@ -103,7 +103,7 @@
       "directGasHeater": "Direct-Fired Gas Heater",
       "indirectGasHeater": "Indirect Gas Heater",
       "ductBurner": "Duct Burner",
-      "packageBurner": "Package Burner",
+      "packageBurner": "MPG Burner",
       "furnaceBurner": "Furnace Burner",
       "lowNoxBurner": "Low-NOx Burner",
       "ovenBurner": "Oven Burner",
@@ -210,7 +210,7 @@
       "burner": {
         "title": "Industrial Burners",
         "keywords": "Duct · Package · Metal · Oven",
-        "desc": "We offer a diverse lineup of industrial burners including duct burners, package burners, and metal fiber burners."
+        "desc": "We offer a diverse lineup of industrial burners including duct burners, MPG burners, and metal fiber burners."
       }
     },
     "contact": {
@@ -299,7 +299,7 @@
         "2018": "NBP Series Metal Fiber Burner Lineup Expanded",
         "2017": "Minister of SMEs and Startups Award",
         "2016": "CE Mark Certification Obtained",
-        "2015": "KS Mark Certification Obtained",
+        "2015": "KC Mark Certification Obtained",
         "2014a": "Commissioner of the Small and Medium Business Administration Award",
         "2014b": "MIDCO International Technology Alliance Expanded",
         "2013": "ECOSTAR (Turkey) Technology Partnership Established",
@@ -521,7 +521,7 @@
       "directHeater": "Direct Gas Heater",
       "indirectHeater": "Indirect Gas Heater",
       "ductBurner": "Duct Burner",
-      "fpbBurner": "Package Burner",
+      "fpbBurner": "MPG Burner",
       "furnaceBurner": "Furnace Burner",
       "lowNoxBurner": "Low NOx Burner",
       "ovenBurner": "Oven Burner",
@@ -668,9 +668,9 @@
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
       },
       "fpbBurner": {
-        "subtitle": "Package Burner",
+        "subtitle": "MPG Burner",
         "description": "Industrial burner lineup based on ECOSTAR (Turkey) technology partnership. Offers 13 categories of combustion solutions including gas burners, dual-fuel burners, fuel oil burners, and process burners.",
-        "ctaTitle": "Considering the Package Burner?",
+        "ctaTitle": "Considering the MPG Burner?",
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
       },
       "metalFiberBurner": {
@@ -790,8 +790,8 @@
           "desc": "European Safety Certification"
         },
         {
-          "name": "KS Mark",
-          "desc": "Korean Industrial Standard"
+          "name": "KC Mark",
+          "desc": "Korea Certification"
         }
       ]
     },

@@ -13,11 +13,11 @@ export async function generateMetadata({
     path: "/products/burner/fpb-burner",
     copy: {
       ko: {
-        title: "패키지 버너 | 엔비피코리아(NBPKOREA)",
-        description: "가스, 저녹스, 이중연료 등 다양한 라인업의 패키지 버너. 현장 조건별 맞춤 연소 솔루션을 제공하는 엔비피코리아 버너 제품군.",
+        title: "MPG 버너 | 엔비피코리아(NBPKOREA)",
+        description: "가스, 저녹스, 이중연료 등 다양한 라인업의 MPG 버너. 현장 조건별 맞춤 연소 솔루션을 제공하는 엔비피코리아 버너 제품군.",
       },
       en: {
-        title: "Package Burner | NBPKOREA",
+        title: "MPG Burner | NBPKOREA",
         description: "Package burner lineup covering gas, low-NOx, and dual-fuel industrial combustion applications.",
       },
     },

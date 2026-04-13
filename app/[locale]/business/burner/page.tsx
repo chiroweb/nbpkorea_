@@ -12,11 +12,11 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     copy: {
       ko: {
         title: "산업용 버너 사업부 | 엔비피코리아(NBPKOREA)",
-        description: "엔비피코리아 산업용 버너 사업부. 덕트버너, 패키지 버너, 메탈파이버 버너 등 NOx 저배출·고효율 산업용 버너 라인업.",
+        description: "엔비피코리아 산업용 버너 사업부. 덕트버너, MPG 버너, 메탈파이버 버너 등 NOx 저배출·고효율 산업용 버너 라인업.",
       },
       en: {
         title: "Industrial Burner Division | NBPKOREA",
-        description: "NBPKOREA Industrial Burner Division. Duct burners, package burners, metal fiber burners, and high-efficiency industrial burner solutions.",
+        description: "NBPKOREA Industrial Burner Division. Duct burners, MPG burners, metal fiber burners, and high-efficiency industrial burner solutions.",
       },
     },
   });

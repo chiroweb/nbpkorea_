@@ -293,7 +293,7 @@ function ProductsPageInner() {
       href: "/products/burner/fpb-burner",
       image: `${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`,
       description: t("burner.fpbBurner.description"),
-      tags: ["패키지 버너"],
+      tags: ["MPG 버너"],
     },
   ];
 

@@ -46,7 +46,7 @@ export default function BusinessPage() {
       id: "burner",
       title: t("burner.title"),
       subtitle: "Industrial Burners",
-      desc: "덕트버너, 패키지 버너, 메탈파이버 등 NOx 저배출 버너 라인업",
+      desc: "덕트버너, MPG 버너, 메탈파이버 등 NOx 저배출 버너 라인업",
       image: `${S3}/images/burner/duct-burner-hero.jpg`,
       href: "/business/burner",
       highlight: "MIDCO 기술 제휴",

@@ -108,10 +108,10 @@ const content = {
       { title: "Fuel Flexibility", value: "Gas / Oil / Dual Fuel", description: "Fuel configuration can be flexibly selected according to site fuel infrastructure and operational purpose." },
       { title: "Operation Safety", value: "BMS Ready", description: "Easy integration with safety control systems including ignition, flame monitoring, shut-off valves, and interlocks." },
     ],
-    heroTitle: "Package Burner",
-    heroTitleSub: "(Package Burner)",
-    heroDesc: "A package burner is not just a burner body — it is an industrial heat source solution that simplifies on-site installation and operation by integrating combustion air fan, igniter, control panel, and safety devices into a single system. NBPKOREA reviews site load, fuel conditions, and emission requirements to propose appropriate package burner configurations.",
-    imgAlt: "Package Burner",
+    heroTitle: "MPG Burner",
+    heroTitleSub: "(MPG Burner)",
+    heroDesc: "A MPG burner is not just a burner body — it is an industrial heat source solution that simplifies on-site installation and operation by integrating combustion air fan, igniter, control panel, and safety devices into a single system. NBPKOREA reviews site load, fuel conditions, and emission requirements to propose appropriate MPG burner configurations.",
+    imgAlt: "MPG Burner",
     fpbProductNames: {
       "gas-burners": "Gas Burners",
       "gas-burners-low-nox": "Gas Burners (Low NOx)",
@@ -127,8 +127,8 @@ const content = {
       "close-coupled-burners": "Close-Coupled Burners (Rotary Cup)",
       "mobile-hot-air-generators": "Mobile Hot Air Generators",
     } as Record<string, string>,
-    floatingLabel: "View Package Burner Case Studies",
-    appTagLabel: "Package Burner",
+    floatingLabel: "View MPG Burner Case Studies",
+    appTagLabel: "MPG Burner",
   },
   ko: {
     heroTags: ["패키지 일체형", "저NOx 대응", "높은 턴다운", "BMS 연동", "정비 용이성"],
@@ -159,10 +159,10 @@ const content = {
       { title: "Fuel Flexibility", value: "Gas / Oil / Dual Fuel", description: "현장 연료 인프라와 운전 목적에 따라 연료 구성을 유연하게 선택할 수 있습니다." },
       { title: "Operation Safety", value: "BMS Ready", description: "점화, 화염감시, 차단밸브, 인터록을 포함한 안전 제어 체계와의 통합이 용이합니다." },
     ],
-    heroTitle: "패키지 버너",
-    heroTitleSub: "(Package Burner)",
-    heroDesc: "패키지 버너는 단순 버너 본체가 아니라 연소공기 팬, 점화부, 제어반, 안전장치를 하나의 시스템으로 구성해 현장 설치와 운전을 단순화하는 산업용 열원 솔루션입니다. 엔비피코리아는 현장 부하와 연료 조건, 배출 요구 수준을 검토해 적합한 패키지 버너 구성을 제안합니다.",
-    imgAlt: "패키지 버너",
+    heroTitle: "MPG 버너",
+    heroTitleSub: "(MPG Burner)",
+    heroDesc: "MPG 버너는 단순 버너 본체가 아니라 연소공기 팬, 점화부, 제어반, 안전장치를 하나의 시스템으로 구성해 현장 설치와 운전을 단순화하는 산업용 열원 솔루션입니다. 엔비피코리아는 현장 부하와 연료 조건, 배출 요구 수준을 검토해 적합한 MPG 버너 구성을 제안합니다.",
+    imgAlt: "MPG 버너",
     fpbProductNames: {
       "gas-burners": "가스 버너",
       "gas-burners-low-nox": "가스 버너 (Low NOx)",
@@ -178,8 +178,8 @@ const content = {
       "close-coupled-burners": "클로즈커플드 버너 (로터리컵)",
       "mobile-hot-air-generators": "이동식 열풍발생기",
     } as Record<string, string>,
-    floatingLabel: "패키지 버너 적용 사례 보러가기",
-    appTagLabel: "패키지 버너",
+    floatingLabel: "MPG 버너 적용 사례 보러가기",
+    appTagLabel: "MPG 버너",
   },
 };
 
@@ -195,7 +195,7 @@ export default function FpbBurnerPage() {
     <>
       <SubpageLayout
         title={t("nav.fpbBurner")}
-        subtitle="Industrial Package Burner"
+        subtitle="Industrial MPG Burner"
         breadcrumb={[
           { label: t("breadcrumb"), href: "/products" },
           { label: t("breadcrumbs.burner"), href: "/products?tab=burner" },
@@ -212,7 +212,7 @@ export default function FpbBurnerPage() {
               className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
             >
               <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
-                Industrial Package Burner
+                Industrial MPG Burner
               </span>
               <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
                 {c.heroTitle}<br />
@@ -260,7 +260,7 @@ export default function FpbBurnerPage() {
 
         <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
           <div className="max-w-7xl mx-auto">
-            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Package Burner System Flow</p>
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">MPG Burner System Flow</p>
             <div className="flex flex-wrap items-center gap-2">
               {c.processFlow.map((step, index) => (
                 <div key={step} className="flex items-center gap-2">
@@ -363,7 +363,7 @@ export default function FpbBurnerPage() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 -mt-8 mb-8">
         <ApplicationTags category="burner" tags={[c.appTagLabel]} />
       </div>
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Package Burner" : "패키지 버너"} label={c.floatingLabel} />
+      <FloatingCaseLink category="burner" tag={locale === "en" ? "MPG Burner" : "MPG 버너"} label={c.floatingLabel} />
     </>
   );
 }

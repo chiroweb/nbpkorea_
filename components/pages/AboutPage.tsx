@@ -55,9 +55,9 @@ function CeoSection() {
               <span className="section-label block mb-4">{t("label")}</span>
               <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28] mb-2">{t("title")}</h2>
               <div className="w-12 h-[2px] bg-[#C05010] mb-10" />
-              <p className="text-sm leading-[2.2] text-[#5C6470] mb-6"><Highlight text={t("p1")} keywords={CEO_HIGHLIGHTS_P1} /></p>
-              <p className="text-sm leading-[2.2] text-[#5C6470] mb-6"><Highlight text={t("p2")} keywords={CEO_HIGHLIGHTS_P2} /></p>
-              <p className="text-sm leading-[2.2] text-[#5C6470]"><Highlight text={t("p3")} keywords={CEO_HIGHLIGHTS_P3} /></p>
+              <p className="text-sm leading-[2.2] text-[#2d2a28] mb-6"><Highlight text={t("p1")} keywords={CEO_HIGHLIGHTS_P1} /></p>
+              <p className="text-sm leading-[2.2] text-[#2d2a28] mb-6"><Highlight text={t("p2")} keywords={CEO_HIGHLIGHTS_P2} /></p>
+              <p className="text-sm leading-[2.2] text-[#2d2a28]"><Highlight text={t("p3")} keywords={CEO_HIGHLIGHTS_P3} /></p>
             </div>
 
             {/* 오른쪽: 서명 */}
@@ -98,7 +98,7 @@ function ImpactNumbersSection() {
               className={`text-center transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
-              <p className="text-4xl md:text-5xl font-light text-white tracking-[0.05em] mb-2">{stat.value}</p>
+              <p className="text-4xl md:text-5xl font-light text-[#C05010] tracking-[0.05em] mb-2">{stat.value}</p>
               <p className="text-sm tracking-[0.06em] uppercase text-[#C8D0DA] mb-1">{stat.label}</p>
               <p className="text-xs text-[#5C6470]">{stat.sub}</p>
             </div>
@@ -528,19 +528,9 @@ function PartnersSection() {
     { title: "CombHEX", subtitle: t("combhexType"), since: "2018", logo: `${S3}/images/combhex.jpeg`, href: "https://www.combhex.com/" },
   ];
 
-  const clientLogos = [
-    { name: "현대중공업", src: `${S3}/images/clients/hyundai-hi.svg` },
-    { name: "현대미포조선", src: `${S3}/images/clients/hyundai-mipo.png` },
-    { name: "현대삼호중공업", src: `${S3}/images/clients/hyundai-samho.png` },
-    { name: "한국조선해양", src: `${S3}/images/clients/ksoe.svg` },
-    { name: "SK오션플랜트", src: `${S3}/images/clients/sk-ocean.png` },
-    { name: "HSG성동조선", src: `${S3}/images/clients/hsg-sungdong.jpg` },
-    { name: "케이조선", src: `${S3}/images/clients/k-shipbuilding.png` },
-    { name: "대선조선", src: `${S3}/images/clients/daesun.jpg` },
-    { name: "대한조선", src: `${S3}/images/clients/daehan.webp` },
-  ];
 
   return (
+    <>
     <section ref={ref} className="py-24 px-6 md:px-12">
       <div className="max-w-7xl mx-auto">
         <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
@@ -570,20 +560,10 @@ function PartnersSection() {
           ))}
         </div>
 
-        <div className={`transition-all duration-1000 delay-300 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-          <span className="section-label block mb-6">Major Clients</span>
-          <div className="relative overflow-hidden">
-            <div className="flex animate-[scroll_20s_linear_infinite] gap-12 items-center">
-              {[...clientLogos, ...clientLogos].map((logo, i) => (
-                <div key={`${logo.name}-${i}`} className="flex-shrink-0 h-10 w-28 flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-300">
-                  <Image src={logo.src} alt={logo.name} width={112} height={40} className="h-8 w-auto object-contain" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
       </div>
     </section>
+    <ClientsSection />
+    </>
   );
 }
 
@@ -657,7 +637,7 @@ function DirectionsSection() {
           <div className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
             <div className="aspect-[4/3] w-full overflow-hidden">
               <iframe
-                src="https://maps.google.com/maps?q=37.3009829,126.7491697&t=&z=17&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=37.3009829,126.7491697&t=m&z=17&ie=UTF8&iwloc=&output=embed"
                 className="w-full h-full border-0"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

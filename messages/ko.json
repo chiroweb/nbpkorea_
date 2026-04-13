@@ -103,7 +103,7 @@
       "directGasHeater": "직화식 가스히터",
       "indirectGasHeater": "간접식 가스히터",
       "ductBurner": "덕트버너",
-      "packageBurner": "패키지 버너",
+      "packageBurner": "MPG 버너",
       "furnaceBurner": "로용 버너",
       "lowNoxBurner": "저녹스 버너",
       "ovenBurner": "오븐 버너",
@@ -210,7 +210,7 @@
       "burner": {
         "title": "산업용 버너",
         "keywords": "덕트 · 패키지 · 메탈 · 오븐",
-        "desc": "덕트버너, 패키지 버너, 메탈파이버 등 다양한 산업용 버너 라인업을 갖추고 있습니다."
+        "desc": "덕트버너, MPG 버너, 메탈파이버 등 다양한 산업용 버너 라인업을 갖추고 있습니다."
       }
     },
     "contact": {
@@ -292,7 +292,7 @@
         "2018": "메탈버너 NBP 시리즈 라인업 확대",
         "2017": "중소벤처기업부 장관 표창",
         "2016": "CE Mark 인증 취득",
-        "2015": "KS Mark 인증 취득",
+        "2015": "KC Mark 인증 취득",
         "2014a": "중소기업청장 표창",
         "2014b": "MIDCO International 기술제휴 확대",
         "2013": "ECOSTAR (터키) 기술 파트너십 체결",
@@ -514,7 +514,7 @@
       "directHeater": "직화식 가스히터",
       "indirectHeater": "간접식 가스히터",
       "ductBurner": "덕트버너",
-      "fpbBurner": "패키지 버너",
+      "fpbBurner": "MPG 버너",
       "furnaceBurner": "로용 버너",
       "lowNoxBurner": "저녹스 버너",
       "ovenBurner": "오븐 버너",
@@ -649,9 +649,9 @@
         "ctaDesc": "현장 조건에 맞는 최적 사양을 제안해 드립니다."
       },
       "fpbBurner": {
-        "subtitle": "패키지 버너",
+        "subtitle": "MPG 버너",
         "description": "ECOSTAR(터키) 기술 제휴 기반의 산업용 버너 라인업. 가스 버너, 이중연료 버너, 경유 버너, 프로세스 버너 등 13개 카테고리의 다양한 연소 솔루션을 제공합니다.",
-        "ctaTitle": "패키지 버너 도입을 검토 중이신가요?",
+        "ctaTitle": "MPG 버너 도입을 검토 중이신가요?",
         "ctaDesc": "현장 조건에 맞는 최적 사양을 제안해 드립니다."
       },
       "metalFiberBurner": {
@@ -771,8 +771,8 @@
           "desc": "유럽 안전 인증"
         },
         {
-          "name": "KS Mark",
-          "desc": "한국산업표준"
+          "name": "KC Mark",
+          "desc": "국가통합인증"
         }
       ]
     },
