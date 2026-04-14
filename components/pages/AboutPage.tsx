@@ -523,9 +523,9 @@ function PartnersSection() {
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   const globalPartners = [
-    { title: "MIDCO International", subtitle: t("midcoType"), since: "2007", logo: `${S3}/images/midco.webp`, href: "https://midcointernational.com/" },
-    { title: "ECOSTAR", subtitle: t("ecostarType"), since: "2013", logo: `${S3}/images/ecostar.png`, href: "https://www.ecostar.com.tr" },
-    { title: "CombHEX", subtitle: t("combhexType"), since: "2018", logo: `${S3}/images/combhex.jpeg`, href: "https://www.combhex.com/" },
+    { title: "MIDCO International", subtitle: t("midcoType"), since: "1974", logo: `${S3}/images/midco.webp`, href: "https://midcointernational.com/" },
+    { title: "ECOSTAR", subtitle: t("ecostarType"), since: "1959", logo: `${S3}/images/ecostar.png`, href: "https://www.ecostar.com.tr" },
+    { title: "CombHEX", subtitle: t("combhexType"), since: "1979", logo: `${S3}/images/combhex.jpeg`, href: "https://www.combhex.com/" },
   ];
 
 

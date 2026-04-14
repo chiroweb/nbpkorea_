@@ -110,19 +110,19 @@ function GlobalPartnersSection() {
     {
       name: "MIDCO International",
       country: "USA",
-      since: "2007",
+      since: "1974",
       description: t("globalPartners.midcoDesc"),
     },
     {
       name: "ECOSTAR",
       country: "Turkey",
-      since: "2013",
+      since: "1959",
       description: t("globalPartners.ecostarDesc"),
     },
     {
       name: "CombHEX",
       country: "Turkey",
-      since: "2018",
+      since: "1979",
       description: t("globalPartners.combhexDesc"),
       logo: `${S3}/images/combhex.jpeg`,
     },

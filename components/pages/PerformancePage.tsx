@@ -156,7 +156,10 @@ function PerformancePageInner() {
     }
     if (tagParam) {
       setActiveTag(tagParam);
-      setSearchByTag(true);
+      // cat이 함께 있으면 카테고리 내에서 검색 (폴백 가능), 없으면 전체 검색
+      if (!catParam) {
+        setSearchByTag(true);
+      }
     }
   }, [searchParams]);
 
@@ -183,13 +186,15 @@ function PerformancePageInner() {
       });
   }, [activeTab, searchByTag]);
 
-  // Filter by tag — 정확한 태그 매칭 (TO ≠ RTO/CTO)
-  const filtered = activeTag
+  // Filter by tag — 정확한 태그 매칭, 결과 없으면 카테고리 전체로 폴백
+  const tagFiltered = activeTag
     ? items.filter((item) => {
         if (!item.tags || item.tags.length === 0) return false;
         return item.tags.some((dbTag) => dbTag === activeTag);
       })
     : items;
+  const isFallback = !!activeTag && tagFiltered.length === 0 && items.length > 0;
+  const filtered = isFallback ? items : tagFiltered;
 
   const handleTabChange = (tabId: string) => {
     setActiveTab(tabId);
@@ -315,6 +320,11 @@ function PerformancePageInner() {
             </p>
           ) : (
             <div className="space-y-6">
+              {isFallback && (
+                <p className="text-sm text-[#5C6470] text-center pb-4">
+                  &quot;{activeTag}&quot; 관련 실적이 준비 중입니다. {t(`tabs.${activeTab}`)} 전체 실적을 표시합니다.
+                </p>
+              )}
               {filtered.map((item) => (
                 <PerformanceCard key={item.id} item={item} />
               ))}
