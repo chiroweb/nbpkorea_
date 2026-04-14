@@ -7,7 +7,7 @@ import { Link } from "@/i18n/navigation";
 import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
@@ -114,6 +114,7 @@ function ProductsPageInner() {
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState("environment");
   const t = useTranslations("products");
+  const locale = useLocale();
 
   // URL query param으로 탭 초기화 (상세 페이지에서 돌아올 때)
   useEffect(() => {
@@ -131,7 +132,7 @@ function ProductsPageInner() {
       href: "/products/environment/nk-rto",
       image: `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20RTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`,
       description: t("environment.nkRto.description"),
-      tags: ["조선", "자동차", "화학"],
+      tags: locale === "en" ? ["Shipbuilding", "Automotive", "Chemical"] : ["조선", "자동차", "화학"],
     },
     {
       title: "NK-RCO",
@@ -139,7 +140,7 @@ function ProductsPageInner() {
       href: "/products/environment/nk-rco",
       image: `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20RCO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`,
       description: t("environment.nkRco.description"),
-      tags: ["중공업", "화학", "환경"],
+      tags: locale === "en" ? ["Heavy Industry", "Chemical", "Environmental"] : ["중공업", "화학", "환경"],
     },
     {
       title: "NK-CTO",
@@ -147,7 +148,7 @@ function ProductsPageInner() {
       href: "/products/environment/nk-cto",
       image: `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Environment%20Business%20Division/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20CTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`,
       description: t("environment.nkCto.description"),
-      tags: ["반도체", "도장", "식품", "제약"],
+      tags: locale === "en" ? ["Semiconductor", "Painting", "Food", "Pharmaceutical"] : ["반도체", "도장", "식품", "제약"],
     },
     {
       title: "NK-TO",
@@ -155,7 +156,7 @@ function ProductsPageInner() {
       href: "/products/environment/nk-to",
       image: `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20DTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`,
       description: t("environment.nkTo.description"),
-      tags: ["음식물처리", "폐수처리", "소규모"],
+      tags: locale === "en" ? ["Food Waste", "Wastewater", "Small-scale"] : ["음식물처리", "폐수처리", "소규모"],
     },
   ];
 
@@ -168,7 +169,7 @@ function ProductsPageInner() {
       href: "/products/hvac/cleanroom",
       image: `${S3}/images/hvac/cleanroom-ahu.png`,
       description: t("hvac.cleanroom.description"),
-      tags: ["반도체", "제약", "정밀"],
+      tags: locale === "en" ? ["Semiconductor", "Pharmaceutical", "Precision"] : ["반도체", "제약", "정밀"],
     },
     {
       id: "dry-room",
@@ -177,7 +178,7 @@ function ProductsPageInner() {
       href: "/products/hvac/dry-room",
       image: `${S3}/images/hvac/dry-room-ahu.png`,
       description: t("hvac.dryRoom.description"),
-      tags: ["2차전지", "저녹스"],
+      tags: locale === "en" ? ["Secondary Battery", "Low-NOx"] : ["2차전지", "저녹스"],
     },
     {
       id: "direct-ahu",
@@ -186,7 +187,7 @@ function ProductsPageInner() {
       href: "/products/hvac/direct-ahu",
       image: `${S3}/images/hvac/direct-ahu.png`,
       description: t("hvac.directAhu.description"),
-      tags: ["직화식", "공조"],
+      tags: locale === "en" ? ["Direct-Fired", "HVAC"] : ["직화식", "공조"],
     },
     {
       id: "door-heater",
@@ -195,7 +196,7 @@ function ProductsPageInner() {
       href: "/products/hvac/door-heater",
       image: `${S3}/images/hvac/door-heater.png`,
       description: t("hvac.doorHeater.description"),
-      tags: ["출입구", "에어커튼"],
+      tags: locale === "en" ? ["Entrance", "Air Curtain"] : ["출입구", "에어커튼"],
     },
     {
       id: "dehumidifier",
@@ -204,7 +205,7 @@ function ProductsPageInner() {
       href: "/products/hvac/dehumidifier",
       image: `${S3}/images/hvac/dehumidifier-marine.jpg`,
       description: t("hvac.dehumidifier.description"),
-      tags: ["제습", "도장"],
+      tags: locale === "en" ? ["Dehumidification", "Painting"] : ["제습", "도장"],
     },
   ];
 
@@ -217,7 +218,7 @@ function ProductsPageInner() {
       href: "/products/combustion/nkgh",
       image: `${S3}/images/%EC%97%B0%EC%86%8C/1p1.png`,
       description: t("combustion.nkgh.description"),
-      tags: ["조선", "제조공장", "대공간"],
+      tags: locale === "en" ? ["Shipbuilding", "Manufacturing", "Large Space"] : ["조선", "제조공장", "대공간"],
     },
     {
       id: "indirect-heater",
@@ -226,7 +227,7 @@ function ProductsPageInner() {
       href: "/products/combustion/nk-idgh",
       image: `${S3}/images/combustion/indirect-heater-thumb.png`,
       description: t("combustion.nkIdgh.description"),
-      tags: ["도장부스", "식품", "클린룸"],
+      tags: locale === "en" ? ["Paint Booth", "Food", "Cleanroom"] : ["도장부스", "식품", "클린룸"],
     },
   ];
 
@@ -239,7 +240,7 @@ function ProductsPageInner() {
       href: "/products/burner/duct-burner",
       image: `${S3}/images/burner/duct-burner-hero.jpg`,
       description: t("burner.ductBurner.description"),
-      tags: ["주력 제품", "NOx 저배출", "범용"],
+      tags: locale === "en" ? ["Core Product", "Low NOx", "General Purpose"] : ["주력 제품", "NOx 저배출", "범용"],
     },
     {
       id: "metal-fiber-burner",
@@ -248,16 +249,18 @@ function ProductsPageInner() {
       href: "/products/burner/metal-fiber-burner",
       image: `${S3}/images/burner/metal-fiber-burner-thumb.png`,
       description: t("burner.metalFiberBurner.description"),
-      tags: ["세라믹", "메탈섬유", "적외선", "저NOx"],
+      tags: locale === "en" ? ["Ceramic", "Metal Fiber", "Infrared", "Low NOx"] : ["세라믹", "메탈섬유", "적외선", "저NOx"],
     },
     {
       id: "ceramic-burner",
-      title: "세라믹 버너",
+      title: locale === "en" ? "Ceramic Burner" : "세라믹 버너",
       subtitle: "Ceramic Burner",
       href: "/products/burner/metal-fiber-burner",
       image: `${S3}/images/burner/ceramic-burner.jpg`,
-      description: "내열 세라믹 소재를 연소면으로 활용한 표면연소 버너. 적외선 복사열을 극대화하여 에너지 효율이 뛰어나며 균일한 열분포를 실현합니다.",
-      tags: ["세라믹", "적외선", "표면연소"],
+      description: locale === "en"
+        ? "A surface combustion burner utilizing heat-resistant ceramic material as the combustion surface. It maximizes infrared radiant heat for outstanding energy efficiency and achieves uniform heat distribution."
+        : "내열 세라믹 소재를 연소면으로 활용한 표면연소 버너. 적외선 복사열을 극대화하여 에너지 효율이 뛰어나며 균일한 열분포를 실현합니다.",
+      tags: locale === "en" ? ["Ceramic", "Infrared", "Surface Combustion"] : ["세라믹", "적외선", "표면연소"],
     },
     {
       id: "furnace-burner",
@@ -266,7 +269,7 @@ function ProductsPageInner() {
       href: "/products/burner/furnace-burner",
       image: `${S3}/images/burner/furnace-burner-main.jpg`,
       description: t("burner.furnaceBurner.description"),
-      tags: ["로용", "고온"],
+      tags: locale === "en" ? ["Furnace", "High Temp"] : ["로용", "고온"],
     },
     {
       id: "low-nox-burner",
@@ -275,7 +278,7 @@ function ProductsPageInner() {
       href: "/products/burner/low-nox-burner",
       image: `${S3}/images/burner/fpb/gas-burners-low-nox-40199-6408963.jpg`,
       description: t("burner.lowNoxBurner.description"),
-      tags: ["Low NOx", "저배출"],
+      tags: locale === "en" ? ["Low NOx", "Low Emission"] : ["Low NOx", "저배출"],
     },
     {
       id: "oven-burner",
@@ -284,7 +287,7 @@ function ProductsPageInner() {
       href: "/products/burner/oven-burner",
       image: `${S3}/images/burner/oven-burner-main.jpg`,
       description: t("burner.ovenBurner.description"),
-      tags: ["오븐", "열처리"],
+      tags: locale === "en" ? ["Oven", "Heat Treatment"] : ["오븐", "열처리"],
     },
     {
       id: "fpb-burner",
@@ -293,7 +296,7 @@ function ProductsPageInner() {
       href: "/products/burner/fpb-burner",
       image: `${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`,
       description: t("burner.fpbBurner.description"),
-      tags: ["MPG 버너"],
+      tags: locale === "en" ? ["MPG Burner"] : ["MPG 버너"],
     },
     {
       id: "valve-train",
@@ -302,7 +305,7 @@ function ProductsPageInner() {
       href: "/products/burner/valve-train",
       image: `${S3}/images/burner/valve-train-main.jpg`,
       description: t("burner.valveTrain.description"),
-      tags: ["밸브트레인", "가스제어", "부품류"],
+      tags: locale === "en" ? ["Valve Train", "Gas Control", "Parts"] : ["밸브트레인", "가스제어", "부품류"],
     },
   ];
 
@@ -342,7 +345,7 @@ function ProductsPageInner() {
                   href="/performance?cat=environment"
                   className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.04em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
                 >
-                  환경시스템 설치사례 보러가기
+                  {locale === "en" ? "View Environmental System Case Studies" : "환경시스템 설치사례 보러가기"}
                   <svg width="14" height="6" viewBox="0 0 14 6" fill="none"><path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1" /></svg>
                 </Link>
               </div>
@@ -362,7 +365,7 @@ function ProductsPageInner() {
                   href="/performance?cat=hvac"
                   className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.04em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
                 >
-                  공조시스템 설치사례 보러가기
+                  {locale === "en" ? "View HVAC System Case Studies" : "공조시스템 설치사례 보러가기"}
                   <svg width="14" height="6" viewBox="0 0 14 6" fill="none"><path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1" /></svg>
                 </Link>
               </div>
@@ -382,7 +385,7 @@ function ProductsPageInner() {
                   href="/performance?cat=combustion"
                   className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.04em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
                 >
-                  연소시스템 설치사례 보러가기
+                  {locale === "en" ? "View Combustion System Case Studies" : "연소시스템 설치사례 보러가기"}
                   <svg width="14" height="6" viewBox="0 0 14 6" fill="none"><path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1" /></svg>
                 </Link>
               </div>
@@ -402,7 +405,7 @@ function ProductsPageInner() {
                   href="/performance?cat=burner"
                   className="inline-flex items-center gap-3 px-6 py-3 border border-[#C05010] text-[#C05010] text-[13px] tracking-[0.04em] hover:bg-[#C05010] hover:text-white transition-all duration-300"
                 >
-                  산업용 버너 설치사례 보러가기
+                  {locale === "en" ? "View Industrial Burner Case Studies" : "산업용 버너 설치사례 보러가기"}
                   <svg width="14" height="6" viewBox="0 0 14 6" fill="none"><path d="M0 3H13M13 3L10 1M13 3L10 5" stroke="currentColor" strokeWidth="1" /></svg>
                 </Link>
               </div>
@@ -434,7 +437,7 @@ function ProductsPageInner() {
               href="/support?type=catalog"
               className="inline-flex items-center gap-3 text-xs tracking-[0.06em] uppercase border border-[#D4DAE2] px-8 py-4 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] transition-all"
             >
-              카탈로그 신청
+              {locale === "en" ? "Request Catalog" : "카탈로그 신청"}
               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
                 <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1"/>
               </svg>

@@ -921,7 +921,12 @@
       "otherOption": "기타 문의",
       "message": "문의 내용",
       "messagePlaceholder": "문의하실 내용을 입력해 주세요.",
-      "submit": "문의 보내기"
+      "submit": "문의 보내기",
+      "successTitle": "문의가 접수되었습니다",
+      "successDesc": "영업일 기준 24시간 이내 회신드리겠습니다.",
+      "submitAnother": "추가 문의하기",
+      "errorMsg": "메일 전송에 실패했습니다. 전화(031-434-6566)로 문의해 주세요.",
+      "sending": "전송 중..."
     },
     "info": {
       "title": "연락처 안내",

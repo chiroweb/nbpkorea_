@@ -7,7 +7,7 @@ import { useInView } from "@/hooks/useInView";
 import { useState, useEffect, useRef, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 const LOGO_BASE = `${S3}/images/%EC%A3%BC%EC%9A%94%EA%B1%B0%EB%9E%98%EC%B2%98`;
@@ -28,20 +28,23 @@ function Highlight({ text, keywords }: { text: string; keywords: string[] }) {
   );
 }
 
-const CEO_HIGHLIGHTS_P1 = [
-  "친환경 에너지 솔루션",
-  "기획, 설계, 생산, 시공, TAB 사후관리",
-];
-const CEO_HIGHLIGHTS_P2 = [
-  "첨단 에너지 절감형 친환경제품",
-];
-const CEO_HIGHLIGHTS_P3 = [
-  "인간과 자연이 공존하는 세상",
-  "글로벌 리더 기업",
-];
+const CEO_HIGHLIGHTS = {
+  en: {
+    p1: ["eco-friendly energy solutions", "planning, design, manufacturing, construction, and after-service"],
+    p2: ["advanced energy-saving eco-friendly products"],
+    p3: ["humans and nature coexist", "global leader"],
+  },
+  ko: {
+    p1: ["친환경 에너지 솔루션", "기획, 설계, 생산, 시공, TAB 사후관리"],
+    p2: ["첨단 에너지 절감형 친환경제품"],
+    p3: ["인간과 자연이 공존하는 세상", "글로벌 리더 기업"],
+  },
+};
 
 function CeoSection() {
   const t = useTranslations("about.ceo");
+  const locale = useLocale() as "en" | "ko";
+  const hl = CEO_HIGHLIGHTS[locale] ?? CEO_HIGHLIGHTS.ko;
   const { ref, isInView } = useInView({ threshold: 0.2 });
 
   return (
@@ -55,9 +58,9 @@ function CeoSection() {
               <span className="section-label block mb-4">{t("label")}</span>
               <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28] mb-2">{t("title")}</h2>
               <div className="w-12 h-[2px] bg-[#C05010] mb-10" />
-              <p className="text-sm leading-[2.2] text-[#2d2a28] mb-6"><Highlight text={t("p1")} keywords={CEO_HIGHLIGHTS_P1} /></p>
-              <p className="text-sm leading-[2.2] text-[#2d2a28] mb-6"><Highlight text={t("p2")} keywords={CEO_HIGHLIGHTS_P2} /></p>
-              <p className="text-sm leading-[2.2] text-[#2d2a28]"><Highlight text={t("p3")} keywords={CEO_HIGHLIGHTS_P3} /></p>
+              <p className="text-sm leading-[2.2] text-[#2d2a28] mb-6"><Highlight text={t("p1")} keywords={hl.p1} /></p>
+              <p className="text-sm leading-[2.2] text-[#2d2a28] mb-6"><Highlight text={t("p2")} keywords={hl.p2} /></p>
+              <p className="text-sm leading-[2.2] text-[#2d2a28]"><Highlight text={t("p3")} keywords={hl.p3} /></p>
             </div>
 
             {/* 오른쪽: 서명 */}
@@ -148,6 +151,7 @@ function VisionSection() {
 }
 
 function ContactCTASection() {
+  const locale = useLocale();
   const { ref, isInView } = useInView({ threshold: 0.15 });
 
   return (
@@ -155,9 +159,9 @@ function ContactCTASection() {
       <div className="max-w-7xl mx-auto">
         <div className={`text-center mb-14 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4 text-[#C8C3BD]">Contact</span>
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">NBPKOREA와 함께하세요</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">{locale === "en" ? "Partner with NBPKOREA" : "NBPKOREA와 함께하세요"}</h2>
           <p className="text-sm md:text-base text-[#C8C3BD] max-w-xl mx-auto leading-relaxed">
-            기술 미팅, 현장 방문, 견적 상담 등 어떤 문의든 환영합니다.
+            {locale === "en" ? "We welcome all inquiries — technical meetings, site visits, and quote consultations." : "기술 미팅, 현장 방문, 견적 상담 등 어떤 문의든 환영합니다."}
           </p>
         </div>
         <div className={`grid md:grid-cols-3 gap-4 md:gap-6 transition-all duration-1000 delay-200 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
@@ -166,24 +170,24 @@ function ContactCTASection() {
             className="group border border-white/10 p-8 hover:border-[#C05010]/60 hover:bg-white/5 transition-all duration-300"
           >
             <span className="text-xs tracking-[0.08em] uppercase text-[#C05010] block mb-3">Technical Meeting</span>
-            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#C05010] transition-colors">기술 미팅 요청</h3>
-            <p className="text-sm text-[#C8C3BD] leading-relaxed">현장 조건에 맞는 최적의 솔루션을 기술진이 직접 제안해드립니다.</p>
+            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#C05010] transition-colors">{locale === "en" ? "Request a Technical Meeting" : "기술 미팅 요청"}</h3>
+            <p className="text-sm text-[#C8C3BD] leading-relaxed">{locale === "en" ? "Our engineers will propose the optimal solution for your site conditions." : "현장 조건에 맞는 최적의 솔루션을 기술진이 직접 제안해드립니다."}</p>
           </Link>
           <Link
             href="/support"
             className="group border border-white/10 p-8 hover:border-[#C05010]/60 hover:bg-white/5 transition-all duration-300"
           >
             <span className="text-xs tracking-[0.08em] uppercase text-[#C05010] block mb-3">Site Visit</span>
-            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#C05010] transition-colors">현장 방문 상담</h3>
-            <p className="text-sm text-[#C8C3BD] leading-relaxed">안산 본사 및 공장 견학, 또는 고객 현장 방문 상담을 예약하세요.</p>
+            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#C05010] transition-colors">{locale === "en" ? "Schedule a Site Visit" : "현장 방문 상담"}</h3>
+            <p className="text-sm text-[#C8C3BD] leading-relaxed">{locale === "en" ? "Book a tour of our Ansan HQ and factory, or schedule an on-site consultation." : "안산 본사 및 공장 견학, 또는 고객 현장 방문 상담을 예약하세요."}</p>
           </Link>
           <Link
             href="/support?type=catalog"
             className="group border border-white/10 p-8 hover:border-[#C05010]/60 hover:bg-white/5 transition-all duration-300"
           >
             <span className="text-xs tracking-[0.08em] uppercase text-[#C05010] block mb-3">Catalog</span>
-            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#C05010] transition-colors">카탈로그 신청</h3>
-            <p className="text-sm text-[#C8C3BD] leading-relaxed">제품별 상세 카탈로그를 신청하시면 담당자가 발송해드립니다.</p>
+            <h3 className="text-lg font-bold text-white mb-2 group-hover:text-[#C05010] transition-colors">{locale === "en" ? "Request a Catalog" : "카탈로그 신청"}</h3>
+            <p className="text-sm text-[#C8C3BD] leading-relaxed">{locale === "en" ? "Request detailed product catalogs and our team will send them to you." : "제품별 상세 카탈로그를 신청하시면 담당자가 발송해드립니다."}</p>
           </Link>
         </div>
       </div>
@@ -419,7 +423,7 @@ function CompanyInfoSection() {
           </div>
           {/* Photo */}
           <div className={`relative overflow-hidden transition-all duration-1000 delay-500 hidden lg:block ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <Image src="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/about/hq-front.jpg" alt="NBPKOREA 본사" fill className="object-cover" />
+            <Image src="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/about/hq-front.jpg" alt="NBPKOREA Headquarters" fill className="object-cover" />
           </div>
         </div>
       </div>
@@ -428,9 +432,15 @@ function CompanyInfoSection() {
 }
 
 function FacilityGallerySection() {
+  const locale = useLocale();
   const { ref, isInView } = useInView({ threshold: 0.15 });
 
-  const facilities = [
+  const facilities = locale === "en" ? [
+    { title: "HQ Overview", subtitle: "Ansan MTV Headquarters", image: `${S3}/images/about/hq-front.jpg` },
+    { title: "HQ & Factory", subtitle: "Office & Production Facility", image: `${S3}/images/about/hq-side.jpg` },
+    { title: "Owner-Operated Factory", subtitle: "In-house Manufacturing", image: `${S3}/images/about/factory-front.jpg` },
+    { title: "Field Plant", subtitle: "On-site Engineering", image: `${S3}/images/about/plant-platform.jpg` },
+  ] : [
     { title: "본사 전경", subtitle: "안산 MTV 본사", image: `${S3}/images/about/hq-front.jpg` },
     { title: "본사 · 공장동", subtitle: "사무동 및 생산 시설", image: `${S3}/images/about/hq-side.jpg` },
     { title: "자가 공장", subtitle: "자체 생산 기반", image: `${S3}/images/about/factory-front.jpg` },
@@ -442,9 +452,9 @@ function FacilityGallerySection() {
       <div className="max-w-7xl mx-auto">
         <div className={`mb-16 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">Facilities</span>
-          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">본사 · 생산시설</h2>
+          <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">{locale === "en" ? "HQ & Production Facilities" : "본사 · 생산시설"}</h2>
           <p className="text-sm text-[#5C6470] mt-4 max-w-3xl leading-relaxed">
-            안산 MTV 본사와 자가 공장을 기반으로 설계·생산·시공을 일괄 수행합니다.
+            {locale === "en" ? "End-to-end design, manufacturing, and installation from our Ansan MTV headquarters and owner-operated factory." : "안산 MTV 본사와 자가 공장을 기반으로 설계·생산·시공을 일괄 수행합니다."}
           </p>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -471,6 +481,7 @@ function FacilityGallerySection() {
 
 function PatentsSection() {
   const t = useTranslations("about.patents");
+  const locale = useLocale();
   const { ref, isInView } = useInView({ threshold: 0.1 });
   const patents = t.raw("list") as string[];
   const [expanded, setExpanded] = useState(false);
@@ -504,7 +515,7 @@ function PatentsSection() {
               onClick={() => setExpanded(true)}
               className="flex items-center gap-2 text-sm tracking-[0.06em] uppercase border border-[#C05010] text-[#C05010] px-6 py-3 hover:bg-[#C05010] hover:text-white transition-all"
             >
-              더보기
+              {locale === "en" ? "Show More" : "더보기"}
               <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                 <path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round"/>
               </svg>

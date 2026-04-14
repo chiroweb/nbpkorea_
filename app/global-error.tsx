@@ -1,5 +1,13 @@
 "use client";
 
+function detectLocale(): string {
+  if (typeof window !== "undefined") {
+    const path = window.location.pathname;
+    if (path.startsWith("/en/") || path === "/en") return "en";
+  }
+  return "ko";
+}
+
 export default function GlobalError({
   error,
   reset,
@@ -7,8 +15,10 @@ export default function GlobalError({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const locale = detectLocale();
+
   return (
-    <html lang="ko">
+    <html lang={locale}>
       <body>
         <div
           style={{
@@ -41,7 +51,7 @@ export default function GlobalError({
                 marginBottom: "24px",
               }}
             >
-              오류 발생
+              {locale === "en" ? "Error Occurred" : "오류 발생"}
             </h1>
             <p
               style={{
@@ -51,7 +61,7 @@ export default function GlobalError({
                 marginBottom: "32px",
               }}
             >
-              예기치 못한 오류가 발생했습니다.
+              {locale === "en" ? "An unexpected error occurred." : "예기치 못한 오류가 발생했습니다."}
             </p>
             <button
               onClick={reset}
@@ -65,7 +75,7 @@ export default function GlobalError({
                 cursor: "pointer",
               }}
             >
-              다시 시도
+              {locale === "en" ? "Try Again" : "다시 시도"}
             </button>
           </div>
         </div>

@@ -3,32 +3,38 @@
 import { useState, useCallback } from "react";
 import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
-const images = [
-  {
-    src: `${S3}/images/company/company-main.png`,
-    alt: "NBPKOREA 메인",
-  },
-  {
-    src: `${S3}/images/company/building-1.jpg`,
-    alt: "NBPKOREA 신사옥 전경",
-  },
-  {
-    src: `${S3}/images/company/building-2.jpg`,
-    alt: "NBPKOREA 신사옥",
-  },
-  {
-    src: `${S3}/images/company/building-3.jpg`,
-    alt: "NBPKOREA 사옥",
-  },
-];
+
+function getImages(locale: string) {
+  return [
+    {
+      src: `${S3}/images/company/company-main.png`,
+      alt: locale === "en" ? "NBPKOREA Main" : "NBPKOREA 메인",
+    },
+    {
+      src: `${S3}/images/company/building-1.jpg`,
+      alt: locale === "en" ? "NBPKOREA New HQ Overview" : "NBPKOREA 신사옥 전경",
+    },
+    {
+      src: `${S3}/images/company/building-2.jpg`,
+      alt: locale === "en" ? "NBPKOREA New HQ" : "NBPKOREA 신사옥",
+    },
+    {
+      src: `${S3}/images/company/building-3.jpg`,
+      alt: locale === "en" ? "NBPKOREA HQ" : "NBPKOREA 사옥",
+    },
+  ];
+}
 
 export default function CompanySection() {
   const t = useTranslations("home.company");
+  const locale = useLocale();
   const { ref, isInView } = useInView({ threshold: 0.2 });
   const [current, setCurrent] = useState(0);
+
+  const images = getImages(locale);
 
   const goTo = useCallback((idx: number) => {
     setCurrent(idx);

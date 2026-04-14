@@ -35,9 +35,9 @@ const content = {
     ],
     mechanismLabel: "High-temp Oxidation\n700~900°C",
     flowChartLabels: [
-      { en: "High Efficiency Burner", ko: "High Efficiency Burner" },
-      { en: "Combustion Chamber", ko: "Combustion Chamber" },
-      { en: "Heat Exchanger", ko: "Heat Exchanger" },
+      { en: "High Efficiency Burner", ko: "고효율 버너" },
+      { en: "Combustion Chamber", ko: "연소실" },
+      { en: "Heat Exchanger", ko: "열교환기" },
     ],
     features: [
       "Perfect smokeless treatment efficiency (99%)",

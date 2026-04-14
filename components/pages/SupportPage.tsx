@@ -217,10 +217,10 @@ function ContactFormSection() {
 
             {status === "success" ? (
               <div className="border border-[#C05010]/30 bg-[#C05010]/5 p-8 text-center">
-                <p className="text-lg font-bold text-[#2d2a28] mb-2">문의가 접수되었습니다</p>
-                <p className="text-sm text-[#5C6470]">영업일 기준 24시간 이내 회신드리겠습니다.</p>
+                <p className="text-lg font-bold text-[#2d2a28] mb-2">{t("form.successTitle")}</p>
+                <p className="text-sm text-[#5C6470]">{t("form.successDesc")}</p>
                 <button onClick={() => setStatus("idle")} className="mt-6 text-xs tracking-[0.06em] uppercase text-[#C05010] border border-[#C05010] px-6 py-3 hover:bg-[#C05010] hover:text-white transition-all">
-                  추가 문의하기
+                  {t("form.submitAnother")}
                 </button>
               </div>
             ) : (
@@ -255,11 +255,11 @@ function ContactFormSection() {
                 </div>
 
                 {status === "error" && (
-                  <p className="text-sm text-red-500">메일 전송에 실패했습니다. 전화(031-434-6566)로 문의해 주세요.</p>
+                  <p className="text-sm text-red-500">{t("form.errorMsg")}</p>
                 )}
 
                 <button type="submit" disabled={status === "sending"} className="inline-flex items-center gap-3 text-xs tracking-[0.06em] uppercase border border-[#2d2a28] px-8 py-4 hover:bg-[#C05010] hover:text-white transition-all disabled:opacity-50">
-                  {status === "sending" ? "전송 중..." : t("form.submit")}
+                  {status === "sending" ? t("form.sending") : t("form.submit")}
                   <svg width="16" height="8" viewBox="0 0 16 8" fill="none">
                     <path d="M0 4H15M15 4L11 1M15 4L11 7" stroke="currentColor" strokeWidth="1" />
                   </svg>

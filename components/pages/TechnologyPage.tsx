@@ -3,7 +3,7 @@
 import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
@@ -192,6 +192,7 @@ function GlobalPartnersSection() {
 
 function AgencyCertificatesSection() {
   const { ref, isInView } = useInView({ threshold: 0.15 });
+  const locale = useLocale();
 
   const certificates = [
     {
@@ -218,7 +219,9 @@ function AgencyCertificatesSection() {
           <span className="section-label block mb-4">Certificates</span>
           <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">Agency Agreements & Certification Records</h2>
           <p className="text-sm text-[#5C6470] mt-4 max-w-3xl leading-relaxed">
-            회사소개 자료에서 확인된 독점 대리점 협약서와 인증 기록입니다. 기술 협력의 공식성과 대외 신뢰도를 함께 보여줍니다.
+            {locale === "en"
+              ? "Exclusive agency agreements and certification records verified from company materials. These demonstrate the formality of technical partnerships and external credibility."
+              : "회사소개 자료에서 확인된 독점 대리점 협약서와 인증 기록입니다. 기술 협력의 공식성과 대외 신뢰도를 함께 보여줍니다."}
           </p>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -246,6 +249,7 @@ function AgencyCertificatesSection() {
 function AwardsCertificationsSection() {
   const { ref, isInView } = useInView({ threshold: 0.2 });
   const t = useTranslations("technology");
+  const locale = useLocale();
 
   const awards = t.raw("awards.items") as { year: string; title: string }[];
   const certifications = t.raw("certifications.list") as { name: string; desc: string }[];
@@ -325,7 +329,7 @@ function AwardsCertificationsSection() {
               <div className="relative aspect-[3/2] w-full">
                 <Image
                   src={`${S3}/images/reward-1/%EB%B6%80%EC%B4%9D%EB%A6%AC%EA%B2%B8%EA%B5%90%EC%9C%A1%EB%B6%80%EC%9E%A5%EA%B4%80%EC%83%81_%ED%91%9C%EC%B0%BD%EC%9E%A5(2021).png`}
-                  alt="산업통상자원부 장관 표창장"
+                  alt={locale === "en" ? "Minister of Trade, Industry and Energy Commendation" : "산업통상자원부 장관 표창장"}
                   fill
                   className="object-contain p-4"
                 />

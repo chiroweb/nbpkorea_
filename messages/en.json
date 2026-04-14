@@ -251,16 +251,9 @@
     "ceo": {
       "label": "CEO Message",
       "title": "Message from the CEO",
-      "p1": "Welcome. I am Choe Hyeok-sun, CEO of NBPKOREA.",
-      "p2Start": "Since our founding in 2006, NBPKOREA has grown in the industrial combustion equipment and environmental systems sector with a single core value — ",
-      "p2Trust": "Trust",
-      "p2End": ". Our mission is to understand the needs of industrial sites most closely and respond with technology.",
-      "p3Start": "Through relentless ",
-      "p3Challenge": "Challenge",
-      "p3End": ", we have developed proprietary core technologies including metal fiber burners, and have achieved world-class technological capabilities through global partnerships with MIDCO International in the US and ECOSTAR in Turkey.",
-      "p4Start": "Going forward, we will continue to devote our ",
-      "p4Passion": "Passion",
-      "p4End": " to providing the most suitable solutions for your industrial sites. We sincerely ask for your continued trust and support.",
+      "p1": "Since its founding in 2006, NBPKOREA has provided eco-friendly energy solutions to industrial sites in shipbuilding, automotive, steel, and plant sectors with over 20 years of expertise in planning, design, manufacturing, construction, and after-service.",
+      "p2": "As a specialist in environmental and energy solutions, NBPKOREA actively invests in the development of advanced energy-saving eco-friendly products in line with global environmental and energy diversification policies, and is vigorously advancing the future of the advanced energy and environmental industry.",
+      "p3": "Going forward, NBPKOREA will continue striving to provide the world's best quality and service in the environmental and energy sectors, working to become a global leader that creates greater value for a world where humans and nature coexist.",
       "signature": "CEO",
       "ceoName": "Choe Hyeok-sun"
     },
@@ -940,7 +933,12 @@
       "otherOption": "Other Inquiries",
       "message": "Message",
       "messagePlaceholder": "Please enter your inquiry details.",
-      "submit": "Send Inquiry"
+      "submit": "Send Inquiry",
+      "successTitle": "Your inquiry has been submitted",
+      "successDesc": "We will respond within 24 hours on business days.",
+      "submitAnother": "Submit Another Inquiry",
+      "errorMsg": "Email delivery failed. Please call 031-434-6566.",
+      "sending": "Sending..."
     },
     "info": {
       "title": "Contact Information",

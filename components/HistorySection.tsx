@@ -1,10 +1,11 @@
 "use client";
 
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 
 export default function HistorySection() {
   const t = useTranslations("about.history");
+  const locale = useLocale();
   const sectionRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
   const isHovering = useRef(false);
@@ -188,7 +189,7 @@ export default function HistorySection() {
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" className="animate-bounce">
             <path d="M12 5v14M5 12l7 7 7-7" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
-          이 영역 위에서 스크롤하면 연혁을 탐색할 수 있습니다
+          {locale === "en" ? "Scroll over this area to explore our history" : "이 영역 위에서 스크롤하면 연혁을 탐색할 수 있습니다"}
         </div>
 
         {/* 하단 진행 카운터 */}

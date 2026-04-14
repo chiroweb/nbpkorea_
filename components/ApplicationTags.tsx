@@ -1,6 +1,7 @@
 "use client";
 
 import { Link } from "@/i18n/navigation";
+import { useLocale } from "next-intl";
 
 interface ApplicationTagsProps {
   tags: string[];
@@ -8,11 +9,14 @@ interface ApplicationTagsProps {
   category?: string;
 }
 
-export default function ApplicationTags({ tags, label = "적용 분야", category }: ApplicationTagsProps) {
+export default function ApplicationTags({ tags, label, category }: ApplicationTagsProps) {
+  const locale = useLocale();
+  const defaultLabel = locale === "en" ? "Applications" : "적용 분야";
+  const displayLabel = label ?? defaultLabel;
   const catParam = category ? `&cat=${category}` : "";
   return (
     <div className="mb-8">
-      <p className="text-xs tracking-[0.04em] uppercase text-[#5C6470] mb-3">{label}</p>
+      <p className="text-xs tracking-[0.04em] uppercase text-[#5C6470] mb-3">{displayLabel}</p>
       <div className="flex flex-wrap gap-2">
         {tags.map((tag) => (
           <Link

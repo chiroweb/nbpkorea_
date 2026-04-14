@@ -4,7 +4,7 @@ import SubpageLayout from "@/components/SubpageLayout";
 import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 import { Performance } from "@/lib/types";
 
 const TAB_IDS = ["environment", "hvac", "combustion", "burner"] as const;
@@ -134,6 +134,7 @@ function PerformanceCard({ item }: { item: Performance }) {
 
 function PerformancePageInner() {
   const t = useTranslations("performance");
+  const locale = useLocale();
   const searchParams = useSearchParams();
   const [activeTab, setActiveTab] = useState("environment");
   const [activeTag, setActiveTag] = useState<string | null>(null);
@@ -253,7 +254,7 @@ function PerformancePageInner() {
                     : "border-[#D4DAE2] text-[#5C6470] hover:border-[#C05010]"
                 }`}
               >
-                <span>적용분야</span>
+                <span>{locale === "en" ? "Application" : "적용분야"}</span>
                 {activeTag && (
                   <span className="font-medium">{activeTag}</span>
                 )}
@@ -273,7 +274,7 @@ function PerformancePageInner() {
                       !activeTag ? "text-[#C05010] bg-[#C05010]/5" : "text-[#5C6470] hover:bg-[#F5F7F8]"
                     }`}
                   >
-                    전체 보기
+                    {locale === "en" ? "View All" : "전체 보기"}
                   </button>
                   {allTags.map((tag) => (
                     <button
@@ -287,7 +288,7 @@ function PerformancePageInner() {
                     </button>
                   ))}
                   {allTags.length === 0 && (
-                    <p className="px-4 py-3 text-[13px] text-[#C8D0DA]">등록된 태그가 없습니다</p>
+                    <p className="px-4 py-3 text-[13px] text-[#C8D0DA]">{locale === "en" ? "No tags registered" : "등록된 태그가 없습니다"}</p>
                   )}
                 </div>
               )}
@@ -302,7 +303,7 @@ function PerformancePageInner() {
                 <svg width="10" height="10" viewBox="0 0 10 10" fill="none">
                   <path d="M2 2L8 8M8 2L2 8" stroke="currentColor" strokeWidth="1" />
                 </svg>
-                필터 해제
+                {locale === "en" ? "Clear Filter" : "필터 해제"}
               </button>
             )}
           </div>
@@ -313,7 +314,7 @@ function PerformancePageInner() {
       <section className="py-12 px-6 md:px-12 bg-[#FAFAFA] min-h-[60vh]">
         <div className="max-w-7xl mx-auto">
           {loading ? (
-            <p className="text-sm text-[#5C6470] text-center py-20">로딩 중...</p>
+            <p className="text-sm text-[#5C6470] text-center py-20">{locale === "en" ? "Loading..." : "로딩 중..."}</p>
           ) : filtered.length === 0 ? (
             <p className="text-sm text-[#5C6470] text-center py-20">
               {activeTag ? t("emptyTag", { tag: activeTag }) : t("emptyDefault")}
@@ -322,7 +323,9 @@ function PerformancePageInner() {
             <div className="space-y-6">
               {isFallback && (
                 <p className="text-sm text-[#5C6470] text-center pb-4">
-                  &quot;{activeTag}&quot; 관련 실적이 준비 중입니다. {t(`tabs.${activeTab}`)} 전체 실적을 표시합니다.
+                  {locale === "en"
+                    ? `Results for "${activeTag}" are being prepared. Showing all ${t(`tabs.${activeTab}`)} results.`
+                    : `"${activeTag}" 관련 실적이 준비 중입니다. ${t(`tabs.${activeTab}`)} 전체 실적을 표시합니다.`}
                 </p>
               )}
               {filtered.map((item) => (

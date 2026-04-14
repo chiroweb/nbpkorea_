@@ -2,12 +2,12 @@
 
 import { useInView } from "@/hooks/useInView";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 const LOGO_BASE = `${S3}/images/%EC%A3%BC%EC%9A%94%EA%B1%B0%EB%9E%98%EC%B2%98`;
 
-const clientLogos = [
+const clientLogosKo = [
   { name: "한화오션", file: "한화오션.png" }, { name: "현대중공업", file: "현대중공업.png" },
   { name: "삼성중공업", file: "삼성중공업.png" }, { name: "한국조선해양", file: "한국조선해양.png" },
   { name: "현대미포조선", file: "현대미포조선.jpg" }, { name: "현대삼호중공업", file: "현대삼호중공업.jpg" },
@@ -26,10 +26,24 @@ const clientLogos = [
   { name: "경인양행", file: "경인양행.png" }, { name: "ECOSTAR", file: "ECOSTAR.png" },
 ];
 
-// Split into 3 rows
-const row1 = clientLogos.slice(0, 11);
-const row2 = clientLogos.slice(11, 21);
-const row3 = clientLogos.slice(21);
+const clientLogosEn = [
+  { name: "Hanwha Ocean", file: "한화오션.png" }, { name: "HD Hyundai Heavy Industries", file: "현대중공업.png" },
+  { name: "Samsung Heavy Industries", file: "삼성중공업.png" }, { name: "Korea Shipbuilding & Offshore", file: "한국조선해양.png" },
+  { name: "HD Hyundai Mipo", file: "현대미포조선.jpg" }, { name: "Hyundai Samho Heavy Industries", file: "현대삼호중공업.jpg" },
+  { name: "POSCO", file: "posco.png" }, { name: "Dongkuk Steel", file: "동국제강.png" },
+  { name: "Doosan", file: "두산.png" }, { name: "BMW", file: "bmw.png" },
+  { name: "Mercedes-Benz", file: "benz.png" }, { name: "Audi", file: "audi.png" },
+  { name: "KIA", file: "kia.png" }, { name: "Volvo", file: "volvo.png" },
+  { name: "Hanjin Heavy Industries", file: "한진중공업.jpg" }, { name: "HJ Heavy Industries", file: "HJ중공업.png" },
+  { name: "NH Mokwochon", file: "농협목우촌.png" }, { name: "Ediya Coffee", file: "이디야커피.jpg" },
+  { name: "Korea Environment Corporation", file: "한국환경공단.jpeg" }, { name: "Busan Environment Corporation", file: "부산환경공단.jpeg" },
+  { name: "Daejeon City Corporation", file: "대전도시공사.png" }, { name: "Hyundai Infracore", file: "현대인프라코어.png" },
+  { name: "Hyundai Steel Industry", file: "현대스틸산업.png" }, { name: "HSG Sungdong Shipbuilding", file: "HSG성동조선.png" },
+  { name: "K Shipbuilding", file: "케이조선.png" }, { name: "SK Ocean Plant", file: "SK오션플랜트.png" },
+  { name: "Dongbu Construction", file: "동부건설.png" }, { name: "Daebo Construction", file: "대보건설.png" },
+  { name: "STX Construction", file: "STX건설.png" }, { name: "Shinsung Engineering", file: "신성엔지니어링.png" },
+  { name: "Kyung-In Synthetic", file: "경인양행.png" }, { name: "ECOSTAR", file: "ECOSTAR.png" },
+];
 
 function LogoItem({ logo }: { logo: { name: string; file: string } }) {
   return (
@@ -41,7 +55,15 @@ function LogoItem({ logo }: { logo: { name: string; file: string } }) {
 
 export default function ClientsSection() {
   const t = useTranslations("about.clients");
+  const locale = useLocale();
   const { ref, isInView } = useInView({ threshold: 0.2 });
+
+  const clientLogos = locale === "en" ? clientLogosEn : clientLogosKo;
+
+  // Split into 3 rows
+  const row1 = clientLogos.slice(0, 11);
+  const row2 = clientLogos.slice(11, 21);
+  const row3 = clientLogos.slice(21);
 
   return (
     <section id="clients" className="py-32 px-6 md:px-12 bg-[#FAFAFA]" ref={ref}>

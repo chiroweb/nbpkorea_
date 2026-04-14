@@ -3,20 +3,21 @@
 import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
-import { useTranslations } from "next-intl";
+import { useTranslations, useLocale } from "next-intl";
 
 export default function RecruitSection() {
   const t = useTranslations("home.partners");
+  const locale = useLocale();
   const { ref, isInView } = useInView({ threshold: 0.1 });
 
   const partners = [
     { title: "MIDCO International", type: t("midcoType"), since: "2007", href: "https://midcointernational.com/" },
     { title: "ECOSTAR", type: t("ecostarType"), since: "2013", href: "https://www.ecostar.com.tr" },
     { title: "CombHEX", type: t("combhexType"), since: "2018", href: "https://www.combhex.com/" },
-    { title: "한화오션", type: t("hanwhaType") },
-    { title: "현대중공업", type: t("hdType") },
-    { title: "더 금영", type: t("bmwType") },
-    { title: "LG엔솔", type: t("lgType") },
+    { title: locale === "en" ? "Hanwha Ocean" : "한화오션", type: t("hanwhaType") },
+    { title: locale === "en" ? "HD Hyundai Heavy Industries" : "현대중공업", type: t("hdType") },
+    { title: locale === "en" ? "The Kumyoung" : "더 금영", type: t("bmwType") },
+    { title: locale === "en" ? "LG Energy Solution" : "LG엔솔", type: t("lgType") },
     { title: "POSCO", type: t("poscoType") },
   ];
 
