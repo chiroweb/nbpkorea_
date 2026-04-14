@@ -38,9 +38,6 @@ const content = {
     appImages: [
       { src: `${S3}/images/burner/oven-burner-app-1.jpg`, alt: "Oven Burner Application Example 1" },
       { src: `${S3}/images/burner/oven-burner-app-2.jpg`, alt: "Oven Burner Application Example 2" },
-      { src: `${S3}/images/burner/oven-burner-app-3.jpg`, alt: "Oven Burner Application Example 3" },
-      { src: `${S3}/images/burner/oven-burner-app-4.jpg`, alt: "Oven Burner Application Example 4" },
-      { src: `${S3}/images/burner/oven-burner-app-5.jpg`, alt: "Oven Burner Application Example 5" },
     ],
     imgAlt: "Oven Burner",
     floatingLabel: "View Oven Burner Case Studies",
@@ -72,9 +69,6 @@ const content = {
     appImages: [
       { src: `${S3}/images/burner/oven-burner-app-1.jpg`, alt: "오븐 버너 적용 예시 1" },
       { src: `${S3}/images/burner/oven-burner-app-2.jpg`, alt: "오븐 버너 적용 예시 2" },
-      { src: `${S3}/images/burner/oven-burner-app-3.jpg`, alt: "오븐 버너 적용 예시 3" },
-      { src: `${S3}/images/burner/oven-burner-app-4.jpg`, alt: "오븐 버너 적용 예시 4" },
-      { src: `${S3}/images/burner/oven-burner-app-5.jpg`, alt: "오븐 버너 적용 예시 5" },
     ],
     imgAlt: "오븐 버너",
     floatingLabel: "오븐 버너 적용 사례 보러가기",

@@ -202,7 +202,7 @@ function ProductsPageInner() {
       title: t("hvac.dehumidifier.subtitle"),
       subtitle: "Dehumidifier",
       href: "/products/hvac/dehumidifier",
-      image: `${S3}/images/humidremover.jpg`,
+      image: `${S3}/images/hvac/dehumidifier-marine.jpg`,
       description: t("hvac.dehumidifier.description"),
       tags: ["제습", "도장"],
     },
