@@ -119,6 +119,7 @@ export default function Header() {
             { label: t("furnaceBurner"), href: "/products/burner/furnace-burner" },
             { label: t("lowNoxBurner"), href: "/products/burner/low-nox-burner" },
             { label: t("ovenBurner"), href: "/products/burner/oven-burner" },
+            { label: t("ceramicBurner"), href: "/products/burner/metal-fiber-burner" },
             { label: t("metalFiberBurner"), href: "/products/burner/metal-fiber-burner" },
             { label: t("valveTrain"), href: "/products/burner/valve-train" },
           ],

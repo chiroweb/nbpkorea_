@@ -108,7 +108,8 @@
       "lowNoxBurner": "Low-NOx Burner",
       "ovenBurner": "Oven Burner",
       "metalFiberBurner": "Metal Fiber Burner",
-      "valveTrain": "Valve Train & Parts"
+      "valveTrain": "Valve Train & Parts",
+      "ceramicBurner": "Ceramic Burner"
     },
     "footer": {
       "access": "Access",
