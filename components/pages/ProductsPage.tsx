@@ -251,6 +251,15 @@ function ProductsPageInner() {
       tags: ["세라믹", "메탈섬유", "적외선", "저NOx"],
     },
     {
+      id: "ceramic-burner",
+      title: "세라믹 버너",
+      subtitle: "Ceramic Burner",
+      href: "/products/burner/metal-fiber-burner",
+      image: `${S3}/images/burner/ceramic-burner.jpg`,
+      description: "내열 세라믹 소재를 연소면으로 활용한 표면연소 버너. 적외선 복사열을 극대화하여 에너지 효율이 뛰어나며 균일한 열분포를 실현합니다.",
+      tags: ["세라믹", "적외선", "표면연소"],
+    },
+    {
       id: "furnace-burner",
       title: t("nav.furnaceBurner"),
       subtitle: t("burner.furnaceBurner.subtitle"),
@@ -258,15 +267,6 @@ function ProductsPageInner() {
       image: `${S3}/images/burner/furnace-burner-main.jpg`,
       description: t("burner.furnaceBurner.description"),
       tags: ["로용", "고온"],
-    },
-    {
-      id: "valve-train",
-      title: t("nav.valveTrain"),
-      subtitle: t("burner.valveTrain.subtitle"),
-      href: "/products/burner/valve-train",
-      image: `${S3}/images/burner/valve-train-main.jpg`,
-      description: t("burner.valveTrain.description"),
-      tags: ["밸브트레인", "가스제어", "부품류"],
     },
     {
       id: "low-nox-burner",
@@ -294,6 +294,15 @@ function ProductsPageInner() {
       image: `${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`,
       description: t("burner.fpbBurner.description"),
       tags: ["MPG 버너"],
+    },
+    {
+      id: "valve-train",
+      title: t("nav.valveTrain"),
+      subtitle: t("burner.valveTrain.subtitle"),
+      href: "/products/burner/valve-train",
+      image: `${S3}/images/burner/valve-train-main.jpg`,
+      description: t("burner.valveTrain.description"),
+      tags: ["밸브트레인", "가스제어", "부품류"],
     },
   ];
 

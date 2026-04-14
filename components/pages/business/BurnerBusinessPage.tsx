@@ -11,7 +11,8 @@ const products = [
   { title: "덕트버너", subtitle: "Duct Burner", desc: "메탈파이버 표면연소 방식의 NOx 저배출 산업용 덕트 가열 버너. 0.5FT~6FT 라인업.", image: `${S3}/images/burner/duct-burner-hero.jpg`, href: "/products/burner/duct-burner", badge: "주력 제품" },
   { title: "MPG 버너", subtitle: "MPG Burner", desc: "강제 예혼합 방식으로 완전 연소를 실현하는 고효율 산업용 버너.", image: `${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`, href: "/products/burner/fpb-burner" },
   { title: "저녹스 버너", subtitle: "Low-NOx Burner", desc: "NOx 배출을 극한까지 저감하는 환경 친화형 버너.", image: `${S3}/images/burner/fpb/gas-burners-low-nox-40199-6408963.jpg`, href: "/products/burner/low-nox-burner" },
-  { title: "메탈파이버 버너", subtitle: "Metal Fiber Burner", desc: "적외선 복사열 기반 표면연소. 에너지 효율 극대화, NOx 대폭 저감.", image: `${S3}/images/burner/ceramic-burner.jpg`, href: "/products/burner/metal-fiber-burner" },
+  { title: "세라믹 버너", subtitle: "Ceramic Burner", desc: "내열 세라믹 표면연소 방식으로 적외선 복사열을 극대화하는 고효율 버너.", image: `${S3}/images/burner/ceramic-burner.jpg`, href: "/products/burner/metal-fiber-burner" },
+  { title: "메탈파이버 버너", subtitle: "Metal Fiber Burner", desc: "적외선 복사열 기반 표면연소. 에너지 효율 극대화, NOx 대폭 저감.", image: `${S3}/images/burner/metal-fiber-burner-thumb.png`, href: "/products/burner/metal-fiber-burner" },
   { title: "로용 버너", subtitle: "Furnace Burner", desc: "산업용 열처리로·소각로·보일러 등 고온 연소가 요구되는 설비에 적용.", image: `${S3}/images/burner/furnace-burner-main.jpg`, href: "/products/burner/furnace-burner" },
   { title: "오븐 버너", subtitle: "Oven Burner", desc: "식품·도장·열처리 오븐에 최적화된 균일 가열 버너.", image: `${S3}/images/burner/oven-burner-main.jpg`, href: "/products/burner/oven-burner" },
 ];
@@ -24,7 +25,7 @@ const coreValues = [
 
 const industries = [
   { name: "도장 건조", desc: "자동차·조선 도장 부스 열풍 공급", clients: "BMW, Mercedes-Benz, 현대중공업", image: `${S3}/assets/industry2.png`, tag: "도장" },
-  { name: "산업용 건조", desc: "농수산물, 목재, 섬유, 인쇄 건조 라인", clients: "다수 산업 현장", image: `${S3}/assets/industry1.png`, tag: "건조" },
+  { name: "산업용 건조", desc: "농수산물, 목재, 섬유, 인쇄 건조 라인", clients: "다수 산업 현장", image: `/images/industry-shipbuilding.png`, tag: "건조" },
   { name: "열처리/소각", desc: "산업용 열처리로, 소각로, 보일러", clients: "POSCO, 동국제강", image: `${S3}/assets/industry3.png`, tag: "열처리" },
   { name: "식품 가공", desc: "식품 건조, 로스팅, 오븐 가열", clients: "농협목우촌, 이디야커피", image: `/images/industry-food.png`, tag: "식품" },
   { name: "에너지/플랜트", desc: "발전소, 석유화학 플랜트 열원", clients: "에너지 주요 기업", image: `/images/industry-energy-plant.png`, tag: "에너지" },

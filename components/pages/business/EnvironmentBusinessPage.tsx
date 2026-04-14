@@ -21,7 +21,7 @@ const coreValues = [
 ];
 
 const industries = [
-  { name: "조선/해양", desc: "도장 공정 VOCs 처리, 악취 제거", clients: "한화오션, 현대중공업, 삼성중공업", image: `${S3}/assets/industry1.png`, tag: "조선" },
+  { name: "조선/해양", desc: "도장 공정 VOCs 처리, 악취 제거", clients: "한화오션, 현대중공업, 삼성중공업", image: `/images/industry-shipbuilding.png`, tag: "조선" },
   { name: "자동차", desc: "도장 라인 배기가스 처리", clients: "BMW, Mercedes-Benz, KIA", image: `${S3}/assets/industry2.png`, tag: "자동차" },
   { name: "화학/석유화학", desc: "공정 배출 VOCs·악취 처리", clients: "경인양행, 화학 주요 기업", image: `${S3}/assets/industry3.png`, tag: "화학" },
   { name: "반도체", desc: "클린룸 배기 유해가스 처리", clients: "반도체 주요 제조사", image: `/images/industry-semiconductor.png`, tag: "반도체" },

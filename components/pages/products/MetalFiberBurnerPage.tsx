@@ -42,11 +42,11 @@ const content = {
     ],
     subProducts: [
       {
-        id: "ceramic-burner",
-        name: "Ceramic Burner",
-        nameEn: "Ceramic Burner",
-        image: `${S3}/images/burner/ceramic-burner.jpg`,
-        description: "A surface combustion burner utilizing heat-resistant ceramic material as the combustion surface. Maximizes infrared radiant heat for excellent energy efficiency and uniform heat distribution.",
+        id: "cylindrical-metal-fiber",
+        name: "Cylindrical Metal Fiber Burner",
+        nameEn: "Cylindrical Metal Fiber Burner",
+        image: `${S3}/images/service-burner.png`,
+        description: "A cylindrical-type metal fiber burner designed for radiant heat applications. Delivers uniform 360° infrared heating with low NOx emissions.",
       },
       {
         id: "metal-fiber-burner-knit",
@@ -97,11 +97,11 @@ const content = {
     ],
     subProducts: [
       {
-        id: "ceramic-burner",
-        name: "세라믹 버너",
-        nameEn: "Ceramic Burner",
-        image: `${S3}/images/burner/ceramic-burner.jpg`,
-        description: "내열 세라믹 소재를 연소면으로 활용한 표면연소 버너. 적외선 복사열을 극대화하여 에너지 효율이 뛰어나며 균일한 열분포를 실현합니다.",
+        id: "cylindrical-metal-fiber",
+        name: "실린더형 메탈화이버 버너",
+        nameEn: "Cylindrical Metal Fiber Burner",
+        image: `${S3}/images/service-burner.png`,
+        description: "원통형 메탈화이버 소재를 활용한 복사열 버너. 360° 균일한 적외선 가열과 저NOx 연소를 실현합니다.",
       },
       {
         id: "metal-fiber-burner-knit",

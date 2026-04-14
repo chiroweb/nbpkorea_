@@ -58,7 +58,7 @@ const industries = [
     name: "조선/해양",
     desc: "선박 블록 건조, 도장 건조, 탱크 제습 등 대형 공간 가열",
     clients: "한화오션, 현대중공업, 삼성중공업",
-    image: `${S3}/assets/industry1.png`,
+    image: `/images/industry-shipbuilding.png`,
     tag: "조선",
   },
   {
