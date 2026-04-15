@@ -8,7 +8,7 @@ const S3 = "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com";
 const slides = [
   { label: "NBPKOREA Nature", src: `${S3}/videos/hero-new-5.mp4`, duration: 5000 },
   { label: "NBPKOREA Industrial Site", src: `${S3}/videos/hero-new-2.mp4`, duration: 5000 },
-  { label: "NBPKOREA Battery Manufacturing", src: `${S3}/videos/hero-battery.mp4`, duration: 5000 },
+  { label: "NBPKOREA Battery Manufacturing", src: `${S3}/videos/hero-3.mp4`, duration: 5000 },
   { label: "NBPKOREA Field Operations", src: `${S3}/videos/hero-new-4b.mp4`, duration: 3000 },
   { label: "NBPKOREA Combustion Systems", src: `${S3}/videos/hero-new-1.mp4`, duration: 5000 },
 ];
