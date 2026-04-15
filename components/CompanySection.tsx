@@ -1,46 +1,23 @@
 "use client";
 
-import { useState, useCallback } from "react";
 import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
-function getImages(locale: string) {
-  return [
-    {
-      src: `${S3}/images/company/company-main.png`,
-      alt: locale === "en" ? "NBPKOREA Main" : "NBPKOREA 메인",
-    },
-    {
-      src: `${S3}/images/company/building-1.jpg`,
-      alt: locale === "en" ? "NBPKOREA New HQ Overview" : "NBPKOREA 신사옥 전경",
-    },
-    {
-      src: `${S3}/images/company/building-2.jpg`,
-      alt: locale === "en" ? "NBPKOREA New HQ" : "NBPKOREA 신사옥",
-    },
-    {
-      src: `${S3}/images/company/building-3.jpg`,
-      alt: locale === "en" ? "NBPKOREA HQ" : "NBPKOREA 사옥",
-    },
-  ];
+function getImage(locale: string) {
+  return {
+    src: `${S3}/images/company/company-main.png`,
+    alt: locale === "en" ? "NBPKOREA Main" : "NBPKOREA 메인",
+  };
 }
 
 export default function CompanySection() {
   const t = useTranslations("home.company");
   const locale = useLocale();
   const { ref, isInView } = useInView({ threshold: 0.2 });
-  const [current, setCurrent] = useState(0);
-
-  const images = getImages(locale);
-
-  const goTo = useCallback((idx: number) => {
-    setCurrent(idx);
-  }, []);
-
-  // Manual navigation only — no auto-rotation
+  const image = getImage(locale);
 
   return (
     <section id="company" className="py-32 overflow-hidden" ref={ref}>
@@ -51,39 +28,12 @@ export default function CompanySection() {
             isInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
           }`}
         >
-          {/* Main image */}
           <div className="relative aspect-[8/5] w-full overflow-hidden bg-[#DCE2E8]">
-            {images.map((img, idx) => (
-              <img
-                key={img.src}
-                src={img.src}
-                alt={img.alt}
-                className={`absolute inset-0 h-full w-full object-cover object-center transition-opacity duration-700 ${
-                  idx === current ? "opacity-100" : "opacity-0"
-                }`}
-              />
-            ))}
-          </div>
-
-          {/* Thumbnails */}
-          <div className="flex gap-2 mt-2 px-0">
-            {images.map((img, idx) => (
-              <button
-                key={img.src}
-                onClick={() => goTo(idx)}
-                className={`relative flex-1 aspect-[16/9] overflow-hidden bg-[#DCE2E8] transition-all duration-300 ${
-                  idx === current
-                    ? "ring-2 ring-[#C05010] opacity-100"
-                    : "opacity-50 hover:opacity-80"
-                }`}
-              >
-                <img
-                  src={img.src}
-                  alt={img.alt}
-                  className="absolute inset-0 h-full w-full object-cover"
-                />
-              </button>
-            ))}
+            <img
+              src={image.src}
+              alt={image.alt}
+              className="h-full w-full object-cover object-center"
+            />
           </div>
         </div>
 
