@@ -64,7 +64,7 @@ const content = {
       { model: "NKGH-80",  capacity: "800,000",   fuel: "LNG/LPG/Ethylene", volume: "350", cmh: "21,000", maxPressure: "300", size: "W2.5 × L4.5 × H2.25", weight: "4,800", control: "Modulating" },
       { model: "NKGH-100", capacity: "1,000,000", fuel: "LNG/LPG/Ethylene", volume: "500", cmh: "30,000", maxPressure: "300", size: "W2.5 × L4.5 × H2.25", weight: "5,000", control: "Modulating" },
     ],
-    floatingLabel: "View NKGH Case Studies",
+    floatingLabel: "View Direct Gas Heater Case Studies",
     imgAlt: "Direct Gas Heater",
   },
   ko: {
@@ -118,7 +118,7 @@ const content = {
       { model: "NKGH-80",  capacity: "800,000",   fuel: "LNG/LPG/Ethylene", volume: "350", cmh: "21,000", maxPressure: "300", size: "W2.5 × L4.5 × H2.25", weight: "4,800", control: "비례제어" },
       { model: "NKGH-100", capacity: "1,000,000", fuel: "LNG/LPG/Ethylene", volume: "500", cmh: "30,000", maxPressure: "300", size: "W2.5 × L4.5 × H2.25", weight: "5,000", control: "비례제어" },
     ],
-    floatingLabel: "NKGH 적용 사례 보러가기",
+    floatingLabel: "직화식 가스히터 적용 사례 보러가기",
     imgAlt: "직화식 가스히터",
   },
 };

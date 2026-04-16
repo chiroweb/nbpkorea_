@@ -137,12 +137,12 @@ export default function DehumidifierPage() {
       subtitle={`${t("combustion.dehumidifier.subtitle")} — Gas Heater Hybrid Dehumidifier`}
       breadcrumb={[
         { label: t("breadcrumb"), href: "/products" },
-        { label: t("breadcrumbs.combustion"), href: "/products?tab=combustion" },
-        { label: t("nav.dehumidifier"), href: "/products/combustion/dehumidifier" },
+        { label: t("breadcrumbs.hvac"), href: "/products?tab=hvac" },
+        { label: t("nav.dehumidifier"), href: "/products/hvac/dehumidifier" },
       ]}
     >
       <FloatingCaseLink category="hvac" tag="" label={c.floatingLabel} />
-      <ProductNav activeTab="combustion" activeProduct="dehumidifier" />
+      <ProductNav activeTab="hvac" activeProduct="dehumidifier" />
 
       {/* Hero */}
       <section className="px-6 md:px-12 py-16">

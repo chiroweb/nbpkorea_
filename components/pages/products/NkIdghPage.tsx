@@ -64,7 +64,7 @@ const content = {
       { model: "NK-IDGH-80",  capacity: "800,000",   fuel: "LNG/LPG/Ethylene", volume: "400", cmh: "24,000", maxPressure: "300", size: "W4.13 × L4.18 × H4.5", weight: "5,000", control: "Modulating" },
       { model: "NK-IDGH-100", capacity: "1,000,000", fuel: "LNG/LPG/Ethylene", volume: "500", cmh: "30,000", maxPressure: "300", size: "W4.20 × L4.25 × H4.6", weight: "5,200", control: "Modulating" },
     ],
-    floatingLabel: "View NK-IDGH Case Studies",
+    floatingLabel: "View Indirect Gas Heater Case Studies",
     imgAlt: "NK-IDGH Indirect Gas Heater",
   },
   ko: {
@@ -118,7 +118,7 @@ const content = {
       { model: "NK-IDGH-80",  capacity: "800,000",   fuel: "LNG/LPG/Ethylene", volume: "400", cmh: "24,000", maxPressure: "300", size: "W4.13 × L4.18 × H4.5", weight: "5,000", control: "비례제어" },
       { model: "NK-IDGH-100", capacity: "1,000,000", fuel: "LNG/LPG/Ethylene", volume: "500", cmh: "30,000", maxPressure: "300", size: "W4.20 × L4.25 × H4.6", weight: "5,200", control: "비례제어" },
     ],
-    floatingLabel: "NK-IDGH 적용 사례 보러가기",
+    floatingLabel: "간접식 가스히터 적용 사례 보러가기",
     imgAlt: "NK-IDGH 간접식 가스히터",
   },
 };

@@ -53,7 +53,7 @@ const content = {
       "Direct oxidation treatment of high-concentration odors and VOCs",
       "Eco-friendly equipment with no secondary pollutants",
     ],
-    floatingLabel: "View DTO Case Studies",
+    floatingLabel: "View NK-TO Case Studies",
     imgAlt: "NK-TO Direct Thermal Oxidizer",
   },
   ko: {
@@ -87,7 +87,7 @@ const content = {
       "고농도 악취 및 VOCs 직접 산화 처리",
       "2차 오염물질이 발생하지 않는 친환경 설비",
     ],
-    floatingLabel: "DTO 적용 사례 보러가기",
+    floatingLabel: "NK-TO 적용 사례 보러가기",
     imgAlt: "NK-TO 직접연소탈취장치",
   },
 };
