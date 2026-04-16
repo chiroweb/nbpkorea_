@@ -67,15 +67,15 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
 
   function renderSubMenu(subs: { id: string; label: string; href: string }[]) {
     return (
-      <div className="flex flex-wrap items-center gap-0 py-3 border-t border-[#E8ECF0]">
-        <span className="text-[13px] tracking-[0.06em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0]">
+      <div className="flex items-center py-3 border-t border-[#E8ECF0] overflow-x-auto scrollbar-hide">
+        <span className="text-[13px] tracking-[0.06em] uppercase text-[#C8D0DA] pr-4 mr-2 border-r border-[#E8ECF0] flex-shrink-0">
           Sub
         </span>
         {subs.map((sub, i) => (
           <Link
             key={sub.id}
             href={sub.href}
-            className={`relative px-4 md:px-5 py-1.5 text-xs tracking-[0.08em] transition-colors duration-200 ${
+            className={`relative px-4 md:px-5 py-1.5 text-xs tracking-[0.08em] transition-colors duration-200 flex-shrink-0 whitespace-nowrap ${
               activeProduct === sub.id
                 ? "text-[#C05010] font-medium"
                 : "text-[#5C6470] hover:text-[#C05010]"
@@ -95,12 +95,12 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
     <div className="border-b border-[#D4DAE2] bg-[#F5F7F8]">
       <div className="max-w-7xl mx-auto px-6 md:px-12">
         {/* 메인 탭 */}
-        <div className="flex gap-0 pt-6">
+        <div className="flex gap-0 pt-6 overflow-x-auto scrollbar-hide">
           {mainTabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => handleMainTabClick(tab.id)}
-              className={`px-6 md:px-8 py-3.5 text-xs tracking-[0.06em] uppercase border-b-2 transition-all duration-200 ${
+              className={`px-6 md:px-8 py-3.5 text-xs tracking-[0.06em] uppercase border-b-2 transition-all duration-200 flex-shrink-0 whitespace-nowrap ${
                 activeTab === tab.id
                   ? "border-[#C05010] text-[#C05010] font-medium"
                   : "border-transparent text-[#5C6470] hover:text-[#C05010]"
