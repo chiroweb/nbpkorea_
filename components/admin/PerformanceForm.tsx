@@ -16,6 +16,7 @@ const CATEGORIES = [
 const TAG_PRESETS: Record<string, string[]> = {
   environment: [
     "RTO", "RCO", "CTO", "TO",
+    "도장", "식품", "화학", "환경", "철강", "축산", "자동차", "인쇄",
   ],
   hvac: [
     "클린룸 공조기", "드라이룸 공조기", "직화식 공조기", "도어히터", "복합식 제습기",
