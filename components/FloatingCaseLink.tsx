@@ -9,11 +9,14 @@ interface FloatingCaseLinkProps {
 }
 
 export default function FloatingCaseLink({ tag, label, category }: FloatingCaseLinkProps) {
-  const catParam = category ? `&cat=${category}` : "";
+  const params = new URLSearchParams();
+  if (tag) params.set("tag", tag);
+  if (category) params.set("cat", category);
+  const query = params.toString();
   return (
     <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-30">
       <Link
-        href={`/performance?tag=${encodeURIComponent(tag)}${catParam}`}
+        href={`/performance${query ? `?${query}` : ""}`}
         className="flex items-center gap-3 px-6 py-3 bg-[#C05010] text-white text-[13px] tracking-[0.04em] shadow-lg border-2 border-transparent hover:border-white hover:shadow-xl transition-all duration-300"
       >
         <span>{label}</span>

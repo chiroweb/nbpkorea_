@@ -158,7 +158,7 @@ export default function CleanroomPage() {
         { label: t("nav.cleanroom"), href: "/products/hvac/cleanroom" },
       ]}
     >
-      <FloatingCaseLink category="hvac" tag={locale === "en" ? "Cleanroom" : "클린룸"} label={c.floatingLabel} />
+      <FloatingCaseLink category="hvac" tag="" label={c.floatingLabel} />
       <ProductNav activeTab="hvac" activeProduct="cleanroom" />
 
       <section className="px-6 md:px-12 py-16">

@@ -142,7 +142,7 @@ export default function NkIdghPage() {
         { label: "NK-IDGH Series", href: "/products/combustion/nk-idgh" },
       ]}
     >
-      <FloatingCaseLink category="combustion" tag={locale === "en" ? "NK-IDGH" : "NK-IDGH"} label={c.floatingLabel} />
+      <FloatingCaseLink category="combustion" tag="" label={c.floatingLabel} />
       <ProductNav activeTab="combustion" activeProduct="nk-idgh" />
 
       {/* Hero */}

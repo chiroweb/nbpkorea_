@@ -141,7 +141,7 @@ export default function DehumidifierPage() {
         { label: t("nav.dehumidifier"), href: "/products/combustion/dehumidifier" },
       ]}
     >
-      <FloatingCaseLink category="combustion" tag={locale === "en" ? "Dehumidifier" : "복합식 제습기"} label={c.floatingLabel} />
+      <FloatingCaseLink category="hvac" tag="" label={c.floatingLabel} />
       <ProductNav activeTab="combustion" activeProduct="dehumidifier" />
 
       {/* Hero */}
@@ -189,7 +189,7 @@ export default function DehumidifierPage() {
           <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{t("common.applications")}</p>
           <div className={`grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 transition-all duration-1000 ${appInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {c.applications.map((app) => (
-              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=combustion`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
+              <Link key={app} href={`/performance?tag=${encodeURIComponent(app)}&cat=hvac`} className="text-[14px] tracking-[0.04em] border border-[#D4DAE2] px-3 py-2 text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010] hover:bg-[#C05010]/5 transition-all duration-200">
 
                 {app}
               </Link>

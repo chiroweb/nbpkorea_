@@ -15,7 +15,7 @@ const CATEGORIES = [
 // 카테고리별 미리 정의된 태그 목록
 const TAG_PRESETS: Record<string, string[]> = {
   environment: [
-    "NK-RTO", "NK-RCO", "NK-CTO", "NK-TO",
+    "RTO", "RCO", "CTO", "TO",
   ],
   hvac: [
     "클린룸 공조기", "드라이룸 공조기", "직화식 공조기", "도어히터", "복합식 제습기",

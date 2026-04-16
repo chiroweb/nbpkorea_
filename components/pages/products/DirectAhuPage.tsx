@@ -156,7 +156,7 @@ export default function DirectAhuPage() {
         { label: t("nav.directAhu"), href: "/products/hvac/direct-ahu" },
       ]}
     >
-      <FloatingCaseLink category="hvac" tag={locale === "en" ? "Direct-Fired AHU" : "직화식 공조기"} label={c.floatingLabel} />
+      <FloatingCaseLink category="hvac" tag="" label={c.floatingLabel} />
       <ProductNav activeTab="hvac" activeProduct="direct-ahu" />
 
       <section className="px-6 md:px-12 py-16">
