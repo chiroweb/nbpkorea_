@@ -533,7 +533,10 @@
       "lowNoxBurner": "Low NOx Burner",
       "ovenBurner": "Oven Burner",
       "metalFiberBurner": "Metal Fiber Burner",
-      "valveTrain": "Valve Train Parts"
+      "portableBurner": "Portable Burner",
+      "valveBurner": "Valve Burner",
+      "valveTrain": "Valve Train Parts",
+      "paintDryer": "Paint Dryer"
     },
     "breadcrumbs": {
       "environment": "Environmental",

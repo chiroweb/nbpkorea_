@@ -137,7 +137,7 @@ export default function PortableBurnerPage() {
         { label: t("nav.portableBurner"), href: "/products/burner/portable-burner" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Metal Burner" : "메탈버너"} label={c.floatingLabel} />
+      <FloatingCaseLink category="burner" tag={locale === "en" ? "Portable Burner" : "포터블 버너"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="portable-burner" />
 
       {/* Hero */}
