@@ -216,7 +216,7 @@ function ProductsPageInner() {
       title: t("combustion.nkgh.subtitle"),
       subtitle: "Direct-Fired Gas Heater",
       href: "/products/combustion/nkgh",
-      image: `${S3}/images/%EC%97%B0%EC%86%8C/1p1.png`,
+      image: `/images/nkgh-thumb.png`,
       description: t("combustion.nkgh.description"),
       tags: locale === "en" ? ["Shipbuilding", "Manufacturing", "Large Space"] : ["조선", "제조공장", "대공간"],
     },

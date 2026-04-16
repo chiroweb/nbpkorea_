@@ -62,7 +62,6 @@ const content = {
     appImages: [
       { src: `${S3}/images/burner/metal-fiber-app-flame.jpg`, alt: "Metal Fiber Burner Combustion Test" },
       { src: `${S3}/images/burner/metal-fiber-app-glow.jpg`, alt: "Metal Fiber Burner Radiant Heating" },
-      { src: `${S3}/images/burner/metal-fiber-app-product.png`, alt: "Metal Fiber Burner Product" },
     ],
     floatingLabel: "View Metal Fiber Burner Case Studies",
     appTagLabels: ["Metal Fiber Burner", "Ceramic Burner", "Infrared", "Low NOx"],
@@ -118,7 +117,6 @@ const content = {
     appImages: [
       { src: `${S3}/images/burner/metal-fiber-app-flame.jpg`, alt: "메탈버너 연소 테스트" },
       { src: `${S3}/images/burner/metal-fiber-app-glow.jpg`, alt: "메탈버너 복사 가열" },
-      { src: `${S3}/images/burner/metal-fiber-app-product.png`, alt: "메탈버너 제품" },
     ],
     floatingLabel: "메탈버너 적용 사례 보러가기",
     appTagLabels: ["메탈버너", "세라믹 버너", "적외선", "저NOx"],
