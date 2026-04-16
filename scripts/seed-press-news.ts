@@ -11,7 +11,26 @@ const supabase = createClient(
 );
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
-const DEFAULT_IMG = `${S3}/images/service-environment.png`;
+
+// 환경사업부
+const IMG_RTO = `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20RTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`;
+const IMG_RCO = `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20RCO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`;
+const IMG_CTO = `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Environment%20Business%20Division/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20CTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`;
+const IMG_DTO = `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20DTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`;
+const IMG_ENV = `${S3}/images/service-environment.png`;
+// 연소사업부
+const IMG_COMB = `${S3}/images/combustion-main.jpeg`;
+const IMG_COMB_SITE = `${S3}/images/combustion-site-hd.jpg`;
+const IMG_COMB_SVC = `${S3}/images/service-combustion.png`;
+// 버너사업부
+const IMG_BURNER = `${S3}/images/service-burner.png`;
+// 회사
+const IMG_HQ = `${S3}/images/about/hq-front.jpg`;
+const IMG_HQ_SIDE = `${S3}/images/about/hq-side.jpg`;
+const IMG_FACTORY = `${S3}/images/about/factory-front.jpg`;
+const IMG_COMPANY = `${S3}/images/company/company-main.png`;
+const IMG_BUILDING = `${S3}/images/building.jpg`;
+const IMG_PLANT = `${S3}/images/about/plant-platform.jpg`;
 
 const pressArticles = [
   {
@@ -20,7 +39,7 @@ const pressArticles = [
     date: "2021.02.23",
     title: "㈜엔비피코리아, RTO와 RCO 시장 확대 박차",
     excerpt: "산업용 환경설비 전문제작업체 엔비피코리아가 축열식 연소산화장치(RTO)와 촉매 연소산화장치(RCO) 시장 확대에 집중하고 있다. 두 장치 모두 환경부가 지정한 효과적인 대기오염 방지기술이다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_RTO,
     read_time: "3분",
     is_published: true,
     content: [
@@ -36,7 +55,7 @@ const pressArticles = [
     date: "2021.07.28",
     title: "엔비피코리아, RTO로 가축분뇨 악취 완벽 제거",
     excerpt: "산업용 대기오염방지시설 전문제작업체 엔비피코리아가 RTO(축열식연소산화장치)를 도계장과 가축분뇨 처리에 활용해 악취 제거 성과를 거두고 있다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_RCO,
     read_time: "3분",
     is_published: true,
     content: [
@@ -51,7 +70,7 @@ const pressArticles = [
     date: "2021.02.15",
     title: "엔비피코리아 최혁순 대표, 교육부장관 표창장 수상",
     excerpt: "엔비피코리아의 최혁순 대표이사가 사회맞춤형 산학협력 선도전문대학(LINC+) 육성 발전에 기여한 공로로 교육부장관 표창장을 수상했다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_HQ,
     read_time: "2분",
     is_published: true,
     content: [
@@ -66,7 +85,7 @@ const pressArticles = [
     date: "2019.07.29",
     title: "[강소기업] 엔비피코리아 — 직화식연소장치로 산업 미세먼지 저감",
     excerpt: "직화식연소장치(RTO)로 산업용 미세먼지 저감을 이루고 있는 엔비피코리아는 국내 커피로스팅 에프터버너 대표기업으로도 이름을 알리고 있다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_ENV,
     read_time: "4분",
     is_published: true,
     content: [
@@ -81,7 +100,7 @@ const pressArticles = [
     date: "2019.06.24",
     title: "엔비피코리아, 직화식연소장치(RTO) 소개 세미나 호평",
     excerpt: "엔비피코리아가 경기과학기술대학교 세미나에서 직화식연소장치(RTO)를 소개해 호평을 받았다. 중소형 사업장에 적합한 컴팩트 설비로 산업용 대기오염 방지에 활용된다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_DTO,
     read_time: "2분",
     is_published: true,
     content: [
@@ -96,7 +115,7 @@ const pressArticles = [
     date: "2018.11.21",
     title: "(주)엔비피코리아, 환경설비·방지시설 전문업체로 거듭난다",
     excerpt: "산업용 연소설비 전문제작업체인 엔비피코리아가 자체 사옥과 공장을 마련하며 환경설비·대기오염 방지시설 전문업체로 도약을 선언했다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_FACTORY,
     read_time: "3분",
     is_published: true,
     content: [
@@ -111,7 +130,7 @@ const pressArticles = [
     date: "2017.03.01",
     title: "엔비피코리아, 고효율 메탈버너 국내 최초 개발",
     excerpt: "엔비피코리아가 메탈버너를 적용한 강제혼합식 가스버너를 국내 최초로 개발해 한국가스안전공사 설계단계검사 합격을 받았다.",
-    image_url: `${S3}/images/service-burner.png`,
+    image_url: IMG_BURNER,
     read_time: "3분",
     is_published: true,
     content: [
@@ -126,7 +145,7 @@ const pressArticles = [
     date: "2017.02.16",
     title: "엔비피코리아, \"미세먼지, 우리 손에 달렸죠\"",
     excerpt: "친환경 연소 설비 전문업체 엔비피코리아의 최혁순 대표가 커피 로스팅 악취·연기 문제를 애프터버너로 해결하며 미세먼지 저감에 기여하고 있다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_COMB,
     read_time: "3분",
     is_published: true,
     content: [
@@ -141,7 +160,7 @@ const pressArticles = [
     date: "2017.05.24",
     title: "엔비피코리아, 프리미엄 멀티 화덕 출시",
     excerpt: "엔비피코리아가 고효율 메탈버너를 적용한 프리미엄 멀티 화덕을 개발·출시했다. 피자·바비큐·생선구이 등 다양한 조리가 가능하며 복사열이 우수하다.",
-    image_url: `${S3}/images/service-burner.png`,
+    image_url: IMG_BURNER,
     read_time: "2분",
     is_published: true,
     content: [
@@ -156,7 +175,7 @@ const pressArticles = [
     date: "2016.12.27",
     title: "대명콘스텍·엔비피코리아·한그린테크·종이없는벽지, 기술혁신대상 수상",
     excerpt: "머니투데이 주최 2016 대한민국 기업대상에서 엔비피코리아가 기술혁신대상을 수상했다. 환경설비 기술 혁신으로 산업 발전에 기여한 공로를 인정받았다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_HQ_SIDE,
     read_time: "2분",
     is_published: true,
     content: [
@@ -171,7 +190,7 @@ const pressArticles = [
     date: "2016.01.20",
     title: "[서울커피엑스포] 로스팅 연기 제거하는 애프터버너, 엔비피코리아",
     excerpt: "2016 서울커피엑스포에 참가한 엔비피코리아가 커피 로스팅 시 발생하는 모든 연기를 제거하는 애프터버너를 선보여 주목받았다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_COMB_SVC,
     read_time: "2분",
     is_published: true,
     content: [
@@ -186,7 +205,7 @@ const pressArticles = [
     date: "2015.12.23",
     title: "엔비피코리아, 메탈화이버 가스히터 특허 등록",
     excerpt: "엔비피코리아가 메탈화이버 버너를 적용한 가스히터를 개발해 특허청으로부터 특허등록(제10-1576930호)을 받았다.",
-    image_url: `${S3}/images/service-burner.png`,
+    image_url: IMG_BURNER,
     read_time: "2분",
     is_published: true,
     content: [
@@ -201,7 +220,7 @@ const pressArticles = [
     date: "2014.11.19",
     title: "에너지절감 앞장서는 (주)엔비피코리아",
     excerpt: "산업용 직화식 가스히터를 전문으로 제작·보급하는 엔비피코리아가 지난 5년간 219대의 고효율 히터를 조선소·자동차 공장에 공급하며 에너지 절감을 이끌고 있다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_COMB_SITE,
     read_time: "3분",
     is_published: true,
     content: [
@@ -216,7 +235,7 @@ const pressArticles = [
     date: "2014.08.01",
     title: "[기획] 연기·먼지·냄새 제거하는 '애프터버너' — LNG·LPG 완전연소로 깨끗하게",
     excerpt: "LNG·LPG로 연기와 냄새를 완전 연소시키는 애프터버너의 원리와 엔비피코리아의 적용 사례를 소개한다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_CTO,
     read_time: "4분",
     is_published: true,
     content: [
@@ -231,7 +250,7 @@ const pressArticles = [
     date: "2018.06.01",
     title: "[인터뷰] 엔비피코리아 최혁순 대표이사 \"고객에게 신뢰받는 길은 최고의 제품 개발\"",
     excerpt: "최혁순 대표이사가 창업 철학과 기술 개발 방향에 대해 밝혔다. \"고객 현장의 문제를 해결하는 제품을 만드는 것이 우리의 사명\"이라고 강조했다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_COMPANY,
     read_time: "4분",
     is_published: true,
     content: [
@@ -246,7 +265,7 @@ const pressArticles = [
     date: "2013.05.01",
     title: "[창간특집] 엔비피코리아 — 산업 현장의 에너지와 환경을 함께 잡다",
     excerpt: "투데이에너지 창간특집 기획인터뷰에서 엔비피코리아의 창업 스토리와 주력 제품, 기술 개발 방향을 소개했다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_BUILDING,
     read_time: "4분",
     is_published: true,
     content: [
@@ -261,7 +280,7 @@ const pressArticles = [
     date: "2019.03.01",
     title: "도시가스협회-엔비피코리아-거화산업, '가스집진기 보급확대 MOU' 체결",
     excerpt: "한국도시가스협회와 엔비피코리아, 거화산업이 가스집진기 보급 확대를 위한 업무협약(MOU)을 체결했다. 도심 사업장의 분진 저감에 기여할 것으로 기대된다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_PLANT,
     read_time: "2분",
     is_published: true,
     content: [
@@ -276,7 +295,7 @@ const pressArticles = [
     date: "2016.05.01",
     title: "엔비피코리아, 가스용품 제조업 허가 취득",
     excerpt: "엔비피코리아가 가스용품 제조업 허가를 취득하며 자체 브랜드 가스 기기 생산·판매의 법적 기반을 마련했다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_BUILDING,
     read_time: "2분",
     is_published: true,
     content: [
@@ -291,7 +310,7 @@ const pressArticles = [
     date: "2019.10.01",
     title: "엔비피코리아, 직화연소 산업용 미세먼지 잡아",
     excerpt: "엔비피코리아가 전시회 기획인터뷰에서 직화연소 방식의 RTO로 산업 현장 미세먼지와 VOCs를 효과적으로 처리하는 기술을 소개했다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_RTO,
     read_time: "3분",
     is_published: true,
     content: [
@@ -306,7 +325,7 @@ const pressArticles = [
     date: "2015.06.01",
     title: "엔비피코리아, 축열식 소각로 제작·보급",
     excerpt: "엔비피코리아가 산업 폐기물 처리용 축열식 소각로를 제작·보급해 환경설비 라인업을 확대했다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_RCO,
     read_time: "2분",
     is_published: true,
     content: [
@@ -321,7 +340,7 @@ const pressArticles = [
     date: "2017.04.01",
     title: "엔비피코리아, 가스비 절감 친환경 멀티화덕 출시",
     excerpt: "엔비피코리아가 메탈버너를 적용한 가스비 절감형 친환경 멀티화덕을 출시했다. 기존 화덕 대비 가스 소비량을 30% 이상 줄였다.",
-    image_url: `${S3}/images/service-burner.png`,
+    image_url: IMG_BURNER,
     read_time: "2분",
     is_published: true,
     content: [
@@ -336,7 +355,7 @@ const pressArticles = [
     date: "2019.11.01",
     title: "엔비피코리아, 직화연소 산업용 미세먼지 잡아 — 전시회 기획인터뷰",
     excerpt: "엔비피코리아가 산업 전시회에서 직화연소 RTO 기술을 소개하며 산업 현장 미세먼지 저감의 실질적 해법을 제시했다.",
-    image_url: DEFAULT_IMG,
+    image_url: IMG_DTO,
     read_time: "3분",
     is_published: true,
     content: [

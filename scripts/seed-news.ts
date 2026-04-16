@@ -10,6 +10,8 @@ const supabase = createClient(
 );
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
+const ENV_RTO = `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Business%20Area/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20RTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`;
+const ENV_CTO = `${S3}/images/%ED%99%98%EA%B2%BD%EC%82%AC%EC%97%85%EB%B6%80/Environment%20Business%20Division/%ED%99%88%ED%8E%98%EC%9D%B4%EC%A7%80%EC%9A%A9%20CTO%20%EB%A0%8C%EB%8D%94%EB%A7%81-nowatermark.jpg`;
 
 const news = [
   {
@@ -18,7 +20,7 @@ const news = [
     date: "2025.12.10",
     title: "RTO 시스템, 조선소 도장 공정 악취 처리의 해법",
     excerpt: "한화오션·HD현대미포 등 국내 주요 조선소에 납품된 RTO(축열식연소산화설비)의 적용 사례와 에너지 회수 효율을 분석합니다.",
-    image_url: `${S3}/images/service-environment.png`,
+    image_url: ENV_RTO,
     read_time: "5분",
     is_published: true,
     content: [
@@ -59,7 +61,7 @@ const news = [
     date: "2025.10.05",
     title: "ISO 9001 · ISO 14001 통합 인증 갱신 완료",
     excerpt: "NBPKOREA는 품질경영시스템(ISO 9001)과 환경경영시스템(ISO 14001) 인증을 성공적으로 갱신했습니다. 글로벌 기준에 부합하는 품질과 환경 경영 체계를 지속 유지합니다.",
-    image_url: `${S3}/images/service-combustion.png`,
+    image_url: `${S3}/images/about/hq-front.jpg`,
     read_time: "3분",
     is_published: true,
     content: [
@@ -73,7 +75,7 @@ const news = [
     date: "2025.09.14",
     title: "반도체 공정 VOCs 처리, CTO의 역할과 선택 기준",
     excerpt: "반도체·디스플레이 제조 공정에서 발생하는 VOCs 및 악취 물질 처리를 위한 촉매연소산화설비(CTO)의 원리, 설계 포인트, 실제 적용 사례를 정리합니다.",
-    image_url: `${S3}/images/service-environment.png`,
+    image_url: ENV_CTO,
     read_time: "6분",
     is_published: true,
     content: [
@@ -87,7 +89,7 @@ const news = [
     date: "2025.08.22",
     title: "MIDCO International과 기술 제휴 18주년",
     excerpt: "2007년부터 이어온 미국 MIDCO International과의 기술 파트너십을 조명합니다. 글로벌 연소 기술을 국내 산업 현장에 최적화하는 협력의 성과를 되돌아봅니다.",
-    image_url: `${S3}/images/hero1.png`,
+    image_url: `${S3}/images/combustion-site-hd.jpg`,
     read_time: "4분",
     is_published: true,
     content: [
@@ -101,7 +103,7 @@ const news = [
     date: "2025.07.30",
     title: "복합식 제습기, 자동차 도장 부스 적용 확대",
     excerpt: "BMW·아우디·기아 협력사 도장 라인에 적용된 NBPKOREA 복합식 제습기의 성능과 에너지 절감 효과를 소개합니다.",
-    image_url: `${S3}/images/service-combustion.png`,
+    image_url: `${S3}/images/hvac/dehumidifier-marine.jpg`,
     read_time: "5분",
     is_published: true,
     content: [
