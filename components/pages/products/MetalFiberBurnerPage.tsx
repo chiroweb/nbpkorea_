@@ -60,8 +60,9 @@ const content = {
     heroTitleSub: "(Metal Fiber Burner)",
     imgAlt: "Metal Fiber Burner",
     appImages: [
-      { src: `${S3}/images/burner/metal-fiber-app-flame.jpg`, alt: "Metal Fiber Burner Combustion Test" },
-      { src: `${S3}/images/burner/metal-fiber-app-glow.jpg`, alt: "Metal Fiber Burner Radiant Heating" },
+      { src: "/images/burner/cases/metal-fiber-case-1.jpg", alt: "Metal Fiber Burner Application Example 1" },
+      { src: "/images/burner/cases/metal-fiber-case-2.jpg", alt: "Metal Fiber Burner Application Example 2" },
+      { src: "/images/burner/cases/metal-fiber-case-3.jpg", alt: "Metal Fiber Burner Application Example 3" },
     ],
     floatingLabel: "View Metal Fiber Burner Case Studies",
     appTagLabels: ["Metal Fiber Burner", "Ceramic Burner", "Infrared", "Low NOx"],
@@ -115,8 +116,9 @@ const content = {
     heroTitleSub: "(Metal Fiber Burner)",
     imgAlt: "메탈버너",
     appImages: [
-      { src: `${S3}/images/burner/metal-fiber-app-flame.jpg`, alt: "메탈버너 연소 테스트" },
-      { src: `${S3}/images/burner/metal-fiber-app-glow.jpg`, alt: "메탈버너 복사 가열" },
+      { src: "/images/burner/cases/metal-fiber-case-1.jpg", alt: "메탈버너 적용 예시 1" },
+      { src: "/images/burner/cases/metal-fiber-case-2.jpg", alt: "메탈버너 적용 예시 2" },
+      { src: "/images/burner/cases/metal-fiber-case-3.jpg", alt: "메탈버너 적용 예시 3" },
     ],
     floatingLabel: "메탈버너 적용 사례 보러가기",
     appTagLabels: ["메탈버너", "세라믹 버너", "적외선", "저NOx"],
