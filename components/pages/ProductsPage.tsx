@@ -294,7 +294,7 @@ function ProductsPageInner() {
       title: t("nav.fpbBurner"),
       subtitle: t("burner.fpbBurner.subtitle"),
       href: "/products/burner/fpb-burner",
-      image: `${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`,
+      image: "/images/burner/mpg-burner-main.jpg",
       description: t("burner.fpbBurner.description"),
       tags: locale === "en" ? ["MPG Burner"] : ["MPG 버너"],
     },

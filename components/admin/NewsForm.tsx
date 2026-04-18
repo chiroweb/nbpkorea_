@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import ContentEditor from "./ContentEditor";
+import ImageUploadField from "./ImageUploadField";
 import { ContentBlock, News } from "@/lib/types";
 import { ADMIN_PATH } from "@/lib/admin-path";
 
@@ -174,19 +175,16 @@ export default function NewsForm({ initial, id }: Props) {
         />
       </div>
 
-      {/* Image URL */}
+      {/* Thumbnail image */}
       <div>
-        <label className={labelClass}>썸네일 이미지 URL</label>
-        <input
-          type="url"
+        <label className={labelClass}>썸네일 이미지 (URL 또는 파일 업로드)</label>
+        <ImageUploadField
           value={form.image_url}
-          onChange={(e) => setForm((f) => ({ ...f, image_url: e.target.value }))}
-          className={inputClass}
+          onChange={(v) => setForm((f) => ({ ...f, image_url: v }))}
+          folder="news"
+          previewClassName="w-40 h-28"
+          onRemove={() => setForm((f) => ({ ...f, image_url: "" }))}
         />
-        {form.image_url && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={form.image_url} alt="preview" className="mt-2 h-24 object-cover border border-[#D4DAE2]" />
-        )}
       </div>
 
       {/* Content editor */}

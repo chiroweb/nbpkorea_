@@ -1,14 +1,28 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { News } from "@/lib/types";
 import { ADMIN_PATH } from "@/lib/admin-path";
 import SitePreview from "@/components/admin/SitePreview";
 
+const CATEGORY_TABS = ["전체", "기술 인사이트", "제품 소식", "회사 소식", "파트너십", "언론 보도"] as const;
+
 export default function AdminNewsPage() {
   const [items, setItems] = useState<News[]>([]);
   const [loading, setLoading] = useState(true);
+  const [activeCategory, setActiveCategory] = useState<string>("전체");
+
+  const counts = useMemo(() => {
+    const map: Record<string, number> = { "전체": items.length };
+    for (const it of items) map[it.category] = (map[it.category] ?? 0) + 1;
+    return map;
+  }, [items]);
+
+  const filteredItems = useMemo(
+    () => (activeCategory === "전체" ? items : items.filter((it) => it.category === activeCategory)),
+    [items, activeCategory]
+  );
 
   async function load() {
     // Admin sees all news including unpublished
@@ -41,10 +55,35 @@ export default function AdminNewsPage() {
           </Link>
         </div>
 
+        {/* 카테고리 탭 */}
+        <div className="flex flex-wrap gap-2 mb-5">
+          {CATEGORY_TABS.map((tab) => {
+            const active = activeCategory === tab;
+            const count = counts[tab] ?? 0;
+            return (
+              <button
+                key={tab}
+                type="button"
+                onClick={() => setActiveCategory(tab)}
+                className={`px-3.5 py-1.5 text-xs tracking-[0.08em] border transition-colors ${
+                  active
+                    ? "bg-[#C05010] border-[#C05010] text-white"
+                    : "border-[#D4DAE2] text-[#5C6470] hover:border-[#C05010] hover:text-[#C05010]"
+                }`}
+              >
+                {tab}
+                <span className={`ml-1.5 text-[10px] ${active ? "text-white/80" : "text-[#8B95A1]"}`}>{count}</span>
+              </button>
+            );
+          })}
+        </div>
+
         {loading ? (
           <p className="text-sm text-[#8B95A1]">로딩 중...</p>
         ) : items.length === 0 ? (
           <p className="text-sm text-[#8B95A1]">등록된 공지사항이 없습니다.</p>
+        ) : filteredItems.length === 0 ? (
+          <p className="text-sm text-[#8B95A1]">선택한 카테고리의 공지사항이 없습니다.</p>
         ) : (
           <div className="bg-white border border-[#D4DAE2] overflow-hidden">
             <table className="w-full text-sm">
@@ -58,7 +97,7 @@ export default function AdminNewsPage() {
                 </tr>
               </thead>
               <tbody>
-                {items.map((item) => (
+                {filteredItems.map((item) => (
                   <tr key={item.id} className="border-b border-[#D4DAE2] last:border-0 hover:bg-[#F5F7F8] transition-colors">
                     <td className="px-5 py-4 text-[#2d2a28] max-w-xs truncate">{item.title}</td>
                     <td className="px-5 py-4 text-[#8B95A1] text-xs">{item.category}</td>

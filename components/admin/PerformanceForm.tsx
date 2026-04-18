@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Performance, PerformanceSpec } from "@/lib/types";
 import { ADMIN_PATH } from "@/lib/admin-path";
+import ImageUploadField from "./ImageUploadField";
 
 const CATEGORIES = [
   { id: "environment", label: "환경설비" },
@@ -283,51 +284,30 @@ export default function PerformanceForm({ initial, id }: Props) {
 
       {/* 이미지 */}
       <div>
-        <label className={labelClass}>이미지 URL (최대 5장)</label>
+        <label className={labelClass}>이미지 (최대 5장 — URL 또는 파일 업로드)</label>
         <div className="space-y-3">
           {images.map((url, i) => (
-            <div key={i} className="flex gap-2 items-start">
-              <div className="flex-1 space-y-2">
-                <input
-                  type="text"
-                  value={url}
-                  onChange={(e) => updateImage(i, e.target.value)}
-                  className={inputClass}
-                  placeholder={`이미지 ${i + 1} URL`}
-                />
-                {url.trim() && (
-                  <div className="flex items-start gap-2">
-                    <img
-                      src={url}
-                      alt={`미리보기 ${i + 1}`}
-                      className="w-32 h-32 object-cover border border-[#D4DAE2]"
-                      style={{ transform: `rotate(${rotations[i] ?? 0}deg)`, imageOrientation: "from-image" }}
-                      onError={(e) => { (e.target as HTMLImageElement).style.display = "none"; }}
-                    />
-                    <div className="flex flex-col gap-1">
-                      <button
-                        type="button"
-                        onClick={() => rotateImage(i)}
-                        className="text-xs text-[#5C6470] hover:text-[#C05010] px-2 py-1.5 border border-[#D4DAE2] hover:border-[#C05010] transition-colors"
-                        title="90° 회전"
-                      >
-                        ↻ 회전
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setImages((prev) => prev.filter((_, idx) => idx !== i));
-                          setRotations((prev) => { const n = { ...prev }; delete n[i]; return n; });
-                        }}
-                        className="text-xs text-red-400 hover:text-red-600 px-2 py-1.5 border border-red-200 hover:border-red-400 transition-colors"
-                      >
-                        삭제
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
-            </div>
+            <ImageUploadField
+              key={i}
+              label={`이미지 ${i + 1}`}
+              value={url}
+              onChange={(v) => updateImage(i, v)}
+              folder={`performances/${form.category}`}
+              rotation={rotations[i] ?? 0}
+              onRotate={() => rotateImage(i)}
+              onRemove={() => {
+                setImages((prev) => prev.filter((_, idx) => idx !== i));
+                setRotations((prev) => {
+                  const n: Record<number, number> = {};
+                  Object.entries(prev).forEach(([k, v]) => {
+                    const idx = Number(k);
+                    if (idx < i) n[idx] = v;
+                    else if (idx > i) n[idx - 1] = v;
+                  });
+                  return n;
+                });
+              }}
+            />
           ))}
         </div>
         {images.length < 5 && (
