@@ -140,15 +140,15 @@ const productMeta = [
   { image: `${S3}/images/hvac/dry-room-ahu.png`, href: "/products/hvac/dry-room" },
   { image: `${S3}/images/hvac/direct-ahu.png`, href: "/products/hvac/direct-ahu" },
   { image: `${S3}/images/hvac/door-heater.png`, href: "/products/hvac/door-heater" },
-  { image: `/images/dehumidifier-thumb.jpg`, href: "/products/hvac/dehumidifier" },
+  { image: `${S3}/images/hvac/dehumidifier-thumb.jpg`, href: "/products/hvac/dehumidifier" },
 ];
 
 const industryImages = [
-  `/images/industry-semiconductor.png`,
+  `${S3}/images/industries/industry-semiconductor.png`,
   `${S3}/assets/industry3.png`,
-  `/images/industry-food.png`,
+  `${S3}/images/industries/industry-food.png`,
   `${S3}/assets/industry2.png`,
-  `/images/industry-food.png`,
+  `${S3}/images/industries/industry-food.png`,
   `${S3}/assets/industry1.png`,
 ];
 

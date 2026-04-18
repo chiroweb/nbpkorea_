@@ -8,7 +8,7 @@ const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 function getImage(locale: string) {
   return {
-    src: `/images/company-main-new.png`,
+    src: `${S3}/images/company/company-main-new.png`,
     alt: locale === "en" ? "NBPKOREA Main" : "NBPKOREA 메인",
   };
 }

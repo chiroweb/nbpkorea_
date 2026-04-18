@@ -423,7 +423,7 @@ function CompanyInfoSection() {
           </div>
           {/* Photo */}
           <div className={`relative overflow-hidden transition-all duration-1000 delay-500 hidden lg:block ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <Image src="/images/company-main-new.png" alt="NBPKOREA Headquarters" fill className="object-cover" />
+            <Image src={`${S3}/images/company/company-main-new.png`} alt="NBPKOREA Headquarters" fill className="object-cover" />
           </div>
         </div>
       </div>

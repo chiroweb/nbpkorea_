@@ -30,6 +30,7 @@ const staticPaths = [
   "/products/burner/low-nox-burner",
   "/products/burner/oven-burner",
   "/products/burner/metal-fiber-burner",
+  "/products/burner/ceramic-burner",
   "/products/burner/valve-train",
   "/products/burner/portable-burner",
   "/products/burner/valve-burner",

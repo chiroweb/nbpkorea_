@@ -533,6 +533,7 @@
       "lowNoxBurner": "Low NOx Burner",
       "ovenBurner": "Oven Burner",
       "metalFiberBurner": "Metal Fiber Burner",
+      "ceramicBurner": "Ceramic Burner",
       "portableBurner": "Portable Burner",
       "valveBurner": "Valve Burner",
       "valveTrain": "Valve Train Parts",
@@ -679,7 +680,7 @@
       },
       "fpbBurner": {
         "subtitle": "MPG Burner",
-        "description": "Industrial burner lineup based on ECOSTAR (Turkey) technology partnership. Offers 13 categories of combustion solutions including gas burners, dual-fuel burners, fuel oil burners, and process burners.",
+        "description": "Industrial burner lineup based on MIDCO (USA) technology partnership. Offers 13 categories of combustion solutions including gas burners, dual-fuel burners, fuel oil burners, and process burners.",
         "ctaTitle": "Considering the MPG Burner?",
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
       },

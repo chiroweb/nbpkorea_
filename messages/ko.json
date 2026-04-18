@@ -533,6 +533,7 @@
       "lowNoxBurner": "저녹스 버너",
       "ovenBurner": "오븐 버너",
       "metalFiberBurner": "메탈버너",
+      "ceramicBurner": "세라믹 버너",
       "portableBurner": "포터블 버너",
       "valveBurner": "밸브버너",
       "valveTrain": "밸브트레인/부품류",
@@ -667,7 +668,7 @@
       },
       "fpbBurner": {
         "subtitle": "MPG 버너",
-        "description": "ECOSTAR(터키) 기술 제휴 기반의 산업용 버너 라인업. 가스 버너, 이중연료 버너, 경유 버너, 프로세스 버너 등 13개 카테고리의 다양한 연소 솔루션을 제공합니다.",
+        "description": "MIDCO(USA) 기술 제휴 기반의 산업용 버너 라인업. 가스 버너, 이중연료 버너, 경유 버너, 프로세스 버너 등 13개 카테고리의 다양한 연소 솔루션을 제공합니다.",
         "ctaTitle": "MPG 버너 도입을 검토 중이신가요?",
         "ctaDesc": "현장 조건에 맞는 최적 사양을 제안해 드립니다."
       },

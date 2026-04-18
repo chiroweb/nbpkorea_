@@ -52,6 +52,7 @@ export default function ProductNav({ activeTab, activeProduct, onTabChange }: Pr
     { id: "low-nox-burner", label: t("nav.lowNoxBurner"), href: "/products/burner/low-nox-burner" },
     { id: "oven-burner", label: t("nav.ovenBurner"), href: "/products/burner/oven-burner" },
     { id: "metal-fiber-burner", label: t("nav.metalFiberBurner"), href: "/products/burner/metal-fiber-burner" },
+    { id: "ceramic-burner", label: t("nav.ceramicBurner"), href: "/products/burner/ceramic-burner" },
     { id: "portable-burner", label: t("nav.portableBurner"), href: "/products/burner/portable-burner" },
     { id: "valve-burner", label: t("nav.valveBurner"), href: "/products/burner/valve-burner" },
     { id: "valve-train", label: t("nav.valveTrain"), href: "/products/burner/valve-train" },

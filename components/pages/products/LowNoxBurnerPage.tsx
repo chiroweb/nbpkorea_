@@ -144,7 +144,7 @@ export default function LowNoxBurnerPage() {
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
-              <Image src="/images/burner/low-nox-burner-main.png" alt={c.imgAlt} fill className="object-contain p-4" priority  unoptimized />
+              <Image src={`${S3}/images/burner/low-nox-burner-main.png`} alt={c.imgAlt} fill className="object-contain p-4" priority  unoptimized />
             </div>
           </div>
         </div>

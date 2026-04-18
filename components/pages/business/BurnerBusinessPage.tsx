@@ -12,9 +12,9 @@ const content = {
   en: {
     products: [
       { title: "Duct Burner", subtitle: "Duct Burner", desc: "Low-NOx industrial duct heating burner with metal fiber surface combustion. 0.5FT\u20136FT lineup.", image: `${S3}/images/burner/duct-burner-hero.jpg`, href: "/products/burner/duct-burner", badge: "Core Product" },
-      { title: "MPG Burner", subtitle: "MPG Burner", desc: "High-efficiency industrial burner with forced premix for complete combustion.", image: "/images/burner/mpg-burner-main.jpg", href: "/products/burner/fpb-burner" },
-      { title: "Low-NOx Burner", subtitle: "Low-NOx Burner", desc: "Eco-friendly burner minimizing NOx emissions.", image: "/images/burner/low-nox-burner-main.png", href: "/products/burner/low-nox-burner" },
-      { title: "Ceramic Burner", subtitle: "Ceramic Burner", desc: "High-efficiency burner maximizing infrared radiant heat with ceramic surface combustion.", image: `${S3}/images/burner/ceramic-burner.jpg`, href: "/products/burner/metal-fiber-burner" },
+      { title: "MPG Burner", subtitle: "MPG Burner", desc: "High-efficiency industrial burner with forced premix for complete combustion.", image: `${S3}/images/burner/mpg-burner-main.jpg`, href: "/products/burner/fpb-burner" },
+      { title: "Low-NOx Burner", subtitle: "Low-NOx Burner", desc: "Eco-friendly burner minimizing NOx emissions.", image: `${S3}/images/burner/low-nox-burner-main.png`, href: "/products/burner/low-nox-burner" },
+      { title: "Ceramic Burner", subtitle: "Ceramic Burner", desc: "High-efficiency burner maximizing infrared radiant heat with ceramic surface combustion.", image: `${S3}/images/burner/ceramic-burner.jpg`, href: "/products/burner/ceramic-burner" },
       { title: "Metal Fiber Burner", subtitle: "Metal Fiber Burner", desc: "Infrared radiant surface combustion. Maximum energy efficiency, dramatically reduced NOx.", image: `${S3}/images/burner/metal-fiber-burner-thumb.png`, href: "/products/burner/metal-fiber-burner" },
       { title: "Furnace Burner", subtitle: "Furnace Burner", desc: "For industrial furnaces, incinerators, and boilers requiring high-temperature combustion.", image: `${S3}/images/burner/furnace-burner-main.jpg`, href: "/products/burner/furnace-burner" },
       { title: "Oven Burner", subtitle: "Oven Burner", desc: "Uniform heating burner optimized for food, painting, and heat treatment ovens.", image: `${S3}/images/burner/fpb/air-heating-burners-40199-6454995.jpg`, href: "/products/burner/oven-burner" },
@@ -26,11 +26,11 @@ const content = {
     ],
     industries: [
       { name: "Paint Drying", desc: "Hot air supply for automotive and shipbuilding paint booths", clients: "BMW, Mercedes-Benz, HD Hyundai Heavy Industries", image: `${S3}/assets/industry2.png`, tag: "Paint" },
-      { name: "Industrial Drying", desc: "Drying lines for agricultural products, timber, textiles, and printing", clients: "Numerous industrial sites", image: `/images/industry-shipbuilding.png`, tag: "Drying" },
+      { name: "Industrial Drying", desc: "Drying lines for agricultural products, timber, textiles, and printing", clients: "Numerous industrial sites", image: `${S3}/images/industries/industry-shipbuilding.png`, tag: "Drying" },
       { name: "Heat Treatment/Incineration", desc: "Industrial heat treatment furnaces, incinerators, boilers", clients: "POSCO, Dongkuk Steel", image: `${S3}/assets/industry3.png`, tag: "Heat Treatment" },
-      { name: "Food Processing", desc: "Food drying, roasting, oven heating", clients: "NH Mokwochon, Ediya Coffee", image: `/images/industry-food.png`, tag: "Food" },
-      { name: "Energy/Plant", desc: "Heat sources for power plants and petrochemical plants", clients: "Major energy companies", image: `/images/industry-energy-plant.png`, tag: "Energy" },
-      { name: "Semiconductor/Cleanroom", desc: "Cleanroom auxiliary heat sources, process heating", clients: "Major semiconductor manufacturers", image: `/images/industry-semiconductor.png`, tag: "Semiconductor" },
+      { name: "Food Processing", desc: "Food drying, roasting, oven heating", clients: "NH Mokwochon, Ediya Coffee", image: `${S3}/images/industries/industry-food.png`, tag: "Food" },
+      { name: "Energy/Plant", desc: "Heat sources for power plants and petrochemical plants", clients: "Major energy companies", image: `${S3}/images/industries/industry-energy-plant.png`, tag: "Energy" },
+      { name: "Semiconductor/Cleanroom", desc: "Cleanroom auxiliary heat sources, process heating", clients: "Major semiconductor manufacturers", image: `${S3}/images/industries/industry-semiconductor.png`, tag: "Semiconductor" },
     ],
     techFeatures: [
       "Two-Stage Combustion \u2014 Minimizes NOx and CO emissions",
@@ -77,9 +77,9 @@ const content = {
   ko: {
     products: [
       { title: "\uB355\uD2B8\uBC84\uB108", subtitle: "Duct Burner", desc: "\uBA54\uD0C8\uD30C\uC774\uBC84 \uD45C\uBA74\uC5F0\uC18C \uBC29\uC2DD\uC758 NOx \uC800\uBC30\uCD9C \uC0B0\uC5C5\uC6A9 \uB355\uD2B8 \uAC00\uC5F4 \uBC84\uB108. 0.5FT~6FT \uB77C\uC778\uC5C5.", image: `${S3}/images/burner/duct-burner-hero.jpg`, href: "/products/burner/duct-burner", badge: "\uC8FC\uB825 \uC81C\uD488" },
-      { title: "MPG \uBC84\uB108", subtitle: "MPG Burner", desc: "\uAC15\uC81C \uC608\uD63C\uD569 \uBC29\uC2DD\uC73C\uB85C \uC644\uC804 \uC5F0\uC18C\uB97C \uC2E4\uD604\uD558\uB294 \uACE0\uD6A8\uC728 \uC0B0\uC5C5\uC6A9 \uBC84\uB108.", image: "/images/burner/mpg-burner-main.jpg", href: "/products/burner/fpb-burner" },
-      { title: "\uC800\uB179\uC2A4 \uBC84\uB108", subtitle: "Low-NOx Burner", desc: "NOx \uBC30\uCD9C\uC744 \uADF9\uD55C\uAE4C\uC9C0 \uC800\uAC10\uD558\uB294 \uD658\uACBD \uCE5C\uD654\uD615 \uBC84\uB108.", image: "/images/burner/low-nox-burner-main.png", href: "/products/burner/low-nox-burner" },
-      { title: "\uC138\uB77C\uBBF9 \uBC84\uB108", subtitle: "Ceramic Burner", desc: "\uB0B4\uC5F4 \uC138\uB77C\uBBF9 \uD45C\uBA74\uC5F0\uC18C \uBC29\uC2DD\uC73C\uB85C \uC801\uC678\uC120 \uBCF5\uC0AC\uC5F4\uC744 \uADF9\uB300\uD654\uD558\uB294 \uACE0\uD6A8\uC728 \uBC84\uB108.", image: `${S3}/images/burner/ceramic-burner.jpg`, href: "/products/burner/metal-fiber-burner" },
+      { title: "MPG \uBC84\uB108", subtitle: "MPG Burner", desc: "\uAC15\uC81C \uC608\uD63C\uD569 \uBC29\uC2DD\uC73C\uB85C \uC644\uC804 \uC5F0\uC18C\uB97C \uC2E4\uD604\uD558\uB294 \uACE0\uD6A8\uC728 \uC0B0\uC5C5\uC6A9 \uBC84\uB108.", image: `${S3}/images/burner/mpg-burner-main.jpg`, href: "/products/burner/fpb-burner" },
+      { title: "\uC800\uB179\uC2A4 \uBC84\uB108", subtitle: "Low-NOx Burner", desc: "NOx \uBC30\uCD9C\uC744 \uADF9\uD55C\uAE4C\uC9C0 \uC800\uAC10\uD558\uB294 \uD658\uACBD \uCE5C\uD654\uD615 \uBC84\uB108.", image: `${S3}/images/burner/low-nox-burner-main.png`, href: "/products/burner/low-nox-burner" },
+      { title: "\uC138\uB77C\uBBF9 \uBC84\uB108", subtitle: "Ceramic Burner", desc: "\uB0B4\uC5F4 \uC138\uB77C\uBBF9 \uD45C\uBA74\uC5F0\uC18C \uBC29\uC2DD\uC73C\uB85C \uC801\uC678\uC120 \uBCF5\uC0AC\uC5F4\uC744 \uADF9\uB300\uD654\uD558\uB294 \uACE0\uD6A8\uC728 \uBC84\uB108.", image: `${S3}/images/burner/ceramic-burner.jpg`, href: "/products/burner/ceramic-burner" },
       { title: "\uBA54\uD0C8\uD30C\uC774\uBC84 \uBC84\uB108", subtitle: "Metal Fiber Burner", desc: "\uC801\uC678\uC120 \uBCF5\uC0AC\uC5F4 \uAE30\uBC18 \uD45C\uBA74\uC5F0\uC18C. \uC5D0\uB108\uC9C0 \uD6A8\uC728 \uADF9\uB300\uD654, NOx \uB300\uD3ED \uC800\uAC10.", image: `${S3}/images/burner/metal-fiber-burner-thumb.png`, href: "/products/burner/metal-fiber-burner" },
       { title: "\uB85C\uC6A9 \uBC84\uB108", subtitle: "Furnace Burner", desc: "\uC0B0\uC5C5\uC6A9 \uC5F4\uCC98\uB9AC\uB85C\xB7\uC18C\uAC01\uB85C\xB7\uBCF4\uC77C\uB7EC \uB4F1 \uACE0\uC628 \uC5F0\uC18C\uAC00 \uC694\uAD6C\uB418\uB294 \uC124\uBE44\uC5D0 \uC801\uC6A9.", image: `${S3}/images/burner/furnace-burner-main.jpg`, href: "/products/burner/furnace-burner" },
       { title: "\uC624\uBE10 \uBC84\uB108", subtitle: "Oven Burner", desc: "\uC2DD\uD488\xB7\uB3C4\uC7A5\xB7\uC5F4\uCC98\uB9AC \uC624\uBE10\uC5D0 \uCD5C\uC801\uD654\uB41C \uADE0\uC77C \uAC00\uC5F4 \uBC84\uB108.", image: `${S3}/images/burner/fpb/air-heating-burners-40199-6454995.jpg`, href: "/products/burner/oven-burner" },
@@ -91,11 +91,11 @@ const content = {
     ],
     industries: [
       { name: "\uB3C4\uC7A5 \uAC74\uC870", desc: "\uC790\uB3D9\uCC28\xB7\uC870\uC120 \uB3C4\uC7A5 \uBD80\uC2A4 \uC5F4\uD48D \uACF5\uAE09", clients: "BMW, Mercedes-Benz, \uD604\uB300\uC911\uACF5\uC5C5", image: `${S3}/assets/industry2.png`, tag: "\uB3C4\uC7A5" },
-      { name: "\uC0B0\uC5C5\uC6A9 \uAC74\uC870", desc: "\uB18D\uC218\uC0B0\uBB3C, \uBAA9\uC7AC, \uC12C\uC720, \uC778\uC1C4 \uAC74\uC870 \uB77C\uC778", clients: "\uB2E4\uC218 \uC0B0\uC5C5 \uD604\uC7A5", image: `/images/industry-shipbuilding.png`, tag: "\uAC74\uC870" },
+      { name: "\uC0B0\uC5C5\uC6A9 \uAC74\uC870", desc: "\uB18D\uC218\uC0B0\uBB3C, \uBAA9\uC7AC, \uC12C\uC720, \uC778\uC1C4 \uAC74\uC870 \uB77C\uC778", clients: "\uB2E4\uC218 \uC0B0\uC5C5 \uD604\uC7A5", image: `${S3}/images/industries/industry-shipbuilding.png`, tag: "\uAC74\uC870" },
       { name: "\uC5F4\uCC98\uB9AC/\uC18C\uAC01", desc: "\uC0B0\uC5C5\uC6A9 \uC5F4\uCC98\uB9AC\uB85C, \uC18C\uAC01\uB85C, \uBCF4\uC77C\uB7EC", clients: "POSCO, \uB3D9\uAD6D\uC81C\uAC15", image: `${S3}/assets/industry3.png`, tag: "\uC5F4\uCC98\uB9AC" },
-      { name: "\uC2DD\uD488 \uAC00\uACF5", desc: "\uC2DD\uD488 \uAC74\uC870, \uB85C\uC2A4\uD305, \uC624\uBE10 \uAC00\uC5F4", clients: "\uB18D\uD611\uBAA9\uC6B0\uCD0C, \uC774\uB514\uC57C\uCEE4\uD53C", image: `/images/industry-food.png`, tag: "\uC2DD\uD488" },
-      { name: "\uC5D0\uB108\uC9C0/\uD50C\uB79C\uD2B8", desc: "\uBC1C\uC804\uC18C, \uC11D\uC720\uD654\uD559 \uD50C\uB79C\uD2B8 \uC5F4\uC6D0", clients: "\uC5D0\uB108\uC9C0 \uC8FC\uC694 \uAE30\uC5C5", image: `/images/industry-energy-plant.png`, tag: "\uC5D0\uB108\uC9C0" },
-      { name: "\uBC18\uB3C4\uCCB4/\uD074\uB9B0\uB8F8", desc: "\uD074\uB9B0\uB8F8 \uBCF4\uC870 \uC5F4\uC6D0, \uACF5\uC815 \uAC00\uC5F4", clients: "\uBC18\uB3C4\uCCB4 \uC8FC\uC694 \uC81C\uC870\uC0AC", image: `/images/industry-semiconductor.png`, tag: "\uBC18\uB3C4\uCCB4" },
+      { name: "\uC2DD\uD488 \uAC00\uACF5", desc: "\uC2DD\uD488 \uAC74\uC870, \uB85C\uC2A4\uD305, \uC624\uBE10 \uAC00\uC5F4", clients: "\uB18D\uD611\uBAA9\uC6B0\uCD0C, \uC774\uB514\uC57C\uCEE4\uD53C", image: `${S3}/images/industries/industry-food.png`, tag: "\uC2DD\uD488" },
+      { name: "\uC5D0\uB108\uC9C0/\uD50C\uB79C\uD2B8", desc: "\uBC1C\uC804\uC18C, \uC11D\uC720\uD654\uD559 \uD50C\uB79C\uD2B8 \uC5F4\uC6D0", clients: "\uC5D0\uB108\uC9C0 \uC8FC\uC694 \uAE30\uC5C5", image: `${S3}/images/industries/industry-energy-plant.png`, tag: "\uC5D0\uB108\uC9C0" },
+      { name: "\uBC18\uB3C4\uCCB4/\uD074\uB9B0\uB8F8", desc: "\uD074\uB9B0\uB8F8 \uBCF4\uC870 \uC5F4\uC6D0, \uACF5\uC815 \uAC00\uC5F4", clients: "\uBC18\uB3C4\uCCB4 \uC8FC\uC694 \uC81C\uC870\uC0AC", image: `${S3}/images/industries/industry-semiconductor.png`, tag: "\uBC18\uB3C4\uCCB4" },
     ],
     techFeatures: [
       "2\uB2E8 \uC5F0\uC18C(Two-Stage) \uBC29\uC2DD \u2014 NOx\xB7CO \uBC30\uCD9C \uCD5C\uC18C\uD654",

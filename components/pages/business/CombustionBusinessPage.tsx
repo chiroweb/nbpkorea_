@@ -259,7 +259,7 @@ const productMeta = [
 
 /* ── 적용 분야 이미지/태그 (locale-independent) ── */
 const industryMeta = [
-  { image: `/images/industry-shipbuilding.png`, tag: "조선" },
+  { image: `${S3}/images/industries/industry-shipbuilding.png`, tag: "조선" },
   { image: `${S3}/assets/industry2.png`, tag: "자동차" },
   { image: `${S3}/images/intro2.jpg`, tag: "반도체" },
   { image: `${S3}/images/into3.jpg`, tag: "식품" },

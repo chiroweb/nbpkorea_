@@ -22,12 +22,12 @@ const content = {
       { title: "One-Stop Design, Construction & Permitting", desc: "We handle the entire process from environmental impact assessment to design, fabrication, construction, commissioning, and permitting." },
     ],
     industries: [
-      { name: "Shipbuilding & Marine", desc: "VOCs treatment and odor removal in painting processes", clients: "Hanwha Ocean, HD Hyundai Heavy Industries, Samsung Heavy Industries", image: `/images/industry-shipbuilding.png`, tag: "Shipbuilding" },
+      { name: "Shipbuilding & Marine", desc: "VOCs treatment and odor removal in painting processes", clients: "Hanwha Ocean, HD Hyundai Heavy Industries, Samsung Heavy Industries", image: `${S3}/images/industries/industry-shipbuilding.png`, tag: "Shipbuilding" },
       { name: "Automotive", desc: "Paint line exhaust gas treatment", clients: "BMW, Mercedes-Benz, KIA", image: `${S3}/assets/industry2.png`, tag: "Automotive" },
       { name: "Chemical / Petrochemical", desc: "Process emission VOCs & odor treatment", clients: "Kyung-In Synthetic, major chemical companies", image: `${S3}/assets/industry3.png`, tag: "Chemical" },
-      { name: "Semiconductor", desc: "Cleanroom exhaust hazardous gas treatment", clients: "Major semiconductor manufacturers", image: `/images/industry-semiconductor.png`, tag: "Semiconductor" },
-      { name: "Food / Pharmaceutical", desc: "Food processing odor, pharmaceutical process exhaust treatment", clients: "NH Mokwochon, Ediya Coffee", image: `/images/industry-food.png`, tag: "Food" },
-      { name: "Environmental / Wastewater", desc: "Food waste and wastewater treatment plant odor removal", clients: "Korea Environment Corporation, Busan Environment Corporation", image: `/images/industry-energy-plant.png`, tag: "Environmental" },
+      { name: "Semiconductor", desc: "Cleanroom exhaust hazardous gas treatment", clients: "Major semiconductor manufacturers", image: `${S3}/images/industries/industry-semiconductor.png`, tag: "Semiconductor" },
+      { name: "Food / Pharmaceutical", desc: "Food processing odor, pharmaceutical process exhaust treatment", clients: "NH Mokwochon, Ediya Coffee", image: `${S3}/images/industries/industry-food.png`, tag: "Food" },
+      { name: "Environmental / Wastewater", desc: "Food waste and wastewater treatment plant odor removal", clients: "Korea Environment Corporation, Busan Environment Corporation", image: `${S3}/images/industries/industry-energy-plant.png`, tag: "Environmental" },
     ],
     techFeatures: [
       "95%+ heat recovery rate via regenerative media — reduced operating costs",
@@ -79,12 +79,12 @@ const content = {
       { title: "설계·시공·인허가 원스톱", desc: "환경영향평가부터 설계·제작·시공·시운전·인허가까지 전 과정을 일괄 수행합니다." },
     ],
     industries: [
-      { name: "조선/해양", desc: "도장 공정 VOCs 처리, 악취 제거", clients: "한화오션, 현대중공업, 삼성중공업", image: `/images/industry-shipbuilding.png`, tag: "조선" },
+      { name: "조선/해양", desc: "도장 공정 VOCs 처리, 악취 제거", clients: "한화오션, 현대중공업, 삼성중공업", image: `${S3}/images/industries/industry-shipbuilding.png`, tag: "조선" },
       { name: "자동차", desc: "도장 라인 배기가스 처리", clients: "BMW, Mercedes-Benz, KIA", image: `${S3}/assets/industry2.png`, tag: "자동차" },
       { name: "화학/석유화학", desc: "공정 배출 VOCs·악취 처리", clients: "경인양행, 화학 주요 기업", image: `${S3}/assets/industry3.png`, tag: "화학" },
-      { name: "반도체", desc: "클린룸 배기 유해가스 처리", clients: "반도체 주요 제조사", image: `/images/industry-semiconductor.png`, tag: "반도체" },
-      { name: "식품/제약", desc: "식품 가공 악취, 제약 공정 배기 처리", clients: "농협목우촌, 이디야커피", image: `/images/industry-food.png`, tag: "식품" },
-      { name: "환경/폐수처리", desc: "음식물·폐수 처리장 악취 제거", clients: "한국환경공단, 부산환경공단", image: `/images/industry-energy-plant.png`, tag: "환경" },
+      { name: "반도체", desc: "클린룸 배기 유해가스 처리", clients: "반도체 주요 제조사", image: `${S3}/images/industries/industry-semiconductor.png`, tag: "반도체" },
+      { name: "식품/제약", desc: "식품 가공 악취, 제약 공정 배기 처리", clients: "농협목우촌, 이디야커피", image: `${S3}/images/industries/industry-food.png`, tag: "식품" },
+      { name: "환경/폐수처리", desc: "음식물·폐수 처리장 악취 제거", clients: "한국환경공단, 부산환경공단", image: `${S3}/images/industries/industry-energy-plant.png`, tag: "환경" },
     ],
     techFeatures: [
       "축열재 열회수율 95% 이상 — 운영비 절감",
