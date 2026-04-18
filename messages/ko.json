@@ -72,8 +72,8 @@
       "description": "NBPKOREA 덕트 버너. 배기 덕트 내 직접 설치형 고효율 산업용 버너."
     },
     "portableBurner": {
-      "title": "포터블 버너 | 엔비피코리아(NBPKOREA)",
-      "description": "NBPKOREA 포터블 버너. 이동식 설계의 컴팩트 산업용 버너."
+      "title": "실린더형 메탈 버너 | 엔비피코리아(NBPKOREA)",
+      "description": "NBPKOREA 실린더형 메탈 버너. 현장 즉시 투입형 이동식 산업용 버너로 조선소·건설 현장 가열에 최적화."
     }
   },
   "common": {
@@ -109,7 +109,8 @@
       "ovenBurner": "오븐 버너",
       "metalFiberBurner": "메탈버너",
       "valveTrain": "밸브트레인/부품류",
-      "ceramicBurner": "세라믹 버너"
+      "ceramicBurner": "세라믹 버너",
+      "portableBurner": "실린더형 메탈 버너"
     },
     "footer": {
       "access": "Access",
@@ -534,7 +535,7 @@
       "ovenBurner": "오븐 버너",
       "metalFiberBurner": "메탈버너",
       "ceramicBurner": "세라믹 버너",
-      "portableBurner": "포터블 버너",
+      "portableBurner": "실린더형 메탈 버너",
       "valveBurner": "밸브버너",
       "valveTrain": "밸브트레인/부품류",
       "paintDryer": "도장건조기"

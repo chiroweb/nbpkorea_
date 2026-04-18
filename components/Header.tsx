@@ -121,6 +121,7 @@ export default function Header() {
             { label: t("ovenBurner"), href: "/products/burner/oven-burner" },
             { label: t("ceramicBurner"), href: "/products/burner/ceramic-burner" },
             { label: t("metalFiberBurner"), href: "/products/burner/metal-fiber-burner" },
+            { label: t("portableBurner"), href: "/products/burner/portable-burner" },
             { label: t("valveTrain"), href: "/products/burner/valve-train" },
           ],
         },

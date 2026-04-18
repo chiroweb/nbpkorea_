@@ -263,6 +263,17 @@ function ProductsPageInner() {
       tags: locale === "en" ? ["Ceramic", "Infrared", "Surface Combustion"] : ["세라믹", "적외선", "표면연소"],
     },
     {
+      id: "cylindrical-metal-burner",
+      title: locale === "en" ? "Cylindrical Metal Burner" : "실린더형 메탈 버너",
+      subtitle: "Cylindrical Metal Burner",
+      href: "/products/burner/portable-burner",
+      image: `${S3}/images/burner/metal-burner2.png`,
+      description: locale === "en"
+        ? "Mobile industrial burner that can be deployed directly to job sites for immediate operation without fixed equipment. Optimized for shipyard block heating, concrete curing, and ship tank drying."
+        : "고정 설비 없이 현장에 직접 투입해 즉시 운전 가능한 이동형 산업용 버너. 조선소 블록 가열, 콘크리트 양생, 선박 탱크 건조 등 이동성·임시성이 필요한 현장에 최적화.",
+      tags: locale === "en" ? ["Cylindrical", "Portable", "Multi-Fuel"] : ["실린더형", "이동형", "다연료"],
+    },
+    {
       id: "furnace-burner",
       title: t("nav.furnaceBurner"),
       subtitle: t("burner.furnaceBurner.subtitle"),

@@ -13,12 +13,12 @@ const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const content = {
   en: {
-    heroTitle: "Metal Burner",
-    heroTitleSub: "(Metal Burner)",
+    heroTitle: "Cylindrical Metal Burner",
+    heroTitleSub: "(Cylindrical Metal Burner)",
     heroDesc1: "NBPKOREA Metal Burner is a portable industrial burner that can be directly deployed to job sites for immediate operation without fixed equipment. It is optimized for temporary and mobile heating needs such as shipyard block interior heating, construction site concrete curing, and ship tank drying.",
     heroDesc2: "Based on MIDCO International (USA) two-stage combustion technology, it minimizes NOx and CO emissions, and both LNG and LPG gas can be used without nozzle replacement. With independent operation configuration, it starts immediately with only site gas supply.",
     heroTags: ["Portable", "Immediate Field Deployment", "Independent Operation", "Multi-Fuel Ready"],
-    imgAlt: "Metal Burner",
+    imgAlt: "Cylindrical Metal Burner",
     features: [
       "Portable package design — rapid field deployment and withdrawal",
       "Independent operation — runs with only site gas supply, no factory equipment needed",
@@ -63,15 +63,15 @@ const content = {
       { label: "Operation Mode", value: "Standalone Package" },
     ],
     specDisclaimer: "※ Custom-designed according to site conditions and required specifications. Optimal specifications proposed after pre-site survey.",
-    floatingLabel: "View Metal Burner Case Studies",
+    floatingLabel: "View Cylindrical Metal Burner Case Studies",
   },
   ko: {
-    heroTitle: "메탈버너",
-    heroTitleSub: "(Metal Burner)",
+    heroTitle: "실린더형 메탈 버너",
+    heroTitleSub: "(Cylindrical Metal Burner)",
     heroDesc1: "엔비피코리아 메탈버너는 고정 설비 없이 현장에 직접 투입하여 즉시 운전할 수 있는 이동형 산업용 버너입니다. 조선소 블록 내부 가열, 건설 현장 콘크리트 양생, 선박 탱크 건조 등 일시적·이동성이 필요한 현장에 최적화되어 있습니다.",
     heroDesc2: "MIDCO International(미국) 기술 기반의 2단 연소 방식으로 NOx·CO 배출을 최소화하며, 노즐 교체 없이 LNG / LPG 가스를 모두 사용할 수 있습니다. 독립 운전 구성으로 현장 가스 공급만으로 즉시 가동됩니다.",
     heroTags: ["이동형", "현장 즉시 투입", "독립 운전", "복합 연료 대응"],
-    imgAlt: "메탈버너",
+    imgAlt: "실린더형 메탈 버너",
     features: [
       "이동형 패키지 설계 — 현장 투입·철수 신속 대응",
       "독립 운전 가능 — 별도 공장 설비 없이 현장 가스 공급만으로 운전",
@@ -116,7 +116,7 @@ const content = {
       { label: "운전 방식", value: "독립형 패키지" },
     ],
     specDisclaimer: "※ 현장 조건 및 요구 사양에 따라 맞춤 설계합니다. 사전 현장 조사 후 최적 사양을 제안해 드립니다.",
-    floatingLabel: "메탈버너 적용 사례 보러가기",
+    floatingLabel: "실린더형 메탈 버너 적용 사례 보러가기",
   },
 };
 
@@ -130,14 +130,14 @@ export default function PortableBurnerPage() {
   return (
     <SubpageLayout
       title={t("nav.portableBurner")}
-      subtitle={`Metal Burner — ${t("burner.portableBurner.subtitle")}`}
+      subtitle={`Cylindrical Metal Burner — ${t("burner.portableBurner.subtitle")}`}
       breadcrumb={[
         { label: t("breadcrumb"), href: "/products" },
         { label: t("breadcrumbs.burner"), href: "/products?tab=burner" },
         { label: t("nav.portableBurner"), href: "/products/burner/portable-burner" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Portable Burner" : "포터블 버너"} label={c.floatingLabel} />
+      <FloatingCaseLink category="burner" tag={locale === "en" ? "Cylindrical Metal Burner" : "실린더형 메탈 버너"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="portable-burner" />
 
       {/* Hero */}
@@ -148,7 +148,7 @@ export default function PortableBurnerPage() {
             className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}
           >
             <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">
-              Industrial Burner · Metal Burner
+              Industrial Burner · Cylindrical Metal Burner
             </span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">
               {c.heroTitle}<br />{c.heroTitleSub}

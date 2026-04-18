@@ -72,8 +72,8 @@
       "description": "NBPKOREA duct burner — high-efficiency industrial burner installed directly inside exhaust ducts."
     },
     "portableBurner": {
-      "title": "Portable Burner | NBPKOREA",
-      "description": "NBPKOREA portable burner — compact, mobile industrial burner with easy-install design."
+      "title": "Cylindrical Metal Burner | NBPKOREA",
+      "description": "NBPKOREA cylindrical metal burner — immediate field-deployable mobile industrial burner optimized for shipyard and construction site heating."
     }
   },
   "common": {
@@ -109,7 +109,8 @@
       "ovenBurner": "Oven Burner",
       "metalFiberBurner": "Metal Fiber Burner",
       "valveTrain": "Valve Train & Parts",
-      "ceramicBurner": "Ceramic Burner"
+      "ceramicBurner": "Ceramic Burner",
+      "portableBurner": "Cylindrical Metal Burner"
     },
     "footer": {
       "access": "Access",
@@ -534,7 +535,7 @@
       "ovenBurner": "Oven Burner",
       "metalFiberBurner": "Metal Fiber Burner",
       "ceramicBurner": "Ceramic Burner",
-      "portableBurner": "Portable Burner",
+      "portableBurner": "Cylindrical Metal Burner",
       "valveBurner": "Valve Burner",
       "valveTrain": "Valve Train Parts",
       "paintDryer": "Paint Dryer"
