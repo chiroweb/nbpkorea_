@@ -12,21 +12,25 @@ const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const content = {
   en: {
-    title: "Low NOx Burner",
-    heroTags: ["Low NOx", "Full Premix", "Direct Ignition", "Emission Regulation Ready"],
+    title: "Next-Generation Low NOx Burner",
+    heroTags: ["EN 676:2020 Class 3", "1:6 Modulation", "Hinged Head", "Integrated Leak Detection"],
     applications: ["Automotive Paint Booths", "Industrial Ovens", "Drying Equipment", "Hot Air Supply Equipment", "Emission-Regulated Sites", "Precision Heat Treatment Process"],
-    processFlow: ["Gas Blower Supply", "Premix Combustion", "Metal Burner Head", "Low-NOx Flame Formation", "Process Heat Supply"],
-    processHighlight: ["Premix Combustion", "Low-NOx Flame Formation"],
+    processFlow: ["Gas Supply", "Electronic Proportional Modulation", "Adjustable Combustion Head", "Low-NOx Flame Formation", "Process Heat Supply"],
+    processHighlight: ["Electronic Proportional Modulation", "Low-NOx Flame Formation"],
     processEnd: "Process Heat Supply",
     features: [
-      "Low-emission industrial burner configuration based on MIDCO LNB technology",
-      "Premix method uniformly blends air and fuel for combustion stability",
-      "Eco-friendly combustion conditions designed for NOx and CO reduction",
-      "Direct Spark Ignition configuration without separate pilot burner can be reviewed",
-      "Suited for regulation-sensitive processes such as automotive paint booths, ovens, and drying equipment",
-      "Burner capacity optimization based on site heat load and exhaust conditions",
-      "System design integrating temperature control and interlock configurations",
-      "End-to-end support: design, fabrication, installation, commissioning, and maintenance",
+      "Low-NOx gas burner with NOx and CO emission Class 3 compliant with EN 676:2020 standard",
+      "Suitable for use in all types of combustion chambers per EN 303 standard",
+      "High thermal capacity modulation range via electronic proportional modulation, 1:6 modulation ratio",
+      "High-quality aluminum die-cast body construction",
+      "High-performance backward-curved centrifugal fan delivers fan efficiency, low power consumption, and low noise",
+      "Hinged system allows the combustion head to be removed without detaching the burner from the boiler",
+      "Integrated gas leak detection device with ionization electrode for flame control",
+      "Min/max airflow capacity adjustable via electric servomotor control; adjustable combustion head with stainless-steel turbulator",
+      "Three-phase fan motor with user-friendly control panel showing operating and fault states",
+      "Electronic control unit displaying fault and error codes per EN 298:2012 standard",
+      "Optional CO/O2 (trim) system integration for combustion optimization; gas piping connection for fault diagnosis",
+      "Ionization cable supports micro-ammeter connection; IP 44 electrical protection rating",
     ],
     capabilityCards: [
       { title: "Emission Control", value: "Low NOx / Low CO", description: "Low-emission combustion configurations are proposed for processes requiring emission regulation compliance." },
@@ -57,21 +61,25 @@ const content = {
     floatingLabel: "View Low NOx Burner Case Studies",
   },
   ko: {
-    title: "저녹스 버너",
-    heroTags: ["Low NOx", "완전 예혼합", "직접 점화", "환경 규제 대응"],
+    title: "차세대 저 NOx 버너",
+    heroTags: ["EN 676:2020 3등급", "1:6 변조 비율", "경첩식 헤드", "가스 누출 감지 통합"],
     applications: ["자동차 도장 부스", "산업용 오븐", "건조 설비", "열풍 공급 설비", "배출 규제 대응 현장", "정밀 열처리 공정"],
-    processFlow: ["가스 블로워 공급", "예혼합 연소", "메탈버너 헤드", "저NOx 화염 형성", "공정 열원 공급"],
-    processHighlight: ["예혼합 연소", "저NOx 화염 형성"],
+    processFlow: ["가스 공급", "전자 비례 변조", "조절식 연소 헤드", "저NOx 화염 형성", "공정 열원 공급"],
+    processHighlight: ["전자 비례 변조", "저NOx 화염 형성"],
     processEnd: "공정 열원 공급",
     features: [
-      "MIDCO LNB 기술 기반의 저배출 산업용 버너 구성",
-      "프리믹스 방식으로 공기와 연료를 균일하게 혼합해 연소 안정성 확보",
-      "NOx·CO 저감을 고려한 친환경 연소 조건 대응",
-      "별도 파일럿 버너 없이 Direct Spark Ignition 구성 검토 가능",
-      "자동차 도장 부스, 오븐, 건조 설비 등 규제 민감 공정에 적합",
-      "현장 열부하와 배기 조건에 따른 버너 용량 최적화 가능",
-      "온도 제어 및 인터록 구성과 연계한 시스템 설계 가능",
-      "설계·제작·설치·시운전·유지관리까지 통합 대응",
+      "EN 676:2020 표준을 준수하는 NOx 및 CO 배출량 3등급의 저 NOx 가스 버너",
+      "EN 303 규격에 따른 모든 유형의 연소실에서 사용하기에 적합",
+      "전자 비례 변조를 통한 높은 열용량 조절 범위, 1:6 변조 비율",
+      "고품질 알루미늄 다이캐스팅 본체",
+      "고성능 역날개 원심 팬으로 높은 팬 효율, 낮은 전력 소비, 낮은 소음 수준 제공",
+      "경첩식 시스템 덕분에 연소 헤드는 버너를 보일러에서 분리하지 않고도 제거 가능",
+      "통합 가스 누출 감지 장치 및 화염 제어용 이온화 전극",
+      "전기 서보모터 제어로 최소·최대 공기 흐름 용량 조절, 스테인리스 스틸 터뷸레이터 장착 조절식 연소 헤드",
+      "3상 팬 모터 및 작동·오류 상태를 표시하는 사용자 친화적 제어판",
+      "EN 298:2012 표준에 따른 고장 및 오류 코드를 표시하는 전자 제어 장치 장착",
+      "연소 최적화를 위한 선택적 CO/O2(트림) 시스템 통합 및 고장 진단용 가스 배관 연결",
+      "이온화 케이블의 마이크로암미터 연결 기능, IP 44 전기 보호 등급",
     ],
     capabilityCards: [
       { title: "Emission Control", value: "Low NOx / Low CO", description: "배출 규제 대응이 필요한 공정에 맞춰 저배출 연소 구성을 제안합니다." },
@@ -142,7 +150,7 @@ export default function LowNoxBurnerPage() {
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
-              <Image src={`${S3}/images/burner/fpb/gas-burners-low-nox-40199-6408963.jpg`} alt={c.imgAlt} fill className="object-cover" priority  unoptimized />
+              <Image src="/images/burner/low-nox-burner-main.png" alt={c.imgAlt} fill className="object-contain p-4" priority  unoptimized />
             </div>
           </div>
         </div>

@@ -36,8 +36,9 @@ const content = {
     ],
     bodyText: "For oven burners, overall process temperature uniformity and residence time management matter more than raw heating power. NBPKOREA proposes heat source configurations based on oven size, product characteristics, drying time, and target temperature.",
     appImages: [
-      { src: `${S3}/images/burner/oven-burner-app-1.jpg`, alt: "Oven Burner Application Example 1" },
-      { src: `${S3}/images/burner/oven-burner-app-2.jpg`, alt: "Oven Burner Application Example 2" },
+      { src: `${S3}/images/burner/oven-burner-main.jpg`, alt: "Oven Burner Application Example 1" },
+      { src: `${S3}/images/burner/oven-burner-app-1.jpg`, alt: "Oven Burner Application Example 2" },
+      { src: `${S3}/images/burner/oven-burner-app-2.jpg`, alt: "Oven Burner Application Example 3" },
     ],
     imgAlt: "Oven Burner",
     floatingLabel: "View Oven Burner Case Studies",
@@ -67,8 +68,9 @@ const content = {
     ],
     bodyText: "오븐 버너는 단순 화력보다 공정 전체의 온도 균일성과 체류 시간 관리가 더 중요합니다. 엔비피코리아는 오븐 크기, 제품 특성, 건조 시간, 목표 온도를 기준으로 열원 구성을 제안합니다.",
     appImages: [
-      { src: `${S3}/images/burner/oven-burner-app-1.jpg`, alt: "오븐 버너 적용 예시 1" },
-      { src: `${S3}/images/burner/oven-burner-app-2.jpg`, alt: "오븐 버너 적용 예시 2" },
+      { src: `${S3}/images/burner/oven-burner-main.jpg`, alt: "오븐 버너 적용 예시 1" },
+      { src: `${S3}/images/burner/oven-burner-app-1.jpg`, alt: "오븐 버너 적용 예시 2" },
+      { src: `${S3}/images/burner/oven-burner-app-2.jpg`, alt: "오븐 버너 적용 예시 3" },
     ],
     imgAlt: "오븐 버너",
     floatingLabel: "오븐 버너 적용 사례 보러가기",
@@ -114,7 +116,7 @@ export default function OvenBurnerPage() {
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
-              <Image src={`${S3}/images/burner/oven-burner-main.jpg`} alt={c.imgAlt} fill className="object-cover" priority unoptimized />
+              <Image src={`${S3}/images/burner/fpb/air-heating-burners-40199-6454995.jpg`} alt={c.imgAlt} fill className="object-cover" priority unoptimized />
             </div>
           </div>
         </div>
