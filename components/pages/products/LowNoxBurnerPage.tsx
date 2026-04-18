@@ -55,6 +55,7 @@ const content = {
     ],
     imgAlt: "Low NOx Burner",
     floatingLabel: "View Low NOx Burner Case Studies",
+    featureLeadTitle: "Key Features of the Low NOx Gas Burner",
   },
   ko: {
     title: "차세대 저 NOx 버너",
@@ -100,6 +101,7 @@ const content = {
     ],
     imgAlt: "저녹스 버너",
     floatingLabel: "저녹스 버너 적용 사례 보러가기",
+    featureLeadTitle: "Low NOx 가스 버너 주요 특징",
   },
 };
 
@@ -145,6 +147,25 @@ export default function LowNoxBurnerPage() {
               <Image src="/images/burner/low-nox-burner-main.png" alt={c.imgAlt} fill className="object-contain p-4" priority  unoptimized />
             </div>
           </div>
+        </div>
+
+        {/* 주요 특징 인라인 요약 */}
+        <div className="max-w-7xl mx-auto mt-14 border-t border-[#D4DAE2] pt-10">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] mb-6">{c.featureLeadTitle}</p>
+          <ul className="grid md:grid-cols-2 gap-x-8 gap-y-3">
+            {c.features.map((feature, index) => {
+              const [head, tail] = feature.split(" — ");
+              return (
+                <li key={index} className="flex items-start gap-3 text-sm text-[#3D4450] leading-relaxed">
+                  <span className="mt-2 w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
+                  <span>
+                    <span className="text-[#2d2a28] font-medium">{head}</span>
+                    {tail && <span className="text-[#5C6470]"> — {tail}</span>}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
         </div>
       </section>
 
