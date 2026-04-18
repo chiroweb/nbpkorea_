@@ -13,7 +13,6 @@ import FloatingCaseLink from "@/components/FloatingCaseLink";
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const specs = [
-  { model: "NKRTO-050", airflow: 50, heatInput: "250,000", power: 22, length: "4,060", width: "2,300", height: "3,700" },
   { model: "NKRTO-100", airflow: 100, heatInput: "550,000", power: 22, length: "3,400", width: "1,860", height: "3,540" },
   { model: "NKRTO-150", airflow: 150, heatInput: "550,000", power: 37, length: "3,400", width: "1,860", height: "3,540" },
   { model: "NKRTO-200", airflow: 200, heatInput: "870,000", power: 45, length: "4,000", width: "2,400", height: "3,540" },

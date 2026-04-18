@@ -13,12 +13,13 @@ import FloatingCaseLink from "@/components/FloatingCaseLink";
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const specs = [
-  { model: "NKTO-050", airflow: 50, heatInput: "450,000", length: "4,060", width: "1,100", height: "1,500" },
-  { model: "NKTO-075", airflow: 75, heatInput: "700,000", length: "4,060", width: "1,100", height: "1,500" },
-  { model: "NKTO-100", airflow: 100, heatInput: "900,000", length: "4,340", width: "1,100", height: "1,500" },
-  { model: "NKTO-150", airflow: 150, heatInput: "1,250,000", length: "7,200", width: "1,500", height: "1,500" },
-  { model: "NKTO-200", airflow: 200, heatInput: "1,800,000", length: "7,200", width: "2,000", height: "1,500" },
-  { model: "NKTO-300", airflow: 300, heatInput: "3,000,000", length: "7,200", width: "3,000", height: "1,500" },
+  { model: "NKTO-050", airflow: 50, heatInput: "400,000", length: "4,060", width: "1,100", height: "1,500" },
+  { model: "NKTO-100", airflow: 100, heatInput: "550,000", length: "4,340", width: "1,100", height: "1,500" },
+  { model: "NKTO-150", airflow: 150, heatInput: "550,000", length: "7,200", width: "1,500", height: "1,500" },
+  { model: "NKTO-200", airflow: 200, heatInput: "870,000", length: "7,200", width: "2,000", height: "1,500" },
+  { model: "NKTO-250", airflow: 250, heatInput: "870,000", length: "7,200", width: "2,500", height: "1,500" },
+  { model: "NKTO-300", airflow: 300, heatInput: "870,000", length: "7,200", width: "3,000", height: "1,500" },
+  { model: "NKTO-400", airflow: 400, heatInput: "1,200,000", length: "7,200", width: "3,500", height: "1,500" },
 ];
 
 const content = {

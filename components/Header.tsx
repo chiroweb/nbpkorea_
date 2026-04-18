@@ -270,7 +270,7 @@ export default function Header() {
           onMouseEnter={handleMegaEnter}
           onMouseLeave={handleMegaLeave}
           className={`hidden lg:block overflow-hidden transition-all duration-300 ease-in-out ${
-            megaOpen ? "max-h-[480px] opacity-100" : "max-h-0 opacity-0"
+            megaOpen ? "max-h-[640px] opacity-100" : "max-h-0 opacity-0"
           }`}
           style={{ background: "#fff", boxShadow: "0 8px 40px rgba(0,0,0,0.12)" }}
         >

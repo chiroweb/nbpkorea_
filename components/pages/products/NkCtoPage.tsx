@@ -14,7 +14,12 @@ const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const specs = [
   { model: "NKCTO-050", airflow: 50, heatInput: "400,000", power: 22, length: "3,400", width: "1,860", height: "2,130" },
-  { model: "NKCTO-100", airflow: 100, heatInput: "550,000", power: 30, length: "4,000", width: "1,860", height: "2,130" },
+  { model: "NKCTO-100", airflow: 100, heatInput: "550,000", power: 22, length: "3,400", width: "1,860", height: "2,130" },
+  { model: "NKCTO-150", airflow: 150, heatInput: "550,000", power: 37, length: "3,400", width: "1,860", height: "2,130" },
+  { model: "NKCTO-200", airflow: 200, heatInput: "870,000", power: 45, length: "4,000", width: "2,400", height: "2,130" },
+  { model: "NKCTO-250", airflow: 250, heatInput: "870,000", power: 55, length: "4,000", width: "2,400", height: "2,130" },
+  { model: "NKCTO-300", airflow: 300, heatInput: "870,000", power: 75, length: "4,500", width: "2,400", height: "2,130" },
+  { model: "NKCTO-400", airflow: 400, heatInput: "1,200,000", power: 90, length: "4,700", width: "2,540", height: "2,130" },
 ];
 
 const content = {
