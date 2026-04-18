@@ -142,7 +142,7 @@ export default function NkIdghPage() {
         { label: "NK-IDGH Series", href: "/products/combustion/nk-idgh" },
       ]}
     >
-      <FloatingCaseLink category="combustion" tag="" label={c.floatingLabel} />
+      <FloatingCaseLink category="combustion" tag="간접식 가스히터" label={c.floatingLabel} />
       <ProductNav activeTab="combustion" activeProduct="nk-idgh" />
 
       {/* Hero */}

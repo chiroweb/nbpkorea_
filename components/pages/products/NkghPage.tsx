@@ -142,7 +142,7 @@ export default function NkghPage() {
         { label: "NKGH Series", href: "/products/combustion/nkgh" },
       ]}
     >
-      <FloatingCaseLink category="combustion" tag="" label={c.floatingLabel} />
+      <FloatingCaseLink category="combustion" tag="직화식 가스히터" label={c.floatingLabel} />
       <ProductNav activeTab="combustion" activeProduct="nkgh" />
 
       {/* Hero */}

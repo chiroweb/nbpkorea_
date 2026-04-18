@@ -154,7 +154,7 @@ export default function DoorHeaterPage() {
         { label: t("nav.doorHeater"), href: "/products/hvac/door-heater" },
       ]}
     >
-      <FloatingCaseLink category="hvac" tag="" label={c.floatingLabel} />
+      <FloatingCaseLink category="hvac" tag="도어히터" label={c.floatingLabel} />
       <ProductNav activeTab="hvac" activeProduct="door-heater" />
 
       <section className="px-6 md:px-12 py-16">

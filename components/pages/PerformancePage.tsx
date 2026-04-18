@@ -187,15 +187,13 @@ function PerformancePageInner() {
       });
   }, [activeTab, searchByTag]);
 
-  // Filter by tag — 정확한 태그 매칭, 결과 없으면 카테고리 전체로 폴백
-  const tagFiltered = activeTag
+  // Filter by tag — 정확한 태그 매칭. 결과 없으면 무관한 항목을 보여주지 않고 안내만 노출
+  const filtered = activeTag
     ? items.filter((item) => {
         if (!item.tags || item.tags.length === 0) return false;
         return item.tags.some((dbTag) => dbTag === activeTag);
       })
     : items;
-  const isFallback = !!activeTag && tagFiltered.length === 0 && items.length > 0;
-  const filtered = isFallback ? items : tagFiltered;
 
   const handleTabChange = (tabId: string) => {
     setActiveTab(tabId);
@@ -317,17 +315,14 @@ function PerformancePageInner() {
             <p className="text-sm text-[#5C6470] text-center py-20">{locale === "en" ? "Loading..." : "로딩 중..."}</p>
           ) : filtered.length === 0 ? (
             <p className="text-sm text-[#5C6470] text-center py-20">
-              {activeTag ? t("emptyTag", { tag: activeTag }) : t("emptyDefault")}
+              {activeTag
+                ? (locale === "en"
+                    ? `Results for "${activeTag}" are being prepared.`
+                    : `"${activeTag}" 관련 실적 업데이트 중입니다.`)
+                : t("emptyDefault")}
             </p>
           ) : (
             <div className="space-y-6">
-              {isFallback && (
-                <p className="text-sm text-[#5C6470] text-center pb-4">
-                  {locale === "en"
-                    ? `Results for "${activeTag}" are being prepared. Showing all ${t(`tabs.${activeTab}`)} results.`
-                    : `"${activeTag}" 관련 실적이 준비 중입니다. ${t(`tabs.${activeTab}`)} 전체 실적을 표시합니다.`}
-                </p>
-              )}
               {filtered.map((item) => (
                 <PerformanceCard key={item.id} item={item} />
               ))}

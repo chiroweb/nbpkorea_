@@ -41,8 +41,15 @@ export default function ImageUploadField({
         credentials: "include",
         body: fd,
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error ?? "업로드 실패");
+      const text = await res.text();
+      let data: { url?: string; error?: string } = {};
+      try {
+        data = text ? JSON.parse(text) : {};
+      } catch {
+        throw new Error(`서버 응답 오류 (HTTP ${res.status})${text ? `: ${text.slice(0, 200)}` : ""}`);
+      }
+      if (!res.ok) throw new Error(data.error ?? `업로드 실패 (HTTP ${res.status})`);
+      if (!data.url) throw new Error("업로드 응답에 URL이 없습니다.");
       onChange(data.url);
     } catch (err) {
       setError(err instanceof Error ? err.message : "업로드 실패");

@@ -158,7 +158,7 @@ export default function DryRoomPage() {
         { label: t("nav.dryRoom"), href: "/products/hvac/dry-room" },
       ]}
     >
-      <FloatingCaseLink category="hvac" tag={locale === "en" ? "Dry Room" : "드라이룸"} label={c.floatingLabel} />
+      <FloatingCaseLink category="hvac" tag="드라이룸 공조기" label={c.floatingLabel} />
       <ProductNav activeTab="hvac" activeProduct="dry-room" />
 
       <section className="px-6 md:px-12 py-16">

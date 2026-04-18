@@ -86,7 +86,7 @@ export default function ValveTrainPage() {
         { label: t("nav.valveTrain"), href: "/products/burner/valve-train" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Valve Train" : "벨브트레인"} label={c.floatingLabel} />
+      <FloatingCaseLink category="burner" tag={locale === "en" ? "Valve Train" : "밸브트레인"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="valve-train" />
 
       <section className="px-6 md:px-12 py-16">

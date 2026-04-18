@@ -156,7 +156,7 @@ export default function HvacDehumidifierPage() {
         { label: t("nav.dehumidifier"), href: "/products/hvac/dehumidifier" },
       ]}
     >
-      <FloatingCaseLink category="hvac" tag="" label={c.floatingLabel} />
+      <FloatingCaseLink category="hvac" tag="복합식 제습기" label={c.floatingLabel} />
       <ProductNav activeTab="hvac" activeProduct="dehumidifier" />
 
       <section className="px-6 md:px-12 py-16">
