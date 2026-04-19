@@ -7,7 +7,6 @@ import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { useState } from "react";
 import { useTranslations, useLocale } from "next-intl";
-import FloatingCaseLink from "@/components/FloatingCaseLink";
 
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
@@ -166,7 +165,6 @@ export default function DuctBurnerPage() {
         { label: t("nav.ductBurner"), href: "/products/burner/duct-burner" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Duct Burner" : "덕트버너"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="duct-burner" />
 
       {/* Hero */}

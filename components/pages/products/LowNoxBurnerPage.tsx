@@ -1,6 +1,5 @@
 "use client";
 
-import FloatingCaseLink from "@/components/FloatingCaseLink";
 import ProductNav from "@/components/ProductNav";
 import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
@@ -48,13 +47,7 @@ const content = {
     ],
     specNote: "A Low NOx burner requires balancing emission standards compliance and flame stability rather than simple output. Burner head and control logic are custom-designed by reviewing exhaust conditions, site regulations, target temperature, and equipment volume.",
     bodyText: "The ECOSTAR (Turkey) next-generation Low NOx gas burner is engineered for industrial sites that must simultaneously meet emission regulations and combustion efficiency. NBPKOREA leverages the ECOSTAR genuine lineup to review site exhaust conditions, target heat output, and operating environment, then proposes the optimal Low NOx burner configuration.",
-    appImages: [
-      { src: `${S3}/images/burner/fpb/gas-burners-low-nox-40199-6408963.jpg`, alt: "Low NOx Burner Application Example 1" },
-      { src: `${S3}/images/burner/fpb/dual-fuel-burners-low-nox-40199-6454911.jpg`, alt: "Low NOx Burner Application Example 2" },
-      { src: `${S3}/images/burner/fpb/air-heating-burners-40199-6454995.jpg`, alt: "Low NOx Burner Application Example 3" },
-    ],
     imgAlt: "Low NOx Burner",
-    floatingLabel: "View Low NOx Burner Case Studies",
     featureLeadTitle: "Key Features of the Low NOx Gas Burner",
   },
   ko: {
@@ -75,10 +68,10 @@ const content = {
       "내구성 및 보호 등급 — 알루미늄 바디 / IP44 전기 보호 등급",
     ],
     capabilityCards: [
-      { title: "Emission Control", value: "Low NOx / Low CO", description: "배출 규제 대응이 필요한 공정에 맞춰 저배출 연소 구성을 제안합니다." },
-      { title: "Ignition", value: "Direct Spark Ignition", description: "파일럿 버너 없이 직접 점화 구성을 검토할 수 있습니다." },
-      { title: "Combustion", value: "Premix System", description: "연료와 공기의 완전 예혼합 기반 연소로 화염 품질을 안정화합니다." },
-      { title: "Application Fit", value: "Regulation-Sensitive Sites", description: "도장, 오븐, 건조 설비 등 규제 민감 현장에 최적화합니다." },
+      { title: "배출 제어", value: "저NOx / 저CO", description: "배출 규제 대응이 필요한 공정에 맞춰 저배출 연소 구성을 제안합니다." },
+      { title: "점화 방식", value: "직접 점화", description: "파일럿 버너 없이 직접 점화 구성을 검토할 수 있습니다." },
+      { title: "연소 방식", value: "예혼합 시스템", description: "연료와 공기의 완전 예혼합 기반 연소로 화염 품질을 안정화합니다." },
+      { title: "적용 적합도", value: "규제 민감 현장", description: "도장, 오븐, 건조 설비 등 규제 민감 현장에 최적화합니다." },
     ],
     designPoints: [
       { title: "배출 기준", description: "현장 요구 NOx/CO 목표치와 배기 후처리 유무를 기준으로 연소 방식을 검토합니다." },
@@ -94,13 +87,7 @@ const content = {
     ],
     specNote: "저녹스 버너는 단순 출력보다 배출 기준 대응과 화염 안정성의 균형이 중요합니다. 배기 조건, 현장 규제, 목표 온도, 장비 체적을 검토해 버너 헤드와 제어 로직을 맞춤 설계합니다.",
     bodyText: "ECOSTAR(Turkey) 차세대 저 NOx 가스 버너는 배출 규제와 연소 효율을 동시에 만족시켜야 하는 산업 현장에 최적화된 솔루션입니다. 엔비피코리아는 ECOSTAR 정품 라인업을 기반으로 현장 배기 조건, 목표 열량, 운전 환경을 종합 검토해 최적의 저 NOx 버너 구성을 제안합니다.",
-    appImages: [
-      { src: `${S3}/images/burner/fpb/gas-burners-low-nox-40199-6408963.jpg`, alt: "저녹스 버너 적용 예시 1" },
-      { src: `${S3}/images/burner/fpb/dual-fuel-burners-low-nox-40199-6454911.jpg`, alt: "저녹스 버너 적용 예시 2" },
-      { src: `${S3}/images/burner/fpb/air-heating-burners-40199-6454995.jpg`, alt: "저녹스 버너 적용 예시 3" },
-    ],
     imgAlt: "저녹스 버너",
-    floatingLabel: "저녹스 버너 적용 사례 보러가기",
     featureLeadTitle: "Low NOx 가스 버너 주요 특징",
   },
 };
@@ -124,7 +111,6 @@ export default function LowNoxBurnerPage() {
         { label: t("nav.lowNoxBurner"), href: "/products/burner/low-nox-burner" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Low NOx Burner" : "저녹스 버너"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="low-nox-burner" />
 
       <section className="px-6 md:px-12 py-16">
@@ -182,7 +168,7 @@ export default function LowNoxBurnerPage() {
 
       <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Low NOx Combustion Flow</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{locale === "en" ? "Low NOx Combustion Flow" : "저NOx 연소 흐름"}</p>
           <div className="flex flex-wrap items-center gap-2">
             {c.processFlow.map((step, index) => (
               <div key={step} className="flex items-center gap-2">
@@ -210,7 +196,7 @@ export default function LowNoxBurnerPage() {
 
       <section ref={capabilityRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">Key Capabilities</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{locale === "en" ? "Key Capabilities" : "주요 성능"}</p>
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${capabilityInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {c.capabilityCards.map((card) => (
               <div key={card.title} className="border border-[#D4DAE2] bg-white p-5">
@@ -252,19 +238,6 @@ export default function LowNoxBurnerPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.applicationExamples")}</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {c.appImages.map((img) => (
-              <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
-                <Image src={img.src} alt={img.alt} fill className="object-cover"  unoptimized />
-              </div>
-            ))}
           </div>
         </div>
       </section>

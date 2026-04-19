@@ -1,6 +1,5 @@
 "use client";
 
-import FloatingCaseLink from "@/components/FloatingCaseLink";
 import ProductNav from "@/components/ProductNav";
 import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
@@ -62,10 +61,10 @@ const content = {
       "설계·제작·설치·시운전·유지관리까지 통합 대응",
     ],
     capabilityCards: [
-      { title: "Process Heating", value: "Drying & Curing", description: "건조, 경화, 열처리 공정에 맞는 열원 조건을 구성합니다." },
-      { title: "Temperature Control", value: "Uniform Heating", description: "오븐 내부 열편차를 줄이는 방향으로 버너와 풍량 조건을 제안합니다." },
-      { title: "Burner Options", value: "Multiple Burner Types", description: "공정 특성에 맞는 버너 타입을 선택할 수 있습니다." },
-      { title: "System Matching", value: "Oven-Specific Design", description: "오븐 크기, 체류 시간, 목표 온도에 맞춘 맞춤 설계를 제공합니다." },
+      { title: "공정 가열", value: "건조 · 경화", description: "건조, 경화, 열처리 공정에 맞는 열원 조건을 구성합니다." },
+      { title: "온도 제어", value: "균일 가열", description: "오븐 내부 열편차를 줄이는 방향으로 버너와 풍량 조건을 제안합니다." },
+      { title: "버너 선택", value: "다양한 버너 타입", description: "공정 특성에 맞는 버너 타입을 선택할 수 있습니다." },
+      { title: "시스템 적합도", value: "오븐 맞춤 설계", description: "오븐 크기, 체류 시간, 목표 온도에 맞춘 맞춤 설계를 제공합니다." },
     ],
     bodyText: "오븐 버너는 단순 화력보다 공정 전체의 온도 균일성과 체류 시간 관리가 더 중요합니다. 엔비피코리아는 오븐 크기, 제품 특성, 건조 시간, 목표 온도를 기준으로 열원 구성을 제안합니다.",
     appImages: [
@@ -98,7 +97,6 @@ export default function OvenBurnerPage() {
         { label: t("nav.ovenBurner"), href: "/products/burner/oven-burner" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Oven Burner" : "오븐 버너"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="oven-burner" />
 
       <section className="px-6 md:px-12 py-16">
@@ -137,7 +135,7 @@ export default function OvenBurnerPage() {
 
       <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Oven Burner Flow</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{locale === "en" ? "Oven Burner Flow" : "오븐 버너 연소 흐름"}</p>
           <div className="flex flex-wrap items-center gap-2">
             {c.processFlow.map((step, index) => (
               <div key={step} className="flex items-center gap-2">
@@ -165,7 +163,7 @@ export default function OvenBurnerPage() {
 
       <section ref={capabilityRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">Key Capabilities</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{locale === "en" ? "Key Capabilities" : "주요 성능"}</p>
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${capabilityInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {c.capabilityCards.map((card) => (
               <div key={card.title} className="border border-[#D4DAE2] bg-white p-5">

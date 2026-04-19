@@ -3,7 +3,6 @@ import SubpageLayout from "@/components/SubpageLayout";
 import ProductNav from "@/components/ProductNav";
 import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import FloatingCaseLink from "@/components/FloatingCaseLink";
 import ApplicationTags from "@/components/ApplicationTags";
 import { useInView } from "@/hooks/useInView";
 import Image from "next/image";
@@ -91,10 +90,10 @@ const content = {
       "설비 크기, 체류 시간, 목표 열유속에 따라 버너 배열과 제어 구성을 맞춤 설계할 수 있습니다.",
     ],
     capabilityCards: [
-      { title: "Heating Mode", value: "Surface Combustion IR", description: "표면연소로 형성된 적외선 복사열이 제품 표면과 공정 공간을 균일하게 가열합니다." },
-      { title: "Thermal Response", value: "Fast Heat-Up / Cool-Down", description: "열응답이 빨라 생산 라인 조건 변경과 간헐 운전에 유리합니다." },
-      { title: "Process Quality", value: "Uniform Heat Profile", description: "국부 과열을 줄이고 열편차를 완화해 건조 품질과 외관 품질 안정화에 기여합니다." },
-      { title: "Burner Selection", value: "Metal Fiber / Ceramic", description: "공정 온도, 설치 공간, 내열 조건에 맞춰 메탈파이버와 세라믹 타입을 구분 적용할 수 있습니다." },
+      { title: "가열 방식", value: "표면연소 적외선", description: "표면연소로 형성된 적외선 복사열이 제품 표면과 공정 공간을 균일하게 가열합니다." },
+      { title: "열 응답성", value: "빠른 승온·냉각", description: "열응답이 빨라 생산 라인 조건 변경과 간헐 운전에 유리합니다." },
+      { title: "공정 품질", value: "균일 열 분포", description: "국부 과열을 줄이고 열편차를 완화해 건조 품질과 외관 품질 안정화에 기여합니다." },
+      { title: "버너 선택", value: "메탈파이버 / 세라믹", description: "공정 온도, 설치 공간, 내열 조건에 맞춰 메탈파이버와 세라믹 타입을 구분 적용할 수 있습니다." },
     ],
     subProducts: [
       {
@@ -198,7 +197,7 @@ export default function MetalFiberBurnerPage() {
 
         <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
           <div className="max-w-7xl mx-auto">
-            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Surface Combustion Flow</p>
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{locale === "en" ? "Surface Combustion Flow" : "표면연소 흐름"}</p>
             <div className="flex flex-wrap items-center gap-2">
               {c.processFlow.map((step, index) => (
                 <div key={step} className="flex items-center gap-2">
@@ -261,7 +260,7 @@ export default function MetalFiberBurnerPage() {
 
         <section ref={capabilityRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
           <div className="max-w-7xl mx-auto">
-            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">Key Capabilities</p>
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{locale === "en" ? "Key Capabilities" : "주요 성능"}</p>
             <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${capabilityInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               {c.capabilityCards.map((card) => (
                 <div key={card.title} className="border border-[#D4DAE2] bg-white p-5">
@@ -318,7 +317,6 @@ export default function MetalFiberBurnerPage() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 -mt-8 mb-8">
         <ApplicationTags category="burner" tags={c.appTagLabels} />
       </div>
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Metal Fiber Burner" : "메탈버너"} label={c.floatingLabel} />
     </>
   );
 }

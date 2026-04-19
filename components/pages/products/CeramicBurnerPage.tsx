@@ -1,6 +1,5 @@
 "use client";
 
-import FloatingCaseLink from "@/components/FloatingCaseLink";
 import ProductNav from "@/components/ProductNav";
 import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
@@ -90,10 +89,10 @@ const content = {
       "열부하 검토·버너 배열 설계·제어 연동·시운전·유지관리까지 통합 대응",
     ],
     capabilityCards: [
-      { title: "Heating Mode", value: "표면연소 적외선", description: "화염이 세라믹 표면에 고정되어 대류보다 적외선 복사 위주로 열을 전달합니다." },
-      { title: "Emissions", value: "Ultra-Low NOx / CO", description: "낮은 표면 온도와 예혼합 연소로 thermal NOx 생성을 억제합니다." },
-      { title: "Thermal Response", value: "Fast Heat-Up / Cool-Down", description: "연소판의 열용량이 작아 라인 조건 변경 시 온도 응답이 빠릅니다." },
-      { title: "Layout", value: "타일링 배열", description: "오븐 폭과 공정 열프로파일에 맞춰 플레이트를 배열로 조합할 수 있습니다." },
+      { title: "가열 방식", value: "표면연소 적외선", description: "화염이 세라믹 표면에 고정되어 대류보다 적외선 복사 위주로 열을 전달합니다." },
+      { title: "배출 특성", value: "초저NOx / CO", description: "낮은 표면 온도와 예혼합 연소로 thermal NOx 생성을 억제합니다." },
+      { title: "열 응답성", value: "빠른 승온·냉각", description: "연소판의 열용량이 작아 라인 조건 변경 시 온도 응답이 빠릅니다." },
+      { title: "배치 방식", value: "타일링 배열", description: "오븐 폭과 공정 열프로파일에 맞춰 플레이트를 배열로 조합할 수 있습니다." },
     ],
     designPoints: [
       { title: "목표 온도", description: "건조·경화·베이킹 등 저온~중온 영역에서 가장 효율적이며, 이상 영역에서는 하이브리드 구성을 검토합니다." },
@@ -138,7 +137,6 @@ export default function CeramicBurnerPage() {
         { label: t("nav.ceramicBurner"), href: "/products/burner/ceramic-burner" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Ceramic Burner" : "세라믹 버너"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="ceramic-burner" />
 
       <section className="px-6 md:px-12 py-16">
@@ -192,7 +190,7 @@ export default function CeramicBurnerPage() {
 
       <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Ceramic Combustion Flow</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{locale === "en" ? "Ceramic Combustion Flow" : "세라믹 연소 흐름"}</p>
           <div className="flex flex-wrap items-center gap-2">
             {c.processFlow.map((step, index) => (
               <div key={step} className="flex items-center gap-2">
@@ -220,7 +218,7 @@ export default function CeramicBurnerPage() {
 
       <section ref={capabilityRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">Key Capabilities</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{locale === "en" ? "Key Capabilities" : "주요 성능"}</p>
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${capabilityInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {c.capabilityCards.map((card) => (
               <div key={card.title} className="border border-[#D4DAE2] bg-white p-5">

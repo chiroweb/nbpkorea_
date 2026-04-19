@@ -3,7 +3,6 @@ import SubpageLayout from "@/components/SubpageLayout";
 import ProductNav from "@/components/ProductNav";
 import { Link } from "@/i18n/navigation";
 import { useTranslations, useLocale } from "next-intl";
-import FloatingCaseLink from "@/components/FloatingCaseLink";
 import ApplicationTags from "@/components/ApplicationTags";
 import { useInView } from "@/hooks/useInView";
 import Image from "next/image";
@@ -154,10 +153,10 @@ const content = {
       "용량, 배압, 연료 압력, 현장 규격에 따라 구성품과 제어 사양을 맞춤 설계할 수 있습니다.",
     ],
     capabilityCards: [
-      { title: "System Format", value: "Integrated Package", description: "주요 구성품을 일체형으로 묶어 현장 설치와 배관·배선 복잡도를 줄이는 방향으로 설계합니다." },
-      { title: "Combustion Control", value: "Wide Turndown", description: "부하 변동이 큰 설비에서도 안정적 화염 유지와 출력 제어를 검토할 수 있습니다." },
-      { title: "Fuel Flexibility", value: "Gas / Oil / Dual Fuel", description: "현장 연료 인프라와 운전 목적에 따라 연료 구성을 유연하게 선택할 수 있습니다." },
-      { title: "Operation Safety", value: "BMS Ready", description: "점화, 화염감시, 차단밸브, 인터록을 포함한 안전 제어 체계와의 통합이 용이합니다." },
+      { title: "시스템 구성", value: "일체형 패키지", description: "주요 구성품을 일체형으로 묶어 현장 설치와 배관·배선 복잡도를 줄이는 방향으로 설계합니다." },
+      { title: "연소 제어", value: "넓은 턴다운 범위", description: "부하 변동이 큰 설비에서도 안정적 화염 유지와 출력 제어를 검토할 수 있습니다." },
+      { title: "연료 유연성", value: "가스 / 오일 / 이중연료", description: "현장 연료 인프라와 운전 목적에 따라 연료 구성을 유연하게 선택할 수 있습니다." },
+      { title: "운전 안전", value: "BMS 연동 대응", description: "점화, 화염감시, 차단밸브, 인터록을 포함한 안전 제어 체계와의 통합이 용이합니다." },
     ],
     heroTitle: "MPG 버너",
     heroTitleSub: "(MPG Burner)",
@@ -260,7 +259,7 @@ export default function FpbBurnerPage() {
 
         <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
           <div className="max-w-7xl mx-auto">
-            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">MPG Burner System Flow</p>
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{locale === "en" ? "MPG Burner System Flow" : "MPG 버너 시스템 흐름"}</p>
             <div className="flex flex-wrap items-center gap-2">
               {c.processFlow.map((step, index) => (
                 <div key={step} className="flex items-center gap-2">
@@ -320,7 +319,7 @@ export default function FpbBurnerPage() {
 
         <section ref={capabilityRef} className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
           <div className="max-w-7xl mx-auto">
-            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">Key Capabilities</p>
+            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{locale === "en" ? "Key Capabilities" : "주요 성능"}</p>
             <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${capabilityInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               {c.capabilityCards.map((card) => (
                 <div key={card.title} className="border border-[#D4DAE2] bg-white p-5">
@@ -363,7 +362,6 @@ export default function FpbBurnerPage() {
       <div className="max-w-7xl mx-auto px-6 md:px-12 -mt-8 mb-8">
         <ApplicationTags category="burner" tags={[c.appTagLabel]} />
       </div>
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "MPG Burner" : "MPG 버너"} label={c.floatingLabel} />
     </>
   );
 }

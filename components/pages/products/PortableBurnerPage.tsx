@@ -6,7 +6,6 @@ import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
-import FloatingCaseLink from "@/components/FloatingCaseLink";
 
 
 const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
@@ -137,7 +136,6 @@ export default function PortableBurnerPage() {
         { label: t("nav.portableBurner"), href: "/products/burner/portable-burner" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Cylindrical Metal Burner" : "실린더형 메탈 버너"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="portable-burner" />
 
       {/* Hero */}

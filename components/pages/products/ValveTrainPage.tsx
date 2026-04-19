@@ -1,6 +1,5 @@
 "use client";
 
-import FloatingCaseLink from "@/components/FloatingCaseLink";
 import ProductNav from "@/components/ProductNav";
 import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
@@ -56,10 +55,10 @@ const content = {
       "설계, 조달, 조립, 현장 적용까지 일괄 대응",
     ],
     capabilityCards: [
-      { title: "Gas Safety", value: "Shut-off & Regulation", description: "가스 공급 계통의 안전 차단과 압력 제어를 함께 고려합니다." },
-      { title: "Component Scope", value: "Valve Train Assembly", description: "밸브, 레귤레이터, 센서, 점화부를 포함한 일체 구성이 가능합니다." },
-      { title: "Retrofit Support", value: "Replacement & Upgrade", description: "기존 설비의 노후 부품 교체와 업그레이드에도 대응합니다." },
-      { title: "Field Matching", value: "Site-Specific Combination", description: "가스 종류, 압력, 장비 규격에 맞춘 조합을 제안합니다." },
+      { title: "가스 안전", value: "차단 · 압력 제어", description: "가스 공급 계통의 안전 차단과 압력 제어를 함께 고려합니다." },
+      { title: "구성 범위", value: "밸브트레인 일체 구성", description: "밸브, 레귤레이터, 센서, 점화부를 포함한 일체 구성이 가능합니다." },
+      { title: "개조 대응", value: "교체 · 업그레이드", description: "기존 설비의 노후 부품 교체와 업그레이드에도 대응합니다." },
+      { title: "현장 적합도", value: "현장 맞춤 조합", description: "가스 종류, 압력, 장비 규격에 맞춘 조합을 제안합니다." },
     ],
     bodyText: "밸브트레인은 연소 시스템의 안전과 제어 품질을 좌우하는 핵심입니다. 엔비피코리아는 연료 조건, 장비 규격, 배관 압력, 운전 인터록 조건을 기준으로 현장 맞춤형 가스 제어 구성을 제공합니다.",
     imgAlt: "밸브트레인",
@@ -86,7 +85,6 @@ export default function ValveTrainPage() {
         { label: t("nav.valveTrain"), href: "/products/burner/valve-train" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Valve Train" : "밸브트레인"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="valve-train" />
 
       <section className="px-6 md:px-12 py-16">
@@ -125,7 +123,7 @@ export default function ValveTrainPage() {
 
       <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Valve Train Control Flow</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{locale === "en" ? "Valve Train Control Flow" : "밸브트레인 제어 흐름"}</p>
           <div className="flex flex-wrap items-center gap-2">
             {c.processFlow.map((step, index) => (
               <div key={step} className="flex items-center gap-2">
@@ -153,7 +151,7 @@ export default function ValveTrainPage() {
 
       <section ref={capabilityRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">Key Capabilities</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{locale === "en" ? "Key Capabilities" : "주요 성능"}</p>
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${capabilityInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {c.capabilityCards.map((card) => (
               <div key={card.title} className="border border-[#D4DAE2] bg-white p-5">

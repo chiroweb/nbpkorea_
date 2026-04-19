@@ -1,6 +1,5 @@
 "use client";
 
-import FloatingCaseLink from "@/components/FloatingCaseLink";
 import ProductNav from "@/components/ProductNav";
 import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
@@ -89,10 +88,10 @@ const content = {
       "설계·제작·시운전·사후관리까지 통합 대응",
     ],
     capabilityCards: [
-      { title: "Temperature Range", value: "High-Temperature Duty", description: "고온 열처리 및 용해 공정에 맞는 연소 조건을 구성합니다." },
-      { title: "Fuel Options", value: "Gas / Dual Fuel", description: "현장 연료 사양과 운전 조건에 맞춰 연료 구성을 검토합니다." },
-      { title: "Flame Design", value: "Process-Matched Flame", description: "로 길이, 버너 위치, 열부하에 맞는 화염 패턴을 제안합니다." },
-      { title: "Field Engineering", value: "Furnace-Custom Layout", description: "산업로 구조와 생산 공정에 맞춘 맞춤 설계를 제공합니다." },
+      { title: "온도 범위", value: "고온 운전 대응", description: "고온 열처리 및 용해 공정에 맞는 연소 조건을 구성합니다." },
+      { title: "연료 옵션", value: "가스 / 이중연료", description: "현장 연료 사양과 운전 조건에 맞춰 연료 구성을 검토합니다." },
+      { title: "화염 설계", value: "공정 맞춤 화염", description: "로 길이, 버너 위치, 열부하에 맞는 화염 패턴을 제안합니다." },
+      { title: "현장 엔지니어링", value: "산업로 맞춤 배치", description: "산업로 구조와 생산 공정에 맞춘 맞춤 설계를 제공합니다." },
     ],
     engineeringPoints: [
       { title: "화염 길이", description: "가열 대상과 로 길이에 맞춰 직진형, 확산형, 와류형 등 화염 특성을 검토합니다." },
@@ -138,7 +137,6 @@ export default function FurnaceBurnerPage() {
         { label: t("nav.furnaceBurner"), href: "/products/burner/furnace-burner" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Furnace Burner" : "로용 버너"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="furnace-burner" />
 
       <section className="px-6 md:px-12 py-16">
@@ -177,7 +175,7 @@ export default function FurnaceBurnerPage() {
 
       <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Furnace Burner Flow</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{locale === "en" ? "Furnace Burner Flow" : "로용 버너 연소 흐름"}</p>
           <div className="flex flex-wrap items-center gap-2">
             {c.processFlow.map((step, index) => (
               <div key={step} className="flex items-center gap-2">
@@ -205,7 +203,7 @@ export default function FurnaceBurnerPage() {
 
       <section ref={capabilityRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">Key Capabilities</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{locale === "en" ? "Key Capabilities" : "주요 성능"}</p>
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${capabilityInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {c.capabilityCards.map((card) => (
               <div key={card.title} className="border border-[#D4DAE2] bg-white p-5">

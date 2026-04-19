@@ -1,6 +1,5 @@
 "use client";
 
-import FloatingCaseLink from "@/components/FloatingCaseLink";
 import ProductNav from "@/components/ProductNav";
 import SubpageLayout from "@/components/SubpageLayout";
 import { useInView } from "@/hooks/useInView";
@@ -74,10 +73,10 @@ const content = {
       "설계·제작·설치·시운전·유지관리까지 통합 대응",
     ],
     capabilityCards: [
-      { title: "Gas Control", value: "Valve-Based Regulation", description: "유량과 압력 조건을 기준으로 연소 제어 구성을 최적화합니다." },
-      { title: "Combustion Stability", value: "Stable Flame Support", description: "버너 출력 변화에도 안정적 운전을 유지하도록 설계합니다." },
-      { title: "Retrofit", value: "New / Existing Systems", description: "신규 설비와 기존 설비 개조 모두 고려할 수 있습니다." },
-      { title: "Integration", value: "Burner + Valve Assembly", description: "버너와 제어부를 분리하지 않고 통합적으로 검토합니다." },
+      { title: "가스 제어", value: "밸브 기반 제어", description: "유량과 압력 조건을 기준으로 연소 제어 구성을 최적화합니다." },
+      { title: "연소 안정성", value: "안정적 화염 유지", description: "버너 출력 변화에도 안정적 운전을 유지하도록 설계합니다." },
+      { title: "개조 대응", value: "신규 / 기존 설비", description: "신규 설비와 기존 설비 개조 모두 고려할 수 있습니다." },
+      { title: "통합 구성", value: "버너 + 밸브 일체", description: "버너와 제어부를 분리하지 않고 통합적으로 검토합니다." },
     ],
     valveTrainItems: [
       { title: "차단 밸브", description: "안전 차단을 위한 이중 차단 또는 인터록 연계 구성을 검토합니다." },
@@ -122,7 +121,6 @@ export default function ValveBurnerPage() {
         { label: t("nav.valveBurner"), href: "/products/burner/valve-burner" },
       ]}
     >
-      <FloatingCaseLink category="burner" tag={locale === "en" ? "Valve Burner" : "밸브버너"} label={c.floatingLabel} />
       <ProductNav activeTab="burner" activeProduct="valve-burner" />
 
       <section className="px-6 md:px-12 py-16">
@@ -161,7 +159,7 @@ export default function ValveBurnerPage() {
 
       <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">Valve Burner Control Flow</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{locale === "en" ? "Valve Burner Control Flow" : "밸브버너 제어 흐름"}</p>
           <div className="flex flex-wrap items-center gap-2">
             {c.processFlow.map((step, index) => (
               <div key={step} className="flex items-center gap-2">
@@ -189,7 +187,7 @@ export default function ValveBurnerPage() {
 
       <section ref={capabilityRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">Key Capabilities</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{locale === "en" ? "Key Capabilities" : "주요 성능"}</p>
           <div className={`grid md:grid-cols-2 lg:grid-cols-4 gap-4 transition-all duration-1000 ${capabilityInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             {c.capabilityCards.map((card) => (
               <div key={card.title} className="border border-[#D4DAE2] bg-white p-5">
