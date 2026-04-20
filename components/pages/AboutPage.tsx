@@ -398,7 +398,7 @@ function CompanyInfoSection() {
           <span className="section-label block mb-4">Company Overview</span>
           <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">{t("title")}</h2>
         </div>
-        <div className="grid lg:grid-cols-[3fr_2fr] gap-8 items-start">
+        <div className="grid gap-8 items-start xl:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)]">
           {/* Table */}
           <div className={`border border-[#D4DAE2] transition-all duration-1000 delay-300 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             {[
@@ -422,8 +422,8 @@ function CompanyInfoSection() {
             ))}
           </div>
           {/* Photo */}
-          <div className={`relative hidden aspect-[8/5] w-full overflow-hidden bg-[#DCE2E8] transition-all duration-1000 delay-500 lg:block ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
-            <Image src={`${S3}/images/company/company-main-new.png`} alt="NBPKOREA Headquarters" fill className="object-contain" />
+          <div className={`relative hidden aspect-[16/9] w-full overflow-hidden bg-[#DCE2E8] transition-all duration-1000 delay-500 xl:block ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
+            <Image src={`${S3}/images/company/company-main-new.png`} alt="NBPKOREA Headquarters" fill className="object-cover object-center" />
           </div>
         </div>
       </div>
