@@ -23,6 +23,9 @@
 # misc
 .DS_Store
 *.pem
+.omc/
+AGENTS.md
+IMG_1013.JPG
 
 # debug
 npm-debug.log*
