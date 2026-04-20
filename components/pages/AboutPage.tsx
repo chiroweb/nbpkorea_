@@ -393,12 +393,12 @@ function CompanyInfoSection() {
 
   return (
     <section ref={ref} className="py-24 px-6 md:px-12 bg-[#FAFAFA]">
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-screen-2xl">
         <div className={`mb-12 transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
           <span className="section-label block mb-4">Company Overview</span>
           <h2 className="text-2xl md:text-3xl tracking-[0.04em] font-bold text-[#2d2a28]">{t("title")}</h2>
         </div>
-        <div className="grid gap-8 items-start xl:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)]">
+        <div className="grid gap-8 items-start xl:grid-cols-[minmax(0,0.7fr)_minmax(0,1.3fr)]">
           {/* Table */}
           <div className={`border border-[#D4DAE2] transition-all duration-1000 delay-300 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}>
             {[
