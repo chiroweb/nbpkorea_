@@ -30,7 +30,7 @@ export default function HistorySection() {
     { year: "2021", events: [t("events.2021")] },
     { year: "2022", events: [t("events.2022")] },
     { year: "2023", events: [t("events.2023")] },
-    { year: "2025", events: [t("events.2025a"), t("events.2025b")] },
+    { year: "2025", events: [t("events.2025a")] },
   ];
 
   // 섹션 내 wheel 이벤트 → 타임라인 인덱스 제어

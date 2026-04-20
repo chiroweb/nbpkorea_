@@ -219,7 +219,7 @@ function HistorySection() {
     { year: "2021", events: [t("events.2021a"), t("events.2021b"), t("events.2021c"), t("events.2021d")] },
     { year: "2022", events: [t("events.2022a"), t("events.2022b"), t("events.2022c"), t("events.2022d")] },
     { year: "2023", events: [t("events.2023")] },
-    { year: "2025", events: [t("events.2025a"), t("events.2025b")] },
+    { year: "2025", events: [t("events.2025a")] },
   ];
 
   // 섹션 내 wheel 이벤트 → 타임라인 인덱스 제어
@@ -464,7 +464,7 @@ function FacilityGallerySection() {
               className={`transition-all duration-1000 ${isInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
               style={{ transitionDelay: `${index * 120}ms` }}
             >
-              <div className="relative aspect-[4/3] overflow-hidden bg-[#FAFAFA]">
+              <div className="relative aspect-[8/5] overflow-hidden bg-[#FAFAFA]">
                 <Image src={facility.image} alt={facility.title} fill className="object-cover" />
               </div>
               <div className="border border-t-0 border-[#D4DAE2] px-4 py-3">
