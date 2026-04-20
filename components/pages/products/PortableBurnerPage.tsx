@@ -47,10 +47,10 @@ const content = {
       "Other Portable Heating Needs",
     ],
     keyFeatures: [
-      { icon: "→", label: "Immediate Field Deployment", desc: "No separate factory equipment needed — starts immediately with site gas connection" },
-      { icon: "◎", label: "Independent Operation", desc: "Built-in control panel — fully independent operation as a standalone package" },
-      { icon: "▲", label: "Multi-Fuel Ready", desc: "Both LNG and LPG usable without nozzle replacement" },
-      { icon: "●", label: "Safety System", desc: "Overheat protection and flame detection auto-shutoff safety devices included" },
+      { label: "Immediate Field Deployment", desc: "No separate factory equipment needed — starts immediately with site gas connection" },
+      { label: "Independent Operation", desc: "Built-in control panel — fully independent operation as a standalone package" },
+      { label: "Multi-Fuel Ready", desc: "Both LNG and LPG usable without nozzle replacement" },
+      { label: "Safety System", desc: "Overheat protection and flame detection auto-shutoff safety devices included" },
     ],
     specNote: "Metal Burners are custom-designed and fabricated based on field deployment purpose, space conditions, and required heat output.",
     specNoteHighlight: "Made-to-order",
@@ -100,10 +100,10 @@ const content = {
       "기타 이동형 가열 필요 현장",
     ],
     keyFeatures: [
-      { icon: "→", label: "현장 즉시 투입", desc: "별도 공장 설비 불필요 — 현장 가스 연결 즉시 가동" },
-      { icon: "◎", label: "독립 운전", desc: "내장 제어반 탑재 — 단독 패키지로 완전 독립 운전 가능" },
-      { icon: "▲", label: "다연료 대응", desc: "노즐 교체 없이 LNG / LPG 가스 모두 사용" },
-      { icon: "●", label: "안전 시스템", desc: "과열 방지·불꽃 감지 자동 차단 안전 장치 기본 탑재" },
+      { label: "현장 즉시 투입", desc: "별도 공장 설비 불필요 — 현장 가스 연결 즉시 가동" },
+      { label: "독립 운전", desc: "내장 제어반 탑재 — 단독 패키지로 완전 독립 운전 가능" },
+      { label: "다연료 대응", desc: "노즐 교체 없이 LNG / LPG 가스 모두 사용" },
+      { label: "안전 시스템", desc: "과열 방지·불꽃 감지 자동 차단 안전 장치 기본 탑재" },
     ],
     specNote: "메탈버너는 현장 투입 목적·공간 조건·요구 열량에 따라 맞춤 설계·제작됩니다.",
     specNoteHighlight: "주문 제작 방식",
@@ -199,8 +199,7 @@ export default function PortableBurnerPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {c.keyFeatures.map((item) => (
               <div key={item.label} className="bg-white border border-[#D4DAE2] p-4">
-                <span className="text-[#C05010] text-lg mb-2 block">{item.icon}</span>
-                <span className="text-xs font-medium text-[#2d2a28] block mb-1">{item.label}</span>
+                <span className="text-xs font-medium text-[#2d2a28] block mb-2">{item.label}</span>
                 <span className="text-[14px] text-[#5C6470] leading-[1.7]">{item.desc}</span>
               </div>
             ))}
