@@ -54,13 +54,7 @@ const content = {
       { label: "Fuel", value: "LNG / LPG" },
     ],
     specNote: "Ceramic burners are sized by the radiant heat flux required at the product surface, not by raw firing rate alone. Burner plate quantity, layout, and control are designed against oven geometry, target temperature, residence time, and product characteristics.",
-    appImages: [
-      { src: `${S3}/images/burner/ceramic-burner.jpg`, alt: "Ceramic Burner Application Example 1" },
-      { src: `${S3}/images/burner/cases/metal-fiber-case-1.jpg`, alt: "Ceramic Burner Application Example 2" },
-      { src: `${S3}/images/burner/cases/metal-fiber-case-2.jpg`, alt: "Ceramic Burner Application Example 3" },
-    ],
     imgAlt: "Ceramic Burner",
-    floatingLabel: "View Ceramic Burner Case Studies",
     featureLeadTitle: "Key Features of the Ceramic Burner",
   },
   ko: {
@@ -107,13 +101,7 @@ const content = {
       { label: "연료", value: "LNG / LPG" },
     ],
     specNote: "세라믹 버너는 단순 출력보다 제품 표면에서 요구되는 복사 열유속(IR flux)을 기준으로 설계합니다. 오븐 형상·목표 온도·체류 시간·제품 특성에 따라 플레이트 수량·배열·제어 로직을 맞춤 구성합니다.",
-    appImages: [
-      { src: `${S3}/images/burner/ceramic-burner.jpg`, alt: "세라믹 버너 적용 예시 1" },
-      { src: `${S3}/images/burner/cases/metal-fiber-case-1.jpg`, alt: "세라믹 버너 적용 예시 2" },
-      { src: `${S3}/images/burner/cases/metal-fiber-case-2.jpg`, alt: "세라믹 버너 적용 예시 3" },
-    ],
     imgAlt: "세라믹 버너",
-    floatingLabel: "세라믹 버너 적용 사례 보러가기",
     featureLeadTitle: "세라믹 버너 주요 특징",
   },
 };
@@ -258,19 +246,6 @@ export default function CeramicBurnerPage() {
                 </div>
               ))}
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.applicationExamples")}</p>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-            {c.appImages.map((img) => (
-              <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
-                <Image src={img.src} alt={img.alt} fill className="object-cover" unoptimized />
-              </div>
-            ))}
           </div>
         </div>
       </section>
