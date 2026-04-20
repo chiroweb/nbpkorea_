@@ -87,7 +87,7 @@ export default async function LocaleLayout({
     email: "nbpkorea@nbpkorea.co.kr",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "엠티브이로 8길 22",
+      streetAddress: "엠티브이8로 22",
       addressLocality: "안산시 단원구",
       addressRegion: "경기도",
       postalCode: "15424",

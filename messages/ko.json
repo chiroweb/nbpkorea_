@@ -115,7 +115,7 @@
     "footer": {
       "access": "Access",
       "contact": "Contact",
-      "address": "경기도 안산시 단원구\n엠티브이로 8길 22\n사업자등록번호 119-13-28296",
+      "address": "경기도 안산시 단원구\n엠티브이8로 22\n사업자등록번호 119-13-28296",
       "directions": "오시는 길",
       "privacy": "Privacy Policy",
       "copyright": "Copyright NBPKOREA. All Rights Reserved.",
@@ -222,7 +222,7 @@
       "email": "이메일",
       "emailReply": "영업일 기준 24시간 이내 회신",
       "address": "주소",
-      "addressValue": "경기도 안산시 단원구 엠티브이로 8길 22",
+      "addressValue": "경기도 안산시 단원구 엠티브이8로 22",
       "onlineInquiry": "온라인 문의하기",
       "productConsult": "제품 상담",
       "productDesc": "환경시스템·연소시스템 제품 문의",
@@ -345,7 +345,7 @@
       "bizReg": "사업자등록번호",
       "bizRegValue": "119-13-28296",
       "address": "소재지",
-      "addressValue": "경기도 안산시 단원구 엠티브이로 8길 22"
+      "addressValue": "경기도 안산시 단원구 엠티브이8로 22"
     },
     "patents": {
       "title": "등록 특허",
@@ -381,7 +381,7 @@
     "directions": {
       "title": "오시는 길",
       "address": "Address",
-      "addressValue": "경기도 안산시 단원구 엠티브이로 8길 22",
+      "addressValue": "경기도 안산시 단원구 엠티브이8로 22",
       "phoneFax": "Phone / Fax",
       "email": "Email",
       "website": "Website",
@@ -942,7 +942,7 @@
       "website": "홈페이지",
       "emailReply": "영업일 기준 24시간 이내 회신",
       "bizReg": "사업자등록번호",
-      "addressValue": "경기도 안산시 단원구 엠티브이로 8길 22",
+      "addressValue": "경기도 안산시 단원구 엠티브이8로 22",
       "mapTitle": "NBPKOREA 본사 위치"
     }
   }

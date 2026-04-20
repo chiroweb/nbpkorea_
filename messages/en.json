@@ -115,7 +115,7 @@
     "footer": {
       "access": "Access",
       "contact": "Contact",
-      "address": "22, MTV-ro 8-gil, Danwon-gu\nAnsan-si, Gyeonggi-do, Korea\nBiz. Reg. 119-13-28296",
+      "address": "22, MTV 8-ro, Danwon-gu\nAnsan-si, Gyeonggi-do, Korea\nBiz. Reg. 119-13-28296",
       "directions": "Get Directions",
       "privacy": "Privacy Policy",
       "copyright": "Copyright NBPKOREA. All Rights Reserved.",
@@ -222,7 +222,7 @@
       "email": "Email",
       "emailReply": "Reply within 24 hours on business days",
       "address": "Address",
-      "addressValue": "22, MTV-ro 8-gil, Danwon-gu, Ansan-si, Gyeonggi-do",
+      "addressValue": "22, MTV 8-ro, Danwon-gu, Ansan-si, Gyeonggi-do",
       "onlineInquiry": "Online Inquiry",
       "productConsult": "Product Consultation",
       "productDesc": "Inquiries on environmental & combustion products",
@@ -345,7 +345,7 @@
       "bizReg": "Biz. Reg. No.",
       "bizRegValue": "119-13-28296",
       "address": "Address",
-      "addressValue": "22, MTV-ro 8-gil, Danwon-gu, Ansan-si, Gyeonggi-do, Korea"
+      "addressValue": "22, MTV 8-ro, Danwon-gu, Ansan-si, Gyeonggi-do, Korea"
     },
     "patents": {
       "title": "Registered Patents",
@@ -381,7 +381,7 @@
     "directions": {
       "title": "Directions",
       "address": "Address",
-      "addressValue": "22, MTV-ro 8-gil, Danwon-gu, Ansan-si, Gyeonggi-do, Korea",
+      "addressValue": "22, MTV 8-ro, Danwon-gu, Ansan-si, Gyeonggi-do, Korea",
       "phoneFax": "Phone / Fax",
       "email": "Email",
       "website": "Website",
@@ -954,7 +954,7 @@
       "website": "Website",
       "emailReply": "Reply within 24 hours on business days",
       "bizReg": "Biz. Reg. No.",
-      "addressValue": "22, MTV-ro 8-gil, Danwon-gu, Ansan-si, Gyeonggi-do, Korea",
+      "addressValue": "22, MTV 8-ro, Danwon-gu, Ansan-si, Gyeonggi-do, Korea",
       "mapTitle": "NBPKOREA Headquarters Location"
     }
   }
