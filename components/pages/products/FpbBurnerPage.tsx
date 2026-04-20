@@ -285,7 +285,7 @@ export default function FpbBurnerPage() {
                       src={product.image}
                       alt={c.fpbProductNames[product.id] ?? product.name}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
                       unoptimized
                     />
                   </div>
