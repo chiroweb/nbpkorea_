@@ -173,7 +173,7 @@ export default function NkIdghPage() {
             </div>
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
-            <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
+            <div className="relative aspect-[5/4] md:aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
               <Image
                 src={`${S3}/images/combustion/indirect-heater-thumb.png`}
                 alt={c.imgAlt}
