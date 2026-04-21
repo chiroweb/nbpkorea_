@@ -30,7 +30,7 @@ export default function BusinessPage() {
       title: t("hvac.title"),
       subtitle: "HVAC Systems",
       desc: locale === "en" ? "Precision HVAC systems including cleanroom, dry room, and direct-fired AHU" : "클린룸, 드라이룸, 직화식 공조기 등 정밀 공조 시스템",
-      image: `${S3}/images/hvac/hvac-main.png`,
+      image: `${S3}/images/hvac/hvac-main.jpg`,
       href: "/business/hvac",
       highlight: locale === "en" ? "Semiconductor & Battery" : "반도체·2차전지 대응",
     },

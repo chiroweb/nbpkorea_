@@ -33,7 +33,7 @@ export default function BusinessHighlight() {
       subtitle: "HVAC Systems",
       keywords: t("hvac.keywords"),
       description: t("hvac.desc"),
-      image: `${S3}/images/hvac/hvac-main.png`,
+      image: `${S3}/images/hvac/hvac-main.jpg`,
       href: "/business/hvac",
     },
     {

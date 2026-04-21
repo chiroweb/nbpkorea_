@@ -175,7 +175,7 @@ export default function HvacBusinessPage() {
       {/* 1. 히어로 */}
       <section ref={heroRef} className="relative overflow-hidden">
         <div className="relative aspect-[21/9] md:aspect-[21/7] w-full bg-[#1a1a1a]">
-          <Image src={`${S3}/images/hvac/hvac-main.png`} alt={c.heroAlt} fill className="object-cover opacity-60" priority  unoptimized />
+          <Image src={`${S3}/images/hvac/hvac-main.jpg`} alt={c.heroAlt} fill className="object-cover opacity-60" priority  unoptimized />
           <div className="absolute inset-0 bg-gradient-to-r from-[#1a1a1a]/90 via-[#1a1a1a]/50 to-transparent" />
           <div className={`absolute inset-0 flex flex-col justify-center px-6 md:px-12 lg:px-20 max-w-4xl transition-all duration-1000 ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
             <span className="text-xs tracking-[0.1em] uppercase text-[#C05010] mb-3">HVAC Systems</span>
