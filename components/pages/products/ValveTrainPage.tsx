@@ -34,6 +34,10 @@ const content = {
       { title: "Field Matching", value: "Site-Specific Combination", description: "Combinations are proposed to match gas type, pressure, and equipment specifications." },
     ],
     bodyText: "The valve train is the core that determines the safety and control quality of a combustion system. NBPKOREA provides site-customized gas control configurations based on fuel conditions, equipment specifications, piping pressure, and operational interlock conditions.",
+    appImages: [
+      { src: `${S3}/images/burner/cases/valve-burner-case-1.jpg`, alt: "Valve Train Application Example 1" },
+      { src: `${S3}/images/burner/cases/valve-burner-case-2.jpg`, alt: "Valve Train Application Example 2" },
+    ],
     imgAlt: "Valve Train",
     floatingLabel: "View Valve Train Case Studies",
   },
@@ -61,6 +65,10 @@ const content = {
       { title: "현장 적합도", value: "현장 맞춤 조합", description: "가스 종류, 압력, 장비 규격에 맞춘 조합을 제안합니다." },
     ],
     bodyText: "밸브트레인은 연소 시스템의 안전과 제어 품질을 좌우하는 핵심입니다. 엔비피코리아는 연료 조건, 장비 규격, 배관 압력, 운전 인터록 조건을 기준으로 현장 맞춤형 가스 제어 구성을 제공합니다.",
+    appImages: [
+      { src: `${S3}/images/burner/cases/valve-burner-case-1.jpg`, alt: "밸브트레인 적용 예시 1" },
+      { src: `${S3}/images/burner/cases/valve-burner-case-2.jpg`, alt: "밸브트레인 적용 예시 2" },
+    ],
     imgAlt: "밸브트레인",
     floatingLabel: "벨브트레인 적용 사례 보러가기",
   },
@@ -158,6 +166,20 @@ export default function ValveTrainPage() {
                 <p className="text-[12px] tracking-[0.08em] uppercase text-[#5C6470] mb-3">{card.title}</p>
                 <p className="text-xl font-light text-[#2d2a28] mb-3">{card.value}</p>
                 <p className="text-sm leading-relaxed text-[#5C6470]">{card.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 적용 예시 */}
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.applicationExamples")}</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {c.appImages.map((img) => (
+              <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
+                <Image src={img.src} alt={img.alt} fill className="object-cover" unoptimized />
               </div>
             ))}
           </div>

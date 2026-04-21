@@ -63,6 +63,10 @@ const content = {
     ],
     specDisclaimer: "※ Custom-designed according to site conditions and required specifications. Optimal specifications proposed after pre-site survey.",
     floatingLabel: "View Cylindrical Metal Burner Case Studies",
+    appImages: [
+      { src: `${S3}/images/burner/cases/portable-burner-case-1.jpg`, alt: "Cylindrical Metal Burner Application Example 1" },
+      { src: `${S3}/images/burner/cases/portable-burner-case-2.jpg`, alt: "Cylindrical Metal Burner Application Example 2" },
+    ],
   },
   ko: {
     heroTitle: "실린더형 메탈 버너",
@@ -116,6 +120,10 @@ const content = {
     ],
     specDisclaimer: "※ 현장 조건 및 요구 사양에 따라 맞춤 설계합니다. 사전 현장 조사 후 최적 사양을 제안해 드립니다.",
     floatingLabel: "실린더형 메탈 버너 적용 사례 보러가기",
+    appImages: [
+      { src: `${S3}/images/burner/cases/portable-burner-case-1.jpg`, alt: "실린더형 메탈 버너 적용 예시 1" },
+      { src: `${S3}/images/burner/cases/portable-burner-case-2.jpg`, alt: "실린더형 메탈 버너 적용 예시 2" },
+    ],
   },
 };
 
@@ -241,6 +249,20 @@ export default function PortableBurnerPage() {
             </div>
           </div>
           <p className="text-[13px] text-[#5C6470] mt-4">{c.specDisclaimer}</p>
+        </div>
+      </section>
+
+      {/* 적용 예시 */}
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.applicationExamples")}</p>
+          <div className="grid md:grid-cols-2 gap-6">
+            {c.appImages.map((img) => (
+              <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
+                <Image src={img.src} alt={img.alt} fill className="object-cover" unoptimized />
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 

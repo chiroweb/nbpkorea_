@@ -873,7 +873,7 @@
     "category": "environment",
     "number": 18,
     "tags": [
-      "TO",
+      "DTO",
       "식품",
       "환경"
     ],
@@ -925,7 +925,7 @@
     "category": "environment",
     "number": 19,
     "tags": [
-      "TO",
+      "DTO",
       "식품",
       "환경"
     ],
@@ -977,7 +977,7 @@
     "category": "environment",
     "number": 20,
     "tags": [
-      "TO",
+      "DTO",
       "환경"
     ],
     "images": [
@@ -1028,7 +1028,7 @@
     "category": "environment",
     "number": 21,
     "tags": [
-      "TO"
+      "DTO"
     ],
     "images": [
       "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/performances/slide21_1.jpg",
@@ -1078,7 +1078,7 @@
     "category": "environment",
     "number": 22,
     "tags": [
-      "TO"
+      "DTO"
     ],
     "images": [
       "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/performances/slide22_1.jpg",
@@ -1130,7 +1130,7 @@
     "number": 23,
     "tags": [
       "화학",
-      "TO"
+      "DTO"
     ],
     "images": [
       "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/performances/slide23_1.jpg",
@@ -1180,7 +1180,7 @@
     "category": "environment",
     "number": 24,
     "tags": [
-      "TO"
+      "DTO"
     ],
     "images": [
       "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/performances/slide24_1.jpg",
@@ -1230,7 +1230,7 @@
     "category": "environment",
     "number": 25,
     "tags": [
-      "TO"
+      "DTO"
     ],
     "images": [
       "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/performances/slide25_1.jpg",
@@ -1280,7 +1280,7 @@
     "category": "environment",
     "number": 26,
     "tags": [
-      "TO"
+      "DTO"
     ],
     "images": [
       "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/performances/slide26_1.jpg",
@@ -1331,7 +1331,7 @@
     "number": 27,
     "tags": [
       "인쇄",
-      "TO"
+      "DTO"
     ],
     "images": [
       "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/performances/slide27_1.jpg",
@@ -1381,7 +1381,7 @@
     "category": "environment",
     "number": 28,
     "tags": [
-      "TO",
+      "DTO",
       "환경"
     ],
     "images": [
@@ -1432,7 +1432,7 @@
     "category": "environment",
     "number": 29,
     "tags": [
-      "TO",
+      "DTO",
       "축산",
       "환경"
     ],
@@ -1484,7 +1484,7 @@
     "category": "environment",
     "number": 30,
     "tags": [
-      "TO",
+      "DTO",
       "환경"
     ],
     "images": [
@@ -1535,7 +1535,7 @@
     "category": "environment",
     "number": 31,
     "tags": [
-      "TO"
+      "DTO"
     ],
     "images": [
       "https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/performances/slide31_1.jpg",
@@ -1585,7 +1585,7 @@
     "category": "environment",
     "number": 32,
     "tags": [
-      "TO",
+      "DTO",
       "환경"
     ],
     "images": [
@@ -1636,7 +1636,7 @@
     "category": "environment",
     "number": 33,
     "tags": [
-      "TO",
+      "DTO",
       "철강"
     ],
     "images": [

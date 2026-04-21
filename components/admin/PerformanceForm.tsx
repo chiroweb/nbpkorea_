@@ -16,7 +16,7 @@ const CATEGORIES = [
 // 카테고리별 미리 정의된 태그 목록
 const TAG_PRESETS: Record<string, string[]> = {
   environment: [
-    "RTO", "RCO", "CTO", "TO", "DTO",
+    "RTO", "RCO", "CTO", "DTO",
     "도장", "식품", "화학", "환경", "철강", "축산", "자동차", "인쇄",
   ],
   hvac: [

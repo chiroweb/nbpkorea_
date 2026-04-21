@@ -112,7 +112,7 @@ export default function NkToPage() {
         { label: "NK-TO", href: "/products/environment/nk-to" },
       ]}
     >
-      <FloatingCaseLink category="environment" tag="TO" label={c.floatingLabel} />
+      <FloatingCaseLink category="environment" tag="DTO" label={c.floatingLabel} />
       {/* 공통 제품 네비게이션 */}
       <ProductNav activeTab="environment" activeProduct="nk-to" />
 

@@ -39,29 +39,16 @@ const content = {
       { title: "Process Quality", value: "Uniform Heat Profile", description: "Reduces localized overheating and mitigates temperature deviation, contributing to drying and appearance quality stabilization." },
       { title: "Burner Selection", value: "Metal Fiber / Ceramic", description: "Metal fiber and ceramic types can be selectively applied based on process temperature, installation space, and heat resistance conditions." },
     ],
-    subProducts: [
-      {
-        id: "cylindrical-metal-fiber",
-        name: "Cylindrical Metal Fiber Burner",
-        nameEn: "Cylindrical Metal Fiber Burner",
-        image: `${S3}/images/service-burner.png`,
-        description: "A cylindrical-type metal fiber burner designed for radiant heat applications. Delivers uniform 360° infrared heating with low NOx emissions.",
-      },
-      {
-        id: "metal-fiber-burner-knit",
-        name: "Metal Fiber Knit Burner",
-        nameEn: "Metal Fiber Knit Burner",
-        image: `${S3}/images/burner/metal-fiber-burner.png`,
-        description: "A next-generation surface combustion burner made from heat-resistant metal fiber woven in a knit pattern. Can be fabricated in various shapes with high efficiency and compact structure.",
-      },
-    ],
     heroTitle: "Metal Fiber Burner",
     heroTitleSub: "(Metal Fiber Burner)",
     imgAlt: "Metal Fiber Burner",
     appImages: [
-      { src: `${S3}/images/burner/cases/metal-fiber-case-1.jpg`, alt: "Metal Fiber Burner Application Example 1" },
-      { src: `${S3}/images/burner/cases/metal-fiber-case-2.jpg`, alt: "Metal Fiber Burner Application Example 2" },
-      { src: `${S3}/images/burner/cases/metal-fiber-case-3.jpg`, alt: "Metal Fiber Burner Application Example 3" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-2.jpg`, alt: "Metal Fiber Burner Application Example 1" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-3.jpg`, alt: "Metal Fiber Burner Application Example 2" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-4.jpg`, alt: "Metal Fiber Burner Application Example 3" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-5.jpg`, alt: "Metal Fiber Burner Application Example 4" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-6.jpg`, alt: "Metal Fiber Burner Application Example 5" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-7.jpg`, alt: "Metal Fiber Burner Application Example 6" },
     ],
     floatingLabel: "View Metal Fiber Burner Case Studies",
     appTagLabels: ["Metal Fiber Burner", "Ceramic Burner", "Infrared", "Low NOx"],
@@ -95,29 +82,16 @@ const content = {
       { title: "공정 품질", value: "균일 열 분포", description: "국부 과열을 줄이고 열편차를 완화해 건조 품질과 외관 품질 안정화에 기여합니다." },
       { title: "버너 선택", value: "메탈파이버 / 세라믹", description: "공정 온도, 설치 공간, 내열 조건에 맞춰 메탈파이버와 세라믹 타입을 구분 적용할 수 있습니다." },
     ],
-    subProducts: [
-      {
-        id: "cylindrical-metal-fiber",
-        name: "실린더형 메탈화이버 버너",
-        nameEn: "Cylindrical Metal Fiber Burner",
-        image: `${S3}/images/service-burner.png`,
-        description: "원통형 메탈화이버 소재를 활용한 복사열 버너. 360° 균일한 적외선 가열과 저NOx 연소를 실현합니다.",
-      },
-      {
-        id: "metal-fiber-burner-knit",
-        name: "메탈섬유 버너",
-        nameEn: "Metal Fiber Knit Burner",
-        image: `${S3}/images/burner/metal-fiber-burner.png`,
-        description: "내열 메탈파이버를 니트상으로 짜서 만든 신개념의 표면 연소 버너. 다양한 형태로 가공이 가능하며 높은 효율 및 컴팩트한 구조가 특징입니다.",
-      },
-    ],
     heroTitle: "메탈버너",
     heroTitleSub: "(Metal Fiber Burner)",
     imgAlt: "메탈버너",
     appImages: [
-      { src: `${S3}/images/burner/cases/metal-fiber-case-1.jpg`, alt: "메탈버너 적용 예시 1" },
-      { src: `${S3}/images/burner/cases/metal-fiber-case-2.jpg`, alt: "메탈버너 적용 예시 2" },
-      { src: `${S3}/images/burner/cases/metal-fiber-case-3.jpg`, alt: "메탈버너 적용 예시 3" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-2.jpg`, alt: "메탈버너 적용 예시 1" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-3.jpg`, alt: "메탈버너 적용 예시 2" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-4.jpg`, alt: "메탈버너 적용 예시 3" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-5.jpg`, alt: "메탈버너 적용 예시 4" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-6.jpg`, alt: "메탈버너 적용 예시 5" },
+      { src: `${S3}/images/burner/cases/metal-fiber-case-7.jpg`, alt: "메탈버너 적용 예시 6" },
     ],
     floatingLabel: "메탈버너 적용 사례 보러가기",
     appTagLabels: ["메탈버너", "세라믹 버너", "적외선", "저NOx"],
@@ -203,41 +177,6 @@ export default function MetalFiberBurnerPage() {
                 <div key={step} className="flex items-center gap-2">
                   <div className={`px-3 py-2 text-[14px] tracking-[0.05em] text-center ${c.processHighlight.includes(step) ? "bg-[#C05010] text-white" : step === c.processEnd ? "bg-[#2d2a28] text-white" : "bg-white border border-[#D4DAE2] text-[#5C6470]"}`}>{step}</div>
                   {index < c.processFlow.length - 1 && <span className="text-[#C8D0DA]">→</span>}
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Sub Products */}
-        <section className="px-6 md:px-12 py-16 bg-[#F9FAFB] border-y border-[#D4DAE2]">
-          <div className="max-w-7xl mx-auto">
-            <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.productLineup")}</p>
-            <div className="grid md:grid-cols-2 gap-8">
-              {c.subProducts.map((product) => (
-                <div
-                  key={product.id}
-                  className="group border border-[#D4DAE2] bg-white hover:shadow-lg transition-all duration-300"
-                >
-                  <div className="relative aspect-[16/10] overflow-hidden bg-[#FAFAFA]">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                     unoptimized />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-base font-medium text-[#2d2a28] tracking-[0.05em] mb-1">
-                      {product.name}
-                    </h3>
-                    <p className="text-xs text-[#C05010] tracking-[0.08em] mb-3">
-                      {product.nameEn}
-                    </p>
-                    <p className="text-sm text-[#5C6470] leading-[1.8]">
-                      {product.description}
-                    </p>
-                  </div>
                 </div>
               ))}
             </div>

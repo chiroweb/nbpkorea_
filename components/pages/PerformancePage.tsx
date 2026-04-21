@@ -176,8 +176,8 @@ function PerformancePageInner() {
         const list: Performance[] = Array.isArray(data) ? data : [];
         setItems(list);
         const tags = Array.from(new Set(list.flatMap((item) => item.tags ?? [])));
-        // RTO, RCO, CTO, TO 우선 순서, 나머지는 가나다순
-        const priority = ["RTO", "RCO", "CTO", "TO"];
+        // RTO, RCO, CTO, DTO 우선 순서, 나머지는 가나다순
+        const priority = ["RTO", "RCO", "CTO", "DTO"];
         const ordered = [
           ...priority.filter((p) => tags.includes(p)),
           ...tags.filter((t) => !priority.includes(t)).sort(),

@@ -31,7 +31,7 @@ export default function ServiceSection() {
       title: t("environment.title"),
       subtitle: "Environment",
       description: t("environment.description"),
-      tags: ["RTO", "RCO", "CTO", "TO"],
+      tags: ["RTO", "RCO", "CTO", "DTO"],
       image: `${S3}/images/service-environment.png`,
     },
     {
