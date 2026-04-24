@@ -37,6 +37,7 @@ const content = {
     appImages: [
       { src: `${S3}/images/burner/cases/valve-burner-case-1.jpg`, alt: "Valve Train Application Example 1" },
       { src: `${S3}/images/burner/cases/valve-burner-case-2.jpg`, alt: "Valve Train Application Example 2" },
+      { src: `${S3}/images/burner/cases/valve-burner-case-3.jpg`, alt: "Valve Train Application Example 3" },
     ],
     imgAlt: "Valve Train",
     floatingLabel: "View Valve Train Case Studies",
@@ -68,6 +69,7 @@ const content = {
     appImages: [
       { src: `${S3}/images/burner/cases/valve-burner-case-1.jpg`, alt: "밸브트레인 적용 예시 1" },
       { src: `${S3}/images/burner/cases/valve-burner-case-2.jpg`, alt: "밸브트레인 적용 예시 2" },
+      { src: `${S3}/images/burner/cases/valve-burner-case-3.jpg`, alt: "밸브트레인 적용 예시 3" },
     ],
     imgAlt: "밸브트레인",
     floatingLabel: "벨브트레인 적용 사례 보러가기",
