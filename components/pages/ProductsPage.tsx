@@ -314,7 +314,7 @@ function ProductsPageInner() {
       title: t("nav.valveTrain"),
       subtitle: t("burner.valveTrain.subtitle"),
       href: "/products/burner/valve-train",
-      image: `${S3}/images/burner/valve-train-main.jpg`,
+      image: `${S3}/images/burner/valve-train-main-v2.jpg`,
       description: t("burner.valveTrain.description"),
       tags: locale === "en" ? ["Valve Train", "Gas Control", "Parts"] : ["밸브트레인", "가스제어", "부품류"],
     },

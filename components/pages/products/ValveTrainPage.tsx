@@ -114,7 +114,7 @@ export default function ValveTrainPage() {
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
-              <Image src={`${S3}/images/burner/valve-train-main.jpg`} alt={c.imgAlt} fill className="object-cover" priority  unoptimized />
+              <Image src={`${S3}/images/burner/valve-train-main-v2.jpg`} alt={c.imgAlt} fill className="object-cover" priority  unoptimized />
             </div>
           </div>
         </div>
