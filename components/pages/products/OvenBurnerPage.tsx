@@ -36,7 +36,7 @@ const content = {
     bodyText: "For oven burners, overall process temperature uniformity and residence time management matter more than raw heating power. NBPKOREA proposes heat source configurations based on oven size, product characteristics, drying time, and target temperature.",
     appImages: [
       { src: `${S3}/images/burner/oven-burner-main.jpg`, alt: "Oven Burner Application Example 1" },
-      { src: `${S3}/images/burner/oven-burner-app-1.jpg`, alt: "Oven Burner Application Example 2" },
+      { src: `${S3}/images/burner/oven-burner-app-2-v2.jpg`, alt: "Oven Burner Application Example 2" },
       { src: `${S3}/images/burner/cases/oven-burner-case-3.jpg`, alt: "Oven Burner Application Example 3" },
       { src: `${S3}/images/burner/cases/oven-burner-case-4.jpg`, alt: "Oven Burner Application Example 4" },
       { src: `${S3}/images/burner/cases/oven-burner-case-5.jpg`, alt: "Oven Burner Application Example 5" },
@@ -70,7 +70,7 @@ const content = {
     bodyText: "오븐 버너는 단순 화력보다 공정 전체의 온도 균일성과 체류 시간 관리가 더 중요합니다. 엔비피코리아는 오븐 크기, 제품 특성, 건조 시간, 목표 온도를 기준으로 열원 구성을 제안합니다.",
     appImages: [
       { src: `${S3}/images/burner/oven-burner-main.jpg`, alt: "오븐 버너 적용 예시 1" },
-      { src: `${S3}/images/burner/oven-burner-app-1.jpg`, alt: "오븐 버너 적용 예시 2" },
+      { src: `${S3}/images/burner/oven-burner-app-2-v2.jpg`, alt: "오븐 버너 적용 예시 2" },
       { src: `${S3}/images/burner/cases/oven-burner-case-3.jpg`, alt: "오븐 버너 적용 예시 3" },
       { src: `${S3}/images/burner/cases/oven-burner-case-4.jpg`, alt: "오븐 버너 적용 예시 4" },
       { src: `${S3}/images/burner/cases/oven-burner-case-5.jpg`, alt: "오븐 버너 적용 예시 5" },

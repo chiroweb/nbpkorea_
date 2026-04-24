@@ -11,8 +11,8 @@ const S3 = "https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com";
 
 const content = {
   en: {
-    title: "Valve Burner",
-    heroTags: ["Gas Control", "Precision Flow Regulation", "Stable Flame", "Burner-Integrated Design"],
+    title: "Line Burner",
+    heroTags: ["Line Burner", "Uniform Heating", "Stable Flame", "Process-Matched Design"],
     applications: ["Gas Burner Systems", "Industrial Ovens", "Hot Air Generators", "Process Heating Equipment", "Combustion Control Sites", "Burner Retrofit Projects"],
     processFlow: ["Gas Supply", "Valve Control", "Fuel Flow Regulation", "Burner Combustion", "Process Heat Supply"],
     processHighlight: ["Valve Control", "Fuel Flow Regulation"],
@@ -48,16 +48,16 @@ const content = {
     specNote: "For valve burners, gas train design often has a greater impact on operational stability than the burner head itself. Appropriate valve train and control configurations are proposed after reviewing site pressure range and control precision requirements.",
     bodyText: "For valve burners, gas control quality is often more important than the burner body itself. NBPKOREA configures stable combustion systems by reviewing flow control, pressure conditions, and safety interlocks together.",
     appImages: [
-      { src: `${S3}/images/burner/valve-burner.jpg`, alt: "Valve Burner Application Example 1" },
-      { src: `${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`, alt: "Valve Burner Application Example 2" },
-      { src: `${S3}/images/burner/fpb/gas-burners-low-nox-40199-6408963.jpg`, alt: "Valve Burner Application Example 3" },
+      { src: `${S3}/images/burner/cases/line-burner-case-1.jpg`, alt: "Line Burner Application Example 1" },
+      { src: `${S3}/images/burner/cases/line-burner-case-2.jpg`, alt: "Line Burner Application Example 2" },
+      { src: `${S3}/images/burner/cases/line-burner-case-3.jpg`, alt: "Line Burner Application Example 3" },
     ],
-    imgAlt: "Valve Burner",
-    floatingLabel: "View Valve Burner Case Studies",
+    imgAlt: "Line Burner",
+    floatingLabel: "View Line Burner Case Studies",
   },
   ko: {
-    title: "밸브버너",
-    heroTags: ["가스 제어", "정밀 유량 조절", "안정적 화염", "버너 일체 설계"],
+    title: "라인버너",
+    heroTags: ["라인형 버너", "균일 가열", "안정적 화염", "공정 맞춤 설계"],
     applications: ["가스 버너 시스템", "산업용 오븐", "열풍기", "공정 가열 설비", "연소 제어 필요 현장", "버너 개조 프로젝트"],
     processFlow: ["가스 공급", "밸브 제어", "연료 유량 조절", "버너 연소", "공정 열원 공급"],
     processHighlight: ["밸브 제어", "연료 유량 조절"],
@@ -90,15 +90,15 @@ const content = {
       { label: "적용 설비", value: "오븐·열풍기·공정 버너" },
       { label: "구성 방식", value: "신규 / 기존 개조 대응" },
     ],
-    specNote: "밸브버너는 버너 헤드보다 가스 트레인 설계가 운전 안정성에 더 큰 영향을 주는 경우가 많습니다. 현장 압력 범위와 제어 정밀도 요구를 검토해 적합한 밸브 트레인과 제어 구성을 제안합니다.",
-    bodyText: "밸브버너는 버너 본체보다 가스 제어 품질이 더 중요할 때가 많습니다. 엔비피코리아는 유량 제어, 압력 조건, 안전 인터록을 함께 검토해 안정적인 연소 시스템을 구성합니다.",
+    specNote: "라인버너는 버너 헤드보다 가스 트레인 설계가 운전 안정성에 더 큰 영향을 주는 경우가 많습니다. 현장 압력 범위와 제어 정밀도 요구를 검토해 적합한 밸브 트레인과 제어 구성을 제안합니다.",
+    bodyText: "라인버너는 버너 본체보다 가스 제어 품질이 더 중요할 때가 많습니다. 엔비피코리아는 유량 제어, 압력 조건, 안전 인터록을 함께 검토해 안정적인 연소 시스템을 구성합니다.",
     appImages: [
-      { src: `${S3}/images/burner/valve-burner.jpg`, alt: "밸브버너 적용 예시 1" },
-      { src: `${S3}/images/burner/fpb/gas-burners-40199-6233087.jpg`, alt: "밸브버너 적용 예시 2" },
-      { src: `${S3}/images/burner/fpb/gas-burners-low-nox-40199-6408963.jpg`, alt: "밸브버너 적용 예시 3" },
+      { src: `${S3}/images/burner/cases/line-burner-case-1.jpg`, alt: "라인버너 적용 예시 1" },
+      { src: `${S3}/images/burner/cases/line-burner-case-2.jpg`, alt: "라인버너 적용 예시 2" },
+      { src: `${S3}/images/burner/cases/line-burner-case-3.jpg`, alt: "라인버너 적용 예시 3" },
     ],
-    imgAlt: "밸브버너",
-    floatingLabel: "밸브버너 적용 사례 보러가기",
+    imgAlt: "라인버너",
+    floatingLabel: "라인버너 적용 사례 보러가기",
   },
 };
 
@@ -114,7 +114,7 @@ export default function ValveBurnerPage() {
   return (
     <SubpageLayout
       title={t("nav.valveBurner")}
-      subtitle="Industrial Burner · Valve Burner"
+      subtitle="Industrial Burner · Line Burner"
       breadcrumb={[
         { label: t("breadcrumb"), href: "/products" },
         { label: t("breadcrumbs.burner"), href: "/products?tab=burner" },
@@ -126,7 +126,7 @@ export default function ValveBurnerPage() {
       <section className="px-6 md:px-12 py-16">
         <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
           <div ref={heroRef} className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"}`}>
-            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">Industrial Burner · Valve Burner</span>
+            <span className="text-[13px] tracking-[0.04em] uppercase text-[#C05010] block mb-3">Industrial Burner · Line Burner</span>
             <h2 className="text-2xl md:text-3xl font-light tracking-[0.08em] text-[#2d2a28] mb-6">{c.title}</h2>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-6">{t("burner.valveBurner.description")}</p>
             <p className="text-sm text-[#5C6470] leading-relaxed mb-8">
@@ -140,7 +140,7 @@ export default function ValveBurnerPage() {
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
-              <Image src={`${S3}/images/burner/valve-burner.jpg`} alt={c.imgAlt} fill className="object-contain" priority  unoptimized />
+              <Image src={`${S3}/images/burner/line-burner-main.jpg`} alt={c.imgAlt} fill className="object-cover" priority  unoptimized />
             </div>
           </div>
         </div>
@@ -159,7 +159,7 @@ export default function ValveBurnerPage() {
 
       <section className="px-6 md:px-12 py-12 bg-[#FAFAFA] border-y border-[#D4DAE2]">
         <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{locale === "en" ? "Valve Burner Control Flow" : "밸브버너 제어 흐름"}</p>
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-6">{locale === "en" ? "Line Burner Control Flow" : "라인버너 제어 흐름"}</p>
           <div className="flex flex-wrap items-center gap-2">
             {c.processFlow.map((step, index) => (
               <div key={step} className="flex items-center gap-2">

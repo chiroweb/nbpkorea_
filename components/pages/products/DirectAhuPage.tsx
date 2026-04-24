@@ -72,6 +72,10 @@ const content = {
     ctaDesc: "We will propose optimal specifications matched to your heating capacity, airflow, control method, and installation environment.",
     floatingLabel: "View Direct-Fired AHU Case Studies",
     imgAlt: "Direct-Fired AHU",
+    appImages: [
+      { src: `${S3}/images/hvac/direct-ahu-case-1.jpg`, alt: "Direct-Fired AHU Application Example 1" },
+      { src: `${S3}/images/hvac/direct-ahu-case-2.jpg`, alt: "Direct-Fired AHU Application Example 2" },
+    ],
   },
   ko: {
     title: "직화식 공조기",
@@ -134,6 +138,10 @@ const content = {
     ctaDesc: "열량, 풍량, 제어 방식, 설치 환경에 맞춘 최적 사양을 제안해 드립니다.",
     floatingLabel: "직화식 공조기 적용 사례 보러가기",
     imgAlt: "직화식 공조기",
+    appImages: [
+      { src: `${S3}/images/hvac/direct-ahu-case-1.jpg`, alt: "직화식 공조기 적용 예시 1" },
+      { src: `${S3}/images/hvac/direct-ahu-case-2.jpg`, alt: "직화식 공조기 적용 예시 2" },
+    ],
   },
 };
 
@@ -296,6 +304,19 @@ export default function DirectAhuPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.applicationExamples")}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {c.appImages.map((img) => (
+              <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
+                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" unoptimized />
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -56,6 +56,9 @@ const content = {
     specNote: "Ceramic burners are sized by the radiant heat flux required at the product surface, not by raw firing rate alone. Burner plate quantity, layout, and control are designed against oven geometry, target temperature, residence time, and product characteristics.",
     imgAlt: "Ceramic Burner",
     featureLeadTitle: "Key Features of the Ceramic Burner",
+    appImages: [
+      { src: `${S3}/images/burner/cases/ceramic-case-1.jpg`, alt: "Ceramic Burner Application Example 1" },
+    ],
   },
   ko: {
     title: "세라믹 버너",
@@ -103,6 +106,9 @@ const content = {
     specNote: "세라믹 버너는 단순 출력보다 제품 표면에서 요구되는 복사 열유속(IR flux)을 기준으로 설계합니다. 오븐 형상·목표 온도·체류 시간·제품 특성에 따라 플레이트 수량·배열·제어 로직을 맞춤 구성합니다.",
     imgAlt: "세라믹 버너",
     featureLeadTitle: "세라믹 버너 주요 특징",
+    appImages: [
+      { src: `${S3}/images/burner/cases/ceramic-case-1.jpg`, alt: "세라믹 버너 적용 예시 1" },
+    ],
   },
 };
 
@@ -246,6 +252,19 @@ export default function CeramicBurnerPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.applicationExamples")}</p>
+          <div className="grid grid-cols-1 gap-4">
+            {c.appImages.map((img) => (
+              <div key={img.alt} className="relative aspect-[16/9] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
+                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 80vw" className="object-cover" unoptimized />
+              </div>
+            ))}
           </div>
         </div>
       </section>

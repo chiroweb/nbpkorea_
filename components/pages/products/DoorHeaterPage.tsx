@@ -71,6 +71,10 @@ const content = {
     ctaDesc: "We will propose specifications matched to your entrance size, opening frequency, and indoor temperature conditions.",
     floatingLabel: "View Door Heater Case Studies",
     imgAlt: "Door Heater",
+    appImages: [
+      { src: `${S3}/images/hvac/door-heater-main-v2.jpg`, alt: "Door Heater Application Example 1" },
+      { src: `${S3}/images/hvac/door-heater-case-1.jpg`, alt: "Door Heater Application Example 2" },
+    ],
   },
   ko: {
     title: "도어히터",
@@ -132,6 +136,10 @@ const content = {
     ctaDesc: "출입구 크기, 개폐 빈도, 실내 온도 조건에 맞춘 사양을 제안해 드립니다.",
     floatingLabel: "도어히터 적용 사례 보러가기",
     imgAlt: "도어히터",
+    appImages: [
+      { src: `${S3}/images/hvac/door-heater-main-v2.jpg`, alt: "도어히터 적용 예시 1" },
+      { src: `${S3}/images/hvac/door-heater-case-1.jpg`, alt: "도어히터 적용 예시 2" },
+    ],
   },
 };
 
@@ -174,7 +182,7 @@ export default function DoorHeaterPage() {
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
             <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
-              <Image src={`${S3}/images/hvac/doorheater.jpg`} alt={c.imgAlt} fill className="object-cover scale-[1.15]" priority  unoptimized />
+              <Image src={`${S3}/images/hvac/door-heater-main-v2.jpg`} alt={c.imgAlt} fill className="object-cover" priority  unoptimized />
             </div>
           </div>
         </div>
@@ -284,6 +292,19 @@ export default function DoorHeaterPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="px-6 md:px-12 py-16 border-t border-[#D4DAE2]">
+        <div className="max-w-7xl mx-auto">
+          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-8">{t("common.applicationExamples")}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {c.appImages.map((img) => (
+              <div key={img.alt} className="relative aspect-[4/3] overflow-hidden bg-[#F8F9FB] border border-[#D4DAE2]">
+                <Image src={img.src} alt={img.alt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover" unoptimized />
+              </div>
+            ))}
           </div>
         </div>
       </section>
