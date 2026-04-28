@@ -19,13 +19,13 @@ type ProductCardData = {
   image: string;
   description: string;
   tags: string[];
-  imageOrientation?: "default" | "rotated-landscape";
+  imageOrientation?: "default" | "portrait";
 };
 
 // ── 공통 제품 카드 ──────────────────────────────────────────────
 function ProductCard({ product, viewDetail, index, category }: { product: ProductCardData; viewDetail: string; index: number; category?: string }) {
   const { ref, isInView } = useInView({ threshold: 0.15 });
-  const isRotatedLandscape = product.imageOrientation === "rotated-landscape";
+  const isPortrait = product.imageOrientation === "portrait";
 
   return (
     <div
@@ -35,12 +35,12 @@ function ProductCard({ product, viewDetail, index, category }: { product: Produc
     >
       {/* Image + Title — 제품 상세 링크 */}
       <Link href={product.href} className="group block">
-        <div className={`relative mb-4 overflow-hidden bg-white border border-[#C05010]/30 ${isRotatedLandscape ? "aspect-video" : "aspect-[4/3]"}`}>
+        <div className={`relative mb-4 overflow-hidden bg-white border border-[#C05010]/30 ${isPortrait ? "aspect-[3/4]" : "aspect-[4/3]"}`}>
           <Image
             src={product.image}
             alt={product.title}
             fill
-            className={`${isRotatedLandscape ? "object-contain p-3 rotate-90 scale-[1.42]" : "object-contain group-hover:scale-105"} transition-transform duration-700`}
+            className={`object-contain transition-transform duration-700 ${isPortrait ? "p-3 group-hover:scale-105" : "group-hover:scale-105"}`}
             unoptimized
           />
           <div className="absolute inset-0 bg-[#2d2a28]/0 group-hover:bg-[#2d2a28]/10 transition-all duration-500" />
@@ -333,7 +333,7 @@ function ProductsPageInner() {
       subtitle: locale === "en" ? "Line Burner" : "라인버너",
       href: "/products/burner/valve-burner",
       image: `${S3}/images/burner/line-burner-main.jpg`,
-      imageOrientation: "rotated-landscape",
+      imageOrientation: "portrait",
       description: t("burner.valveBurner.description"),
       tags: locale === "en" ? ["Line Burner", "Uniform Heating", "Process Heating"] : ["라인버너", "균일 가열", "공정 가열"],
     },
