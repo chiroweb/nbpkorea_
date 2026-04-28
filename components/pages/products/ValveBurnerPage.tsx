@@ -139,8 +139,15 @@ export default function ValveBurnerPage() {
             </div>
           </div>
           <div className={`transition-all duration-1000 delay-300 ${heroInView ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}>
-            <div className="relative aspect-[4/3] overflow-hidden bg-white border border-[#C05010]/30">
-              <Image src={`${S3}/images/burner/line-burner-main.jpg`} alt={c.imgAlt} fill className="object-cover" priority  unoptimized />
+            <div className="relative aspect-video overflow-hidden bg-white border border-[#C05010]/30">
+              <Image
+                src={`${S3}/images/burner/line-burner-main.jpg`}
+                alt={c.imgAlt}
+                fill
+                className="object-contain p-4 rotate-90 scale-[1.42]"
+                priority
+                unoptimized
+              />
             </div>
           </div>
         </div>

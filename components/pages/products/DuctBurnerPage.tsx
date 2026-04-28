@@ -24,14 +24,6 @@ const specs = [
   { model: "NBP-600", size: "6FT", capacity: "1,500,000", kw: "1,759", pressure: "50", fuel: "LNG / LPG" },
 ];
 
-const sizeGallery = [
-  { label: "0.5FT", image: `${S3}/images/burner/0.5FT.png` },
-  { label: "1FT",   image: `${S3}/images/burner/1FT.png` },
-  { label: "1.5FT", image: `${S3}/images/burner/1.5FT.png` },
-  { label: "3FT",   image: `${S3}/images/burner/3FT-T.png` },
-  { label: "5FT",   image: `${S3}/images/burner/5FT-T.png` },
-];
-
 const content = {
   en: {
     title: "Duct Burner",
@@ -80,9 +72,6 @@ const content = {
       "30-step flame control — precision temperature control superior to other burner brands",
       "MIDCO International (USA) technical partnership — globally proven combustion system",
     ],
-    sizeLineupTitle: "Size Lineup",
-    sizeLineupDesc: "Custom selection from compact 0.5FT to large 6FT (1.5M Kcal/h) to match field duct dimensions",
-    sizeAltPrefix: "Duct Burner",
     tableHeaders: ["MODEL", "Size", "Output (kW)", "Combustion Capacity (Kcal/h)", "Passing Pressure (mmAq)", "Fuel"],
     techPartnership: ["MIDCO International (USA) Technical Alliance", "ANSI Z83.4 / Z83.18 Compliant", "19 Registered Patents", "Global Combustion Technology Locally Applied"],
     appExampleAlt: "Duct Burner Application Example",
@@ -135,9 +124,6 @@ const content = {
       "화염 제어 30단계 — 타 메이커 버너 대비 정밀 온도 제어",
       "MIDCO International(미국) 기술 협력 — 글로벌 검증된 연소 시스템",
     ],
-    sizeLineupTitle: "사이즈별 라인업",
-    sizeLineupDesc: "소형 0.5FT부터 대형 6FT(150만 Kcal/h)까지 현장 덕트 크기에 맞춘 맞춤 선택",
-    sizeAltPrefix: "덕트버너",
     tableHeaders: ["MODEL", "사이즈", "출력 (kW)", "연소 용량 (Kcal/h)", "통과압력 (mmAq)", "연료"],
     techPartnership: ["MIDCO International (미국) 기술 제휴", "ANSI Z83.4 / Z83.18 기준 적합", "19건 등록 특허", "글로벌 연소 기술 현지 적용"],
     appExampleAlt: "덕트버너 적용 예시",
@@ -149,7 +135,6 @@ export default function DuctBurnerPage() {
   const [selectedModel, setSelectedModel] = useState<string | null>(null);
   const { ref: heroRef, isInView: heroInView } = useInView({ threshold: 0.1 });
   const { ref: specRef, isInView: specInView } = useInView({ threshold: 0.1 });
-  const { ref: galleryRef, isInView: galleryInView } = useInView({ threshold: 0.1 });
   const { ref: appRef, isInView: appInView } = useInView({ threshold: 0.1 });
   const t = useTranslations("products");
   const locale = useLocale() as "en" | "ko";
@@ -250,32 +235,6 @@ export default function DuctBurnerPage() {
               <div key={i} className="flex items-start gap-3 p-4 border border-[#D4DAE2]">
                 <span className="mt-1.5 w-1 h-1 rounded-full bg-[#C05010] flex-shrink-0" />
                 <span className="text-sm text-[#3D4450] leading-relaxed">{f}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 사이즈별 갤러리 */}
-      <section ref={galleryRef} className="px-6 md:px-12 py-16 bg-[#FAFAFA] border-t border-[#D4DAE2]">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-[13px] tracking-[0.04em] uppercase text-[#5C6470] mb-2">{t("common.sizeLineup")}</p>
-          <p className="text-xs text-[#5C6470] mb-8 tracking-[0.05em]">{c.sizeLineupDesc}</p>
-          <div className={`grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 transition-all duration-1000 ${galleryInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
-            {sizeGallery.map((item) => (
-              <div key={item.label} className="bg-white border border-[#D4DAE2] overflow-hidden">
-                <div className="relative aspect-square bg-[#F8F9FB]">
-                  <Image
-                    src={item.image}
-                    alt={`${c.sizeAltPrefix} ${item.label}`}
-                    fill
-                    className="object-contain p-4"
-                    unoptimized
-                  />
-                </div>
-                <div className="px-3 py-2 border-t border-[#E8ECF0]">
-                  <span className="text-[14px] tracking-[0.08em] text-[#2d2a28] font-medium">{item.label}</span>
-                </div>
               </div>
             ))}
           </div>

@@ -708,6 +708,12 @@
         "ctaTitle": "Considering the Oven Burner?",
         "ctaDesc": "We will propose the optimal specifications for your site conditions."
       },
+      "valveBurner": {
+        "subtitle": "Line Burner",
+        "description": "A linear industrial burner that provides uniform flame and heat distribution along the process length. Designed for ovens, hot air generators, and process heating equipment requiring continuous heating.",
+        "ctaTitle": "Considering the Line Burner?",
+        "ctaDesc": "We will propose the optimal specifications for your site conditions."
+      },
       "valveTrain": {
         "subtitle": "Valve Train Parts — Gas Control System",
         "description": "Valve train assemblies for safe and precise gas supply control of industrial burners. Configures gas control systems with gas valves, regulators, and safety shut-off devices tailored to site conditions.",
