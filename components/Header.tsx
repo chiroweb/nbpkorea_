@@ -385,6 +385,7 @@ export default function Header() {
                           { label: "MIDCO International", href: "https://midcointernational.com/" },
                           { label: "ECOSTAR", href: "https://www.ecostar.com.tr" },
                           { label: "CombHEX", href: "https://www.combhex.com/" },
+                          { label: "카페장비 (NBP CAFE)", href: "https://www.nbpcafe.com" },
                         ].map((site) => (
                           <a
                             key={site.label}
