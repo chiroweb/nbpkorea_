@@ -194,12 +194,12 @@ export default function NkRtoPage() {
           </div>
           <p className="text-[14px] text-[#5C6470] mt-4 tracking-[0.05em]">{t("common.heatRecovery")} (Heat Recovery via Ceramic Regenerator)</p>
           <div className="mt-10 flex justify-start">
-            <div className="relative w-full max-w-xl overflow-hidden border border-[#D4DAE2] bg-white">
+            <div className="relative w-full max-w-4xl overflow-hidden border border-[#D4DAE2] bg-white">
               <Image
-                src="https://NBPKOREAre.s3.ap-northeast-2.amazonaws.com/images/rto.png"
+                src="https://nbpkoreare.s3.ap-northeast-2.amazonaws.com/images/mechanism/rto.png"
                 alt="NK-RTO mechanism diagram"
-                width={816}
-                height={600}
+                width={1600}
+                height={720}
                 className="h-auto w-full"
                unoptimized />
             </div>
