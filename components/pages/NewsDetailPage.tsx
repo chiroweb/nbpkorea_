@@ -7,6 +7,7 @@ import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { News } from "@/lib/types";
+import { resolveBlogThumbnail } from "@/lib/blog";
 import { useTranslations } from "next-intl";
 
 function NewsImage({ src, alt }: { src: string; alt: string }) {
@@ -109,9 +110,7 @@ export default function NewsDetailPage() {
           </p>
 
           {/* Thumbnail */}
-          {post.image_url && (
-            <NewsImage src={post.image_url} alt={post.title} />
-          )}
+          <NewsImage src={resolveBlogThumbnail(post.image_url)} alt={post.title} />
 
           {/* Divider */}
           <div className="h-px bg-[#D4DAE2] mb-12" />

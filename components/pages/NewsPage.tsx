@@ -6,6 +6,7 @@ import { useInView } from "@/hooks/useInView";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
 import { News } from "@/lib/types";
+import { resolveBlogThumbnail } from "@/lib/blog";
 import { useTranslations } from "next-intl";
 
 const ITEMS_PER_PAGE = 8;
@@ -27,18 +28,12 @@ function PostRow({ post, index }: { post: News; index: number }) {
       >
         {/* Thumbnail */}
         <div className="relative w-28 h-20 md:w-36 md:h-24 flex-shrink-0 overflow-hidden bg-[#E8ECF0]">
-          {post.image_url ? (
-            <Image
-              src={post.image_url}
-              alt={post.title}
-              fill
-              className="object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-          ) : (
-            <div className="w-full h-full flex items-center justify-center text-[#C8D0DA] text-xs">
-              NBP
-            </div>
-          )}
+          <Image
+            src={resolveBlogThumbnail(post.image_url)}
+            alt={post.title}
+            fill
+            className="object-cover group-hover:scale-105 transition-transform duration-500"
+          />
         </div>
 
         {/* Content */}

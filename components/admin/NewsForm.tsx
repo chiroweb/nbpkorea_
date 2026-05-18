@@ -6,6 +6,7 @@ import ContentEditor from "./ContentEditor";
 import ImageUploadField from "./ImageUploadField";
 import { ContentBlock, News } from "@/lib/types";
 import { ADMIN_PATH } from "@/lib/admin-path";
+import { DEFAULT_BLOG_THUMBNAIL } from "@/lib/blog";
 
 const CATEGORIES = ["기술 인사이트", "제품 소식", "회사 소식", "파트너십", "언론 보도"];
 
@@ -34,7 +35,7 @@ export default function NewsForm({ initial, id }: Props) {
     date: initial?.date ?? new Date().toISOString().split("T")[0].replace(/-/g, "."),
     read_time: initial?.read_time ?? "5분",
     excerpt: initial?.excerpt ?? "",
-    image_url: initial?.image_url ?? "",
+    image_url: initial?.image_url ?? DEFAULT_BLOG_THUMBNAIL,
     is_published: initial?.is_published ?? true,
   });
   const [content, setContent] = useState<ContentBlock[]>(initial?.content ?? []);
@@ -183,7 +184,7 @@ export default function NewsForm({ initial, id }: Props) {
           onChange={(v) => setForm((f) => ({ ...f, image_url: v }))}
           folder="news"
           previewClassName="w-40 h-28"
-          onRemove={() => setForm((f) => ({ ...f, image_url: "" }))}
+          onRemove={() => setForm((f) => ({ ...f, image_url: DEFAULT_BLOG_THUMBNAIL }))}
         />
       </div>
 

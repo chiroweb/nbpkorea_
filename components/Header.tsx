@@ -47,9 +47,17 @@ const SOCIAL_LINKS = [
   },
 ];
 
+const FAMILY_SITES = [
+  { label: "MIDCO International", href: "https://midcointernational.com/" },
+  { label: "ECOSTAR", href: "https://www.ecostar.com.tr" },
+  { label: "CombHEX", href: "https://www.combhex.com/" },
+  { label: "카페장비 (NBP CAFE)", href: "https://www.nbpcafe.com" },
+];
+
 export default function Header() {
   const t = useTranslations("common.nav");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isFamilyOpen, setIsFamilyOpen] = useState(false);
   const [megaOpen, setMegaOpen] = useState(false);
   const [activeKey, setActiveKey] = useState<string | null>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout>>();
@@ -255,7 +263,10 @@ export default function Header() {
 
             {/* Mobile burger */}
             <button
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              onClick={() => {
+                setIsMenuOpen(!isMenuOpen);
+                setIsFamilyOpen(false);
+              }}
               className="lg:hidden flex flex-col gap-1.5 p-2"
               aria-label={t("menuAriaLabel")}
             >
@@ -381,12 +392,7 @@ export default function Header() {
                     <p className="text-[13px] tracking-[0.2em] uppercase text-[#C05010] font-semibold pb-3 border-b-2 border-[#C05010] cursor-pointer">Family Site</p>
                     <div className="overflow-hidden max-h-0 group-hover/family:max-h-40 transition-all duration-300 ease-in-out">
                       <div className="pt-3 space-y-2">
-                        {[
-                          { label: "MIDCO International", href: "https://midcointernational.com/" },
-                          { label: "ECOSTAR", href: "https://www.ecostar.com.tr" },
-                          { label: "CombHEX", href: "https://www.combhex.com/" },
-                          { label: "카페장비 (NBP CAFE)", href: "https://www.nbpcafe.com" },
-                        ].map((site) => (
+                        {FAMILY_SITES.map((site) => (
                           <a
                             key={site.label}
                             href={site.href}
@@ -447,13 +453,62 @@ export default function Header() {
                   ))}
                 </div>
               </div>
+            </div>
+            <div className="pt-5 grid grid-cols-2 gap-3">
               <Link
                 href="/support"
                 onClick={() => setIsMenuOpen(false)}
-                className="text-[12px] tracking-[0.15em] uppercase border border-[#C05010] text-white px-4 py-2 hover:bg-[#C05010] transition-all duration-200"
+                className="flex min-h-11 items-center justify-center text-[12px] tracking-[0.15em] uppercase border border-[#C05010] text-white px-3 py-2 hover:bg-[#C05010] transition-all duration-200"
               >
                 {t("consultation")}
               </Link>
+              <button
+                type="button"
+                onClick={() => setIsFamilyOpen((v) => !v)}
+                className={`flex min-h-11 items-center justify-center gap-2 text-[12px] tracking-[0.12em] uppercase border px-3 py-2 transition-all duration-200 ${
+                  isFamilyOpen
+                    ? "bg-[#C05010] text-white border-[#C05010]"
+                    : "border-white/25 text-white hover:border-[#C05010] hover:bg-[#C05010]"
+                }`}
+                aria-expanded={isFamilyOpen}
+              >
+                Family Site
+                <svg
+                  width="10"
+                  height="10"
+                  viewBox="0 0 10 10"
+                  fill="none"
+                  className={`transition-transform duration-200 ${isFamilyOpen ? "rotate-180" : ""}`}
+                >
+                  <path d="M2 4l3 3 3-3" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+              </button>
+            </div>
+            <div
+              className={`overflow-hidden transition-all duration-300 ${
+                isFamilyOpen ? "max-h-60 pt-3 opacity-100" : "max-h-0 pt-0 opacity-0"
+              }`}
+            >
+              <div className="grid grid-cols-1 border border-white/10 bg-white/[0.03]">
+                {FAMILY_SITES.map((site) => (
+                  <a
+                    key={site.label}
+                    href={site.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => {
+                      setIsFamilyOpen(false);
+                      setIsMenuOpen(false);
+                    }}
+                    className="flex items-center justify-between px-4 py-3 text-[12px] tracking-[0.05em] uppercase text-white/75 hover:text-white hover:bg-[#C05010] transition-colors border-b border-white/10 last:border-b-0"
+                  >
+                    {site.label}
+                    <svg width="9" height="9" viewBox="0 0 12 12" fill="none">
+                      <path d="M1 11L11 1M11 1H3M11 1V9" stroke="currentColor" strokeWidth="1" />
+                    </svg>
+                  </a>
+                ))}
+              </div>
             </div>
           </nav>
         </div>
